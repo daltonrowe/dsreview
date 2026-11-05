@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Survey</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  header.hdr { position: sticky; top: 0; z-index: 20; background: var(--bg); }
+  header.hdr .topbar { position: static; backdrop-filter: none; background: var(--bg); }
+  .toolbar { display: flex; gap: 10px; align-items: center; padding: 8px 20px; background: var(--bg); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .toolbar input[type=search] { width: 240px; }
+  .layout { display: grid; grid-template-columns: 250px 1fr; align-items: start; }
+  nav.index { position: sticky; top: var(--hdr, 98px); max-height: calc(100vh - var(--hdr, 98px)); overflow: auto; padding: 12px 8px 40px 12px; border-right: 1px solid var(--line); }
+  nav.index a { display: grid; grid-template-columns: 30px 38px 1fr auto; gap: 6px; align-items: center; padding: 4px 6px; border-radius: 6px; text-decoration: none; font-size: 12.5px; }
+  nav.index a:hover { background: var(--panel-2); }
+  nav.index a.hidden { display: none; }
+  nav.index .n { color: var(--faint); font-family: var(--mono); font-size: 11px; }
+  nav.index .v { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--mono); font-size: 11.5px; }
+  nav.index .c { color: var(--faint); font-size: 11px; }
+  nav.index .pv { display: flex; justify-content: center; transform: scale(.7); }
+  main { padding: 8px 20px 120px; min-width: 0; }
+  section.sec { padding-top: 18px; scroll-margin-top: calc(var(--hdr, 98px) + 4px); }
+  section.sec.hidden { display: none; }
+  .sec-head { display: flex; align-items: center; gap: 14px; padding: 10px 0 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+  .sec-head h2 { margin: 0; font-size: 18px; font-weight: 650; display: flex; align-items: baseline; gap: 10px; }
+  .sec-head h2 .sn { color: var(--faint); font-family: var(--mono); font-size: 14px; font-weight: 500; }
+  .sec-head h2 code { font-size: 16px; }
+  .sec-head .tokens { display: flex; gap: 4px; flex-wrap: wrap; }
+  .sec-head .bulk { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; }
+  .item { display: flex; flex-direction: column; overflow: hidden; outline: none; scroll-margin: calc(var(--hdr, 98px) + 16px) 0 16px; }
+  .item.hidden { display: none; }
+  .item:focus-visible, .item.focused { box-shadow: 0 0 0 2px var(--focus); }
+  .item[data-decision="keep"] { border-color: var(--keep); }
+  .item[data-decision="remove"] { border-color: var(--remove); }
+  .item[data-decision="exclude"] { border-color: var(--line-2); }
+  .item[data-decision="exclude"] .shot img { opacity: .55; }
+  .item-head { display: flex; align-items: center; gap: 8px; padding: 8px 10px; }
+  .item-head .num { font-weight: 700; font-size: 15px; }
+  .item-head .ref { font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .item-head { flex-wrap: wrap; row-gap: 6px; }
+  .item-head .seg { margin-left: auto; }
+  .item-head .seg button { padding: 4px 8px; }
+  .shot { display: flex; align-items: center; justify-content: center; height: 170px; background: var(--checker); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); cursor: zoom-in; }
+  .shot img { max-width: 100%; max-height: 100%; display: block; }
+  .shot .none { color: var(--faint); font-size: 12px; }
+  .body { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; }
+  .decl { font-family: var(--mono); font-size: 11.5px; word-break: break-word; background: var(--panel-2); padding: 3px 6px; border-radius: 5px; }
+  .decl .tok { color: var(--accent); }
+  .decl .from { color: var(--faint); }
+  .row { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+  .row .lbl { color: var(--faint); width: 64px; flex: none; }
+  .links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+  .note { width: 100%; font-size: 12.5px; padding: 4px 8px; }
+  .note:placeholder-shown { background: transparent; border-style: dashed; }
+  pre.src { margin: 4px 0 0; max-height: 220px; overflow: auto; font: 11px/1.5 var(--mono); background: var(--panel-2); padding: 6px 8px; border-radius: 6px; white-space: pre-wrap; word-break: break-all; }
+  pre.src .hit { background: color-mix(in srgb, var(--accent) 22%, transparent); display: block; }
+  .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; padding: 30px; cursor: zoom-out; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; background: var(--checker); box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  .lightbox .cap { position: absolute; bottom: 10px; left: 0; right: 0; text-align: center; color: #ddd; font-size: 13px; }
+  .problems { margin: 14px 0; padding: 10px 14px; font-size: 12px; color: var(--muted); }
+  .problems summary { cursor: pointer; }
+  .item[data-decision="round"] { border-color: var(--round); }
+  .tokrow { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .tokrow select { font-size: 12px; padding: 2px 6px; max-width: 100%; flex: 1; min-width: 0; font-family: var(--mono); }
+  .chip.match { background: var(--keep-bg); color: var(--keep); font-family: var(--mono); font-size: 11px; }
+  .chip.ontok { background: var(--keep-bg); color: var(--keep); font-weight: 600; }
+  .chip.offtok { background: #fff1e0; color: #b45a00; font-weight: 600; }
+  :root[data-theme="dark"] .chip.offtok { background: #3a2a14; color: #ffb366; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip.offtok { background: #3a2a14; color: #ffb366; } }
+  .chip.near { background: var(--round-bg); color: var(--round); font-family: var(--mono); font-size: 11px; }
+  nav.index .m { color: var(--keep); font-size: 11px; }
+  .pmodal { position: fixed; inset: 0; z-index: 110; background: rgba(0,0,0,.55); display: none; padding: 3vh 3vw; }
+  .pmodal.open { display: flex; }
+  .pmodal .box { flex: 1; display: flex; flex-direction: column; background: var(--panel); border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  .pmodal .bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .pmodal iframe { flex: 1; border: 0; width: 100%; }
+  #suggest { margin-top: 36px; padding: 18px 20px; scroll-margin-top: calc(var(--hdr, 98px) + 8px); }
+  #suggest h2 { margin: 0 0 4px; font-size: 18px; }
+  #suggest .intro { color: var(--muted); font-size: 12.5px; margin: 0 0 12px; max-width: 900px; }
+  #suggest .ctl { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); margin-bottom: 12px; }
+  #suggest .ctl input[type=number] { width: 64px; padding: 3px 6px; }
+  #suggest table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  #suggest th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; padding: 6px 8px; border-bottom: 1px solid var(--line-2); white-space: nowrap; }
+  #suggest td { padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  #suggest td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  #suggest tr.existing td { color: var(--muted); }
+  #suggest tr.below td { opacity: .5; }
+  #suggest .val { font-family: var(--mono); font-size: 12px; cursor: pointer; text-decoration: underline dotted; }
+  #suggest .absorbs { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  #suggest .name { font-family: var(--mono); font-size: 12px; font-weight: 600; }
+  #suggest .pvc { width: 64px; }
+  #suggest .pvc > * { display: inline-block; vertical-align: middle; }
+  #suggest .pvc .radius-prev { width: 26px; height: 26px; }
+  #suggest .unused { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
+  #suggest .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-right: 6px; opacity: .7; }
+  nav.index a.sugg { grid-template-columns: 1fr; margin-top: 10px; border-top: 1px solid var(--line); border-radius: 0; padding-top: 10px; font-weight: 600; }
+  .help { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+  .toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 6px 14px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 200; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } nav.index { display: none; } header.hdr { position: static; } }
+</style>
+</head>
+<body>
+<header class="hdr">
+<div class="topbar">
+  <a class="crumb" href="./">Review</a><span class="faint">/</span>
+  <h1 id="title">Survey</h1>
+  <span id="meta" class="muted" style="font-size:12px"></span>
+  <span class="spacer"></span>
+  <div id="prog" style="display:flex;align-items:center;gap:10px"></div>
+  <a class="btn small" id="exp-md" target="_blank">Export .md</a>
+  <a class="btn small" id="exp-json" target="_blank">.json</a>
+</div>
+<div class="toolbar">
+  <div class="seg" id="filter">
+    <button data-f="all">All</button><button data-f="undecided">Undecided</button>
+    <button data-f="keep" class="keep">Keep</button><button data-f="round" class="round">Round</button><button data-f="exclude" class="exclude">Exclude</button><button data-f="remove" class="remove">Remove</button>
+  </div>
+  <select id="pagef"><option value="">All page states</option></select>
+  <input type="search" id="q" placeholder="Filter: value, token, component, text…">
+  <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
+  <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Excluded usages are hidden unless this is on (or the Exclude filter is selected)"><input type="checkbox" id="showex"> Show excluded</label>
+  <span id="count" class="muted" style="font-size:12px"></span>
+  <span class="spacer"></span>
+  <div class="help"><span><span class="kbd">j</span>/<span class="kbd">k</span> move</span><span><span class="kbd">1</span> keep <span class="kbd">2</span> round <span class="kbd">3</span> exclude <span class="kbd">4</span> remove <span class="kbd">0</span> clear</span><span><span class="kbd">p</span> preview rounding</span><span><span class="kbd">o</span> usage (<span class="kbd">⇧o</span> new tab)</span><span><span class="kbd">n</span> note</span><span><span class="kbd">space</span> zoom</span></div>
+</div>
+</header>
+<div class="layout">
+  <nav class="index" id="index"></nav>
+  <main id="main"><div class="empty">Loading…</div></main>
+</div>
+<div class="lightbox" id="lb"><img alt=""><div class="cap"></div></div>
+<div class="toast" id="toast"></div>
+<div class="pmodal" id="pm"><div class="box"><div class="bar"><b id="pmTitle"></b><span class="spacer"></span><a class="btn small" id="pmOpen" target="_blank">Open in tab ↗</a><button class="btn small" id="pmRound">Round to this</button><button class="btn small" id="pmClose">Close <span class="kbd">esc</span></button></div><iframe id="pmFrame"></iframe></div></div>
+
+<script type="module">
+import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend } from './common.js';
+import { loadTokens, nearest, valueDistance, isColorPreset, familyTokenNames, suggestName, tokenEntry } from './tokens.js';
+
+const setHdr = () => document.documentElement.style.setProperty('--hdr', $('header.hdr').offsetHeight + 'px');
+new ResizeObserver(setHdr).observe($('header.hdr'));
+
+const params = new URLSearchParams(location.search);
+const id = params.get('id');
+const state = { f: params.get('f') || 'all', q: params.get('q') || '', page: params.get('page') || '', off: params.get('off') === '1', showEx: params.get('ex') === '1' };
+let S, cfg, focusedId = null;
+const byId = new Map();
+
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), 1400); }
+
+async function load() {
+  [S, cfg] = await Promise.all([api(`/api/surveys/${encodeURIComponent(id)}`), config(), loadTokens()]);
+  document.title = `${S.title} · Survey`;
+  $('#title').textContent = S.title;
+  $('#meta').textContent = `${S.stats.sections} sections · ${S.stats.usages} usages · ${S.stats.instances} instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
+  $('#exp-md').href = `/api/surveys/${id}/export.md`;
+  $('#exp-json').href = `/api/surveys/${id}/export.json`;
+  const pages = [...new Set(S.captures.map(c => c.label))];
+  $('#pagef').insertAdjacentHTML('beforeend', S.captures.map((c, i) => `<option value="${i}">${esc(c.label)}</option>`).join(''));
+  $('#pagef').value = state.page;
+  for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; byId.set(it.id, it); } }
+  $('#offtok').checked = state.off;
+  $('#showex').checked = state.showEx;
+  render();
+  applyFilter();
+}
+
+function declHtml(it) {
+  if (!it.declared) return `<div class="decl"><span class="from">no authored declaration found (UA default / computed)</span></div>`;
+  const val = esc(it.declared).replace(/(--[\w-]+)/g, '<span class="tok">$1</span>');
+  const from = it.declaredFrom === 'inline' ? 'inline style' : it.declaredFrom;
+  return `<div class="decl">${esc(it.declaredProp)}: ${val}<br><span class="from">${esc(from)}${it.inheritedFrom ? ` · inherited from ${esc(it.inheritedFrom)}` : ''}</span></div>`;
+}
+
+function tokenRow(s, it, d) {
+  const n = s.near;
+  if (!n) return `<div class="row"><span class="lbl">Token</span><span class="faint">no ${esc(S.preset)} tokens in the design system</span></div>`;
+  const saved = d.round?.to;
+  let opts = n.candidates.map((c, i) => `<option value="${i}" ${saved ? (c.token === saved ? 'selected' : '') : i === 0 ? 'selected' : ''}>${n.exact && i === 0 ? '= ' : '→ '}${esc(c.label)}</option>`).join('');
+  if (saved && !n.candidates.some(c => c.token === saved)) opts = `<option value="saved" selected>→ ${esc(saved)} ${esc(d.round.value || '')} (saved)</option>` + opts;
+  return `<div class="tokrow"><span class="lbl faint" style="width:64px">${n.exact ? 'Matches' : 'Nearest'}</span><select class="roundsel" title="Token to round to">${opts}</select><button class="btn small" data-preview title="Preview this rounding on the live page (p)">Preview</button></div>`;
+}
+function chosen(it) {
+  const n = it.sec.near; if (!n) return null;
+  const sel = $(`#i-${it.id} .roundsel`);
+  if (sel?.value === 'saved') { const r = S.decisions[it.id].round; return { token: r.to, value: r.value, css: r.css, label: r.to }; }
+  return n.candidates[Number(sel?.value || 0)] || n.candidates[0];
+}
+function tokBadge(s) {
+  if (!s.near) return '';
+  const c = s.near.candidates[0];
+  return s.near.exact
+    ? `<span class="chip ontok" title="Value equals design-system token ${esc(c.token)} (${esc(c.value)})">On-token</span>`
+    : `<span class="chip offtok" title="No design-system token has this value. Nearest: ${esc(c.label)}">Off-token</span>`;
+}
+function secMatch(s) {
+  if (!s.near) return '';
+  const c = s.near.candidates[0];
+  return s.near.exact ? `<span class="chip match" title="Equals a design-system token">= ${esc(c.token)}</span>` : `<span class="chip near" title="Nearest design-system token">≈ ${esc(c.label)}</span>`;
+}
+
+function itemHtml(s, it) {
+  const d = S.decisions[it.id] || {};
+  const cap = S.captures[it.where.capture];
+  const more = it.captures.length > 1 ? ` <span class="chip" title="${esc(it.captures.map(c => S.captures[c].label).join('\n'))}">+${it.captures.length - 1} state${it.captures.length > 2 ? 's' : ''}</span>` : '';
+  const src = it.source || {};
+  return `
+  <article class="card item" tabindex="0" id="i-${it.id}" data-id="${it.id}" data-decision="${d.decision || ''}">
+    <div class="item-head">
+      <span class="num">#${it.n}</span><span class="ref">S${s.n}.${it.n}</span>
+      ${it.instances > 1 ? `<span class="chip" title="rendered instances of this element">×${it.instances}</span>` : ''}
+      ${tokBadge(s)}
+      <div class="seg dec">
+        <button class="keep" data-d="keep" aria-pressed="${d.decision === 'keep'}">Keep</button>
+        <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${s.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
+        <button class="exclude" data-d="exclude" aria-pressed="${d.decision === 'exclude'}">Exclude</button>
+        <button class="remove" data-d="remove" aria-pressed="${d.decision === 'remove'}">Remove</button>
+      </div>
+    </div>
+    <div class="shot" data-zoom>${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : '<span class="none">no screenshot</span>'}</div>
+    <div class="body">
+      ${declHtml(it)}
+      ${tokenRow(s, it, d)}
+      <div class="row"><span class="lbl">Element</span><span><code>&lt;${esc(it.tag)}&gt;</code> ${it.size[0]}×${it.size[1]}${it.text ? ` · “${esc(it.text)}”` : ''}</span></div>
+      <div class="row"><span class="lbl">Component</span><span>${esc(it.component || '—')}</span></div>
+      <div class="row"><span class="lbl">Page</span><span>${esc(cap.label)}${more}</span></div>
+      <div class="links">
+        <a class="btn small" href="${esc(viewUrl(cap, it.where))}" target="_blank" data-open title="View this usage on the live page (⌘-click for a new tab)">Usage</a>
+        ${src.line ? `<a class="btn small" href="${esc(editorUrl(cfg.root, src.file, src.line, src.col))}" title="Open in VS Code">${esc(src.file)}:${src.line}</a>
+        <button class="btn small" data-src>Source</button>` : `<span class="chip">${esc(src.file || '')}</span>`}
+      </div>
+      <div class="srcbox"></div>
+      <input class="note" placeholder="Add note…" value="${esc(d.note || '')}">
+    </div>
+  </article>`;
+}
+
+function render() {
+  $('#index').innerHTML = S.sections.map(s => `
+    <a href="#s-${s.id}" data-sec="${s.id}"><span class="n">S${s.n}</span><span class="pv">${preview(S.preset, s.value)}</span><span class="v" title="${esc(s.value)}">${esc(s.value)}</span><span class="c">${s.near?.exact ? '<span class="m" title="matches a token">= </span>' : ''}${s.items.length}</span></a>`).join('') + `<a href="#suggest" class="sugg">★ Suggested Tokens</a>`;
+  $('#main').innerHTML = (S.problems?.length ? `<details class="card problems"><summary>${S.problems.length} capture problem(s) during generation</summary><pre>${esc(S.problems.join('\n'))}</pre></details>` : '') +
+    S.sections.map(s => `
+    <section class="sec" id="s-${s.id}" data-sec="${s.id}">
+      <div class="sec-head">
+        ${preview(S.preset, s.value)}
+        <h2><span class="sn">S${s.n}</span><code>${esc(s.value)}</code></h2>
+        ${secMatch(s)}
+        <span class="muted secount" style="font-size:12px"></span>
+        <div class="tokens">${s.tokens.map(t => `<span class="chip token">${esc(t)}</span>`).join('')}</div>
+        <div class="bulk">Set all shown:
+          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="remove" class="remove">Remove</button><button data-bulk="">Clear</button></div>
+        </div>
+      </div>
+      <div class="grid">${s.items.map(it => itemHtml(s, it)).join('')}</div>
+    </section>`).join('') + `<section class="card" id="suggest"></section>`;
+  renderSuggestShell();
+  updateProgress();
+}
+
+function matches(it) {
+  const d = S.decisions[it.id]?.decision || 'undecided';
+  if (state.f !== 'all' && d !== state.f) return false;
+  if (d === 'exclude' && state.f !== 'exclude' && !state.showEx) return false;
+  if (state.page !== '' && !it.captures.includes(Number(state.page))) return false;
+  if (state.off && it.sec.near?.exact) return false;
+  if (state.q) {
+    const hay = [it.value, it.declared, it.declaredFrom, it.component, it.text, it.tag, it.source?.file, S.captures[it.where.capture].label, ...(it.tokens || []), S.decisions[it.id]?.note, `S${it.sec.n}.${it.n}`].join(' ').toLowerCase();
+    if (!state.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function applyFilter() {
+  $$('#filter button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === state.f));
+  $('#q').value = state.q;
+  let shown = 0, on = 0;
+  for (const s of S.sections) {
+    let n = 0;
+    for (const it of s.items) { const m = matches(it); $(`#i-${it.id}`).classList.toggle('hidden', !m); if (m) n++; }
+    shown += n;
+    if (s.near?.exact) on += n;
+    $(`#s-${s.id}`).classList.toggle('hidden', !n);
+    $(`nav.index a[data-sec="${s.id}"]`).classList.toggle('hidden', !n);
+    $(`#s-${s.id} .secount`).textContent = n === s.items.length ? `${n} usage${n === 1 ? '' : 's'} · ${s.instances} instances` : `${n} of ${s.items.length} usages shown`;
+  }
+  $('#count').textContent = `${shown} shown` + (S.sections.some(s => s.near) ? ` · ${on} on-token · ${shown - on} off-token` : '');
+  const q = new URLSearchParams({ id });
+  if (state.f !== 'all') q.set('f', state.f);
+  if (state.q) q.set('q', state.q);
+  if (state.page !== '') q.set('page', state.page);
+  if (state.off) q.set('off', '1');
+  if (state.showEx) q.set('ex', '1');
+  history.replaceState(null, '', `?${q}${location.hash}`);
+}
+
+function updateProgress() {
+  const p = { keep: 0, round: 0, exclude: 0, remove: 0, undecided: 0, total: 0 };
+  for (const it of byId.values()) { p.total++; const d = S.decisions[it.id]?.decision; p[d || 'undecided']++; }
+  $('#prog').innerHTML = progressBar(p) + legend(p);
+  renderSuggest();
+}
+
+// ---------- Suggested Tokens ----------
+// All usages except excluded/removed; rounded usages count toward their target value.
+// Near-identical values are clustered around the most-used one; clusters that match no existing
+// token and clear the threshold are suggested as new tokens.
+const sug = { min: 3, tol: null, by: 'usages', existing: true, below: false };
+function renderSuggestShell() {
+  sug.tol ??= isColorPreset(S.preset) ? 2 : 1;
+  $('#suggest').innerHTML = `
+    <h2>Suggested Tokens</h2>
+    <p class="intro">Built from every usage that isn't <b>Excluded</b> or <b>Removed</b> (usages marked <b>Round</b> count toward their target).
+      Values within the merge distance are clustered around the most-used value. Rows that match no existing design-system token
+      and reach the minimum are suggested as <b>New</b>; existing tokens are listed for adoption counts. Updates live as you decide.</p>
+    <div class="ctl">
+      <label>Min usages <input type="number" id="sgMin" min="1" value="${sug.min}"></label>
+      <label>Merge within <input type="number" id="sgTol" min="0" step="0.5" value="${sug.tol}"> ${isColorPreset(S.preset) ? 'ΔE' : 'px'}</label>
+      <label>Rank by <select id="sgBy"><option value="usages">usages</option><option value="instances">instances</option><option value="pages">pages</option></select></label>
+      <label><input type="checkbox" id="sgEx" ${sug.existing ? 'checked' : ''}> Show existing tokens</label>
+      <label><input type="checkbox" id="sgBelow" ${sug.below ? 'checked' : ''}> Show below minimum</label>
+      <span class="spacer"></span>
+      <button class="btn small" id="sgCopy" title="Copy the New suggestions as tokens.json entries">Copy new as tokens.json</button>
+    </div>
+    <div id="sgBody"></div>`;
+  $('#sgBy').value = sug.by;
+  const upd = () => { sug.min = Math.max(1, Number($('#sgMin').value) || 1); sug.tol = Math.max(0, Number($('#sgTol').value) || 0); sug.by = $('#sgBy').value; sug.existing = $('#sgEx').checked; sug.below = $('#sgBelow').checked; renderSuggest(); };
+  ['#sgMin', '#sgTol', '#sgBy', '#sgEx', '#sgBelow'].forEach(id => $(id).addEventListener('input', upd));
+  $('#sgCopy').onclick = async () => {
+    const rows = computeSuggest().filter(r => r.isNew && r.usages >= sug.min);
+    const json = JSON.stringify(rows.map(r => tokenEntry(S.preset, r.name, r.value, `Suggested from ${r.usages} usages (${r.instances} instances) across ${r.pages} page states in survey "${S.id}".${r.absorbs.length ? ` Absorbs ${r.absorbs.map(a => a.value).join(', ')}.` : ''}`)), null, 2);
+    await navigator.clipboard.writeText(json);
+    toast(`Copied ${rows.length} suggestion${rows.length === 1 ? '' : 's'}`);
+  };
+}
+
+function computeSuggest() {
+  // effective value per counted usage
+  const groups = new Map();
+  for (const it of byId.values()) {
+    const d = S.decisions[it.id];
+    if (d?.decision === 'exclude' || d?.decision === 'remove') continue;
+    const value = d?.decision === 'round' && d.round?.value ? d.round.value : it.value;
+    let g = groups.get(value);
+    if (!g) groups.set(value, g = { value, usages: 0, instances: 0, pages: new Set(), refs: [] });
+    g.usages++; g.instances += it.instances;
+    it.captures.forEach(c => g.pages.add(S.captures[c].label));
+    g.refs.push(`S${it.sec.n}.${it.n}`);
+  }
+  const metric = g => (sug.by === 'pages' ? g.pages.size : g[sug.by]);
+  const list = [...groups.values()].sort((a, b) => b.usages - a.usages || b.instances - a.instances);
+  // cluster: most-used value seeds, absorbs unassigned values within tolerance
+  const clusters = [], taken = new Set();
+  for (const g of list) {
+    if (taken.has(g.value)) continue;
+    taken.add(g.value);
+    const c = { ...g, pages: new Set(g.pages), absorbs: [] };
+    if (sug.tol > 0) for (const o of list) {
+      if (taken.has(o.value)) continue;
+      const dist = valueDistance(S.preset, g.value, o.value);
+      if (dist != null && dist <= sug.tol) {
+        taken.add(o.value);
+        c.absorbs.push({ value: o.value, usages: o.usages });
+        c.usages += o.usages; c.instances += o.instances; o.pages.forEach(p => c.pages.add(p)); c.refs.push(...o.refs);
+      }
+    }
+    clusters.push(c);
+  }
+  return clusters.map(c => {
+    const n = nearest(S.preset, c.value);
+    const existing = n?.exact ? n.candidates[0] : null;
+    return { ...c, pages: c.pages.size, isNew: !existing, existing: existing?.token || null, existingNames: existing?.names || (existing ? [existing.token] : []), name: existing ? existing.token : suggestName(S.preset, c.value), near: !existing && n ? n.candidates[0] : null };
+  }).sort((a, b) => metric(b) - metric(a) || b.usages - a.usages);
+}
+
+function renderSuggest() {
+  if (!$('#sgBody')) return;
+  const all = computeSuggest();
+  const rows = all.filter(r => (sug.existing || r.isNew) && (sug.below || !r.isNew || r.usages >= sug.min));
+  const nNew = all.filter(r => r.isNew && r.usages >= sug.min).length;
+  const max = Math.max(1, ...rows.map(r => r.usages));
+  const used = new Set(all.flatMap(r => r.existingNames));
+  const unused = familyTokenNames(S.preset).filter(t => !used.has(t));
+  $('#sgCopy').disabled = !nNew;
+  $('#sgBody').innerHTML = !rows.length ? '<div class="empty">Nothing to suggest with these settings.</div>' : `
+    <table>
+      <thead><tr><th>#</th><th class="pvc"></th><th>Value</th><th>Status</th><th>Suggested name</th><th class="num">Usages</th><th class="num">Instances</th><th class="num">Pages</th><th>Absorbs</th></tr></thead>
+      <tbody>${rows.map((r, i) => `
+        <tr class="${r.isNew ? '' : 'existing'} ${r.isNew && r.usages < sug.min ? 'below' : ''}">
+          <td class="faint">${i + 1}</td>
+          <td class="pvc">${preview(S.preset, r.value)}</td>
+          <td><span class="val" data-q="${esc(r.value)}" title="Filter the list to this value">${esc(r.value)}</span></td>
+          <td>${r.isNew ? `<span class="chip offtok">New</span>${r.near ? ` <span class="faint" title="Nearest existing token">≈ ${esc(r.near.label)}</span>` : ''}` : `<span class="chip ontok">Existing</span>`}</td>
+          <td class="name">${esc(r.name)}</td>
+          <td class="num"><span class="bar" style="width:${Math.round((r.usages / max) * 60)}px"></span>${r.usages}</td>
+          <td class="num">${r.instances}</td>
+          <td class="num">${r.pages}</td>
+          <td class="absorbs">${r.absorbs.map(a => `${esc(a.value)} (${a.usages})`).join(', ')}</td>
+        </tr>`).join('')}</tbody>
+    </table>
+    <div class="unused">${nNew} new token${nNew === 1 ? '' : 's'} suggested · ${all.filter(r => !r.isNew).length} existing tokens in use${unused.length ? ` · <b>Unused existing tokens:</b> <code>${unused.map(esc).join('</code>, <code>')}</code>` : ''}</div>`;
+}
+$('#main').addEventListener('click', e => {
+  const v = e.target.closest('#suggest .val');
+  if (!v) return;
+  state.q = v.dataset.q; state.f = 'all'; applyFilter(); scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+async function decide(ids, decision, { note } = {}) {
+  const before = ids.map(i => [i, S.decisions[i] ? { ...S.decisions[i] } : undefined]);
+  for (const i of ids) {
+    const cur = { ...(S.decisions[i] || {}) };
+    if (decision !== undefined) { if (decision) cur.decision = decision; else delete cur.decision; }
+    if (decision === 'round') { const c = chosen(byId.get(i)); cur.round = { to: c.token, value: c.value, css: c.css }; } else if (decision !== undefined) delete cur.round;
+    if (note !== undefined) { if (note) cur.note = note; else delete cur.note; }
+    S.decisions[i] = cur;
+    paint(i);
+  }
+  updateProgress();
+  try {
+    const round = decision === 'round' ? Object.fromEntries(ids.map(i => [i, S.decisions[i].round])) : undefined;
+    const res = await api(`/api/surveys/${id}/decisions`, { method: 'PUT', body: { ids, ...(decision !== undefined ? { decision: decision || null } : {}), ...(note !== undefined ? { note } : {}), ...(round ? { round } : {}) } });
+    for (const [i, v] of Object.entries(res)) { if (v) S.decisions[i] = v; else delete S.decisions[i]; }
+  } catch (e) {
+    for (const [i, v] of before) { if (v) S.decisions[i] = v; else delete S.decisions[i]; paint(i); }
+    updateProgress();
+    alert('Save failed: ' + e.message);
+  }
+}
+function paint(itemId) {
+  const el = $(`#i-${itemId}`); if (!el) return;
+  const d = S.decisions[itemId]?.decision || '';
+  el.dataset.decision = d;
+  $$('.dec button', el).forEach(b => b.setAttribute('aria-pressed', b.dataset.d === d));
+}
+
+// ---------- events ----------
+$('#filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.f = b.dataset.f; applyFilter(); });
+$('#pagef').addEventListener('change', e => { state.page = e.target.value; applyFilter(); });
+$('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
+$('#showex').addEventListener('change', e => { state.showEx = e.target.checked; applyFilter(); });
+let qt; $('#q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); applyFilter(); }, 120); });
+
+$('#main').addEventListener('click', async e => {
+  const card = e.target.closest('.item');
+  const sec = e.target.closest('section.sec');
+  const bulk = e.target.closest('[data-bulk]');
+  if (bulk && sec) {
+    const s = S.sections.find(x => x.id === sec.dataset.sec);
+    const ids = s.items.filter(matches).map(i => i.id);
+    if (!ids.length) return;
+    const decided = ids.filter(i => S.decisions[i]?.decision && S.decisions[i].decision !== bulk.dataset.bulk).length;
+    if (decided && !confirm(`${decided} of these ${ids.length} already have a different decision. Overwrite?`)) return;
+    await decide(ids, bulk.dataset.bulk || null);
+    toast(`S${s.n}: ${ids.length} → ${bulk.dataset.bulk || 'cleared'}`);
+    applyFilter();
+    return;
+  }
+  if (!card) return;
+  // Usage link: popover unless a modifier/middle click asks for a new tab
+  if (e.target.closest('[data-open]') && !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0)) { e.preventDefault(); openUsage(card.dataset.id); return; }
+  focus(card.dataset.id, false);
+  const btn = e.target.closest('.dec button');
+  if (btn) { const cur = S.decisions[card.dataset.id]?.decision; await decide([card.dataset.id], cur === btn.dataset.d ? null : btn.dataset.d); if (btn.dataset.d === 'exclude' || state.f !== 'all') setTimeout(applyFilter, 250); return; }
+  if (e.target.closest('[data-zoom]')) { zoom(card.dataset.id); return; }
+  if (e.target.closest('[data-src]')) { toggleSource(card.dataset.id); return; }
+  if (e.target.closest('[data-preview]')) { openPreview(card.dataset.id); return; }
+});
+$('#main').addEventListener('change', e => {
+  if (e.target.classList.contains('roundsel')) {
+    // changing the target of an item already marked Round re-saves it
+    const itemId = e.target.closest('.item').dataset.id;
+    if (S.decisions[itemId]?.decision === 'round') decide([itemId], 'round').then(() => toast('Round target updated'));
+    return;
+  }
+  if (!e.target.classList.contains('note')) return;
+  const itemId = e.target.closest('.item').dataset.id;
+  decide([itemId], undefined, { note: e.target.value.trim() }).then(() => toast('Note saved'));
+});
+
+async function toggleSource(itemId) {
+  const it = byId.get(itemId), box = $(`#i-${itemId} .srcbox`);
+  if (box.innerHTML) { box.innerHTML = ''; return; }
+  const r = await api(`/api/source?file=${encodeURIComponent(it.source.file)}&line=${it.source.line}&context=4`);
+  box.innerHTML = `<pre class="src">${r.lines.map((l, i) => `<span class="${r.from + i === r.line ? 'hit' : ''}"><span class="faint">${String(r.from + i).padStart(5)}</span>  ${esc(l)}</span>`).join('\n')}</pre>`;
+}
+
+function zoom(itemId) {
+  const it = byId.get(itemId); if (!it?.shot) return;
+  const lb = $('#lb');
+  $('img', lb).src = `/surveys/${S.id}/${it.shot}`;
+  $('.cap', lb).textContent = `S${it.sec.n}.${it.n} · ${it.value} · ${it.component || ''} · ${S.captures[it.where.capture].label}`;
+  lb.classList.add('open');
+}
+$('#lb').addEventListener('click', () => $('#lb').classList.remove('open'));
+
+// ---------- usage / rounding popover ----------
+// Both open the live page with the item's rounding options; Usage starts on Original, Preview on the chosen token.
+let pmItem = null;
+function roundOptions(it) {
+  const n = it.sec.near; if (!n) return [];
+  const opts = n.candidates.map(c => ({ label: `${c.token} · ${c.value}`, token: c.token, value: c.value, css: c.css }));
+  const r = S.decisions[it.id]?.round;
+  if (r?.css && !opts.some(o => o.token === r.to)) opts.unshift({ label: `${r.to} · ${r.value} (saved)`, token: r.to, value: r.value, css: r.css });
+  return opts;
+}
+function selectedIndex(it, opts) {
+  const sel = $(`#i-${it.id} .roundsel`);
+  if (!sel) return 0;
+  if (sel.value === 'saved') return opts.findIndex(o => o.token === S.decisions[it.id].round.to);
+  const c = it.sec.near.candidates[Number(sel.value)];
+  return Math.max(0, opts.findIndex(o => o.token === c?.token));
+}
+function popUrl(itemId, pick) {
+  const it = byId.get(itemId), opts = roundOptions(it);
+  return viewUrl(S.captures[it.where.capture], it.where, opts.length ? { options: opts, pick } : null);
+}
+function openPop(itemId, pick) {
+  const it = byId.get(itemId), cap = S.captures[it.where.capture];
+  pmItem = itemId;
+  const url = popUrl(itemId, pick);
+  $('#pmTitle').textContent = `S${it.sec.n}.${it.n} · ${it.value} · ${it.component || `<${it.tag}>`} · ${cap.label}`;
+  $('#pmRound').hidden = !(pick >= 0 && roundOptions(it).length);
+  if (pick >= 0) $('#pmRound').textContent = `Round to ${roundOptions(it)[pick]?.token || 'this'}`;
+  $('#pmOpen').href = url;
+  $('#pmFrame').src = url + '&embed=1';
+  $('#pm').classList.add('open');
+}
+function openPreview(itemId) {
+  const it = byId.get(itemId);
+  if (!it.sec.near) { toast('No token to preview'); return; }
+  openPop(itemId, selectedIndex(it, roundOptions(it)));
+}
+function openUsage(itemId) { openPop(itemId, -1); }
+// the popover reports which option is showing; mirror it on the card so "Round to this" uses it
+addEventListener('message', e => {
+  if (e.origin !== location.origin || e.data?.type !== 'dcv-pick' || !pmItem) return;
+  const it = byId.get(pmItem), opts = roundOptions(it), pick = e.data.pick;
+  $('#pmRound').hidden = !(pick >= 0);
+  $('#pmOpen').href = popUrl(pmItem, pick);
+  if (pick < 0) return;
+  const o = opts[pick], sel = $(`#i-${pmItem} .roundsel`);
+  const ci = it.sec.near.candidates.findIndex(c => c.token === o.token);
+  if (sel) sel.value = ci >= 0 ? String(ci) : 'saved';
+  $('#pmRound').textContent = `Round to ${o.token}`;
+});
+function closePreview() { $('#pm').classList.remove('open'); $('#pmFrame').src = 'about:blank'; pmItem = null; }
+$('#pmClose').onclick = closePreview;
+$('#pm').addEventListener('click', e => { if (e.target.id === 'pm') closePreview(); });
+$('#pmRound').onclick = async () => { const i = pmItem; closePreview(); await decide([i], 'round'); toast('Marked Round'); };
+// Esc inside the iframe
+$('#pmFrame').addEventListener('load', () => { try { $('#pmFrame').contentWindow.addEventListener('keydown', e => { if (e.key === 'Escape') closePreview(); }); } catch {} });
+
+function visibleIds() { return $$('.item:not(.hidden)').filter(el => !el.closest('section.hidden')).map(el => el.dataset.id); }
+function focus(itemId, scroll = true) {
+  $$('.item.focused').forEach(el => el.classList.remove('focused'));
+  focusedId = itemId;
+  const el = itemId && $(`#i-${itemId}`);
+  if (!el) return;
+  el.classList.add('focused');
+  if (scroll) el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input, select, textarea')) { if (e.key === 'Escape') e.target.blur(); return; }
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if ($('#pm').classList.contains('open')) { if (e.key === 'Escape') closePreview(); return; }
+  if (e.key === 'p' && focusedId) { openPreview(focusedId); return; }
+  if ($('#lb').classList.contains('open')) { if (e.key === 'Escape' || e.key === ' ') { e.preventDefault(); $('#lb').classList.remove('open'); } return; }
+  const ids = visibleIds();
+  const i = ids.indexOf(focusedId);
+  const map = { 1: 'keep', 2: 'round', 3: 'exclude', 4: 'remove', 0: null };
+  if (e.key === '2' && focusedId && !byId.get(focusedId).sec.near) return;
+  if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); focus(ids[Math.min(i + 1, ids.length - 1)] ?? ids[0]); }
+  else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); focus(ids[Math.max(i - 1, 0)] ?? ids[0]); }
+  else if (e.key in map && focusedId) {
+    decide([focusedId], map[e.key]);
+    // advance to the next card unless filtering would hide it anyway
+    if (map[e.key]) focus(ids[i + 1] ?? focusedId);
+    if (state.f !== 'all' || map[e.key] === 'exclude') setTimeout(applyFilter, 250);
+  }
+  else if (e.key === 'o' && focusedId) { openUsage(focusedId); }
+  else if (e.key === 'O' && focusedId) { window.open($(`#i-${focusedId} [data-open]`).href, '_blank'); }
+  else if (e.key === 'n' && focusedId) { e.preventDefault(); $(`#i-${focusedId} .note`).focus(); }
+  else if (e.key === ' ' && focusedId) { e.preventDefault(); zoom(focusedId); }
+  else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
+});
+
+if (!id) $('#main').innerHTML = '<div class="empty">No survey id. <a href="./">Back</a></div>';
+else load().catch(err => { $('#main').innerHTML = `<div class="empty">${esc(err.message)}</div>`; });
+</script>
+</body>
+</html>

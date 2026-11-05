@@ -1,0 +1,31 @@
+{
+  "_doc": "Page states every survey scans unless its spec lists its own. Each: page, label, optional props/state/do (same as tools/dc.mjs flags), width/height.",
+  "captures": [
+    { "page": "AI Magic.dc.html", "label": "AI Magic · Home" },
+    { "page": "AI Magic.dc.html", "label": "AI Magic · Home (logged in)", "props": { "authState": "logged-in" } },
+    { "page": "AI Magic.dc.html", "label": "AI Magic · Home (dark)", "props": { "theme": "dark" } },
+    { "page": "AI Magic.dc.html", "label": "AI Magic · Search results", "state": { "active": "search", "aiHome": false } },
+    { "page": "AI Magic.dc.html", "label": "AI Magic · Explore", "state": { "active": "explore" } },
+    { "page": "AI Magic.dc.html", "label": "AI Magic · AI Tools", "state": { "active": "collections" } },
+    { "page": "Explore Page.dc.html", "label": "Explore Page" },
+    { "page": "Search Dropdown.dc.html", "label": "Search Dropdown" },
+    { "page": "Pricing.dc.html", "label": "Pricing · Option 1", "props": { "layout": "Option 1" } },
+    { "page": "Pricing.dc.html", "label": "Pricing · Option 2", "props": { "layout": "Option 2" } },
+    { "page": "Pricing.dc.html", "label": "Pricing · Option 3", "props": { "layout": "Option 3" } },
+    { "page": "Pricing.dc.html", "label": "Pricing · Option 4", "props": { "layout": "Option 4" } },
+    { "page": "Pricing.dc.html", "label": "Pricing · Option 4 (dark)", "props": { "layout": "Option 4", "theme": "Dark" } },
+    { "page": "Checkout.dc.html", "label": "Checkout" },
+    { "page": "Log In.dc.html", "label": "Log In · Create account" },
+    { "page": "Log In.dc.html", "label": "Log In · Log in", "props": { "mode": "Log In" } },
+    { "page": "Log In.dc.html", "label": "Log In · Create account (dark)", "props": { "theme": "Dark" } },
+    { "page": "Log In v1.dc.html", "label": "Log In v1 · Login" },
+    { "page": "Log In v1.dc.html", "label": "Log In v1 · Signup", "props": { "mode": "signup" } },
+    { "page": "Settings.dc.html", "label": "Settings · App", "props": { "layout": "app" } },
+    { "page": "Settings.dc.html", "label": "Settings · Sidebar", "props": { "layout": "sidebar" } },
+    { "page": "Settings.dc.html", "label": "Settings · Tabs", "props": { "layout": "tabs" } },
+    { "page": "Settings.dc.html", "label": "Settings · Modal", "props": { "layout": "modal" } },
+    { "page": "Settings.dc.html", "label": "Settings · Hub", "props": { "layout": "hub" } },
+    { "page": "Settings.dc.html", "label": "Settings · Free plan", "props": { "plan": "Free" } },
+    { "page": "Style Guide - Action Cards.dc.html", "label": "Style Guide · Action Cards" }
+  ]
+}

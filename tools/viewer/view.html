@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Viewer</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  html, body { height: 100%; overflow: hidden; }
+  body { display: flex; flex-direction: column; }
+  .topbar { position: static; gap: 10px; padding: 8px 14px; }
+  .controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 6px 14px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 12.5px; }
+  .controls label { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+  .controls select, .controls input { padding: 3px 6px; font-size: 12.5px; }
+  .controls .group { display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; padding-right: 10px; border-right: 1px solid var(--line); }
+  .controls .group:last-child { border-right: 0; }
+  .controls .sec { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); }
+  #stage { flex: 1; overflow: auto; background: var(--panel-2); position: relative; }
+  #frameWrap { transform-origin: 0 0; background: #fff; box-shadow: 0 0 0 1px var(--line-2); margin: 0 auto; }
+  iframe { border: 0; display: block; background: #fff; }
+  #status { font-size: 12px; color: var(--muted); }
+  #status.err { color: var(--remove); }
+  .target { font-size: 12px; display: inline-flex; gap: 6px; align-items: center; }
+  .target b { color: var(--hl); }
+  .compare { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+  .compare select { font-family: var(--mono); font-size: 12px; padding: 3px 6px; }
+  .compare select.picked { color: var(--round); border-color: var(--round); }
+  .compare .what { font-family: var(--mono); font-size: 11.5px; color: var(--round); max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  body.embed .topbar .crumb, body.embed .topbar .crumb + .faint, body.embed #copy { display: none; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="crumb" href="./">Review</a><span class="faint">/</span>
+  <select id="page"></select>
+  <label class="muted" style="font-size:12.5px">Width <select id="w"><option>1440</option><option>1280</option><option>1024</option><option>768</option><option>390</option></select></label>
+  <label class="muted" style="font-size:12.5px"><input type="checkbox" id="fit" checked> Fit</label>
+  <button class="btn small" id="reload" title="Reload with current settings">Reload</button>
+  <span class="target" id="target"></span>
+  <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select><span class="faint"><span class="kbd">0</span>–<span class="kbd">3</span> pick · <span class="kbd">t</span> toggle</span></span>
+  <span class="spacer"></span>
+  <span id="status">Loading…</span>
+  <button class="btn small" id="copy" title="Copy a link to this exact state">Copy link</button>
+</div>
+<div class="controls" id="controls"></div>
+<div id="stage"><div id="frameWrap"><iframe id="frame"></iframe></div></div>
+
+<script type="module">
+import { api, esc, $, $$ } from './common.js';
+
+const P = new URLSearchParams(location.search);
+const parse = (k, d) => { try { return P.get(k) ? JSON.parse(P.get(k)) : d; } catch { return d; } };
+let cur = {
+  page: P.get('page') || 'AI Magic.dc.html',
+  props: parse('props', {}), state: parse('state', {}), do: parse('do', []),
+  w: Number(P.get('w')) || 1440,
+  target: P.get('tpl') != null ? { owner: P.get('owner'), tpl: Number(P.get('tpl')), nth: Number(P.get('nth') || 0) } : null,
+  options: parse('options', null), pick: P.get('pick') != null ? Number(P.get('pick')) : 0,
+};
+// legacy single-option links: ?apply={css}&applyLabel=...
+if (!cur.options && P.get('apply')) cur.options = [{ label: P.get('applyLabel') || 'Rounded', css: parse('apply', {}) }];
+if (P.get('embed')) document.body.classList.add('embed');
+let saved = null, showing = -1;
+const MARKS = ['border', 'highlight', 'none'];
+let mark = MARKS.includes(P.get('mark')) ? P.get('mark') : (() => { try { return localStorage.getItem('dcv-mark'); } catch { return null; } })();
+if (!MARKS.includes(mark)) mark = 'border';
+const frame = $('#frame');
+let win, targetEl = null, raf;
+
+function status(msg, err) { const s = $('#status'); s.textContent = msg; s.classList.toggle('err', !!err); }
+
+function syncUrl() {
+  const q = new URLSearchParams({ page: cur.page });
+  if (Object.keys(cur.props).length) q.set('props', JSON.stringify(cur.props));
+  if (Object.keys(cur.state).length) q.set('state', JSON.stringify(cur.state));
+  if (cur.do.length) q.set('do', JSON.stringify(cur.do));
+  if (cur.w !== 1440) q.set('w', cur.w);
+  if (cur.target) { q.set('owner', cur.target.owner); q.set('tpl', cur.target.tpl); q.set('nth', cur.target.nth); }
+  if (mark !== 'border') q.set('mark', mark);
+  if (cur.options) { q.set('options', JSON.stringify(cur.options)); q.set('pick', cur.pick); }
+  if (P.get('embed')) q.set('embed', '1');
+  history.replaceState(null, '', `?${q}`);
+}
+
+function layout() {
+  const stage = $('#stage'), wrap = $('#frameWrap');
+  const avail = stage.clientWidth - 2;
+  const scale = $('#fit').checked && cur.w > avail ? avail / cur.w : 1;
+  frame.style.width = cur.w + 'px';
+  frame.style.height = (stage.clientHeight / scale) + 'px';
+  wrap.style.width = cur.w + 'px';
+  wrap.style.transform = `scale(${scale})`;
+  wrap.style.marginLeft = scale < 1 ? '0' : '';
+}
+addEventListener('resize', layout);
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function waitFor(fn, ms = 20000) { const t = Date.now(); while (Date.now() - t < ms) { try { if (fn()) return true; } catch {} await sleep(100); } return false; }
+
+async function load() {
+  syncUrl();
+  layout();
+  status('Loading…');
+  targetEl = null; saved = null; cancelAnimationFrame(raf);
+  $('#target').innerHTML = '';
+  frame.src = `/design-project/${encodeURIComponent(cur.page)}`;
+}
+
+frame.addEventListener('load', async () => {
+  win = frame.contentWindow;
+  const doc = frame.contentDocument;
+  const s = doc.createElement('script'); s.src = '/lib/bridge.js';
+  await new Promise(r => { s.onload = r; s.onerror = r; doc.head.appendChild(s); });
+  const isDc = cur.page.endsWith('.dc.html');
+  if (isDc && !(await waitFor(() => win.__dcv.ready()))) { status('Page did not render', true); return; }
+  await sleep(300);
+  renderControls();
+  try {
+    if (isDc && Object.keys(cur.props).length) { win.__dcv.setProps(cur.props); await sleep(300); }
+    if (isDc && Object.keys(cur.state).length) { win.__dcv.setState(cur.state); await sleep(300); }
+    for (const step of cur.do) { await runStep(step); await sleep(400); }
+  } catch (e) { status(e.message, true); return; }
+  if (cur.target) await showTarget();
+  else status('Ready');
+});
+
+// Minimal browser-side version of tools/dc.mjs --do steps.
+function query(sel) {
+  const d = frame.contentDocument;
+  const vis = el => win.__dcv.vis(el);
+  let m;
+  if ((m = sel.match(/^label=(.+)$/))) return [...d.querySelectorAll(`[data-screen-label="${CSS.escape(m[1])}"]`)].find(vis);
+  if ((m = sel.match(/^text="(.+)"$/))) return [...d.querySelectorAll('body *')].reverse().find(el => vis(el) && el.textContent.trim() === m[1]);
+  if ((m = sel.match(/^text=(.+)$/))) return [...d.querySelectorAll('body *')].reverse().find(el => vis(el) && el.textContent.includes(m[1]));
+  if ((m = sel.match(/^role=(\w+)\[name="(.+)"\]$/))) {
+    const tags = { link: 'a,[role=link]', button: 'button,[role=button]', tab: '[role=tab]' }[m[1]] || `[role=${m[1]}]`;
+    return [...d.querySelectorAll(tags)].find(el => vis(el) && ((el.getAttribute('aria-label') || el.textContent).trim() === m[2]));
+  }
+  return [...d.querySelectorAll(sel)].find(vis);
+}
+async function runStep(step) {
+  const i = step.indexOf(':'), kind = step.slice(0, i), arg = step.slice(i + 1);
+  if (kind === 'wait') return sleep(Number(arg));
+  if (kind === 'eval') return win.eval(arg);
+  if (kind === 'press') return; // not supported in the viewer
+  const [sel, text] = arg.split('::');
+  const el = query(sel);
+  if (!el) throw new Error(`step "${step}": element not found`);
+  if (kind === 'click') el.click();
+  else if (kind === 'hover') { el.dispatchEvent(new MouseEvent('mouseover', { bubbles: true })); el.dispatchEvent(new MouseEvent('mouseenter')); }
+  else if (kind === 'scroll') el.scrollIntoView({ block: 'center' });
+  else if (kind === 'fill') { const set = Object.getOwnPropertyDescriptor(win.HTMLInputElement.prototype, 'value').set; set.call(el, text || ''); el.dispatchEvent(new Event('input', { bubbles: true })); }
+}
+
+async function showTarget() {
+  const t = cur.target;
+  targetEl = win.__dcv.find(t.owner, t.tpl, t.nth);
+  if (!targetEl) { status(`Element ${t.owner}#${t.tpl} not found in this state`, true); return; }
+  win.__dcv.highlight(targetEl, { mode: mark });
+  const track = () => { if (targetEl?.isConnected) win.__dcv.highlight(targetEl, { scroll: false, mode: mark }); raf = requestAnimationFrame(track); };
+  track();
+  const r = targetEl.getBoundingClientRect();
+  $('#target').innerHTML = `<b>●</b> <code>${esc(t.owner)}.dc.html</code> tpl ${t.tpl}${t.nth ? ` #${t.nth}` : ''} · &lt;${esc(targetEl.tagName.toLowerCase())}&gt; ${Math.round(r.width)}×${Math.round(r.height)} <label class="muted" title="How the element is marked (m to cycle)">Mark <select id="markSel">${MARKS.map(m => `<option value="${m}" ${m === mark ? 'selected' : ''}>${m[0].toUpperCase() + m.slice(1)}</option>`).join('')}</select></label> <button class="btn small" id="refocus">Scroll to</button> <button class="btn small" id="clearT">Clear</button>`;
+  $('#markSel').onchange = e => setMark(e.target.value);
+  $('#refocus').onclick = () => targetEl && targetEl.scrollIntoView({ block: 'center' });
+  $('#clearT').onclick = () => { if (saved) show(-1, true); saved = null; cur.options = null; $('#compare').hidden = true; cur.target = null; targetEl = null; cancelAnimationFrame(raf); win.__dcv.unhighlight(); $('#target').innerHTML = ''; syncUrl(); };
+  status('Ready');
+  if (cur.options?.length) setupCompare();
+}
+
+function setMark(m) {
+  mark = m;
+  try { localStorage.setItem('dcv-mark', m); } catch {}
+  if ($('#markSel')) $('#markSel').value = m;
+  if (targetEl) win.__dcv.highlight(targetEl, { scroll: false, mode: m });
+  syncUrl();
+}
+const markKey = e => { if (e.key === 'm' && targetEl && !e.target.matches?.('input, select, textarea') && !e.metaKey && !e.ctrlKey) setMark(MARKS[(MARKS.indexOf(mark) + 1) % MARKS.length]); };
+addEventListener('keydown', markKey);
+frame.addEventListener('load', () => frame.contentWindow.addEventListener('keydown', markKey));
+
+// ---------- rounding options: apply a candidate's CSS to the target, compare with the original ----------
+// cur.options = [{ label, token, value, css }], cur.pick = index (-1 = original)
+function setupCompare() {
+  const props = [...new Set(cur.options.flatMap(o => Object.keys(o.css || {})))];
+  saved = Object.fromEntries(props.map(k => [k, [targetEl.style.getPropertyValue(k), targetEl.style.getPropertyPriority(k)]]));
+  $('#compare').hidden = false;
+  $('#opts').innerHTML = `<option value="-1">Original (as designed)</option>` + cur.options.map((o, i) =>
+    `<option value="${i}" title="${esc(Object.entries(o.css).map(([k, v]) => `${k}: ${v}`).join('; '))}">${i + 1}. ${esc(o.label)}</option>`).join('');
+  $('#opts').onchange = e => show(Number(e.target.value));
+  lastPick = cur.pick >= 0 ? cur.pick : 0;
+  show(cur.pick, true);
+}
+let lastPick = 0;
+function show(i, initial) {
+  if (!targetEl || !saved) return;
+  i = Math.max(-1, Math.min(i, cur.options.length - 1));
+  for (const [k, [ov, op]] of Object.entries(saved)) { if (ov) targetEl.style.setProperty(k, ov, op); else targetEl.style.removeProperty(k); }
+  if (i >= 0) { for (const [k, v] of Object.entries(cur.options[i].css)) targetEl.style.setProperty(k, v, 'important'); lastPick = i; }
+  showing = i; cur.pick = i;
+  $('#opts').value = String(i);
+  $('#opts').classList.toggle('picked', i >= 0);
+  syncUrl();
+  if (!initial && window.parent !== window) window.parent.postMessage({ type: 'dcv-pick', pick: i }, location.origin);
+}
+function optKeys(e) {
+  if (!saved || e.target.matches?.('input, select, textarea') || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === 't') show(showing >= 0 ? -1 : lastPick);
+  else if (e.key === '0') show(-1);
+  else if (/^[1-9]$/.test(e.key) && Number(e.key) <= cur.options.length) show(Number(e.key) - 1);
+}
+addEventListener('keydown', optKeys);
+frame.addEventListener('load', () => frame.contentWindow.addEventListener('keydown', optKeys));
+
+function renderControls() {
+  const meta = win.__dcv?.propsMeta?.() || null;
+  const box = $('#controls');
+  if (!meta) { box.innerHTML = '<span class="faint">No props on this page.</span>' + stateControl(); bindState(); return; }
+  const groups = {};
+  for (const [k, v] of Object.entries(meta)) if (v.options || v.editor === 'boolean') (groups[v.section || ''] ||= []).push([k, v]);
+  box.innerHTML = Object.entries(groups).map(([sec, items]) => `<span class="group">${sec ? `<span class="sec">${esc(sec)}</span>` : ''}${items.map(([k, v]) => {
+    const val = k in cur.props ? cur.props[k] : v.default;
+    if (v.editor === 'boolean') return `<label><input type="checkbox" data-prop="${esc(k)}" ${val ? 'checked' : ''}> ${esc(k)}</label>`;
+    return `<label>${esc(k)} <select data-prop="${esc(k)}">${v.options.map(o => `<option ${o === val ? 'selected' : ''}>${esc(o)}</option>`).join('')}</select></label>`;
+  }).join('')}</span>`).join('') + stateControl();
+  box.querySelectorAll('[data-prop]').forEach(el => el.addEventListener('change', () => {
+    const k = el.dataset.prop, v = el.type === 'checkbox' ? el.checked : el.value;
+    if (v === meta[k].default) delete cur.props[k]; else cur.props[k] = v;
+    win.__dcv.setProps({ [k]: v });
+    syncUrl();
+    if (targetEl) setTimeout(() => { if (!targetEl.isConnected) { status('Highlighted element is not in this state', true); } }, 300);
+  }));
+  bindState();
+}
+function stateControl() {
+  return cur.page.endsWith('.dc.html') ? `<span class="group"><span class="sec">State</span><input id="stateIn" size="34" class="mono" placeholder='{"active":"explore"}' value="${esc(Object.keys(cur.state).length ? JSON.stringify(cur.state) : '')}"><button class="btn small" id="stateGo">Set</button></span>` : '';
+}
+function bindState() {
+  const go = $('#stateGo'); if (!go) return;
+  const apply = () => {
+    const raw = $('#stateIn').value.trim();
+    try { const st = raw ? JSON.parse(raw) : {}; win.__dcv.setState(st); cur.state = { ...cur.state, ...st }; syncUrl(); status('State set'); }
+    catch (e) { status('State must be JSON: ' + e.message, true); }
+  };
+  go.onclick = apply;
+  $('#stateIn').onkeydown = e => { if (e.key === 'Enter') apply(); };
+}
+
+// ---------- chrome ----------
+const pages = await api('/api/pages');
+$('#page').innerHTML = pages.map(p => `<option ${p.file === cur.page ? 'selected' : ''} value="${esc(p.file)}">${esc(p.file.replace(/\.dc\.html$/, ''))}</option>`).join('');
+$('#page').onchange = e => { cur = { page: e.target.value, props: {}, state: {}, do: [], w: cur.w, target: null, options: null }; saved = null; $('#compare').hidden = true; load(); };
+$('#w').value = String(cur.w);
+$('#w').onchange = e => { cur.w = Number(e.target.value); load(); };
+$('#fit').onchange = layout;
+$('#reload').onclick = load;
+$('#copy').onclick = async () => { await navigator.clipboard.writeText(location.href); status('Link copied'); };
+document.title = `${cur.page.replace(/\.dc\.html$/, '')} · Viewer`;
+load();
+</script>
+</body>
+</html>

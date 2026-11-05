@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System Review</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 80px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 28px 0 10px; font-weight: 600; }
+  .surveys { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+  .survey { display: flex; flex-direction: column; gap: 10px; padding: 16px; text-decoration: none; }
+  .survey:hover { border-color: var(--line-2); }
+  .survey h3 { margin: 0; font-size: 16px; }
+  .survey .meta { font-size: 12px; color: var(--muted); }
+  .pages { display: flex; flex-direction: column; }
+  .page { display: grid; grid-template-columns: 260px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  .page:last-child { border-bottom: 0; }
+  .page .name { font-weight: 550; }
+  .page .props { display: flex; flex-wrap: wrap; gap: 4px; }
+  .howto { padding: 14px 16px; font-size: 13px; color: var(--muted); }
+  .howto code { color: var(--text); }
+  @media (max-width: 720px) { .page { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar"><h1>Design System Review</h1><span class="spacer"></span><a class="btn" href="view.html">Open page viewer</a></div>
+<main>
+  <h2>Token surveys</h2>
+  <div id="surveys" class="surveys"></div>
+  <h2>Pages</h2>
+  <div id="pages" class="card pages"></div>
+</main>
+<script type="module">
+import { api, esc, progressBar, legend, $ } from './common.js';
+
+const surveys = await api('/api/surveys');
+$('#surveys').innerHTML = surveys.length ? surveys.map(s => s.generated ? `
+  <a class="card survey" href="survey.html?id=${encodeURIComponent(s.id)}">
+    <h3>${esc(s.title)}</h3>
+    <div class="meta"><code>${esc(s.id)}</code> · ${s.stats.sections} sections · ${s.stats.usages} usages · ${new Date(s.generatedAt).toLocaleString()}</div>
+    ${progressBar(s.progress)}${legend(s.progress)}
+  </a>` : `
+  <div class="card survey"><h3>${esc(s.title)}</h3><div class="meta">Not generated yet: <code>node tools/survey.mjs run ${esc(s.id)}</code></div></div>`).join('')
+  : `<div class="card howto">No surveys yet. Create one:<br><code>node tools/survey.mjs new radius --preset radius</code><br><code>node tools/survey.mjs run radius</code><br>Presets: <code>node tools/survey.mjs presets</code></div>`;
+
+const pages = await api('/api/pages');
+$('#pages').innerHTML = pages.map(p => `
+  <div class="page">
+    <div class="name">${esc(p.file.replace(/\.dc\.html$|\.html$/, ''))}${p.dc ? '' : ' <span class="chip">export</span>'}</div>
+    <div class="props">${p.props ? Object.entries(p.props).filter(([, v]) => v.options || v.editor === 'boolean').map(([k, v]) => `<span class="chip" title="${esc((v.options || ['true', 'false']).join(' | '))}">${esc(k)}</span>`).join('') : ''}</div>
+    <a class="btn small" href="view.html?page=${encodeURIComponent(p.file)}">View</a>
+  </div>`).join('');
+</script>
+</body>
+</html>

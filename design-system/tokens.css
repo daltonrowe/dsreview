@@ -1,0 +1,337 @@
+/* Apollo — generated from tokens.json */
+:root, [data-theme="light"] {
+  --color-grey-30: #eee; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 30: lightest tint. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-50: #eaeaea; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 50: subtle fill. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-100: #e0e0e0; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 100: hairlines and input borders. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-200: #d4d4d4; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 200: stronger borders. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-300: #c9c9c9; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 300: disabled fills. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-400: #aaa; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 400: mid grey. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-500: #909090; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 500: placeholder and disabled text on dark. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-600: #7f7f7f; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 600: muted text. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-700: #5a5a5a; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 700: secondary text. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-800: #363636; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 800: dark raised surface. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-900: #292929; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 900: dark card surface. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-grey-1000: #171717; /* Fixed neutral grey (Vecteezy 3.0, black-derived), step 1000: darkest: text in light, page in dark. The theme scale is built from these; prefer color-theme-* so a design flips in dark mode. */
+  --color-red-100: #feeded; /* Red palette, weight 100: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-200: #fddbdb; /* Red palette, weight 200: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-300: #fcc8c8; /* Red palette, weight 300: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-400: #fbb6b6; /* Red palette, weight 400: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-500: #faa4a4; /* Red palette, weight 500: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-600: #fa9292; /* Red palette, weight 600: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-700: #f98080; /* Red palette, weight 700: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-800: #f86d6d; /* Red palette, weight 800: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-900: #f75b5b; /* Red palette, weight 900: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-red-1000: #f64949; /* Red palette, weight 1000: errors, destructive buttons (red-1000 is the filled red button, white label at 3.5:1 as in the source; pair with an icon or word). */
+  --color-green-100: #eef9ed; /* Green palette, weight 100: success states (green-900 is the success colour). */
+  --color-green-200: #dcf4db; /* Green palette, weight 200: success states (green-900 is the success colour). */
+  --color-green-300: #cbeec8; /* Green palette, weight 300: success states (green-900 is the success colour). */
+  --color-green-400: #bae8b6; /* Green palette, weight 400: success states (green-900 is the success colour). */
+  --color-green-500: #a9e2a4; /* Green palette, weight 500: success states (green-900 is the success colour). */
+  --color-green-600: #98dd92; /* Green palette, weight 600: success states (green-900 is the success colour). */
+  --color-green-700: #86d77f; /* Green palette, weight 700: success states (green-900 is the success colour). */
+  --color-green-800: #75d16d; /* Green palette, weight 800: success states (green-900 is the success colour). */
+  --color-green-900: #64cb5b; /* Green palette, weight 900: success states (green-900 is the success colour). */
+  --color-green-1000: #52c648; /* Green palette, weight 1000: success states (green-900 is the success colour). */
+  --color-purple-100: #f4eefd; /* Purple palette, weight 100: AI and Pro accents in illustrations. */
+  --color-purple-200: #e9dcfb; /* Purple palette, weight 200: AI and Pro accents in illustrations. */
+  --color-purple-300: #decbf9; /* Purple palette, weight 300: AI and Pro accents in illustrations. */
+  --color-purple-400: #d3baf7; /* Purple palette, weight 400: AI and Pro accents in illustrations. */
+  --color-purple-500: #c8a8f5; /* Purple palette, weight 500: AI and Pro accents in illustrations. */
+  --color-purple-600: #bd97f4; /* Purple palette, weight 600: AI and Pro accents in illustrations. */
+  --color-purple-700: #b286f2; /* Purple palette, weight 700: AI and Pro accents in illustrations. */
+  --color-purple-800: #a774f0; /* Purple palette, weight 800: AI and Pro accents in illustrations. */
+  --color-purple-900: #9c63ee; /* Purple palette, weight 900: AI and Pro accents in illustrations. */
+  --color-purple-1000: #9152ec; /* Purple palette, weight 1000: AI and Pro accents in illustrations. */
+  --color-yellow-50: #fffedd; /* Yellow palette, weight 50: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-100: #fff9eb; /* Yellow palette, weight 100: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-200: #fff4d6; /* Yellow palette, weight 200: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-300: #ffeec2; /* Yellow palette, weight 300: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-400: #ffe8ad; /* Yellow palette, weight 400: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-500: #ffe299; /* Yellow palette, weight 500: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-600: #ffdd84; /* Yellow palette, weight 600: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-700: #ffd770; /* Yellow palette, weight 700: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-800: #ffd15c; /* Yellow palette, weight 800: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-900: #ffcb47; /* Yellow palette, weight 900: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-yellow-1000: #ffc633; /* Yellow palette, weight 1000: warnings and promo highlights (yellow-1000 is the alert yellow). */
+  --color-orange-100: #fff2e6; /* Vecteezy orange, weight 100: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-200: #ffe4cc; /* Vecteezy orange, weight 200: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-300: #ffd7b3; /* Vecteezy orange, weight 300: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-400: #ffc999; /* Vecteezy orange, weight 400: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-500: #ffbc80; /* Vecteezy orange, weight 500: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-600: #ffaf66; /* Vecteezy orange, weight 600: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-700: #ffa14d; /* Vecteezy orange, weight 700: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-800: #ff9433; /* Vecteezy orange, weight 800: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-900: #ff861a; /* Vecteezy orange, weight 900: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-orange-1000: #ff7900; /* Vecteezy orange, weight 1000: the brand accent. orange-1000 is the filled primary button (white label, 2.6:1 as in the source) and link colour; never small orange text on white. */
+  --color-pro: #fb00ff; /* Pro pink: the start of the Pro gradient and Pro badges. White text on it. */
+  --color-pro-2: #fd3198; /* Second Pro gradient stop. */
+  --color-theme-0: var(--color-grey-1000); /* Highest-contrast foreground: headings and body text on theme-1000 and theme-900 (17.9:1 in light, 16:1 in dark). */
+  --color-theme-30: var(--color-grey-900); /* Strong text on theme-1000 (grey-900 in light, grey-30 in dark). */
+  --color-theme-50: var(--color-grey-800); /* Strong secondary text on theme-1000. */
+  --color-theme-100: var(--color-grey-700); /* Secondary text: 6.9:1 on theme-1000 in light, 13.6:1 in dark. */
+  --color-theme-200: var(--color-grey-600); /* Muted text: 4.0:1 on theme-1000 in light (24px+ or non-essential text only), 12.1:1 in dark. */
+  --color-theme-300: var(--color-grey-500); /* Placeholder and disabled text: 3.2:1 on theme-1000 in light; large type, icons and marks only. */
+  --color-theme-400: var(--color-grey-400); /* Placeholder text; the same grey-400 in both modes (2.4:1 on theme-1000 in light: decorative, never required reading). */
+  --color-theme-500: var(--color-grey-300); /* Strong borders and inset rings (raised-interactive active). */
+  --color-theme-600: var(--color-grey-200); /* Outlined grey button ring, disabled button text. */
+  --color-theme-700: var(--color-grey-100); /* Hairlines, dividers, disabled button fill, raised-interactive ring. */
+  --color-theme-800: var(--color-grey-50); /* Hover fill for theme-interactive surfaces; subtle panels. */
+  --color-theme-900: var(--color-grey-30); /* Raised surface: cards and raised buttons on theme-1000. */
+  --color-theme-1000: #ffffff; /* Page background; the ground every theme-* text colour is measured against. */
+  --color-theme-accent: var(--color-orange-1000); /* Accent for marks and large type: orange-1000 in light (2.6:1 on theme-1000, not for small text), white in dark. */
+  --color-ai-yellow: #ffcd38; /* AI mesh gradient stop; decorative only. */
+  --color-ai-red: #fb4844; /* AI mesh gradient stop; decorative only. */
+  --color-ai-magenta: #fb00ff; /* AI mesh gradient stop; decorative only. */
+  --color-ai-orange: #ff8d87; /* AI mesh gradient stop; decorative only. */
+  --shadow-xs: 0 1px 2px rgba(14, 35, 50, 6%); /* Elevation step 1 of 5 (xs lowest, xl highest). Utility shadow-xs. */
+  --shadow-sm: 0 1px 4px rgba(14, 35, 50, 16%); /* Elevation step 2 of 5 (xs lowest, xl highest). Utility shadow-sm. */
+  --shadow-md: 0 4px 12px rgba(14, 35, 50, 14%); /* Elevation step 3 of 5 (xs lowest, xl highest). Utility shadow-md. */
+  --shadow-lg: 0 12px 32px rgba(14, 35, 50, 16%); /* Elevation step 4 of 5 (xs lowest, xl highest). Utility shadow-lg. */
+  --shadow-xl: 0 24px 56px rgba(14, 35, 50, 22%); /* Elevation step 5 of 5 (xs lowest, xl highest). Utility shadow-xl. */
+  --shadow-xs-hover: 0 1px 2px rgba(14, 35, 50, 10%); /* Hover/pressed lift for shadow-xs; pair them on interactive surfaces. Utility shadow-xs-hover. */
+  --shadow-sm-hover: 0 1px 4px rgba(14, 35, 50, 24%); /* Hover/pressed lift for shadow-sm; pair them on interactive surfaces. Utility shadow-sm-hover. */
+  --shadow-md-hover: 0 4px 12px rgba(14, 35, 50, 22%); /* Hover/pressed lift for shadow-md; pair them on interactive surfaces. Utility shadow-md-hover. */
+  --shadow-lg-hover: 0 12px 32px rgba(14, 35, 50, 24%); /* Hover/pressed lift for shadow-lg; pair them on interactive surfaces. Utility shadow-lg-hover. */
+  --shadow-xl-hover: 0 24px 56px rgba(14, 35, 50, 30%); /* Hover/pressed lift for shadow-xl; pair them on interactive surfaces. Utility shadow-xl-hover. */
+}
+[data-theme="dark"] {
+  --color-theme-0: #f2f2f2;
+  --color-theme-30: var(--color-grey-30);
+  --color-theme-50: var(--color-grey-50);
+  --color-theme-100: var(--color-grey-100);
+  --color-theme-200: var(--color-grey-200);
+  --color-theme-300: var(--color-grey-300);
+  --color-theme-400: var(--color-grey-400);
+  --color-theme-500: var(--color-grey-500);
+  --color-theme-600: var(--color-grey-600);
+  --color-theme-700: var(--color-grey-700);
+  --color-theme-800: var(--color-grey-800);
+  --color-theme-900: var(--color-grey-900);
+  --color-theme-1000: var(--color-grey-1000);
+  --color-theme-accent: #ffffff;
+}
+:root {
+  --spacing: 8px; /* The Tailwind unit: every numeric utility multiplies it (p-2 = 16px, gap-3 = 24px). */
+  --spacing-tiny: 4px; /* Named step: gap-tiny, p-tiny; the gap between an icon and its label. */
+  --spacing-small: 12px; /* Named step: gap-small, px-small; input padding (ez-value__input-padding). */
+  --spacing-1: 8px; /* Sass $spacing--1; the same length as the Tailwind utility step 1 (p-1, gap-1). */
+  --spacing-2: 16px; /* Sass $spacing--2; the same length as the Tailwind utility step 2 (p-2, gap-2). */
+  --spacing-3: 24px; /* Sass $spacing--3; the same length as the Tailwind utility step 3 (p-3, gap-3). */
+  --spacing-4: 32px; /* Sass $spacing--4; the same length as the Tailwind utility step 4 (p-4, gap-4). */
+  --spacing-5: 40px; /* Sass $spacing--5; the same length as the Tailwind utility step 5 (p-5, gap-5). */
+  --spacing-6: 48px; /* Sass $spacing--6; the same length as the Tailwind utility step 6 (p-6, gap-6). */
+  --spacing-7: 56px; /* Sass $spacing--7; the same length as the Tailwind utility step 7 (p-7, gap-7). */
+  --spacing-8: 64px; /* Sass $spacing--8; the same length as the Tailwind utility step 8 (p-8, gap-8). */
+  --spacing-9: 72px; /* Sass $spacing--9; the same length as the Tailwind utility step 9 (p-9, gap-9). */
+  --spacing-10: 80px; /* Sass $spacing--10; the same length as the Tailwind utility step 10 (p-10, gap-10). */
+  --spacing-11: 88px; /* Sass $spacing--11; the same length as the Tailwind utility step 11 (p-11, gap-11). */
+  --spacing-12: 96px; /* Sass $spacing--12; the same length as the Tailwind utility step 12 (p-12, gap-12). */
+  --spacing-13: 104px; /* Sass $spacing--13; the same length as the Tailwind utility step 13 (p-13, gap-13). */
+  --spacing-14: 112px; /* Sass $spacing--14; the same length as the Tailwind utility step 14 (p-14, gap-14). */
+  --spacing-15: 120px; /* Sass $spacing--15; the same length as the Tailwind utility step 15 (p-15, gap-15). */
+  --spacing-16: 128px; /* Sass $spacing--16; the same length as the Tailwind utility step 16 (p-16, gap-16). */
+  --spacing-17: 136px; /* Sass $spacing--17; the same length as the Tailwind utility step 17 (p-17, gap-17). */
+  --spacing-18: 144px; /* Sass $spacing--18; the same length as the Tailwind utility step 18 (p-18, gap-18). */
+  --spacing-19: 152px; /* Sass $spacing--19; the same length as the Tailwind utility step 19 (p-19, gap-19). */
+  --spacing-20: 160px; /* Sass $spacing--20; the same length as the Tailwind utility step 20 (p-20, gap-20). */
+  --radius-xs: 2px; /* Tailwind default radius; utility rounded-xs. */
+  --radius-sm: 4px; /* Tailwind default radius; utility rounded-sm. */
+  --radius-md: 6px; /* Tailwind default radius; utility rounded-md. */
+  --radius-lg: 8px; /* Tailwind default radius; utility rounded-lg. */
+  --radius-xl: 12px; /* Tailwind default radius; utility rounded-xl. */
+  --radius-2xl: 16px; /* Tailwind default radius; utility rounded-2xl. */
+  --radius-3xl: 24px; /* Tailwind default radius; utility rounded-3xl. */
+  --radius-4xl: 32px; /* Tailwind default radius; utility rounded-4xl. */
+  --breakpoint-sm: 480px; /* sm: variants. Page layout only; components adapt with @container queries. */
+  --breakpoint-md: 635px; /* md: variants. Page layout only; components adapt with @container queries. */
+  --breakpoint-lg: 800px; /* lg: variants. Page layout only. */
+  --breakpoint-xl: 1000px; /* xl: variants. Page layout only. */
+  --breakpoint-2xl: 1400px; /* 2xl: variants; the widest page layout. */
+  --font-sans: system-ui, 'Segoe UI', helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-accent: 'EB Garamond', serif;
+  --font-mono: courier, monaco, monospace;
+  --text-h1: 700 56px/65.625px var(--font-sans); /* Page title; one per page. Class type-h1. */
+  --text-h2: 700 46px/53.9063px var(--font-sans); /* Section heading. Class type-h2. */
+  --text-h3: 700 36px/42.1875px var(--font-sans); /* Class type-h3. */
+  --text-h4: 700 30px/35.1563px var(--font-sans); /* Class type-h4. */
+  --text-h5: 700 26px/30.4688px var(--font-sans); /* Class type-h5. */
+  --text-h6: 700 22px/25.7813px var(--font-sans); /* Card and panel titles. Class type-h6. */
+  --text-h7: 700 18px/21.0938px var(--font-sans); /* Class type-h7. */
+  --text-h8: 700 16px/18.75px var(--font-sans); /* Class type-h8. */
+  --text-h9: 700 14px/16.4063px var(--font-sans); /* Small heading, 14px. Class type-h9. */
+  --text-h10: 700 12px/14.0625px var(--font-sans); /* Smallest heading, 12px. Class type-h10. */
+  --text-subtitle: 500 20px/30px var(--font-sans); /* Lead paragraph under a heading. Class type-subtitle. */
+  --text-body-vlarge: 400 18px/36px var(--font-sans); /* Large body copy on landing pages. Class type-body-vlarge. */
+  --text-body-large: 400 16px/24px var(--font-sans); /* Default body copy: the body element is set to this size. Class type-body-large. */
+  --text-body-large-semibold: 600 16px/18.75px var(--font-sans); /* Emphasised body copy and labels. Class type-body-large-semibold. */
+  --text-body-medium: 400 14px/21px var(--font-sans); /* Secondary copy, form labels, table cells. Class type-body-medium. */
+  --text-body-medium-semibold: 600 14px/16.4063px var(--font-sans); /* Emphasised secondary copy. Class type-body-medium-semibold. */
+  --text-button: 600 14px/16.4063px var(--font-sans); /* Button labels; the Button component applies it. Class type-button. */
+  --text-body-small: 400 12px/18px var(--font-sans); /* Captions and metadata. Class type-body-small. */
+  --text-body-small-semibold: 600 12px/14.0625px var(--font-sans); /* Emphasised captions, badges. Class type-body-small-semibold. */
+  --text-allcaps: 700 12px/14.0625px var(--font-sans); /* Sass $type--allcaps: uppercase labels, 0.6px tracking; no Tailwind utility of this name. */
+  --text-smallcaps: 600 14px/21px var(--font-sans); /* Class type-smallcaps: uppercase (set text-transform yourself), 0.2em tracking; the small_caps Button variant. */
+  --text-accent-em: italic 500 46px/53.9063px var(--font-accent); /* The <em> inside AccentHeading only (font-accent, weight 500 italic, text theme-100), at the heading's own size; never body copy. */
+}
+.h1 {
+  font-family: var(--font-sans);
+  font-size: 56px;
+  line-height: 65.625px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-size: 46px;
+  line-height: 53.9063px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  line-height: 42.1875px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h4 {
+  font-family: var(--font-sans);
+  font-size: 30px;
+  line-height: 35.1563px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h5 {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  line-height: 30.4688px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h6 {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  line-height: 25.7813px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h7 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 21.0938px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h8 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h9 {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 16.4063px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.h10 {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.0625px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.body-vlarge {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-large {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-large-semibold {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body-medium {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-medium-semibold {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 16.4063px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.button {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 16.4063px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.body-small {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.body-small-semibold {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.0625px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.allcaps {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.0625px;
+  font-weight: 700;
+  letter-spacing: 0.6000px;
+}
+.smallcaps {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.accent-em {
+  font-family: var(--font-accent);
+  font-size: 46px;
+  line-height: 53.9063px;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-style: italic;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/eb-garamond-latin-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}

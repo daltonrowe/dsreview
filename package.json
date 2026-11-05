@@ -4,15 +4,16 @@
   "private": true,
   "description": "Review tooling for turning the exported Claude design project into a design system",
   "scripts": {
-    "start": "http-server . -p 4321 -c-1 -o /",
-    "serve": "http-server . -p 4321 -c-1",
-    "serve:design": "http-server ./design-project -p 4322 -c-1",
-    "serve:tools": "http-server ./tools -p 4323 -c-1",
+    "start": "node tools/server.mjs --open",
+    "serve": "node tools/server.mjs",
     "dc": "node tools/dc.mjs",
+    "survey": "node tools/survey.mjs",
     "postinstall": "playwright install chromium"
   },
   "devDependencies": {
-    "http-server": "^14.1.1",
     "playwright": "^1.64.1"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
   }
 }
