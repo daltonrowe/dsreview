@@ -1,0 +1,10 @@
+{
+  "title": "Text color",
+  "preset": "text-color",
+  "description": "",
+  "captures": "default",
+  "themes": [
+    "light",
+    "dark"
+  ]
+}

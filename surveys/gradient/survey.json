@@ -1,0 +1,4029 @@
+{
+ "id": "gradient",
+ "title": "Gradients",
+ "preset": "gradient",
+ "description": "",
+ "generatedAt": "2026-11-05T12:00:49.365Z",
+ "captures": [
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home",
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (logged in)",
+   "props": {
+    "authState": "logged-in"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (logged in) · dark",
+   "props": {
+    "authState": "logged-in",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results · dark",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore",
+   "state": {
+    "active": "explore"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore · dark",
+   "state": {
+    "active": "explore"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools",
+   "state": {
+    "active": "collections"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools · dark",
+   "state": {
+    "active": "collections"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page",
+   "theme": "light"
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {
+    "darkMode": true
+   },
+   "do": []
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown",
+   "theme": "light"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {},
+   "do": [
+    "eval:document.documentElement.setAttribute('data-ez-theme','dark');document.body.setAttribute('data-ez-theme','dark')"
+   ]
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1",
+   "props": {
+    "layout": "Option 1"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1 · dark",
+   "props": {
+    "layout": "Option 1",
+    "theme": "Dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2",
+   "props": {
+    "layout": "Option 2"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2 · dark",
+   "props": {
+    "layout": "Option 2",
+    "theme": "Dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3",
+   "props": {
+    "layout": "Option 3"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3 · dark",
+   "props": {
+    "layout": "Option 3",
+    "theme": "Dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4",
+   "props": {
+    "layout": "Option 4"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4 · dark",
+   "props": {
+    "layout": "Option 4",
+    "theme": "Dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Checkout.dc.html",
+   "label": "Checkout",
+   "theme": "light"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account",
+   "theme": "light"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Log in",
+   "props": {
+    "mode": "Log In"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Log in · dark",
+   "props": {
+    "mode": "Log In",
+    "theme": "Dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Login",
+   "theme": "light"
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Signup",
+   "props": {
+    "mode": "signup"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App",
+   "props": {
+    "layout": "app"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App · dark",
+   "props": {
+    "layout": "app",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar",
+   "props": {
+    "layout": "sidebar"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar · dark",
+   "props": {
+    "layout": "sidebar",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs",
+   "props": {
+    "layout": "tabs"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs · dark",
+   "props": {
+    "layout": "tabs",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal",
+   "props": {
+    "layout": "modal"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal · dark",
+   "props": {
+    "layout": "modal",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub",
+   "props": {
+    "layout": "hub"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub · dark",
+   "props": {
+    "layout": "hub",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan",
+   "props": {
+    "plan": "Free"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan · dark",
+   "props": {
+    "plan": "Free",
+    "theme": "dark"
+   },
+   "theme": "dark"
+  },
+  {
+   "page": "Style Guide - Action Cards.dc.html",
+   "label": "Style Guide · Action Cards",
+   "theme": "light"
+  }
+ ],
+ "stats": {
+  "sections": 43,
+  "usages": 91,
+  "instances": 315
+ },
+ "problems": [
+  "Explore Page · dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
+ ],
+ "sections": [
+  {
+   "n": 1,
+   "id": "bce314a6d4",
+   "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+   "tokens": [],
+   "usages": 8,
+   "instances": 24,
+   "items": [
+    {
+     "n": 1,
+     "id": "0f1739d208",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Explore content types",
+     "tag": "span",
+     "text": "",
+     "size": [
+      20,
+      20
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1942,
+      "nth": 0
+     },
+     "captures": [
+      6
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2560,
+      "col": 9,
+      "snippet": "<span role=\"img\" aria-hidden=\"true\" style=\"display: inline-block; width: 20px; height: 20px; flex-shrink: 0; background: {{ ct.iconBg }}; -webkit-mask: url({{ ct.icon }}) center / contain no-repeat; mask: url({{ ct.icon }}) center / contain no-repeat\">"
+     },
+     "shot": "shots/0f1739d208.png"
+    },
+    {
+     "n": 2,
+     "id": "ae08c929a5",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "[data-screen-label=\"Explore content types\"] .explore-cat-item.cat-on > span:not([role])",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Explore content types",
+     "tag": "span",
+     "text": "",
+     "size": [
+      50,
+      18
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1943,
+      "nth": 0
+     },
+     "captures": [
+      6
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2561,
+      "col": 9,
+      "snippet": "<span>"
+     },
+     "shot": "shots/ae08c929a5.png"
+    },
+    {
+     "n": 3,
+     "id": "c8811e00b1",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card license",
+     "tag": "span",
+     "text": "",
+     "size": [
+      44,
+      44
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 461,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 363,
+      "col": 13,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(135deg, #ff7900, #fd3198)\">"
+     },
+     "shot": "shots/c8811e00b1.png"
+    },
+    {
+     "n": 4,
+     "id": "e141c4fe00",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card bundles",
+     "tag": "span",
+     "text": "New",
+     "size": [
+      52,
+      26
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 470,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 368,
+      "col": 192,
+      "snippet": "<span style=\"position: absolute; top: 0; left: 32px; z-index: 2; display: flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 0 0 10px 10px; background: linear-gradient(135deg, #ff7900, #fd3198); color: #fff; font-size: 13px; font-weight: 700\">"
+     },
+     "shot": "shots/e141c4fe00.png"
+    },
+    {
+     "n": 5,
+     "id": "5897fa3734",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card AI",
+     "tag": "span",
+     "text": "New",
+     "size": [
+      52,
+      26
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 484,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 373,
+      "col": 187,
+      "snippet": "<span style=\"position: absolute; top: 0; left: 32px; z-index: 2; display: flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 0 0 10px 10px; background: linear-gradient(135deg, #ff7900, #fd3198); color: #fff; font-size: 13px; font-weight: 700\">"
+     },
+     "shot": "shots/5897fa3734.png"
+    },
+    {
+     "n": 6,
+     "id": "212c5e5141",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 222,
+      "nth": 0
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 255,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/212c5e5141.png"
+    },
+    {
+     "n": 7,
+     "id": "9ebc87d272",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 239,
+      "nth": 2
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 268,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/9ebc87d272.png"
+    },
+    {
+     "n": 8,
+     "id": "b688a423b2",
+     "value": "linear-gradient(135deg, #ff7900, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "span",
+     "text": "",
+     "size": [
+      18,
+      18
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 29,
+      "owner": "Settings",
+      "tpl": 30,
+      "nth": 0
+     },
+     "captures": [
+      29,
+      30,
+      39,
+      40
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 70,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; top: -3px; right: -3px; display: {{ railProBadgeDisplay }}; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, #ff7900, #fd3198); border: 2px solid var(--ez-surface)\">"
+     },
+     "shot": "shots/b688a423b2.png"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "id": "0bc91e103f",
+   "value": "linear-gradient(135deg, #d8c6f2, #9152ec)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 16,
+   "items": [
+    {
+     "n": 1,
+     "id": "5213081085",
+     "value": "linear-gradient(135deg, #d8c6f2, #9152ec)",
+     "declared": "linear-gradient(135deg, rgb(216, 198, 242), rgb(145, 82, 236))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 8
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/5213081085.png"
+    },
+    {
+     "n": 2,
+     "id": "fa20d5f64f",
+     "value": "linear-gradient(135deg, #d8c6f2, #9152ec)",
+     "declared": "linear-gradient(135deg, rgb(216, 198, 242), rgb(145, 82, 236))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 8
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/fa20d5f64f.png"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "id": "d7fbf45d63",
+   "value": "linear-gradient(135deg, #fd3198, #8b5cf6)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 14,
+   "items": [
+    {
+     "n": 1,
+     "id": "909c6b4ae6",
+     "value": "linear-gradient(135deg, #fd3198, #8b5cf6)",
+     "declared": "linear-gradient(135deg, rgb(253, 49, 152), rgb(139, 92, 246))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 222,
+      "nth": 1
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 255,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/909c6b4ae6.png"
+    },
+    {
+     "n": 2,
+     "id": "8d5a88c188",
+     "value": "linear-gradient(135deg, #fd3198, #8b5cf6)",
+     "declared": "linear-gradient(135deg, rgb(253, 49, 152), rgb(139, 92, 246))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 239,
+      "nth": 3
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 268,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/8d5a88c188.png"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "320ed7795a",
+   "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+   "tokens": [],
+   "usages": 6,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "7f26d0aaae",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1173,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1743,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/7f26d0aaae.png"
+    },
+    {
+     "n": 2,
+     "id": "74f4b65fe3",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1240,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1809,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/74f4b65fe3.png"
+    },
+    {
+     "n": 3,
+     "id": "edab4e4db9",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1307,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1875,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/edab4e4db9.png"
+    },
+    {
+     "n": 4,
+     "id": "b96253b08e",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1374,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1941,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/b96253b08e.png"
+    },
+    {
+     "n": 5,
+     "id": "99c0d45818",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1441,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2007,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/99c0d45818.png"
+    },
+    {
+     "n": 6,
+     "id": "ca1d63b335",
+     "value": "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)",
+     "declared": "linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Featured collections",
+     "tag": "span",
+     "text": "",
+     "size": [
+      339,
+      254
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1508,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2073,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 35, 50, .72) 0%, rgba(14, 35, 50, 0) 55%)\">"
+     },
+     "shot": "shots/ca1d63b335.png"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "id": "b4d8281a7a",
+   "value": "linear-gradient(135deg, #a7d8de, #145a68)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "b2e408dc19",
+     "value": "linear-gradient(135deg, #a7d8de, #145a68)",
+     "declared": "linear-gradient(135deg, rgb(167, 216, 222), rgb(20, 90, 104))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 1
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/b2e408dc19.png"
+    },
+    {
+     "n": 2,
+     "id": "a223e99837",
+     "value": "linear-gradient(135deg, #a7d8de, #145a68)",
+     "declared": "linear-gradient(135deg, rgb(167, 216, 222), rgb(20, 90, 104))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 1
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/a223e99837.png"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "id": "49ab0b0770",
+   "value": "linear-gradient(135deg, #d0d8ff, #5f6fd4)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "281790930c",
+     "value": "linear-gradient(135deg, #d0d8ff, #5f6fd4)",
+     "declared": "linear-gradient(135deg, rgb(208, 216, 255), rgb(95, 111, 212))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 2
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/281790930c.png"
+    },
+    {
+     "n": 2,
+     "id": "4deffef984",
+     "value": "linear-gradient(135deg, #d0d8ff, #5f6fd4)",
+     "declared": "linear-gradient(135deg, rgb(208, 216, 255), rgb(95, 111, 212))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 2
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/4deffef984.png"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "id": "98fd921a06",
+   "value": "linear-gradient(135deg, #ffd9b3, #ff9a52)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "588a2958bf",
+     "value": "linear-gradient(135deg, #ffd9b3, #ff9a52)",
+     "declared": "linear-gradient(135deg, rgb(255, 217, 179), rgb(255, 154, 82))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 3
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/588a2958bf.png"
+    },
+    {
+     "n": 2,
+     "id": "cd8c00dc80",
+     "value": "linear-gradient(135deg, #ffd9b3, #ff9a52)",
+     "declared": "linear-gradient(135deg, rgb(255, 217, 179), rgb(255, 154, 82))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 3
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/cd8c00dc80.png"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "id": "de9093926b",
+   "value": "linear-gradient(135deg, #f8c8dc, #c2649a)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "af9187ea5d",
+     "value": "linear-gradient(135deg, #f8c8dc, #c2649a)",
+     "declared": "linear-gradient(135deg, rgb(248, 200, 220), rgb(194, 100, 154))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 4
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/af9187ea5d.png"
+    },
+    {
+     "n": 2,
+     "id": "5767a71f46",
+     "value": "linear-gradient(135deg, #f8c8dc, #c2649a)",
+     "declared": "linear-gradient(135deg, rgb(248, 200, 220), rgb(194, 100, 154))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 4
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/5767a71f46.png"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "id": "c3055eed2c",
+   "value": "linear-gradient(135deg, #fff3b0, #e09f3e)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "0b1a7f1446",
+     "value": "linear-gradient(135deg, #fff3b0, #e09f3e)",
+     "declared": "linear-gradient(135deg, rgb(255, 243, 176), rgb(224, 159, 62))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 5
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/0b1a7f1446.png"
+    },
+    {
+     "n": 2,
+     "id": "324a7fafb9",
+     "value": "linear-gradient(135deg, #fff3b0, #e09f3e)",
+     "declared": "linear-gradient(135deg, rgb(255, 243, 176), rgb(224, 159, 62))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 5
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/324a7fafb9.png"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "id": "31a34e12ea",
+   "value": "linear-gradient(135deg, #ffc3b0, #e05263)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "6a22b5693d",
+     "value": "linear-gradient(135deg, #ffc3b0, #e05263)",
+     "declared": "linear-gradient(135deg, rgb(255, 195, 176), rgb(224, 82, 99))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 7
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/6a22b5693d.png"
+    },
+    {
+     "n": 2,
+     "id": "2370f12074",
+     "value": "linear-gradient(135deg, #ffc3b0, #e05263)",
+     "declared": "linear-gradient(135deg, rgb(255, 195, 176), rgb(224, 82, 99))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 7
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/2370f12074.png"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "id": "6c6cbd21bf",
+   "value": "linear-gradient(135deg, #c5f0e8, #2fb9cc)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 12,
+   "items": [
+    {
+     "n": 1,
+     "id": "da502af2a3",
+     "value": "linear-gradient(135deg, #c5f0e8, #2fb9cc)",
+     "declared": "linear-gradient(135deg, rgb(197, 240, 232), rgb(47, 185, 204))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 15
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/da502af2a3.png"
+    },
+    {
+     "n": 2,
+     "id": "a8d8826557",
+     "value": "linear-gradient(135deg, #c5f0e8, #2fb9cc)",
+     "declared": "linear-gradient(135deg, rgb(197, 240, 232), rgb(47, 185, 204))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 15
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/a8d8826557.png"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "id": "1d52cb6bab",
+   "value": "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)",
+   "tokens": [],
+   "usages": 3,
+   "instances": 10,
+   "items": [
+    {
+     "n": 1,
+     "id": "469ec8cbe8",
+     "value": "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)",
+     "declared": "linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home top bar",
+     "tag": "span",
+     "text": "",
+     "size": [
+      92,
+      48
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 953,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1496,
+      "col": 675,
+      "snippet": "<span style=\"position: absolute; top: 0; bottom: 0; left: 0; width: 60%; background: linear-gradient(105deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.04) 25%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.04) 75%, rgba(255,255,255,0) 100%); transform: translateX(-150%) skewX(-20deg); animation: {{ joinShineAnim }}; pointer-events: none\">"
+     },
+     "shot": "shots/469ec8cbe8.png"
+    },
+    {
+     "n": 2,
+     "id": "19e7130a1f",
+     "value": "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)",
+     "declared": "linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Top bar",
+     "tag": "span",
+     "text": "",
+     "size": [
+      92,
+      48
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 4,
+      "owner": "AI Magic",
+      "tpl": 3350,
+      "nth": 0
+     },
+     "captures": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3553,
+      "col": 657,
+      "snippet": "<span style=\"position: absolute; top: 0; bottom: 0; left: 0; width: 60%; background: linear-gradient(105deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.04) 25%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.04) 75%, rgba(255,255,255,0) 100%); transform: translateX(-150%) skewX(-20deg); animation: {{ joinShineAnim }}; pointer-events: none\">"
+     },
+     "shot": "shots/19e7130a1f.png"
+    },
+    {
+     "n": 3,
+     "id": "4d1a60ee6b",
+     "value": "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)",
+     "declared": "linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Top bar",
+     "tag": "span",
+     "text": "",
+     "size": [
+      92,
+      48
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 10,
+      "owner": "Explore Page",
+      "tpl": 265,
+      "nth": 0
+     },
+     "captures": [
+      10,
+      11
+     ],
+     "source": {
+      "file": "Explore Page.dc.html",
+      "line": 259,
+      "col": 526,
+      "snippet": "<span style=\"position: absolute; top: 0; bottom: 0; left: 0; width: 60%; background: linear-gradient(105deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.04) 25%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.04) 75%, rgba(255,255,255,0) 100%); transform: translateX(-150%) skewX(-20deg); animation: {{ joinShineAnim }}; pointer-events: none\">"
+     },
+     "shot": "shots/4d1a60ee6b.png"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "id": "bfc97f0a79",
+   "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+   "tokens": [],
+   "usages": 5,
+   "instances": 10,
+   "items": [
+    {
+     "n": 1,
+     "id": "3ac6ae6c48",
+     "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+     "declared": "linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "AI Studio home",
+     "tag": "button",
+     "text": "Send",
+     "size": [
+      38,
+      38
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 8,
+      "owner": "AI Magic",
+      "tpl": 1985,
+      "nth": 0
+     },
+     "captures": [
+      8,
+      9
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2608,
+      "col": 13,
+      "snippet": "<button aria-label=\"Send\" style=\"display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; padding: 0; border-radius: 9999px; border: none; background: linear-gradient(-89deg, #fd3198, #ff7900); color: #fff; cursor: pointer; flex-shrink: 0\" style-hover=\"filter: brightness(1.06)\">"
+     },
+     "shot": "shots/3ac6ae6c48.png"
+    },
+    {
+     "n": 2,
+     "id": "8804dcc58c",
+     "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+     "declared": "linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Account header",
+     "tag": "span",
+     "text": "",
+     "size": [
+      43,
+      22
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 33,
+      "owner": "Settings",
+      "tpl": 69,
+      "nth": 0
+     },
+     "captures": [
+      33,
+      34
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 125,
+      "col": 17,
+      "snippet": "<span style=\"display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 9999px; background: {{ planBadgeBg }}; color: {{ planBadgeFg }}; font-size: 11px; font-weight: 700; letter-spacing: .04em\">"
+     },
+     "shot": "shots/8804dcc58c.png"
+    },
+    {
+     "n": 3,
+     "id": "f65ae24bc9",
+     "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+     "declared": "linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Summary rail",
+     "tag": "div",
+     "text": "",
+     "size": [
+      90,
+      6
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 33,
+      "owner": "Settings",
+      "tpl": 516,
+      "nth": 0
+     },
+     "captures": [
+      33,
+      34
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 728,
+      "col": 117,
+      "snippet": "<div style=\"width: 35%; height: 100%; border-radius: 9999px; background: linear-gradient(-89deg, #fd3198, #ff7900)\">"
+     },
+     "shot": "shots/f65ae24bc9.png"
+    },
+    {
+     "n": 4,
+     "id": "8e749a0229",
+     "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+     "declared": "linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Settings overview",
+     "tag": "span",
+     "text": "",
+     "size": [
+      43,
+      22
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 37,
+      "owner": "Settings",
+      "tpl": 88,
+      "nth": 0
+     },
+     "captures": [
+      37,
+      38
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 154,
+      "col": 17,
+      "snippet": "<span style=\"display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 9999px; background: {{ planBadgeBg }}; color: {{ planBadgeFg }}; font-size: 11px; font-weight: 700; letter-spacing: .04em\">"
+     },
+     "shot": "shots/8e749a0229.png"
+    },
+    {
+     "n": 5,
+     "id": "aea9f4747d",
+     "value": "linear-gradient(-89deg, #fd3198, #ff7900)",
+     "declared": "linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Settings overview",
+     "tag": "div",
+     "text": "",
+     "size": [
+      92,
+      6
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 37,
+      "owner": "Settings",
+      "tpl": 103,
+      "nth": 0
+     },
+     "captures": [
+      37,
+      38
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 173,
+      "col": 123,
+      "snippet": "<div style=\"width: 35%; height: 100%; border-radius: 9999px; background: linear-gradient(-89deg, #fd3198, #ff7900)\">"
+     },
+     "shot": "shots/aea9f4747d.png"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "id": "9ea922967b",
+   "value": "linear-gradient(#ffffff, #f7f9fa)",
+   "tokens": [
+    "--ez-surface",
+    "--ez-color--grey-3"
+   ],
+   "usages": 3,
+   "instances": 9,
+   "items": [
+    {
+     "n": 1,
+     "id": "791eb487e8",
+     "value": "linear-gradient(#ffffff, #f7f9fa)",
+     "declared": "linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface",
+      "--ez-color--grey-3"
+     ],
+     "component": "Sign in form",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 13,
+      "nth": 0
+     },
+     "captures": [
+      23,
+      25
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 57,
+      "col": 3,
+      "snippet": "<div data-screen-label=\"Sign in form\" style=\"order: 2; flex: 1 1 380px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; padding: 24px 32px; background: {{ formPanelBg }}\">"
+     },
+     "shot": "shots/791eb487e8.png"
+    },
+    {
+     "n": 2,
+     "id": "7ed5975652",
+     "value": "linear-gradient(#ffffff, #f7f9fa)",
+     "declared": "linear-gradient(180deg, #ffffff, var(--ez-color--grey-3))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-color--grey-3"
+     ],
+     "component": "Log In",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1440,
+      900
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 27,
+      "owner": "Log In v1",
+      "tpl": 8,
+      "nth": 0
+     },
+     "captures": [
+      27,
+      28
+     ],
+     "source": {
+      "file": "Log In v1.dc.html",
+      "line": 25,
+      "col": 1,
+      "snippet": "<div data-screen-label=\"Log In\" style=\"min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; padding: 48px 24px 64px; background: linear-gradient(180deg, #ffffff, var(--ez-color--grey-3))\">"
+     },
+     "shot": "shots/7ed5975652.png"
+    },
+    {
+     "n": 3,
+     "id": "8b55d23cc1",
+     "value": "linear-gradient(#ffffff, #f7f9fa)",
+     "declared": "linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface",
+      "--ez-color--grey-3"
+     ],
+     "component": "Profile",
+     "tag": "button",
+     "text": "",
+     "size": [
+      274,
+      40
+     ],
+     "instances": 5,
+     "where": {
+      "capture": 29,
+      "owner": "Settings",
+      "tpl": 158,
+      "nth": 0
+     },
+     "captures": [
+      29,
+      31,
+      33,
+      35,
+      39
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 249,
+      "col": 21,
+      "snippet": "<button type=\"button\" onClick=\"{{ toggleCountry }}\" style=\"display: flex; align-items: center; width: 100%; height: 40px; padding: 0 14px 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3)); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400; cursor: pointer; white-space: nowrap; text-align: left\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/8b55d23cc1.png"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "id": "c471c4e031",
+   "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 8,
+   "items": [
+    {
+     "n": 1,
+     "id": "64eb15a3f7",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152) 76%, rgb(251, 0, 255) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home top bar",
+     "tag": "a",
+     "text": "Join Pro",
+     "size": [
+      124,
+      48
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 952,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1496,
+      "col": 7,
+      "snippet": "<a href=\"Pricing.dc.html\" class=\"join-pro-glow\" style=\"display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 0 20px #ffffff\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" on…"
+     },
+     "shot": "shots/64eb15a3f7.png"
+    },
+    {
+     "n": 2,
+     "id": "a8c760ed05",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152) 76%, rgb(251, 0, 255) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Top bar",
+     "tag": "a",
+     "text": "Join Pro",
+     "size": [
+      124,
+      48
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 4,
+      "owner": "AI Magic",
+      "tpl": 3349,
+      "nth": 0
+     },
+     "captures": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3553,
+      "col": 7,
+      "snippet": "<a href=\"Pricing.dc.html\" style=\"visibility: {{ headerItemsVis }}; display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" onMouseEnter=\"{{ joi…"
+     },
+     "shot": "shots/a8c760ed05.png"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "id": "e5a29dd667",
+   "value": "linear-gradient(135deg, #bfd7ff, #3d5a80)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 8,
+   "items": [
+    {
+     "n": 1,
+     "id": "c49b1c34a0",
+     "value": "linear-gradient(135deg, #bfd7ff, #3d5a80)",
+     "declared": "linear-gradient(135deg, rgb(191, 215, 255), rgb(61, 90, 128))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1541,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2108,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ pc.pick }}\" class=\"home-cat\" style=\"position: relative; display: flex; align-items: {{ pc.labelAlign }}; aspect-ratio: {{ pc.aspect }}; border-radius: 20px; overflow: hidden; background: {{ pc.bg }}; text-decoration: none\">"
+     },
+     "shot": "shots/c49b1c34a0.png"
+    },
+    {
+     "n": 2,
+     "id": "e5f137b340",
+     "value": "linear-gradient(135deg, #bfd7ff, #3d5a80)",
+     "declared": "linear-gradient(135deg, rgb(191, 215, 255), rgb(61, 90, 128))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1546,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2114,
+      "col": 13,
+      "snippet": "<span class=\"cat-stack-tint\" style=\"display: {{ pc.stackDisplay }}; position: absolute; inset: 0; background: {{ pc.bg }}; opacity: .55; pointer-events: none; transition: opacity .15s ease\">"
+     },
+     "shot": "shots/e5f137b340.png"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "id": "e5372ea15c",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.341176 0.192941 0.555294 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 8,
+   "items": [
+    {
+     "n": 1,
+     "id": "af16d913ae",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.341176 0.192941 0.555294 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(145, 82, 236) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 8
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/af16d913ae.png"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "id": "8217a3132f",
+   "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)",
+   "tokens": [],
+   "usages": 4,
+   "instances": 8,
+   "items": [
+    {
+     "n": 1,
+     "id": "a2352fb3e6",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": null,
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      468,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 14,
+      "owner": "Pricing",
+      "tpl": 75,
+      "nth": 0
+     },
+     "captures": [
+      14,
+      15
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 83,
+      "col": 9,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease\" style-hover=\"filter: brightness(1.06); color: #fff\">"
+     },
+     "shot": "shots/a2352fb3e6.png"
+    },
+    {
+     "n": 2,
+     "id": "b05a8c0eef",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V2",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      472,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 16,
+      "owner": "Pricing",
+      "tpl": 253,
+      "nth": 0
+     },
+     "captures": [
+      16,
+      17
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 218,
+      "col": 9,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease\" style-hover=\"filter: brightness(1.06); color: #fff\">"
+     },
+     "shot": "shots/b05a8c0eef.png"
+    },
+    {
+     "n": 3,
+     "id": "1aa085fea8",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V3 hero",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      430,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 390,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 325,
+      "col": 9,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease\" style-hover=\"filter: brightness(1.06); color: #fff\">"
+     },
+     "shot": "shots/1aa085fea8.png"
+    },
+    {
+     "n": 4,
+     "id": "ce88981f3b",
+     "value": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)",
+     "declared": "linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V4",
+     "tag": "a",
+     "text": "Subscribe to Vecteezy Pro",
+     "size": [
+      468,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 20,
+      "owner": "Pricing",
+      "tpl": 137,
+      "nth": 0
+     },
+     "captures": [
+      20,
+      21
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 137,
+      "col": 9,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease\" style-hover=\"filter: brightness(1.06); color: #fff\">"
+     },
+     "shot": "shots/ce88981f3b.png"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "id": "3476955daa",
+   "value": "linear-gradient(#171717, #0d0d0d)",
+   "tokens": [
+    "--ez-surface",
+    "--ez-color--grey-3"
+   ],
+   "usages": 2,
+   "instances": 7,
+   "items": [
+    {
+     "n": 1,
+     "id": "a42308840a",
+     "value": "linear-gradient(#171717, #0d0d0d)",
+     "declared": "linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface",
+      "--ez-color--grey-3"
+     ],
+     "component": "Sign in form",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 24,
+      "owner": "Log In",
+      "tpl": 13,
+      "nth": 0
+     },
+     "captures": [
+      24,
+      26
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 57,
+      "col": 3,
+      "snippet": "<div data-screen-label=\"Sign in form\" style=\"order: 2; flex: 1 1 380px; min-width: 0; box-sizing: border-box; display: flex; flex-direction: column; padding: 24px 32px; background: {{ formPanelBg }}\">"
+     },
+     "shot": "shots/a42308840a.png"
+    },
+    {
+     "n": 2,
+     "id": "a88b7b5327",
+     "value": "linear-gradient(#171717, #0d0d0d)",
+     "declared": "linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface",
+      "--ez-color--grey-3"
+     ],
+     "component": "Profile",
+     "tag": "button",
+     "text": "",
+     "size": [
+      274,
+      40
+     ],
+     "instances": 5,
+     "where": {
+      "capture": 30,
+      "owner": "Settings",
+      "tpl": 158,
+      "nth": 0
+     },
+     "captures": [
+      30,
+      32,
+      34,
+      36,
+      40
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 249,
+      "col": 21,
+      "snippet": "<button type=\"button\" onClick=\"{{ toggleCountry }}\" style=\"display: flex; align-items: center; width: 100%; height: 40px; padding: 0 14px 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3)); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400; cursor: pointer; white-space: nowrap; text-align: left\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/a88b7b5327.png"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "id": "6211b9b8dd",
+   "value": "linear-gradient(150deg, #ff7900 0%, #fd3198 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "afb5d9439c",
+     "value": "linear-gradient(150deg, #ff7900 0%, #fd3198 100%)",
+     "declared": "linear-gradient(150deg, rgb(255, 121, 0) 0%, rgb(253, 49, 152) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home footer",
+     "tag": "a",
+     "text": "Try Pro",
+     "size": [
+      73,
+      26
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 1589,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2177,
+      "col": 111,
+      "snippet": "<a href=\"#\" style=\"background: linear-gradient(150deg, #ff7900 0%, #fd3198 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: 700; text-decoration: none; cursor: pointer\" style-hover=\"background: linear-gradient(150deg, #ffc633 0%, #ff7900 50%, #fd3198 100%); -webkit-background-clip: text; background-clip: text\">"
+     },
+     "shot": "shots/afb5d9439c.png"
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "id": "a77ec05387",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.0470588 0.211765 0.244706 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "de50dd6274",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.0470588 0.211765 0.244706 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(20, 90, 104) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 1
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/de50dd6274.png"
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "id": "6dfe41774b",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.223529 0.261176 0.498824 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "f4d20a3536",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.223529 0.261176 0.498824 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(95, 111, 212) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 2
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/f4d20a3536.png"
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "id": "7d64a5891a",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.6 0.362353 0.192941 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "f6e8c1873e",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.6 0.362353 0.192941 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(255, 154, 82) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 3
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/f6e8c1873e.png"
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "id": "368129b3e7",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.456471 0.235294 0.362353 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "c794c33c38",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.456471 0.235294 0.362353 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(194, 100, 154) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 4
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/c794c33c38.png"
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "id": "acf9205f9e",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.374118 0.145882 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "ac36cc1cb4",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.374118 0.145882 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(224, 159, 62) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 5
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/ac36cc1cb4.png"
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "id": "5b2cca9c21",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.192941 0.232941 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "e52a27c00e",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.192941 0.232941 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(224, 82, 99) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 7
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/e52a27c00e.png"
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "id": "73e9f05177",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.110588 0.435294 0.48 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "7aeaa9d020",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.110588 0.435294 0.48 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(47, 185, 204) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 15
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/7aeaa9d020.png"
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "id": "b3d2528379",
+   "value": "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)",
+   "tokens": [],
+   "usages": 3,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "c13e3c9c6d",
+     "value": "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)",
+     "declared": "linear-gradient(90deg, rgb(255, 121, 0) 0%, rgb(254, 77, 93) 40%, rgb(253, 49, 152) 72%, rgb(243, 18, 227) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V2",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1440,
+      480
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 16,
+      "owner": "Pricing",
+      "tpl": 174,
+      "nth": 0
+     },
+     "captures": [
+      16,
+      17
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 179,
+      "col": 5,
+      "snippet": "<div aria-hidden=\"true\" style=\"position: absolute; top: 0; left: 0; right: 0; height: 480px; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)\">"
+     },
+     "shot": "shots/c13e3c9c6d.png"
+    },
+    {
+     "n": 2,
+     "id": "24ee8d8511",
+     "value": "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)",
+     "declared": "linear-gradient(90deg, rgb(255, 121, 0) 0%, rgb(254, 77, 93) 40%, rgb(253, 49, 152) 72%, rgb(243, 18, 227) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "section",
+     "text": "Join Pro",
+     "size": [
+      1120,
+      349
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 16,
+      "owner": "Pricing",
+      "tpl": 325,
+      "nth": 0
+     },
+     "captures": [
+      16,
+      17
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 274,
+      "col": 5,
+      "snippet": "<section data-screen-label=\"Bottom CTA\" aria-label=\"Join Pro\" style=\"position: relative; width: 100%; max-width: 1120px; box-sizing: border-box; margin-top: 88px; padding: clamp(40px, 6vw, 72px) 24px; border-radius: 28px; overflow: hidden; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%); color: #fff; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center\">"
+     },
+     "shot": "shots/24ee8d8511.png"
+    },
+    {
+     "n": 3,
+     "id": "a27d7fb79c",
+     "value": "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)",
+     "declared": "linear-gradient(90deg, rgb(255, 121, 0) 0%, rgb(254, 77, 93) 40%, rgb(253, 49, 152) 72%, rgb(243, 18, 227) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "section",
+     "text": "Join Pro",
+     "size": [
+      1120,
+      349
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 535,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 416,
+      "col": 5,
+      "snippet": "<section data-screen-label=\"Bottom CTA\" aria-label=\"Join Pro\" style=\"position: relative; width: 100%; max-width: 1120px; box-sizing: border-box; margin-top: 88px; padding: clamp(40px, 6vw, 72px) 24px; border-radius: 28px; overflow: hidden; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%); color: #fff; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center\">"
+     },
+     "shot": "shots/a27d7fb79c.png"
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "id": "82f0bde793",
+   "value": "linear-gradient(135deg, #00b67a, #0ea5e9)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "3498811df2",
+     "value": "linear-gradient(135deg, #00b67a, #0ea5e9)",
+     "declared": "linear-gradient(135deg, rgb(0, 182, 122), rgb(14, 165, 233))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 222,
+      "nth": 2
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 255,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/3498811df2.png"
+    },
+    {
+     "n": 2,
+     "id": "226be86338",
+     "value": "linear-gradient(135deg, #00b67a, #0ea5e9)",
+     "declared": "linear-gradient(135deg, rgb(0, 182, 122), rgb(14, 165, 233))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 239,
+      "nth": 5
+     },
+     "captures": [
+      23,
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 268,
+      "col": 17,
+      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: {{ rv.avatarBg }}; color: #fff; font-size: 11px; font-weight: 700\">"
+     },
+     "shot": "shots/226be86338.png"
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "id": "5318ca9658",
+   "value": "radial-gradient(50% 40%, #ffffff / 90%, #ffffff / 0% 70%)",
+   "tokens": [],
+   "usages": 3,
+   "instances": 5,
+   "items": [
+    {
+     "n": 1,
+     "id": "4838383cf2",
+     "value": "radial-gradient(50% 40%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(50% 40%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "AI Search home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      922,
+      786
+     ],
+     "instances": 3,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 907,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      2,
+      6
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1441,
+      "col": 7,
+      "snippet": "<div class=\"cloud-a\" style=\"position: absolute; left: 5%; top: -40%; width: 55%; height: 160%; background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(30px); will-change: transform\">"
+     },
+     "shot": "shots/4838383cf2.png"
+    },
+    {
+     "n": 2,
+     "id": "08d1b5c8df",
+     "value": "radial-gradient(50% 40%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(50% 40%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "AI Studio home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      637,
+      457
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 8,
+      "owner": "AI Magic",
+      "tpl": 1954,
+      "nth": 0
+     },
+     "captures": [
+      8
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2578,
+      "col": 9,
+      "snippet": "<div class=\"cloud-a\" style=\"position: absolute; left: 5%; top: -40%; width: 55%; height: 160%; background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(30px); will-change: transform\">"
+     },
+     "shot": "shots/08d1b5c8df.png"
+    },
+    {
+     "n": 3,
+     "id": "ecaee2e484",
+     "value": "radial-gradient(50% 40%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(50% 40%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V4",
+     "tag": "div",
+     "text": "",
+     "size": [
+      792,
+      416
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 20,
+      "owner": "Pricing",
+      "tpl": 94,
+      "nth": 0
+     },
+     "captures": [
+      20
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 105,
+      "col": 5,
+      "snippet": "<div class=\"cloud-a\" style=\"position: absolute; left: 5%; top: -40%; width: 55%; height: 160%; background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(30px); will-change: transform\">"
+     },
+     "shot": "shots/ecaee2e484.png"
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "id": "f63d663ac0",
+   "value": "radial-gradient(45% 38%, #ffffff / 90%, #ffffff / 0% 70%)",
+   "tokens": [],
+   "usages": 3,
+   "instances": 5,
+   "items": [
+    {
+     "n": 1,
+     "id": "950df2c744",
+     "value": "radial-gradient(45% 38%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(45% 38%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "AI Search home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      942,
+      723
+     ],
+     "instances": 3,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 908,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      2,
+      6
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1442,
+      "col": 7,
+      "snippet": "<div class=\"cloud-b\" style=\"position: absolute; right: 0%; top: -30%; width: 60%; height: 150%; background: radial-gradient(ellipse 45% 38% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(36px); will-change: transform\">"
+     },
+     "shot": "shots/950df2c744.png"
+    },
+    {
+     "n": 2,
+     "id": "0d77e053a0",
+     "value": "radial-gradient(45% 38%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(45% 38%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "AI Studio home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      744,
+      462
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 8,
+      "owner": "AI Magic",
+      "tpl": 1955,
+      "nth": 0
+     },
+     "captures": [
+      8
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2579,
+      "col": 9,
+      "snippet": "<div class=\"cloud-b\" style=\"position: absolute; right: 0%; top: -30%; width: 60%; height: 150%; background: radial-gradient(ellipse 45% 38% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(36px); will-change: transform\">"
+     },
+     "shot": "shots/0d77e053a0.png"
+    },
+    {
+     "n": 3,
+     "id": "70aa583abf",
+     "value": "radial-gradient(45% 38%, #ffffff / 90%, #ffffff / 0% 70%)",
+     "declared": "radial-gradient(45% 38%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V4",
+     "tag": "div",
+     "text": "",
+     "size": [
+      864,
+      390
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 20,
+      "owner": "Pricing",
+      "tpl": 95,
+      "nth": 0
+     },
+     "captures": [
+      20
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 106,
+      "col": 5,
+      "snippet": "<div class=\"cloud-b\" style=\"position: absolute; right: 0%; top: -30%; width: 60%; height: 150%; background: radial-gradient(ellipse 45% 38% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(36px); will-change: transform\">"
+     },
+     "shot": "shots/70aa583abf.png"
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "id": "6795a626b2",
+   "value": "linear-gradient(#ffffff / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "1eb09d257f",
+     "value": "linear-gradient(#ffffff / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+     "declared": "linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--ez-surface)), linear-gradient(90deg, #ffffff, rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "AI Search home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1365,
+      260
+     ],
+     "instances": 3,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 906,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      2,
+      6
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1440,
+      "col": 5,
+      "snippet": "<div class=\"ai-home-grad\" style=\"position: absolute; top: 0; left: 0; right: 0; height: 260px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--ez-surface)), linear-gradient(90deg, #ffffff, rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18)); pointer-events: none; overflow: hidden\">"
+     },
+     "shot": "shots/1eb09d257f.png"
+    },
+    {
+     "n": 2,
+     "id": "6ee102a96f",
+     "value": "linear-gradient(#ffffff / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+     "declared": "linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--ez-surface)), linear-gradient(90deg, #ffffff, rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "AI Studio home",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1103,
+      260
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 8,
+      "owner": "AI Magic",
+      "tpl": 1953,
+      "nth": 0
+     },
+     "captures": [
+      8
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2577,
+      "col": 7,
+      "snippet": "<div class=\"ai-home-grad\" style=\"position: absolute; top: 0; left: 0; right: 0; height: 260px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--ez-surface)), linear-gradient(90deg, #ffffff, rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18)); pointer-events: none; overflow: hidden\">"
+     },
+     "shot": "shots/6ee102a96f.png"
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "id": "997fb7c625",
+   "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.143529 0.211765 0.301176 / 0.8) 100%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "673577794a",
+     "value": "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.143529 0.211765 0.301176 / 0.8) 100%)",
+     "declared": "linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(61, 90, 128) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      260,
+      130
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 6,
+      "owner": "AI Magic",
+      "tpl": 1548,
+      "nth": 0
+     },
+     "captures": [
+      6,
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2116,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; inset: 0; background: {{ pc.scrim }}\">"
+     },
+     "shot": "shots/673577794a.png"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "id": "72c2ff8a27",
+   "value": "linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%)",
+   "tokens": [
+    "--ez-color--pro-gradient"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "items": [
+    {
+     "n": 1,
+     "id": "687c0245d4",
+     "value": "linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%)",
+     "declared": "var(--ez-color--pro-gradient)",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-color--pro-gradient"
+     ],
+     "component": "Top bar",
+     "tag": "a",
+     "text": "Join Pro",
+     "size": [
+      124,
+      48
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 10,
+      "owner": "Explore Page",
+      "tpl": 264,
+      "nth": 0
+     },
+     "captures": [
+      10,
+      11
+     ],
+     "source": {
+      "file": "Explore Page.dc.html",
+      "line": 259,
+      "col": 7,
+      "snippet": "<a href=\"Pricing.dc.html\" style=\"display: inline-flex; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: var(--ez-color--pro-gradient); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden\" style-hover=\"background: var(--ez-color--pro-gradient-hover); color: #fff\" onMouseEnter=\"{{ joinShineStart }}\" onMouseLeave=\"{{ joinShineEnd }}\">"
+     },
+     "shot": "shots/687c0245d4.png"
+    },
+    {
+     "n": 2,
+     "id": "169d403866",
+     "value": "linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%)",
+     "declared": "var(--ez-color--pro-gradient)",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-color--pro-gradient"
+     ],
+     "component": "Left nav",
+     "tag": "span",
+     "text": "",
+     "size": [
+      8,
+      8
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 11,
+      "owner": "Explore Page",
+      "tpl": 38,
+      "nth": 0
+     },
+     "captures": [
+      11
+     ],
+     "source": {
+      "file": "Explore Page.dc.html",
+      "line": 75,
+      "col": 11,
+      "snippet": "<span style=\"display: {{ dotDisplay }}; position: absolute; top: -1px; right: -1px; width: 8px; height: 8px; border-radius: 9999px; background: {{ dotColor }}; box-shadow: 0 0 0 2px {{ dotRing }}\">"
+     },
+     "shot": "shots/169d403866.png"
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "id": "92a901f502",
+   "value": "linear-gradient(color(srgb 0 0 0 / 0), #ffffff 70%)",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "64cd8251e3",
+     "value": "linear-gradient(color(srgb 0 0 0 / 0), #ffffff 70%)",
+     "declared": "linear-gradient(to bottom, color-mix(in srgb, var(--ez-surface) 0%, transparent), var(--ez-surface) 70%)",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "Fresh content",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1317,
+      50
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 1052,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      2
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1614,
+      "col": 9,
+      "snippet": "<div style=\"position: absolute; left: 0; right: 0; bottom: 0; height: 50px; z-index: 30; pointer-events: none; background: linear-gradient(to bottom, color-mix(in srgb, var(--ez-surface) 0%, transparent), var(--ez-surface) 70%)\">"
+     },
+     "shot": "shots/64cd8251e3.png"
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "id": "70714ab7e7",
+   "value": "linear-gradient(color(srgb 0 0 0 / 0), #171717 70%)",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "2ec3bf88b3",
+     "value": "linear-gradient(color(srgb 0 0 0 / 0), #171717 70%)",
+     "declared": "linear-gradient(to bottom, color-mix(in srgb, var(--ez-surface) 0%, transparent), var(--ez-surface) 70%)",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "Fresh content",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1317,
+      50
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 1,
+      "owner": "AI Magic",
+      "tpl": 1052,
+      "nth": 0
+     },
+     "captures": [
+      1,
+      3
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1614,
+      "col": 9,
+      "snippet": "<div style=\"position: absolute; left: 0; right: 0; bottom: 0; height: 50px; z-index: 30; pointer-events: none; background: linear-gradient(to bottom, color-mix(in srgb, var(--ez-surface) 0%, transparent), var(--ez-surface) 70%)\">"
+     },
+     "shot": "shots/2ec3bf88b3.png"
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "id": "fdda9c07a7",
+   "value": "linear-gradient(45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(-45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(45deg, #000000 / 0% 75%, #3a3a3a 75%), linear-gradient(-45deg, #000000 / 0% 75%, #3a3a3a 75%)",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "07cc886a2b",
+     "value": "linear-gradient(45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(-45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(45deg, #000000 / 0% 75%, #3a3a3a 75%), linear-gradient(-45deg, #000000 / 0% 75%, #3a3a3a 75%)",
+     "declared": "linear-gradient(45deg, rgb(58, 58, 58) 25%, transparent 25%), linear-gradient(-45deg, rgb(58, 58, 58) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgb(58, 58, 58) 75%), linear-gradient(-45deg, transparent 75%, rgb(58, 58, 58) 75%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card AI",
+     "tag": "div",
+     "text": "",
+     "size": [
+      296,
+      300
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 488,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 375,
+      "col": 13,
+      "snippet": "<div style=\"position: absolute; inset: 0; background-color: #2a2a2a; background-image: linear-gradient(45deg, #3a3a3a 25%, transparent 25%), linear-gradient(-45deg, #3a3a3a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #3a3a3a 75%), linear-gradient(-45deg, transparent 75%, #3a3a3a 75%); background-size: 22px 22px; background-position: 0 0, 0 11px, 11px -11px, -11px 0\">"
+     },
+     "shot": "shots/07cc886a2b.png"
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "id": "3b57c0986c",
+   "value": "linear-gradient(to left bottom, #ff8c1a 0%, #ff7900 38%, #fd3198 100%)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "eef2c1a9fd",
+     "value": "linear-gradient(to left bottom, #ff8c1a 0%, #ff7900 38%, #fd3198 100%)",
+     "declared": "linear-gradient(to left bottom, rgb(255, 140, 26) 0%, rgb(255, 121, 0) 38%, rgb(253, 49, 152) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 137,
+      "nth": 0
+     },
+     "captures": [
+      23
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 188,
+      "col": 5,
+      "snippet": "<div style=\"display: {{ bgOverlayDisplay }}; position: absolute; inset: 0; background: {{ bgGradient }}; opacity: {{ bgOverlayOpacity }}; mix-blend-mode: {{ bgOverlayBlend }}; pointer-events: none\">"
+     },
+     "shot": "shots/eef2c1a9fd.png"
+    },
+    {
+     "n": 2,
+     "id": "1d03b18786",
+     "value": "linear-gradient(to left bottom, #ff8c1a 0%, #ff7900 38%, #fd3198 100%)",
+     "declared": "linear-gradient(to left bottom, rgb(255, 140, 26) 0%, rgb(255, 121, 0) 38%, rgb(253, 49, 152) 100%)",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 23,
+      "owner": "Log In",
+      "tpl": 138,
+      "nth": 0
+     },
+     "captures": [
+      23
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 189,
+      "col": 5,
+      "snippet": "<div style=\"position: absolute; inset: 0; background: {{ bgGradient }}; -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 75%); mask-image: linear-gradient(180deg, transparent 35%, #000 75%); pointer-events: none\">"
+     },
+     "shot": "shots/1d03b18786.png"
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "id": "d579472963",
+   "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 48%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 22%, #000000 / 0% 70%), none",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "e8acc274ae",
+     "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 48%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 22%, #000000 / 0% 70%), none",
+     "declared": "radial-gradient(65% 45% at 12% 18%, rgba(255, 121, 0, 0.48), transparent 70%), radial-gradient(60% 50% at 88% 82%, rgba(253, 49, 152, 0.22), transparent 70%), initial",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 24,
+      "owner": "Log In",
+      "tpl": 137,
+      "nth": 0
+     },
+     "captures": [
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 188,
+      "col": 5,
+      "snippet": "<div style=\"display: {{ bgOverlayDisplay }}; position: absolute; inset: 0; background: {{ bgGradient }}; opacity: {{ bgOverlayOpacity }}; mix-blend-mode: {{ bgOverlayBlend }}; pointer-events: none\">"
+     },
+     "shot": "shots/e8acc274ae.png"
+    },
+    {
+     "n": 2,
+     "id": "8a0cc1d172",
+     "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 48%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 22%, #000000 / 0% 70%), none",
+     "declared": "radial-gradient(65% 45% at 12% 18%, rgba(255, 121, 0, 0.48), transparent 70%), radial-gradient(60% 50% at 88% 82%, rgba(253, 49, 152, 0.22), transparent 70%), initial",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 24,
+      "owner": "Log In",
+      "tpl": 138,
+      "nth": 0
+     },
+     "captures": [
+      24
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 189,
+      "col": 5,
+      "snippet": "<div style=\"position: absolute; inset: 0; background: {{ bgGradient }}; -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 75%); mask-image: linear-gradient(180deg, transparent 35%, #000 75%); pointer-events: none\">"
+     },
+     "shot": "shots/8a0cc1d172.png"
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "id": "95e35ee3f3",
+   "value": "linear-gradient(to left bottom, #ff7900, #fd3198)",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "fa8eb9b235",
+     "value": "linear-gradient(to left bottom, #ff7900, #fd3198)",
+     "declared": "linear-gradient(to left bottom, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 25,
+      "owner": "Log In",
+      "tpl": 137,
+      "nth": 0
+     },
+     "captures": [
+      25
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 188,
+      "col": 5,
+      "snippet": "<div style=\"display: {{ bgOverlayDisplay }}; position: absolute; inset: 0; background: {{ bgGradient }}; opacity: {{ bgOverlayOpacity }}; mix-blend-mode: {{ bgOverlayBlend }}; pointer-events: none\">"
+     },
+     "shot": "shots/fa8eb9b235.png"
+    },
+    {
+     "n": 2,
+     "id": "948b320aca",
+     "value": "linear-gradient(to left bottom, #ff7900, #fd3198)",
+     "declared": "linear-gradient(to left bottom, rgb(255, 121, 0), rgb(253, 49, 152))",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 25,
+      "owner": "Log In",
+      "tpl": 138,
+      "nth": 0
+     },
+     "captures": [
+      25
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 189,
+      "col": 5,
+      "snippet": "<div style=\"position: absolute; inset: 0; background: {{ bgGradient }}; -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 75%); mask-image: linear-gradient(180deg, transparent 35%, #000 75%); pointer-events: none\">"
+     },
+     "shot": "shots/948b320aca.png"
+    }
+   ]
+  },
+  {
+   "n": 41,
+   "id": "4ba5f1ec46",
+   "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 30%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 11%, #000000 / 0% 70%), radial-gradient(50% 38% at 72% 8%, #9152ec / 16%, #000000 / 0% 70%), none",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "4eb69b45ae",
+     "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 30%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 11%, #000000 / 0% 70%), radial-gradient(50% 38% at 72% 8%, #9152ec / 16%, #000000 / 0% 70%), none",
+     "declared": "radial-gradient(65% 45% at 12% 18%, rgba(255, 121, 0, 0.3), transparent 70%), radial-gradient(60% 50% at 88% 82%, rgba(253, 49, 152, 0.11), transparent 70%), radial-gradient(50% 38% at 72% 8%, rgba(145, 82, 236, 0.16), transparent 70%), initial",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 26,
+      "owner": "Log In",
+      "tpl": 137,
+      "nth": 0
+     },
+     "captures": [
+      26
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 188,
+      "col": 5,
+      "snippet": "<div style=\"display: {{ bgOverlayDisplay }}; position: absolute; inset: 0; background: {{ bgGradient }}; opacity: {{ bgOverlayOpacity }}; mix-blend-mode: {{ bgOverlayBlend }}; pointer-events: none\">"
+     },
+     "shot": "shots/4eb69b45ae.png"
+    },
+    {
+     "n": 2,
+     "id": "ca8ebbba88",
+     "value": "radial-gradient(65% 45% at 12% 18%, #ff7900 / 30%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 11%, #000000 / 0% 70%), radial-gradient(50% 38% at 72% 8%, #9152ec / 16%, #000000 / 0% 70%), none",
+     "declared": "radial-gradient(65% 45% at 12% 18%, rgba(255, 121, 0, 0.3), transparent 70%), radial-gradient(60% 50% at 88% 82%, rgba(253, 49, 152, 0.11), transparent 70%), radial-gradient(50% 38% at 72% 8%, rgba(145, 82, 236, 0.16), transparent 70%), initial",
+     "declaredProp": "background-image",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Marketing panel",
+     "tag": "div",
+     "text": "",
+     "size": [
+      720,
+      900
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 26,
+      "owner": "Log In",
+      "tpl": 138,
+      "nth": 0
+     },
+     "captures": [
+      26
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 189,
+      "col": 5,
+      "snippet": "<div style=\"position: absolute; inset: 0; background: {{ bgGradient }}; -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 75%); mask-image: linear-gradient(180deg, transparent 35%, #000 75%); pointer-events: none\">"
+     },
+     "shot": "shots/ca8ebbba88.png"
+    }
+   ]
+  },
+  {
+   "n": 42,
+   "id": "3b24cb0b42",
+   "value": "linear-gradient(#000000 / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "b4856738e5",
+     "value": "linear-gradient(#000000 / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+     "declared": "linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "Pricing V4",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1440,
+      260
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 20,
+      "owner": "Pricing",
+      "tpl": 93,
+      "nth": 0
+     },
+     "captures": [
+      20
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 104,
+      "col": 3,
+      "snippet": "<div class=\"ai-home-grad\" aria-hidden=\"true\" style=\"position: absolute; top: 0; left: 0; right: 0; height: 260px; z-index: 0; background: linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18)); pointer-events: none; overflow: hidden\">"
+     },
+     "shot": "shots/b4856738e5.png"
+    }
+   ]
+  },
+  {
+   "n": 43,
+   "id": "4d9a998223",
+   "value": "linear-gradient(#000000 / 0%, #171717), linear-gradient(90deg, #171717, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "ba35c04fa7",
+     "value": "linear-gradient(#000000 / 0%, #171717), linear-gradient(90deg, #171717, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+     "declared": "linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "Pricing V4",
+     "tag": "div",
+     "text": "",
+     "size": [
+      1440,
+      260
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 21,
+      "owner": "Pricing",
+      "tpl": 93,
+      "nth": 0
+     },
+     "captures": [
+      21
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 104,
+      "col": 3,
+      "snippet": "<div class=\"ai-home-grad\" aria-hidden=\"true\" style=\"position: absolute; top: 0; left: 0; right: 0; height: 260px; z-index: 0; background: linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18)); pointer-events: none; overflow: hidden\">"
+     },
+     "shot": "shots/ba35c04fa7.png"
+    }
+   ]
+  }
+ ]
+}

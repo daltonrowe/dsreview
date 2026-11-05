@@ -71,6 +71,9 @@
   .chip.offtok { background: #fff1e0; color: #b45a00; font-weight: 600; }
   :root[data-theme="dark"] .chip.offtok { background: #3a2a14; color: #ffb366; }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip.offtok { background: #3a2a14; color: #ffb366; } }
+  .chip.theme-dark { background: #26262a; color: #e6e6e6; }
+  .chip.theme-light { background: #f3f3ef; color: #555; border: 1px solid var(--line); }
+  .chip.theme-both { background: linear-gradient(90deg, #f3f3ef 50%, #26262a 50%); color: #888; }
   .chip.near { background: var(--round-bg); color: var(--round); font-family: var(--mono); font-size: 11px; }
   nav.index .m { color: var(--keep); font-size: 11px; }
   .pmodal { position: fixed; inset: 0; z-index: 110; background: rgba(0,0,0,.55); display: none; padding: 3vh 3vw; }
@@ -123,6 +126,7 @@
   <div class="seg" id="filter">
     <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="exclude">Excluded</button>
   </div>
+  <div class="seg" id="themef" hidden><button data-t="all">Both</button><button data-t="light">Light</button><button data-t="dark">Dark</button></div>
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
   <span id="count" class="muted" style="font-size:12px"></span>
   <span class="spacer"></span>
@@ -145,7 +149,7 @@ new ResizeObserver(setHdr).observe($('header.hdr'));
 
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-const state = { f: params.get('f') || 'all', off: params.get('off') === '1' };
+const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') === '1' };
 let S, cfg, focusedId = null;
 const byId = new Map();
 
@@ -159,7 +163,9 @@ async function load() {
   $('#meta').title = `${S.stats.instances} rendered instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
   $('#exp-md').href = `/api/surveys/${id}/export.md`;
   const pages = [...new Set(S.captures.map(c => c.label))];
-  for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; byId.set(it.id, it); } }
+  for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; it.themes = [...new Set(it.captures.map(c => S.captures[c].theme).filter(Boolean))]; byId.set(it.id, it); } }
+  S.themed = S.captures.some(c => c.theme === 'dark');
+  $('#themef').hidden = !S.themed;
   $('#offtok').checked = state.off;
   render();
   applyFilter();
@@ -219,6 +225,7 @@ function itemHtml(s, it) {
     <div class="item-head">
       <span class="num" title="S${s.n}.${it.n}">#${it.n}</span>
       ${tokBadge(s)}
+      ${S.themed && it.themes.length ? `<span class="chip theme-${it.themes.length > 1 ? 'both' : it.themes[0]}">${it.themes.length > 1 ? 'Light + Dark' : it.themes[0] === 'dark' ? 'Dark' : 'Light'}</span>` : ''}
       ${it.instances > 1 ? `<span class="inst" title="Rendered instances of this element">×${it.instances}</span>` : ''}
     </div>
     <div class="shot" data-zoom>${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : '<span class="none">no screenshot</span>'}</div>
@@ -262,11 +269,13 @@ function matches(it) {
   if (state.f === 'decided' && !(d === 'keep' || d === 'round')) return false;
   if (state.f === 'undecided' && d !== 'undecided') return false;
   if (state.off && it.sec.near?.exact) return false;
+  if (S.themed && state.theme !== 'all' && !it.themes.includes(state.theme)) return false;
   return true;
 }
 
 function applyFilter() {
   $$('#filter button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === state.f));
+  $$('#themef button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === state.theme));
   let shown = 0, on = 0;
   for (const s of S.sections) {
     let n = 0;
@@ -282,6 +291,7 @@ function applyFilter() {
   const q = new URLSearchParams({ id });
   if (state.f !== 'all') q.set('f', state.f);
   if (state.off) q.set('off', '1');
+  if (state.theme !== 'all') q.set('theme', state.theme);
   history.replaceState(null, '', `?${q}${location.hash}`);
 }
 
@@ -445,6 +455,7 @@ function paint(itemId) {
 
 // ---------- events ----------
 $('#filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.f = b.dataset.f; applyFilter(); });
+$('#themef').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.theme = b.dataset.t; applyFilter(); });
 $('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
 
 $('#main').addEventListener('click', async e => {

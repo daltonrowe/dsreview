@@ -1,0 +1,10 @@
+{
+  "title": "Gradients",
+  "preset": "gradient",
+  "description": "",
+  "captures": "default",
+  "themes": [
+    "light",
+    "dark"
+  ]
+}

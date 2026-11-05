@@ -3,25 +3,37 @@
  "title": "Shadows",
  "preset": "shadow",
  "description": "",
- "generatedAt": "2026-11-05T11:32:15.895Z",
+ "generatedAt": "2026-11-05T12:03:08.206Z",
  "captures": [
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home"
+   "label": "AI Magic · Home",
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
   },
   {
    "page": "AI Magic.dc.html",
    "label": "AI Magic · Home (logged in)",
    "props": {
     "authState": "logged-in"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (dark)",
+   "label": "AI Magic · Home (logged in) · dark",
    "props": {
+    "authState": "logged-in",
     "theme": "dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "AI Magic.dc.html",
@@ -29,6 +41,19 @@
    "state": {
     "active": "search",
     "aiHome": false
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results · dark",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
@@ -36,6 +61,18 @@
    "label": "AI Magic · Explore",
    "state": {
     "active": "explore"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore · dark",
+   "state": {
+    "active": "explore"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
@@ -43,138 +80,282 @@
    "label": "AI Magic · AI Tools",
    "state": {
     "active": "collections"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools · dark",
+   "state": {
+    "active": "collections"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
    "page": "Explore Page.dc.html",
-   "label": "Explore Page"
+   "label": "Explore Page",
+   "theme": "light"
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {
+    "darkMode": true
+   },
+   "do": []
   },
   {
    "page": "Search Dropdown.dc.html",
-   "label": "Search Dropdown"
+   "label": "Search Dropdown",
+   "theme": "light"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {},
+   "do": [
+    "eval:document.documentElement.setAttribute('data-ez-theme','dark');document.body.setAttribute('data-ez-theme','dark')"
+   ]
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 1",
    "props": {
     "layout": "Option 1"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1 · dark",
+   "props": {
+    "layout": "Option 1",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 2",
    "props": {
     "layout": "Option 2"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2 · dark",
+   "props": {
+    "layout": "Option 2",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 3",
    "props": {
     "layout": "Option 3"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3 · dark",
+   "props": {
+    "layout": "Option 3",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 4",
    "props": {
     "layout": "Option 4"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4 (dark)",
+   "label": "Pricing · Option 4 · dark",
    "props": {
     "layout": "Option 4",
     "theme": "Dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "Checkout.dc.html",
-   "label": "Checkout"
+   "label": "Checkout",
+   "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account"
+   "label": "Log In · Create account",
+   "theme": "light"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "Dark"
+   }
   },
   {
    "page": "Log In.dc.html",
    "label": "Log In · Log in",
    "props": {
     "mode": "Log In"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account (dark)",
+   "label": "Log In · Log in · dark",
    "props": {
+    "mode": "Log In",
     "theme": "Dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Login"
+   "label": "Log In v1 · Login",
+   "theme": "light"
   },
   {
    "page": "Log In v1.dc.html",
    "label": "Log In v1 · Signup",
    "props": {
     "mode": "signup"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · App",
    "props": {
     "layout": "app"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App · dark",
+   "props": {
+    "layout": "app",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Sidebar",
    "props": {
     "layout": "sidebar"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar · dark",
+   "props": {
+    "layout": "sidebar",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Tabs",
    "props": {
     "layout": "tabs"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs · dark",
+   "props": {
+    "layout": "tabs",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Modal",
    "props": {
     "layout": "modal"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal · dark",
+   "props": {
+    "layout": "modal",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Hub",
    "props": {
     "layout": "hub"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub · dark",
+   "props": {
+    "layout": "hub",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Free plan",
    "props": {
     "plan": "Free"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan · dark",
+   "props": {
+    "plan": "Free",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Style Guide - Action Cards.dc.html",
-   "label": "Style Guide · Action Cards"
+   "label": "Style Guide · Action Cards",
+   "theme": "light"
   }
  ],
  "stats": {
-  "sections": 20,
-  "usages": 44,
-  "instances": 224
+  "sections": 21,
+  "usages": 50,
+  "instances": 416
  },
- "problems": [],
+ "problems": [
+  "Explore Page · dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
+ ],
  "sections": [
   {
    "n": 1,
@@ -182,7 +363,7 @@
    "value": "#0e2332 / 22% 0px 6px 18px 0px",
    "tokens": [],
    "usages": 3,
-   "instances": 81,
+   "instances": 162,
    "items": [
     {
      "n": 1,
@@ -200,15 +381,16 @@
       235,
       247
      ],
-     "instances": 27,
+     "instances": 54,
      "where": {
-      "capture": 4,
+      "capture": 6,
       "owner": "AI Magic",
       "tpl": 1543,
       "nth": 0
      },
      "captures": [
-      4
+      6,
+      7
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -234,15 +416,16 @@
       235,
       247
      ],
-     "instances": 27,
+     "instances": 54,
      "where": {
-      "capture": 4,
+      "capture": 6,
       "owner": "AI Magic",
       "tpl": 1544,
       "nth": 0
      },
      "captures": [
-      4
+      6,
+      7
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -268,15 +451,16 @@
       255,
       268
      ],
-     "instances": 27,
+     "instances": 54,
      "where": {
-      "capture": 4,
+      "capture": 6,
       "owner": "AI Magic",
       "tpl": 1545,
       "nth": 0
      },
      "captures": [
-      4
+      6,
+      7
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -294,7 +478,7 @@
    "value": "#0e2332 / 3% 0px 1px 1px 0px",
    "tokens": [],
    "usages": 13,
-   "instances": 75,
+   "instances": 128,
    "items": [
     {
      "n": 1,
@@ -312,7 +496,7 @@
       40,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -325,7 +509,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -351,7 +539,7 @@
       150,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -364,7 +552,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -390,7 +582,7 @@
       196,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -403,7 +595,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -429,7 +625,7 @@
       156,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -442,7 +638,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -468,7 +668,7 @@
       99,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -481,7 +681,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -507,7 +711,7 @@
       164,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -520,7 +724,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -546,7 +754,7 @@
       91,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -559,7 +767,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -585,7 +797,7 @@
       87,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -598,7 +810,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -624,7 +840,7 @@
       109,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -637,7 +853,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -663,7 +883,7 @@
       87,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -676,7 +896,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -702,7 +926,7 @@
       40,
       40
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -715,7 +939,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -741,15 +969,16 @@
       267,
       40
      ],
-     "instances": 3,
+     "instances": 6,
      "where": {
-      "capture": 7,
+      "capture": 12,
       "owner": "Search Dropdown",
       "tpl": 17,
       "nth": 0
      },
      "captures": [
-      7
+      12,
+      13
      ],
      "source": {
       "file": "Search Dropdown.dc.html",
@@ -775,15 +1004,16 @@
       124,
       40
      ],
-     "instances": 6,
+     "instances": 12,
      "where": {
-      "capture": 7,
+      "capture": 12,
       "owner": "Search Dropdown",
       "tpl": 40,
       "nth": 0
      },
      "captures": [
-      7
+      12,
+      13
      ],
      "source": {
       "file": "Search Dropdown.dc.html",
@@ -801,7 +1031,7 @@
    "value": "#0e2332 / 5% 0px 2px 10px 0px",
    "tokens": [],
    "usages": 3,
-   "instances": 24,
+   "instances": 48,
    "items": [
     {
      "n": 1,
@@ -819,15 +1049,16 @@
       300,
       323
      ],
-     "instances": 4,
+     "instances": 8,
      "where": {
-      "capture": 9,
+      "capture": 16,
       "owner": "Pricing",
       "tpl": 273,
       "nth": 0
      },
      "captures": [
-      9
+      16,
+      17
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -853,15 +1084,16 @@
       760,
       64
      ],
-     "instances": 10,
+     "instances": 20,
      "where": {
-      "capture": 9,
+      "capture": 16,
       "owner": "Pricing",
       "tpl": 308,
       "nth": 0
      },
      "captures": [
-      9
+      16,
+      17
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -887,15 +1119,16 @@
       760,
       64
      ],
-     "instances": 10,
+     "instances": 20,
      "where": {
-      "capture": 10,
+      "capture": 18,
       "owner": "Pricing",
       "tpl": 518,
       "nth": 0
      },
      "captures": [
-      10
+      18,
+      19
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -913,7 +1146,7 @@
    "value": "#0e2332 / 6% 0px 2px 8px 0px",
    "tokens": [],
    "usages": 3,
-   "instances": 13,
+   "instances": 22,
    "items": [
     {
      "n": 1,
@@ -931,7 +1164,7 @@
       36,
       36
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -944,7 +1177,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -970,7 +1207,7 @@
       36,
       36
      ],
-     "instances": 6,
+     "instances": 10,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -983,7 +1220,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -1009,15 +1250,16 @@
       36,
       36
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 7,
+      "capture": 12,
       "owner": "Search Dropdown",
       "tpl": 9,
       "nth": 0
      },
      "captures": [
-      7
+      12,
+      13
      ],
      "source": {
       "file": "Search Dropdown.dc.html",
@@ -1035,7 +1277,7 @@
    "value": "#0e2332 / 8% 0px 1px 4px 0px",
    "tokens": [],
    "usages": 2,
-   "instances": 5,
+   "instances": 8,
    "items": [
     {
      "n": 1,
@@ -1053,7 +1295,7 @@
       185,
       56
      ],
-     "instances": 3,
+     "instances": 4,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -1063,7 +1305,8 @@
      "captures": [
       0,
       1,
-      2
+      2,
+      3
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -1089,16 +1332,18 @@
       156,
       40
      ],
-     "instances": 2,
+     "instances": 4,
      "where": {
-      "capture": 3,
+      "capture": 4,
       "owner": "AI Magic",
       "tpl": 3123,
       "nth": 0
      },
      "captures": [
-      3,
-      4
+      4,
+      5,
+      6,
+      7
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -1116,7 +1361,7 @@
    "value": "#0e2332 / 20% 0px 1px 4px 0px",
    "tokens": [],
    "usages": 2,
-   "instances": 5,
+   "instances": 8,
    "items": [
     {
      "n": 1,
@@ -1134,7 +1379,7 @@
       28,
       28
      ],
-     "instances": 4,
+     "instances": 6,
      "where": {
       "capture": 0,
       "owner": "AI Magic",
@@ -1145,7 +1390,9 @@
       0,
       1,
       2,
-      4
+      3,
+      6,
+      7
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -1171,15 +1418,16 @@
       40,
       40
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 6,
+      "capture": 10,
       "owner": "Explore Page",
       "tpl": 152,
       "nth": 0
      },
      "captures": [
-      6
+      10,
+      11
      ],
      "source": {
       "file": "Explore Page.dc.html",
@@ -1193,11 +1441,226 @@
   },
   {
    "n": 7,
+   "id": "723f7d19ab",
+   "value": "#ffffff / 20% 0px 0px 0px 1px",
+   "tokens": [],
+   "usages": 6,
+   "instances": 7,
+   "items": [
+    {
+     "n": 1,
+     "id": "60ea6355ce",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "a",
+     "text": "Home",
+     "size": [
+      50,
+      48
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 1,
+      "owner": "AI Magic",
+      "tpl": 24,
+      "nth": 0
+     },
+     "captures": [
+      1,
+      3
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 471,
+      "col": 7,
+      "snippet": "<a href=\"#\" aria-label=\"Home\" onClick=\"{{ goHome }}\" class=\"nav-item {{ homeOnClass }}\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ homeColor }}; background: {{ homeBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+     },
+     "shot": "shots/60ea6355ce.png"
+    },
+    {
+     "n": 2,
+     "id": "ddcae2e163",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "a",
+     "text": "Search",
+     "size": [
+      50,
+      48
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 5,
+      "owner": "AI Magic",
+      "tpl": 29,
+      "nth": 0
+     },
+     "captures": [
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 475,
+      "col": 7,
+      "snippet": "<a href=\"#\" aria-label=\"Search\" onClick=\"{{ goSearch }}\" class=\"nav-item {{ searchOnClass }}\" style=\"position: relative; z-index: {{ searchNavZ }}; background-color: {{ searchNavBgLift }}; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ searchColor }}; background: {{ searchBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+     },
+     "shot": "shots/ddcae2e163.png"
+    },
+    {
+     "n": 3,
+     "id": "717736ca75",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "a",
+     "text": "Explore",
+     "size": [
+      50,
+      48
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 7,
+      "owner": "AI Magic",
+      "tpl": 34,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 479,
+      "col": 7,
+      "snippet": "<a href=\"#\" aria-label=\"Explore\" onClick=\"{{ goExplore }}\" class=\"nav-item {{ exploreOnClass }}\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ exploreColor }}; background: {{ exploreBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+     },
+     "shot": "shots/717736ca75.png"
+    },
+    {
+     "n": 4,
+     "id": "2cf8d4a2f3",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .explore-cat-item.cat-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "a",
+     "text": "",
+     "size": [
+      200,
+      35
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 7,
+      "owner": "AI Magic",
+      "tpl": 1526,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2092,
+      "col": 11,
+      "snippet": "<a href=\"#\" onClick=\"{{ cn.pick }}\" class=\"explore-cat-item {{ cn.onClass }}\" style=\"display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 9999px; background: {{ cn.bg }}; color: {{ cn.fg }}; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease, color .15s ease\" style-hover=\"background: #eef1f3; color: #0e2332\">"
+     },
+     "shot": "shots/2cf8d4a2f3.png"
+    },
+    {
+     "n": 5,
+     "id": "fd76faaf5c",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .explore-cat-item.cat-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Explore content types",
+     "tag": "a",
+     "text": "",
+     "size": [
+      227,
+      40
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 7,
+      "owner": "AI Magic",
+      "tpl": 1941,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2559,
+      "col": 7,
+      "snippet": "<a href=\"#\" onClick=\"{{ ct.pick }}\" class=\"explore-cat-item {{ ct.onClass }}\" style=\"display: flex; align-items: center; gap: 14px; padding: 10px 14px; border-radius: 9999px; background: {{ ct.bg }}; color: {{ ct.fg }}; font-size: 15px; font-weight: {{ ct.weight }}; text-decoration: none; transition: background .15s ease, color .15s ease\" style-hover=\"background: var(--color-orange-10)\">"
+     },
+     "shot": "shots/fd76faaf5c.png"
+    },
+    {
+     "n": 6,
+     "id": "8cbb9a910c",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "a",
+     "text": "AI Tools",
+     "size": [
+      50,
+      48
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 9,
+      "owner": "AI Magic",
+      "tpl": 39,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 483,
+      "col": 7,
+      "snippet": "<a href=\"https://claude.ai/design/p/d8af1365-6000-4692-ba89-c346ea75c82e?file=AI+Studio.dc.html\" target=\"_blank\" rel=\"noopener\" aria-label=\"AI Tools\" class=\"nav-item {{ collectionsOnClass }}\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ collectionsColor }}; background: {{ collectionsBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+     },
+     "shot": "shots/8cbb9a910c.png"
+    }
+   ]
+  },
+  {
+   "n": 8,
    "id": "c7283d2a6c",
    "value": "#0e2332 / 12% 0px 1px 4px 0px",
    "tokens": [],
    "usages": 3,
-   "instances": 4,
+   "instances": 6,
    "items": [
     {
      "n": 1,
@@ -1215,15 +1678,16 @@
       169,
       44
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 8,
+      "capture": 14,
       "owner": "Pricing",
       "tpl": 17,
       "nth": 0
      },
      "captures": [
-      8
+      14,
+      15
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -1249,15 +1713,16 @@
       129,
       30
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 10,
+      "capture": 18,
       "owner": "Pricing",
       "tpl": 374,
       "nth": 0
      },
      "captures": [
-      10
+      18,
+      19
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -1285,14 +1750,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 11,
+      "capture": 20,
       "owner": "Pricing",
       "tpl": 105,
       "nth": 0
      },
      "captures": [
-      11,
-      12
+      20,
+      21
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -1305,7 +1770,167 @@
    ]
   },
   {
-   "n": 8,
+   "n": 9,
+   "id": "1a15dadd5f",
+   "value": "#0e2332 / 15% 0px 6px 20px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "b41f4fc1bc",
+     "value": "#0e2332 / 15% 0px 6px 20px 0px",
+     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      320,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 16,
+      "owner": "Pricing",
+      "tpl": 328,
+      "nth": 0
+     },
+     "captures": [
+      16,
+      17
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 277,
+      "col": 7,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
+     },
+     "shot": "shots/b41f4fc1bc.png"
+    },
+    {
+     "n": 2,
+     "id": "ddcc1ab80e",
+     "value": "#0e2332 / 15% 0px 6px 20px 0px",
+     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      320,
+      56
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 538,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 419,
+      "col": 7,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
+     },
+     "shot": "shots/ddcc1ab80e.png"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "id": "799c968335",
+   "value": "#000000 / 45% 0px 10px 30px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "342a1c9dbe",
+     "value": "#000000 / 45% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card fresh",
+     "tag": "img",
+     "text": "",
+     "size": [
+      150,
+      200
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 512,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 389,
+      "col": 13,
+      "snippet": "<img src=\"uploads/small-vecteezy_woman-is-laying-on-couch-with-her-dog_78689756_small.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 70px; bottom: 30px; width: 150px; height: 200px; border-radius: 10px; z-index: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
+     },
+     "shot": "shots/342a1c9dbe.png"
+    },
+    {
+     "n": 2,
+     "id": "1e7ee86764",
+     "value": "#000000 / 45% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card fresh",
+     "tag": "img",
+     "text": "",
+     "size": [
+      136,
+      154
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 513,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 390,
+      "col": 13,
+      "snippet": "<img src=\"https://static.vecteezy.com/system/resources/thumbnails/027/788/240/small/beautiful-romantic-alley-in-a-park-with-colorful-trees-and-sunlight-autumn-natural-background-ai-generative-photo.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 0; bottom: 20px; width: 120px; height: 140px; border-radius: 10px; z-index: 2; transform: rotate(-7deg); box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
+     },
+     "shot": "shots/1e7ee86764.png"
+    }
+   ]
+  },
+  {
+   "n": 11,
    "id": "bccf15956d",
    "value": "#ffffff 0px 0px 20px 0px",
    "tokens": [],
@@ -1337,7 +1962,7 @@
      },
      "captures": [
       0,
-      1
+      2
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -1350,163 +1975,232 @@
    ]
   },
   {
-   "n": 9,
-   "id": "1a15dadd5f",
-   "value": "#0e2332 / 15% 0px 6px 20px 0px",
+   "n": 12,
+   "id": "3cc4c65d89",
+   "value": "#0e2332 / 12% 0px 16px 24px -8px",
    "tokens": [],
-   "usages": 2,
+   "usages": 1,
    "instances": 2,
    "items": [
     {
      "n": 1,
-     "id": "b41f4fc1bc",
-     "value": "#0e2332 / 15% 0px 6px 20px 0px",
-     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
+     "id": "36fa6b0393",
+     "value": "#0e2332 / 12% 0px 16px 24px -8px",
+     "declared": "rgba(14, 35, 50, 0.12) 0px 16px 24px -8px",
      "declaredProp": "box-shadow",
      "declaredFrom": "inline",
      "inheritedFrom": null,
      "tokens": [],
-     "component": "Bottom CTA",
-     "tag": "a",
-     "text": "Get Vecteezy Pro",
+     "component": "Home search dropdown",
+     "tag": "div",
+     "text": "",
      "size": [
-      320,
-      56
+      800,
+      465
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 9,
-      "owner": "Pricing",
-      "tpl": 328,
+      "capture": 12,
+      "owner": "Search Dropdown",
+      "tpl": 8,
       "nth": 0
      },
      "captures": [
-      9
+      12,
+      13
      ],
      "source": {
-      "file": "Pricing.dc.html",
-      "line": 277,
-      "col": 7,
-      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
+      "file": "Search Dropdown.dc.html",
+      "line": 41,
+      "col": 1,
+      "snippet": "<div data-screen-label=\"Home search dropdown\" class=\"search-dropdown-panel\" style=\"position: relative; width: 100%; max-width: 800px; box-sizing: border-box; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10); border-radius: 25px; box-shadow: 0 16px 24px -8px rgba(14, 35, 50, .12); padding: 24px 28px 26px; max-height: calc(100vh - 48px); overflow-y: auto\">"
      },
-     "shot": "shots/b41f4fc1bc.png"
-    },
-    {
-     "n": 2,
-     "id": "ddcc1ab80e",
-     "value": "#0e2332 / 15% 0px 6px 20px 0px",
-     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Bottom CTA",
-     "tag": "a",
-     "text": "Get Vecteezy Pro",
-     "size": [
-      320,
-      56
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 10,
-      "owner": "Pricing",
-      "tpl": 538,
-      "nth": 0
-     },
-     "captures": [
-      10
-     ],
-     "source": {
-      "file": "Pricing.dc.html",
-      "line": 419,
-      "col": 7,
-      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
-     },
-     "shot": "shots/ddcc1ab80e.png"
+     "shot": "shots/36fa6b0393.png"
     }
    ]
   },
   {
-   "n": 10,
-   "id": "799c968335",
-   "value": "#000000 / 45% 0px 10px 30px 0px",
+   "n": 13,
+   "id": "444e7fcf30",
+   "value": "#0e2332 / 8% 0px 8px 30px 0px",
    "tokens": [],
-   "usages": 2,
+   "usages": 1,
    "instances": 2,
    "items": [
     {
      "n": 1,
-     "id": "342a1c9dbe",
-     "value": "#000000 / 45% 0px 10px 30px 0px",
-     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
+     "id": "6bc2daf5b3",
+     "value": "#0e2332 / 8% 0px 8px 30px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 8px 30px",
      "declaredProp": "box-shadow",
      "declaredFrom": "inline",
      "inheritedFrom": null,
      "tokens": [],
-     "component": "Why card fresh",
-     "tag": "img",
-     "text": "",
+     "component": "Pricing V2",
+     "tag": "section",
+     "text": "Vecteezy Pro",
      "size": [
-      150,
-      200
+      560,
+      662
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 10,
+      "capture": 16,
       "owner": "Pricing",
-      "tpl": 512,
+      "tpl": 197,
       "nth": 0
      },
      "captures": [
-      10
+      16,
+      17
      ],
      "source": {
       "file": "Pricing.dc.html",
-      "line": 389,
-      "col": 13,
-      "snippet": "<img src=\"uploads/small-vecteezy_woman-is-laying-on-couch-with-her-dog_78689756_small.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 70px; bottom: 30px; width: 150px; height: 200px; border-radius: 10px; z-index: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
+      "line": 195,
+      "col": 5,
+      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 36px; box-shadow: 0 8px 30px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: none; border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
      },
-     "shot": "shots/342a1c9dbe.png"
-    },
-    {
-     "n": 2,
-     "id": "1e7ee86764",
-     "value": "#000000 / 45% 0px 10px 30px 0px",
-     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Why card fresh",
-     "tag": "img",
-     "text": "",
-     "size": [
-      136,
-      154
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 10,
-      "owner": "Pricing",
-      "tpl": 513,
-      "nth": 0
-     },
-     "captures": [
-      10
-     ],
-     "source": {
-      "file": "Pricing.dc.html",
-      "line": 390,
-      "col": 13,
-      "snippet": "<img src=\"https://static.vecteezy.com/system/resources/thumbnails/027/788/240/small/beautiful-romantic-alley-in-a-park-with-colorful-trees-and-sunlight-autumn-natural-background-ai-generative-photo.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 0; bottom: 20px; width: 120px; height: 140px; border-radius: 10px; z-index: 2; transform: rotate(-7deg); box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
-     },
-     "shot": "shots/1e7ee86764.png"
+     "shot": "shots/6bc2daf5b3.png"
     }
    ]
   },
   {
-   "n": 11,
+   "n": 14,
+   "id": "1587ac0fb8",
+   "value": "#0e2332 / 8% 0px 12px 40px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "d2b585d425",
+     "value": "#0e2332 / 8% 0px 12px 40px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 12px 40px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V3 hero",
+     "tag": "section",
+     "text": "Vecteezy Pro",
+     "size": [
+      520,
+      702
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 370,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 309,
+      "col": 7,
+      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; flex: 1 1 440px; min-width: 0; max-width: 520px; box-sizing: border-box; box-shadow: 0 12px 40px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: 1px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
+     },
+     "shot": "shots/d2b585d425.png"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "id": "5eaca7957f",
+   "value": "#000000 / 40% 0px 10px 30px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "cfe472e684",
+     "value": "#000000 / 40% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.4) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card bundles",
+     "tag": "div",
+     "text": "ZIP",
+     "size": [
+      76,
+      96
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 473,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 369,
+      "col": 11,
+      "snippet": "<div style=\"position: absolute; right: 40px; bottom: 34px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; width: 76px; height: 96px; padding-bottom: 12px; box-sizing: border-box; border-radius: 6px 22px 6px 6px; background: #f5f5f5; color: #555; font-size: 12px; font-weight: 600; letter-spacing: .04em; box-shadow: 0 10px 30px rgba(0, 0, 0, .4)\">"
+     },
+     "shot": "shots/cfe472e684.png"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "id": "03d014a388",
+   "value": "#000000 / 35% 0px 4px 14px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "2f78835778",
+     "value": "#000000 / 35% 0px 4px 14px 0px",
+     "declared": "rgba(0, 0, 0, 0.35) 0px 4px 14px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card AI",
+     "tag": "span",
+     "text": "",
+     "size": [
+      32,
+      32
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 18,
+      "owner": "Pricing",
+      "tpl": 491,
+      "nth": 0
+     },
+     "captures": [
+      18,
+      19
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 378,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin: -16px 0 0 -16px; border-radius: 50%; background: #fff; color: #141414; box-shadow: 0 4px 14px rgba(0, 0, 0, .35)\">"
+     },
+     "shot": "shots/2f78835778.png"
+    }
+   ]
+  },
+  {
+   "n": 17,
    "id": "c01400b3c1",
    "value": "#102030 / 8% 0px 16px 40px 0px",
    "tokens": [],
@@ -1531,14 +2225,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 17,
+      "capture": 27,
       "owner": "Log In v1",
       "tpl": 11,
       "nth": 0
      },
      "captures": [
-      17,
-      18
+      27,
+      28
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -1551,51 +2245,52 @@
    ]
   },
   {
-   "n": 12,
-   "id": "723f7d19ab",
-   "value": "#ffffff / 20% 0px 0px 0px 1px",
+   "n": 18,
+   "id": "3830127094",
+   "value": "#0e2332 / 35% 0px 24px 64px 0px",
    "tokens": [],
    "usages": 1,
-   "instances": 1,
+   "instances": 2,
    "items": [
     {
      "n": 1,
-     "id": "60ea6355ce",
-     "value": "#ffffff / 20% 0px 0px 0px 1px",
-     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "id": "7eae835553",
+     "value": "#0e2332 / 35% 0px 24px 64px 0px",
+     "declared": "rgba(14, 35, 50, 0.35) 0px 24px 64px",
      "declaredProp": "box-shadow",
-     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "declaredFrom": "inline",
      "inheritedFrom": null,
      "tokens": [],
-     "component": "Left nav",
-     "tag": "a",
-     "text": "Home",
+     "component": null,
+     "tag": "div",
+     "text": "",
      "size": [
-      50,
-      48
+      1120,
+      860
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 2,
-      "owner": "AI Magic",
-      "tpl": 24,
+      "capture": 35,
+      "owner": "Settings",
+      "tpl": 9,
       "nth": 0
      },
      "captures": [
-      2
+      35,
+      36
      ],
      "source": {
-      "file": "AI Magic.dc.html",
-      "line": 471,
-      "col": 7,
-      "snippet": "<a href=\"#\" aria-label=\"Home\" onClick=\"{{ goHome }}\" class=\"nav-item {{ homeOnClass }}\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ homeColor }}; background: {{ homeBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+      "file": "Settings.dc.html",
+      "line": 51,
+      "col": 1,
+      "snippet": "<div style=\"position: relative; display: flex; flex: 1; width: 100%; max-width: {{ shellMaxW }}; height: {{ shellH }}; margin: {{ shellMargin }}; border-radius: {{ shellRadius }}; overflow: {{ shellOverflow }}; box-shadow: {{ shellShadow }}; background: {{ pageBg }}\">"
      },
-     "shot": "shots/60ea6355ce.png"
+     "shot": "shots/7eae835553.png"
     }
    ]
   },
   {
-   "n": 13,
+   "n": 19,
    "id": "5ebf11f7eb",
    "value": "#ffffff 0px 0px 0px 2px",
    "tokens": [
@@ -1624,13 +2319,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 6,
+      "capture": 10,
       "owner": "Explore Page",
       "tpl": 38,
       "nth": 0
      },
      "captures": [
-      6
+      10
      ],
      "source": {
       "file": "Explore Page.dc.html",
@@ -1643,227 +2338,55 @@
    ]
   },
   {
-   "n": 14,
-   "id": "3cc4c65d89",
-   "value": "#0e2332 / 12% 0px 16px 24px -8px",
-   "tokens": [],
+   "n": 20,
+   "id": "69a6095bd1",
+   "value": "#171717 0px 0px 0px 2px",
+   "tokens": [
+    "--ez-surface"
+   ],
    "usages": 1,
    "instances": 1,
    "items": [
     {
      "n": 1,
-     "id": "36fa6b0393",
-     "value": "#0e2332 / 12% 0px 16px 24px -8px",
-     "declared": "rgba(14, 35, 50, 0.12) 0px 16px 24px -8px",
+     "id": "f029ef6a4a",
+     "value": "#171717 0px 0px 0px 2px",
+     "declared": "0 0 0 2px var(--ez-surface)",
      "declaredProp": "box-shadow",
      "declaredFrom": "inline",
      "inheritedFrom": null,
-     "tokens": [],
-     "component": "Home search dropdown",
-     "tag": "div",
-     "text": "",
-     "size": [
-      800,
-      465
+     "tokens": [
+      "--ez-surface"
      ],
-     "instances": 1,
-     "where": {
-      "capture": 7,
-      "owner": "Search Dropdown",
-      "tpl": 8,
-      "nth": 0
-     },
-     "captures": [
-      7
-     ],
-     "source": {
-      "file": "Search Dropdown.dc.html",
-      "line": 41,
-      "col": 1,
-      "snippet": "<div data-screen-label=\"Home search dropdown\" class=\"search-dropdown-panel\" style=\"position: relative; width: 100%; max-width: 800px; box-sizing: border-box; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10); border-radius: 25px; box-shadow: 0 16px 24px -8px rgba(14, 35, 50, .12); padding: 24px 28px 26px; max-height: calc(100vh - 48px); overflow-y: auto\">"
-     },
-     "shot": "shots/36fa6b0393.png"
-    }
-   ]
-  },
-  {
-   "n": 15,
-   "id": "444e7fcf30",
-   "value": "#0e2332 / 8% 0px 8px 30px 0px",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "6bc2daf5b3",
-     "value": "#0e2332 / 8% 0px 8px 30px 0px",
-     "declared": "rgba(14, 35, 50, 0.08) 0px 8px 30px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Pricing V2",
-     "tag": "section",
-     "text": "Vecteezy Pro",
-     "size": [
-      560,
-      662
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 9,
-      "owner": "Pricing",
-      "tpl": 197,
-      "nth": 0
-     },
-     "captures": [
-      9
-     ],
-     "source": {
-      "file": "Pricing.dc.html",
-      "line": 195,
-      "col": 5,
-      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 36px; box-shadow: 0 8px 30px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: none; border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
-     },
-     "shot": "shots/6bc2daf5b3.png"
-    }
-   ]
-  },
-  {
-   "n": 16,
-   "id": "1587ac0fb8",
-   "value": "#0e2332 / 8% 0px 12px 40px 0px",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "d2b585d425",
-     "value": "#0e2332 / 8% 0px 12px 40px 0px",
-     "declared": "rgba(14, 35, 50, 0.08) 0px 12px 40px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Pricing V3 hero",
-     "tag": "section",
-     "text": "Vecteezy Pro",
-     "size": [
-      520,
-      702
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 10,
-      "owner": "Pricing",
-      "tpl": 370,
-      "nth": 0
-     },
-     "captures": [
-      10
-     ],
-     "source": {
-      "file": "Pricing.dc.html",
-      "line": 309,
-      "col": 7,
-      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; flex: 1 1 440px; min-width: 0; max-width: 520px; box-sizing: border-box; box-shadow: 0 12px 40px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: 1px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
-     },
-     "shot": "shots/d2b585d425.png"
-    }
-   ]
-  },
-  {
-   "n": 17,
-   "id": "5eaca7957f",
-   "value": "#000000 / 40% 0px 10px 30px 0px",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "cfe472e684",
-     "value": "#000000 / 40% 0px 10px 30px 0px",
-     "declared": "rgba(0, 0, 0, 0.4) 0px 10px 30px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Why card bundles",
-     "tag": "div",
-     "text": "ZIP",
-     "size": [
-      76,
-      96
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 10,
-      "owner": "Pricing",
-      "tpl": 473,
-      "nth": 0
-     },
-     "captures": [
-      10
-     ],
-     "source": {
-      "file": "Pricing.dc.html",
-      "line": 369,
-      "col": 11,
-      "snippet": "<div style=\"position: absolute; right: 40px; bottom: 34px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; width: 76px; height: 96px; padding-bottom: 12px; box-sizing: border-box; border-radius: 6px 22px 6px 6px; background: #f5f5f5; color: #555; font-size: 12px; font-weight: 600; letter-spacing: .04em; box-shadow: 0 10px 30px rgba(0, 0, 0, .4)\">"
-     },
-     "shot": "shots/cfe472e684.png"
-    }
-   ]
-  },
-  {
-   "n": 18,
-   "id": "03d014a388",
-   "value": "#000000 / 35% 0px 4px 14px 0px",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "2f78835778",
-     "value": "#000000 / 35% 0px 4px 14px 0px",
-     "declared": "rgba(0, 0, 0, 0.35) 0px 4px 14px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Why card AI",
+     "component": "Left nav",
      "tag": "span",
      "text": "",
      "size": [
-      32,
-      32
+      8,
+      8
      ],
      "instances": 1,
      "where": {
-      "capture": 10,
-      "owner": "Pricing",
-      "tpl": 491,
+      "capture": 11,
+      "owner": "Explore Page",
+      "tpl": 38,
       "nth": 0
      },
      "captures": [
-      10
+      11
      ],
      "source": {
-      "file": "Pricing.dc.html",
-      "line": 378,
-      "col": 13,
-      "snippet": "<span style=\"position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin: -16px 0 0 -16px; border-radius: 50%; background: #fff; color: #141414; box-shadow: 0 4px 14px rgba(0, 0, 0, .35)\">"
+      "file": "Explore Page.dc.html",
+      "line": 75,
+      "col": 11,
+      "snippet": "<span style=\"display: {{ dotDisplay }}; position: absolute; top: -1px; right: -1px; width: 8px; height: 8px; border-radius: 9999px; background: {{ dotColor }}; box-shadow: 0 0 0 2px {{ dotRing }}\">"
      },
-     "shot": "shots/2f78835778.png"
+     "shot": "shots/f029ef6a4a.png"
     }
    ]
   },
   {
-   "n": 19,
+   "n": 21,
    "id": "2b1839128e",
    "value": "#ff7900 0px 0px 0px 1px",
    "tokens": [],
@@ -1888,13 +2411,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 13,
+      "capture": 22,
       "owner": "Checkout",
       "tpl": 87,
       "nth": 0
      },
      "captures": [
-      13
+      22
      ],
      "source": {
       "file": "Checkout.dc.html",
@@ -1903,50 +2426,6 @@
       "snippet": "<div onClick=\"{{ pickMonthly }}\" role=\"radio\" aria-checked=\"{{ isMonthly }}\" style=\"display: flex; align-items: center; gap: 18px; margin-top: 34px; padding: 22px 20px; border: 1px solid {{ monthlyBorder }}; box-shadow: {{ monthlyRing }}; border-radius: 7px; background: #fff; cursor: pointer\">"
      },
      "shot": "shots/0717cc9527.png"
-    }
-   ]
-  },
-  {
-   "n": 20,
-   "id": "3830127094",
-   "value": "#0e2332 / 35% 0px 24px 64px 0px",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "7eae835553",
-     "value": "#0e2332 / 35% 0px 24px 64px 0px",
-     "declared": "rgba(14, 35, 50, 0.35) 0px 24px 64px",
-     "declaredProp": "box-shadow",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": null,
-     "tag": "div",
-     "text": "",
-     "size": [
-      1120,
-      860
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Settings",
-      "tpl": 9,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Settings.dc.html",
-      "line": 51,
-      "col": 1,
-      "snippet": "<div style=\"position: relative; display: flex; flex: 1; width: 100%; max-width: {{ shellMaxW }}; height: {{ shellH }}; margin: {{ shellMargin }}; border-radius: {{ shellRadius }}; overflow: {{ shellOverflow }}; box-shadow: {{ shellShadow }}; background: {{ pageBg }}\">"
-     },
-     "shot": "shots/7eae835553.png"
     }
    ]
   }

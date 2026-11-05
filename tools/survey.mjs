@@ -14,7 +14,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { ROOT, PROJECT, startServer, openPage, settle, shootElement as shoot } from './lib/render.mjs';
+import { ROOT, PROJECT, startServer, openPage, settle, readPropsMeta, shootElement as shoot } from './lib/render.mjs';
 import { tplSource } from './lib/source.mjs';
 
 const SURVEYS = path.join(ROOT, 'surveys');
@@ -40,8 +40,20 @@ const hash = s => crypto.createHash('sha1').update(s).digest('hex').slice(0, 10)
 const firstNum = v => { const m = String(v).match(/-?[\d.]+/); return m ? parseFloat(m[0]) : Infinity; };
 
 function loadCaptures(spec) {
-  if (Array.isArray(spec.captures)) return spec.captures;
-  return JSON.parse(fs.readFileSync(path.join(SURVEYS, 'captures.json'), 'utf8')).captures;
+  const file = JSON.parse(fs.readFileSync(path.join(SURVEYS, 'captures.json'), 'utf8'));
+  const base = Array.isArray(spec.captures) ? spec.captures : file.captures;
+  if (!spec.themes?.includes('dark')) return base;
+  // light + dark: each state as-is (light), then its dark twin when the page has a dark mode
+  const out = [];
+  for (const c of base) {
+    out.push({ ...c, theme: 'light' });
+    const meta = readPropsMeta(c.page) || {};
+    const themeOpt = meta.theme?.options?.find(o => String(o).toLowerCase() === 'dark');
+    const how = file.dark?.[c.page];
+    if (themeOpt) out.push({ ...c, label: `${c.label} · dark`, theme: 'dark', props: { ...(c.props || {}), theme: themeOpt } });
+    else if (how) out.push({ ...c, label: `${c.label} · dark`, theme: 'dark', props: { ...(c.props || {}), ...(how.props || {}) }, state: { ...(c.state || {}), ...(how.state || {}) }, do: [...(c.do || []), ...(how.do || [])] });
+  }
+  return out;
 }
 
 async function run(id, o) {
@@ -147,7 +159,7 @@ async function main() {
     const dir = path.join(SURVEYS, id);
     if (fs.existsSync(path.join(dir, 'spec.json'))) throw new Error(`surveys/${id} already exists`);
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, 'spec.json'), JSON.stringify({ title: o.title || PRESETS[o.preset], preset: o.preset, description: '', captures: 'default' }, null, 2) + '\n');
+    fs.writeFileSync(path.join(dir, 'spec.json'), JSON.stringify({ title: o.title || PRESETS[o.preset], preset: o.preset, description: '', captures: 'default', ...(o.themes ? { themes: String(o.themes).split(',') } : {}) }, null, 2) + '\n');
     console.log(`created surveys/${id}/spec.json, now: node tools/survey.mjs run ${id}`);
     return;
   }

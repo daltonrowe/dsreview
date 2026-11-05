@@ -1,0 +1,28 @@
+/.git
+/.gitignore
+/.dockerignore
+/Dockerfile*
+
+/node_modules
+/.env*
+/test
+/data
+/screenshots
+/.claude
+*.tmp
+
+# Decisions in production live in DATA_DIR on a volume, not in the image.
+/surveys/*/decisions.json
+
+# Designer scratch files, not part of any page.
+/design-project/scraps
+
+# CI and Kamal files are not needed inside the image.
+/.github
+/.kamal
+/config/deploy*.yml
+/Gemfile*
+/.ruby-version
+/bin
+/README.md
+/CLAUDE.md

@@ -2,5 +2,9 @@
   "title": "Shadows",
   "preset": "shadow",
   "description": "",
-  "captures": "default"
+  "captures": "default",
+  "themes": [
+    "light",
+    "dark"
+  ]
 }

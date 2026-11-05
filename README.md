@@ -5,9 +5,11 @@ Tooling for turning the exported Claude design project (`design-project/`) into 
 ## Setup
 
 ```bash
-npm install        # also downloads headless Chromium for screenshots
+npm install
+npm run browsers   # headless Chromium for screenshots and surveys (once)
 npm start          # review viewer at http://localhost:4321 (opens browser)
 npm run serve      # same, without opening a browser
+npm test           # server tests
 ```
 
 The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER` / `REVIEW_PASS`).
@@ -18,7 +20,8 @@ The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER
 |---|---|
 | `design-project/` | The exported design project (`*.dc.html` live pages, `Vecteezy *.html` standalone exports) |
 | `design-system/` | Target design-system tokens (Apollo; `tokens.json` is the source, `tokens.css` and `tokens.md` are generated views), pulled from the Design System artifact |
-| `tools/server.mjs` | Express server: viewer, design pages, survey data, decisions API |
+| `tools/app.mjs`, `tools/server.mjs` | Express app (viewer, design pages, survey data, decisions API) and its launcher |
+| `tools/pull-decisions.mjs` | Copies decisions from the deployed site into local `surveys/*/decisions.json` |
 | `tools/viewer/` | Viewer UI: home, survey review, live page viewer |
 | `tools/survey.mjs` | Token survey generator |
 | `tools/dc.mjs` | Screenshot CLI |
@@ -44,6 +47,8 @@ node tools/survey.mjs new colors --preset text-color   # creates surveys/colors/
 node tools/survey.mjs run colors                       # scans all states in surveys/captures.json
 ```
 
+Color surveys capture every state in light **and** dark mode (`--themes light,dark` on `new`, or `"themes": ["light","dark"]` in `spec.json`). Dark mode is switched via the page's `theme` prop, or the `dark` entries in `surveys/captures.json` (Explore Page, Search Dropdown). Checkout, Log In v1 and the Action Cards style guide have no dark mode. The survey page then shows a **Both / Light / Dark** filter and a theme chip on each card.
+
 Decisions are saved to `surveys/<id>/decisions.json`. Re-running a survey keeps them, because item ids are stable. Screenshots (`surveys/*/shots/`) are gitignored and regenerated on each run.
 
 ## Screenshots: `tools/dc.mjs`
@@ -58,3 +63,21 @@ node tools/dc.mjs help
 ```
 
 **Props** are the designer-exposed variants. **State** is a page's internal view state. A **component** is any element with `data-screen-label`. **`--do`** runs interactions (click, hover, fill, and so on).
+
+## Deploy (dcloudbox)
+
+Kamal 2 deploys to dcloudbox behind the shared kamal-proxy. GitHub Actions (`.github/workflows/cd.yml`) runs on every push to `main`: it runs the tests, builds the image, pushes it to ghcr.io and runs `bin/kamal deploy`. Config: `config/deploy.yml`, `.kamal/secrets`, `Dockerfile`.
+
+- The image contains everything the viewer serves: `design-project/`, `design-system/`, `surveys/` (with screenshots) and `analysis/`. Surveys are generated locally, so commit the regenerated `surveys/` and `analysis/` folders to publish them.
+- Decisions made on the deployed site live on the `design_system_review_data` volume (`DATA_DIR=/app/data`), not in the image, so deploys keep them. `npm run pull-decisions` copies them into the local survey folders. It refuses to overwrite different local decisions unless you pass `--force`.
+- `/up` is the unauthenticated health check. Everything else asks for basic auth: user `eezy`, password from the `REVIEW_PASS` secret.
+
+**First deploy (once):**
+
+1. Confirm the hostname in `config/deploy.yml` (`proxy.host`) and the `cd.yml` summary line, and point its DNS `A` record at `162.55.211.252`.
+2. Push the repo to `github.com/daltonrowe/design-system-review` (the image name and registry user assume that owner).
+3. Repository secrets: `SSH_PRIVATE_KEY` (the shared `dcloudbox_ci` key), `REVIEW_PASS` (`eezy`) and `NOTIFY_WEBHOOK_URL`. Check them with `gh secret list --repo daltonrowe/design-system-review`.
+4. From the laptop: `cp .env.example .env`, `export KAMAL_REGISTRY_PASSWORD=$(gh auth token)`, then `bin/kamal setup`. The token needs `write:packages` (`gh auth refresh -s write:packages`).
+5. Link the ghcr package to the repo in its package settings, and keep it private.
+
+**Operations:** `bin/kamal logs`, `bin/kamal shell`, `bin/kamal app details`, `bin/kamal rollback <version>`, `bin/kamal lock release`. Any server command needs `KAMAL_REGISTRY_PASSWORD` exported first.

@@ -3,25 +3,37 @@
  "title": "Overlays (translucent colors)",
  "preset": "overlay",
  "description": "",
- "generatedAt": "2026-11-05T11:44:30.415Z",
+ "generatedAt": "2026-11-05T12:03:05.053Z",
  "captures": [
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home"
+   "label": "AI Magic · Home",
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
+   }
   },
   {
    "page": "AI Magic.dc.html",
    "label": "AI Magic · Home (logged in)",
    "props": {
     "authState": "logged-in"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (dark)",
+   "label": "AI Magic · Home (logged in) · dark",
    "props": {
+    "authState": "logged-in",
     "theme": "dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "AI Magic.dc.html",
@@ -29,6 +41,19 @@
    "state": {
     "active": "search",
     "aiHome": false
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results · dark",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
@@ -36,6 +61,18 @@
    "label": "AI Magic · Explore",
    "state": {
     "active": "explore"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore · dark",
+   "state": {
+    "active": "explore"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
@@ -43,138 +80,282 @@
    "label": "AI Magic · AI Tools",
    "state": {
     "active": "collections"
+   },
+   "theme": "light"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools · dark",
+   "state": {
+    "active": "collections"
+   },
+   "theme": "dark",
+   "props": {
+    "theme": "dark"
    }
   },
   {
    "page": "Explore Page.dc.html",
-   "label": "Explore Page"
+   "label": "Explore Page",
+   "theme": "light"
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {
+    "darkMode": true
+   },
+   "do": []
   },
   {
    "page": "Search Dropdown.dc.html",
-   "label": "Search Dropdown"
+   "label": "Search Dropdown",
+   "theme": "light"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown · dark",
+   "theme": "dark",
+   "props": {},
+   "state": {},
+   "do": [
+    "eval:document.documentElement.setAttribute('data-ez-theme','dark');document.body.setAttribute('data-ez-theme','dark')"
+   ]
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 1",
    "props": {
     "layout": "Option 1"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1 · dark",
+   "props": {
+    "layout": "Option 1",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 2",
    "props": {
     "layout": "Option 2"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2 · dark",
+   "props": {
+    "layout": "Option 2",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 3",
    "props": {
     "layout": "Option 3"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3 · dark",
+   "props": {
+    "layout": "Option 3",
+    "theme": "Dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Pricing.dc.html",
    "label": "Pricing · Option 4",
    "props": {
     "layout": "Option 4"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4 (dark)",
+   "label": "Pricing · Option 4 · dark",
    "props": {
     "layout": "Option 4",
     "theme": "Dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "Checkout.dc.html",
-   "label": "Checkout"
+   "label": "Checkout",
+   "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account"
+   "label": "Log In · Create account",
+   "theme": "light"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account · dark",
+   "theme": "dark",
+   "props": {
+    "theme": "Dark"
+   }
   },
   {
    "page": "Log In.dc.html",
    "label": "Log In · Log in",
    "props": {
     "mode": "Log In"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account (dark)",
+   "label": "Log In · Log in · dark",
    "props": {
+    "mode": "Log In",
     "theme": "Dark"
-   }
+   },
+   "theme": "dark"
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Login"
+   "label": "Log In v1 · Login",
+   "theme": "light"
   },
   {
    "page": "Log In v1.dc.html",
    "label": "Log In v1 · Signup",
    "props": {
     "mode": "signup"
-   }
+   },
+   "theme": "light"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · App",
    "props": {
     "layout": "app"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App · dark",
+   "props": {
+    "layout": "app",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Sidebar",
    "props": {
     "layout": "sidebar"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar · dark",
+   "props": {
+    "layout": "sidebar",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Tabs",
    "props": {
     "layout": "tabs"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs · dark",
+   "props": {
+    "layout": "tabs",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Modal",
    "props": {
     "layout": "modal"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal · dark",
+   "props": {
+    "layout": "modal",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Hub",
    "props": {
     "layout": "hub"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub · dark",
+   "props": {
+    "layout": "hub",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Settings.dc.html",
    "label": "Settings · Free plan",
    "props": {
     "plan": "Free"
-   }
+   },
+   "theme": "light"
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan · dark",
+   "props": {
+    "plan": "Free",
+    "theme": "dark"
+   },
+   "theme": "dark"
   },
   {
    "page": "Style Guide - Action Cards.dc.html",
-   "label": "Style Guide · Action Cards"
+   "label": "Style Guide · Action Cards",
+   "theme": "light"
   }
  ],
  "stats": {
-  "sections": 5,
-  "usages": 7,
-  "instances": 39
+  "sections": 7,
+  "usages": 9,
+  "instances": 60
  },
- "problems": [],
+ "problems": [
+  "Explore Page · dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
+ ],
  "sections": [
   {
    "n": 1,
@@ -202,14 +383,14 @@
      ],
      "instances": 20,
      "where": {
-      "capture": 14,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 212,
       "nth": 0
      },
      "captures": [
-      14,
-      16
+      23,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -237,14 +418,14 @@
      ],
      "instances": 12,
      "where": {
-      "capture": 14,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 229,
       "nth": 2
      },
      "captures": [
-      14,
-      16
+      23,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -262,7 +443,7 @@
    "value": "#0e2332 / 62%",
    "tokens": [],
    "usages": 2,
-   "instances": 4,
+   "instances": 8,
    "items": [
     {
      "n": 1,
@@ -280,16 +461,18 @@
       158,
       82
      ],
-     "instances": 2,
+     "instances": 4,
      "where": {
-      "capture": 3,
+      "capture": 4,
       "owner": "AI Magic",
       "tpl": 3649,
       "nth": 231
      },
      "captures": [
-      3,
-      5
+      4,
+      5,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -315,16 +498,18 @@
       158,
       82
      ],
-     "instances": 2,
+     "instances": 4,
      "where": {
-      "capture": 3,
+      "capture": 4,
       "owner": "AI Magic",
       "tpl": 3661,
       "nth": 21
      },
      "captures": [
-      3,
-      5
+      4,
+      5,
+      8,
+      9
      ],
      "source": {
       "file": "AI Magic.dc.html",
@@ -338,11 +523,103 @@
   },
   {
    "n": 3,
+   "id": "468957d48e",
+   "value": "#ffffff / 90%",
+   "tokens": [],
+   "usages": 1,
+   "instances": 8,
+   "items": [
+    {
+     "n": 1,
+     "id": "073f1665c4",
+     "value": "#ffffff / 90%",
+     "declared": "currentcolor",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Explore content types",
+     "tag": "span",
+     "text": "",
+     "size": [
+      20,
+      20
+     ],
+     "instances": 8,
+     "where": {
+      "capture": 7,
+      "owner": "AI Magic",
+      "tpl": 1942,
+      "nth": 1
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2560,
+      "col": 9,
+      "snippet": "<span role=\"img\" aria-hidden=\"true\" style=\"display: inline-block; width: 20px; height: 20px; flex-shrink: 0; background: {{ ct.iconBg }}; -webkit-mask: url({{ ct.icon }}) center / contain no-repeat; mask: url({{ ct.icon }}) center / contain no-repeat\">"
+     },
+     "shot": "shots/073f1665c4.png"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "5372f733ba",
+   "value": "#ff7900 / 14%",
+   "tokens": [
+    "--ez-color--accent-light"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "items": [
+    {
+     "n": 1,
+     "id": "ae230c3c84",
+     "value": "#ff7900 / 14%",
+     "declared": "var(--ez-color--accent-light)",
+     "declaredProp": "background",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-color--accent-light"
+     ],
+     "component": "Settings overview",
+     "tag": "span",
+     "text": "",
+     "size": [
+      40,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 38,
+      "owner": "Settings",
+      "tpl": 94,
+      "nth": 0
+     },
+     "captures": [
+      38
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 163,
+      "col": 19,
+      "snippet": "<span style=\"display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: var(--ez-color--accent-light); color: var(--ez-color--accent)\">"
+     },
+     "shot": "shots/ae230c3c84.png"
+    }
+   ]
+  },
+  {
+   "n": 5,
    "id": "7d86d23195",
    "value": "#ffffff / 22%",
    "tokens": [],
    "usages": 1,
-   "instances": 1,
+   "instances": 2,
    "items": [
     {
      "n": 1,
@@ -360,15 +637,16 @@
       269,
       48
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 9,
+      "capture": 16,
       "owner": "Pricing",
       "tpl": 194,
       "nth": 0
      },
      "captures": [
-      9
+      16,
+      17
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -381,12 +659,12 @@
    ]
   },
   {
-   "n": 4,
+   "n": 6,
    "id": "bbf90c5c83",
    "value": "#141414 / 72%",
    "tokens": [],
    "usages": 1,
-   "instances": 1,
+   "instances": 2,
    "items": [
     {
      "n": 1,
@@ -404,15 +682,16 @@
       173,
       30
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 10,
+      "capture": 18,
       "owner": "Pricing",
       "tpl": 499,
       "nth": 0
      },
      "captures": [
-      10
+      18,
+      19
      ],
      "source": {
       "file": "Pricing.dc.html",
@@ -425,12 +704,12 @@
    ]
   },
   {
-   "n": 5,
+   "n": 7,
    "id": "f54484f61d",
    "value": "#0e2332 / 55%",
    "tokens": [],
    "usages": 1,
-   "instances": 1,
+   "instances": 2,
    "items": [
     {
      "n": 1,
@@ -448,15 +727,16 @@
       1440,
       940
      ],
-     "instances": 1,
+     "instances": 2,
      "where": {
-      "capture": 22,
+      "capture": 35,
       "owner": "Settings",
       "tpl": 8,
       "nth": 0
      },
      "captures": [
-      22
+      35,
+      36
      ],
      "source": {
       "file": "Settings.dc.html",

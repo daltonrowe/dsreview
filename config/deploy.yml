@@ -1,0 +1,63 @@
+# Name of your application. Used to uniquely configure containers.
+# Must be unique across every app deployed to dcloudbox.
+service: design-system-review
+
+# Name of the container image.
+image: daltonrowe/design-system-review
+
+# Deploy to these servers.
+# The same address also appears as SERVER_ADDR in .github/workflows/cd.yml.
+servers:
+  web:
+    - 162.55.211.252
+
+# kamal-proxy is shared by every app on dcloudbox; each app claims its own host.
+# The A record for this host must point at the server before the first deploy
+# or Let's Encrypt issuance fails.
+#
+# Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full (strict)".
+proxy:
+  ssl: true
+  # TODO: confirm the hostname (also in .github/workflows/cd.yml) and create its DNS A record.
+  host: design-system-review.daltonrowe.com
+  app_port: 3000
+  healthcheck:
+    path: /up
+
+# Reviewer decisions (DATA_DIR). A named volume survives deploys and rollbacks.
+volumes:
+  - design_system_review_data:/app/data
+
+# Credentials for your image host.
+registry:
+  server: ghcr.io
+  username: daltonrowe
+
+  # Always use an access token rather than real password when possible.
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Inject ENV variables into containers (secrets come from .kamal/secrets).
+env:
+  secret:
+    - REVIEW_PASS
+  clear:
+    NODE_ENV: production
+    HOST: 0.0.0.0
+    PORT: 3000
+    DATA_DIR: /app/data
+    REVIEW_USER: eezy
+
+# Use a different ssh user than root. The bootstrap script creates this user and
+# adds it to the docker group.
+ssh:
+  user: deploy
+
+# Aliases are triggered with "bin/kamal <alias>".
+aliases:
+  shell: app exec --interactive --reuse "sh"
+  logs: app logs -f
+
+# Configure the image builder.
+builder:
+  arch: amd64

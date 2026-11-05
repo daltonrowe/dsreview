@@ -41,3 +41,5 @@ npm start                                             # viewer at http://localho
 - To view any item's state yourself, use the `view-design` skill (`tools/dc.mjs`) with the capture's props/state/do.
 
 - The survey page's **Suggested Tokens** panel (logic in `tools/viewer/survey.html` `computeSuggest`, names from `suggestName` in `tools/viewer/tokens.js`) proposes new tokens from non-excluded/non-removed usages; mirror that logic if asked to compile suggestions outside the UI.
+- Color surveys should be created with `--themes light,dark` so each page state is captured in both modes (dark switching: page `theme` prop, else `dark` map in `surveys/captures.json`).
+- Once deployed, reviewers' decisions live on the server. Run `npm run pull-decisions` (add `--force` to replace differing local files) before reading `surveys/*/decisions.json`.
