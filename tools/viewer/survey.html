@@ -89,7 +89,7 @@
   #suggest td.num { text-align: right; font-variant-numeric: tabular-nums; }
   #suggest tr.existing td { color: var(--muted); }
   #suggest tr.below td { opacity: .5; }
-  #suggest .val { font-family: var(--mono); font-size: 12px; cursor: pointer; text-decoration: underline dotted; }
+  #suggest .val { font-family: var(--mono); font-size: 12px; }
   #suggest .absorbs { font-family: var(--mono); font-size: 11px; color: var(--muted); }
   #suggest .name { font-family: var(--mono); font-size: 12px; font-weight: 600; }
   #suggest .pvc { width: 64px; }
@@ -123,8 +123,6 @@
   <div class="seg" id="filter">
     <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="exclude">Excluded</button>
   </div>
-  <select id="pagef"><option value="">All page states</option></select>
-  <input type="search" id="q" placeholder="Search…">
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
   <span id="count" class="muted" style="font-size:12px"></span>
   <span class="spacer"></span>
@@ -147,7 +145,7 @@ new ResizeObserver(setHdr).observe($('header.hdr'));
 
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-const state = { f: params.get('f') || 'all', q: params.get('q') || '', page: params.get('page') || '', off: params.get('off') === '1' };
+const state = { f: params.get('f') || 'all', off: params.get('off') === '1' };
 let S, cfg, focusedId = null;
 const byId = new Map();
 
@@ -161,8 +159,6 @@ async function load() {
   $('#meta').title = `${S.stats.instances} rendered instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
   $('#exp-md').href = `/api/surveys/${id}/export.md`;
   const pages = [...new Set(S.captures.map(c => c.label))];
-  $('#pagef').insertAdjacentHTML('beforeend', S.captures.map((c, i) => `<option value="${i}">${esc(c.label)}</option>`).join(''));
-  $('#pagef').value = state.page;
   for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; byId.set(it.id, it); } }
   $('#offtok').checked = state.off;
   render();
@@ -265,18 +261,12 @@ function matches(it) {
   if (state.f === 'exclude' ? d !== 'exclude' : d === 'exclude') return false;
   if (state.f === 'decided' && !(d === 'keep' || d === 'round')) return false;
   if (state.f === 'undecided' && d !== 'undecided') return false;
-  if (state.page !== '' && !it.captures.includes(Number(state.page))) return false;
   if (state.off && it.sec.near?.exact) return false;
-  if (state.q) {
-    const hay = [it.value, it.declared, it.declaredFrom, it.component, it.text, it.tag, it.source?.file, S.captures[it.where.capture].label, ...(it.tokens || []), S.decisions[it.id]?.note, `S${it.sec.n}.${it.n}`].join(' ').toLowerCase();
-    if (!state.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
-  }
   return true;
 }
 
 function applyFilter() {
   $$('#filter button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === state.f));
-  $('#q').value = state.q;
   let shown = 0, on = 0;
   for (const s of S.sections) {
     let n = 0;
@@ -291,8 +281,6 @@ function applyFilter() {
   $('#count').title = S.sections.some(s => s.near) ? `${on} on-token · ${shown - on} off-token` : '';
   const q = new URLSearchParams({ id });
   if (state.f !== 'all') q.set('f', state.f);
-  if (state.q) q.set('q', state.q);
-  if (state.page !== '') q.set('page', state.page);
   if (state.off) q.set('off', '1');
   history.replaceState(null, '', `?${q}${location.hash}`);
 }
@@ -426,11 +414,6 @@ function renderSuggest() {
     </table>
     ${c.unused.length ? `<div class="unused"><b>Unused tokens:</b> <code>${c.unused.map(esc).join('</code>, <code>')}</code></div>` : ''}`;
 }
-$('#main').addEventListener('click', e => {
-  const v = e.target.closest('#suggest .val');
-  if (!v) return;
-  state.q = v.dataset.q; state.f = 'all'; applyFilter(); scrollTo({ top: 0, behavior: 'smooth' });
-});
 
 async function decide(ids, decision, { note } = {}) {
   const before = ids.map(i => [i, S.decisions[i] ? { ...S.decisions[i] } : undefined]);
@@ -462,9 +445,7 @@ function paint(itemId) {
 
 // ---------- events ----------
 $('#filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.f = b.dataset.f; applyFilter(); });
-$('#pagef').addEventListener('change', e => { state.page = e.target.value; applyFilter(); });
 $('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
-let qt; $('#q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); applyFilter(); }, 120); });
 
 $('#main').addEventListener('click', async e => {
   const card = e.target.closest('.item');
@@ -537,7 +518,7 @@ function selectedIndex(it, opts) {
 }
 function popUrl(itemId, pick) {
   const it = byId.get(itemId), opts = roundOptions(it);
-  return viewUrl(S.captures[it.where.capture], it.where, opts.length ? { options: opts, pick } : null);
+  return viewUrl(S.captures[it.where.capture], it.where, opts.length ? { options: opts, pick, orig: it.value } : null);
 }
 function openPop(itemId, pick) {
   const it = byId.get(itemId), cap = S.captures[it.where.capture];
@@ -606,7 +587,6 @@ document.addEventListener('keydown', e => {
   else if (e.key === 'o' && focusedId) { openUsage(focusedId); }
   else if (e.key === 'O' && focusedId) { window.open(popUrl(focusedId, -1), '_blank'); }
   else if (e.key === ' ' && focusedId) { e.preventDefault(); zoom(focusedId); }
-  else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
 });
 
 if (!id) $('#main').innerHTML = '<div class="empty">No survey id. <a href="./">Back</a></div>';

@@ -55,7 +55,7 @@ let cur = {
   props: parse('props', {}), state: parse('state', {}), do: parse('do', []),
   w: Number(P.get('w')) || 1440,
   target: P.get('tpl') != null ? { owner: P.get('owner'), tpl: Number(P.get('tpl')), nth: Number(P.get('nth') || 0) } : null,
-  options: parse('options', null), pick: P.get('pick') != null ? Number(P.get('pick')) : 0,
+  options: parse('options', null), pick: P.get('pick') != null ? Number(P.get('pick')) : 0, orig: P.get('orig') || '',
 };
 // legacy single-option links: ?apply={css}&applyLabel=...
 if (!cur.options && P.get('apply')) cur.options = [{ label: P.get('applyLabel') || 'Rounded', css: parse('apply', {}) }];
@@ -77,7 +77,7 @@ function syncUrl() {
   if (cur.w !== 1440) q.set('w', cur.w);
   if (cur.target) { q.set('owner', cur.target.owner); q.set('tpl', cur.target.tpl); q.set('nth', cur.target.nth); }
   if (mark !== 'border') q.set('mark', mark);
-  if (cur.options) { q.set('options', JSON.stringify(cur.options)); q.set('pick', cur.pick); }
+  if (cur.options) { q.set('options', JSON.stringify(cur.options)); q.set('pick', cur.pick); if (cur.orig) q.set('orig', cur.orig); }
   if (P.get('embed')) q.set('embed', '1');
   history.replaceState(null, '', `?${q}`);
 }
@@ -185,7 +185,9 @@ function setupCompare() {
   const props = [...new Set(cur.options.flatMap(o => Object.keys(o.css || {})))];
   saved = Object.fromEntries(props.map(k => [k, [targetEl.style.getPropertyValue(k), targetEl.style.getPropertyPriority(k)]]));
   $('#compare').hidden = false;
-  $('#opts').innerHTML = `<option value="-1">Original (as designed)</option>` + cur.options.map((o, i) =>
+  // as-designed value: from the survey link, else read live from the element's computed style
+  const orig = cur.orig || props.map(k => targetEl.ownerDocument.defaultView.getComputedStyle(targetEl).getPropertyValue(k)).filter(Boolean).join(' / ');
+  $('#opts').innerHTML = `<option value="-1">Original${orig ? ` (${esc(orig)})` : ''}</option>` + cur.options.map((o, i) =>
     `<option value="${i}" title="${esc(Object.entries(o.css).map(([k, v]) => `${k}: ${v}`).join('; '))}">${i + 1}. ${esc(o.label)}</option>`).join('');
   $('#opts').onchange = e => show(Number(e.target.value));
   $('#swap').onclick = () => show(showing >= 0 ? -1 : lastPick);

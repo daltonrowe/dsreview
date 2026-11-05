@@ -70,7 +70,7 @@ export function viewUrl(capture, where, extra) {
   if (capture.do && capture.do.length) q.set('do', JSON.stringify(capture.do));
   if (capture.width) q.set('w', capture.width);
   if (where) { q.set('owner', where.owner); q.set('tpl', where.tpl); q.set('nth', where.nth); }
-  if (extra?.options?.length) { q.set('options', JSON.stringify(extra.options)); q.set('pick', extra.pick ?? 0); }
+  if (extra?.options?.length) { q.set('options', JSON.stringify(extra.options)); q.set('pick', extra.pick ?? 0); if (extra.orig) q.set('orig', extra.orig); }
   return `view.html?${q}`;
 }
 
