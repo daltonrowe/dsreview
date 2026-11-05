@@ -1,0 +1,163 @@
+{
+ "survey": "overlay",
+ "generatedAt": "2026-11-05T12:57:42.613Z",
+ "usages": 9,
+ "groups": [
+  {
+   "id": "99e5a7d05e",
+   "label": "Social proof V2 · <div>",
+   "component": "Social proof V2",
+   "tag": "div",
+   "text": "",
+   "declared": "background-color: rgba(255, 255, 255, 0.14)",
+   "items": [
+    "15c7d7a787",
+    "d4127f3c6e"
+   ],
+   "values": [
+    "#ffffff / 14%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 32,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 1
+  },
+  {
+   "id": "146d5a2d27",
+   "label": "Image results · <span> · “View More”",
+   "component": "Image results",
+   "tag": "span",
+   "text": "View More",
+   "declared": "background-color: rgba(14, 35, 50, 0.62)",
+   "items": [
+    "27b6ace290",
+    "f87ae13481"
+   ],
+   "values": [
+    "#0e2332 / 62%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 8,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 2
+  },
+  {
+   "id": "294b59424d",
+   "label": "Explore content types · <span>",
+   "component": "Explore content types",
+   "tag": "span",
+   "text": "",
+   "declared": "background-color: currentcolor",
+   "items": [
+    "073f1665c4"
+   ],
+   "values": [
+    "#ffffff / 90%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 8,
+   "why": [],
+   "n": 3
+  },
+  {
+   "id": "8310aa7b28",
+   "label": "Settings overview · <span>",
+   "component": "Settings overview",
+   "tag": "span",
+   "text": "",
+   "declared": "background: var(--ez-color--accent-light)",
+   "items": [
+    "ae230c3c84"
+   ],
+   "values": [
+    "#ff7900 / 14%"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 4
+  },
+  {
+   "id": "7f6bb1bd79",
+   "label": "Pricing V2 · <div> · “Billing period”",
+   "component": "Pricing V2",
+   "tag": "div",
+   "text": "Billing period",
+   "declared": "background-color: rgba(255, 255, 255, 0.22)",
+   "items": [
+    "41fde6efed"
+   ],
+   "values": [
+    "#ffffff / 22%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 5
+  },
+  {
+   "id": "9a40997ce4",
+   "label": "Why card AI · <span> · “Remove background”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Remove background",
+   "declared": "background-color: rgba(20, 20, 20, 0.72)",
+   "items": [
+    "0958d88965"
+   ],
+   "values": [
+    "#141414 / 72%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 6
+  },
+  {
+   "id": "1ee6816879",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "background-color: rgba(14, 35, 50, 0.55)",
+   "items": [
+    "4310783e7e"
+   ],
+   "values": [
+    "#0e2332 / 55%"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 7
+  }
+ ]
+}

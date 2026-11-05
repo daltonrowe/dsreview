@@ -1,0 +1,5062 @@
+{
+ "survey": "size-weight",
+ "generatedAt": "2026-11-05T12:57:42.625Z",
+ "usages": 351,
+ "groups": [
+  {
+   "id": "feb6b63a79",
+   "label": "Filters · <button> · “puppy”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "puppy",
+   "declared": "font-size: 14px",
+   "items": [
+    "8502ff47b9",
+    "a1248229bf",
+    "8451ef3373",
+    "e4cdd9704a",
+    "fa7f7834d5",
+    "b7dbfb5157",
+    "fc2bc066f7",
+    "62778bfad0",
+    "a26e81faf7"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 9,
+   "instances": 54,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 1
+  },
+  {
+   "id": "3b552c00e8",
+   "label": "Pricing V2 · <li> · “Unlimited downloads of 75+ million creat”",
+   "component": "Pricing V2",
+   "tag": "li",
+   "text": "Unlimited downloads of 75+ million creative assets",
+   "declared": "font-size: 16px",
+   "items": [
+    "fceca0a109",
+    "e2e907a9e7",
+    "46b7b0639b",
+    "adf7f3c2ee",
+    "9df0384fe7",
+    "36d79959d9",
+    "c8baccd2e9",
+    "29978c1102",
+    "8312b28766",
+    "2b24a2ebff",
+    "ecba069149",
+    "389934e16d",
+    "ebca4f9424",
+    "83941925bf",
+    "83b50b55fd",
+    "adbe73731a",
+    "567d5c397c",
+    "6bef586efc",
+    "5141080336",
+    "2709052628",
+    "835142c893",
+    "c1cf45f069",
+    "5bbecbe2d0",
+    "2a3a30ebd8",
+    "396ad8bc05",
+    "612f7a5bd1",
+    "481a7413a6"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 27,
+   "instances": 30,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 2
+  },
+  {
+   "id": "e0fd9e33b7",
+   "label": "Social proof V2 · <p> · ““””",
+   "component": "Social proof V2",
+   "tag": "p",
+   "text": "“”",
+   "declared": "font-size: 15px",
+   "items": [
+    "ba681e5926",
+    "2c734b0cd0"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 30,
+   "why": [
+    "copy"
+   ],
+   "n": 3
+  },
+  {
+   "id": "e0c0e94d55",
+   "label": "Popular photo categories · <span> · “Photos”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "fd65f089eb"
+   ],
+   "values": [
+    "14px / 500"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 27,
+   "why": [],
+   "n": 4
+  },
+  {
+   "id": "4ff38b27a2",
+   "label": "Fresh content · <button>",
+   "component": "Fresh content",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 15px",
+   "items": [
+    "3fe3370a60",
+    "adb3ec28d0"
+   ],
+   "values": [
+    "15px / 400",
+    "15px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 24,
+   "why": [
+    "element",
+    "style"
+   ],
+   "n": 5
+  },
+  {
+   "id": "21c0caf405",
+   "label": "Profile · <label> · “First name”",
+   "component": "Profile",
+   "tag": "label",
+   "text": "First name",
+   "declared": "font-size: 13px",
+   "items": [
+    "917c864d24",
+    "a36a95fed1",
+    "fee17bb898",
+    "22285bb161"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 4,
+   "instances": 20,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 6
+  },
+  {
+   "id": "63816f54df",
+   "label": "FAQ · <button>",
+   "component": "FAQ",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 17px",
+   "items": [
+    "bdf530f27c",
+    "7c7b5f8885"
+   ],
+   "values": [
+    "17px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 20,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 7
+  },
+  {
+   "id": "5cce7b780a",
+   "label": "Pre-footer · <div> · “Photographer One”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Photographer One",
+   "declared": "font-size: 16px",
+   "items": [
+    "f1c0e0ff4f",
+    "8a332a3412",
+    "3c7771e25e",
+    "1e20a0f808"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 16,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 8
+  },
+  {
+   "id": "20b16a51e7",
+   "label": "Pre-footer · <div> · “Featured Photographers”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Featured Photographers",
+   "declared": "font-size: 50px",
+   "items": [
+    "07ef05ea00",
+    "10c2715436",
+    "aac45bd7ec",
+    "c580232402"
+   ],
+   "values": [
+    "50px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 16,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 9
+  },
+  {
+   "id": "08ffa563d9",
+   "label": "Trustpilot ticker · <span> · “·”",
+   "component": "Trustpilot ticker",
+   "tag": "span",
+   "text": "·",
+   "declared": "font-size: 12px",
+   "items": [
+    "2e79454d6f"
+   ],
+   "values": [
+    "12px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 16,
+   "why": [],
+   "n": 10
+  },
+  {
+   "id": "5fa57a818c",
+   "label": "Trustpilot ticker · <span> · ““””",
+   "component": "Trustpilot ticker",
+   "tag": "span",
+   "text": "“”",
+   "declared": "font-size: 14px",
+   "items": [
+    "c3a50374e5"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 16,
+   "why": [],
+   "n": 11
+  },
+  {
+   "id": "1e0fcf98f9",
+   "label": "Profile · <input>",
+   "component": "Profile",
+   "tag": "input",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "b0c037fcea",
+    "d26daa2769",
+    "4bfbd08b4f"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 3,
+   "instances": 15,
+   "why": [
+    "sibling"
+   ],
+   "n": 12
+  },
+  {
+   "id": "ab20f078f2",
+   "label": "Pagination · <button> · “1”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "1",
+   "declared": "font-size: 16px",
+   "items": [
+    "555bd57cd8",
+    "299d1ac82a",
+    "8ff64eb4d2",
+    "bcf2e062dd",
+    "ae47e5660b",
+    "a215a75863"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 6,
+   "instances": 12,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 13
+  },
+  {
+   "id": "1f346dfa51",
+   "label": "Pre-footer · <div> · “For Individuals”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "For Individuals",
+   "declared": "font-size: 40px",
+   "items": [
+    "30fb185a2e",
+    "40414f0ad5",
+    "8745724d6e"
+   ],
+   "values": [
+    "40px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 3,
+   "instances": 12,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 14
+  },
+  {
+   "id": "1a073b010d",
+   "label": "Profile · <button> · “Change photo”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Change photo",
+   "declared": "font-size: 14px",
+   "items": [
+    "68a05176d9",
+    "935d9feb90",
+    "c2177a23af"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 3,
+   "instances": 11,
+   "why": [
+    "style"
+   ],
+   "n": 15
+  },
+  {
+   "id": "747dfd246a",
+   "label": "Sign in form · <span> · “*”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "*",
+   "declared": "font-size: 12px",
+   "items": [
+    "dc403c74e9",
+    "222321e8d0",
+    "c12f8acb51",
+    "75fe2a9387"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 4,
+   "instances": 10,
+   "why": [
+    "copy"
+   ],
+   "n": 16
+  },
+  {
+   "id": "c41a20bd37",
+   "label": "Sign in form · <a> · “Privacy Policy”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Privacy Policy",
+   "declared": "font-size: 13px",
+   "items": [
+    "5d17b34e42",
+    "62b31461a3",
+    "58a97ab38b",
+    "fcd7cff6fe"
+   ],
+   "values": [
+    "13px / 400",
+    "14px / 400"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 4,
+   "instances": 10,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 17
+  },
+  {
+   "id": "090b13d087",
+   "label": "Trustpilot marquee · <span> · “·”",
+   "component": "Trustpilot marquee",
+   "tag": "span",
+   "text": "·",
+   "declared": "font-size: 13px",
+   "items": [
+    "919f1d83d2"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 10,
+   "why": [],
+   "n": 18
+  },
+  {
+   "id": "e022d10561",
+   "label": "Trustpilot marquee · <p> · ““””",
+   "component": "Trustpilot marquee",
+   "tag": "p",
+   "text": "“”",
+   "declared": "font-size: 14px",
+   "items": [
+    "703eeb9e7a"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 10,
+   "why": [],
+   "n": 19
+  },
+  {
+   "id": "e30d915191",
+   "label": "Featured collections · <span> · “Collection”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Collection",
+   "declared": "font-size: 12px",
+   "items": [
+    "19352add4e",
+    "8ce83b1f40",
+    "e02ee9370f",
+    "dbb8e72898",
+    "eaebe99049",
+    "95576bba0f"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 6,
+   "instances": 6,
+   "why": [
+    "copy"
+   ],
+   "n": 20
+  },
+  {
+   "id": "5a656fa25d",
+   "label": "Why card unlimited · <p> · “Unlimited royalty-free downloads.”",
+   "component": "Why card unlimited",
+   "tag": "p",
+   "text": "Unlimited royalty-free downloads.",
+   "declared": "font-size: 20px",
+   "items": [
+    "d0a7411eab",
+    "1941677867",
+    "3915f9f11f",
+    "b78bb6b463",
+    "e0f5f6a97b",
+    "8efba3a4b0"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 6,
+   "instances": 6,
+   "why": [
+    "style"
+   ],
+   "n": 21
+  },
+  {
+   "id": "acce2463e8",
+   "label": "Pricing V4 · <button> · “Yearly ( off)”",
+   "component": "Pricing V4",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "font-size: 16px",
+   "items": [
+    "35e1d15d04",
+    "b7cb399ed1",
+    "66c9164462",
+    "34bfb25acc"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 6,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 22
+  },
+  {
+   "id": "9188976133",
+   "label": "Account header · <div> · “shawn@eezy.com”",
+   "component": "Account header",
+   "tag": "div",
+   "text": "shawn@eezy.com",
+   "declared": "font-size: 14px",
+   "items": [
+    "d1dd4eabd2",
+    "72fd3da0a2"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 6,
+   "why": [
+    "copy"
+   ],
+   "n": 23
+  },
+  {
+   "id": "e5b3d6e73e",
+   "label": "Filters · <button> · “Search settings”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "Search settings",
+   "declared": null,
+   "items": [
+    "6a1f44c1b5"
+   ],
+   "values": [
+    "13.3333px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 24
+  },
+  {
+   "id": "dfe81678c8",
+   "label": "<span> · “royalty free vector graphics matching”",
+   "component": null,
+   "tag": "span",
+   "text": "royalty free vector graphics matching",
+   "declared": "font-size: 14px",
+   "items": [
+    "73a3aa68b3"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 25
+  },
+  {
+   "id": "19a4af82bc",
+   "label": "<strong> · “173,834”",
+   "component": null,
+   "tag": "strong",
+   "text": "173,834",
+   "declared": "font-size: 14px",
+   "items": [
+    "d530d5f502"
+   ],
+   "values": [
+    "14px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 26
+  },
+  {
+   "id": "af5111c426",
+   "label": "<strong> · “\"Dog\"”",
+   "component": null,
+   "tag": "strong",
+   "text": "\"Dog\"",
+   "declared": "font-size: 14px",
+   "items": [
+    "3496315b89"
+   ],
+   "values": [
+    "14px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 27
+  },
+  {
+   "id": "5f38688f20",
+   "label": "<h1> · “Dog Photos”",
+   "component": null,
+   "tag": "h1",
+   "text": "Dog Photos",
+   "declared": "font-size: 24px",
+   "items": [
+    "b07cfead84"
+   ],
+   "values": [
+    "24px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 28
+  },
+  {
+   "id": "6997547a97",
+   "label": "Pricing V4 · <span> · “USD”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "USD",
+   "declared": "font-size: 16px",
+   "items": [
+    "4864ebb280",
+    "5e22720ce0",
+    "31e53457b1",
+    "0ab0f950b9"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 5,
+   "why": [
+    "copy"
+   ],
+   "n": 29
+  },
+  {
+   "id": "869a3a4152",
+   "label": "Pricing V4 · <span> · “per month”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "per month",
+   "declared": "font-size: 16px",
+   "items": [
+    "076b32a9f2",
+    "7265fc3cc6",
+    "ed4cfdbf30",
+    "7e6b5fdcdd"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 5,
+   "why": [
+    "copy"
+   ],
+   "n": 30
+  },
+  {
+   "id": "02d71a9e0f",
+   "label": "Pricing V4 · <a> · “Get Vecteezy Pro”",
+   "component": "Pricing V4",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "font-size: 17px",
+   "items": [
+    "9ea9e5be44",
+    "14e03e2ddf",
+    "2faaf52a19",
+    "10f32fe4dd"
+   ],
+   "values": [
+    "17px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 5,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 31
+  },
+  {
+   "id": "3aebcea749",
+   "label": "Home top bar · <span> · “Explore”",
+   "component": "Home top bar",
+   "tag": "span",
+   "text": "Explore",
+   "declared": "font-size: 14px",
+   "items": [
+    "71e22f62d4",
+    "20adf8ef10"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 5,
+   "why": [
+    "copy"
+   ],
+   "n": 32
+  },
+  {
+   "id": "d9e9e965f0",
+   "label": "Sign in form · <button>",
+   "component": "Sign in form",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 17px",
+   "items": [
+    "b3adf83b1e",
+    "58701a0a4b"
+   ],
+   "values": [
+    "17px / 600"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 5,
+   "why": [
+    "style"
+   ],
+   "n": 33
+  },
+  {
+   "id": "885d244d12",
+   "label": "<span> · “Connected”",
+   "component": null,
+   "tag": "span",
+   "text": "Connected",
+   "declared": "font-size: 12px",
+   "items": [
+    "fd1c6dca14"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 34
+  },
+  {
+   "id": "8e46c52b30",
+   "label": "Profile · <p> · “Your name and photo appear on your publi”",
+   "component": "Profile",
+   "tag": "p",
+   "text": "Your name and photo appear on your public profile.",
+   "declared": "font-size: 13px",
+   "items": [
+    "63cec474d0"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 35
+  },
+  {
+   "id": "86a5ad0d18",
+   "label": "<p> · “How you log in to Vecteezy.”",
+   "component": null,
+   "tag": "p",
+   "text": "How you log in to Vecteezy.",
+   "declared": "font-size: 13px",
+   "items": [
+    "73f5dd3e23"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 36
+  },
+  {
+   "id": "b356264ee8",
+   "label": "<p> · “This can't be undone.”",
+   "component": null,
+   "tag": "p",
+   "text": "This can't be undone.",
+   "declared": "font-size: 13px",
+   "items": [
+    "e7facf3516"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 37
+  },
+  {
+   "id": "b99dbfb677",
+   "label": "Profile · <span> · “@”",
+   "component": "Profile",
+   "tag": "span",
+   "text": "@",
+   "declared": "font-size: 14px",
+   "items": [
+    "b53674db64"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 38
+  },
+  {
+   "id": "6611fbc157",
+   "label": "Profile · <button>",
+   "component": "Profile",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "bccd6eb361"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 39
+  },
+  {
+   "id": "b3dbe9185a",
+   "label": "<div> · “Connected as shawn@eezy.com”",
+   "component": null,
+   "tag": "div",
+   "text": "Connected as shawn@eezy.com",
+   "declared": "font-size: 14px",
+   "items": [
+    "e979f3dcef"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 40
+  },
+  {
+   "id": "752d1e76f6",
+   "label": "<div> · “Permanently delete your account, license”",
+   "component": null,
+   "tag": "div",
+   "text": "Permanently delete your account, license history, and saved collections.",
+   "declared": "font-size: 14px",
+   "items": [
+    "21c3a1930c"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 41
+  },
+  {
+   "id": "b9212477e7",
+   "label": "<a> · “View public profile”",
+   "component": null,
+   "tag": "a",
+   "text": "View public profile",
+   "declared": "font-size: 14px",
+   "items": [
+    "5e626d287b"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 42
+  },
+  {
+   "id": "d7433e5027",
+   "label": "Profile · <button> · “Remove”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Remove",
+   "declared": "font-size: 14px",
+   "items": [
+    "c4965551c9"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 43
+  },
+  {
+   "id": "1763b8f732",
+   "label": "<div> · “Email”",
+   "component": null,
+   "tag": "div",
+   "text": "Email",
+   "declared": "font-size: 14px",
+   "items": [
+    "af3d38ae3e"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 44
+  },
+  {
+   "id": "2cf0f6cd52",
+   "label": "<div> · “Google”",
+   "component": null,
+   "tag": "div",
+   "text": "Google",
+   "declared": "font-size: 14px",
+   "items": [
+    "6f6f37a349"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 45
+  },
+  {
+   "id": "a56de5377d",
+   "label": "<button> · “Delete account”",
+   "component": null,
+   "tag": "button",
+   "text": "Delete account",
+   "declared": "font-size: 14px",
+   "items": [
+    "e9caa422f8"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 46
+  },
+  {
+   "id": "37b38317a4",
+   "label": "Profile · <h2> · “Personal info”",
+   "component": "Profile",
+   "tag": "h2",
+   "text": "Personal info",
+   "declared": "font-size: 16px",
+   "items": [
+    "08a3d1778f"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 47
+  },
+  {
+   "id": "d3878dc602",
+   "label": "<h2> · “Sign-in & security”",
+   "component": null,
+   "tag": "h2",
+   "text": "Sign-in & security",
+   "declared": "font-size: 16px",
+   "items": [
+    "4239acaddc"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 48
+  },
+  {
+   "id": "028a716d0e",
+   "label": "<h2> · “Delete account”",
+   "component": null,
+   "tag": "h2",
+   "text": "Delete account",
+   "declared": "font-size: 16px",
+   "items": [
+    "cb4c8744f6"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 49
+  },
+  {
+   "id": "e33039b2ca",
+   "label": "Pricing V2 · <span> · “Renews automatically”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Renews automatically",
+   "declared": "font-size: 14px",
+   "items": [
+    "c641597e12",
+    "873f701d30",
+    "e1a6fd0a58",
+    "4d6d3e81ff"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 50
+  },
+  {
+   "id": "561f7c1acd",
+   "label": "Image results · <span> · “Sponsored results”",
+   "component": "Image results",
+   "tag": "span",
+   "text": "Sponsored results",
+   "declared": "font-size: 13px",
+   "items": [
+    "bf702f6415",
+    "a1ea9453dc"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 51
+  },
+  {
+   "id": "ef518ae5bb",
+   "label": "Home top bar · <span> · “Log In”",
+   "component": "Home top bar",
+   "tag": "span",
+   "text": "Log In",
+   "declared": "font-size: 14px",
+   "items": [
+    "1811b74daf",
+    "4ba0ab8995"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 52
+  },
+  {
+   "id": "b1fe0a15c5",
+   "label": "Image results · <span> · “View More”",
+   "component": "Image results",
+   "tag": "span",
+   "text": "View More",
+   "declared": "font-size: 14px",
+   "items": [
+    "9287a1cd24",
+    "0ed53f3c80"
+   ],
+   "values": [
+    "14px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 53
+  },
+  {
+   "id": "b102b91e83",
+   "label": "Log In · <button>",
+   "component": "Log In",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 16px",
+   "items": [
+    "ff02044261",
+    "5635a188b5"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 54
+  },
+  {
+   "id": "84bf7a6d56",
+   "label": "Settings nav · <a> · “Log out”",
+   "component": "Settings nav",
+   "tag": "a",
+   "text": "Log out",
+   "declared": "font-size: 14px",
+   "items": [
+    "dadce11130"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 55
+  },
+  {
+   "id": "53121db91f",
+   "label": "Home footer · <p> · “The best value in the industry - today.”",
+   "component": "Home footer",
+   "tag": "p",
+   "text": "The best value in the industry - today.",
+   "declared": "font-size: 22px",
+   "items": [
+    "583579d3ce"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 56
+  },
+  {
+   "id": "b75ea58fb3",
+   "label": "Home footer · <a> · “Try Pro”",
+   "component": "Home footer",
+   "tag": "a",
+   "text": "Try Pro",
+   "declared": "font-weight: 700",
+   "items": [
+    "beda8f3eeb"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 57
+  },
+  {
+   "id": "8a8471ec43",
+   "label": "Settings nav · <div> · “Settings”",
+   "component": "Settings nav",
+   "tag": "div",
+   "text": "Settings",
+   "declared": "font-size: 22px",
+   "items": [
+    "cb57a6acde"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 58
+  },
+  {
+   "id": "aafe719c08",
+   "label": "Pre-footer · <div> · “Social Proof”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Social Proof",
+   "declared": "font-size: 40px",
+   "items": [
+    "ef30a2eacd"
+   ],
+   "values": [
+    "40px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 59
+  },
+  {
+   "id": "cabd52f6bc",
+   "label": "Pre-footer · <div> · “Join Pro”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Join Pro",
+   "declared": "font-size: 40px",
+   "items": [
+    "6d52d8b7b8"
+   ],
+   "values": [
+    "40px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 60
+  },
+  {
+   "id": "49858ca45e",
+   "label": "Pricing V4 · <span> · “TrustScore |”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "TrustScore |",
+   "declared": "font-size: 14px",
+   "items": [
+    "8c151e14f5",
+    "75edec68fe"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy"
+   ],
+   "n": 61
+  },
+  {
+   "id": "3f123c8de3",
+   "label": "Pricing V4 · <span> · “Save up to 15% with Vecteezy Pro for Tea”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Save up to 15% with Vecteezy Pro for Teams",
+   "declared": "font-size: 14px",
+   "items": [
+    "c3c0d7a572",
+    "68218f5224"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy"
+   ],
+   "n": 62
+  },
+  {
+   "id": "326bcbce06",
+   "label": "Pricing V4 · <strong> · “4.9”",
+   "component": "Pricing V4",
+   "tag": "strong",
+   "text": "4.9",
+   "declared": "font-weight: 700",
+   "items": [
+    "94d0809f93",
+    "7f13f0f717"
+   ],
+   "values": [
+    "14px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy"
+   ],
+   "n": 63
+  },
+  {
+   "id": "bb7381f54b",
+   "label": "Pricing V4 · <strong> · “33,572 reviews”",
+   "component": "Pricing V4",
+   "tag": "strong",
+   "text": "33,572 reviews",
+   "declared": "font-weight: 700",
+   "items": [
+    "b16fa7ac8b",
+    "06716b23f0"
+   ],
+   "values": [
+    "14px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy"
+   ],
+   "n": 64
+  },
+  {
+   "id": "3e7b7c1968",
+   "label": "Pricing V4 · <span> · “Buying for a team?”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Buying for a team?",
+   "declared": "font-size: 15px",
+   "items": [
+    "cdc5dc02ed",
+    "fd1181abda"
+   ],
+   "values": [
+    "15px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy"
+   ],
+   "n": 65
+  },
+  {
+   "id": "afe9cc5997",
+   "label": "Sign in form · <span> · “Password”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "Password",
+   "declared": "font-size: 12px",
+   "items": [
+    "6b65ae4b6e"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 66
+  },
+  {
+   "id": "8fd6771b50",
+   "label": "Sign in form · <p> · “This site is protected by reCAPTCHA and ”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "declared": "font-size: 13px",
+   "items": [
+    "01f9e65ac0"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 67
+  },
+  {
+   "id": "51133b4548",
+   "label": "Sign in form · <span> · “or”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "or",
+   "declared": "font-size: 14px",
+   "items": [
+    "84be16c6fb"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 68
+  },
+  {
+   "id": "7563082dbf",
+   "label": "Home top bar · <button>",
+   "component": "Home top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "bb57978e85"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 69
+  },
+  {
+   "id": "1f9758349c",
+   "label": "Home top bar · <a> · “Join Pro”",
+   "component": "Home top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "font-size: 14px",
+   "items": [
+    "f31968e0d6"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 70
+  },
+  {
+   "id": "14d6588eba",
+   "label": "Hero masthead · <button>",
+   "component": "Hero masthead",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: var(--type-body-size)",
+   "items": [
+    "a09d9ea399"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 71
+  },
+  {
+   "id": "c7c333067b",
+   "label": "<span> · “Trigger”",
+   "component": null,
+   "tag": "span",
+   "text": "Trigger",
+   "declared": "font-size: 13px",
+   "items": [
+    "bff28098ec",
+    "d38afe9c25"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 72
+  },
+  {
+   "id": "8ae91fe28b",
+   "label": "<span> · “Chat query ending in”",
+   "component": null,
+   "tag": "span",
+   "text": "Chat query ending in",
+   "declared": "font-size: 13px",
+   "items": [
+    "2a4cc3f7df",
+    "a3fe2759b4"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 73
+  },
+  {
+   "id": "16e8cb3519",
+   "label": "<span> · “Card”",
+   "component": null,
+   "tag": "span",
+   "text": "Card",
+   "declared": "font-size: 13px",
+   "items": [
+    "0e19a15d81",
+    "dc8f50450b"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 74
+  },
+  {
+   "id": "94b36ed63b",
+   "label": "<span> · “Icon”",
+   "component": null,
+   "tag": "span",
+   "text": "Icon",
+   "declared": "font-size: 13px",
+   "items": [
+    "260aeeaf6c",
+    "88f44b7d40"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 75
+  },
+  {
+   "id": "843d98ef59",
+   "label": "<span> · “Query”",
+   "component": null,
+   "tag": "span",
+   "text": "Query",
+   "declared": "font-size: 13px",
+   "items": [
+    "1e78fddb63",
+    "7c56673ce6"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 76
+  },
+  {
+   "id": "f308495e6a",
+   "label": "<span> · “17px / 700, quoted, grey-100”",
+   "component": null,
+   "tag": "span",
+   "text": "17px / 700, quoted, grey-100",
+   "declared": "font-size: 13px",
+   "items": [
+    "cd06f1cfee",
+    "1aeb50b697"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 77
+  },
+  {
+   "id": "07e54d8a5d",
+   "label": "Pricing V3 hero · <button> · “Yearly ( off)”",
+   "component": "Pricing V3 hero",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "font-size: 13px",
+   "items": [
+    "af2be2a5e3",
+    "cf19881e36"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 78
+  },
+  {
+   "id": "e63fc1f95b",
+   "label": "Account header · <a> · “Back to Vecteezy”",
+   "component": "Account header",
+   "tag": "a",
+   "text": "Back to Vecteezy",
+   "declared": "font-size: 13px",
+   "items": [
+    "b79c205ee8",
+    "1780e57755"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 79
+  },
+  {
+   "id": "ea3e4d6b65",
+   "label": "Why card bundles · <span> · “New”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "New",
+   "declared": "font-size: 13px",
+   "items": [
+    "dad62218cb",
+    "780349e5af"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 80
+  },
+  {
+   "id": "3e7fd7a1bc",
+   "label": "<div> · “Showing “Cat” search results with 7 filt”",
+   "component": null,
+   "tag": "div",
+   "text": "Showing “Cat” search results with 7 filters applied.",
+   "declared": "font-size: 14px",
+   "items": [
+    "0e31326b0c",
+    "7da6f8ffa8"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 81
+  },
+  {
+   "id": "8e00144042",
+   "label": "Pricing V2 · <span> · “On Sale Now”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "On Sale Now",
+   "declared": "font-size: 14px",
+   "items": [
+    "9715051fd2",
+    "7321868d78"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 82
+  },
+  {
+   "id": "89677aae1f",
+   "label": "Pricing V2 top nav · <a> · “My Account”",
+   "component": "Pricing V2 top nav",
+   "tag": "a",
+   "text": "My Account",
+   "declared": "font-size: 14px",
+   "items": [
+    "31e1995723",
+    "546693ef6a"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 83
+  },
+  {
+   "id": "857ab726a5",
+   "label": "FAQ · <p> · “Have more questions?”",
+   "component": "FAQ",
+   "tag": "p",
+   "text": "Have more questions?",
+   "declared": "font-size: 15px",
+   "items": [
+    "102e537854",
+    "c42c42a3e4"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 84
+  },
+  {
+   "id": "b32de481c4",
+   "label": "Pricing V2 · <button> · “Yearly ( off)”",
+   "component": "Pricing V2",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "font-size: 15px",
+   "items": [
+    "e6f61c94e1",
+    "7f09368441"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 85
+  },
+  {
+   "id": "0cd66e8bcc",
+   "label": "FAQ · <a> · “Contact us”",
+   "component": "FAQ",
+   "tag": "a",
+   "text": "Contact us",
+   "declared": "font-weight: 600",
+   "items": [
+    "59cc556c5d",
+    "aaacc5084d"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 86
+  },
+  {
+   "id": "a0813c03e4",
+   "label": "Pricing V2 · <span> · “Save up to 15% with a plan for your whol”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Save up to 15% with a plan for your whole team",
+   "declared": "font-size: 16px",
+   "items": [
+    "73ae93d1a6",
+    "5e4b930bd4"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 87
+  },
+  {
+   "id": "cdd68bee33",
+   "label": "Pricing V2 · <a> · “Learn more”",
+   "component": "Pricing V2",
+   "tag": "a",
+   "text": "Learn more",
+   "declared": "font-size: 16px",
+   "items": [
+    "c255321a13",
+    "bea9c94689"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 88
+  },
+  {
+   "id": "61aee97f48",
+   "label": "Bottom CTA · <a> · “Get Vecteezy Pro”",
+   "component": "Bottom CTA",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "font-size: 17px",
+   "items": [
+    "366484b0a7",
+    "048fd18eff"
+   ],
+   "values": [
+    "17px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 89
+  },
+  {
+   "id": "45cb9578dc",
+   "label": "Bottom CTA · <p> · “Unlimited downloads, AI tools and full c”",
+   "component": "Bottom CTA",
+   "tag": "p",
+   "text": "Unlimited downloads, AI tools and full commercial rights for one simple price. C",
+   "declared": "font-size: 18px",
+   "items": [
+    "d0d7e2d457",
+    "4f97b83b88"
+   ],
+   "values": [
+    "18px / 500"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 90
+  },
+  {
+   "id": "14d7ba1d8b",
+   "label": "Explore content types · <div> · “Content Type”",
+   "component": "Explore content types",
+   "tag": "div",
+   "text": "Content Type",
+   "declared": "font-size: 18px",
+   "items": [
+    "c8bfe4d256",
+    "dc73450525"
+   ],
+   "values": [
+    "18px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 91
+  },
+  {
+   "id": "f6064b052d",
+   "label": "Pricing V2 · <span> · “Vecteezy Pro for Teams”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Vecteezy Pro for Teams",
+   "declared": "font-size: 18px",
+   "items": [
+    "bf60eaab5f",
+    "12b229b6a5"
+   ],
+   "values": [
+    "18px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 92
+  },
+  {
+   "id": "92810484af",
+   "label": "FAQ · <h2> · “Frequently Asked Questions”",
+   "component": "FAQ",
+   "tag": "h2",
+   "text": "Frequently Asked Questions",
+   "declared": "font-size: clamp(26px, 3.2vw, 36px)",
+   "items": [
+    "09dc3d1211",
+    "1781b01b24"
+   ],
+   "values": [
+    "36px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 93
+  },
+  {
+   "id": "ed00b852d9",
+   "label": "Bottom CTA · <h2> · “Ready to get started? Join Pro”",
+   "component": "Bottom CTA",
+   "tag": "h2",
+   "text": "Ready to get started? Join Pro",
+   "declared": "font-size: clamp(30px, 4.2vw, 48px)",
+   "items": [
+    "4621a950b2",
+    "f16103afb5"
+   ],
+   "values": [
+    "48px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 94
+  },
+  {
+   "id": "1724132d4b",
+   "label": "Social proof V2 · <span> · “G2”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "G2",
+   "declared": "font-size: 9px",
+   "items": [
+    "bee39e247c"
+   ],
+   "values": [
+    "9px / 800"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 95
+  },
+  {
+   "id": "0232c6a77e",
+   "label": "Log In · <span> · “Password”",
+   "component": "Log In",
+   "tag": "span",
+   "text": "Password",
+   "declared": "font-size: 12px",
+   "items": [
+    "7ecd373a3e"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 96
+  },
+  {
+   "id": "296023228d",
+   "label": "Social proof V2 · <span> · “4.9 Excellent”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.9 Excellent",
+   "declared": "font-size: 13px",
+   "items": [
+    "730454bc95"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 97
+  },
+  {
+   "id": "587d8962e9",
+   "label": "Social proof V2 · <span> · “4.7 out of 5”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.7 out of 5",
+   "declared": "font-size: 13px",
+   "items": [
+    "3db0aeca5e"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 98
+  },
+  {
+   "id": "e5ac19ddd2",
+   "label": "Social proof V2 · <strong> · “Trustpilot”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "Trustpilot",
+   "declared": "font-weight: 700",
+   "items": [
+    "2061ebcb66"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 99
+  },
+  {
+   "id": "b23b83941f",
+   "label": "Social proof V2 · <strong> · “G2”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "G2",
+   "declared": "font-weight: 700",
+   "items": [
+    "14f9f3c881"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 100
+  },
+  {
+   "id": "171f6523d1",
+   "label": "Pricing V4 · <div> · “Cancel anytime. 30-day money back guaran”",
+   "component": "Pricing V4",
+   "tag": "div",
+   "text": "Cancel anytime. 30-day money back guarantee",
+   "declared": "font-size: 14px",
+   "items": [
+    "21ca1d21df"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 101
+  },
+  {
+   "id": "1d6187e76b",
+   "label": "Log In · <span> · “OR”",
+   "component": "Log In",
+   "tag": "span",
+   "text": "OR",
+   "declared": "font-size: 14px",
+   "items": [
+    "0c8d4251a4"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 102
+  },
+  {
+   "id": "b9b38d143d",
+   "label": "Log In · <p> · “This site is protected by reCAPTCHA and ”",
+   "component": "Log In",
+   "tag": "p",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "declared": "font-size: 14px",
+   "items": [
+    "f84b6394fd"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 103
+  },
+  {
+   "id": "ec7bd73370",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "37f448729a"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 104
+  },
+  {
+   "id": "01909f5d10",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "2ed8d4b74c"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 105
+  },
+  {
+   "id": "7e6cd15b03",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "font-size: 14px",
+   "items": [
+    "c47ce675cd"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 106
+  },
+  {
+   "id": "cd61990af7",
+   "label": "Pricing V4 · <span> · “OFF · ANNUAL PLAN”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "OFF · ANNUAL PLAN",
+   "declared": "font-size: 14px",
+   "items": [
+    "a622200653"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 107
+  },
+  {
+   "id": "e044df53b0",
+   "label": "Social proof V2 · <span> · “on Trustpilotgave Vecteezy 5 stars.”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "on Trustpilotgave Vecteezy 5 stars.",
+   "declared": "font-size: 15px",
+   "items": [
+    "5bde65f27f"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 108
+  },
+  {
+   "id": "c17446b907",
+   "label": "Pricing V4 · <span> · “Rated Excellent on”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Rated Excellent on",
+   "declared": "font-size: 15px",
+   "items": [
+    "1529a58e29"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 109
+  },
+  {
+   "id": "7a70792adb",
+   "label": "Social proof V2 · <strong> · “91% of 41,559 reviewers”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "91% of 41,559 reviewers",
+   "declared": "font-weight: 700",
+   "items": [
+    "6d3619e722"
+   ],
+   "values": [
+    "15px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 110
+  },
+  {
+   "id": "e41e66a5da",
+   "label": "Pricing V4 · <span> · “(regularly )”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "(regularly )",
+   "declared": "font-weight: 400",
+   "items": [
+    "c2c21642bb"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 111
+  },
+  {
+   "id": "c81155c339",
+   "label": "Sign in form · <p> · “Already have an account?”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "Already have an account?",
+   "declared": "font-size: 16px",
+   "items": [
+    "714015e317"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 112
+  },
+  {
+   "id": "5cf692dc0b",
+   "label": "Sign in form · <label> · “Send me recommendations”",
+   "component": "Sign in form",
+   "tag": "label",
+   "text": "Send me recommendations",
+   "declared": "font-size: 16px",
+   "items": [
+    "4de8f6b28d"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 113
+  },
+  {
+   "id": "c65f9fb423",
+   "label": "Pricing V4 · <span> · “billed annually”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "billed annually",
+   "declared": "font-size: 16px",
+   "items": [
+    "dd2ff1309e"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 114
+  },
+  {
+   "id": "18f7843824",
+   "label": "Sign in form · <a> · “Log in”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Log in",
+   "declared": "font-weight: 600",
+   "items": [
+    "fe46bdeb20"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 115
+  },
+  {
+   "id": "2226b172db",
+   "label": "Pagination · <span> · “...”",
+   "component": "Pagination",
+   "tag": "span",
+   "text": "...",
+   "declared": "font-size: 16px",
+   "items": [
+    "9f20aa99c0"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 116
+  },
+  {
+   "id": "98d8074b5f",
+   "label": "Pricing V4 · <span> · “Your All-Access Pass”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Your All-Access Pass",
+   "declared": "font-size: 16px",
+   "items": [
+    "601deffff2"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 117
+  },
+  {
+   "id": "c77c29e594",
+   "label": "Pagination · <button> · “Next page”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "Next page",
+   "declared": "font-size: 17px",
+   "items": [
+    "f0079076be"
+   ],
+   "values": [
+    "17px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 118
+  },
+  {
+   "id": "766e8fb9ec",
+   "label": "Pricing V4 · <p> · “Access 75+ million vectors, photos, and ”",
+   "component": "Pricing V4",
+   "tag": "p",
+   "text": "Access 75+ million vectors, photos, and videos, with industry leading AI tools t",
+   "declared": "font-size: 18px",
+   "items": [
+    "6b7d179404"
+   ],
+   "values": [
+    "18px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 119
+  },
+  {
+   "id": "88d97117a6",
+   "label": "Search feedback · <div> · “How was your search experience?”",
+   "component": "Search feedback",
+   "tag": "div",
+   "text": "How was your search experience?",
+   "declared": "font-size: 20px",
+   "items": [
+    "d239551fe3"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 120
+  },
+  {
+   "id": "020dc44c59",
+   "label": "Sign in form · <h1> · “Create an account”",
+   "component": "Sign in form",
+   "tag": "h1",
+   "text": "Create an account",
+   "declared": "font-size: 30px",
+   "items": [
+    "0d7505231e"
+   ],
+   "values": [
+    "30px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 121
+  },
+  {
+   "id": "b090540907",
+   "label": "Pricing V4 · <span> · “to”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "to",
+   "declared": "font-weight: 500",
+   "items": [
+    "37305affb7"
+   ],
+   "values": [
+    "60px / 500"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 122
+  },
+  {
+   "id": "465f65f619",
+   "label": "Pricing V4 · <h1> · “Join Pro Unlock Everything”",
+   "component": "Pricing V4",
+   "tag": "h1",
+   "text": "Join Pro Unlock Everything",
+   "declared": "font-size: clamp(36px, 5vw, 60px)",
+   "items": [
+    "e6f45ba106"
+   ],
+   "values": [
+    "60px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 123
+  },
+  {
+   "id": "3613d168f8",
+   "label": "Social proof V2 · <span> · “4.9”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.9",
+   "declared": "font-size: 104px",
+   "items": [
+    "d78b8bb023"
+   ],
+   "values": [
+    "72px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 124
+  },
+  {
+   "id": "e1e37deb19",
+   "label": "Popular photo categories · <button>",
+   "component": "Popular photo categories",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 11px",
+   "items": [
+    "4f1f9f1ca5"
+   ],
+   "values": [
+    "11px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 125
+  },
+  {
+   "id": "36b9fc0e7e",
+   "label": "Pricing V2 · <span> · “from 33,572 reviews on Trustpilot”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "from 33,572 reviews on Trustpilot",
+   "declared": "font-size: 12px",
+   "items": [
+    "c0c25b2c94"
+   ],
+   "values": [
+    "12px / 500"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 126
+  },
+  {
+   "id": "a423cc0a2c",
+   "label": "Why card bundles · <div> · “ZIP”",
+   "component": "Why card bundles",
+   "tag": "div",
+   "text": "ZIP",
+   "declared": "font-size: 12px",
+   "items": [
+    "730700b284"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 127
+  },
+  {
+   "id": "8f2f2924b4",
+   "label": "Summary rail · <span> · “Your plan”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "Your plan",
+   "declared": "font-size: 12px",
+   "items": [
+    "25a9373842"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 128
+  },
+  {
+   "id": "d87af4a41f",
+   "label": "Summary rail · <span> · “AI Magic today”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "AI Magic today",
+   "declared": "font-size: 12px",
+   "items": [
+    "938c219954"
+   ],
+   "values": [
+    "12px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 129
+  },
+  {
+   "id": "eb0ce5c7ec",
+   "label": "Popular photo categories · <span> · “Categories”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Categories",
+   "declared": "font-size: 12px",
+   "items": [
+    "ba8fb6bcd9"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 130
+  },
+  {
+   "id": "9ee986b00c",
+   "label": "Home search dropdown · <div> · “Recent searches”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Recent searches",
+   "declared": "font-size: 12px",
+   "items": [
+    "0f51f9ee5e"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 131
+  },
+  {
+   "id": "e578030bc8",
+   "label": "Home search dropdown · <div> · “Trending searches”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Trending searches",
+   "declared": "font-size: 12px",
+   "items": [
+    "65afe840f8"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 132
+  },
+  {
+   "id": "e1154fde07",
+   "label": "Home search dropdown · <div> · “Recently viewed”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Recently viewed",
+   "declared": "font-size: 12px",
+   "items": [
+    "726eaf9107"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 133
+  },
+  {
+   "id": "1b693cdbd9",
+   "label": "Marketing panel · <span> · “Create without limits”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Create without limits",
+   "declared": "font-size: 12px",
+   "items": [
+    "02ac525a6c"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 134
+  },
+  {
+   "id": "848f8c3ffa",
+   "label": "<p> · “Vecteezy style guide”",
+   "component": null,
+   "tag": "p",
+   "text": "Vecteezy style guide",
+   "declared": "font-size: 12px",
+   "items": [
+    "022b504224"
+   ],
+   "values": [
+    "12px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 135
+  },
+  {
+   "id": "0c59056672",
+   "label": "Collections · <div> · “48 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "48 items",
+   "declared": "font-size: 13px",
+   "items": [
+    "c3e4953025"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 136
+  },
+  {
+   "id": "dd37cda670",
+   "label": "Collections · <div> · “126 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "126 items",
+   "declared": "font-size: 13px",
+   "items": [
+    "245d426b46"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 137
+  },
+  {
+   "id": "19ea8cb93f",
+   "label": "Collections · <div> · “72 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "72 items",
+   "declared": "font-size: 13px",
+   "items": [
+    "df91c4d871"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 138
+  },
+  {
+   "id": "46c46f5edd",
+   "label": "Collections · <div> · “31 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "31 items",
+   "declared": "font-size: 13px",
+   "items": [
+    "6f8b997a2d"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 139
+  },
+  {
+   "id": "4d2411e960",
+   "label": "Why card license · <span> · “Included with every Pro download”",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "Included with every Pro download",
+   "declared": "font-size: 13px",
+   "items": [
+    "6f8794971c"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 140
+  },
+  {
+   "id": "90ffb1922c",
+   "label": "Summary rail · <div> · “Questions about your account?”",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "Questions about your account?",
+   "declared": "font-size: 13px",
+   "items": [
+    "d6a7993b2a"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 141
+  },
+  {
+   "id": "6ed80733b5",
+   "label": "<span> · “White pill (9999px radius), 1px grey-10 ”",
+   "component": null,
+   "tag": "span",
+   "text": "White pill (9999px radius), 1px grey-10 border, 12px 24px 12px 18px padding, con",
+   "declared": "font-size: 13px",
+   "items": [
+    "0182b674f0"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 142
+  },
+  {
+   "id": "ea58df7aa5",
+   "label": "<span> · “18px orange search icon; darkens on card”",
+   "component": null,
+   "tag": "span",
+   "text": "18px orange search icon; darkens on card hover",
+   "declared": "font-size: 13px",
+   "items": [
+    "1d36671755"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 143
+  },
+  {
+   "id": "18cdbabfea",
+   "label": "<span> · “Container”",
+   "component": null,
+   "tag": "span",
+   "text": "Container",
+   "declared": "font-size: 13px",
+   "items": [
+    "ab872539b3"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 144
+  },
+  {
+   "id": "247b4c492a",
+   "label": "<span> · “Grey-5 wrap, flush under the bot bubble ”",
+   "component": null,
+   "tag": "span",
+   "text": "Grey-5 wrap, flush under the bot bubble (square joint), 0 0 14px 4px radius, 10p",
+   "declared": "font-size: 13px",
+   "items": [
+    "058151e8d2"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 145
+  },
+  {
+   "id": "d13fa5bb1b",
+   "label": "<span> · “White card, 14px radius (matches chat bu”",
+   "component": null,
+   "tag": "span",
+   "text": "White card, 14px radius (matches chat bubble), 1px grey-10 border, 12px 24px 12p",
+   "declared": "font-size: 13px",
+   "items": [
+    "75e4a5c640"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 146
+  },
+  {
+   "id": "fa7d939615",
+   "label": "<span> · “18px orange sparkle icon; darkens on car”",
+   "component": null,
+   "tag": "span",
+   "text": "18px orange sparkle icon; darkens on card hover",
+   "declared": "font-size: 13px",
+   "items": [
+    "dea682dda8"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 147
+  },
+  {
+   "id": "3551cf4455",
+   "label": "<span> · “Previews”",
+   "component": null,
+   "tag": "span",
+   "text": "Previews",
+   "declared": "font-size: 13px",
+   "items": [
+    "33f9089499"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 148
+  },
+  {
+   "id": "1a1b93e5da",
+   "label": "<span> · “4 thumbnails, 72px square (same as chat-”",
+   "component": null,
+   "tag": "span",
+   "text": "4 thumbnails, 72px square (same as chat-bubble images), 8px radius, 8px gap, on ",
+   "declared": "font-size: 13px",
+   "items": [
+    "fa6f26d6ac"
+   ],
+   "values": [
+    "13px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 149
+  },
+  {
+   "id": "c6aa4a77aa",
+   "label": "Notifications panel · <a> · “Mark all as read”",
+   "component": "Notifications panel",
+   "tag": "a",
+   "text": "Mark all as read",
+   "declared": "font-size: 13px",
+   "items": [
+    "e1b95aa501"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 150
+  },
+  {
+   "id": "3f1eb122ab",
+   "label": "Why card AI · <span> · “Remove background”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Remove background",
+   "declared": "font-size: 13px",
+   "items": [
+    "4eb24df98c"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 151
+  },
+  {
+   "id": "c6f60a03ed",
+   "label": "Settings nav · <a> · “Back to Vecteezy”",
+   "component": "Settings nav",
+   "tag": "a",
+   "text": "Back to Vecteezy",
+   "declared": "font-size: 13px",
+   "items": [
+    "cd6417bfa3"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 152
+  },
+  {
+   "id": "1837ad32fc",
+   "label": "Summary rail · <a> · “View usage”",
+   "component": "Summary rail",
+   "tag": "a",
+   "text": "View usage",
+   "declared": "font-size: 13px",
+   "items": [
+    "bf75cd8ba9"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 153
+  },
+  {
+   "id": "6f9b8e2f29",
+   "label": "Summary rail · <a> · “Contact support”",
+   "component": "Summary rail",
+   "tag": "a",
+   "text": "Contact support",
+   "declared": "font-weight: 600",
+   "items": [
+    "ec631ac1a0"
+   ],
+   "values": [
+    "13px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 154
+  },
+  {
+   "id": "7a94482239",
+   "label": "<strong> · “(search)”",
+   "component": null,
+   "tag": "strong",
+   "text": "(search)",
+   "declared": "font-size: 13px",
+   "items": [
+    "ad2f4c7165"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 155
+  },
+  {
+   "id": "e67e4c6a4c",
+   "label": "<strong> · “(generate)”",
+   "component": null,
+   "tag": "strong",
+   "text": "(generate)",
+   "declared": "font-size: 13px",
+   "items": [
+    "81da01262f"
+   ],
+   "values": [
+    "13px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 156
+  },
+  {
+   "id": "6876f2b6b4",
+   "label": "Featured collections · <span> · “248 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "248 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "1dbcbad4c5"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 157
+  },
+  {
+   "id": "2995b6754b",
+   "label": "Featured collections · <span> · “198 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "198 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "7faaab4f34"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 158
+  },
+  {
+   "id": "5b6abb2f1e",
+   "label": "Featured collections · <span> · “312 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "312 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "8a9fe1b0b8"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 159
+  },
+  {
+   "id": "28dbc2641f",
+   "label": "Featured collections · <span> · “274 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "274 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "6b2ffcfee3"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 160
+  },
+  {
+   "id": "8ff4fd0b0a",
+   "label": "Featured collections · <span> · “186 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "186 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "0a18e6c29a"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 161
+  },
+  {
+   "id": "3cc68f64a0",
+   "label": "Featured collections · <span> · “231 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "231 photos",
+   "declared": "font-size: 14px",
+   "items": [
+    "996e644335"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 162
+  },
+  {
+   "id": "1deb8fd447",
+   "label": "<p> · “Shown when a chat query is submitted as ”",
+   "component": null,
+   "tag": "p",
+   "text": "Shown when a chat query is submitted as a generic search (query appended with “(",
+   "declared": "font-size: 14px",
+   "items": [
+    "25e2ab3b9b"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 163
+  },
+  {
+   "id": "d6a7911cb9",
+   "label": "<p> · “Shown when a chat query is submitted as ”",
+   "component": null,
+   "tag": "p",
+   "text": "Shown when a chat query is submitted as a generation (query appended with “(gene",
+   "declared": "font-size: 14px",
+   "items": [
+    "0f9dbf1e8f"
+   ],
+   "values": [
+    "14px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 164
+  },
+  {
+   "id": "3deec7e8d1",
+   "label": "AI Studio home · <button> · “See what's possible”",
+   "component": "AI Studio home",
+   "tag": "button",
+   "text": "See what's possible",
+   "declared": "font-size: 14px",
+   "items": [
+    "74ba2774a7"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 165
+  },
+  {
+   "id": "4727d8031b",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "font-size: 14px",
+   "items": [
+    "21a1338fd1"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 166
+  },
+  {
+   "id": "aec2c1aa2f",
+   "label": "Top bar · <a> · “Log In”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Log In",
+   "declared": "font-size: 14px",
+   "items": [
+    "c016735dfa"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 167
+  },
+  {
+   "id": "cc9ca2c10b",
+   "label": "Sign in form · <a> · “Forgot Your Password?”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Forgot Your Password?",
+   "declared": "font-size: 14px",
+   "items": [
+    "c8a2d472e3"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 168
+  },
+  {
+   "id": "29a8da1282",
+   "label": "Summary rail · <button>",
+   "component": "Summary rail",
+   "tag": "button",
+   "text": "",
+   "declared": "font-size: 14px",
+   "items": [
+    "9ce3c70717"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 169
+  },
+  {
+   "id": "d5d2187d66",
+   "label": "Settings overview · <a> · “Log out”",
+   "component": "Settings overview",
+   "tag": "a",
+   "text": "Log out",
+   "declared": "font-size: 14px",
+   "items": [
+    "3a3203b43c"
+   ],
+   "values": [
+    "14px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 170
+  },
+  {
+   "id": "0a77b976bd",
+   "label": "Top bar · <input> · “Search vectors, photos & videos...”",
+   "component": "Top bar",
+   "tag": "input",
+   "text": "Search vectors, photos & videos...",
+   "declared": "font-size: 15px",
+   "items": [
+    "aba5af1276"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 171
+  },
+  {
+   "id": "643ff3c9f5",
+   "label": "Customer reviews · <p> · “See more reviews at”",
+   "component": "Customer reviews",
+   "tag": "p",
+   "text": "See more reviews at",
+   "declared": "font-size: 15px",
+   "items": [
+    "a845539cb8"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 172
+  },
+  {
+   "id": "ed905c47d9",
+   "label": "Customer reviews · <a> · “Trustpilot”",
+   "component": "Customer reviews",
+   "tag": "a",
+   "text": "Trustpilot",
+   "declared": "font-size: 15px",
+   "items": [
+    "ca1f1e87d4"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 173
+  },
+  {
+   "id": "a63759ea0b",
+   "label": "Settings overview · <div> · “shawn@eezy.com”",
+   "component": "Settings overview",
+   "tag": "div",
+   "text": "shawn@eezy.com",
+   "declared": "font-size: 15px",
+   "items": [
+    "4facd7d629"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 174
+  },
+  {
+   "id": "108b6cb063",
+   "label": "<p> · “Action Cards appear inside an AI Magic b”",
+   "component": null,
+   "tag": "p",
+   "text": "Action Cards appear inside an AI Magic bot response and summarize an action the ",
+   "declared": "font-size: 15px",
+   "items": [
+    "5ce2e90af7"
+   ],
+   "values": [
+    "15px / 400"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 175
+  },
+  {
+   "id": "f9c2f297ab",
+   "label": "Collections · <div> · “Autumn vibes”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Autumn vibes",
+   "declared": "font-size: 15px",
+   "items": [
+    "9d46171c5d"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 176
+  },
+  {
+   "id": "0acb55f431",
+   "label": "Collections · <div> · “Christmas season”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Christmas season",
+   "declared": "font-size: 15px",
+   "items": [
+    "1f1eba0b7a"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 177
+  },
+  {
+   "id": "8e681b74af",
+   "label": "Collections · <div> · “Nature textures”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Nature textures",
+   "declared": "font-size: 15px",
+   "items": [
+    "082b7a862e"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 178
+  },
+  {
+   "id": "243277b7bd",
+   "label": "Collections · <div> · “Vast landscapes”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Vast landscapes",
+   "declared": "font-size: 15px",
+   "items": [
+    "715685101c"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 179
+  },
+  {
+   "id": "89ba4996a6",
+   "label": "Summary rail · <span> · “7 of 20 generations”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "7 of 20 generations",
+   "declared": "font-size: 15px",
+   "items": [
+    "755b1b1856"
+   ],
+   "values": [
+    "15px / 600"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 180
+  },
+  {
+   "id": "20949daa68",
+   "label": "Why card license · <strong> · “$10,000 legal protection”",
+   "component": "Why card license",
+   "tag": "strong",
+   "text": "$10,000 legal protection",
+   "declared": "font-size: 15px",
+   "items": [
+    "1fbcd67c33"
+   ],
+   "values": [
+    "15px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 181
+  },
+  {
+   "id": "ade02f28ae",
+   "label": "AI Studio home · <textarea> · “Start typing or upload an image...”",
+   "component": "AI Studio home",
+   "tag": "textarea",
+   "text": "Start typing or upload an image...",
+   "declared": "font-size: 16px",
+   "items": [
+    "563134cec6"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 182
+  },
+  {
+   "id": "687a2332ae",
+   "label": "Sign in form · <p> · “Don't have an account?”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "Don't have an account?",
+   "declared": "font-size: 16px",
+   "items": [
+    "aad8d6f5f4"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 183
+  },
+  {
+   "id": "dbced01e68",
+   "label": "Marketing panel · <span> · “Access creative assets ( added yesterday”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Access creative assets ( added yesterday)",
+   "declared": "font-size: 16px",
+   "items": [
+    "12a9b9dcde"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 184
+  },
+  {
+   "id": "6558a50b82",
+   "label": "Marketing panel · <span> · “Find fresh inspiration from creatives ma”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Find fresh inspiration from creatives making a living from their work",
+   "declared": "font-size: 16px",
+   "items": [
+    "31d688732c"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 185
+  },
+  {
+   "id": "94db5c05d7",
+   "label": "Marketing panel · <div> · “Generate, edit and upscale in seconds wi”",
+   "component": "Marketing panel",
+   "tag": "div",
+   "text": "Generate, edit and upscale in seconds with built-in AI tools",
+   "declared": "font-size: 16px",
+   "items": [
+    "8823ea3ad2"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 186
+  },
+  {
+   "id": "faae99018f",
+   "label": "Log In · <a> · “Forgot Your Password?”",
+   "component": "Log In",
+   "tag": "a",
+   "text": "Forgot Your Password?",
+   "declared": "font-size: 16px",
+   "items": [
+    "1966d31b47"
+   ],
+   "values": [
+    "16px / 400"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 187
+  },
+  {
+   "id": "e98ec41f8f",
+   "label": "Pricing V2 · <p> · “Vecteezy is the world's #1 stock photo m”",
+   "component": "Pricing V2",
+   "tag": "p",
+   "text": "Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 custo",
+   "declared": "font-size: 16px",
+   "items": [
+    "cbdd54a629"
+   ],
+   "values": [
+    "16px / 500"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 188
+  },
+  {
+   "id": "86db52ba91",
+   "label": "Sign in form · <a> · “Sign up”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Sign up",
+   "declared": "font-weight: 600",
+   "items": [
+    "c0496a472a"
+   ],
+   "values": [
+    "16px / 600"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 189
+  },
+  {
+   "id": "247ea5693a",
+   "label": "Popular photo categories · <span> · “Stock Photos”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Stock Photos",
+   "declared": "font-size: 16px",
+   "items": [
+    "6c32444bc1"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 190
+  },
+  {
+   "id": "871e6fea8d",
+   "label": "Marketing panel · <strong> · “74,540,405”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "74,540,405",
+   "declared": "font-weight: 700",
+   "items": [
+    "39112c8099"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 191
+  },
+  {
+   "id": "e4d4cf2943",
+   "label": "Marketing panel · <strong> · “89,304”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "89,304",
+   "declared": "font-weight: 700",
+   "items": [
+    "69a3bcf716"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 192
+  },
+  {
+   "id": "03c4ce7d7f",
+   "label": "Marketing panel · <strong> · “41,504”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "41,504",
+   "declared": "font-weight: 700",
+   "items": [
+    "807089799a"
+   ],
+   "values": [
+    "16px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 193
+  },
+  {
+   "id": "185f8442e8",
+   "label": "Pricing V3 hero · <p> · “Vecteezy is the world's #1 stock photo m”",
+   "component": "Pricing V3 hero",
+   "tag": "p",
+   "text": "Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 custo",
+   "declared": "font-size: 17px",
+   "items": [
+    "a14a47ce75"
+   ],
+   "values": [
+    "17px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 194
+  },
+  {
+   "id": "4634789446",
+   "label": "<span> · ““Cat””",
+   "component": null,
+   "tag": "span",
+   "text": "“Cat”",
+   "declared": "font-size: 17px",
+   "items": [
+    "a50a9552ed"
+   ],
+   "values": [
+    "17px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 195
+  },
+  {
+   "id": "fe329c7fd1",
+   "label": "<span> · ““Soccer””",
+   "component": null,
+   "tag": "span",
+   "text": "“Soccer”",
+   "declared": "font-size: 17px",
+   "items": [
+    "fc178f5e98"
+   ],
+   "values": [
+    "17px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 196
+  },
+  {
+   "id": "87664c6982",
+   "label": "Popular photo categories · <p> · “Explore millions of high-quality, royalt”",
+   "component": "Popular photo categories",
+   "tag": "p",
+   "text": "Explore millions of high-quality, royalty-free stock photos from our global netw",
+   "declared": "font-size: 18px",
+   "items": [
+    "4a2392e224"
+   ],
+   "values": [
+    "18px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 197
+  },
+  {
+   "id": "3cd4132647",
+   "label": "<p> · “75+ million photos, vectors and videos, ”",
+   "component": null,
+   "tag": "p",
+   "text": "75+ million photos, vectors and videos, plus AI tools to make them your own.",
+   "declared": "font-size: 18px",
+   "items": [
+    "bb5a8f8064"
+   ],
+   "values": [
+    "18px / 400"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 198
+  },
+  {
+   "id": "aa4b657389",
+   "label": "Popular photo categories · <strong> · “43,542”",
+   "component": "Popular photo categories",
+   "tag": "strong",
+   "text": "43,542",
+   "declared": "font-size: 18px",
+   "items": [
+    "595e01fb10"
+   ],
+   "values": [
+    "18px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 199
+  },
+  {
+   "id": "169b5cbc6b",
+   "label": "Why card unlimited · <span> · “Use 75+ million photos, vectors and vide”",
+   "component": "Why card unlimited",
+   "tag": "span",
+   "text": "Use 75+ million photos, vectors and videos as often as you like.",
+   "declared": "font-size: 20px",
+   "items": [
+    "4a3e47c602"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 200
+  },
+  {
+   "id": "4dc1631119",
+   "label": "Why card license · <span> · “Use everything commercially with no attr”",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "Use everything commercially with no attribution, backed by $10,000 in legal prot",
+   "declared": "font-size: 20px",
+   "items": [
+    "811052ca33"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 201
+  },
+  {
+   "id": "bce353c530",
+   "label": "Why card bundles · <span> · “Grab curated packs of fonts, mockups and”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "Grab curated packs of fonts, mockups and graphics in one click.",
+   "declared": "font-size: 20px",
+   "items": [
+    "3584f28da6"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 202
+  },
+  {
+   "id": "c8cb3716db",
+   "label": "Why card AI · <span> · “Generate, restyle, upscale, crop or remo”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Generate, restyle, upscale, crop or remove backgrounds in seconds.",
+   "declared": "font-size: 20px",
+   "items": [
+    "a41ef6ae65"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 203
+  },
+  {
+   "id": "f69ca8407c",
+   "label": "Why card vectors · <span> · “that scale to any size and make your pro”",
+   "component": "Why card vectors",
+   "tag": "span",
+   "text": "that scale to any size and make your projects stand out.",
+   "declared": "font-size: 20px",
+   "items": [
+    "755804ff2a"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 204
+  },
+  {
+   "id": "24caa3ad6b",
+   "label": "Why card fresh · <span> · “83,405 assets were added yesterday alone”",
+   "component": "Why card fresh",
+   "tag": "span",
+   "text": "83,405 assets were added yesterday alone.",
+   "declared": "font-size: 20px",
+   "items": [
+    "b300e2e948"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 205
+  },
+  {
+   "id": "3c342c6631",
+   "label": "<h2> · “Search Action Card”",
+   "component": null,
+   "tag": "h2",
+   "text": "Search Action Card",
+   "declared": "font-size: 20px",
+   "items": [
+    "9e43eb22e7"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 206
+  },
+  {
+   "id": "78498bccb4",
+   "label": "<h2> · “Generate Search Card”",
+   "component": null,
+   "tag": "h2",
+   "text": "Generate Search Card",
+   "declared": "font-size: 20px",
+   "items": [
+    "fe5ff53b4b"
+   ],
+   "values": [
+    "20px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 207
+  },
+  {
+   "id": "e3749f372d",
+   "label": "Featured collections · <span> · “Underwater Experiences”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Underwater Experiences",
+   "declared": "font-size: 22px",
+   "items": [
+    "90e15e1b0e"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 208
+  },
+  {
+   "id": "281ca745b0",
+   "label": "Featured collections · <span> · “Social Media”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Social Media",
+   "declared": "font-size: 22px",
+   "items": [
+    "91a97cd24d"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 209
+  },
+  {
+   "id": "571ff8f330",
+   "label": "Featured collections · <span> · “Candid Companions”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Candid Companions",
+   "declared": "font-size: 22px",
+   "items": [
+    "63d5ee10ca"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 210
+  },
+  {
+   "id": "15fc689627",
+   "label": "Featured collections · <span> · “Family Moments”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Family Moments",
+   "declared": "font-size: 22px",
+   "items": [
+    "92429c498e"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 211
+  },
+  {
+   "id": "728dd607cd",
+   "label": "Featured collections · <span> · “Space Exploration”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Space Exploration",
+   "declared": "font-size: 22px",
+   "items": [
+    "ea8565cb0f"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 212
+  },
+  {
+   "id": "8f79857e7b",
+   "label": "Featured collections · <span> · “Cybersecurity”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Cybersecurity",
+   "declared": "font-size: 22px",
+   "items": [
+    "1abb9576ac"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 213
+  },
+  {
+   "id": "974fd649b4",
+   "label": "Pricing V2 · <strong> · “4.9”",
+   "component": "Pricing V2",
+   "tag": "strong",
+   "text": "4.9",
+   "declared": "font-size: 22px",
+   "items": [
+    "f0e5d84548"
+   ],
+   "values": [
+    "22px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 214
+  },
+  {
+   "id": "948db8183f",
+   "label": "Sign in form · <h1> · “Log in”",
+   "component": "Sign in form",
+   "tag": "h1",
+   "text": "Log in",
+   "declared": "font-size: 30px",
+   "items": [
+    "af43eac9de"
+   ],
+   "values": [
+    "30px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 215
+  },
+  {
+   "id": "8ad6ac06df",
+   "label": "<h1> · “Action Cards”",
+   "component": null,
+   "tag": "h1",
+   "text": "Action Cards",
+   "declared": "font-size: 34px",
+   "items": [
+    "c6ae31887c"
+   ],
+   "values": [
+    "34px / 700"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 216
+  },
+  {
+   "id": "47942dc77e",
+   "label": "AI Studio home · <p> · “Hi, how can we help?”",
+   "component": "AI Studio home",
+   "tag": "p",
+   "text": "Hi, how can we help?",
+   "declared": "font-size: 36px",
+   "items": [
+    "bfd58bf9ce"
+   ],
+   "values": [
+    "36px / 400"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 217
+  },
+  {
+   "id": "907739b47b",
+   "label": "Customer reviews · <h2> · “Confidence backed by real customer revie”",
+   "component": "Customer reviews",
+   "tag": "h2",
+   "text": "Confidence backed by real customer reviews",
+   "declared": "font-size: clamp(26px, 3.2vw, 36px)",
+   "items": [
+    "40749c4cab"
+   ],
+   "values": [
+    "36px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 218
+  },
+  {
+   "id": "4e22e84f47",
+   "label": "Popular photo categories · <span> · “by”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "by",
+   "declared": "font-weight: 500",
+   "items": [
+    "495dc9563b"
+   ],
+   "values": [
+    "40px / 500"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 219
+  },
+  {
+   "id": "85dc50dd24",
+   "label": "Marketing panel · <span> · “in”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "in",
+   "declared": "font-weight: 500",
+   "items": [
+    "85e2524300"
+   ],
+   "values": [
+    "40px / 500"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 220
+  },
+  {
+   "id": "052aeaf0a3",
+   "label": "Popular photo categories · <h2> · “Browse Category”",
+   "component": "Popular photo categories",
+   "tag": "h2",
+   "text": "Browse Category",
+   "declared": "font-size: 40px",
+   "items": [
+    "ea47cf5e4e"
+   ],
+   "values": [
+    "40px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 221
+  },
+  {
+   "id": "5414dc0fbc",
+   "label": "Marketing panel · <h2> · “Better work half the time.”",
+   "component": "Marketing panel",
+   "tag": "h2",
+   "text": "Better work half the time.",
+   "declared": "font-size: 40px",
+   "items": [
+    "de0bd00519"
+   ],
+   "values": [
+    "40px / 700"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 222
+  },
+  {
+   "id": "410752892a",
+   "label": "Why Vecteezy Pro · <h2> · “Why go Vecteezy Pro”",
+   "component": "Why Vecteezy Pro",
+   "tag": "h2",
+   "text": "Why go Vecteezy Pro",
+   "declared": "font-size: clamp(30px, 4vw, 44px)",
+   "items": [
+    "873732798e"
+   ],
+   "values": [
+    "44px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 223
+  },
+  {
+   "id": "3b03740bf1",
+   "label": "Pricing V2 · <h1> · “Join Pro to Unlock Everything”",
+   "component": "Pricing V2",
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "font-size: clamp(32px, 4.6vw, 54px)",
+   "items": [
+    "721234e3e4"
+   ],
+   "values": [
+    "54px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 224
+  },
+  {
+   "id": "e557d9c64c",
+   "label": "<h1> · “Join Pro to Unlock Everything”",
+   "component": null,
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "font-size: clamp(32px, 5vw, 56px)",
+   "items": [
+    "4def4f4efd"
+   ],
+   "values": [
+    "56px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 225
+  },
+  {
+   "id": "49cf63a0a9",
+   "label": "Popular photo categories · <span> · “for”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "for",
+   "declared": "font-weight: 500",
+   "items": [
+    "259809704f"
+   ],
+   "values": [
+    "60px / 500"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 226
+  },
+  {
+   "id": "f9104ec689",
+   "label": "Popular photo categories · <h2> · “Authentic Images Every Idea”",
+   "component": "Popular photo categories",
+   "tag": "h2",
+   "text": "Authentic Images Every Idea",
+   "declared": "font-size: 60px",
+   "items": [
+    "72fac69a17"
+   ],
+   "values": [
+    "60px / 700"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 227
+  },
+  {
+   "id": "2b7ff5b255",
+   "label": "Pricing V3 hero · <h1> · “Join Pro to Unlock Everything”",
+   "component": "Pricing V3 hero",
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "font-size: clamp(36px, 4.6vw, 60px)",
+   "items": [
+    "de617fa7ce"
+   ],
+   "values": [
+    "60px / 700"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 228
+  }
+ ]
+}

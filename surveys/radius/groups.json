@@ -1,0 +1,3208 @@
+{
+ "survey": "radius",
+ "generatedAt": "2026-11-05T12:57:42.619Z",
+ "usages": 269,
+ "groups": [
+  {
+   "id": "9577a3de1d",
+   "label": "Image results · <span>",
+   "component": "Image results",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 8px",
+   "items": [
+    "5ec73a1616",
+    "bae54e3ba0",
+    "7cc086bb0a"
+   ],
+   "values": [
+    "8px"
+   ],
+   "pages": [
+    "AI Magic",
+    "Style Guide - Action Cards"
+   ],
+   "usages": 3,
+   "instances": 124,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 1
+  },
+  {
+   "id": "dbf2632e54",
+   "label": "Image results · <a>",
+   "component": "Image results",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "a2b5a7454c"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 100,
+   "why": [],
+   "n": 2
+  },
+  {
+   "id": "be8be28262",
+   "label": "Popular photo categories · <span>",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 18px",
+   "items": [
+    "374effca8d",
+    "f75c0c4233",
+    "b3bf6549a9"
+   ],
+   "values": [
+    "18px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 3,
+   "instances": 81,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 3
+  },
+  {
+   "id": "1f32a78d86",
+   "label": "Filters panel · <svg>",
+   "component": "Filters panel",
+   "tag": "svg",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "e7cf82da79",
+    "dfbe97f6a8",
+    "9adea00504",
+    "a2079405a6",
+    "f944587065",
+    "b3437a023e",
+    "6059bf74ce",
+    "b12161807c",
+    "7f1959f659",
+    "bf42bc01d7",
+    "da721e87fb"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 11,
+   "instances": 66,
+   "why": [
+    "rule"
+   ],
+   "n": 4
+  },
+  {
+   "id": "550fd5d4d2",
+   "label": "Pre-footer · <a>",
+   "component": "Pre-footer",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ad5478dd43"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 52,
+   "why": [],
+   "n": 5
+  },
+  {
+   "id": "2269fbd5ae",
+   "label": "Pre-footer · <div> · “Photographer One”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Photographer One",
+   "declared": "border-radius: 16px",
+   "items": [
+    "a1e331e076",
+    "c6d6894ddc",
+    "739287e860",
+    "d76034c718",
+    "9889f48576",
+    "795a5cbdd4",
+    "37cd2214f2",
+    "df160d1bbf",
+    "7f05b7e2db",
+    "3e64663d5b",
+    "292c0aa758"
+   ],
+   "values": [
+    "16px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 11,
+   "instances": 44,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 6
+  },
+  {
+   "id": "10daef5f4f",
+   "label": "Filters · <button> · “puppy”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "puppy",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "02c784cf43",
+    "cd94bdcb50",
+    "fc7d08c4cc",
+    "6662dfc014",
+    "751e4d1d9e",
+    "cb789b03c1",
+    "b57e58d104"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 7,
+   "instances": 42,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 7
+  },
+  {
+   "id": "30e1b14960",
+   "label": "Social proof V2 · <span> · “G2”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "G2",
+   "declared": "border-radius: 50%",
+   "items": [
+    "8fc7ea7bc6",
+    "57de2f9cb8",
+    "e69c8270cd"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 3,
+   "instances": 32,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 8
+  },
+  {
+   "id": "811e775d97",
+   "label": "Social proof V2 · <div>",
+   "component": "Social proof V2",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 18px",
+   "items": [
+    "bfd097d0a4",
+    "bab6eb74a1"
+   ],
+   "values": [
+    "18px"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 32,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 9
+  },
+  {
+   "id": "c507d83ceb",
+   "label": "Social proof V2 · <span>",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "9f3860f3f7",
+    "d8b65c60a5"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 32,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 10
+  },
+  {
+   "id": "63ae5d5fe1",
+   "label": "Sign in form · <button> · “Show password”",
+   "component": "Sign in form",
+   "tag": "button",
+   "text": "Show password",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "30cd6fe4aa",
+    "9b34a2eece",
+    "6d013777dc",
+    "bfde368c4f",
+    "6aded0360d",
+    "bcccc09a3c",
+    "13d82a7723",
+    "b2ce12266e",
+    "36b19b18fc",
+    "b1d2790eba"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 10,
+   "instances": 29,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 11
+  },
+  {
+   "id": "9bfd89500d",
+   "label": "Settings nav · <a> · “Log out”",
+   "component": "Settings nav",
+   "tag": "a",
+   "text": "Log out",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ee9fa90db5",
+    "b9be5a9168"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 28,
+   "why": [
+    "sibling"
+   ],
+   "n": 12
+  },
+  {
+   "id": "247d9eaf62",
+   "label": "Popular photo categories · <a>",
+   "component": "Popular photo categories",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "0efd5fe298"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 28,
+   "why": [],
+   "n": 13
+  },
+  {
+   "id": "e0bc6183c7",
+   "label": "Popular photo categories · <a>",
+   "component": "Popular photo categories",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "421c888add"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 27,
+   "why": [],
+   "n": 14
+  },
+  {
+   "id": "545676f6f3",
+   "label": "FAQ · <div>",
+   "component": "FAQ",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "dfa114434e",
+    "a3537c0835"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 20,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 15
+  },
+  {
+   "id": "ecdba24df9",
+   "label": "Pre-footer · <div>",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "8e7109e0bc",
+    "cb948906e2",
+    "31f727520d",
+    "e6a1bc9cae"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 16,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 16
+  },
+  {
+   "id": "2d363e40eb",
+   "label": "Pagination · <button> · “1”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "1",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "3a5f48da52",
+    "cdbfc5e48d",
+    "496bec2256",
+    "e50dd13341",
+    "74abea3320",
+    "683ef28838",
+    "f3213aff25"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 7,
+   "instances": 14,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 17
+  },
+  {
+   "id": "ee3667f4a5",
+   "label": "AI Studio · <a>",
+   "component": "AI Studio",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "79af9bf47b"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 14,
+   "why": [],
+   "n": 18
+  },
+  {
+   "id": "648872666e",
+   "label": "Filters panel · <button> · “Close filters”",
+   "component": "Filters panel",
+   "tag": "button",
+   "text": "Close filters",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "c8e61315ef",
+    "dd9eca6b8c",
+    "ef3687d668"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic",
+    "Search Dropdown"
+   ],
+   "usages": 3,
+   "instances": 13,
+   "why": [
+    "style"
+   ],
+   "n": 19
+  },
+  {
+   "id": "d6ecf54d26",
+   "label": "Left nav · <a> · “Home”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Home",
+   "declared": "border-radius: 14px",
+   "items": [
+    "5bdeee5570"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 12,
+   "why": [],
+   "n": 20
+  },
+  {
+   "id": "f16608ce22",
+   "label": "Profile · <button> · “Change photo”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Change photo",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "2389107aba",
+    "2ca878b080",
+    "b1d1ec94e7"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 3,
+   "instances": 11,
+   "why": [
+    "style"
+   ],
+   "n": 21
+  },
+  {
+   "id": "3927f8c593",
+   "label": "Profile · <input>",
+   "component": "Profile",
+   "tag": "input",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "7a9f68d3c2",
+    "0cac483e60"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "sibling"
+   ],
+   "n": 22
+  },
+  {
+   "id": "5010327300",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 12px",
+   "items": [
+    "76a7fe0d80",
+    "3415a7c7c0"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "style"
+   ],
+   "n": 23
+  },
+  {
+   "id": "2aff5a45b0",
+   "label": "Trustpilot marquee · <div>",
+   "component": "Trustpilot marquee",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "82ad102fe2"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 10,
+   "why": [],
+   "n": 24
+  },
+  {
+   "id": "efad046e90",
+   "label": "Pricing V4 · <img>",
+   "component": "Pricing V4",
+   "tag": "img",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "6884adcd4a",
+    "cc584964fc",
+    "cf445c9670",
+    "906779fd73",
+    "cc85169c67",
+    "c5c3605518"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 6,
+   "instances": 9,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 25
+  },
+  {
+   "id": "1c3b547a3b",
+   "label": "Explore content types · <a>",
+   "component": "Explore content types",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "58a0488cce"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 9,
+   "why": [],
+   "n": 26
+  },
+  {
+   "id": "22e421d907",
+   "label": "Profile · <span>",
+   "component": "Profile",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "4656fe687f",
+    "2622c6bf59",
+    "42ea026e63"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 3,
+   "instances": 7,
+   "why": [
+    "style"
+   ],
+   "n": 27
+  },
+  {
+   "id": "10242ddf94",
+   "label": "Left nav · <a> · “Home”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Home",
+   "declared": "border-radius: 6px",
+   "items": [
+    "8fa047f89f",
+    "a3889df978",
+    "01bdf1124c",
+    "72f0c6e7c0",
+    "2e70699634",
+    "3d993681fb"
+   ],
+   "values": [
+    "6px"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 6,
+   "instances": 6,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 28
+  },
+  {
+   "id": "c864b82293",
+   "label": "Featured collections · <a> · “Underwater Experiences collection”",
+   "component": "Featured collections",
+   "tag": "a",
+   "text": "Underwater Experiences collection",
+   "declared": "border-radius: 15px",
+   "items": [
+    "b3f46f3ff8",
+    "38c900a681",
+    "cbe6674cd0",
+    "0601e95638",
+    "53658cd467",
+    "fb53420531"
+   ],
+   "values": [
+    "15px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 6,
+   "instances": 6,
+   "why": [
+    "sibling"
+   ],
+   "n": 29
+  },
+  {
+   "id": "42635f8cba",
+   "label": "Why card unlimited · <div>",
+   "component": "Why card unlimited",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 28px",
+   "items": [
+    "f8328e92f7",
+    "4194bdec32",
+    "0da19ebc4a",
+    "ac87b2c7f8",
+    "f0fcc9c978",
+    "90c98aefa9"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 6,
+   "instances": 6,
+   "why": [
+    "style"
+   ],
+   "n": 30
+  },
+  {
+   "id": "7808bf32cf",
+   "label": "Pricing V4 · <button> · “Yearly ( off)”",
+   "component": "Pricing V4",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "78c6655587",
+    "bd2fcf0115",
+    "ab4b583c32",
+    "9b917a6989"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 6,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 31
+  },
+  {
+   "id": "505bdd0ade",
+   "label": "Sign in form · <input>",
+   "component": "Sign in form",
+   "tag": "input",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "7e20613d5f",
+    "66c1433f0d"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 6,
+   "why": [
+    "sibling"
+   ],
+   "n": 32
+  },
+  {
+   "id": "f5309c8321",
+   "label": "Home search dropdown · <a>",
+   "component": "Home search dropdown",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 6px",
+   "items": [
+    "26b87dfa07"
+   ],
+   "values": [
+    "6px"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 33
+  },
+  {
+   "id": "086db0433c",
+   "label": "Settings overview · <span>",
+   "component": "Settings overview",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "e3f1aa1ea0"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 34
+  },
+  {
+   "id": "3ef81281ee",
+   "label": "Left nav · <a> · “Home”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Home",
+   "declared": "border-radius: 14px",
+   "items": [
+    "b469911ba6"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 35
+  },
+  {
+   "id": "fe3c7ff644",
+   "label": "Left nav · <a> · “Search”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Search",
+   "declared": "border-radius: 14px",
+   "items": [
+    "944424f9ff"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 36
+  },
+  {
+   "id": "72c510c8c5",
+   "label": "Left nav · <a> · “Explore”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Explore",
+   "declared": "border-radius: 14px",
+   "items": [
+    "699af6acdb"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 37
+  },
+  {
+   "id": "e9fea2db77",
+   "label": "Left nav · <a> · “AI Tools”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "AI Tools",
+   "declared": "border-radius: 14px",
+   "items": [
+    "61c7cb74e9"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 38
+  },
+  {
+   "id": "41099b5be7",
+   "label": "Left nav · <a> · “My Files”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "My Files",
+   "declared": "border-radius: 14px",
+   "items": [
+    "9f5d7f1152"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 39
+  },
+  {
+   "id": "ba706f82d2",
+   "label": "Left nav · <a> · “Alerts”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Alerts",
+   "declared": "border-radius: 14px",
+   "items": [
+    "6cbab34fdc"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 40
+  },
+  {
+   "id": "06b994c1b0",
+   "label": "Left nav · <a> · “Menu”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Menu",
+   "declared": "border-radius: 14px",
+   "items": [
+    "3d26c79692"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 41
+  },
+  {
+   "id": "5b30292365",
+   "label": "Settings overview · <a>",
+   "component": "Settings overview",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 14px",
+   "items": [
+    "531539e091"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 42
+  },
+  {
+   "id": "b42df4c24b",
+   "label": "Recent chats tray · <button> · “Close panel”",
+   "component": "Recent chats tray",
+   "tag": "button",
+   "text": "Close panel",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "a0d4fc14b3"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 43
+  },
+  {
+   "id": "397adac96f",
+   "label": "Filters · <button> · “Search settings”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "Search settings",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "7bf3f83859"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 44
+  },
+  {
+   "id": "7d0fea1ab1",
+   "label": "Filters · <span>",
+   "component": "Filters",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "224b6d93fe"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 45
+  },
+  {
+   "id": "3392da9c07",
+   "label": "Filters · <span>",
+   "component": "Filters",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "3e9e200208"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 46
+  },
+  {
+   "id": "981968c108",
+   "label": "Filters · <span>",
+   "component": "Filters",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ebb1b4fb47"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 47
+  },
+  {
+   "id": "fbca0434ed",
+   "label": "Filters · <button> · “Scroll filters”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "Scroll filters",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "c38ef13a60"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 48
+  },
+  {
+   "id": "117f8407ef",
+   "label": "Home search dropdown · <a>",
+   "component": "Home search dropdown",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "00bdfff3e1"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 49
+  },
+  {
+   "id": "bae3d9a67f",
+   "label": "Pricing V4 · <a> · “Get Vecteezy Pro”",
+   "component": "Pricing V4",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "6a032d263e",
+    "b5d0227a05",
+    "e365f27b24",
+    "5a2f063f77"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 5,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 50
+  },
+  {
+   "id": "0090adc8d6",
+   "label": "Footer theme toggle · <button> · “Toggle dark mode”",
+   "component": "Footer theme toggle",
+   "tag": "button",
+   "text": "Toggle dark mode",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "e156c61aad",
+    "99af7c1ace"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic",
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 5,
+   "why": [
+    "style"
+   ],
+   "n": 51
+  },
+  {
+   "id": "bf8fcb9195",
+   "label": "Sign in form · <button>",
+   "component": "Sign in form",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "20f2f3f9a3",
+    "16c5555631"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 5,
+   "why": [
+    "style"
+   ],
+   "n": 52
+  },
+  {
+   "id": "385c4a5e8d",
+   "label": "Profile · <span>",
+   "component": "Profile",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "1b38d43496"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 53
+  },
+  {
+   "id": "136b82c43d",
+   "label": "Profile · <div>",
+   "component": "Profile",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 12px",
+   "items": [
+    "118b4d190e"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 54
+  },
+  {
+   "id": "c8a3e8eedb",
+   "label": "Profile · <button> · “Remove”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Remove",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "cff1c4783f"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 55
+  },
+  {
+   "id": "0bf8e99017",
+   "label": "Profile · <button>",
+   "component": "Profile",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "a849ce26e6"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 56
+  },
+  {
+   "id": "fc89d1cda9",
+   "label": "<span> · “Connected”",
+   "component": null,
+   "tag": "span",
+   "text": "Connected",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ef74315182"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 57
+  },
+  {
+   "id": "0f8b03d0cb",
+   "label": "<button> · “Delete account”",
+   "component": null,
+   "tag": "button",
+   "text": "Delete account",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "6204d2639f"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 5,
+   "why": [],
+   "n": 58
+  },
+  {
+   "id": "8432b62e52",
+   "label": "Collections · <div>",
+   "component": "Collections",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 6px",
+   "items": [
+    "57d336e76c",
+    "d9045e7bbd",
+    "2239a06478",
+    "393b6b7b30"
+   ],
+   "values": [
+    "6px"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 59
+  },
+  {
+   "id": "a22d8abf72",
+   "label": "Collections · <a>",
+   "component": "Collections",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 15px",
+   "items": [
+    "d0f1ed3af8",
+    "3536b69ba6",
+    "089dc0cdbc",
+    "2d40876bd8"
+   ],
+   "values": [
+    "15px"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 60
+  },
+  {
+   "id": "9f36fcc008",
+   "label": "Pricing V4 · <span> · “On Sale Now”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "On Sale Now",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "502bc70a8a",
+    "f7d66f0f48",
+    "9ac842317b"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 4,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 61
+  },
+  {
+   "id": "86843d02d6",
+   "label": "Log In · <input>",
+   "component": "Log In",
+   "tag": "input",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "4ccdeb0858",
+    "1946f1c461"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling"
+   ],
+   "n": 62
+  },
+  {
+   "id": "567d7e400f",
+   "label": "Image results · <div>",
+   "component": "Image results",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "f0be09d0dc",
+    "cd279018e4"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 63
+  },
+  {
+   "id": "e2d1da2d88",
+   "label": "Home top bar · <a>",
+   "component": "Home top bar",
+   "tag": "a",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "2853c797b1",
+    "b46aad62a9"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "style"
+   ],
+   "n": 64
+  },
+  {
+   "id": "b0ae5ead12",
+   "label": "Search feedback · <button> · “Good experience”",
+   "component": "Search feedback",
+   "tag": "button",
+   "text": "Good experience",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "edcf6139aa",
+    "e8153443ab"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 65
+  },
+  {
+   "id": "038be092e9",
+   "label": "Log In · <button>",
+   "component": "Log In",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "244062e449",
+    "c8e68ac8ca"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 66
+  },
+  {
+   "id": "39e74ce197",
+   "label": "Customer reviews · <article>",
+   "component": "Customer reviews",
+   "tag": "article",
+   "text": "",
+   "declared": "border-radius: 16px",
+   "items": [
+    "6a3a4dbd1d"
+   ],
+   "values": [
+    "16px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 67
+  },
+  {
+   "id": "ec689cb589",
+   "label": "Pre-footer · <div> · “Social Proof”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Social Proof",
+   "declared": "border-radius: 20px",
+   "items": [
+    "64bb3df0e4"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 68
+  },
+  {
+   "id": "13f4ff3ed5",
+   "label": "Footer theme toggle · <span>",
+   "component": "Footer theme toggle",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "2e30f013e5"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 69
+  },
+  {
+   "id": "7dadedc0fb",
+   "label": "Why card fresh · <img>",
+   "component": "Why card fresh",
+   "tag": "img",
+   "text": "",
+   "declared": "border-radius: 10px",
+   "items": [
+    "efafbc3c83",
+    "1b694505e7",
+    "445e850c6e"
+   ],
+   "values": [
+    "10px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 3,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 70
+  },
+  {
+   "id": "2177510190",
+   "label": "<img>",
+   "component": null,
+   "tag": "img",
+   "text": "",
+   "declared": "border-radius: 12px",
+   "items": [
+    "f5431158e0",
+    "99d599633d",
+    "d7b6e1a0bf"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 3,
+   "why": [
+    "style"
+   ],
+   "n": 71
+  },
+  {
+   "id": "8638912714",
+   "label": "Pricing V2 · <img>",
+   "component": "Pricing V2",
+   "tag": "img",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "59fcdc237d",
+    "132dfcab08",
+    "f3d2024523"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 3,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 72
+  },
+  {
+   "id": "ada5cd13de",
+   "label": "AI Studio home · <button> · “Add”",
+   "component": "AI Studio home",
+   "tag": "button",
+   "text": "Add",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "560fb8ee6e",
+    "f7f0fcff8e",
+    "3dc8c22276"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 3,
+   "instances": 3,
+   "why": [
+    "sibling"
+   ],
+   "n": 73
+  },
+  {
+   "id": "2fe1651cc1",
+   "label": "Pricing V4 · <section> · “Vecteezy Pro”",
+   "component": "Pricing V4",
+   "tag": "section",
+   "text": "Vecteezy Pro",
+   "declared": "border-radius: 28px",
+   "items": [
+    "60cd9b6d7f",
+    "e5b053a953"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "style"
+   ],
+   "n": 74
+  },
+  {
+   "id": "ba7ceb0399",
+   "label": "Pricing V4 · <div> · “Billing period”",
+   "component": "Pricing V4",
+   "tag": "div",
+   "text": "Billing period",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "bd3ed41f30",
+    "944263880f"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 3,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 75
+  },
+  {
+   "id": "ded6aa4a62",
+   "label": "Hero masthead · <button> · “Search by image”",
+   "component": "Hero masthead",
+   "tag": "button",
+   "text": "Search by image",
+   "declared": "border-radius: 50%",
+   "items": [
+    "005e7c57a4"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 76
+  },
+  {
+   "id": "0a85e8ae97",
+   "label": "Home top bar · <button>",
+   "component": "Home top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "35826aa335"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 77
+  },
+  {
+   "id": "36479e0dec",
+   "label": "Home top bar · <a> · “Join Pro”",
+   "component": "Home top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "593206346e"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 78
+  },
+  {
+   "id": "4c6bf3872f",
+   "label": "Hero masthead · <div>",
+   "component": "Hero masthead",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "dc562b96aa"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 79
+  },
+  {
+   "id": "9abcd4a97a",
+   "label": "Hero masthead · <button>",
+   "component": "Hero masthead",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "f9e8ad31a7"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 80
+  },
+  {
+   "id": "bdd5e135e1",
+   "label": "Home search dropdown · <span>",
+   "component": "Home search dropdown",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "02d06436ff"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 81
+  },
+  {
+   "id": "fdbbc553fb",
+   "label": "Marketing panel · <span>",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "a2f398839c"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 3,
+   "why": [],
+   "n": 82
+  },
+  {
+   "id": "c4f692939a",
+   "label": "Why card bundles · <span> · “New”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "New",
+   "declared": "border-radius: 0px 0px 10px 10px",
+   "items": [
+    "858c661768",
+    "32210fbb69"
+   ],
+   "values": [
+    "0px 0px 10px 10px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 83
+  },
+  {
+   "id": "47d963d6ff",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 0px 0px 14px 4px",
+   "items": [
+    "3f95773fc7",
+    "cdee7038ba"
+   ],
+   "values": [
+    "0px 0px 14px 4px"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 84
+  },
+  {
+   "id": "b2aec4a96c",
+   "label": "Pricing V2 top nav · <a> · “My Account”",
+   "component": "Pricing V2 top nav",
+   "tag": "a",
+   "text": "My Account",
+   "declared": "border-radius: 12px",
+   "items": [
+    "ccddc9fc05",
+    "51527dd47d"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 85
+  },
+  {
+   "id": "7d18de4312",
+   "label": "Summary rail · <div>",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 12px",
+   "items": [
+    "0af48ac422",
+    "009d695c77"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "sibling"
+   ],
+   "n": 86
+  },
+  {
+   "id": "c2a60cdfbd",
+   "label": "<div> · “Showing “Cat” search results with 7 filt”",
+   "component": null,
+   "tag": "div",
+   "text": "Showing “Cat” search results with 7 filters applied.",
+   "declared": "border-radius: 14px 14px 0px 0px",
+   "items": [
+    "2eb6f23fb4",
+    "28163a2f57"
+   ],
+   "values": [
+    "14px 14px 0px 0px"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 87
+  },
+  {
+   "id": "895827610b",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "836b9e9608",
+    "79dbd2822e"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 88
+  },
+  {
+   "id": "31a575f4f2",
+   "label": "Bottom CTA · <section> · “Join Pro”",
+   "component": "Bottom CTA",
+   "tag": "section",
+   "text": "Join Pro",
+   "declared": "border-radius: 28px",
+   "items": [
+    "95cf8a68e5",
+    "9d191e6f99"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 89
+  },
+  {
+   "id": "5d74612805",
+   "label": "Pricing V2 top nav · <img>",
+   "component": "Pricing V2 top nav",
+   "tag": "img",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "5bd0ad42c9",
+    "2e3e540d48"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 90
+  },
+  {
+   "id": "82e60aa8eb",
+   "label": "Top bar · <button> · “Voice search”",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "Voice search",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ed1eb78404",
+    "4684324b81"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 91
+  },
+  {
+   "id": "e585aded8c",
+   "label": "Pricing V2 · <button> · “Yearly ( off)”",
+   "component": "Pricing V2",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "546c49a470",
+    "d0c75de088"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 92
+  },
+  {
+   "id": "5438c50836",
+   "label": "Customer reviews · <button> · “Previous reviews”",
+   "component": "Customer reviews",
+   "tag": "button",
+   "text": "Previous reviews",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "1bb47a134b",
+    "2b9f756548"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 93
+  },
+  {
+   "id": "46323e1ef6",
+   "label": "Bottom CTA · <a> · “Get Vecteezy Pro”",
+   "component": "Bottom CTA",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "03b0161084",
+    "1f25e8c77e"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 94
+  },
+  {
+   "id": "88bd16aa33",
+   "label": "Pricing V3 hero · <button> · “Yearly ( off)”",
+   "component": "Pricing V3 hero",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "adb701b8aa",
+    "c59cda1586"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 95
+  },
+  {
+   "id": "783228ce75",
+   "label": "Account header · <span>",
+   "component": "Account header",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "42bdf2a48c",
+    "5cbff0e3c7"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 96
+  },
+  {
+   "id": "254d65ecdc",
+   "label": "Summary rail · <div>",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "15fe34c263",
+    "2bea817c35"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 97
+  },
+  {
+   "id": "4bf73934fb",
+   "label": "Summary rail · <div>",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "9d67d6469d",
+    "44c263de74"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 98
+  },
+  {
+   "id": "95d2f582d5",
+   "label": "Sign in form · <span>",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 5px",
+   "items": [
+    "ab2ae507cb"
+   ],
+   "values": [
+    "5px"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 99
+  },
+  {
+   "id": "47d04b647e",
+   "label": "Pricing V4 · <a> · “Vecteezy Pro for Teams”",
+   "component": "Pricing V4",
+   "tag": "a",
+   "text": "Vecteezy Pro for Teams",
+   "declared": "border-radius: 20px",
+   "items": [
+    "f1c048135a"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 100
+  },
+  {
+   "id": "02ad66b568",
+   "label": "Log In · <div>",
+   "component": "Log In",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 20px",
+   "items": [
+    "ae7f3d7e24"
+   ],
+   "values": [
+    "20px"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 101
+  },
+  {
+   "id": "2a5da539ea",
+   "label": "Search feedback · <div>",
+   "component": "Search feedback",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 25px",
+   "items": [
+    "754aef52c4"
+   ],
+   "values": [
+    "25px"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 102
+  },
+  {
+   "id": "99a1014dd8",
+   "label": "Top bar · <button> · “Clear search”",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "Clear search",
+   "declared": "border-radius: 50%",
+   "items": [
+    "644cba3d97"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 103
+  },
+  {
+   "id": "b3e1002fca",
+   "label": "Top bar · <button> · “Search by image”",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "Search by image",
+   "declared": "border-radius: 50%",
+   "items": [
+    "012f98eb38"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 104
+  },
+  {
+   "id": "b2bc93d98a",
+   "label": "Left nav · <span>",
+   "component": "Left nav",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "4cfdc5952b"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 105
+  },
+  {
+   "id": "459424ad6c",
+   "label": "Top bar · <div>",
+   "component": "Top bar",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ef4b36aa74"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 106
+  },
+  {
+   "id": "d2f58d13cb",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "9d1f878ea4"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 107
+  },
+  {
+   "id": "948302d420",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "113f78d059"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 108
+  },
+  {
+   "id": "ccd4fbb091",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "5688c5300b"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 109
+  },
+  {
+   "id": "47fe479674",
+   "label": "Pagination · <button> · “Next page”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "Next page",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "2e68b48cf5"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 110
+  },
+  {
+   "id": "dbdfc9c281",
+   "label": "Left nav · <a> · “Account”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Account",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "ce402fee26"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 111
+  },
+  {
+   "id": "8e71b76aef",
+   "label": "Pricing V3 hero · <a> · “Vecteezy Pro for Teams”",
+   "component": "Pricing V3 hero",
+   "tag": "a",
+   "text": "Vecteezy Pro for Teams",
+   "declared": "border-radius: 0px 0px 28px 28px",
+   "items": [
+    "cfb11c5ece"
+   ],
+   "values": [
+    "0px 0px 28px 28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 112
+  },
+  {
+   "id": "a12fdef5e2",
+   "label": "Home search dropdown · <svg>",
+   "component": "Home search dropdown",
+   "tag": "svg",
+   "text": "",
+   "declared": "border-radius: 2px",
+   "items": [
+    "bf5a936b8a"
+   ],
+   "values": [
+    "2px"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 113
+  },
+  {
+   "id": "147cbbcacb",
+   "label": "Top bar · <button> · “Menu”",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "Menu",
+   "declared": "border-radius: 6px",
+   "items": [
+    "74c6304bd9"
+   ],
+   "values": [
+    "6px"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 114
+  },
+  {
+   "id": "b2e273cc84",
+   "label": "Why card bundles · <div> · “ZIP”",
+   "component": "Why card bundles",
+   "tag": "div",
+   "text": "ZIP",
+   "declared": "border-radius: 6px 22px 6px 6px",
+   "items": [
+    "661a1a0b09"
+   ],
+   "values": [
+    "6px 22px 6px 6px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 115
+  },
+  {
+   "id": "98d3e5e044",
+   "label": "Why card license · <span>",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 12px",
+   "items": [
+    "70b33d8554"
+   ],
+   "values": [
+    "12px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 116
+  },
+  {
+   "id": "9711609f0b",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 14px",
+   "items": [
+    "c047981419"
+   ],
+   "values": [
+    "14px"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 117
+  },
+  {
+   "id": "6449e04a6e",
+   "label": "Why card license · <div>",
+   "component": "Why card license",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 16px",
+   "items": [
+    "483af34e7f"
+   ],
+   "values": [
+    "16px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 118
+  },
+  {
+   "id": "0517002bdd",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 16px",
+   "items": [
+    "eda995b139"
+   ],
+   "values": [
+    "16px"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 119
+  },
+  {
+   "id": "3753784379",
+   "label": "Home search dropdown · <div>",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 25px",
+   "items": [
+    "3e60ab4604"
+   ],
+   "values": [
+    "25px"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 120
+  },
+  {
+   "id": "9921ceacee",
+   "label": "<section> · “Vecteezy for Teams”",
+   "component": null,
+   "tag": "section",
+   "text": "Vecteezy for Teams",
+   "declared": "border-radius: 28px",
+   "items": [
+    "5557458685"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 121
+  },
+  {
+   "id": "68852e8e65",
+   "label": "Pricing V2 · <section> · “Vecteezy Pro”",
+   "component": "Pricing V2",
+   "tag": "section",
+   "text": "Vecteezy Pro",
+   "declared": "border-radius: 28px",
+   "items": [
+    "a683d9ada8"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 122
+  },
+  {
+   "id": "0f1e5b4b09",
+   "label": "Pricing V2 · <section> · “Vecteezy for Teams”",
+   "component": "Pricing V2",
+   "tag": "section",
+   "text": "Vecteezy for Teams",
+   "declared": "border-radius: 28px",
+   "items": [
+    "cfcfb2471c"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 123
+  },
+  {
+   "id": "0444fa75ec",
+   "label": "Pricing V3 hero · <section> · “Vecteezy Pro”",
+   "component": "Pricing V3 hero",
+   "tag": "section",
+   "text": "Vecteezy Pro",
+   "declared": "border-radius: 28px",
+   "items": [
+    "9c3993e2ae"
+   ],
+   "values": [
+    "28px"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 124
+  },
+  {
+   "id": "22d3b6a5cd",
+   "label": "Why card AI · <span>",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 50%",
+   "items": [
+    "780471896a"
+   ],
+   "values": [
+    "50%"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 125
+  },
+  {
+   "id": "415e269f31",
+   "label": "Left nav · <a> · “Account”",
+   "component": "Left nav",
+   "tag": "a",
+   "text": "Account",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "718368df5b"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 126
+  },
+  {
+   "id": "0a41baa5b2",
+   "label": "Popular photo categories · <button>",
+   "component": "Popular photo categories",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "da3b3fc0c2"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 127
+  },
+  {
+   "id": "6c4dad1af3",
+   "label": "AI Studio home · <div>",
+   "component": "AI Studio home",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "f7726f360c"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 128
+  },
+  {
+   "id": "9cc2f05a0c",
+   "label": "AI Studio home · <button> · “See what's possible”",
+   "component": "AI Studio home",
+   "tag": "button",
+   "text": "See what's possible",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "61f173220f"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 129
+  },
+  {
+   "id": "c7e8139be9",
+   "label": "Left nav · <span>",
+   "component": "Left nav",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "48952dec0b"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 130
+  },
+  {
+   "id": "2f41b79f7f",
+   "label": "Top bar · <div>",
+   "component": "Top bar",
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "fe557c14ba"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 131
+  },
+  {
+   "id": "c4c49492fe",
+   "label": "Top bar · <span>",
+   "component": "Top bar",
+   "tag": "span",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "a62b832c71"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 132
+  },
+  {
+   "id": "c07c2617be",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "35cfb3ed9d"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 133
+  },
+  {
+   "id": "3cedc6bd63",
+   "label": "Pricing V2 · <div> · “Billing period”",
+   "component": "Pricing V2",
+   "tag": "div",
+   "text": "Billing period",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "096e3a5466"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 134
+  },
+  {
+   "id": "69b0bcc4dc",
+   "label": "Pricing V3 hero · <div> · “Billing period”",
+   "component": "Pricing V3 hero",
+   "tag": "div",
+   "text": "Billing period",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "7ac38758ca"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 135
+  },
+  {
+   "id": "a8532ec2b3",
+   "label": "Why card AI · <span> · “Remove background”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Remove background",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "24f3485cf4"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 136
+  },
+  {
+   "id": "39c411145b",
+   "label": "Summary rail · <button>",
+   "component": "Summary rail",
+   "tag": "button",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "02ddca7d9a"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 137
+  },
+  {
+   "id": "78eed3ba86",
+   "label": "<a> · “Close settings”",
+   "component": null,
+   "tag": "a",
+   "text": "Close settings",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "5af2f939d7"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 138
+  },
+  {
+   "id": "c00b0873ae",
+   "label": "<div>",
+   "component": null,
+   "tag": "div",
+   "text": "",
+   "declared": "border-radius: 9999px",
+   "items": [
+    "988464a17f"
+   ],
+   "values": [
+    "pill"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 139
+  }
+ ]
+}

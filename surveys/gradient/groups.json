@@ -1,0 +1,866 @@
+{
+ "survey": "gradient",
+ "generatedAt": "2026-11-05T12:57:42.613Z",
+ "usages": 91,
+ "groups": [
+  {
+   "id": "b84e1093a4",
+   "label": "Popular photo categories · <a>",
+   "component": "Popular photo categories",
+   "tag": "a",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(216, 198, 242), rgb(145, 82, 236))",
+   "items": [
+    "5213081085",
+    "b2e408dc19",
+    "281790930c",
+    "588a2958bf",
+    "af9187ea5d",
+    "0b1a7f1446",
+    "6a22b5693d",
+    "da502af2a3",
+    "c49b1c34a0"
+   ],
+   "values": [
+    "linear-gradient(135deg, #d8c6f2, #9152ec)",
+    "linear-gradient(135deg, #a7d8de, #145a68)",
+    "linear-gradient(135deg, #d0d8ff, #5f6fd4)",
+    "linear-gradient(135deg, #ffd9b3, #ff9a52)",
+    "linear-gradient(135deg, #f8c8dc, #c2649a)",
+    "linear-gradient(135deg, #fff3b0, #e09f3e)",
+    "linear-gradient(135deg, #ffc3b0, #e05263)",
+    "linear-gradient(135deg, #c5f0e8, #2fb9cc)",
+    "linear-gradient(135deg, #bfd7ff, #3d5a80)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 9,
+   "instances": 54,
+   "why": [
+    "element",
+    "style"
+   ],
+   "n": 1
+  },
+  {
+   "id": "ef67f41e1e",
+   "label": "Popular photo categories · <span>",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(216, 198, 242), rgb(145, 82, 236))",
+   "items": [
+    "fa20d5f64f",
+    "a223e99837",
+    "4deffef984",
+    "cd8c00dc80",
+    "5767a71f46",
+    "324a7fafb9",
+    "2370f12074",
+    "a8d8826557",
+    "e5f137b340"
+   ],
+   "values": [
+    "linear-gradient(135deg, #d8c6f2, #9152ec)",
+    "linear-gradient(135deg, #a7d8de, #145a68)",
+    "linear-gradient(135deg, #d0d8ff, #5f6fd4)",
+    "linear-gradient(135deg, #ffd9b3, #ff9a52)",
+    "linear-gradient(135deg, #f8c8dc, #c2649a)",
+    "linear-gradient(135deg, #fff3b0, #e09f3e)",
+    "linear-gradient(135deg, #ffc3b0, #e05263)",
+    "linear-gradient(135deg, #c5f0e8, #2fb9cc)",
+    "linear-gradient(135deg, #bfd7ff, #3d5a80)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 9,
+   "instances": 54,
+   "why": [
+    "element",
+    "style"
+   ],
+   "n": 2
+  },
+  {
+   "id": "ecce4344ae",
+   "label": "Popular photo categories · <span>",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(0deg, transparent 55%, color-mix(in srgb, color-mix(in srgb, rgb(145, 82, 236) 60%, rgb(0, 0, 0) 40%) 80%, transparent 20%) 100%)",
+   "items": [
+    "af16d913ae",
+    "de50dd6274",
+    "f4d20a3536",
+    "f6e8c1873e",
+    "c794c33c38",
+    "ac36cc1cb4",
+    "e52a27c00e",
+    "7aeaa9d020",
+    "673577794a"
+   ],
+   "values": [
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.341176 0.192941 0.555294 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.0470588 0.211765 0.244706 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.223529 0.261176 0.498824 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.6 0.362353 0.192941 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.456471 0.235294 0.362353 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.374118 0.145882 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.527059 0.192941 0.232941 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.110588 0.435294 0.48 / 0.8) 100%)",
+    "linear-gradient(0deg, #000000 / 0% 55%, color(srgb 0.143529 0.211765 0.301176 / 0.8) 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 9,
+   "instances": 54,
+   "why": [
+    "element"
+   ],
+   "n": 3
+  },
+  {
+   "id": "fba452850a",
+   "label": "Social proof V2 · <span>",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(253, 49, 152), rgb(139, 92, 246))",
+   "items": [
+    "212c5e5141",
+    "9ebc87d272",
+    "909c6b4ae6",
+    "8d5a88c188",
+    "3498811df2",
+    "226be86338"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)",
+    "linear-gradient(135deg, #fd3198, #8b5cf6)",
+    "linear-gradient(135deg, #00b67a, #0ea5e9)"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 6,
+   "instances": 32,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 4
+  },
+  {
+   "id": "28aa3a168c",
+   "label": "Featured collections · <span>",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(0deg, rgba(14, 35, 50, 0.72) 0%, rgba(14, 35, 50, 0) 55%)",
+   "items": [
+    "7f26d0aaae",
+    "74f4b65fe3",
+    "edab4e4db9",
+    "b96253b08e",
+    "99c0d45818",
+    "ca1d63b335"
+   ],
+   "values": [
+    "linear-gradient(0deg, #0e2332 / 72% 0%, #0e2332 / 0% 55%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 6,
+   "instances": 12,
+   "why": [
+    "sibling"
+   ],
+   "n": 5
+  },
+  {
+   "id": "4b422b4737",
+   "label": "Profile · <button>",
+   "component": "Profile",
+   "tag": "button",
+   "text": "",
+   "declared": "background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+   "items": [
+    "8b55d23cc1",
+    "a88b7b5327"
+   ],
+   "values": [
+    "linear-gradient(#ffffff, #f7f9fa)",
+    "linear-gradient(#171717, #0d0d0d)"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 6
+  },
+  {
+   "id": "e56ce99128",
+   "label": "Marketing panel · <div>",
+   "component": "Marketing panel",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: linear-gradient(to left bottom, rgb(255, 140, 26) 0%, rgb(255, 121, 0) 38%, rgb(253, 49, 152) 100%)",
+   "items": [
+    "eef2c1a9fd",
+    "1d03b18786",
+    "e8acc274ae",
+    "8a0cc1d172",
+    "fa8eb9b235",
+    "948b320aca",
+    "4eb69b45ae",
+    "ca8ebbba88"
+   ],
+   "values": [
+    "linear-gradient(to left bottom, #ff8c1a 0%, #ff7900 38%, #fd3198 100%)",
+    "radial-gradient(65% 45% at 12% 18%, #ff7900 / 48%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 22%, #000000 / 0% 70%), none",
+    "linear-gradient(to left bottom, #ff7900, #fd3198)",
+    "radial-gradient(65% 45% at 12% 18%, #ff7900 / 30%, #000000 / 0% 70%), radial-gradient(60% 50% at 88% 82%, #fd3198 / 11%, #000000 / 0% 70%), radial-gradient(50% 38% at 72% 8%, #9152ec / 16%, #000000 / 0% 70%), none"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 8,
+   "instances": 8,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 7
+  },
+  {
+   "id": "f9b40c5b48",
+   "label": "Pricing V2 · <a> · “Get Vecteezy Pro”",
+   "component": "Pricing V2",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152))",
+   "items": [
+    "a2352fb3e6",
+    "b05a8c0eef",
+    "1aa085fea8",
+    "ce88981f3b"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 8,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 8
+  },
+  {
+   "id": "52cc0c314c",
+   "label": "Home footer · <a> · “Try Pro”",
+   "component": "Home footer",
+   "tag": "a",
+   "text": "Try Pro",
+   "declared": "background-image: linear-gradient(150deg, rgb(255, 121, 0) 0%, rgb(253, 49, 152) 100%)",
+   "items": [
+    "afb5d9439c"
+   ],
+   "values": [
+    "linear-gradient(150deg, #ff7900 0%, #fd3198 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 9
+  },
+  {
+   "id": "b576336332",
+   "label": "AI Search home · <div>",
+   "component": "AI Search home",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: radial-gradient(50% 40%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+   "items": [
+    "4838383cf2",
+    "08d1b5c8df",
+    "ecaee2e484"
+   ],
+   "values": [
+    "radial-gradient(50% 40%, #ffffff / 90%, #ffffff / 0% 70%)"
+   ],
+   "pages": [
+    "AI Magic",
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 5,
+   "why": [
+    "style"
+   ],
+   "n": 10
+  },
+  {
+   "id": "7161b08cf2",
+   "label": "AI Search home · <div>",
+   "component": "AI Search home",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: radial-gradient(45% 38%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%)",
+   "items": [
+    "950df2c744",
+    "0d77e053a0",
+    "70aa583abf"
+   ],
+   "values": [
+    "radial-gradient(45% 38%, #ffffff / 90%, #ffffff / 0% 70%)"
+   ],
+   "pages": [
+    "AI Magic",
+    "Pricing"
+   ],
+   "usages": 3,
+   "instances": 5,
+   "why": [
+    "style"
+   ],
+   "n": 11
+  },
+  {
+   "id": "8f4f2217a2",
+   "label": "Why card bundles · <span> · “New”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "New",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+   "items": [
+    "e141c4fe00",
+    "5897fa3734"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 12
+  },
+  {
+   "id": "30f592b2bf",
+   "label": "Account header · <span>",
+   "component": "Account header",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+   "items": [
+    "8804dcc58c",
+    "8e749a0229"
+   ],
+   "values": [
+    "linear-gradient(-89deg, #fd3198, #ff7900)"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "style"
+   ],
+   "n": 13
+  },
+  {
+   "id": "7e5ac8e89c",
+   "label": "Summary rail · <div>",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+   "items": [
+    "f65ae24bc9",
+    "aea9f4747d"
+   ],
+   "values": [
+    "linear-gradient(-89deg, #fd3198, #ff7900)"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "style"
+   ],
+   "n": 14
+  },
+  {
+   "id": "dcb9dbe20f",
+   "label": "Sign in form · <div>",
+   "component": "Sign in form",
+   "tag": "div",
+   "text": "",
+   "declared": "background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3))",
+   "items": [
+    "791eb487e8",
+    "a42308840a"
+   ],
+   "values": [
+    "linear-gradient(#ffffff, #f7f9fa)",
+    "linear-gradient(#171717, #0d0d0d)"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 15
+  },
+  {
+   "id": "652734ef93",
+   "label": "Bottom CTA · <section> · “Join Pro”",
+   "component": "Bottom CTA",
+   "tag": "section",
+   "text": "Join Pro",
+   "declared": "background-image: linear-gradient(90deg, rgb(255, 121, 0) 0%, rgb(254, 77, 93) 40%, rgb(253, 49, 152) 72%, rgb(243, 18, 227) 100%)",
+   "items": [
+    "24ee8d8511",
+    "a27d7fb79c"
+   ],
+   "values": [
+    "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 16
+  },
+  {
+   "id": "1229030d30",
+   "label": "AI Search home · <div>",
+   "component": "AI Search home",
+   "tag": "div",
+   "text": "",
+   "declared": "background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--ez-surface)), linear-gradient(90deg, #ffffff, rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+   "items": [
+    "1eb09d257f",
+    "6ee102a96f"
+   ],
+   "values": [
+    "linear-gradient(#ffffff / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "style"
+   ],
+   "n": 17
+  },
+  {
+   "id": "be626a4ae0",
+   "label": "Fresh content · <div>",
+   "component": "Fresh content",
+   "tag": "div",
+   "text": "",
+   "declared": "background: linear-gradient(to bottom, color-mix(in srgb, var(--ez-surface) 0%, transparent), var(--ez-surface) 70%)",
+   "items": [
+    "64cd8251e3",
+    "2ec3bf88b3"
+   ],
+   "values": [
+    "linear-gradient(color(srgb 0 0 0 / 0), #ffffff 70%)",
+    "linear-gradient(color(srgb 0 0 0 / 0), #171717 70%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling"
+   ],
+   "n": 18
+  },
+  {
+   "id": "5cb8b62906",
+   "label": "Left nav · <span>",
+   "component": "Left nav",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+   "items": [
+    "b688a423b2"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 19
+  },
+  {
+   "id": "05b0c4297b",
+   "label": "Home top bar · <span>",
+   "component": "Home top bar",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+   "items": [
+    "469ec8cbe8"
+   ],
+   "values": [
+    "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 20
+  },
+  {
+   "id": "c186f07f7e",
+   "label": "Top bar · <span>",
+   "component": "Top bar",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+   "items": [
+    "19e7130a1f"
+   ],
+   "values": [
+    "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 21
+  },
+  {
+   "id": "f0362e77f1",
+   "label": "Home top bar · <a> · “Join Pro”",
+   "component": "Home top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152) 76%, rgb(251, 0, 255) 100%)",
+   "items": [
+    "64eb15a3f7"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 22
+  },
+  {
+   "id": "beb7c67c1d",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0) 20%, rgb(254, 77, 93) 46%, rgb(253, 49, 152) 76%, rgb(251, 0, 255) 100%)",
+   "items": [
+    "a8c760ed05"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 23
+  },
+  {
+   "id": "dd89da16b8",
+   "label": "Pricing V4 · <div>",
+   "component": "Pricing V4",
+   "tag": "div",
+   "text": "",
+   "declared": "background: linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18))",
+   "items": [
+    "b4856738e5",
+    "ba35c04fa7"
+   ],
+   "values": [
+    "linear-gradient(#000000 / 0%, #ffffff), linear-gradient(90deg, #ffffff, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)",
+    "linear-gradient(#000000 / 0%, #171717), linear-gradient(90deg, #171717, #ff7900 / 18% 30%, #fd3198 / 16% 60%, #60a5fa / 16% 85%, #00d4f5 / 18%)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 24
+  },
+  {
+   "id": "1405336a5b",
+   "label": "Why card license · <span>",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+   "items": [
+    "c8811e00b1"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 25
+  },
+  {
+   "id": "599119f4d9",
+   "label": "Top bar · <span>",
+   "component": "Top bar",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(105deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.04) 25%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.04) 75%, rgba(255, 255, 255, 0) 100%)",
+   "items": [
+    "4d1a60ee6b"
+   ],
+   "values": [
+    "linear-gradient(105deg, #ffffff / 0% 0%, #ffffff / 4% 25%, #ffffff / 15% 50%, #ffffff / 4% 75%, #ffffff / 0% 100%)"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 26
+  },
+  {
+   "id": "7a2dbe247e",
+   "label": "AI Studio home · <button> · “Send”",
+   "component": "AI Studio home",
+   "tag": "button",
+   "text": "Send",
+   "declared": "background-image: linear-gradient(-89deg, rgb(253, 49, 152), rgb(255, 121, 0))",
+   "items": [
+    "3ac6ae6c48"
+   ],
+   "values": [
+    "linear-gradient(-89deg, #fd3198, #ff7900)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 27
+  },
+  {
+   "id": "dd82476048",
+   "label": "Log In · <div>",
+   "component": "Log In",
+   "tag": "div",
+   "text": "",
+   "declared": "background: linear-gradient(180deg, #ffffff, var(--ez-color--grey-3))",
+   "items": [
+    "7ed5975652"
+   ],
+   "values": [
+    "linear-gradient(#ffffff, #f7f9fa)"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 28
+  },
+  {
+   "id": "b535bf8e52",
+   "label": "Pricing V2 · <div>",
+   "component": "Pricing V2",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: linear-gradient(90deg, rgb(255, 121, 0) 0%, rgb(254, 77, 93) 40%, rgb(253, 49, 152) 72%, rgb(243, 18, 227) 100%)",
+   "items": [
+    "c13e3c9c6d"
+   ],
+   "values": [
+    "linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 29
+  },
+  {
+   "id": "a8e4a22dd7",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "background: var(--ez-color--pro-gradient)",
+   "items": [
+    "687c0245d4"
+   ],
+   "values": [
+    "linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%)"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 30
+  },
+  {
+   "id": "72c9b5146c",
+   "label": "Why card AI · <div>",
+   "component": "Why card AI",
+   "tag": "div",
+   "text": "",
+   "declared": "background-image: linear-gradient(45deg, rgb(58, 58, 58) 25%, transparent 25%), linear-gradient(-45deg, rgb(58, 58, 58) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgb(58, 58, 58) 75%), linear-gradient(-45deg, transparent 75%, rgb(58, 58, 58) 75%)",
+   "items": [
+    "07cc886a2b"
+   ],
+   "values": [
+    "linear-gradient(45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(-45deg, #3a3a3a 25%, #000000 / 0% 25%), linear-gradient(45deg, #000000 / 0% 75%, #3a3a3a 75%), linear-gradient(-45deg, #000000 / 0% 75%, #3a3a3a 75%)"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 31
+  },
+  {
+   "id": "fd348e4a8b",
+   "label": "Explore content types · <span>",
+   "component": "Explore content types",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+   "items": [
+    "0f1739d208"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 32
+  },
+  {
+   "id": "af3bdb387f",
+   "label": "Explore content types · <span>",
+   "component": "Explore content types",
+   "tag": "span",
+   "text": "",
+   "declared": "background-image: linear-gradient(135deg, rgb(255, 121, 0), rgb(253, 49, 152))",
+   "items": [
+    "ae08c929a5"
+   ],
+   "values": [
+    "linear-gradient(135deg, #ff7900, #fd3198)"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 33
+  },
+  {
+   "id": "926cc27098",
+   "label": "Left nav · <span>",
+   "component": "Left nav",
+   "tag": "span",
+   "text": "",
+   "declared": "background: var(--ez-color--pro-gradient)",
+   "items": [
+    "169d403866"
+   ],
+   "values": [
+    "linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%)"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 34
+  }
+ ]
+}

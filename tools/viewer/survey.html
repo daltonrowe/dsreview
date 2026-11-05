@@ -110,6 +110,38 @@
   #suggest .unused { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
   #suggest .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-right: 6px; opacity: .7; }
   nav.index a.sugg { grid-template-columns: 1fr; margin-top: 10px; border-top: 1px solid var(--line); border-radius: 0; padding-top: 10px; font-weight: 600; }
+  body.groups-mode section.sec, body.groups-mode .problems, body.groups-mode nav.index { display: none; }
+  body.groups-mode .layout { grid-template-columns: 1fr; }
+  body:not(.groups-mode) #gview { display: none; }
+  #gview { display: flex; flex-direction: column; gap: 14px; padding-top: 16px; max-width: 1200px; margin: 0 auto; }
+  .grp { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .grp[data-state="keep"] { border-color: var(--keep); }
+  .grp[data-state="round"] { border-color: var(--round); }
+  .grp[data-state="exclude"] { opacity: .6; }
+  .grp-head { display: flex; gap: 12px; align-items: flex-start; }
+  .grp-head .num { font-weight: 700; font-size: 15px; color: var(--faint); min-width: 34px; }
+  .grp-title { flex: 1; min-width: 0; }
+  .grp-title b { font-size: 14.5px; }
+  .grp-meta { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .grp-meta code { font-size: 11px; }
+  .gdec { width: auto; flex: none; }
+  .gdec button { padding: 6px 14px; }
+  .gvals { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; }
+  .gv { display: inline-flex; align-items: center; gap: 6px; }
+  .gv > .swatch, .gv > .radius-prev, .gv > .type-prev, .gv > .shadow-prev, .gv > .space-prev { transform: scale(.6); margin: -6px -4px; }
+  .strip { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+  .th { flex: none; width: 150px; height: 92px; padding: 0; border: 1px solid var(--line); border-radius: 7px; background: var(--checker); cursor: zoom-in; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .th:hover { border-color: var(--focus); }
+  .th img { max-width: 100%; max-height: 100%; display: block; }
+  .th.more { width: 64px; font-weight: 600; color: var(--muted); background: var(--panel-2); cursor: pointer; }
+  .grp-foot { display: flex; gap: 14px; align-items: center; font-size: 12.5px; }
+  .linkish { background: none; border: 0; padding: 0; color: var(--focus); cursor: pointer; font-size: 12.5px; }
+  .grp-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+  .gl-row { display: flex; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+  .gl-row .th { width: 120px; height: 72px; }
+  .gl-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  .gl-row[data-decision="exclude"] { opacity: .55; }
+  .chip.dstate { text-transform: capitalize; }
   .help { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
   .toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 6px 14px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 200; }
   .toast.show { opacity: 1; }
@@ -127,6 +159,7 @@
   <a class="btn small" id="exp-md" target="_blank" title="Export decisions as Markdown (JSON: /export.json)">Export</a>
 </div>
 <div class="toolbar">
+  <div class="seg" id="viewf" hidden title="Groups: one decision per part of the page. Usages: every usage on its own."><button data-v="groups">Groups</button><button data-v="usages">Usages</button></div>
   <div class="seg" id="filter">
     <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="exclude">Excluded</button>
   </div>
@@ -154,7 +187,10 @@ new ResizeObserver(setHdr).observe($('header.hdr'));
 
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') !== '0' }; // hide on-token usages unless ?off=0
+const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') !== '0', view: params.get('view') || 'groups' }; // hide on-token usages unless ?off=0
+let G = null; // groups.json (meta-survey), when generated
+const expanded = new Set();
+const groupsMode = () => !!G && state.view === 'groups';
 let S, cfg, focusedId = null;
 const byId = new Map();
 
@@ -187,6 +223,13 @@ async function load() {
   }
   $('#themef').hidden = !S.themed;
   $('#offtok').checked = state.off;
+  // meta-survey: usages grouped into parts of the page (tools/group.mjs)
+  G = await fetch(`/surveys/${encodeURIComponent(id)}/groups.json`, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null);
+  if (G) {
+    for (const g of G.groups) { g.members = g.items.map(i => byId.get(i)).filter(Boolean); for (const it of g.members) it.group = g; }
+    G.groups = G.groups.filter(g => g.members.length);
+    $('#viewf').hidden = false;
+  }
   render();
   applyFilter();
 }
@@ -279,6 +322,7 @@ function render() {
       </div>
       <div class="grid">${s.items.map(it => itemHtml(s, it)).join('')}</div>
     </section>`).join('') + `<section class="card" id="suggest"></section>`;
+  $('#main').insertAdjacentHTML('afterbegin', '<div id="gview"></div>');
   renderSuggestShell();
   updateProgress();
 }
@@ -294,6 +338,9 @@ function matches(it) {
 }
 
 function applyFilter() {
+  document.body.classList.toggle('groups-mode', groupsMode());
+  $$('#viewf button').forEach(b => b.setAttribute('aria-pressed', b.dataset.v === state.view));
+  if (groupsMode()) { renderGroups(); syncQuery(); return; }
   $$('#filter button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === state.f));
   $$('#themef button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === state.theme));
   let shown = 0, on = 0;
@@ -312,7 +359,110 @@ function applyFilter() {
   if (state.f !== 'all') q.set('f', state.f);
   if (!state.off) q.set('off', '0');
   if (state.theme !== 'all') q.set('theme', state.theme);
+  if (G && state.view !== 'groups') q.set('view', state.view);
   history.replaceState(null, '', `?${q}${location.hash}`);
+}
+
+function syncQuery() {
+  const q = new URLSearchParams({ id });
+  if (state.f !== 'all') q.set('f', state.f);
+  if (!state.off) q.set('off', '0');
+  if (state.theme !== 'all') q.set('theme', state.theme);
+  if (G && state.view !== 'groups') q.set('view', state.view);
+  history.replaceState(null, '', `?${q}${location.hash}`);
+}
+
+// ---------- Groups view (meta-survey) ----------
+const decOf = it => S.decisions[it.id]?.decision || 'undecided';
+function groupMembers(g) {
+  // the members this view is about: theme filter applies to members
+  return g.members.filter(it => !(S.themed && state.theme !== 'all' && !it.themes.includes(state.theme)));
+}
+function groupShown(g) {
+  const mem = groupMembers(g);
+  if (!mem.length) return false;
+  if (state.off && mem.every(it => it.near?.exact)) return false;
+  const live = mem.filter(it => decOf(it) !== 'exclude');
+  if (state.f === 'exclude') return live.length === 0;
+  if (!live.length) return false;
+  if (state.f === 'decided') return live.every(it => decOf(it) === 'keep' || decOf(it) === 'round');
+  if (state.f === 'undecided') return live.some(it => decOf(it) === 'undecided');
+  return true;
+}
+function groupState(g) {
+  const ds = g.members.map(decOf);
+  const same = ds.every(d => d === ds[0]);
+  return same ? ds[0] : 'mixed';
+}
+function themeChipOf(t) { return t ? `<span class="chip theme-${t}">${t === 'both' ? 'Light + Dark' : t === 'dark' ? 'Dark' : 'Light'}</span>` : ''; }
+function nearChip(it) {
+  if (!it.near) return '';
+  const c = it.near.candidates[0];
+  return it.near.exact ? `<span class="chip ontok" title="On-token">= ${esc(c.token)}</span>`
+    : `<span class="chip near" title="Rounds to (nearest token)">→ ${esc(c.token)} · ${esc(c.value)}${c.flipsTo ? ` (dark: ${esc(c.flipsTo)})` : ''}</span>`;
+}
+
+function groupHtml(g) {
+  const mem = groupMembers(g), st = groupState(g);
+  const counts = { keep: 0, round: 0, exclude: 0, undecided: 0 };
+  for (const it of g.members) counts[decOf(it)]++;
+  const status = Object.entries(counts).filter(([, n]) => n).map(([k, n]) => `${n} ${k === 'undecided' ? 'undecided' : k === 'keep' ? 'kept' : k === 'round' ? 'rounded' : 'excluded'}`).join(' · ');
+  // one chip per distinct value + theme, with its token match
+  const vals = new Map();
+  for (const it of mem) { const k = it.value + '|' + it.themeKey; if (!vals.has(k)) vals.set(k, { it, n: 0 }); vals.get(k).n++; }
+  const valsHtml = [...vals.values()].map(({ it, n }) => `<div class="gv">${preview(S.preset, it.value)}<code>${esc(it.value)}</code>${themeChipOf(it.themeKey)}${n > 1 ? `<span class="faint">×${n}</span>` : ''}${nearChip(it)}</div>`).join('');
+  const thumbs = mem.filter(it => it.shot);
+  const strip = thumbs.slice(0, 8).map(it => `<button class="th" data-open-item="${it.id}" title="S${it.sec.n}.${it.n} · ${esc(it.value)} · ${esc(S.captures[it.where.capture].label)}"><img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt=""></button>`).join('')
+    + (thumbs.length > 8 ? `<button class="th more" data-expand>+${thumbs.length - 8}</button>` : '');
+  const canRound = g.members.some(it => it.near);
+  const pages = g.pages.length > 3 ? `${g.pages.slice(0, 3).join(', ')} +${g.pages.length - 3}` : g.pages.join(', ');
+  const open = expanded.has(g.id);
+  return `<article class="card grp" data-gid="${g.id}" data-state="${st}">
+    <div class="grp-head">
+      <span class="num">#${g.n}</span>
+      <div class="grp-title"><b>${esc(g.label)}</b>
+        <div class="grp-meta">${g.members.length} usage${g.members.length === 1 ? '' : 's'} · ${g.instances} instances · ${esc(pages)}${g.declared ? ` · <code title="As written: ${esc(g.declared)}">${esc(g.declared.length > 70 ? g.declared.slice(0, 70) + '…' : g.declared)}</code>` : ''}</div>
+      </div>
+      <div class="seg dec gdec">
+        <button class="keep" data-gd="keep" aria-pressed="${st === 'keep'}">Keep</button>
+        <button class="round" data-gd="round" aria-pressed="${st === 'round'}" ${canRound ? '' : 'disabled title="No design-system tokens for this type"'} title="Round every usage to its nearest token">Round</button>
+        <button class="exclude" data-gd="exclude" aria-pressed="${st === 'exclude'}">Exclude</button>
+      </div>
+    </div>
+    <div class="gvals">${valsHtml}</div>
+    <div class="strip">${strip}</div>
+    <div class="grp-foot"><button class="linkish" data-expand>${open ? 'Hide usages' : `Show all ${mem.length} usage${mem.length === 1 ? '' : 's'}`}</button><span class="faint">${status}</span></div>
+    ${open ? `<div class="grp-list">${mem.map(it => `
+      <div class="gl-row" data-item="${it.id}" data-decision="${decOf(it)}">
+        <button class="th" data-open-item="${it.id}">${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : ''}</button>
+        <div class="gl-info">
+          <div><b>S${it.sec.n}.${it.n}</b> <code>${esc(it.value)}</code> ${themeChipOf(it.themeKey)} ${nearChip(it)}</div>
+          <div class="faint">${esc(it.component || `<${it.tag}>`)} · ${esc(S.captures[it.where.capture].label)}${it.text ? ` · “${esc(it.text.slice(0, 50))}”` : ''}</div>
+        </div>
+        <span class="chip dstate">${decOf(it)}</span>
+        <button class="btn small" data-open-item="${it.id}">Usage</button>
+        ${it.near && !it.near.exact ? `<button class="btn small" data-preview-item="${it.id}">Preview</button>` : ''}
+      </div>`).join('')}</div>` : ''}
+  </article>`;
+}
+
+function renderGroups() {
+  const shown = G.groups.filter(groupShown);
+  $('#gview').innerHTML = shown.length ? shown.map(groupHtml).join('') : '<div class="empty">No groups match these filters.</div>';
+  const usages = shown.reduce((n, g) => n + groupMembers(g).length, 0);
+  $('#count').textContent = `${shown.length} groups shown`;
+  $('#count').title = `${usages} usages in ${shown.length} groups (of ${G.groups.length} groups)`;
+}
+
+async function decideGroup(g, d) {
+  const st = groupState(g);
+  const ids = g.members.map(it => it.id);
+  // pressing the active decision clears it; round only applies to usages that have tokens
+  const target = st === d ? null : d;
+  const apply = target === 'round' ? g.members.filter(it => it.near).map(it => it.id) : ids;
+  if (target === 'round') for (const i of apply) { const sel = $(`#i-${i} .roundsel`); if (sel && sel.value !== 'saved') sel.value = '0'; }
+  await decide(apply, target);
+  toast(`#${g.n}: ${apply.length} usage${apply.length === 1 ? '' : 's'} → ${target || 'cleared'}`);
 }
 
 function updateProgress() {
@@ -320,6 +470,7 @@ function updateProgress() {
   for (const it of byId.values()) { p.total++; const d = S.decisions[it.id]?.decision; p[d || 'undecided']++; }
   $('#prog').innerHTML = progressBar(p) + legend(p);
   renderSuggest();
+  if (groupsMode() && $('#gview')) renderGroups();
 }
 
 // ---------- Suggested Tokens: rearrange the existing tokens to fit usage ----------
@@ -568,6 +719,19 @@ function paint(itemId) {
 
 // ---------- events ----------
 $('#filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.f = b.dataset.f; applyFilter(); });
+$('#viewf').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.view = b.dataset.v; applyFilter(); scrollTo({ top: 0 }); });
+$('#main').addEventListener('click', e => {
+  const card = e.target.closest('.grp');
+  if (!card) return;
+  const g = G.groups.find(x => x.id === card.dataset.gid);
+  const d = e.target.closest('[data-gd]');
+  if (d) { decideGroup(g, d.dataset.gd); return; }
+  const o = e.target.closest('[data-open-item]');
+  if (o) { if (e.metaKey || e.ctrlKey || e.shiftKey) window.open(popUrl(o.dataset.openItem, -1), '_blank'); else openUsage(o.dataset.openItem); return; }
+  const pv = e.target.closest('[data-preview-item]');
+  if (pv) { openPreview(pv.dataset.previewItem); return; }
+  if (e.target.closest('[data-expand]')) { expanded.has(g.id) ? expanded.delete(g.id) : expanded.add(g.id); renderGroups(); }
+});
 $('#themef').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.theme = b.dataset.t; applyFilter(); });
 $('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
 
@@ -694,6 +858,7 @@ document.addEventListener('keydown', e => {
   if (e.target.matches('input, select, textarea')) { if (e.key === 'Escape') e.target.blur(); return; }
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   if ($('#pm').classList.contains('open')) { if (e.key === 'Escape') closePreview(); return; }
+  if (groupsMode()) return;
   if (e.key === 'p' && focusedId) { openPreview(focusedId); return; }
   if ($('#lb').classList.contains('open')) { if (e.key === 'Escape' || e.key === ' ') { e.preventDefault(); $('#lb').classList.remove('open'); } return; }
   const ids = visibleIds();

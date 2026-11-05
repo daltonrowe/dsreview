@@ -1,0 +1,5621 @@
+{
+ "survey": "text-color",
+ "generatedAt": "2026-11-05T12:57:42.645Z",
+ "usages": 556,
+ "groups": [
+  {
+   "id": "a7d09c3b24",
+   "label": "Filters · <button> · “puppy”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "puppy",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "45c052944b",
+    "e8b89296cd",
+    "2d2c94531d",
+    "f22c765da2",
+    "4b1c27977d",
+    "d736460ed5",
+    "e944ea388d",
+    "c284a0b0db",
+    "8d216c6893",
+    "d885ef8634",
+    "3bf0bd60b1",
+    "022d6648f4",
+    "f08130967c",
+    "b1f5f24046"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 14,
+   "instances": 70,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 1
+  },
+  {
+   "id": "d6f70797d8",
+   "label": "Pricing V2 · <li> · “Unlimited downloads of 75+ million creat”",
+   "component": "Pricing V2",
+   "tag": "li",
+   "text": "Unlimited downloads of 75+ million creative assets",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "7043a16570",
+    "7ff7555923",
+    "3ed402f34a",
+    "80b89188bf",
+    "1083981e2e",
+    "bc50e9a49e",
+    "33d604b385",
+    "16e8404320",
+    "b2bec7c949",
+    "8a6277baa7",
+    "d8b11c6738",
+    "1218810fc0",
+    "a471a8419c",
+    "30539b2a96",
+    "4d1f180f7c",
+    "07dd606ac8",
+    "459c49f678",
+    "54e10c7c61",
+    "d200d2feac",
+    "b3bfeba047",
+    "6e82939522",
+    "bdddb7dbce",
+    "fc1b62f04a",
+    "5e782d373a",
+    "9710fc81ba",
+    "bcbe2ce39e",
+    "fcc9feb1d9",
+    "95c32ecec2",
+    "264c225e6e",
+    "cc34549c4d",
+    "bd92214483",
+    "d94c5de4c2",
+    "a791307e41",
+    "e69716f555",
+    "f45a44daf5",
+    "03c786a17e",
+    "9583dd6463",
+    "571fca692c",
+    "d98e48a5c4",
+    "a0ed618234",
+    "be7bf69a65",
+    "79fefef8a6",
+    "8c218b2e7f",
+    "2aad3aab07",
+    "56cdd37523",
+    "4f772f6ac0",
+    "b72b6879e8",
+    "4644f9a130",
+    "d094d7c002",
+    "1a3bb864ac",
+    "b34914400d",
+    "b390ef0206",
+    "426b3fad95",
+    "7a5410034d"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 54,
+   "instances": 54,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 2
+  },
+  {
+   "id": "bc3921bb77",
+   "label": "Popular photo categories · <span> · “Photos”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Photos",
+   "declared": "color: rgba(255, 255, 255, 0.92)",
+   "items": [
+    "a343a637d1"
+   ],
+   "values": [
+    "#ffffff / 92%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 54,
+   "why": [],
+   "n": 3
+  },
+  {
+   "id": "ba3eef03c7",
+   "label": "Pre-footer · <div> · “Photographer One”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Photographer One",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "86ccbd6bc5",
+    "c51d8fbc50",
+    "2b48227220",
+    "e611c4b5a7",
+    "9b7dcd4b56",
+    "190ad42ad0",
+    "719d879d61",
+    "091e198dac",
+    "289a2ff61a",
+    "4c05a7dc0e",
+    "f8a64c0ba2",
+    "1e7bdefa9a",
+    "139973edd0",
+    "5e98aa3d6b"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 14,
+   "instances": 42,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 4
+  },
+  {
+   "id": "43065e9f07",
+   "label": "Profile · <label> · “First name”",
+   "component": "Profile",
+   "tag": "label",
+   "text": "First name",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "0c8ff5e275",
+    "45a149ebc5",
+    "acfdc9e739",
+    "f3a463872a",
+    "83da7cfae9",
+    "5ae804bbc9",
+    "e1a987e09f",
+    "23b961b9af"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 8,
+   "instances": 40,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 5
+  },
+  {
+   "id": "58ea088338",
+   "label": "FAQ · <button>",
+   "component": "FAQ",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "d4ea491d37",
+    "b994c2cc55",
+    "1856e9efc4",
+    "bac20e8332"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 40,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 6
+  },
+  {
+   "id": "93c974ef54",
+   "label": "Fresh content · <button>",
+   "component": "Fresh content",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5b67cf67ab",
+    "d7ecc79517",
+    "837a23b540",
+    "c0fc132379"
+   ],
+   "values": [
+    "#0e2332",
+    "#ffffff",
+    "#aaaaaa",
+    "#ff7900"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 32,
+   "why": [
+    "element",
+    "style"
+   ],
+   "n": 7
+  },
+  {
+   "id": "26f7606a1d",
+   "label": "Trustpilot ticker · <span> · “·”",
+   "component": "Trustpilot ticker",
+   "tag": "span",
+   "text": "·",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "164e5eb1a7",
+    "367757e535"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 32,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 8
+  },
+  {
+   "id": "957544890e",
+   "label": "Trustpilot ticker · <span> · ““””",
+   "component": "Trustpilot ticker",
+   "tag": "span",
+   "text": "“”",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "d61d955500",
+    "f4656f8d80"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 32,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 9
+  },
+  {
+   "id": "8ce923276c",
+   "label": "Profile · <input>",
+   "component": "Profile",
+   "tag": "input",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5b4f51201e",
+    "43d38bcbb1",
+    "64c6b1bc89",
+    "be0ff611e0",
+    "4a28e98183",
+    "dbf9d2ea40"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 6,
+   "instances": 30,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 10
+  },
+  {
+   "id": "87f7fdcfb5",
+   "label": "Social proof V2 · <p> · ““””",
+   "component": "Social proof V2",
+   "tag": "p",
+   "text": "“”",
+   "declared": "color: inherit",
+   "items": [
+    "2ddfb314c0",
+    "fa19e14c52"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 30,
+   "why": [
+    "copy"
+   ],
+   "n": 11
+  },
+  {
+   "id": "dbd3ab86c2",
+   "label": "FAQ · <a> · “View public profile”",
+   "component": "FAQ",
+   "tag": "a",
+   "text": "View public profile",
+   "declared": "color: var(--color-orange-100)",
+   "items": [
+    "2375cd29f1",
+    "f7188d2d0c",
+    "599adce265",
+    "a106678ec7",
+    "2a2589b6e1",
+    "9974f5d4e1",
+    "6735911a99",
+    "ff86ef729e",
+    "5969ef2d0c"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Pricing",
+    "Log In",
+    "Log In v1",
+    "Settings"
+   ],
+   "usages": 9,
+   "instances": 25,
+   "why": [
+    "copy",
+    "rule"
+   ],
+   "n": 12
+  },
+  {
+   "id": "054dae46ac",
+   "label": "Pagination · <button> · “1”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "1",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "658fad9071",
+    "637196d44d",
+    "884b5dcc32",
+    "5aaf78dd3e",
+    "3f62e06d48",
+    "1ba09542b8",
+    "aad80b60bc",
+    "01169618c0",
+    "4bb4b5400e",
+    "7d2106181b",
+    "0b63b8f501",
+    "51c51b4569"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 12,
+   "instances": 24,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 13
+  },
+  {
+   "id": "dd5cc45d8e",
+   "label": "Pre-footer · <div> · “Featured Photographers”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Featured Photographers",
+   "declared": "color: var(--ez-color--grey-90)",
+   "items": [
+    "9fa02b08d4",
+    "19482bd9ea",
+    "a887920788",
+    "2e083e2318",
+    "9c876685d9",
+    "862da30cc7",
+    "013b63d3a1",
+    "4be50fc73d"
+   ],
+   "values": [
+    "#ffffff",
+    "#273947"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 8,
+   "instances": 24,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 14
+  },
+  {
+   "id": "e5b4ba5173",
+   "label": "Profile · <button> · “Change photo”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Change photo",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "4014578f5c",
+    "ed69537fe0",
+    "28fcea6dc9",
+    "93cef701b9",
+    "600c80d9a9",
+    "0335073896"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 6,
+   "instances": 22,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 15
+  },
+  {
+   "id": "c16f3e3d90",
+   "label": "Filters · <button>",
+   "component": "Filters",
+   "tag": "button",
+   "text": "",
+   "declared": "color: inherit",
+   "items": [
+    "f7c242b561",
+    "7c3dfb7abf",
+    "dad922c2d8",
+    "01c44c29bf"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2",
+    "#ffffff",
+    "#ff7900"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 20,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 16
+  },
+  {
+   "id": "b82f942d82",
+   "label": "Why card unlimited · <p> · “Unlimited royalty-free downloads.”",
+   "component": "Why card unlimited",
+   "tag": "p",
+   "text": "Unlimited royalty-free downloads.",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "279c754ccb",
+    "e69eeefcae",
+    "d6fce3849f",
+    "bb55fc5818",
+    "ccf7ceb886",
+    "4f8a8a70dd"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 6,
+   "instances": 12,
+   "why": [
+    "style"
+   ],
+   "n": 17
+  },
+  {
+   "id": "e77ff1472d",
+   "label": "Sign in form · <a> · “Privacy Policy”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Privacy Policy",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "40d553a6b7",
+    "9e8af8f39b",
+    "fa363fbfc7",
+    "1fe0019150",
+    "afb359739b",
+    "0de383b6e5"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 6,
+   "instances": 12,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 18
+  },
+  {
+   "id": "3b11785123",
+   "label": "Featured collections · <span> · “Collection”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Collection",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "411836b842",
+    "83d1e7af05",
+    "1f7a921e6d",
+    "2ace92b3e3",
+    "0dd153c730",
+    "68879ba868"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 6,
+   "instances": 12,
+   "why": [
+    "copy"
+   ],
+   "n": 19
+  },
+  {
+   "id": "581fa74fd2",
+   "label": "Account header · <div> · “shawn@eezy.com”",
+   "component": "Account header",
+   "tag": "div",
+   "text": "shawn@eezy.com",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "ac1685888e",
+    "563a03e08c",
+    "16378fc402",
+    "7238be4e62"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 4,
+   "instances": 12,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 20
+  },
+  {
+   "id": "c0a33f593c",
+   "label": "Sign in form · <span> · “*”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "*",
+   "declared": "color: var(--color-red-90)",
+   "items": [
+    "28ad63aa25",
+    "7f1ad5ce84",
+    "c0ca10b33c",
+    "552291b2ee"
+   ],
+   "values": [
+    "#f75b5b"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 4,
+   "instances": 12,
+   "why": [
+    "copy"
+   ],
+   "n": 21
+  },
+  {
+   "id": "4fcc7eebb9",
+   "label": "<h1> · “Dog Photos”",
+   "component": null,
+   "tag": "h1",
+   "text": "Dog Photos",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "14c2dee6c5",
+    "3540f49028"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 22
+  },
+  {
+   "id": "47d14292c2",
+   "label": "Filters · <button> · “Search settings”",
+   "component": "Filters",
+   "tag": "button",
+   "text": "Search settings",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5d36a45631",
+    "4fab103fd8"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 23
+  },
+  {
+   "id": "4444bde9e1",
+   "label": "Profile · <h2> · “Personal info”",
+   "component": "Profile",
+   "tag": "h2",
+   "text": "Personal info",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "6f2470edd1",
+    "064fa0992f"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 24
+  },
+  {
+   "id": "0bc5601c61",
+   "label": "Profile · <button>",
+   "component": "Profile",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "0f6dfa028a",
+    "9f0be7ce98"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 25
+  },
+  {
+   "id": "d3d2785e51",
+   "label": "<h2> · “Sign-in & security”",
+   "component": null,
+   "tag": "h2",
+   "text": "Sign-in & security",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "686cbbbf91",
+    "faa5fd6e0d"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 26
+  },
+  {
+   "id": "c1ca7c4187",
+   "label": "<div> · “Email”",
+   "component": null,
+   "tag": "div",
+   "text": "Email",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "be7c896f3e",
+    "2c0e81c170"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 27
+  },
+  {
+   "id": "a76d3ac90e",
+   "label": "<div> · “Google”",
+   "component": null,
+   "tag": "div",
+   "text": "Google",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "c1939c9710",
+    "7f8e6d0c84"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 28
+  },
+  {
+   "id": "b694dc4b18",
+   "label": "<h2> · “Delete account”",
+   "component": null,
+   "tag": "h2",
+   "text": "Delete account",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "dbeafb1f36",
+    "033dd5f12e"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 29
+  },
+  {
+   "id": "53ba661a41",
+   "label": "Trustpilot marquee · <span> · “·”",
+   "component": "Trustpilot marquee",
+   "tag": "span",
+   "text": "·",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "559b3afa40",
+    "7bd3aaf43f"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 30
+  },
+  {
+   "id": "935565c84c",
+   "label": "Profile · <p> · “Your name and photo appear on your publi”",
+   "component": "Profile",
+   "tag": "p",
+   "text": "Your name and photo appear on your public profile.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "17150dac12",
+    "a9d0a40772"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 31
+  },
+  {
+   "id": "ab0e54a0e5",
+   "label": "Profile · <button> · “Remove”",
+   "component": "Profile",
+   "tag": "button",
+   "text": "Remove",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "80adebeddf",
+    "6a4c95f8f1"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 32
+  },
+  {
+   "id": "2812a538d5",
+   "label": "<p> · “How you log in to Vecteezy.”",
+   "component": null,
+   "tag": "p",
+   "text": "How you log in to Vecteezy.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "ca7e2b83dc",
+    "263f11cfe0"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 33
+  },
+  {
+   "id": "40f1a6c3bc",
+   "label": "<div> · “Connected as shawn@eezy.com”",
+   "component": null,
+   "tag": "div",
+   "text": "Connected as shawn@eezy.com",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "ab32e82451",
+    "9179d18d33"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 34
+  },
+  {
+   "id": "6f3bf46153",
+   "label": "<p> · “This can't be undone.”",
+   "component": null,
+   "tag": "p",
+   "text": "This can't be undone.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "6253da93dd",
+    "df8cbbabd7"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 35
+  },
+  {
+   "id": "7511916af9",
+   "label": "<div> · “Permanently delete your account, license”",
+   "component": null,
+   "tag": "div",
+   "text": "Permanently delete your account, license history, and saved collections.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "eb85a85f70",
+    "c4b781a65f"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 36
+  },
+  {
+   "id": "c6423c053b",
+   "label": "<span> · “royalty free vector graphics matching”",
+   "component": null,
+   "tag": "span",
+   "text": "royalty free vector graphics matching",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "19134b6290",
+    "b4e887bda2"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 37
+  },
+  {
+   "id": "bcca6f3c06",
+   "label": "<strong> · “173,834”",
+   "component": null,
+   "tag": "strong",
+   "text": "173,834",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "5ae2af4ed6",
+    "c348143f11"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 38
+  },
+  {
+   "id": "1897698bd4",
+   "label": "<strong> · “\"Dog\"”",
+   "component": null,
+   "tag": "strong",
+   "text": "\"Dog\"",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "1193eb6ec2",
+    "cc5b6a9f7f"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 39
+  },
+  {
+   "id": "21f9227189",
+   "label": "Trustpilot marquee · <p> · ““””",
+   "component": "Trustpilot marquee",
+   "tag": "p",
+   "text": "“”",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "812620507b",
+    "4844b4bd6f"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 40
+  },
+  {
+   "id": "1ea035c2b6",
+   "label": "Profile · <span> · “@”",
+   "component": "Profile",
+   "tag": "span",
+   "text": "@",
+   "declared": "color: var(--ez-color--grey-50)",
+   "items": [
+    "db6cb95040",
+    "2fb7c14cd1"
+   ],
+   "values": [
+    "#869198",
+    "#909090"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 10,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 41
+  },
+  {
+   "id": "350b50d842",
+   "label": "<button> · “Delete account”",
+   "component": null,
+   "tag": "button",
+   "text": "Delete account",
+   "declared": "color: var(--ez-color--error)",
+   "items": [
+    "003b1e849a"
+   ],
+   "values": [
+    "#f75b5b"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 10,
+   "why": [],
+   "n": 42
+  },
+  {
+   "id": "4481638fa8",
+   "label": "<span> · “Connected”",
+   "component": null,
+   "tag": "span",
+   "text": "Connected",
+   "declared": "color: var(--ez-color--success-dark)",
+   "items": [
+    "c76fda0e2f"
+   ],
+   "values": [
+    "#52c648"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 10,
+   "why": [],
+   "n": 43
+  },
+  {
+   "id": "6b44bce8aa",
+   "label": "Pricing V4 · <button> · “Yearly ( off)”",
+   "component": "Pricing V4",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "da6ba2e6ed",
+    "b021842c70",
+    "683e6ff755",
+    "376855abe8",
+    "ea0c0ace45",
+    "e6e7949b4e",
+    "76944bf390",
+    "6dcdd9b151"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2",
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 8,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 44
+  },
+  {
+   "id": "957fc970a0",
+   "label": "Pricing V2 · <span> · “USD”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "USD",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "76aa1092ad",
+    "66e31ffe21",
+    "997b24787d",
+    "9e9d712129",
+    "72e536b3eb",
+    "2e4ae615df",
+    "095b0b0d1e",
+    "4d5d788261"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 8,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 45
+  },
+  {
+   "id": "b232a34f6c",
+   "label": "Pricing V2 · <span> · “per month”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "per month",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "757197e481",
+    "4a73659676",
+    "ee5d8b6458",
+    "d502afda25",
+    "fef978ea4b",
+    "c124d5a4d1",
+    "1a88970606",
+    "5f0cc533a8"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 8,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 46
+  },
+  {
+   "id": "ed464602aa",
+   "label": "Pricing V2 · <span> · “Renews automatically”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Renews automatically",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "99a0c61817",
+    "66453a1835",
+    "e85c4c8c1d",
+    "141cc0e4cc",
+    "96dea0ce31",
+    "79cb1441e7",
+    "b872e8022b",
+    "ff3ef56c32"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 8,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 47
+  },
+  {
+   "id": "d6c2307a14",
+   "label": "Home top bar · <span> · “Explore”",
+   "component": "Home top bar",
+   "tag": "span",
+   "text": "Explore",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "ee308f8018",
+    "d361f541ad",
+    "fc65e81305",
+    "5f0f88a1c8"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2",
+    "#ffffff / 90%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 48
+  },
+  {
+   "id": "19c434b375",
+   "label": "Image results · <span> · “Sponsored results”",
+   "component": "Image results",
+   "tag": "span",
+   "text": "Sponsored results",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "a66a07cdcb",
+    "bac58ef01f",
+    "5a44ad1037",
+    "75f05d4425"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 49
+  },
+  {
+   "id": "c54bc2e367",
+   "label": "Pricing V2 · <a> · “Get Vecteezy Pro”",
+   "component": "Pricing V2",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "cfadee3e97",
+    "c39aca383d",
+    "26d927b569",
+    "201f951a73"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 8,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 50
+  },
+  {
+   "id": "486a6c86b2",
+   "label": "Settings nav · <div> · “Settings”",
+   "component": "Settings nav",
+   "tag": "div",
+   "text": "Settings",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "138e4ffce9",
+    "b11d63a069"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 51
+  },
+  {
+   "id": "25e39f08c1",
+   "label": "Image results · <span> · “View More”",
+   "component": "Image results",
+   "tag": "span",
+   "text": "View More",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "b3e2dcf899",
+    "6ed8754070"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 8,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 52
+  },
+  {
+   "id": "1cf31b5171",
+   "label": "Settings nav · <a> · “Log out”",
+   "component": "Settings nav",
+   "tag": "a",
+   "text": "Log out",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "0f273f2ced",
+    "0fb9ef321e"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 8,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 53
+  },
+  {
+   "id": "0251c4db62",
+   "label": "Top bar · <span> · “Log In”",
+   "component": "Top bar",
+   "tag": "span",
+   "text": "Log In",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "de7784e9d0",
+    "2d8261ff3d",
+    "fb5851d889",
+    "84be18c052"
+   ],
+   "values": [
+    "#0e2332",
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 6,
+   "why": [
+    "copy",
+    "element",
+    "rule",
+    "style"
+   ],
+   "n": 54
+  },
+  {
+   "id": "de6f6bae25",
+   "label": "Sign in form · <button>",
+   "component": "Sign in form",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "9cc30972cb",
+    "d02ae20468",
+    "0978b6bcde"
+   ],
+   "values": [
+    "#9fa7ad",
+    "#7f7f7f"
+   ],
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "usages": 3,
+   "instances": 6,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 55
+  },
+  {
+   "id": "93cf4786f0",
+   "label": "Pre-footer · <div> · “Social Proof”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Social Proof",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "17e746b97e",
+    "083c162563"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 6,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 56
+  },
+  {
+   "id": "0db00e69cf",
+   "label": "Pre-footer · <div> · “Join Pro”",
+   "component": "Pre-footer",
+   "tag": "div",
+   "text": "Join Pro",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "2884624b64",
+    "6a1c5c6a7e"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 6,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 57
+  },
+  {
+   "id": "fd3f4bcd22",
+   "label": "Home footer · <p> · “The best value in the industry - today.”",
+   "component": "Home footer",
+   "tag": "p",
+   "text": "The best value in the industry - today.",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "c9d81fb71d"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 58
+  },
+  {
+   "id": "a82b6997c3",
+   "label": "Home footer · <a> · “Try Pro”",
+   "component": "Home footer",
+   "tag": "a",
+   "text": "Try Pro",
+   "declared": "color: transparent",
+   "items": [
+    "941d5b5065"
+   ],
+   "values": [
+    "#000000 / 0%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 6,
+   "why": [],
+   "n": 59
+  },
+  {
+   "id": "09abe17a8f",
+   "label": "Explore content types · <div> · “Content Type”",
+   "component": "Explore content types",
+   "tag": "div",
+   "text": "Content Type",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "d897b932b8",
+    "e02b18dc94",
+    "9bddf1d318",
+    "7a38bd7ac8"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 60
+  },
+  {
+   "id": "1927bae78d",
+   "label": "Pricing V2 · <span> · “Vecteezy Pro for Teams”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Vecteezy Pro for Teams",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "ba30bbf5cf",
+    "457497a3ed",
+    "6eab105271",
+    "dc5211a701"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 61
+  },
+  {
+   "id": "e9ceb8242a",
+   "label": "Pricing V2 top nav · <a> · “My Account”",
+   "component": "Pricing V2 top nav",
+   "tag": "a",
+   "text": "My Account",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "0fa1f1765c",
+    "b5dcf62b65",
+    "4f83c321fc",
+    "6e9e5bcd1b"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 62
+  },
+  {
+   "id": "3e7e7a1bbd",
+   "label": "FAQ · <h2> · “Frequently Asked Questions”",
+   "component": "FAQ",
+   "tag": "h2",
+   "text": "Frequently Asked Questions",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "f1e8edced2",
+    "652e16e87e",
+    "96b9f94ad6",
+    "0261f5ee47"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 63
+  },
+  {
+   "id": "c5ab8ad75f",
+   "label": "Pricing V3 hero · <strong> · “4.9”",
+   "component": "Pricing V3 hero",
+   "tag": "strong",
+   "text": "4.9",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "f8449bc1b6",
+    "d031262f6f",
+    "0a680f8f20",
+    "e3d00d0a5e"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 64
+  },
+  {
+   "id": "55746c18cc",
+   "label": "Pricing V3 hero · <strong> · “33,572 reviews”",
+   "component": "Pricing V3 hero",
+   "tag": "strong",
+   "text": "33,572 reviews",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "fd9b26f35e",
+    "1c016e7479",
+    "ed9903cf32",
+    "44a8141598"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 65
+  },
+  {
+   "id": "6b5f42e3d7",
+   "label": "Pricing V3 hero · <button> · “Yearly ( off)”",
+   "component": "Pricing V3 hero",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "26cb0ceb81",
+    "16c4cf8488",
+    "023768d0d6",
+    "1ed4864c37"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2",
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 66
+  },
+  {
+   "id": "a9ba4c0a84",
+   "label": "Pricing V3 hero · <span> · “Buying for a team?”",
+   "component": "Pricing V3 hero",
+   "tag": "span",
+   "text": "Buying for a team?",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "4c74c6382e",
+    "2c7519864c",
+    "01c3b858c8",
+    "6791afa422"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 67
+  },
+  {
+   "id": "0a61e7cb27",
+   "label": "Account header · <a> · “Back to Vecteezy”",
+   "component": "Account header",
+   "tag": "a",
+   "text": "Back to Vecteezy",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "ea28438fbc",
+    "ddbd536627",
+    "b9ce7aefb0",
+    "f8afba08c8"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 68
+  },
+  {
+   "id": "b117b82100",
+   "label": "Pricing V2 · <span> · “Save up to 15% with a plan for your whol”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "Save up to 15% with a plan for your whole team",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "dbfaa83cc9",
+    "4125877625",
+    "f75b7e6cf9",
+    "8e84eabf16"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 69
+  },
+  {
+   "id": "10f9a000c7",
+   "label": "FAQ · <p> · “Have more questions?”",
+   "component": "FAQ",
+   "tag": "p",
+   "text": "Have more questions?",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "a0dc6276d1",
+    "70c407e4f4",
+    "189e0a4589",
+    "331a2ee800"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 70
+  },
+  {
+   "id": "806cf6853b",
+   "label": "Pricing V3 hero · <span> · “TrustScore |”",
+   "component": "Pricing V3 hero",
+   "tag": "span",
+   "text": "TrustScore |",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "487da04841",
+    "3670ae105b",
+    "e7b85d9c91",
+    "24c9a1577b"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 71
+  },
+  {
+   "id": "7e45a38d62",
+   "label": "Pricing V3 hero · <span> · “Save up to 15% with Vecteezy Pro for Tea”",
+   "component": "Pricing V3 hero",
+   "tag": "span",
+   "text": "Save up to 15% with Vecteezy Pro for Teams",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "45d224bb14",
+    "59b96451dd",
+    "6dc1468f39",
+    "a7095d7680"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 4,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 72
+  },
+  {
+   "id": "1d94611b0b",
+   "label": "Home top bar · <button>",
+   "component": "Home top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "b15e1b2cd7",
+    "f43f56e2fa"
+   ],
+   "values": [
+    "#0e2332",
+    "#ffffff / 90%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 73
+  },
+  {
+   "id": "ebcc6087ec",
+   "label": "Hero masthead · <button>",
+   "component": "Hero masthead",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--text-headers)",
+   "items": [
+    "fc43c13c9e",
+    "94106f2c30"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 74
+  },
+  {
+   "id": "01ced0a246",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--text-headers)",
+   "items": [
+    "eb2b8b327f",
+    "2cdd18c49a"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 75
+  },
+  {
+   "id": "978652f393",
+   "label": "Top bar · <button>",
+   "component": "Top bar",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "493a0b7ccd",
+    "4905a84a32"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 76
+  },
+  {
+   "id": "7c1701b685",
+   "label": "Pagination · <span> · “...”",
+   "component": "Pagination",
+   "tag": "span",
+   "text": "...",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "9e8c6d140c",
+    "985592b634"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 77
+  },
+  {
+   "id": "a3fb2bcca8",
+   "label": "Search feedback · <div> · “How was your search experience?”",
+   "component": "Search feedback",
+   "tag": "div",
+   "text": "How was your search experience?",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "0b546bab0c",
+    "40285aa935"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 78
+  },
+  {
+   "id": "7f03216844",
+   "label": "Pricing V2 · <button> · “Yearly ( off)”",
+   "component": "Pricing V2",
+   "tag": "button",
+   "text": "Yearly ( off)",
+   "declared": "color: rgb(14, 35, 50)",
+   "items": [
+    "2dc7d290ed",
+    "d264e12506"
+   ],
+   "values": [
+    "#0e2332",
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "style"
+   ],
+   "n": 79
+  },
+  {
+   "id": "61bcc4bc6d",
+   "label": "Bottom CTA · <a> · “Get Vecteezy Pro”",
+   "component": "Bottom CTA",
+   "tag": "a",
+   "text": "Get Vecteezy Pro",
+   "declared": "color: rgb(14, 35, 50)",
+   "items": [
+    "7c5f4eb06f",
+    "87e793dc9d"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "sibling",
+    "style"
+   ],
+   "n": 80
+  },
+  {
+   "id": "e2e4b41f5e",
+   "label": "Log In · <button>",
+   "component": "Log In",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "4f26f389ca",
+    "c1d492e28a"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "sibling",
+    "style"
+   ],
+   "n": 81
+  },
+  {
+   "id": "1965704e46",
+   "label": "Bottom CTA · <h2> · “Ready to get started? Join Pro”",
+   "component": "Bottom CTA",
+   "tag": "h2",
+   "text": "Ready to get started? Join Pro",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "f1dc1a5567",
+    "d23ef4d2c8"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy"
+   ],
+   "n": 82
+  },
+  {
+   "id": "c77e96264f",
+   "label": "Bottom CTA · <p> · “Unlimited downloads, AI tools and full c”",
+   "component": "Bottom CTA",
+   "tag": "p",
+   "text": "Unlimited downloads, AI tools and full commercial rights for one simple price. C",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "42a1cff2b5",
+    "8349ffea53"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy"
+   ],
+   "n": 83
+  },
+  {
+   "id": "eaba5a36f2",
+   "label": "Why card bundles · <span> · “New”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "New",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "a6d4f1b347",
+    "12164b3bd7"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 84
+  },
+  {
+   "id": "4b848b6206",
+   "label": "Sign in form · <span> · “Password”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "Password",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "73af924342",
+    "858f2f6865"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 85
+  },
+  {
+   "id": "0b31e46569",
+   "label": "Sign in form · <span> · “or”",
+   "component": "Sign in form",
+   "tag": "span",
+   "text": "or",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "bf59d8c7f1",
+    "28271bcc77"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 86
+  },
+  {
+   "id": "09550e558f",
+   "label": "Sign in form · <p> · “This site is protected by reCAPTCHA and ”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "2119b04816",
+    "e4b9a44dcd"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 87
+  },
+  {
+   "id": "649f7fbb15",
+   "label": "Pricing V2 · <span> · “On Sale Now”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "On Sale Now",
+   "declared": "color: var(--color-orange-100)",
+   "items": [
+    "61b8a2d8c7",
+    "e9f665b532"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 4,
+   "why": [
+    "copy",
+    "style"
+   ],
+   "n": 88
+  },
+  {
+   "id": "87a1d7c368",
+   "label": "Home top bar · <a> · “Join Pro”",
+   "component": "Home top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "b9253ddc63"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 89
+  },
+  {
+   "id": "cf5753ab5e",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "4dea9200c4"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 90
+  },
+  {
+   "id": "659e40c60c",
+   "label": "Pagination · <button> · “Next page”",
+   "component": "Pagination",
+   "tag": "button",
+   "text": "Next page",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "a6caa57312"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 4,
+   "why": [],
+   "n": 91
+  },
+  {
+   "id": "17ccc5eb8c",
+   "label": "Popular photo categories · <h2> · “Authentic Images Every Idea”",
+   "component": "Popular photo categories",
+   "tag": "h2",
+   "text": "Authentic Images Every Idea",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5463b54a8c",
+    "07be554f75"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 92
+  },
+  {
+   "id": "affda14698",
+   "label": "Popular photo categories · <h2> · “Browse Category”",
+   "component": "Popular photo categories",
+   "tag": "h2",
+   "text": "Browse Category",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5878aab75a",
+    "1c083c603d"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 93
+  },
+  {
+   "id": "57366b1b22",
+   "label": "AI Studio home · <textarea> · “Start typing or upload an image...”",
+   "component": "AI Studio home",
+   "tag": "textarea",
+   "text": "Start typing or upload an image...",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "621d4eb101",
+    "b1fde6edd1"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 94
+  },
+  {
+   "id": "2494acb378",
+   "label": "Top bar · <input> · “Search vectors, photos & videos...”",
+   "component": "Top bar",
+   "tag": "input",
+   "text": "Search vectors, photos & videos...",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "4ca1b882ef",
+    "83396438ae"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 95
+  },
+  {
+   "id": "9da2f63bc8",
+   "label": "Top bar · <a> · “Log In”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Log In",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5c98532253",
+    "53eb348b62"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 96
+  },
+  {
+   "id": "8472b53c43",
+   "label": "Collections · <div> · “Autumn vibes”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Autumn vibes",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "db5d4366f1",
+    "9cd6726632"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 97
+  },
+  {
+   "id": "2df4bd1528",
+   "label": "Collections · <div> · “Christmas season”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Christmas season",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "45bbe243ae",
+    "60d658fb76"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 98
+  },
+  {
+   "id": "072b71799a",
+   "label": "Collections · <div> · “Nature textures”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Nature textures",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "d453c6b6ef",
+    "b34096897c"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 99
+  },
+  {
+   "id": "a1c9bc3670",
+   "label": "Collections · <div> · “Vast landscapes”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "Vast landscapes",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "6ad19a19b0",
+    "9950c23fc4"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 100
+  },
+  {
+   "id": "58feef0d5d",
+   "label": "<h1> · “Join Pro to Unlock Everything”",
+   "component": null,
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "4447c31332",
+    "7533abd6ba"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 101
+  },
+  {
+   "id": "8d20f2eb2e",
+   "label": "Customer reviews · <h2> · “Confidence backed by real customer revie”",
+   "component": "Customer reviews",
+   "tag": "h2",
+   "text": "Confidence backed by real customer reviews",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "0b6d92e797",
+    "37c1a024af"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 102
+  },
+  {
+   "id": "903be64370",
+   "label": "Pricing V3 hero · <h1> · “Join Pro to Unlock Everything”",
+   "component": "Pricing V3 hero",
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "f6b4aba50d",
+    "3ae072af7b"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 103
+  },
+  {
+   "id": "97adb42ffd",
+   "label": "Why Vecteezy Pro · <h2> · “Why go Vecteezy Pro”",
+   "component": "Why Vecteezy Pro",
+   "tag": "h2",
+   "text": "Why go Vecteezy Pro",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "dd01d381ed",
+    "55d26f70c3"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 104
+  },
+  {
+   "id": "4845d6ff6a",
+   "label": "Pricing V4 · <h1> · “Join Pro Unlock Everything”",
+   "component": "Pricing V4",
+   "tag": "h1",
+   "text": "Join Pro Unlock Everything",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "7d6e3a5d52",
+    "84c41f8fb4"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 105
+  },
+  {
+   "id": "acf0acf220",
+   "label": "Pricing V4 · <p> · “Access 75+ million vectors, photos, and ”",
+   "component": "Pricing V4",
+   "tag": "p",
+   "text": "Access 75+ million vectors, photos, and videos, with industry leading AI tools t",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "fbe40256b1",
+    "5aa837406c"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 106
+  },
+  {
+   "id": "fae0a40c97",
+   "label": "Pricing V4 · <span> · “billed annually”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "billed annually",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "f738605aa8",
+    "b423eac655"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 107
+  },
+  {
+   "id": "f73a41beeb",
+   "label": "Pricing V4 · <span> · “Rated Excellent on”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Rated Excellent on",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "915689af22",
+    "75d4c86a9a"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 108
+  },
+  {
+   "id": "d5fc6f8ef7",
+   "label": "Sign in form · <h1> · “Create an account”",
+   "component": "Sign in form",
+   "tag": "h1",
+   "text": "Create an account",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "a01d65aa72",
+    "8898af9c83"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 109
+  },
+  {
+   "id": "4cd52738ac",
+   "label": "Sign in form · <h1> · “Log in”",
+   "component": "Sign in form",
+   "tag": "h1",
+   "text": "Log in",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "db77e02a34",
+    "fc3c3f51e9"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 110
+  },
+  {
+   "id": "9c3d8a51fb",
+   "label": "Summary rail · <span> · “7 of 20 generations”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "7 of 20 generations",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "3f72793e31",
+    "aed6c556c0"
+   ],
+   "values": [
+    "#0e2332",
+    "#f2f2f2"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 111
+  },
+  {
+   "id": "9c57f38c8e",
+   "label": "<div> · “Showing “Cat” search results with 7 filt”",
+   "component": null,
+   "tag": "div",
+   "text": "Showing “Cat” search results with 7 filters applied.",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "65264f0bcf",
+    "ef3c7b2dc8"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "style"
+   ],
+   "n": 112
+  },
+  {
+   "id": "14d8e62399",
+   "label": "<span> · “Chat query ending in”",
+   "component": null,
+   "tag": "span",
+   "text": "Chat query ending in",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "08fb6494c0",
+    "a8190e0e14"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 113
+  },
+  {
+   "id": "85a6804ab9",
+   "label": "<span> · “17px / 700, quoted, grey-100”",
+   "component": null,
+   "tag": "span",
+   "text": "17px / 700, quoted, grey-100",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "370b0bd577",
+    "a0faf75e12"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 114
+  },
+  {
+   "id": "2fd5e2e630",
+   "label": "Popular photo categories · <span> · “Categories”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Categories",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "4f38e9a5d3",
+    "392453168c"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 115
+  },
+  {
+   "id": "9487e89034",
+   "label": "Popular photo categories · <button>",
+   "component": "Popular photo categories",
+   "tag": "button",
+   "text": "",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "a937214d45",
+    "9eb803b9ae"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 116
+  },
+  {
+   "id": "99c172605b",
+   "label": "Pricing V4 · <span> · “(regularly )”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "(regularly )",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "5eb650353c",
+    "59f23cdf13"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 117
+  },
+  {
+   "id": "b435422717",
+   "label": "Settings nav · <a> · “Back to Vecteezy”",
+   "component": "Settings nav",
+   "tag": "a",
+   "text": "Back to Vecteezy",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "1c4b8fecbf",
+    "a6c8a43cbf"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 118
+  },
+  {
+   "id": "aa8eb8f1b2",
+   "label": "Summary rail · <span> · “Your plan”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "Your plan",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "d0aa5b91d7",
+    "e8b766e60e"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 119
+  },
+  {
+   "id": "6972777dc4",
+   "label": "Summary rail · <span> · “AI Magic today”",
+   "component": "Summary rail",
+   "tag": "span",
+   "text": "AI Magic today",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "a6b215521f",
+    "598c0c18e2"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 120
+  },
+  {
+   "id": "5f95634ba1",
+   "label": "Summary rail · <div> · “Questions about your account?”",
+   "component": "Summary rail",
+   "tag": "div",
+   "text": "Questions about your account?",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "7760408856",
+    "8f69f1d56b"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 121
+  },
+  {
+   "id": "6dfc5637fe",
+   "label": "Settings overview · <div> · “shawn@eezy.com”",
+   "component": "Settings overview",
+   "tag": "div",
+   "text": "shawn@eezy.com",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "8e103fee1c",
+    "689b8f3b03"
+   ],
+   "values": [
+    "#6e7b84",
+    "#aaaaaa"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 122
+  },
+  {
+   "id": "df7bba16c4",
+   "label": "<span> · “Trigger”",
+   "component": null,
+   "tag": "span",
+   "text": "Trigger",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "de47793e7a",
+    "19e7c483f1"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 123
+  },
+  {
+   "id": "198463f1f6",
+   "label": "<span> · “Card”",
+   "component": null,
+   "tag": "span",
+   "text": "Card",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "0ce9fa3a2a",
+    "9d6b1c6943"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 124
+  },
+  {
+   "id": "022c10976c",
+   "label": "<span> · “Icon”",
+   "component": null,
+   "tag": "span",
+   "text": "Icon",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "6536014271",
+    "e031abb4d1"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 125
+  },
+  {
+   "id": "6f29f113df",
+   "label": "<span> · “Query”",
+   "component": null,
+   "tag": "span",
+   "text": "Query",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "a9143ea00d",
+    "94827959cc"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy"
+   ],
+   "n": 126
+  },
+  {
+   "id": "dde4e4a69a",
+   "label": "Popular photo categories · <span> · “for”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "for",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "c0e7136466",
+    "d0d2194ae8"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 127
+  },
+  {
+   "id": "671e53d946",
+   "label": "Popular photo categories · <p> · “Explore millions of high-quality, royalt”",
+   "component": "Popular photo categories",
+   "tag": "p",
+   "text": "Explore millions of high-quality, royalty-free stock photos from our global netw",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "7812b724f3",
+    "e2f0b4c952"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 128
+  },
+  {
+   "id": "332c57f4e4",
+   "label": "Popular photo categories · <strong> · “43,542”",
+   "component": "Popular photo categories",
+   "tag": "strong",
+   "text": "43,542",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "7042b2cae1",
+    "28063028eb"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 129
+  },
+  {
+   "id": "1b3af12177",
+   "label": "Popular photo categories · <span> · “by”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "by",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "f61ca74ed5",
+    "b5113ffbb5"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 130
+  },
+  {
+   "id": "b9827cb143",
+   "label": "Home search dropdown · <div> · “Recent searches”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Recent searches",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "bbe5f215e0",
+    "be00bcb70b"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 131
+  },
+  {
+   "id": "3b3b8b8d67",
+   "label": "Home search dropdown · <div> · “Trending searches”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Trending searches",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "033fdfff90",
+    "fc03aa6828"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 132
+  },
+  {
+   "id": "c5dcb4899d",
+   "label": "Home search dropdown · <div> · “Recently viewed”",
+   "component": "Home search dropdown",
+   "tag": "div",
+   "text": "Recently viewed",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "1df2be1847",
+    "a313fba672"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Search Dropdown"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 133
+  },
+  {
+   "id": "e895a5426e",
+   "label": "<p> · “75+ million photos, vectors and videos, ”",
+   "component": null,
+   "tag": "p",
+   "text": "75+ million photos, vectors and videos, plus AI tools to make them your own.",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "e563b3f2b1",
+    "695a3231e1"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 134
+  },
+  {
+   "id": "f744cce4f0",
+   "label": "Customer reviews · <p> · “See more reviews at”",
+   "component": "Customer reviews",
+   "tag": "p",
+   "text": "See more reviews at",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "ae0c0c0c37",
+    "67b9f50405"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 135
+  },
+  {
+   "id": "420724b2d3",
+   "label": "Customer reviews · <a> · “Trustpilot”",
+   "component": "Customer reviews",
+   "tag": "a",
+   "text": "Trustpilot",
+   "declared": "color: inherit",
+   "items": [
+    "47dd44e6c2",
+    "0b1520c798"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 136
+  },
+  {
+   "id": "9cc038d3cb",
+   "label": "Pricing V3 hero · <p> · “Vecteezy is the world's #1 stock photo m”",
+   "component": "Pricing V3 hero",
+   "tag": "p",
+   "text": "Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 custo",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "9f7edb5e07",
+    "7952695171"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 137
+  },
+  {
+   "id": "358f64b58a",
+   "label": "Pricing V4 · <span> · “to”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "to",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "5793a2c2a3",
+    "d4488b8d7e"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 138
+  },
+  {
+   "id": "8fde8426ac",
+   "label": "Pricing V4 · <div> · “Cancel anytime. 30-day money back guaran”",
+   "component": "Pricing V4",
+   "tag": "div",
+   "text": "Cancel anytime. 30-day money back guarantee",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "58f0fc1890",
+    "93833c37db"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 139
+  },
+  {
+   "id": "2c796b7391",
+   "label": "Sign in form · <p> · “Already have an account?”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "Already have an account?",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "9afff922e9",
+    "d4a997acc8"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 140
+  },
+  {
+   "id": "c55615ad44",
+   "label": "Sign in form · <label> · “Send me recommendations”",
+   "component": "Sign in form",
+   "tag": "label",
+   "text": "Send me recommendations",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "5e772da2aa",
+    "66b7afc804"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 141
+  },
+  {
+   "id": "c05727de49",
+   "label": "Sign in form · <p> · “Don't have an account?”",
+   "component": "Sign in form",
+   "tag": "p",
+   "text": "Don't have an account?",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "d167372b78",
+    "8057b60ef9"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 142
+  },
+  {
+   "id": "6d2ecaadbe",
+   "label": "Settings overview · <a> · “Log out”",
+   "component": "Settings overview",
+   "tag": "a",
+   "text": "Log out",
+   "declared": "color: var(--ez-color--grey-70)",
+   "items": [
+    "4b9b0d9989",
+    "9b04ac093b"
+   ],
+   "values": [
+    "#576570",
+    "#c9c9c9"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "sibling",
+    "style"
+   ],
+   "n": 143
+  },
+  {
+   "id": "7b3381f97e",
+   "label": "Collections · <div> · “48 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "48 items",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "9822d86b6b",
+    "7d72b7e6dc"
+   ],
+   "values": [
+    "#9fa7ad",
+    "#7f7f7f"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 144
+  },
+  {
+   "id": "888e358f61",
+   "label": "Collections · <div> · “126 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "126 items",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "2c660feda2",
+    "5efc07f995"
+   ],
+   "values": [
+    "#9fa7ad",
+    "#7f7f7f"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 145
+  },
+  {
+   "id": "3b937628a0",
+   "label": "Collections · <div> · “72 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "72 items",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "e31d2fe9f2",
+    "f9fd7e1763"
+   ],
+   "values": [
+    "#9fa7ad",
+    "#7f7f7f"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 146
+  },
+  {
+   "id": "65f4d562da",
+   "label": "Collections · <div> · “31 items”",
+   "component": "Collections",
+   "tag": "div",
+   "text": "31 items",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "082701a468",
+    "a8a72b26c4"
+   ],
+   "values": [
+    "#9fa7ad",
+    "#7f7f7f"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element"
+   ],
+   "n": 147
+  },
+  {
+   "id": "bd7de03d13",
+   "label": "Notifications panel · <a> · “Mark all as read”",
+   "component": "Notifications panel",
+   "tag": "a",
+   "text": "Mark all as read",
+   "declared": "color: var(--ez-color--grey-50)",
+   "items": [
+    "649f427ae8",
+    "037d8caad5"
+   ],
+   "values": [
+    "#869198",
+    "#9f9f9f"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 2,
+   "instances": 2,
+   "why": [
+    "copy",
+    "element",
+    "style"
+   ],
+   "n": 148
+  },
+  {
+   "id": "5a69c86254",
+   "label": "Featured collections · <span> · “Underwater Experiences”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Underwater Experiences",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "82ea8aca77"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 149
+  },
+  {
+   "id": "cc38bfede8",
+   "label": "Featured collections · <span> · “Social Media”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Social Media",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "900565efcf"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 150
+  },
+  {
+   "id": "5bcde4e634",
+   "label": "Featured collections · <span> · “Candid Companions”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Candid Companions",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "dfc21f96b6"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 151
+  },
+  {
+   "id": "a9cbe937a3",
+   "label": "Featured collections · <span> · “Family Moments”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Family Moments",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "e252791f1c"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 152
+  },
+  {
+   "id": "31426d1893",
+   "label": "Featured collections · <span> · “Space Exploration”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Space Exploration",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "595703a30a"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 153
+  },
+  {
+   "id": "cc2a4fcb7f",
+   "label": "Featured collections · <span> · “Cybersecurity”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "Cybersecurity",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "f0e36010ae"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 154
+  },
+  {
+   "id": "f0d2c628cb",
+   "label": "Top bar · <a> · “Join Pro”",
+   "component": "Top bar",
+   "tag": "a",
+   "text": "Join Pro",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "faf0f36382"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Explore Page"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 155
+  },
+  {
+   "id": "b592ab447c",
+   "label": "Pricing V2 · <strong> · “4.9”",
+   "component": "Pricing V2",
+   "tag": "strong",
+   "text": "4.9",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "84c686bc7a"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 156
+  },
+  {
+   "id": "0fe9801738",
+   "label": "Pricing V2 · <span> · “from 33,572 reviews on Trustpilot”",
+   "component": "Pricing V2",
+   "tag": "span",
+   "text": "from 33,572 reviews on Trustpilot",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "460e71cdf9"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 157
+  },
+  {
+   "id": "cc7c0ff6e9",
+   "label": "Pricing V2 · <h1> · “Join Pro to Unlock Everything”",
+   "component": "Pricing V2",
+   "tag": "h1",
+   "text": "Join Pro to Unlock Everything",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "b0e092d320"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 158
+  },
+  {
+   "id": "26fe8c095a",
+   "label": "Pricing V2 · <p> · “Vecteezy is the world's #1 stock photo m”",
+   "component": "Pricing V2",
+   "tag": "p",
+   "text": "Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 custo",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "4f26946d8c"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 159
+  },
+  {
+   "id": "95da3b1c5a",
+   "label": "Why card license · <strong> · “$10,000 legal protection”",
+   "component": "Why card license",
+   "tag": "strong",
+   "text": "$10,000 legal protection",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "dff7d95325"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 160
+  },
+  {
+   "id": "a7811428ba",
+   "label": "Why card AI · <span> · “Remove background”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Remove background",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "9c739aca6e"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 161
+  },
+  {
+   "id": "84c626fec3",
+   "label": "Social proof V2 · <span> · “4.9”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.9",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "9764b5393f"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 162
+  },
+  {
+   "id": "cd7f971796",
+   "label": "Social proof V2 · <strong> · “Trustpilot”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "Trustpilot",
+   "declared": "color: inherit",
+   "items": [
+    "8e249d1b69"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 163
+  },
+  {
+   "id": "257f1e9103",
+   "label": "Social proof V2 · <span> · “G2”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "G2",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "1d2bf109d1"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 164
+  },
+  {
+   "id": "364d624c51",
+   "label": "Social proof V2 · <strong> · “G2”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "G2",
+   "declared": "color: inherit",
+   "items": [
+    "f90bf638a4"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 165
+  },
+  {
+   "id": "449322ce38",
+   "label": "Marketing panel · <span> · “Create without limits”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Create without limits",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "8740f9bf70"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 166
+  },
+  {
+   "id": "0a1c8a4d52",
+   "label": "Marketing panel · <h2> · “Better work half the time.”",
+   "component": "Marketing panel",
+   "tag": "h2",
+   "text": "Better work half the time.",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "aaaa9586cf"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 167
+  },
+  {
+   "id": "46e9de97fb",
+   "label": "Marketing panel · <span> · “in”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "in",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "672e65bd37"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 168
+  },
+  {
+   "id": "f38d38a32c",
+   "label": "Marketing panel · <span> · “Access creative assets ( added yesterday”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Access creative assets ( added yesterday)",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "25c12a30e4"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 169
+  },
+  {
+   "id": "c5340a2ab4",
+   "label": "Marketing panel · <strong> · “74,540,405”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "74,540,405",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "cbe0763b47"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 170
+  },
+  {
+   "id": "95b844f809",
+   "label": "Marketing panel · <strong> · “89,304”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "89,304",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "7c0bd70aee"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 171
+  },
+  {
+   "id": "d2537f2f8d",
+   "label": "Marketing panel · <span> · “Find fresh inspiration from creatives ma”",
+   "component": "Marketing panel",
+   "tag": "span",
+   "text": "Find fresh inspiration from creatives making a living from their work",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "0b2b73e971"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 172
+  },
+  {
+   "id": "e9f6b2afbb",
+   "label": "Marketing panel · <strong> · “41,504”",
+   "component": "Marketing panel",
+   "tag": "strong",
+   "text": "41,504",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "76ededb1d5"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 173
+  },
+  {
+   "id": "ea274407f2",
+   "label": "Marketing panel · <div> · “Generate, edit and upscale in seconds wi”",
+   "component": "Marketing panel",
+   "tag": "div",
+   "text": "Generate, edit and upscale in seconds with built-in AI tools",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "1ed173c659"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 174
+  },
+  {
+   "id": "00a3f8c10c",
+   "label": "Summary rail · <button>",
+   "component": "Summary rail",
+   "tag": "button",
+   "text": "",
+   "declared": "color: rgb(255, 255, 255)",
+   "items": [
+    "50eb89de04"
+   ],
+   "values": [
+    "#ffffff"
+   ],
+   "pages": [
+    "Settings"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 175
+  },
+  {
+   "id": "329d116ef5",
+   "label": "Log In · <span> · “OR”",
+   "component": "Log In",
+   "tag": "span",
+   "text": "OR",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "11e0d9a466"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 176
+  },
+  {
+   "id": "2ebebce6f5",
+   "label": "Log In · <span> · “Password”",
+   "component": "Log In",
+   "tag": "span",
+   "text": "Password",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "fd7505e6c0"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 177
+  },
+  {
+   "id": "1205e04cac",
+   "label": "Log In · <p> · “This site is protected by reCAPTCHA and ”",
+   "component": "Log In",
+   "tag": "p",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "8d15050ed0"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Log In v1"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 178
+  },
+  {
+   "id": "d8a70d7022",
+   "label": "Popular photo categories · <span> · “Stock Photos”",
+   "component": "Popular photo categories",
+   "tag": "span",
+   "text": "Stock Photos",
+   "declared": "color: var(--ez-color--orange-100, #ff7900)",
+   "items": [
+    "ddd668d863"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 179
+  },
+  {
+   "id": "ad9b25cf7d",
+   "label": "Pricing V4 · <span> · “Your All-Access Pass”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "Your All-Access Pass",
+   "declared": "color: var(--color-orange-100, #ff7900)",
+   "items": [
+    "94014bb60b"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 180
+  },
+  {
+   "id": "98daa7c5b9",
+   "label": "Pricing V4 · <span> · “OFF · ANNUAL PLAN”",
+   "component": "Pricing V4",
+   "tag": "span",
+   "text": "OFF · ANNUAL PLAN",
+   "declared": "color: var(--color-orange-100)",
+   "items": [
+    "6097bc42e8"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 181
+  },
+  {
+   "id": "78e689e825",
+   "label": "Sign in form · <a> · “Log in”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Log in",
+   "declared": "color: var(--ez-color--accent)",
+   "items": [
+    "61216433a2"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 182
+  },
+  {
+   "id": "11142e8ff3",
+   "label": "Sign in form · <a> · “Sign up”",
+   "component": "Sign in form",
+   "tag": "a",
+   "text": "Sign up",
+   "declared": "color: var(--ez-color--accent)",
+   "items": [
+    "9d77c96a10"
+   ],
+   "values": [
+    "#ff7900"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 183
+  },
+  {
+   "id": "d4ea437572",
+   "label": "Featured collections · <span> · “248 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "248 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "2b0877b1b8"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 184
+  },
+  {
+   "id": "21899cdbdf",
+   "label": "Featured collections · <span> · “198 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "198 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "5bd7e554ab"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 185
+  },
+  {
+   "id": "2801a14a53",
+   "label": "Featured collections · <span> · “312 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "312 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "11124e2af5"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 186
+  },
+  {
+   "id": "4ccad5ed18",
+   "label": "Featured collections · <span> · “274 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "274 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "d7a4082ac4"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 187
+  },
+  {
+   "id": "68fcc98304",
+   "label": "Featured collections · <span> · “186 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "186 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "51c822cdb2"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 188
+  },
+  {
+   "id": "d328aa84db",
+   "label": "Featured collections · <span> · “231 photos”",
+   "component": "Featured collections",
+   "tag": "span",
+   "text": "231 photos",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "58601e015f"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 189
+  },
+  {
+   "id": "92ab622d1e",
+   "label": "Social proof V2 · <span> · “on Trustpilotgave Vecteezy 5 stars.”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "on Trustpilotgave Vecteezy 5 stars.",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "0923b4e2b8"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 190
+  },
+  {
+   "id": "6480379590",
+   "label": "Social proof V2 · <strong> · “91% of 41,559 reviewers”",
+   "component": "Social proof V2",
+   "tag": "strong",
+   "text": "91% of 41,559 reviewers",
+   "declared": "color: inherit",
+   "items": [
+    "7dfcfddd4b"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 191
+  },
+  {
+   "id": "70f5c63e76",
+   "label": "Social proof V2 · <span> · “4.9 Excellent”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.9 Excellent",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "e39612ee16"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 192
+  },
+  {
+   "id": "4125381a64",
+   "label": "Social proof V2 · <span> · “4.7 out of 5”",
+   "component": "Social proof V2",
+   "tag": "span",
+   "text": "4.7 out of 5",
+   "declared": "color: rgba(255, 255, 255, 0.85)",
+   "items": [
+    "d2d7707b35"
+   ],
+   "values": [
+    "#ffffff / 85%"
+   ],
+   "pages": [
+    "Log In"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 193
+  },
+  {
+   "id": "5da3e5f16d",
+   "label": "Why card unlimited · <span> · “Use 75+ million photos, vectors and vide”",
+   "component": "Why card unlimited",
+   "tag": "span",
+   "text": "Use 75+ million photos, vectors and videos as often as you like.",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "fddde6d13e"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 194
+  },
+  {
+   "id": "1e175be490",
+   "label": "Why card license · <span> · “Use everything commercially with no attr”",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "Use everything commercially with no attribution, backed by $10,000 in legal prot",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "7291ab3f4d"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 195
+  },
+  {
+   "id": "26aab2f24e",
+   "label": "Why card license · <span> · “Included with every Pro download”",
+   "component": "Why card license",
+   "tag": "span",
+   "text": "Included with every Pro download",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "424ea23de9"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 196
+  },
+  {
+   "id": "34f0589190",
+   "label": "Why card bundles · <span> · “Grab curated packs of fonts, mockups and”",
+   "component": "Why card bundles",
+   "tag": "span",
+   "text": "Grab curated packs of fonts, mockups and graphics in one click.",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "0e8676df5b"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 197
+  },
+  {
+   "id": "6fa81cee75",
+   "label": "Why card AI · <span> · “Generate, restyle, upscale, crop or remo”",
+   "component": "Why card AI",
+   "tag": "span",
+   "text": "Generate, restyle, upscale, crop or remove backgrounds in seconds.",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "317f58d602"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 198
+  },
+  {
+   "id": "387e31d00d",
+   "label": "Why card vectors · <span> · “that scale to any size and make your pro”",
+   "component": "Why card vectors",
+   "tag": "span",
+   "text": "that scale to any size and make your projects stand out.",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "423f537f8c"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 199
+  },
+  {
+   "id": "317fd49bdd",
+   "label": "Why card fresh · <span> · “83,405 assets were added yesterday alone”",
+   "component": "Why card fresh",
+   "tag": "span",
+   "text": "83,405 assets were added yesterday alone.",
+   "declared": "color: rgb(143, 143, 143)",
+   "items": [
+    "eb79fb9c63"
+   ],
+   "values": [
+    "#8f8f8f"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 200
+  },
+  {
+   "id": "0a36c94c65",
+   "label": "AI Studio home · <p> · “Hi, how can we help?”",
+   "component": "AI Studio home",
+   "tag": "p",
+   "text": "Hi, how can we help?",
+   "declared": "color: var(--ez-color--grey-80)",
+   "items": [
+    "cf9902565c"
+   ],
+   "values": [
+    "#3e4f5b"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 201
+  },
+  {
+   "id": "20e20b418d",
+   "label": "AI Studio home · <button> · “See what's possible”",
+   "component": "AI Studio home",
+   "tag": "button",
+   "text": "See what's possible",
+   "declared": "color: var(--ez-color--grey-80)",
+   "items": [
+    "00511185e3"
+   ],
+   "values": [
+    "#3e4f5b"
+   ],
+   "pages": [
+    "AI Magic"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 202
+  },
+  {
+   "id": "fc8e86c3d0",
+   "label": "Why card bundles · <div> · “ZIP”",
+   "component": "Why card bundles",
+   "tag": "div",
+   "text": "ZIP",
+   "declared": "color: rgb(85, 85, 85)",
+   "items": [
+    "951eb42283"
+   ],
+   "values": [
+    "#555555"
+   ],
+   "pages": [
+    "Pricing"
+   ],
+   "usages": 1,
+   "instances": 2,
+   "why": [],
+   "n": 203
+  },
+  {
+   "id": "6dd2be1839",
+   "label": "<h1> · “Action Cards”",
+   "component": null,
+   "tag": "h1",
+   "text": "Action Cards",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "2a3fdc7dd1"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 204
+  },
+  {
+   "id": "008d1f08a9",
+   "label": "<h2> · “Search Action Card”",
+   "component": null,
+   "tag": "h2",
+   "text": "Search Action Card",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "60465c9d82"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 205
+  },
+  {
+   "id": "f63595e40b",
+   "label": "<span> · ““Cat””",
+   "component": null,
+   "tag": "span",
+   "text": "“Cat”",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "6debb2f74d"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 206
+  },
+  {
+   "id": "7c82967e89",
+   "label": "<strong> · “(search)”",
+   "component": null,
+   "tag": "strong",
+   "text": "(search)",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "94568aee9f"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 207
+  },
+  {
+   "id": "76fe9cda61",
+   "label": "<span> · “White pill (9999px radius), 1px grey-10 ”",
+   "component": null,
+   "tag": "span",
+   "text": "White pill (9999px radius), 1px grey-10 border, 12px 24px 12px 18px padding, con",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "d369abb048"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 208
+  },
+  {
+   "id": "aece289c11",
+   "label": "<span> · “18px orange search icon; darkens on card”",
+   "component": null,
+   "tag": "span",
+   "text": "18px orange search icon; darkens on card hover",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "5140a35cf3"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 209
+  },
+  {
+   "id": "8faa66acc2",
+   "label": "<h2> · “Generate Search Card”",
+   "component": null,
+   "tag": "h2",
+   "text": "Generate Search Card",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "77f2d337e5"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 210
+  },
+  {
+   "id": "0b8232c057",
+   "label": "<span> · ““Soccer””",
+   "component": null,
+   "tag": "span",
+   "text": "“Soccer”",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "6cca20c8a7"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 211
+  },
+  {
+   "id": "310f342cb4",
+   "label": "<strong> · “(generate)”",
+   "component": null,
+   "tag": "strong",
+   "text": "(generate)",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "06b7591be6"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 212
+  },
+  {
+   "id": "8efa270617",
+   "label": "<span> · “Grey-5 wrap, flush under the bot bubble ”",
+   "component": null,
+   "tag": "span",
+   "text": "Grey-5 wrap, flush under the bot bubble (square joint), 0 0 14px 4px radius, 10p",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "8dcf1eb65a"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 213
+  },
+  {
+   "id": "b09c2a1219",
+   "label": "<span> · “White card, 14px radius (matches chat bu”",
+   "component": null,
+   "tag": "span",
+   "text": "White card, 14px radius (matches chat bubble), 1px grey-10 border, 12px 24px 12p",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "f0d32ecdba"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 214
+  },
+  {
+   "id": "78c8f7c852",
+   "label": "<span> · “18px orange sparkle icon; darkens on car”",
+   "component": null,
+   "tag": "span",
+   "text": "18px orange sparkle icon; darkens on card hover",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "c1ec7a01b0"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 215
+  },
+  {
+   "id": "cb99e36161",
+   "label": "<span> · “4 thumbnails, 72px square (same as chat-”",
+   "component": null,
+   "tag": "span",
+   "text": "4 thumbnails, 72px square (same as chat-bubble images), 8px radius, 8px gap, on ",
+   "declared": "color: var(--ez-color--grey-100)",
+   "items": [
+    "23bf57117f"
+   ],
+   "values": [
+    "#0e2332"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 216
+  },
+  {
+   "id": "f6bacb44ac",
+   "label": "<p> · “Action Cards appear inside an AI Magic b”",
+   "component": null,
+   "tag": "p",
+   "text": "Action Cards appear inside an AI Magic bot response and summarize an action the ",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "8d440e9af6"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 217
+  },
+  {
+   "id": "482b83a2fa",
+   "label": "<p> · “Shown when a chat query is submitted as ”",
+   "component": null,
+   "tag": "p",
+   "text": "Shown when a chat query is submitted as a generic search (query appended with “(",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "3e18bdac87"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 218
+  },
+  {
+   "id": "bb60401823",
+   "label": "<p> · “Shown when a chat query is submitted as ”",
+   "component": null,
+   "tag": "p",
+   "text": "Shown when a chat query is submitted as a generation (query appended with “(gene",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "60804b9784"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 219
+  },
+  {
+   "id": "4d1f89a19e",
+   "label": "<span> · “Container”",
+   "component": null,
+   "tag": "span",
+   "text": "Container",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "b108e143ec"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 220
+  },
+  {
+   "id": "eff3e52cc3",
+   "label": "<span> · “Previews”",
+   "component": null,
+   "tag": "span",
+   "text": "Previews",
+   "declared": "color: var(--ez-color--grey-60)",
+   "items": [
+    "8fa16ca268"
+   ],
+   "values": [
+    "#6e7b84"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 221
+  },
+  {
+   "id": "c9dc232aff",
+   "label": "<p> · “Vecteezy style guide”",
+   "component": null,
+   "tag": "p",
+   "text": "Vecteezy style guide",
+   "declared": "color: var(--ez-color--grey-40)",
+   "items": [
+    "7a49f73c60"
+   ],
+   "values": [
+    "#9fa7ad"
+   ],
+   "pages": [
+    "Style Guide - Action Cards"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "why": [],
+   "n": 222
+  }
+ ]
+}
