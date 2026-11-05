@@ -48,7 +48,7 @@ node tools/survey.mjs new colors --preset text-color   # creates surveys/colors/
 node tools/survey.mjs run colors                       # scans all states in surveys/captures.json
 ```
 
-Color surveys capture every state in light **and** dark mode (`--themes light,dark` on `new`, or `"themes": ["light","dark"]` in `spec.json`). Dark mode is switched via the page's `theme` prop, or the `dark` entries in `surveys/captures.json` (Explore Page, Search Dropdown). Checkout, Log In v1 and the Action Cards style guide have no dark mode. The survey page then shows a **Both / Light / Dark** filter and a theme chip on each card.
+Color surveys capture every state in light **and** dark mode (`--themes light,dark` on `new`, or `"themes": ["light","dark"]` in `spec.json`). Dark mode is switched via the page's `theme` prop, or the `dark` entries in `surveys/captures.json` (Explore Page, Search Dropdown). Log In v1 and the Action Cards style guide have no dark mode. Checkout is left out of the surveys because it has not been redesigned. The survey page then shows a **Both / Light / Dark** filter and a theme chip on each card.
 
 Decisions are saved to `surveys/<id>/decisions.json`. Re-running a survey keeps them, because item ids are stable. Screenshots (`surveys/*/shots/`) are gitignored and regenerated on each run.
 

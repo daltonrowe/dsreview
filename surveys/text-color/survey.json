@@ -7,12 +7,12 @@
  "captures": [
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home",
+   "label": "AI Magic \u00b7 Home",
    "theme": "light"
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home · dark",
+   "label": "AI Magic \u00b7 Home \u00b7 dark",
    "theme": "dark",
    "props": {
     "theme": "dark"
@@ -20,7 +20,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (logged in)",
+   "label": "AI Magic \u00b7 Home (logged in)",
    "props": {
     "authState": "logged-in"
    },
@@ -28,7 +28,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (logged in) · dark",
+   "label": "AI Magic \u00b7 Home (logged in) \u00b7 dark",
    "props": {
     "authState": "logged-in",
     "theme": "dark"
@@ -37,7 +37,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Search results",
+   "label": "AI Magic \u00b7 Search results",
    "state": {
     "active": "search",
     "aiHome": false
@@ -46,7 +46,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Search results · dark",
+   "label": "AI Magic \u00b7 Search results \u00b7 dark",
    "state": {
     "active": "search",
     "aiHome": false
@@ -58,7 +58,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Explore",
+   "label": "AI Magic \u00b7 Explore",
    "state": {
     "active": "explore"
    },
@@ -66,7 +66,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Explore · dark",
+   "label": "AI Magic \u00b7 Explore \u00b7 dark",
    "state": {
     "active": "explore"
    },
@@ -77,7 +77,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · AI Tools",
+   "label": "AI Magic \u00b7 AI Tools",
    "state": {
     "active": "collections"
    },
@@ -85,7 +85,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · AI Tools · dark",
+   "label": "AI Magic \u00b7 AI Tools \u00b7 dark",
    "state": {
     "active": "collections"
    },
@@ -101,7 +101,7 @@
   },
   {
    "page": "Explore Page.dc.html",
-   "label": "Explore Page · dark",
+   "label": "Explore Page \u00b7 dark",
    "theme": "dark",
    "props": {},
    "state": {
@@ -116,7 +116,7 @@
   },
   {
    "page": "Search Dropdown.dc.html",
-   "label": "Search Dropdown · dark",
+   "label": "Search Dropdown \u00b7 dark",
    "theme": "dark",
    "props": {},
    "state": {},
@@ -126,7 +126,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 1",
+   "label": "Pricing \u00b7 Option 1",
    "props": {
     "layout": "Option 1"
    },
@@ -134,7 +134,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 1 · dark",
+   "label": "Pricing \u00b7 Option 1 \u00b7 dark",
    "props": {
     "layout": "Option 1",
     "theme": "Dark"
@@ -143,7 +143,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 2",
+   "label": "Pricing \u00b7 Option 2",
    "props": {
     "layout": "Option 2"
    },
@@ -151,7 +151,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 2 · dark",
+   "label": "Pricing \u00b7 Option 2 \u00b7 dark",
    "props": {
     "layout": "Option 2",
     "theme": "Dark"
@@ -160,7 +160,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 3",
+   "label": "Pricing \u00b7 Option 3",
    "props": {
     "layout": "Option 3"
    },
@@ -168,7 +168,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 3 · dark",
+   "label": "Pricing \u00b7 Option 3 \u00b7 dark",
    "props": {
     "layout": "Option 3",
     "theme": "Dark"
@@ -177,7 +177,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4",
+   "label": "Pricing \u00b7 Option 4",
    "props": {
     "layout": "Option 4"
    },
@@ -185,7 +185,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4 · dark",
+   "label": "Pricing \u00b7 Option 4 \u00b7 dark",
    "props": {
     "layout": "Option 4",
     "theme": "Dark"
@@ -193,18 +193,13 @@
    "theme": "dark"
   },
   {
-   "page": "Checkout.dc.html",
-   "label": "Checkout",
+   "page": "Log In.dc.html",
+   "label": "Log In \u00b7 Create account",
    "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account",
-   "theme": "light"
-  },
-  {
-   "page": "Log In.dc.html",
-   "label": "Log In · Create account · dark",
+   "label": "Log In \u00b7 Create account \u00b7 dark",
    "theme": "dark",
    "props": {
     "theme": "Dark"
@@ -212,7 +207,7 @@
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Log in",
+   "label": "Log In \u00b7 Log in",
    "props": {
     "mode": "Log In"
    },
@@ -220,7 +215,7 @@
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Log in · dark",
+   "label": "Log In \u00b7 Log in \u00b7 dark",
    "props": {
     "mode": "Log In",
     "theme": "Dark"
@@ -229,12 +224,12 @@
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Login",
+   "label": "Log In v1 \u00b7 Login",
    "theme": "light"
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Signup",
+   "label": "Log In v1 \u00b7 Signup",
    "props": {
     "mode": "signup"
    },
@@ -242,7 +237,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · App",
+   "label": "Settings \u00b7 App",
    "props": {
     "layout": "app"
    },
@@ -250,7 +245,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · App · dark",
+   "label": "Settings \u00b7 App \u00b7 dark",
    "props": {
     "layout": "app",
     "theme": "dark"
@@ -259,7 +254,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Sidebar",
+   "label": "Settings \u00b7 Sidebar",
    "props": {
     "layout": "sidebar"
    },
@@ -267,7 +262,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Sidebar · dark",
+   "label": "Settings \u00b7 Sidebar \u00b7 dark",
    "props": {
     "layout": "sidebar",
     "theme": "dark"
@@ -276,7 +271,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Tabs",
+   "label": "Settings \u00b7 Tabs",
    "props": {
     "layout": "tabs"
    },
@@ -284,7 +279,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Tabs · dark",
+   "label": "Settings \u00b7 Tabs \u00b7 dark",
    "props": {
     "layout": "tabs",
     "theme": "dark"
@@ -293,7 +288,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Modal",
+   "label": "Settings \u00b7 Modal",
    "props": {
     "layout": "modal"
    },
@@ -301,7 +296,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Modal · dark",
+   "label": "Settings \u00b7 Modal \u00b7 dark",
    "props": {
     "layout": "modal",
     "theme": "dark"
@@ -310,7 +305,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Hub",
+   "label": "Settings \u00b7 Hub",
    "props": {
     "layout": "hub"
    },
@@ -318,7 +313,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Hub · dark",
+   "label": "Settings \u00b7 Hub \u00b7 dark",
    "props": {
     "layout": "hub",
     "theme": "dark"
@@ -327,7 +322,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Free plan",
+   "label": "Settings \u00b7 Free plan",
    "props": {
     "plan": "Free"
    },
@@ -335,7 +330,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Free plan · dark",
+   "label": "Settings \u00b7 Free plan \u00b7 dark",
    "props": {
     "plan": "Free",
     "theme": "dark"
@@ -344,17 +339,17 @@
   },
   {
    "page": "Style Guide - Action Cards.dc.html",
-   "label": "Style Guide · Action Cards",
+   "label": "Style Guide \u00b7 Action Cards",
    "theme": "light"
   }
  ],
  "stats": {
-  "sections": 34,
-  "usages": 596,
-  "instances": 1378
+  "sections": 23,
+  "usages": 556,
+  "instances": 1338
  },
  "problems": [
-  "Explore Page · dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
+  "Explore Page \u00b7 dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
  ],
  "sections": [
   {
@@ -365,8 +360,8 @@
     "--ez-color--grey-100",
     "--ez-color--text-headers"
    ],
-   "usages": 159,
-   "instances": 315,
+   "usages": 144,
+   "instances": 300,
    "items": [
     {
      "n": 1,
@@ -511,7 +506,7 @@
       "file": "AI Magic.dc.html",
       "line": 1539,
       "col": 13,
-      "snippet": "<button onClick=\"{{ toggleHeroTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 24px; border-radius: 9999px; background: #fff; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: var(--type-body-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease\" style-hover=\"background: var(--ez-color--grey-5); border-color: var(--ez-colo…"
+      "snippet": "<button onClick=\"{{ toggleHeroTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 24px; border-radius: 9999px; background: #fff; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: var(--type-body-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease\" style-hover=\"background: var(--ez-color--grey-5); border-color: var(--ez-colo\u2026"
      },
      "shot": "shots/fc43c13c9e.png"
     },
@@ -628,7 +623,7 @@
       "file": "AI Magic.dc.html",
       "line": 3656,
       "col": 7,
-      "snippet": "<button aria-label=\"Search settings\" class=\"gear-btn\" ref=\"{{ gearBtnRef }}\" onClick=\"{{ toggleGearMenu }}\" onMouseEnter=\"{{ enterGear }}\" onMouseLeave=\"{{ leaveGear }}\" style=\"position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex-shrink: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); border-radius: 9999px; transition: border-color .15s ease; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer\" style-hover=\"border-color: var(--ez-co…"
+      "snippet": "<button aria-label=\"Search settings\" class=\"gear-btn\" ref=\"{{ gearBtnRef }}\" onClick=\"{{ toggleGearMenu }}\" onMouseEnter=\"{{ enterGear }}\" onMouseLeave=\"{{ leaveGear }}\" style=\"position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex-shrink: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); border-radius: 9999px; transition: border-color .15s ease; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer\" style-hover=\"border-color: var(--ez-co\u2026"
      },
      "shot": "shots/5d36a45631.png"
     },
@@ -4131,516 +4126,6 @@
     },
     {
      "n": 104,
-     "id": "8b0d524bd1",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "2",
-     "size": [
-      32,
-      32
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 19,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 36,
-      "col": 11,
-      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #eef1f3; color: #0e2332; font-size: 12px; font-weight: 700\">"
-     },
-     "shot": "shots/8b0d524bd1.png"
-    },
-    {
-     "n": 105,
-     "id": "904293e3db",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Checkout",
-     "size": [
-      52,
-      13
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 20,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 37,
-      "col": 11,
-      "snippet": "<span style=\"font-size: 11px; font-weight: 600; color: #0e2332\">"
-     },
-     "shot": "shots/904293e3db.png"
-    },
-    {
-     "n": 106,
-     "id": "24a8e68406",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "h2",
-     "text": "Express Checkout",
-     "size": [
-      456,
-      22
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 24,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 44,
-      "col": 7,
-      "snippet": "<h2 style=\"margin: 48px 0 0; font-size: 19px; font-weight: 700; letter-spacing: -.01em\">"
-     },
-     "shot": "shots/24a8e68406.png"
-    },
-    {
-     "n": 107,
-     "id": "e8201bda14",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "h2",
-     "text": "Credit Card Information",
-     "size": [
-      209,
-      22
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 38,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 52,
-      "col": 9,
-      "snippet": "<h2 style=\"margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -.01em\">"
-     },
-     "shot": "shots/e8201bda14.png"
-    },
-    {
-     "n": 108,
-     "id": "03f7fe0944",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "input",
-     "text": "MM/YYYY",
-     "size": [
-      218,
-      40
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 58,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 71,
-      "col": 11,
-      "snippet": "<input placeholder=\"MM/YYYY\" autocomplete=\"cc-exp\" style=\"height: 40px; padding: 0 13px; box-sizing: border-box; border: 1px solid #cfd5da; border-radius: 6px; font: inherit; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: #0e2332\">"
-     },
-     "shot": "shots/03f7fe0944.png"
-    },
-    {
-     "n": 109,
-     "id": "d98818d5f8",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "input",
-     "text": "CVV",
-     "size": [
-      218,
-      40
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 60,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 74,
-      "col": 11,
-      "snippet": "<input placeholder=\"CVV\" inputmode=\"numeric\" autocomplete=\"cc-csc\" style=\"height: 40px; padding: 0 13px; box-sizing: border-box; border: 1px solid #cfd5da; border-radius: 6px; font: inherit; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: #0e2332\">"
-     },
-     "shot": "shots/d98818d5f8.png"
-    },
-    {
-     "n": 110,
-     "id": "38d0870d0e",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "input",
-     "text": "",
-     "size": [
-      218,
-      40
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 73,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 84,
-      "col": 11,
-      "snippet": "<input value=\"42104\" style=\"height: 40px; padding: 0 13px; box-sizing: border-box; border: 1px solid #cfd5da; border-radius: 6px; font: inherit; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: #0e2332\">"
-     },
-     "shot": "shots/38d0870d0e.png"
-    },
-    {
-     "n": 111,
-     "id": "babf482c7e",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "h1",
-     "text": "Unlimited Subscription",
-     "size": [
-      456,
-      26
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 76,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 91,
-      "col": 7,
-      "snippet": "<h1 style=\"margin: 0; padding-top: 2px; font-size: 21px; font-weight: 700; letter-spacing: -.01em\">"
-     },
-     "shot": "shots/babf482c7e.png"
-    },
-    {
-     "n": 112,
-     "id": "ba0db6e094",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "strong",
-     "text": "Monthly Subscription",
-     "size": [
-      148,
-      17
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 92,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 102,
-      "col": 71,
-      "snippet": "<strong style=\"font-size: 14px; font-weight: 700\">"
-     },
-     "shot": "shots/ba0db6e094.png"
-    },
-    {
-     "n": 113,
-     "id": "a8252878e7",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "strong",
-     "text": "6-Month Subscription",
-     "size": [
-      294,
-      17
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 99,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 106,
-      "col": 94,
-      "snippet": "<strong style=\"font-size: 14px; font-weight: 700\">"
-     },
-     "shot": "shots/a8252878e7.png"
-    },
-    {
-     "n": 114,
-     "id": "e716fce3b3",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "Subtotal",
-     "size": [
-      47,
-      15
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 113,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 116,
-      "col": 84,
-      "snippet": "<span>"
-     },
-     "shot": "shots/e716fce3b3.png"
-    },
-    {
-     "n": 115,
-     "id": "7492d2c43d",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "Estimated sales tax",
-     "size": [
-      126,
-      15
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 116,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 117,
-      "col": 88,
-      "snippet": "<span style=\"display: flex; align-items: center; gap: 6px\">"
-     },
-     "shot": "shots/7492d2c43d.png"
-    },
-    {
-     "n": 116,
-     "id": "29b14690a5",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "Total",
-     "size": [
-      28,
-      15
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 123,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 118,
-      "col": 89,
-      "snippet": "<span>"
-     },
-     "shot": "shots/29b14690a5.png"
-    },
-    {
-     "n": 117,
-     "id": "7af8137174",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "Payment Due Today",
-     "size": [
-      112,
-      15
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 127,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 120,
-      "col": 110,
-      "snippet": "<span>"
-     },
-     "shot": "shots/7af8137174.png"
-    },
-    {
-     "n": 118,
-     "id": "17144c700d",
-     "value": "#0e2332",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "Subscription Renewal Date",
-     "size": [
-      152,
-      15
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 130,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 121,
-      "col": 99,
-      "snippet": "<span>"
-     },
-     "shot": "shots/17144c700d.png"
-    },
-    {
-     "n": 119,
      "id": "a01d65aa72",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4659,13 +4144,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 22,
       "nth": 0
      },
      "captures": [
-      23
+      22
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -4676,7 +4161,7 @@
      "shot": "shots/a01d65aa72.png"
     },
     {
-     "n": 120,
+     "n": 105,
      "id": "db77e02a34",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4695,13 +4180,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 27,
       "nth": 0
      },
      "captures": [
-      25
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -4712,7 +4197,7 @@
      "shot": "shots/db77e02a34.png"
     },
     {
-     "n": 121,
+     "n": 106,
      "id": "4f26f389ca",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4731,14 +4216,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 14,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -4749,7 +4234,7 @@
      "shot": "shots/4f26f389ca.png"
     },
     {
-     "n": 122,
+     "n": 107,
      "id": "c1d492e28a",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4768,14 +4253,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 17,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -4786,7 +4271,7 @@
      "shot": "shots/c1d492e28a.png"
     },
     {
-     "n": 123,
+     "n": 108,
      "id": "138e4ffce9",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4805,16 +4290,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 41,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      35,
-      39
+      28,
+      30,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -4825,7 +4310,7 @@
      "shot": "shots/138e4ffce9.png"
     },
     {
-     "n": 124,
+     "n": 109,
      "id": "6f2470edd1",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4844,17 +4329,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 138,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -4865,7 +4350,7 @@
      "shot": "shots/6f2470edd1.png"
     },
     {
-     "n": 125,
+     "n": 110,
      "id": "4014578f5c",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4884,17 +4369,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 144,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -4905,7 +4390,7 @@
      "shot": "shots/4014578f5c.png"
     },
     {
-     "n": 126,
+     "n": 111,
      "id": "0c8ff5e275",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4924,17 +4409,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 147,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -4945,7 +4430,7 @@
      "shot": "shots/0c8ff5e275.png"
     },
     {
-     "n": 127,
+     "n": 112,
      "id": "5b4f51201e",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -4964,17 +4449,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 148,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -4985,7 +4470,7 @@
      "shot": "shots/5b4f51201e.png"
     },
     {
-     "n": 128,
+     "n": 113,
      "id": "45a149ebc5",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5004,17 +4489,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 149,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5025,7 +4510,7 @@
      "shot": "shots/45a149ebc5.png"
     },
     {
-     "n": 129,
+     "n": 114,
      "id": "43d38bcbb1",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5044,17 +4529,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 150,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5065,7 +4550,7 @@
      "shot": "shots/43d38bcbb1.png"
     },
     {
-     "n": 130,
+     "n": 115,
      "id": "acfdc9e739",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5084,17 +4569,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 151,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5105,7 +4590,7 @@
      "shot": "shots/acfdc9e739.png"
     },
     {
-     "n": 131,
+     "n": 116,
      "id": "64c6b1bc89",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5124,17 +4609,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 154,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5145,7 +4630,7 @@
      "shot": "shots/64c6b1bc89.png"
     },
     {
-     "n": 132,
+     "n": 117,
      "id": "f3a463872a",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5164,17 +4649,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 155,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5185,7 +4670,7 @@
      "shot": "shots/f3a463872a.png"
     },
     {
-     "n": 133,
+     "n": 118,
      "id": "0f6dfa028a",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5204,17 +4689,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 158,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5225,7 +4710,7 @@
      "shot": "shots/0f6dfa028a.png"
     },
     {
-     "n": 134,
+     "n": 119,
      "id": "686cbbbf91",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5244,17 +4729,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 170,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5265,7 +4750,7 @@
      "shot": "shots/686cbbbf91.png"
     },
     {
-     "n": 135,
+     "n": 120,
      "id": "be7c896f3e",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5284,17 +4769,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 175,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5305,7 +4790,7 @@
      "shot": "shots/be7c896f3e.png"
     },
     {
-     "n": 136,
+     "n": 121,
      "id": "ed69537fe0",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5324,17 +4809,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 177,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5345,7 +4830,7 @@
      "shot": "shots/ed69537fe0.png"
     },
     {
-     "n": 137,
+     "n": 122,
      "id": "c1939c9710",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5364,17 +4849,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 186,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5385,7 +4870,7 @@
      "shot": "shots/c1939c9710.png"
     },
     {
-     "n": 138,
+     "n": 123,
      "id": "dbeafb1f36",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5404,17 +4889,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 191,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5425,7 +4910,7 @@
      "shot": "shots/dbeafb1f36.png"
     },
     {
-     "n": 139,
+     "n": 124,
      "id": "28fcea6dc9",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5444,13 +4929,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 72,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5461,7 +4946,7 @@
      "shot": "shots/28fcea6dc9.png"
     },
     {
-     "n": 140,
+     "n": 125,
      "id": "3f72793e31",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5480,13 +4965,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 514,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -5497,7 +4982,7 @@
      "shot": "shots/3f72793e31.png"
     },
     {
-     "n": 141,
+     "n": 126,
      "id": "2a3fdc7dd1",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5516,13 +5001,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 8,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5533,7 +5018,7 @@
      "shot": "shots/2a3fdc7dd1.png"
     },
     {
-     "n": 142,
+     "n": 127,
      "id": "60465c9d82",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5552,13 +5037,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 10,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5569,7 +5054,7 @@
      "shot": "shots/60465c9d82.png"
     },
     {
-     "n": 143,
+     "n": 128,
      "id": "65264f0bcf",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5581,20 +5066,20 @@
      ],
      "component": null,
      "tag": "div",
-     "text": "Showing “Cat” search results with 7 filters applied.",
+     "text": "Showing \u201cCat\u201d search results with 7 filters applied.",
      "size": [
       560,
       45
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 14,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5605,7 +5090,7 @@
      "shot": "shots/65264f0bcf.png"
     },
     {
-     "n": 144,
+     "n": 129,
      "id": "6debb2f74d",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5617,20 +5102,20 @@
      ],
      "component": null,
      "tag": "span",
-     "text": "“Cat”",
+     "text": "\u201cCat\u201d",
      "size": [
       46,
       20
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 21,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5641,7 +5126,7 @@
      "shot": "shots/6debb2f74d.png"
     },
     {
-     "n": 145,
+     "n": 130,
      "id": "08fb6494c0",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5660,13 +5145,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 24,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5677,7 +5162,7 @@
      "shot": "shots/08fb6494c0.png"
     },
     {
-     "n": 146,
+     "n": 131,
      "id": "94568aee9f",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5696,13 +5181,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 25,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5713,7 +5198,7 @@
      "shot": "shots/94568aee9f.png"
     },
     {
-     "n": 147,
+     "n": 132,
      "id": "d369abb048",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5732,13 +5217,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 27,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5749,7 +5234,7 @@
      "shot": "shots/d369abb048.png"
     },
     {
-     "n": 148,
+     "n": 133,
      "id": "5140a35cf3",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5768,13 +5253,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 29,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5785,7 +5270,7 @@
      "shot": "shots/5140a35cf3.png"
     },
     {
-     "n": 149,
+     "n": 134,
      "id": "370b0bd577",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5804,13 +5289,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 31,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5821,7 +5306,7 @@
      "shot": "shots/370b0bd577.png"
     },
     {
-     "n": 150,
+     "n": 135,
      "id": "77f2d337e5",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5840,13 +5325,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 32,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5857,7 +5342,7 @@
      "shot": "shots/77f2d337e5.png"
     },
     {
-     "n": 151,
+     "n": 136,
      "id": "ef3c7b2dc8",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5869,20 +5354,20 @@
      ],
      "component": null,
      "tag": "div",
-     "text": "Generating “Soccer” images.",
+     "text": "Generating \u201cSoccer\u201d images.",
      "size": [
       560,
       45
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 36,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5893,7 +5378,7 @@
      "shot": "shots/ef3c7b2dc8.png"
     },
     {
-     "n": 152,
+     "n": 137,
      "id": "6cca20c8a7",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5905,20 +5390,20 @@
      ],
      "component": null,
      "tag": "span",
-     "text": "“Soccer”",
+     "text": "\u201cSoccer\u201d",
      "size": [
       76,
       20
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 45,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5929,7 +5414,7 @@
      "shot": "shots/6cca20c8a7.png"
     },
     {
-     "n": 153,
+     "n": 138,
      "id": "a8190e0e14",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5948,13 +5433,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 51,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -5965,7 +5450,7 @@
      "shot": "shots/a8190e0e14.png"
     },
     {
-     "n": 154,
+     "n": 139,
      "id": "06b7591be6",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -5984,13 +5469,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 52,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6001,7 +5486,7 @@
      "shot": "shots/06b7591be6.png"
     },
     {
-     "n": 155,
+     "n": 140,
      "id": "8dcf1eb65a",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -6020,13 +5505,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 54,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6037,7 +5522,7 @@
      "shot": "shots/8dcf1eb65a.png"
     },
     {
-     "n": 156,
+     "n": 141,
      "id": "f0d32ecdba",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -6056,13 +5541,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 56,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6073,7 +5558,7 @@
      "shot": "shots/f0d32ecdba.png"
     },
     {
-     "n": 157,
+     "n": 142,
      "id": "c1ec7a01b0",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -6092,13 +5577,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 58,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6109,7 +5594,7 @@
      "shot": "shots/c1ec7a01b0.png"
     },
     {
-     "n": 158,
+     "n": 143,
      "id": "a0faf75e12",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -6128,13 +5613,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 60,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6145,7 +5630,7 @@
      "shot": "shots/a0faf75e12.png"
     },
     {
-     "n": 159,
+     "n": 144,
      "id": "23bf57117f",
      "value": "#0e2332",
      "declared": "var(--ez-color--grey-100)",
@@ -6164,13 +5649,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 62,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -6187,8 +5672,8 @@
    "id": "b345e8d33d",
    "value": "#f2f2f2",
    "tokens": [
-    "--ez-color--text-headers",
-    "--ez-color--grey-100"
+    "--ez-color--grey-100",
+    "--ez-color--text-headers"
    ],
    "usages": 115,
    "instances": 250,
@@ -6226,7 +5711,7 @@
       "file": "AI Magic.dc.html",
       "line": 1539,
       "col": 13,
-      "snippet": "<button onClick=\"{{ toggleHeroTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 24px; border-radius: 9999px; background: #fff; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: var(--type-body-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease\" style-hover=\"background: var(--ez-color--grey-5); border-color: var(--ez-colo…"
+      "snippet": "<button onClick=\"{{ toggleHeroTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 24px; border-radius: 9999px; background: #fff; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: var(--type-body-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease\" style-hover=\"background: var(--ez-color--grey-5); border-color: var(--ez-colo\u2026"
      },
      "shot": "shots/94106f2c30.png"
     },
@@ -6306,7 +5791,7 @@
       "file": "AI Magic.dc.html",
       "line": 3656,
       "col": 7,
-      "snippet": "<button aria-label=\"Search settings\" class=\"gear-btn\" ref=\"{{ gearBtnRef }}\" onClick=\"{{ toggleGearMenu }}\" onMouseEnter=\"{{ enterGear }}\" onMouseLeave=\"{{ leaveGear }}\" style=\"position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex-shrink: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); border-radius: 9999px; transition: border-color .15s ease; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer\" style-hover=\"border-color: var(--ez-co…"
+      "snippet": "<button aria-label=\"Search settings\" class=\"gear-btn\" ref=\"{{ gearBtnRef }}\" onClick=\"{{ toggleGearMenu }}\" onMouseEnter=\"{{ enterGear }}\" onMouseLeave=\"{{ leaveGear }}\" style=\"position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex-shrink: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); border-radius: 9999px; transition: border-color .15s ease; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer\" style-hover=\"border-color: var(--ez-co\u2026"
      },
      "shot": "shots/4fab103fd8.png"
     },
@@ -9685,13 +9170,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 22,
       "nth": 0
      },
      "captures": [
-      24
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -9721,13 +9206,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 26,
+      "capture": 25,
       "owner": "Log In",
       "tpl": 27,
       "nth": 0
      },
      "captures": [
-      26
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -9757,16 +9242,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 41,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      36,
-      40
+      29,
+      31,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9796,17 +9281,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 138,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9836,17 +9321,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 144,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9876,17 +9361,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 147,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9916,17 +9401,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 148,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9956,17 +9441,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 149,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -9996,17 +9481,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 150,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10036,17 +9521,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 151,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10076,17 +9561,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 154,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10116,17 +9601,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 155,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10156,17 +9641,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 158,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10196,17 +9681,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 170,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10236,17 +9721,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 175,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10276,17 +9761,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 177,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10316,17 +9801,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 186,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10356,17 +9841,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 191,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10396,13 +9881,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 72,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10432,13 +9917,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 514,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -10457,8 +9942,8 @@
    "tokens": [
     "--ez-color--grey-90"
    ],
-   "usages": 62,
-   "instances": 168,
+   "usages": 60,
+   "instances": 166,
    "items": [
     {
      "n": 1,
@@ -10493,7 +9978,7 @@
       "file": "AI Magic.dc.html",
       "line": 1496,
       "col": 7,
-      "snippet": "<a href=\"Pricing.dc.html\" class=\"join-pro-glow\" style=\"display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 0 20px #ffffff\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" on…"
+      "snippet": "<a href=\"Pricing.dc.html\" class=\"join-pro-glow\" style=\"display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 0 20px #ffffff\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" on\u2026"
      },
      "shot": "shots/b9253ddc63.png"
     },
@@ -10828,7 +10313,7 @@
       "file": "AI Magic.dc.html",
       "line": 3553,
       "col": 7,
-      "snippet": "<a href=\"Pricing.dc.html\" style=\"visibility: {{ headerItemsVis }}; display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" onMouseEnter=\"{{ joi…"
+      "snippet": "<a href=\"Pricing.dc.html\" style=\"visibility: {{ headerItemsVis }}; display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" onMouseEnter=\"{{ joi\u2026"
      },
      "shot": "shots/4dea9200c4.png"
     },
@@ -12030,74 +11515,6 @@
     },
     {
      "n": 45,
-     "id": "9016b5533f",
-     "value": "#ffffff",
-     "declared": "rgb(255, 255, 255)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "AMEX",
-     "size": [
-      17,
-      11
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 49,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 61,
-      "col": 13,
-      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 17px; height: 11px; border-radius: 2px; background: #2e77bb; color: #fff; font-size: 4px; font-weight: 700\">"
-     },
-     "shot": "shots/9016b5533f.png"
-    },
-    {
-     "n": 46,
-     "id": "d7b71b56b8",
-     "value": "#ffffff",
-     "declared": "rgb(255, 255, 255)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Order summary",
-     "tag": "span",
-     "text": "SAVE",
-     "size": [
-      65,
-      20
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 101,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 107,
-      "col": 9,
-      "snippet": "<span style=\"flex-shrink: 0; display: flex; align-items: center; height: 20px; padding: 0 10px; border-radius: 9999px; background: #5fc65a; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: .06em\">"
-     },
-     "shot": "shots/d7b71b56b8.png"
-    },
-    {
-     "n": 47,
      "id": "9764b5393f",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12114,14 +11531,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 198,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12132,7 +11549,7 @@
      "shot": "shots/9764b5393f.png"
     },
     {
-     "n": 48,
+     "n": 46,
      "id": "2ddfb314c0",
      "value": "#ffffff",
      "declared": "inherit",
@@ -12142,21 +11559,21 @@
      "tokens": [],
      "component": "Social proof V2",
      "tag": "p",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       255,
       112
      ],
      "instances": 20,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 220,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12167,7 +11584,7 @@
      "shot": "shots/2ddfb314c0.png"
     },
     {
-     "n": 49,
+     "n": 47,
      "id": "fa19e14c52",
      "value": "#ffffff",
      "declared": "inherit",
@@ -12177,21 +11594,21 @@
      "tokens": [],
      "component": "Social proof V2",
      "tag": "p",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       255,
       45
      ],
      "instances": 10,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 237,
       "nth": 3
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12202,7 +11619,7 @@
      "shot": "shots/fa19e14c52.png"
     },
     {
-     "n": 50,
+     "n": 48,
      "id": "8e249d1b69",
      "value": "#ffffff",
      "declared": "inherit",
@@ -12219,14 +11636,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 247,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12237,7 +11654,7 @@
      "shot": "shots/8e249d1b69.png"
     },
     {
-     "n": 51,
+     "n": 49,
      "id": "1d2bf109d1",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12254,14 +11671,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 250,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12272,7 +11689,7 @@
      "shot": "shots/1d2bf109d1.png"
     },
     {
-     "n": 52,
+     "n": 50,
      "id": "f90bf638a4",
      "value": "#ffffff",
      "declared": "inherit",
@@ -12289,14 +11706,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 251,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12307,7 +11724,7 @@
      "shot": "shots/f90bf638a4.png"
     },
     {
-     "n": 53,
+     "n": 51,
      "id": "8740f9bf70",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12324,14 +11741,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 145,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12342,7 +11759,7 @@
      "shot": "shots/8740f9bf70.png"
     },
     {
-     "n": 54,
+     "n": 52,
      "id": "aaaa9586cf",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12359,14 +11776,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 146,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12377,7 +11794,7 @@
      "shot": "shots/aaaa9586cf.png"
     },
     {
-     "n": 55,
+     "n": 53,
      "id": "672e65bd37",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12394,14 +11811,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 147,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12412,7 +11829,7 @@
      "shot": "shots/672e65bd37.png"
     },
     {
-     "n": 56,
+     "n": 54,
      "id": "25c12a30e4",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12429,14 +11846,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 152,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12447,7 +11864,7 @@
      "shot": "shots/25c12a30e4.png"
     },
     {
-     "n": 57,
+     "n": 55,
      "id": "cbe0763b47",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12464,14 +11881,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 153,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12482,7 +11899,7 @@
      "shot": "shots/cbe0763b47.png"
     },
     {
-     "n": 58,
+     "n": 56,
      "id": "7c0bd70aee",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12499,14 +11916,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 154,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12517,7 +11934,7 @@
      "shot": "shots/7c0bd70aee.png"
     },
     {
-     "n": 59,
+     "n": 57,
      "id": "0b2b73e971",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12534,14 +11951,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 158,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12552,7 +11969,7 @@
      "shot": "shots/0b2b73e971.png"
     },
     {
-     "n": 60,
+     "n": 58,
      "id": "76ededb1d5",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12569,14 +11986,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 159,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12587,7 +12004,7 @@
      "shot": "shots/76ededb1d5.png"
     },
     {
-     "n": 61,
+     "n": 59,
      "id": "1ed173c659",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12604,14 +12021,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 160,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -12622,7 +12039,7 @@
      "shot": "shots/1ed173c659.png"
     },
     {
-     "n": 62,
+     "n": 60,
      "id": "50eb89de04",
      "value": "#ffffff",
      "declared": "rgb(255, 255, 255)",
@@ -12639,14 +12056,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 511,
       "nth": 0
      },
      "captures": [
-      33,
-      34
+      32,
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13131,7 +12548,7 @@
      ],
      "component": "Trustpilot ticker",
      "tag": "span",
-     "text": "·",
+     "text": "\u00b7",
      "size": [
       185,
       15
@@ -13275,7 +12692,7 @@
      ],
      "component": "Trustpilot marquee",
      "tag": "span",
-     "text": "·",
+     "text": "\u00b7",
      "size": [
       258,
       16
@@ -13318,14 +12735,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 43,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -13355,14 +12772,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 63,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -13392,14 +12809,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 121,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -13429,14 +12846,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 122,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -13466,14 +12883,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 123,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -13503,14 +12920,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 24,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -13540,14 +12957,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 32,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -13577,14 +12994,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 38,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -13614,14 +13031,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 39,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -13651,14 +13068,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 40,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -13688,17 +13105,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 139,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13728,17 +13145,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 145,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13768,17 +13185,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 171,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13808,17 +13225,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 176,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13848,17 +13265,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 187,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13888,17 +13305,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 192,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13928,17 +13345,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 195,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -13968,13 +13385,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 31,
+      "capture": 30,
       "owner": "Settings",
       "tpl": 38,
       "nth": 0
      },
      "captures": [
-      31
+      30
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14004,13 +13421,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 61,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14040,13 +13457,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 70,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14076,13 +13493,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 508,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14112,13 +13529,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 513,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14148,13 +13565,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 518,
       "nth": 0
      },
      "captures": [
-      33
+      32
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14184,13 +13601,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 37,
+      "capture": 36,
       "owner": "Settings",
       "tpl": 80,
       "nth": 0
      },
      "captures": [
-      37
+      36
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14220,13 +13637,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 37,
+      "capture": 36,
       "owner": "Settings",
       "tpl": 89,
       "nth": 0
      },
      "captures": [
-      37
+      36
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -14256,13 +13673,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 9,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14285,20 +13702,20 @@
      ],
      "component": null,
      "tag": "p",
-     "text": "Shown when a chat query is submitted as a generic search (query appended with “(",
+     "text": "Shown when a chat query is submitted as a generic search (query appended with \u201c(",
      "size": [
       547,
       65
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 11,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14328,13 +13745,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 23,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14364,13 +13781,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 26,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14400,13 +13817,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 28,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14436,13 +13853,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 30,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14465,20 +13882,20 @@
      ],
      "component": null,
      "tag": "p",
-     "text": "Shown when a chat query is submitted as a generation (query appended with “(gene",
+     "text": "Shown when a chat query is submitted as a generation (query appended with \u201c(gene",
      "size": [
       547,
       65
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 33,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14508,13 +13925,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 50,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14544,13 +13961,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 53,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14580,13 +13997,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 55,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14616,13 +14033,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 57,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14652,13 +14069,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 59,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -14688,13 +14105,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 61,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -15216,7 +14633,7 @@
      ],
      "component": "Trustpilot ticker",
      "tag": "span",
-     "text": "·",
+     "text": "\u00b7",
      "size": [
       185,
       15
@@ -15360,7 +14777,7 @@
      ],
      "component": "Trustpilot marquee",
      "tag": "span",
-     "text": "·",
+     "text": "\u00b7",
      "size": [
       258,
       16
@@ -15403,14 +14820,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 43,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -15440,14 +14857,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 63,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -15477,14 +14894,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 121,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -15514,14 +14931,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 122,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -15551,14 +14968,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 123,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -15588,17 +15005,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 139,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15628,17 +15045,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 145,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15668,17 +15085,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 171,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15708,17 +15125,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 176,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15748,17 +15165,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 187,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15788,17 +15205,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 192,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15828,17 +15245,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 195,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15868,13 +15285,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 32,
+      "capture": 31,
       "owner": "Settings",
       "tpl": 38,
       "nth": 0
      },
      "captures": [
-      32
+      31
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15904,13 +15321,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 61,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15940,13 +15357,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 70,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -15976,13 +15393,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 508,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -16012,13 +15429,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 513,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -16048,13 +15465,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 34,
+      "capture": 33,
       "owner": "Settings",
       "tpl": 518,
       "nth": 0
      },
      "captures": [
-      34
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -16084,13 +15501,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 38,
+      "capture": 37,
       "owner": "Settings",
       "tpl": 80,
       "nth": 0
      },
      "captures": [
-      38
+      37
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -16120,13 +15537,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 38,
+      "capture": 37,
       "owner": "Settings",
       "tpl": 89,
       "nth": 0
      },
      "captures": [
-      38
+      37
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -16963,7 +16380,7 @@
      ],
      "component": "Trustpilot ticker",
      "tag": "span",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       520,
       42
@@ -17179,7 +16596,7 @@
      ],
      "component": "Trustpilot marquee",
      "tag": "p",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       258,
       63
@@ -17258,13 +16675,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 23,
       "nth": 0
      },
      "captures": [
-      23
+      22
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -17294,13 +16711,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 115,
       "nth": 0
      },
      "captures": [
-      23
+      22
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -17330,13 +16747,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 28,
       "nth": 0
      },
      "captures": [
-      25
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -17366,16 +16783,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 47,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      35,
-      39
+      28,
+      30,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -17405,13 +16822,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 37,
+      "capture": 36,
       "owner": "Settings",
       "tpl": 104,
       "nth": 0
      },
      "captures": [
-      37
+      36
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -18248,7 +17665,7 @@
      ],
      "component": "Trustpilot ticker",
      "tag": "span",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       520,
       42
@@ -18464,7 +17881,7 @@
      ],
      "component": "Trustpilot marquee",
      "tag": "p",
-     "text": "“”",
+     "text": "\u201c\u201d",
      "size": [
       258,
       63
@@ -18543,13 +17960,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 23,
       "nth": 0
      },
      "captures": [
-      24
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -18579,13 +17996,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 115,
       "nth": 0
      },
      "captures": [
-      24
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -18615,13 +18032,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 26,
+      "capture": 25,
       "owner": "Log In",
       "tpl": 28,
       "nth": 0
      },
      "captures": [
-      26
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -18651,16 +18068,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 47,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      36,
-      40
+      29,
+      31,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -18690,13 +18107,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 38,
+      "capture": 37,
       "owner": "Settings",
       "tpl": 104,
       "nth": 0
      },
      "captures": [
-      38
+      37
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -18758,9 +18175,9 @@
    "id": "a9708c61d1",
    "value": "#ff7900",
    "tokens": [
+    "--color-orange-100",
     "--ez-color--accent",
-    "--ez-color--orange-100",
-    "--color-orange-100"
+    "--ez-color--orange-100"
    ],
    "usages": 18,
    "instances": 46,
@@ -19149,7 +18566,7 @@
      ],
      "component": "Pricing V4",
      "tag": "span",
-     "text": "OFF · ANNUAL PLAN",
+     "text": "OFF \u00b7 ANNUAL PLAN",
      "size": [
       174,
       17
@@ -19193,14 +18610,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 24,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19230,14 +18647,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 29,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19267,14 +18684,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 25,
+      "capture": 24,
       "owner": "Log In",
       "tpl": 59,
       "nth": 0
      },
      "captures": [
-      25,
-      26
+      24,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19304,13 +18721,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 44,
       "nth": 0
      },
      "captures": [
-      27
+      26
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -19340,12 +18757,13 @@
      ],
      "instances": 10,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 119,
       "nth": 0
      },
      "captures": [
+      28,
       29,
       30,
       31,
@@ -19353,9 +18771,8 @@
       33,
       34,
       35,
-      36,
-      39,
-      40
+      38,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -19385,14 +18802,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 517,
       "nth": 0
      },
      "captures": [
-      33,
-      34
+      32,
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -19422,14 +18839,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 33,
+      "capture": 32,
       "owner": "Settings",
       "tpl": 519,
       "nth": 0
      },
      "captures": [
-      33,
-      34
+      32,
+      33
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -19887,14 +19304,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 205,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19922,14 +19339,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 206,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19957,14 +19374,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 248,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -19992,14 +19409,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 252,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -20042,16 +19459,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 40,
       "nth": 0
      },
      "captures": [
+      22,
       23,
       24,
-      25,
-      26
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -20081,16 +19498,16 @@
      ],
      "instances": 4,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 44,
       "nth": 0
      },
      "captures": [
+      22,
       23,
       24,
-      25,
-      26
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -20120,14 +19537,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 29,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -20157,14 +19574,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 33,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -20194,12 +19611,13 @@
      ],
      "instances": 10,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 196,
       "nth": 0
      },
      "captures": [
+      28,
       29,
       30,
       31,
@@ -20207,9 +19625,8 @@
       33,
       34,
       35,
-      36,
-      39,
-      40
+      38,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -20670,12 +20087,13 @@
      ],
      "instances": 10,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 188,
       "nth": 0
      },
      "captures": [
+      28,
       29,
       30,
       31,
@@ -20683,9 +20101,8 @@
       33,
       34,
       35,
-      36,
-      39,
-      40
+      38,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -20871,14 +20288,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 60,
       "nth": 0
      },
      "captures": [
-      23,
-      25
+      22,
+      24
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -20908,14 +20325,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 27,
+      "capture": 26,
       "owner": "Log In v1",
       "tpl": 41,
       "nth": 0
      },
      "captures": [
-      27,
-      28
+      26,
+      27
      ],
      "source": {
       "file": "Log In v1.dc.html",
@@ -20945,13 +20362,13 @@
      ],
      "instances": 1,
      "where": {
-      "capture": 41,
+      "capture": 40,
       "owner": "Style Guide - Action Cards",
       "tpl": 7,
       "nth": 0
      },
      "captures": [
-      41
+      40
      ],
      "source": {
       "file": "Style Guide - Action Cards.dc.html",
@@ -20965,254 +20382,6 @@
   },
   {
    "n": 16,
-   "id": "e7cf043fdb",
-   "value": "#5b6670",
-   "tokens": [],
-   "usages": 7,
-   "instances": 7,
-   "items": [
-    {
-     "n": 1,
-     "id": "8a7dc099fc",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "span",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Secure payment",
-     "size": [
-      92,
-      16
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 43,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 53,
-      "col": 358,
-      "snippet": "<span style=\"border-bottom: 1px dotted currentColor\">"
-     },
-     "shot": "shots/8a7dc099fc.png"
-    },
-    {
-     "n": 2,
-     "id": "fcf711bac9",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "label",
-     "text": "Name on Card",
-     "size": [
-      456,
-      59
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 44,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 55,
-      "col": 7,
-      "snippet": "<label style=\"display: flex; flex-direction: column; gap: 9px; margin-top: 26px; font-size: 8.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #5b6670\">"
-     },
-     "shot": "shots/fcf711bac9.png"
-    },
-    {
-     "n": 3,
-     "id": "a9858d3e41",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "label",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Credit Card Number",
-     "size": [
-      456,
-      11
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 47,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 59,
-      "col": 9,
-      "snippet": "<span style=\"display: flex; align-items: flex-end; justify-content: space-between\">"
-     },
-     "shot": "shots/a9858d3e41.png"
-    },
-    {
-     "n": 4,
-     "id": "ff858194ba",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "label",
-     "text": "Expiration Date",
-     "size": [
-      218,
-      59
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 57,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 70,
-      "col": 9,
-      "snippet": "<label style=\"display: flex; flex-direction: column; gap: 9px; font-size: 8.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #5b6670\">"
-     },
-     "shot": "shots/ff858194ba.png"
-    },
-    {
-     "n": 5,
-     "id": "4b181e6da2",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "label",
-     "text": "Security Code/CVV",
-     "size": [
-      218,
-      59
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 59,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 73,
-      "col": 9,
-      "snippet": "<label style=\"display: flex; flex-direction: column; gap: 9px; font-size: 8.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #5b6670\">"
-     },
-     "shot": "shots/4b181e6da2.png"
-    },
-    {
-     "n": 6,
-     "id": "b6c8a98150",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "label",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Country",
-     "size": [
-      218,
-      10
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 63,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 79,
-      "col": 11,
-      "snippet": "<span>"
-     },
-     "shot": "shots/b6c8a98150.png"
-    },
-    {
-     "n": 7,
-     "id": "0f484c9403",
-     "value": "#5b6670",
-     "declared": "rgb(91, 102, 112)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "label",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "ZIP / Postal Code",
-     "size": [
-      218,
-      10
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 71,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 83,
-      "col": 11,
-      "snippet": "<span>"
-     },
-     "shot": "shots/0f484c9403.png"
-    }
-   ]
-  },
-  {
-   "n": 17,
    "id": "7c2454a9a9",
    "value": "#000000 / 0%",
    "tokens": [],
@@ -21261,7 +20430,7 @@
    ]
   },
   {
-   "n": 18,
+   "n": 17,
    "id": "30ec59ab71",
    "value": "#869198",
    "tokens": [
@@ -21326,17 +20495,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 29,
+      "capture": 28,
       "owner": "Settings",
       "tpl": 153,
       "nth": 0
      },
      "captures": [
-      29,
-      31,
-      33,
-      35,
-      39
+      28,
+      30,
+      32,
+      34,
+      38
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -21349,7 +20518,7 @@
    ]
   },
   {
-   "n": 19,
+   "n": 18,
    "id": "ed9f6ed7f9",
    "value": "#7f7f7f",
    "tokens": [
@@ -21522,14 +20691,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 24,
+      "capture": 23,
       "owner": "Log In",
       "tpl": 60,
       "nth": 0
      },
      "captures": [
-      24,
-      26
+      23,
+      25
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -21542,187 +20711,7 @@
    ]
   },
   {
-   "n": 20,
-   "id": "0445760235",
-   "value": "#6f7a84",
-   "tokens": [],
-   "usages": 5,
-   "instances": 5,
-   "items": [
-    {
-     "n": 1,
-     "id": "b1edbcdb30",
-     "value": "#6f7a84",
-     "declared": "rgb(111, 122, 132)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "a",
-     "text": "1",
-     "size": [
-      32,
-      32
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 15,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 31,
-      "col": 11,
-      "snippet": "<a href=\"Pricing.dc.html\" aria-label=\"Back to pricing\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #eef1f3; color: #6f7a84; font-size: 12px; font-weight: 600; text-decoration: none; transition: background .15s ease, color .15s ease\" style-hover=\"background: #dfe3e6; color: #0e2332\">"
-     },
-     "shot": "shots/b1edbcdb30.png"
-    },
-    {
-     "n": 2,
-     "id": "07b7fb74b1",
-     "value": "#6f7a84",
-     "declared": "rgb(111, 122, 132)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Log In",
-     "size": [
-      33,
-      13
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 16,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 32,
-      "col": 11,
-      "snippet": "<span style=\"font-size: 11px; font-weight: 500; color: #6f7a84\">"
-     },
-     "shot": "shots/07b7fb74b1.png"
-    },
-    {
-     "n": 3,
-     "id": "fcaf03e53b",
-     "value": "#6f7a84",
-     "declared": "rgb(111, 122, 132)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "3",
-     "size": [
-      32,
-      32
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 22,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 40,
-      "col": 11,
-      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; box-sizing: border-box; border: 1px solid #dfe3e6; border-radius: 50%; background: #fff; color: #6f7a84; font-size: 12px; font-weight: 600\">"
-     },
-     "shot": "shots/fcaf03e53b.png"
-    },
-    {
-     "n": 4,
-     "id": "5cff1e14a4",
-     "value": "#6f7a84",
-     "declared": "rgb(111, 122, 132)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Get Started",
-     "size": [
-      62,
-      13
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 23,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 41,
-      "col": 11,
-      "snippet": "<span style=\"font-size: 11px; font-weight: 500; color: #6f7a84\">"
-     },
-     "shot": "shots/5cff1e14a4.png"
-    },
-    {
-     "n": 5,
-     "id": "ab4c2e4ded",
-     "value": "#6f7a84",
-     "declared": "rgb(111, 122, 132)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "div",
-     "text": "OR",
-     "size": [
-      456,
-      12
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 34,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 50,
-      "col": 7,
-      "snippet": "<div style=\"display: flex; align-items: center; gap: 12px; margin-top: 38px; font-size: 10px; color: #6f7a84\">"
-     },
-     "shot": "shots/ab4c2e4ded.png"
-    }
-   ]
-  },
-  {
-   "n": 21,
+   "n": 19,
    "id": "0bb3c6c49c",
    "value": "#909090",
    "tokens": [
@@ -21751,17 +20740,17 @@
      ],
      "instances": 5,
      "where": {
-      "capture": 30,
+      "capture": 29,
       "owner": "Settings",
       "tpl": 153,
       "nth": 0
      },
      "captures": [
-      30,
-      32,
-      34,
-      36,
-      40
+      29,
+      31,
+      33,
+      35,
+      39
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -21774,7 +20763,7 @@
    ]
   },
   {
-   "n": 22,
+   "n": 20,
    "id": "a551d9eabf",
    "value": "#ffffff / 90%",
    "tokens": [
@@ -21860,7 +20849,7 @@
    ]
   },
   {
-   "n": 23,
+   "n": 21,
    "id": "8976cdc8aa",
    "value": "#3e4f5b",
    "tokens": [
@@ -21946,7 +20935,7 @@
    ]
   },
   {
-   "n": 24,
+   "n": 22,
    "id": "2e3cee2ca9",
    "value": "#555555",
    "tokens": [],
@@ -21991,163 +20980,7 @@
    ]
   },
   {
-   "n": 25,
-   "id": "4e19b98fdd",
-   "value": "#000000",
-   "tokens": [],
-   "usages": 2,
-   "instances": 2,
-   "items": [
-    {
-     "n": 1,
-     "id": "25bc968c2f",
-     "value": "#000000",
-     "declared": "rgb(14, 35, 50)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": "div.vz-co",
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "button",
-     "text": "Pay with PayPal",
-     "size": [
-      145,
-      45
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 26,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 46,
-      "col": 9,
-      "snippet": "<button aria-label=\"Pay with PayPal\" style=\"height: 45px; border: none; border-radius: 4px; background: #f2f4f5; font-family: Verdana, sans-serif; font-size: 16px; font-weight: 700; font-style: italic; cursor: pointer\" style-hover=\"background: #e8ebed\">"
-     },
-     "shot": "shots/25bc968c2f.png"
-    },
-    {
-     "n": 2,
-     "id": "7e2b682f6b",
-     "value": "#000000",
-     "declared": "rgb(0, 0, 0)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "button",
-     "text": "Pay",
-     "size": [
-      145,
-      45
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 31,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 48,
-      "col": 9,
-      "snippet": "<button aria-label=\"Pay with Apple Pay\" style=\"height: 45px; border: none; border-radius: 4px; background: #f2f4f5; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 2px; font-size: 18px; font-weight: 600; color: #000; cursor: pointer\" style-hover=\"background: #e8ebed\">"
-     },
-     "shot": "shots/7e2b682f6b.png"
-    }
-   ]
-  },
-  {
-   "n": 26,
-   "id": "a2e013acb8",
-   "value": "#e0284f",
-   "tokens": [],
-   "usages": 2,
-   "instances": 2,
-   "items": [
-    {
-     "n": 1,
-     "id": "5dbd437a65",
-     "value": "#e0284f",
-     "declared": "rgb(224, 40, 79)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "*",
-     "size": [
-      5,
-      10
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 64,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 79,
-      "col": 25,
-      "snippet": "<span style=\"color: #e0284f\">"
-     },
-     "shot": "shots/5dbd437a65.png"
-    },
-    {
-     "n": 2,
-     "id": "7299269421",
-     "value": "#e0284f",
-     "declared": "rgb(224, 40, 79)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "*",
-     "size": [
-      5,
-      10
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 72,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 83,
-      "col": 35,
-      "snippet": "<span style=\"color: #e0284f\">"
-     },
-     "shot": "shots/7299269421.png"
-    }
-   ]
-  },
-  {
-   "n": 27,
+   "n": 23,
    "id": "f00dfd9d56",
    "value": "#9f9f9f",
    "tokens": [],
@@ -22187,314 +21020,6 @@
       "snippet": "<a href=\"#\" class=\"mark-read\" onClick=\"{{ markAllRead }}\" style=\"font-size: 13px; font-weight: 600; color: {{ markReadColor }}; text-decoration: none; margin-top: 2px; margin-bottom: -2px\" style-hover=\"color: var(--ez-color--grey-70)\">"
      },
      "shot": "shots/037d8caad5.png"
-    }
-   ]
-  },
-  {
-   "n": 28,
-   "id": "dec4bf7ce1",
-   "value": "#253b80",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "dac63e1207",
-     "value": "#253b80",
-     "declared": "rgb(37, 59, 128)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Pay",
-     "size": [
-      33,
-      19
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 27,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 46,
-      "col": 262,
-      "snippet": "<span style=\"color: #253b80\">"
-     },
-     "shot": "shots/dac63e1207.png"
-    }
-   ]
-  },
-  {
-   "n": 29,
-   "id": "1036176e48",
-   "value": "#179bd7",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "5b8b45f0a1",
-     "value": "#179bd7",
-     "declared": "rgb(23, 155, 215)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "Pal",
-     "size": [
-      28,
-      19
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 28,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 46,
-      "col": 301,
-      "snippet": "<span style=\"color: #179bd7\">"
-     },
-     "shot": "shots/5b8b45f0a1.png"
-    }
-   ]
-  },
-  {
-   "n": 30,
-   "id": "be35b2a537",
-   "value": "#3c4043",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "bb44f0fd3a",
-     "value": "#3c4043",
-     "declared": "rgb(60, 64, 67)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "button",
-     "text": "Pay",
-     "size": [
-      145,
-      45
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 29,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 47,
-      "col": 9,
-      "snippet": "<button aria-label=\"Pay with Google Pay\" style=\"height: 45px; border: none; border-radius: 4px; background: #f2f4f5; font-family: inherit; font-size: 17px; font-weight: 500; color: #3c4043; cursor: pointer\" style-hover=\"background: #e8ebed\">"
-     },
-     "shot": "shots/bb44f0fd3a.png"
-    }
-   ]
-  },
-  {
-   "n": 31,
-   "id": "0f2e51e56e",
-   "value": "#4285f4",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "9cb276b6c3",
-     "value": "#4285f4",
-     "declared": "rgb(66, 133, 244)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "G",
-     "size": [
-      13,
-      20
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 30,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 47,
-      "col": 250,
-      "snippet": "<span style=\"font-weight: 700; color: #4285f4\">"
-     },
-     "shot": "shots/9cb276b6c3.png"
-    }
-   ]
-  },
-  {
-   "n": 32,
-   "id": "a0d7b9b90c",
-   "value": "#231f20",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "a88a788373",
-     "value": "#231f20",
-     "declared": "rgb(35, 31, 32)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "DISCOVER",
-     "size": [
-      17,
-      11
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 50,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 62,
-      "col": 13,
-      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 17px; height: 11px; border-radius: 2px; background: #eef1f3; color: #231f20; font-size: 3.5px; font-weight: 700\">"
-     },
-     "shot": "shots/a88a788373.png"
-    }
-   ]
-  },
-  {
-   "n": 33,
-   "id": "cff2f57e28",
-   "value": "#1a1f71",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "9e288cff4f",
-     "value": "#1a1f71",
-     "declared": "rgb(26, 31, 113)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "span",
-     "text": "VISA",
-     "size": [
-      17,
-      11
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 54,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 64,
-      "col": 13,
-      "snippet": "<span style=\"display: flex; align-items: center; justify-content: center; width: 17px; height: 11px; border-radius: 2px; background: #eef1f3; color: #1a1f71; font-size: 5px; font-weight: 800; font-style: italic\">"
-     },
-     "shot": "shots/9e288cff4f.png"
-    }
-   ]
-  },
-  {
-   "n": 34,
-   "id": "ab7aa82f1d",
-   "value": "#3d4852",
-   "tokens": [],
-   "usages": 1,
-   "instances": 1,
-   "items": [
-    {
-     "n": 1,
-     "id": "982357c822",
-     "value": "#3d4852",
-     "declared": "rgb(61, 72, 82)",
-     "declaredProp": "color",
-     "declaredFrom": "inline",
-     "inheritedFrom": null,
-     "tokens": [],
-     "component": "Checkout form",
-     "tag": "select",
-     "text": "",
-     "size": [
-      218,
-      40
-     ],
-     "instances": 1,
-     "where": {
-      "capture": 22,
-      "owner": "Checkout",
-      "tpl": 65,
-      "nth": 0
-     },
-     "captures": [
-      22
-     ],
-     "source": {
-      "file": "Checkout.dc.html",
-      "line": 80,
-      "col": 11,
-      "snippet": "<select style=\"height: 40px; padding: 0 10px; box-sizing: border-box; border: 1px solid #cfd5da; border-radius: 6px; background: #fff; font: inherit; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: #3d4852\">"
-     },
-     "shot": "shots/982357c822.png"
     }
    ]
   }

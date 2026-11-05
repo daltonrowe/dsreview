@@ -7,12 +7,12 @@
  "captures": [
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home",
+   "label": "AI Magic \u00b7 Home",
    "theme": "light"
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home · dark",
+   "label": "AI Magic \u00b7 Home \u00b7 dark",
    "theme": "dark",
    "props": {
     "theme": "dark"
@@ -20,7 +20,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (logged in)",
+   "label": "AI Magic \u00b7 Home (logged in)",
    "props": {
     "authState": "logged-in"
    },
@@ -28,7 +28,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Home (logged in) · dark",
+   "label": "AI Magic \u00b7 Home (logged in) \u00b7 dark",
    "props": {
     "authState": "logged-in",
     "theme": "dark"
@@ -37,7 +37,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Search results",
+   "label": "AI Magic \u00b7 Search results",
    "state": {
     "active": "search",
     "aiHome": false
@@ -46,7 +46,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Search results · dark",
+   "label": "AI Magic \u00b7 Search results \u00b7 dark",
    "state": {
     "active": "search",
     "aiHome": false
@@ -58,7 +58,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Explore",
+   "label": "AI Magic \u00b7 Explore",
    "state": {
     "active": "explore"
    },
@@ -66,7 +66,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · Explore · dark",
+   "label": "AI Magic \u00b7 Explore \u00b7 dark",
    "state": {
     "active": "explore"
    },
@@ -77,7 +77,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · AI Tools",
+   "label": "AI Magic \u00b7 AI Tools",
    "state": {
     "active": "collections"
    },
@@ -85,7 +85,7 @@
   },
   {
    "page": "AI Magic.dc.html",
-   "label": "AI Magic · AI Tools · dark",
+   "label": "AI Magic \u00b7 AI Tools \u00b7 dark",
    "state": {
     "active": "collections"
    },
@@ -101,7 +101,7 @@
   },
   {
    "page": "Explore Page.dc.html",
-   "label": "Explore Page · dark",
+   "label": "Explore Page \u00b7 dark",
    "theme": "dark",
    "props": {},
    "state": {
@@ -116,7 +116,7 @@
   },
   {
    "page": "Search Dropdown.dc.html",
-   "label": "Search Dropdown · dark",
+   "label": "Search Dropdown \u00b7 dark",
    "theme": "dark",
    "props": {},
    "state": {},
@@ -126,7 +126,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 1",
+   "label": "Pricing \u00b7 Option 1",
    "props": {
     "layout": "Option 1"
    },
@@ -134,7 +134,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 1 · dark",
+   "label": "Pricing \u00b7 Option 1 \u00b7 dark",
    "props": {
     "layout": "Option 1",
     "theme": "Dark"
@@ -143,7 +143,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 2",
+   "label": "Pricing \u00b7 Option 2",
    "props": {
     "layout": "Option 2"
    },
@@ -151,7 +151,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 2 · dark",
+   "label": "Pricing \u00b7 Option 2 \u00b7 dark",
    "props": {
     "layout": "Option 2",
     "theme": "Dark"
@@ -160,7 +160,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 3",
+   "label": "Pricing \u00b7 Option 3",
    "props": {
     "layout": "Option 3"
    },
@@ -168,7 +168,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 3 · dark",
+   "label": "Pricing \u00b7 Option 3 \u00b7 dark",
    "props": {
     "layout": "Option 3",
     "theme": "Dark"
@@ -177,7 +177,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4",
+   "label": "Pricing \u00b7 Option 4",
    "props": {
     "layout": "Option 4"
    },
@@ -185,7 +185,7 @@
   },
   {
    "page": "Pricing.dc.html",
-   "label": "Pricing · Option 4 · dark",
+   "label": "Pricing \u00b7 Option 4 \u00b7 dark",
    "props": {
     "layout": "Option 4",
     "theme": "Dark"
@@ -193,18 +193,13 @@
    "theme": "dark"
   },
   {
-   "page": "Checkout.dc.html",
-   "label": "Checkout",
+   "page": "Log In.dc.html",
+   "label": "Log In \u00b7 Create account",
    "theme": "light"
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Create account",
-   "theme": "light"
-  },
-  {
-   "page": "Log In.dc.html",
-   "label": "Log In · Create account · dark",
+   "label": "Log In \u00b7 Create account \u00b7 dark",
    "theme": "dark",
    "props": {
     "theme": "Dark"
@@ -212,7 +207,7 @@
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Log in",
+   "label": "Log In \u00b7 Log in",
    "props": {
     "mode": "Log In"
    },
@@ -220,7 +215,7 @@
   },
   {
    "page": "Log In.dc.html",
-   "label": "Log In · Log in · dark",
+   "label": "Log In \u00b7 Log in \u00b7 dark",
    "props": {
     "mode": "Log In",
     "theme": "Dark"
@@ -229,12 +224,12 @@
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Login",
+   "label": "Log In v1 \u00b7 Login",
    "theme": "light"
   },
   {
    "page": "Log In v1.dc.html",
-   "label": "Log In v1 · Signup",
+   "label": "Log In v1 \u00b7 Signup",
    "props": {
     "mode": "signup"
    },
@@ -242,7 +237,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · App",
+   "label": "Settings \u00b7 App",
    "props": {
     "layout": "app"
    },
@@ -250,7 +245,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · App · dark",
+   "label": "Settings \u00b7 App \u00b7 dark",
    "props": {
     "layout": "app",
     "theme": "dark"
@@ -259,7 +254,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Sidebar",
+   "label": "Settings \u00b7 Sidebar",
    "props": {
     "layout": "sidebar"
    },
@@ -267,7 +262,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Sidebar · dark",
+   "label": "Settings \u00b7 Sidebar \u00b7 dark",
    "props": {
     "layout": "sidebar",
     "theme": "dark"
@@ -276,7 +271,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Tabs",
+   "label": "Settings \u00b7 Tabs",
    "props": {
     "layout": "tabs"
    },
@@ -284,7 +279,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Tabs · dark",
+   "label": "Settings \u00b7 Tabs \u00b7 dark",
    "props": {
     "layout": "tabs",
     "theme": "dark"
@@ -293,7 +288,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Modal",
+   "label": "Settings \u00b7 Modal",
    "props": {
     "layout": "modal"
    },
@@ -301,7 +296,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Modal · dark",
+   "label": "Settings \u00b7 Modal \u00b7 dark",
    "props": {
     "layout": "modal",
     "theme": "dark"
@@ -310,7 +305,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Hub",
+   "label": "Settings \u00b7 Hub",
    "props": {
     "layout": "hub"
    },
@@ -318,7 +313,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Hub · dark",
+   "label": "Settings \u00b7 Hub \u00b7 dark",
    "props": {
     "layout": "hub",
     "theme": "dark"
@@ -327,7 +322,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Free plan",
+   "label": "Settings \u00b7 Free plan",
    "props": {
     "plan": "Free"
    },
@@ -335,7 +330,7 @@
   },
   {
    "page": "Settings.dc.html",
-   "label": "Settings · Free plan · dark",
+   "label": "Settings \u00b7 Free plan \u00b7 dark",
    "props": {
     "plan": "Free",
     "theme": "dark"
@@ -344,7 +339,7 @@
   },
   {
    "page": "Style Guide - Action Cards.dc.html",
-   "label": "Style Guide · Action Cards",
+   "label": "Style Guide \u00b7 Action Cards",
    "theme": "light"
   }
  ],
@@ -354,7 +349,7 @@
   "instances": 60
  },
  "problems": [
-  "Explore Page · dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
+  "Explore Page \u00b7 dark: warn: state key \"darkMode\" not currently in state (setting anyway). Known: active, hovered, menuOpen, recent"
  ],
  "sections": [
   {
@@ -383,14 +378,14 @@
      ],
      "instances": 20,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 212,
       "nth": 0
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -418,14 +413,14 @@
      ],
      "instances": 12,
      "where": {
-      "capture": 23,
+      "capture": 22,
       "owner": "Log In",
       "tpl": 229,
       "nth": 2
      },
      "captures": [
-      23,
-      24
+      22,
+      23
      ],
      "source": {
       "file": "Log In.dc.html",
@@ -595,13 +590,13 @@
      ],
      "instances": 6,
      "where": {
-      "capture": 38,
+      "capture": 37,
       "owner": "Settings",
       "tpl": 94,
       "nth": 0
      },
      "captures": [
-      38
+      37
      ],
      "source": {
       "file": "Settings.dc.html",
@@ -729,14 +724,14 @@
      ],
      "instances": 2,
      "where": {
-      "capture": 35,
+      "capture": 34,
       "owner": "Settings",
       "tpl": 8,
       "nth": 0
      },
      "captures": [
-      35,
-      36
+      34,
+      35
      ],
      "source": {
       "file": "Settings.dc.html",

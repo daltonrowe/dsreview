@@ -56,8 +56,10 @@
     <div class="seg catf" id="catf"></div>
     <div id="comps" class="comps"></div>
   </details>
-  <h2>Pages</h2>
-  <div id="pages" class="card pages"></div>
+  <details class="collapse" id="pagesBox">
+    <summary><h2>Pages <span class="faint" id="pagesCount"></span></h2></summary>
+    <div id="pages" class="card pages"></div>
+  </details>
 </main>
 <script type="module">
 import { api, esc, progressBar, legend, viewUrl, $ } from './common.js';
@@ -107,6 +109,7 @@ $('#catf').addEventListener('click', e => { const b = e.target.closest('button')
 renderComps();
 
 const pages = await api('/api/pages');
+$('#pagesCount').textContent = `(${pages.length})`;
 $('#pages').innerHTML = pages.map(p => `
   <div class="page">
     <div class="name">${esc(p.file.replace(/\.dc\.html$|\.html$/, ''))}${p.dc ? '' : ' <span class="chip">export</span>'}</div>

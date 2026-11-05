@@ -71,10 +71,6 @@
       }
     },
     {
-      "page": "Checkout.dc.html",
-      "label": "Checkout"
-    },
-    {
       "page": "Log In.dc.html",
       "label": "Log In \u00b7 Create account"
     },
