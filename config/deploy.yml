@@ -1,9 +1,9 @@
 # Name of your application. Used to uniquely configure containers.
 # Must be unique across every app deployed to dcloudbox.
-service: design-system-review
+service: dsreview
 
 # Name of the container image.
-image: daltonrowe/design-system-review
+image: daltonrowe/dsreview
 
 # Deploy to these servers.
 # The same address also appears as SERVER_ADDR in .github/workflows/cd.yml.
@@ -18,15 +18,15 @@ servers:
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full (strict)".
 proxy:
   ssl: true
-  # TODO: confirm the hostname (also in .github/workflows/cd.yml) and create its DNS A record.
-  host: design-system-review.daltonrowe.com
+  # Also in the deploy summary in .github/workflows/cd.yml.
+  host: dsreview.daltonrowe.com
   app_port: 3000
   healthcheck:
     path: /up
 
 # Reviewer decisions (DATA_DIR). A named volume survives deploys and rollbacks.
 volumes:
-  - design_system_review_data:/app/data
+  - dsreview_data:/app/data
 
 # Credentials for your image host.
 registry:
@@ -37,16 +37,16 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
-# Inject ENV variables into containers (secrets come from .kamal/secrets).
+# Inject ENV variables into containers. Nothing here is secret: the basic-auth
+# password is a shared low-stakes gate, so it is hardcoded.
 env:
-  secret:
-    - REVIEW_PASS
   clear:
     NODE_ENV: production
     HOST: 0.0.0.0
     PORT: 3000
     DATA_DIR: /app/data
     REVIEW_USER: eezy
+    REVIEW_PASS: eezy
 
 # Use a different ssh user than root. The bootstrap script creates this user and
 # adds it to the docker group.

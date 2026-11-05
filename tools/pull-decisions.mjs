@@ -10,7 +10,7 @@ import { ROOT } from './lib/render.mjs';
 const argv = process.argv.slice(2);
 const flag = f => argv.includes(f);
 const url = (argv[argv.indexOf('--url') + 1]?.startsWith('http') ? argv[argv.indexOf('--url') + 1] : null)
-  || process.env.REVIEW_URL || 'https://design-system-review.daltonrowe.com';
+  || process.env.REVIEW_URL || 'https://dsreview.daltonrowe.com';
 const auth = 'Basic ' + Buffer.from(`${process.env.REVIEW_USER || 'eezy'}:${process.env.REVIEW_PASS || 'eezy'}`).toString('base64');
 
 async function get(p) {

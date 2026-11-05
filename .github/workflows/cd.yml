@@ -44,7 +44,7 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           curl -X POST "$NOTIFY_WEBHOOK_URL" -H "Content-Type: application/json" \
-            -d "{\"content\":\"design-system-review CD Deploy Starting - $SHA\"}"
+            -d "{\"content\":\"dsreview CD Deploy Starting - $SHA\"}"
 
   deploy:
     runs-on: ubuntu-latest
@@ -88,18 +88,17 @@ jobs:
 
       - name: Deploy with Kamal
         env:
-          REVIEW_PASS: ${{ secrets.REVIEW_PASS }}
           KAMAL_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: bin/kamal deploy
 
       - name: Summarize deploy
         if: always()
         run: |
-          echo "### design-system-review deploy: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "### dsreview deploy: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- commit: \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
-          # TODO: keep in sync with proxy.host in config/deploy.yml
-          echo "- host: https://design-system-review.daltonrowe.com" >> $GITHUB_STEP_SUMMARY
+          # Keep in sync with proxy.host in config/deploy.yml
+          echo "- host: https://dsreview.daltonrowe.com" >> $GITHUB_STEP_SUMMARY
 
   deploy_end:
     runs-on: ubuntu-latest
@@ -114,4 +113,4 @@ jobs:
           SHA: ${{ github.sha }}
         run: |
           curl -X POST "$NOTIFY_WEBHOOK_URL" -H "Content-Type: application/json" \
-            -d "{\"content\":\"design-system-review CD Deploy - $DEPLOY_CONCLUSION - $SHA\"}"
+            -d "{\"content\":\"dsreview CD Deploy - $DEPLOY_CONCLUSION - $SHA\"}"

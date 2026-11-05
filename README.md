@@ -69,15 +69,15 @@ node tools/dc.mjs help
 Kamal 2 deploys to dcloudbox behind the shared kamal-proxy. GitHub Actions (`.github/workflows/cd.yml`) runs on every push to `main`: it runs the tests, builds the image, pushes it to ghcr.io and runs `bin/kamal deploy`. Config: `config/deploy.yml`, `.kamal/secrets`, `Dockerfile`.
 
 - The image contains everything the viewer serves: `design-project/`, `design-system/`, `surveys/` (with screenshots) and `analysis/`. Surveys are generated locally, so commit the regenerated `surveys/` and `analysis/` folders to publish them.
-- Decisions made on the deployed site live on the `design_system_review_data` volume (`DATA_DIR=/app/data`), not in the image, so deploys keep them. `npm run pull-decisions` copies them into the local survey folders. It refuses to overwrite different local decisions unless you pass `--force`.
-- `/up` is the unauthenticated health check. Everything else asks for basic auth: user `eezy`, password from the `REVIEW_PASS` secret.
+- Decisions made on the deployed site live on the `dsreview_data` volume (`DATA_DIR=/app/data`), not in the image, so deploys keep them. `npm run pull-decisions` copies them into the local survey folders. It refuses to overwrite different local decisions unless you pass `--force`.
+- `/up` is the unauthenticated health check. Everything else asks for basic auth: `eezy` / `eezy` (set in `config/deploy.yml`).
 
 **First deploy (once):**
 
-1. Confirm the hostname in `config/deploy.yml` (`proxy.host`) and the `cd.yml` summary line, and point its DNS `A` record at `162.55.211.252`.
-2. Push the repo to `github.com/daltonrowe/design-system-review` (the image name and registry user assume that owner).
-3. Repository secrets: `SSH_PRIVATE_KEY` (the shared `dcloudbox_ci` key), `REVIEW_PASS` (`eezy`) and `NOTIFY_WEBHOOK_URL`. Check them with `gh secret list --repo daltonrowe/design-system-review`.
-4. From the laptop: `cp .env.example .env`, `export KAMAL_REGISTRY_PASSWORD=$(gh auth token)`, then `bin/kamal setup`. The token needs `write:packages` (`gh auth refresh -s write:packages`).
+1. Point the DNS `A` record for `dsreview.daltonrowe.com` at `162.55.211.252`.
+2. Push the repo to `github.com/daltonrowe/dsreview`.
+3. Repository secrets: `SSH_PRIVATE_KEY` (the shared `dcloudbox_ci` key) and `NOTIFY_WEBHOOK_URL`. Check them with `gh secret list --repo daltonrowe/dsreview`.
+4. From the laptop: `export KAMAL_REGISTRY_PASSWORD=$(gh auth token)`, then `bin/kamal setup`. The token needs `write:packages` (`gh auth refresh -s write:packages`).
 5. Link the ghcr package to the repo in its package settings, and keep it private.
 
 **Operations:** `bin/kamal logs`, `bin/kamal shell`, `bin/kamal app details`, `bin/kamal rollback <version>`, `bin/kamal lock release`. Any server command needs `KAMAL_REGISTRY_PASSWORD` exported first.
