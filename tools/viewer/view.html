@@ -67,7 +67,7 @@ let cur = {
 if (!cur.options && P.get('apply')) cur.options = [{ label: P.get('applyLabel') || 'Rounded', css: parse('apply', {}) }];
 if (P.get('embed')) document.body.classList.add('embed');
 let saved = null, showing = -1;
-const MARKS = ['border', 'highlight', 'none'];
+const MARKS = ['border', 'highlight', 'find', 'none'];
 let mark = MARKS.includes(P.get('mark')) ? P.get('mark') : (() => { try { return localStorage.getItem('dcv-mark'); } catch { return null; } })();
 if (!MARKS.includes(mark)) mark = 'border';
 const frame = $('#frame');

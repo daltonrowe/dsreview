@@ -184,11 +184,12 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     });
   });
 
-  app.get('/api/surveys/:id/export.:fmt', async (req, res) => {
-    const dir = surveyDir(req.params.id);
-    const survey = await readJson(path.join(dir, 'survey.json'), null);
-    if (!survey) return res.status(404).end();
-    const decisions = await readJson(decisionsPath(req.params.id), {});
+  // One survey's export: { json, md } or null when it isn't generated. `h` is the heading level
+  // of the survey title (1 alone, 2 inside the all-surveys export).
+  async function buildExport(id, h = 1) {
+    const survey = await readJson(path.join(surveyDir(id), 'survey.json'), null);
+    if (!survey) return null;
+    const decisions = await readJson(decisionsPath(id), {});
     const rows = survey.sections.map(s => ({
       section: s.n, value: s.value, tokens: s.tokens,
       items: s.items.map(it => ({
@@ -197,18 +198,42 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
         source: it.source?.line ? `${it.source.file}:${it.source.line}` : it.source?.file, shot: it.shot && `surveys/${survey.id}/${it.shot}`,
       })),
     }));
-    if (req.params.fmt === 'json') return res.json({ id: survey.id, title: survey.title, preset: survey.preset, generatedAt: survey.generatedAt, progress: progress(survey, decisions), sections: rows });
-    if (req.params.fmt !== 'md') return res.status(400).end();
     const p = progress(survey, decisions);
-    let md = `# ${survey.title}\n\nSurvey \`${survey.id}\` (preset \`${survey.preset}\`), generated ${survey.generatedAt}.\n\n`;
+    const json = { id: survey.id, title: survey.title, preset: survey.preset, generatedAt: survey.generatedAt, progress: p, sections: rows };
+    const H = n => '#'.repeat(h + n);
+    let md = `${H(0)} ${survey.title}\n\nSurvey \`${survey.id}\` (preset \`${survey.preset}\`), generated ${survey.generatedAt}.\n\n`;
     md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
     for (const s of rows) {
       const counts = DECISIONS.map(d => `${d} ${s.items.filter(i => i.decision === d).length}`).join(', ');
-      md += `## S${s.section} · \`${s.value}\`\n\n${s.tokens.length ? `Tokens: ${s.tokens.map(t => `\`${t}\``).join(', ')}. ` : ''}${s.items.length} usages (${counts}).\n\n`;
+      md += `${H(1)} S${s.section} · \`${s.value}\`\n\n${s.tokens.length ? `Tokens: ${s.tokens.map(t => `\`${t}\``).join(', ')}. ` : ''}${s.items.length} usages (${counts}).\n\n`;
       md += `| # | Decision | Declared | Component | Page | Source | Note |\n|---|---|---|---|---|---|---|\n`;
       for (const it of s.items) md += `| ${it.ref} | ${it.decision === 'round' ? `round → \`${it.roundTo}\`${it.roundValue ? ` (${it.roundValue})` : ''}` : it.decision || '—'} | \`${(it.declared || '').replace(/\|/g, '\\|')}\` | ${it.component || ''} | ${it.page || ''} | ${it.source || ''} | ${(it.note || '').replace(/\|/g, '\\|').replace(/\n/g, ' ')} |\n`;
       md += '\n';
     }
+    return { json, md };
+  }
+
+  app.get('/api/surveys/:id/export.:fmt', async (req, res) => {
+    const out = await buildExport(req.params.id);
+    if (!out) return res.status(404).end();
+    if (req.params.fmt === 'json') return res.json(out.json);
+    if (req.params.fmt !== 'md') return res.status(400).end();
+    res.type('text/markdown').send(out.md);
+  });
+
+  // Every generated survey in one file, downloaded as an attachment.
+  app.get('/api/export.:fmt', async (req, res) => {
+    const fmt = req.params.fmt;
+    if (fmt !== 'md' && fmt !== 'json') return res.status(400).end();
+    const ids = fs.existsSync(SURVEYS) ? fs.readdirSync(SURVEYS).filter(d => fs.existsSync(path.join(SURVEYS, d, 'survey.json'))).sort() : [];
+    const all = (await Promise.all(ids.map(id => buildExport(id, 2)))).filter(Boolean);
+    const stamp = new Date().toISOString();
+    res.set('content-disposition', `attachment; filename="dsreview-export-${stamp.slice(0, 10)}.${fmt}"`);
+    if (fmt === 'json') return res.json({ exportedAt: stamp, surveys: all.map(x => x.json) });
+    let md = `# Design System Review: all surveys\n\nExported ${stamp}.\n\n`;
+    md += `| Survey | Keep | Round | Exclude | Undecided | Total |\n|---|---|---|---|---|---|\n`;
+    for (const { json: j } of all) md += `| ${j.title} (\`${j.id}\`) | ${j.progress.keep} | ${j.progress.round} | ${j.progress.exclude} | ${j.progress.undecided} | ${j.progress.total} |\n`;
+    md += '\n' + all.map(x => x.md).join('\n');
     res.type('text/markdown').send(md);
   });
 

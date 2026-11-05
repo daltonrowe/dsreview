@@ -297,28 +297,52 @@
     },
 
     // ---- highlight overlay ----
-    // mode: 'border' (dashed outline around it), 'highlight' (tinted fill over its box), 'none'
+    // mode: 'border' (dashed outline), 'highlight' (tinted fill over its box), 'find' (huge bouncing
+    // arrow pointing at it plus a pulsing ring), 'none'. Called every frame by the viewer to follow
+    // the element, so the overlay is updated in place (recreating it would restart the animations).
     highlight(el, { scroll = true, color = '#ff2bd6', mode = 'border' } = {}) {
-      this.unhighlight();
-      if (!el) return null;
+      if (!el) { this.unhighlight(); return null; }
       if (scroll) el.scrollIntoView({ block: 'center', inline: 'center', behavior: 'instant' });
       const r = el.getBoundingClientRect();
-      if (mode === 'none') return r;
-      const box = document.createElement('div');
-      box.id = '__dcv-hl';
-      const base = { position: 'fixed', pointerEvents: 'none', zIndex: 2147483647 };
-      if (mode === 'highlight') {
-        Object.assign(box.style, base, {
-          left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px',
-          background: 'rgba(255, 43, 214, 0.28)', borderRadius: getComputedStyle(el).borderRadius,
-        });
-      } else {
-        Object.assign(box.style, base, {
-          left: r.left - 3 + 'px', top: r.top - 3 + 'px', width: r.width + 6 + 'px', height: r.height + 6 + 'px',
-          outline: `2px dashed ${color}`, outlineOffset: '0', borderRadius: '4px',
-        });
+      if (mode === 'none') { this.unhighlight(); return r; }
+      let box = document.getElementById('__dcv-hl');
+      if (box && box.dataset.mode !== mode) { box.remove(); box = null; }
+      if (!box) {
+        box = document.createElement('div');
+        box.id = '__dcv-hl';
+        box.dataset.mode = mode;
+        Object.assign(box.style, { position: 'fixed', left: 0, top: 0, width: 0, height: 0, pointerEvents: 'none', zIndex: 2147483647 });
+        if (mode === 'find') {
+          box.innerHTML = `
+            <style>
+              @keyframes __dcv-bob { 0%,100% { transform: translate(-50%, 0) } 50% { transform: translate(-50%, -18px) } }
+              @keyframes __dcv-bob-up { 0%,100% { transform: translate(-50%, 0) rotate(180deg) } 50% { transform: translate(-50%, 18px) rotate(180deg) } }
+              @keyframes __dcv-ring { 0% { box-shadow: 0 0 0 0 ${color}cc, 0 0 0 4px ${color} } 100% { box-shadow: 0 0 0 28px ${color}00, 0 0 0 4px ${color} } }
+            </style>
+            <div data-ring style="position:fixed;border-radius:6px;animation:__dcv-ring 1.1s ease-out infinite"></div>
+            <svg data-arrow width="96" height="132" viewBox="0 0 96 132" style="position:fixed;overflow:visible;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))">
+              <path d="M30 4 h36 v72 h26 L48 128 L4 76 h26 Z" fill="${color}" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+            </svg>`;
+        }
+        document.body.appendChild(box);
       }
-      document.body.appendChild(box);
+      if (mode === 'highlight') {
+        Object.assign(box.style, { left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px',
+          background: 'rgba(255, 43, 214, 0.28)', borderRadius: getComputedStyle(el).borderRadius });
+      } else if (mode === 'find') {
+        const ring = box.querySelector('[data-ring]'), arrow = box.querySelector('[data-arrow]');
+        Object.assign(ring.style, { left: r.left - 6 + 'px', top: r.top - 6 + 'px', width: r.width + 12 + 'px', height: r.height + 12 + 'px' });
+        // above the element pointing down; below pointing up when there isn't room above
+        const cx = Math.min(Math.max(r.left + r.width / 2, 52), innerWidth - 52);
+        const above = r.top > 150;
+        arrow.style.left = cx + 'px';
+        arrow.style.top = (above ? r.top - 146 : r.bottom + 14) + 'px';
+        const anim = above ? '__dcv-bob' : '__dcv-bob-up';
+        if (arrow.dataset.anim !== anim) { arrow.dataset.anim = anim; arrow.style.animation = `${anim} .9s ease-in-out infinite`; }
+      } else {
+        Object.assign(box.style, { left: r.left - 3 + 'px', top: r.top - 3 + 'px', width: r.width + 6 + 'px', height: r.height + 6 + 'px',
+          outline: `2px dashed ${color}`, outlineOffset: '0', borderRadius: '4px' });
+      }
       return r;
     },
     unhighlight() { const b = document.getElementById('__dcv-hl'); if (b) b.remove(); },

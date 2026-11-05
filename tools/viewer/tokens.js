@@ -34,6 +34,8 @@ function build(raw) {
     }
   }
   out.colors = colors;
+  // tokens whose value differs between themes (color-theme-*): only valid in the matching theme
+  out.themedNames = new Set(colors.filter(c => c.theme !== themes[0]).map(c => c.name));
   const list = fam => (raw[fam]?.tokens || []).map(t => ({ name: t.name, value: typeof t.value === 'string' ? t.value : Object.values(t.value)[0] }));
   out.radius = list('radius').map(t => ({ ...t, n: px(t.value) }));
   out.spacing = list('spacing').filter(t => t.name !== 'spacing').map(t => ({ ...t, n: px(t.value) }));
@@ -120,10 +122,18 @@ function partsNearest(tokens, value, cssProp, prefix) {
   return { exact, candidates: [{ name: res.map(r => r.name).join(' · '), token: res.map(r => r.name).join(' '), value: v, delta: res.reduce((s, r) => s + Math.abs(r.delta), 0), label: `${res.map(r => r.name).join(' · ')} · ${v}`, css: { [cssProp]: v } }] };
 }
 
-function colorNearest(value, cssProp) {
+// theme: 'light' | 'dark' match that theme's values; 'both' (a usage seen in both themes) only
+// matches tokens that are the same in every theme; undefined matches everything (unthemed surveys).
+function colorPool(theme) {
+  if (!theme) return T.colors;
+  if (theme === 'both') return T.colors.filter(c => c.theme === 'light' && !T.themedNames.has(c.name));
+  if (theme === 'dark') return T.colors.filter(c => c.theme === 'dark' || (c.theme === 'light' && !T.themedNames.has(c.name)));
+  return T.colors.filter(c => c.theme === 'light');
+}
+function colorNearest(value, cssProp, theme) {
   const cols = value.split(/,\s*(?=#)/);
   if (cols.length > 1) {
-    const parts = cols.map(c => colorNearest(c, cssProp));
+    const parts = cols.map(c => colorNearest(c, cssProp, theme));
     if (parts.some(p => !p)) return null;
     const firsts = parts.map(p => p.candidates[0]);
     const css = firsts.map(f => Object.values(f.css)[0]).join(' ');
@@ -132,7 +142,7 @@ function colorNearest(value, cssProp) {
   const rgb = parseColor(cols[0]);
   if (!rgb) return null;
   const lab = oklab(rgb);
-  const c = T.colors.map(t => ({ name: t.theme === 'light' ? t.name : `${t.name} (${t.theme})`, value: t.value, delta: Math.round(dE(lab, t.lab) * 10) / 10, rgb: t.rgb, theme: t.theme }));
+  const c = colorPool(theme).map(t => ({ name: theme || t.theme === 'light' ? t.name : `${t.name} (${t.theme})`, value: t.value, delta: Math.round(dE(lab, t.lab) * 10) / 10, rgb: t.rgb, theme: t.theme }));
   c.sort((a, b) => a.delta - b.delta || (a.theme === 'light' ? -1 : 1));
   const merged = merge(c).slice(0, 3);
   const exact = merged[0].delta < 0.5;
@@ -217,7 +227,7 @@ function fontFamilyNearest(value) {
   return { exact: !!hit, candidates: order.map((k, i) => ({ name: k, token: k, value: T.families[k], delta: i === 0 && hit ? 0 : i + 1, label: `${k} · ${T.families[k].split(',')[0]}`, css: { 'font-family': T.families[k] } })) };
 }
 
-export function nearest(preset, value) {
+export function nearest(preset, value, { theme } = {}) {
   if (!T || value == null) return null;
   const v = String(value);
   switch (preset) {
@@ -232,13 +242,13 @@ export function nearest(preset, value) {
     case 'padding':
       if (/\s/.test(v)) return partsNearest(T.spacing, v, 'padding', 'spacing-');
       return withExact(numericNearest(T.spacing, px(v), 'padding'));
-    case 'text-color': return colorNearest(v, 'color');
-    case 'background': case 'overlay': return colorNearest(v, 'background-color');
-    case 'border-color': return colorNearest(v, 'border-color');
+    case 'text-color': return colorNearest(v, 'color', theme);
+    case 'background': case 'overlay': return colorNearest(v, 'background-color', theme);
+    case 'border-color': return colorNearest(v, 'border-color', theme);
     case 'border': {
       // width/style have no tokens: round the color (single-color borders only)
       const cols = [...new Set(v.match(/#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/gi) || [])];
-      return cols.length === 1 ? colorNearest(cols[0], 'border-color') : null;
+      return cols.length === 1 ? colorNearest(cols[0], 'border-color', theme) : null;
     }
     case 'shadow': return shadowNearest(v);
     case 'typography': return typographyNearest(v);

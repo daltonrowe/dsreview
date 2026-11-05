@@ -103,6 +103,8 @@
   #suggest .fit b { font-size: 18px; font-weight: 650; }
   #suggest tr.changed td { background: color-mix(in srgb, var(--round) 6%, transparent); }
   #suggest td.nowrap { white-space: nowrap; }
+  #suggest .sgrad { display: inline-block; width: 14px; height: 14px; margin-right: 7px; vertical-align: -2px; border-top: 2px solid currentColor; border-left: 2px solid currentColor; opacity: .7; }
+  #suggest tr.far td { background: color-mix(in srgb, var(--remove, #d93636) 6%, transparent); }
   #suggest .sgsw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); }
   #suggest td.delta { color: var(--round); font-weight: 600; }
   #suggest .unused { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
@@ -166,8 +168,23 @@ async function load() {
   $('#meta').title = `${S.stats.instances} rendered instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
   $('#exp-md').href = `/api/surveys/${id}/export.md`;
   const pages = [...new Set(S.captures.map(c => c.label))];
-  for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; it.themes = [...new Set(it.captures.map(c => S.captures[c].theme).filter(Boolean))]; byId.set(it.id, it); } }
   S.themed = S.captures.some(c => c.theme === 'dark');
+  // Nearest token per usage, matched against the theme(s) it was seen in: a light-mode usage can
+  // only round to light values, dark to dark, and one seen in both only to theme-independent tokens.
+  for (const s of S.sections) {
+    const cache = {};
+    for (const it of s.items) {
+      it.sec = s;
+      it.themes = [...new Set(it.captures.map(c => S.captures[c].theme).filter(Boolean))].sort();
+      it.themeKey = !S.themed || !it.themes.length ? '' : it.themes.length > 1 ? 'both' : it.themes[0];
+      it.near = (cache[it.themeKey] ??= nearest(S.preset, s.value, { theme: it.themeKey || undefined }));
+      byId.set(it.id, it);
+    }
+    // section header / index: the match of the most common theme in the section
+    const counts = {};
+    for (const it of s.items) counts[it.themeKey] = (counts[it.themeKey] || 0) + 1;
+    s.near = cache[Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0]];
+  }
   $('#themef').hidden = !S.themed;
   $('#offtok').checked = state.off;
   render();
@@ -188,7 +205,7 @@ function declHtml(it) {
 }
 
 function tokenRow(s, it, d) {
-  const n = s.near;
+  const n = it.near;
   if (!n || n.exact) return '';
   const saved = d.round?.to;
   let opts = n.candidates.map((c, i) => `<option value="${i}" ${saved ? (c.token === saved ? 'selected' : '') : i === 0 ? 'selected' : ''}>${esc(c.label)}</option>`).join('');
@@ -196,7 +213,7 @@ function tokenRow(s, it, d) {
   return `<div class="tokrow"><select class="roundsel" title="Nearest design-system tokens">${opts}</select><button class="btn small" data-preview title="Preview this token on the live page">Preview</button></div>`;
 }
 function chosen(it) {
-  const n = it.sec.near; if (!n) return null;
+  const n = it.near; if (!n) return null;
   const sel = $(`#i-${it.id} .roundsel`);
   if (sel?.value === 'saved') { const r = S.decisions[it.id].round; return { token: r.to, value: r.value, css: r.css, label: r.to }; }
   const c = n.candidates[Number(sel?.value || 0)] || n.candidates[0];
@@ -204,10 +221,10 @@ function chosen(it) {
 }
 // multi-property usages (spacing) apply the token to exactly the properties that use the value
 function cssFor(it, c) { return it.props?.length ? Object.fromEntries(it.props.map(p => [p, c.value])) : c.css; }
-function tokBadge(s) {
-  if (!s.near) return '';
-  const c = s.near.candidates[0];
-  return s.near.exact
+function tokBadge(it) {
+  if (!it.near) return '';
+  const c = it.near.candidates[0];
+  return it.near.exact
     ? `<span class="chip ontok" title="Value equals design-system token ${esc(c.token)} (${esc(c.value)})">On-token</span>`
     : `<span class="chip offtok" title="No design-system token has this value. Nearest: ${esc(c.label)}">Off-token</span>`;
 }
@@ -227,7 +244,7 @@ function itemHtml(s, it) {
   <article class="card item" tabindex="0" id="i-${it.id}" data-id="${it.id}" data-decision="${d.decision || ''}">
     <div class="item-head">
       <span class="num" title="S${s.n}.${it.n}">#${it.n}</span>
-      ${tokBadge(s)}
+      ${tokBadge(it)}
       ${S.themed && it.themes.length ? `<span class="chip theme-${it.themes.length > 1 ? 'both' : it.themes[0]}">${it.themes.length > 1 ? 'Light + Dark' : it.themes[0] === 'dark' ? 'Dark' : 'Light'}</span>` : ''}
       ${it.instances > 1 ? `<span class="inst" title="Rendered instances of this element">×${it.instances}</span>` : ''}
     </div>
@@ -238,7 +255,7 @@ function itemHtml(s, it) {
       ${tokenRow(s, it, d)}
       <div class="seg dec">
         <button class="keep" data-d="keep" aria-pressed="${d.decision === 'keep'}">Keep</button>
-        <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${s.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
+        <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${it.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
         <button class="exclude" data-d="exclude" aria-pressed="${d.decision === 'exclude'}">Exclude</button>
       </div>
     </div>
@@ -271,7 +288,7 @@ function matches(it) {
   if (state.f === 'exclude' ? d !== 'exclude' : d === 'exclude') return false;
   if (state.f === 'decided' && !(d === 'keep' || d === 'round')) return false;
   if (state.f === 'undecided' && d !== 'undecided') return false;
-  if (state.off && it.sec.near?.exact) return false;
+  if (state.off && it.near?.exact) return false;
   if (S.themed && state.theme !== 'all' && !it.themes.includes(state.theme)) return false;
   return true;
 }
@@ -284,7 +301,7 @@ function applyFilter() {
     let n = 0;
     for (const it of s.items) { const m = matches(it); $(`#i-${it.id}`).classList.toggle('hidden', !m); if (m) n++; }
     shown += n;
-    if (s.near?.exact) on += n;
+    on += s.items.filter(it => it.near?.exact && matches(it)).length;
     $(`#s-${s.id}`).classList.toggle('hidden', !n);
     $(`nav.index a[data-sec="${s.id}"]`).classList.toggle('hidden', !n);
     $(`#s-${s.id} .secount`).textContent = n === s.items.length ? `${n} usage${n === 1 ? '' : 's'}` : `${n} of ${s.items.length}`;
@@ -312,11 +329,15 @@ function updateProgress() {
 const sug = { by: 'usages' };
 const unit = () => (S.preset === 'font-weight' ? '' : 'px');
 const fmtN = n => `${Math.round(n * 100) / 100}${unit()}`;
+// small inline preview next to scale values (radius: a corner with that radius)
+const scalePv = n => (S.preset === 'radius' ? `<span class="sgrad" style="border-top-left-radius:${Math.min(n, 22)}px"></span>` : '');
 
 function renderSuggestShell() {
   $('#suggest').innerHTML = `
     <h2>Suggested Tokens</h2>
-    <p class="intro">How the existing tokens could be re-valued to best fit how they're used. Same tokens, same order, new values. Excluded usages are ignored.</p>
+    <p class="intro">${ROUNDING_PRESETS.includes(S.preset)
+      ? 'Off-token values and the design-system token each should round to. Excluded usages are ignored.'
+      : "How the existing tokens could be re-valued to best fit how they're used. Same tokens, same order, new values. Excluded usages are ignored."}</p>
     <div class="ctl">
       <label>Weight by <select id="sgBy"><option value="usages">usages</option><option value="instances">instances</option></select></label>
       <span class="spacer"></span>
@@ -375,17 +396,17 @@ function computeSuggest() {
 function computeCoverage() {
   const by = new Map();
   for (const it of counted()) {
-    const c = it.sec.near?.candidates?.[0];
+    const c = it.near?.candidates?.[0];
     if (!c) continue;
     const key = c.token;
     const r = by.get(key) || { token: c.name || c.token, value: c.value, usages: 0, exact: 0, values: new Map() };
     r.usages += weight(it);
-    if (it.sec.near.exact) r.exact += weight(it);
+    if (it.near.exact) r.exact += weight(it);
     else r.values.set(it.value, (r.values.get(it.value) || 0) + weight(it));
     by.set(key, r);
   }
   for (const r of by.values()) r.suggested = suggestFor(r);
-  const used = new Set([...byId.values()].flatMap(it => it.sec.near?.candidates?.[0]?.names || [it.sec.near?.candidates?.[0]?.token]).filter(Boolean));
+  const used = new Set([...byId.values()].flatMap(it => it.near?.candidates?.[0]?.names || [it.near?.candidates?.[0]?.token]).filter(Boolean));
   return { rows: [...by.values()].sort((a, b) => b.usages - a.usages), unused: familyTokenNames(S.preset).filter(t => !used.has(t)) };
 }
 
@@ -413,8 +434,48 @@ function suggestFor(r) {
   return best.v;
 }
 
+// Surveys where the palette is fixed: suggest rounding each off-token value to a token instead
+// of re-valuing the tokens themselves.
+const ROUNDING_PRESETS = ['background'];
+const FAR = 10; // ΔE above this: probably a new color rather than a near-miss
+
+function renderRounding() {
+  // one row per off-token value and theme, since light and dark usages round to different tokens
+  const groups = new Map();
+  for (const sec of S.sections) for (const it of sec.items) {
+    if (!it.near || it.near.exact || S.decisions[it.id]?.decision === 'exclude') continue;
+    const k = sec.id + '|' + it.themeKey;
+    if (!groups.has(k)) groups.set(k, { key: k, s: sec, theme: it.themeKey, c: it.near.candidates[0], its: [] });
+    groups.get(k).its.push(it);
+  }
+  const rows = [...groups.values()].map(r => ({ ...r, usages: r.its.reduce((n, it) => n + weight(it), 0), rounded: r.its.filter(it => S.decisions[it.id]?.decision === 'round').length }))
+    .sort((a, b) => b.usages - a.usages);
+  renderRounding.rows = rows;
+  const themeChip = t => (t ? ` <span class="chip theme-${t}">${t === 'both' ? 'Light + Dark' : t === 'dark' ? 'Dark' : 'Light'}</span>` : '');
+  const swc = v => `<span class="sgsw" style="background:${esc(cssColor(v))}"></span>`;
+  const total = rows.reduce((n, r) => n + r.its.length, 0), done = rows.reduce((n, r) => n + r.rounded, 0);
+  $('#sgBody').innerHTML = !rows.length ? '<div class="empty">Every counted usage is already on a token.</div>' : `
+    <div class="fit">
+      <div><span class="faint">Off-token values</span><b>${rows.length}</b></div>
+      <div><span class="faint">Usages to round</span><b>${total}</b></div>
+      <div><span class="faint">Rounded so far</span><b>${done} / ${total}</b></div>
+    </div>
+    <table>
+      <thead><tr><th>Value</th><th class="num">Usages</th><th>Round to</th><th class="num">ΔE</th><th class="num">Rounded</th><th></th></tr></thead>
+      <tbody>${rows.map(r => `<tr class="${r.c.delta > FAR ? 'far' : ''}">
+        <td class="absorbs nowrap">${swc(r.s.value)}<a href="#s-${r.s.id}" class="val">${esc(r.s.value)}</a> <span class="faint">S${r.s.n}</span>${themeChip(r.theme)}</td>
+        <td class="num">${r.usages}</td>
+        <td class="absorbs nowrap">${swc(r.c.value)}<b>${esc(r.c.token)}</b> <span class="faint">${esc(r.c.value)}</span></td>
+        <td class="num ${r.c.delta > FAR ? 'delta' : ''}" title="${r.c.delta > FAR ? 'Far from any token: consider excluding it or a new token' : 'Perceptual distance (ΔE); under ~2 is barely visible'}">${r.c.delta}</td>
+        <td class="num">${r.rounded} / ${r.its.length}</td>
+        <td><button class="btn small" data-roundall="${esc(r.key)}" ${r.rounded === r.its.length ? 'disabled' : ''}>Round all</button></td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+}
+
 function renderSuggest() {
   if (!$('#sgBody')) return;
+  if (ROUNDING_PRESETS.includes(S.preset)) { $('#sgCopy').hidden = true; renderRounding(); return; }
   const r = computeSuggest();
   $('#sgCopy').hidden = !r;
   if (r) {
@@ -427,13 +488,13 @@ function renderSuggest() {
         <div><span class="faint">Values counted</span><b>${r.total}</b></div>
       </div>
       <table>
-        <thead><tr><th>Token</th><th class="num">Current</th><th class="num">Proposed</th><th class="num">Change</th><th class="num">Usages</th><th>Absorbs</th></tr></thead>
+        <thead><tr><th>Token</th><th>Current</th><th>Suggested</th><th class="num">Change</th><th class="num">Usages</th><th>Absorbs</th></tr></thead>
         <tbody>${r.rows.map(x => {
           const d = Math.round((x.proposed - x.current) * 100) / 100;
           return `<tr class="${d ? 'changed' : ''}">
             <td class="name">${esc(x.token)}</td>
-            <td class="num">${fmtN(x.current)}</td>
-            <td class="num"><b>${fmtN(x.proposed)}</b></td>
+            <td class="absorbs nowrap">${scalePv(x.current)}${fmtN(x.current)}</td>
+            <td class="absorbs nowrap">${d ? `${scalePv(x.proposed)}<b>${fmtN(x.proposed)}</b>` : '<span class="faint">—</span>'}</td>
             <td class="num ${d ? 'delta' : 'faint'}">${d ? (d > 0 ? '+' : '−') + fmtN(Math.abs(d)) : '—'}</td>
             <td class="num"><span class="bar" style="width:${Math.round((x.usages / maxU) * 50)}px"></span>${x.usages}</td>
             <td class="absorbs">${x.absorbs.map(p => `<span class="val" data-q="${esc(fmtN(p.x))}">${esc(fmtN(p.x))}</span> (${p.w})`).join(', ')}</td>
@@ -462,6 +523,20 @@ function renderSuggest() {
     </table>
     ${c.unused.length ? `<div class="unused"><b>Unused tokens:</b> <code>${c.unused.map(esc).join('</code>, <code>')}</code></div>` : ''}`;
 }
+
+$('#main').addEventListener('click', async e => {
+  const b = e.target.closest('[data-roundall]');
+  if (!b) return;
+  const g = (renderRounding.rows || []).find(r => r.key === b.dataset.roundall);
+  if (!g) return;
+  const s = g.s, ids = g.its.map(it => it.id);
+  const other = ids.filter(i => S.decisions[i]?.decision && S.decisions[i].decision !== 'round').length;
+  if (other && !confirm(`${other} of these ${ids.length} usages already have a different decision. Round them anyway?`)) return;
+  // round every usage to the nearest token (not a per-card dropdown choice)
+  for (const i of ids) { const sel = $(`#i-${i} .roundsel`); if (sel) sel.value = '0'; }
+  await decide(ids, 'round');
+  toast(`S${s.n}: ${ids.length} → ${g.c.token}`);
+});
 
 async function decide(ids, decision, { note } = {}) {
   const before = ids.map(i => [i, S.decisions[i] ? { ...S.decisions[i] } : undefined]);
@@ -552,7 +627,7 @@ $('#lb').addEventListener('click', () => $('#lb').classList.remove('open'));
 // Both open the live page with the item's rounding options; Usage starts on Original, Preview on the chosen token.
 let pmItem = null;
 function roundOptions(it) {
-  const n = it.sec.near; if (!n) return [];
+  const n = it.near; if (!n) return [];
   const opts = n.candidates.map(c => ({ label: `${c.token} · ${c.value}`, token: c.token, value: c.value, css: cssFor(it, c) }));
   const r = S.decisions[it.id]?.round;
   if (r?.css && !opts.some(o => o.token === r.to)) opts.unshift({ label: `${r.to} · ${r.value} (saved)`, token: r.to, value: r.value, css: r.css });
@@ -562,7 +637,7 @@ function selectedIndex(it, opts) {
   const sel = $(`#i-${it.id} .roundsel`);
   if (!sel) return 0;
   if (sel.value === 'saved') return opts.findIndex(o => o.token === S.decisions[it.id].round.to);
-  const c = it.sec.near.candidates[Number(sel.value)];
+  const c = it.near.candidates[Number(sel.value)];
   return Math.max(0, opts.findIndex(o => o.token === c?.token));
 }
 function popUrl(itemId, pick) {
@@ -582,7 +657,7 @@ function openPop(itemId, pick) {
 }
 function openPreview(itemId) {
   const it = byId.get(itemId);
-  if (!it.sec.near) { toast('No token to preview'); return; }
+  if (!it.near) { toast('No token to preview'); return; }
   openPop(itemId, selectedIndex(it, roundOptions(it)));
 }
 function openUsage(itemId) { openPop(itemId, -1); }
@@ -594,7 +669,7 @@ addEventListener('message', e => {
   $('#pmOpen').href = popUrl(pmItem, pick);
   if (pick < 0) return;
   const o = opts[pick], sel = $(`#i-${pmItem} .roundsel`);
-  const ci = it.sec.near.candidates.findIndex(c => c.token === o.token);
+  const ci = it.near.candidates.findIndex(c => c.token === o.token);
   if (sel) sel.value = ci >= 0 ? String(ci) : 'saved';
   $('#pmRound').textContent = `Round to ${o.token}`;
 });
@@ -624,7 +699,7 @@ document.addEventListener('keydown', e => {
   const ids = visibleIds();
   const i = ids.indexOf(focusedId);
   const map = { 1: 'keep', 2: 'round', 3: 'exclude', 0: null };
-  if (e.key === '2' && focusedId && !byId.get(focusedId).sec.near) return;
+  if (e.key === '2' && focusedId && !byId.get(focusedId).near) return;
   if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); focus(ids[Math.min(i + 1, ids.length - 1)] ?? ids[0]); }
   else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); focus(ids[Math.max(i - 1, 0)] ?? ids[0]); }
   else if (e.key in map && focusedId) {
