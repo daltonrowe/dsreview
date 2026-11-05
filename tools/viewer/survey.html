@@ -154,7 +154,7 @@ new ResizeObserver(setHdr).observe($('header.hdr'));
 
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') === '1' };
+const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') !== '0' }; // hide on-token usages unless ?off=0
 let S, cfg, focusedId = null;
 const byId = new Map();
 
@@ -310,7 +310,7 @@ function applyFilter() {
   $('#count').title = S.sections.some(s => s.near) ? `${on} on-token · ${shown - on} off-token` : '';
   const q = new URLSearchParams({ id });
   if (state.f !== 'all') q.set('f', state.f);
-  if (state.off) q.set('off', '1');
+  if (!state.off) q.set('off', '0');
   if (state.theme !== 'all') q.set('theme', state.theme);
   history.replaceState(null, '', `?${q}${location.hash}`);
 }
@@ -465,7 +465,7 @@ function renderRounding() {
       <tbody>${rows.map(r => `<tr class="${r.c.delta > FAR ? 'far' : ''}">
         <td class="absorbs nowrap">${swc(r.s.value)}<a href="#s-${r.s.id}" class="val">${esc(r.s.value)}</a> <span class="faint">S${r.s.n}</span>${themeChip(r.theme)}</td>
         <td class="num">${r.usages}</td>
-        <td class="absorbs nowrap">${swc(r.c.value)}<b>${esc(r.c.token)}</b> <span class="faint">${esc(r.c.value)}</span></td>
+        <td class="absorbs nowrap">${swc(r.c.value)}<b>${esc(r.c.token)}</b> <span class="faint">${esc(r.c.value)}</span>${r.c.flipsTo ? ` <span class="delta" title="This token changes in dark mode; the usage stays the same in both themes">dark: ${esc(r.c.flipsTo)}</span>` : ''}</td>
         <td class="num ${r.c.delta > FAR ? 'delta' : ''}" title="${r.c.delta > FAR ? 'Far from any token: consider excluding it or a new token' : 'Perceptual distance (ΔE); under ~2 is barely visible'}">${r.c.delta}</td>
         <td class="num">${r.rounded} / ${r.its.length}</td>
         <td><button class="btn small" data-roundall="${esc(r.key)}" ${r.rounded === r.its.length ? 'disabled' : ''}>Round all</button></td>

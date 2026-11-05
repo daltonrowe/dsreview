@@ -91,7 +91,7 @@ function parseShadow(v) {
 function merge(cands) {
   const by = new Map();
   for (const c of cands) {
-    const k = c.value + '|' + c.delta;
+    const k = c.value + '|' + c.delta + '|' + (c.flipsTo || '');
     if (!by.has(k)) by.set(k, { ...c, names: [c.name] });
     else by.get(k).names.push(c.name);
   }
@@ -126,7 +126,12 @@ function partsNearest(tokens, value, cssProp, prefix) {
 // matches tokens that are the same in every theme; undefined matches everything (unthemed surveys).
 function colorPool(theme) {
   if (!theme) return T.colors;
-  if (theme === 'both') return T.colors.filter(c => c.theme === 'light' && !T.themedNames.has(c.name));
+  // 'both': every light value; theme-switching tokens are marked with what they become in dark
+  if (theme === 'both') return T.colors.filter(c => c.theme === 'light').map(c => {
+    if (!T.themedNames.has(c.name)) return c;
+    const dark = T.colors.find(d => d.name === c.name && d.theme === 'dark');
+    return { ...c, flipsTo: dark?.value || null };
+  });
   if (theme === 'dark') return T.colors.filter(c => c.theme === 'dark' || (c.theme === 'light' && !T.themedNames.has(c.name)));
   return T.colors.filter(c => c.theme === 'light');
 }
@@ -142,13 +147,15 @@ function colorNearest(value, cssProp, theme) {
   const rgb = parseColor(cols[0]);
   if (!rgb) return null;
   const lab = oklab(rgb);
-  const c = colorPool(theme).map(t => ({ name: theme || t.theme === 'light' ? t.name : `${t.name} (${t.theme})`, value: t.value, delta: Math.round(dE(lab, t.lab) * 10) / 10, rgb: t.rgb, theme: t.theme }));
-  c.sort((a, b) => a.delta - b.delta || (a.theme === 'light' ? -1 : 1));
+  const c = colorPool(theme).map(t => ({ name: theme || t.theme === 'light' ? t.name : `${t.name} (${t.theme})`, value: t.value, delta: Math.round(dE(lab, t.lab) * 10) / 10, rgb: t.rgb, theme: t.theme, flipsTo: t.flipsTo }));
+  // ties: theme-independent tokens before ones that change in dark mode, then light before dark
+  c.sort((a, b) => a.delta - b.delta || (a.flipsTo ? 1 : 0) - (b.flipsTo ? 1 : 0) || (a.theme === 'light' ? -1 : 1));
   const merged = merge(c).slice(0, 3);
-  const exact = merged[0].delta < 0.5;
+  // a usage seen in both themes is only on-token when a theme-independent token matches it
+  const exact = merged[0].delta < 0.5 && !merged[0].flipsTo;
   return {
     exact,
-    candidates: merged.map(x => ({ ...x, label: `${x.name} · ${x.value} (ΔE ${x.delta})`, css: { [cssProp]: rgbCss(x.rgb, rgb.a) } })),
+    candidates: merged.map(x => ({ ...x, label: `${x.name} · ${x.value}${x.flipsTo ? ` (dark: ${x.flipsTo})` : ''} (ΔE ${x.delta})`, css: { [cssProp]: rgbCss(x.rgb, rgb.a) } })),
     alpha: rgb.a < 1 ? rgb.a : null,
   };
 }
