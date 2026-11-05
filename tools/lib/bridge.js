@@ -87,6 +87,10 @@
       title: 'Font size', declared: ['font-size', 'font'], inherited: true, sort: 'numeric',
       value(el, cs) { return textish(el) ? cs.fontSize : null; },
     },
+    'size-weight': {
+      title: 'Type sizes × weights', declared: ['font-size', 'font', 'font-weight'], inherited: true, sort: 'numeric', swatch: 'type',
+      value(el, cs) { return textish(el) ? `${cs.fontSize} / ${cs.fontWeight}` : null; },
+    },
     'font-weight': {
       title: 'Font weight', declared: ['font-weight', 'font'], inherited: true, sort: 'numeric',
       value(el, cs) { return textish(el) ? cs.fontWeight : null; },

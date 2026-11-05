@@ -171,6 +171,27 @@ function typographyNearest(value) {
   return { exact: c[0].delta < 0.6, candidates: c.slice(0, 3).map(x => ({ ...x, token: x.name, label: `${x.name} · ${x.value} (Δ ${x.delta})` })) };
 }
 
+// size + weight pairs against the type styles' (fontSize, fontWeight) combinations
+function sizeWeightNearest(value) {
+  const [size, weight] = String(value).split(' / ');
+  const v = { size: px(size), weight: Number(weight) };
+  if (v.size == null || !v.weight) return null;
+  const combos = new Map();
+  for (const s of T.styles) {
+    const k = `${s.fontSize} / ${s.weight}`;
+    if (!combos.has(k)) combos.set(k, { value: k, size: s.size, weight: s.weight, names: [] });
+    combos.get(k).names.push(s.name);
+  }
+  const c = [...combos.values()].map(x => {
+    const ds = x.size - v.size, dw = x.weight - v.weight;
+    const name = x.names.length > 3 ? `${x.names.slice(0, 3).join(' / ')} +${x.names.length - 3}` : x.names.join(' / ');
+    return { name, names: x.names, token: x.names[0], value: x.value, size: x.size, delta: Math.round((Math.abs(ds) + Math.abs(dw) / 100) * 100) / 100, ds, dw,
+      css: { 'font-size': `${x.size}px`, 'font-weight': String(x.weight) } };
+  }).sort((a, b) => a.delta - b.delta || a.size - b.size);
+  const fmtD = x => [x.ds ? `${sign(x.ds)}px` : '', x.dw ? `${x.dw > 0 ? '+' : '−'}${Math.abs(x.dw)}w` : ''].filter(Boolean).join(' ') || '±0';
+  return { exact: c[0].delta === 0, candidates: c.slice(0, 3).map(x => ({ ...x, label: `${x.value} · ${x.name} (${fmtD(x)})` })) };
+}
+
 function typeScaleNearest(field, value, cssProp) {
   const n = field === 'weight' ? Number(value) : px(value);
   if (n == null) return null;
@@ -216,6 +237,7 @@ export function nearest(preset, value) {
     case 'shadow': return shadowNearest(v);
     case 'typography': return typographyNearest(v);
     case 'font-size': return typeScaleNearest('size', v, 'font-size');
+    case 'size-weight': return sizeWeightNearest(v);
     case 'font-weight': return typeScaleNearest('weight', v, 'font-weight');
     case 'line-height': return typeScaleNearest('lh', v, 'line-height');
     case 'letter-spacing': return typeScaleNearest('ls', v, 'letter-spacing');
@@ -236,6 +258,11 @@ export function valueDistance(preset, a, b) {
     if (!x || !y || /,/.test(a) || /,/.test(b)) return null;
     return dE(oklab(x), oklab(y)) + Math.abs(x.a - y.a) * 100;
   }
+  if (preset === 'size-weight') {
+    // merge only sizes that share a weight
+    const [sa, wa] = String(a).split(' / '), [sb, wb] = String(b).split(' / ');
+    return wa === wb ? Math.abs(parseFloat(sa) - parseFloat(sb)) : null;
+  }
   const single = v => (/^-?[\d.]+(px)?$/.test(String(v)) ? parseFloat(v) : null);
   const x = single(a), y = single(b);
   return x == null || y == null ? null : Math.abs(x - y);
@@ -249,7 +276,7 @@ export function familyTokenNames(preset) {
     case 'radius': return T.radius.map(t => t.name);
     case 'gap': case 'padding': return T.spacing.map(t => t.name);
     case 'shadow': return T.shadow.map(t => t.name);
-    case 'typography': return T.styles.map(s => s.name);
+    case 'typography': case 'size-weight': return T.styles.map(s => s.name);
     case 'text-color': case 'background': case 'border-color': return [...new Set(T.colors.map(c => c.name))];
     default: return [];
   }
@@ -263,6 +290,7 @@ export function suggestName(preset, value) {
     case 'radius': return /\s/.test(v) ? `radius-${slug(v.replace(/px/g, ''))}` : `radius-${num}`;
     case 'gap': case 'padding': return /\s/.test(v) ? `spacing-${slug(v.replace(/px/g, ''))}` : `spacing-${num}px`;
     case 'font-size': return `text-size-${num}`;
+    case 'size-weight': { const [sz, w] = v.split(' / '); return `text-${parseFloat(sz)}-${w}`; }
     case 'font-weight': return `font-weight-${num}`;
     case 'line-height': return `leading-${num}`;
     case 'letter-spacing': return `tracking-${num}`;
@@ -289,6 +317,7 @@ export function tokenEntry(preset, name, value, usage) {
     const [fontSize, fontWeight, lineHeight, letterSpacing] = spec.split(' / ');
     return { name, fontSize, fontWeight: Number(fontWeight), lineHeight, letterSpacing: letterSpacing || '0', fontStyle: / italic$/.test(fam) ? 'italic' : 'normal', family: fam.replace(/ italic$/, ''), usage };
   }
+  if (preset === 'size-weight') { const [fontSize, fontWeight] = String(value).split(' / '); return { name, fontSize, fontWeight: Number(fontWeight), usage }; }
   if (isColorPreset(preset)) { const c = parseColor(value); return { name, value: c ? (c.a < 1 ? `rgba(${c.r}, ${c.g}, ${c.b}, ${Math.round(c.a * 100) / 100})` : '#' + [c.r, c.g, c.b].map(x => x.toString(16).padStart(2, '0')).join('')) : value, usage }; }
   return { name, value, usage };
 }

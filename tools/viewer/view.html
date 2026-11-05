@@ -37,7 +37,7 @@
   <label class="muted" style="font-size:12.5px"><input type="checkbox" id="fit" checked> Fit</label>
   <button class="btn small" id="reload" title="Reload with current settings">Reload</button>
   <span class="target" id="target"></span>
-  <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select><span class="faint"><span class="kbd">0</span>–<span class="kbd">3</span> pick · <span class="kbd">t</span> toggle</span></span>
+  <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select></span>
   <span class="spacer"></span>
   <span id="status">Loading…</span>
   <button class="btn small" id="copy" title="Copy a link to this exact state">Copy link</button>
@@ -67,7 +67,7 @@ if (!MARKS.includes(mark)) mark = 'border';
 const frame = $('#frame');
 let win, targetEl = null, raf;
 
-function status(msg, err) { const s = $('#status'); s.textContent = msg; s.classList.toggle('err', !!err); }
+function status(msg, err) { const s = $('#status'); s.textContent = msg === 'Ready' ? '' : msg; s.classList.toggle('err', !!err); }
 
 function syncUrl() {
   const q = new URLSearchParams({ page: cur.page });
@@ -160,7 +160,7 @@ async function showTarget() {
   const track = () => { if (targetEl?.isConnected) win.__dcv.highlight(targetEl, { scroll: false, mode: mark }); raf = requestAnimationFrame(track); };
   track();
   const r = targetEl.getBoundingClientRect();
-  $('#target').innerHTML = `<b>●</b> <code>${esc(t.owner)}.dc.html</code> tpl ${t.tpl}${t.nth ? ` #${t.nth}` : ''} · &lt;${esc(targetEl.tagName.toLowerCase())}&gt; ${Math.round(r.width)}×${Math.round(r.height)} <label class="muted" title="How the element is marked (m to cycle)">Mark <select id="markSel">${MARKS.map(m => `<option value="${m}" ${m === mark ? 'selected' : ''}>${m[0].toUpperCase() + m.slice(1)}</option>`).join('')}</select></label> <button class="btn small" id="refocus">Scroll to</button> <button class="btn small" id="clearT">Clear</button>`;
+  $('#target').innerHTML = `<b title="${esc(t.owner)}.dc.html · template node ${t.tpl}${t.nth ? ` #${t.nth}` : ''} · ${Math.round(r.width)}×${Math.round(r.height)}">●</b> <code>&lt;${esc(targetEl.tagName.toLowerCase())}&gt;</code> <label class="muted" title="How the element is marked">Mark <select id="markSel">${MARKS.map(m => `<option value="${m}" ${m === mark ? 'selected' : ''}>${m[0].toUpperCase() + m.slice(1)}</option>`).join('')}</select></label> <button class="btn small" id="refocus">Scroll to</button> <button class="btn small" id="clearT">Clear</button>`;
   $('#markSel').onchange = e => setMark(e.target.value);
   $('#refocus').onclick = () => targetEl && targetEl.scrollIntoView({ block: 'center' });
   $('#clearT').onclick = () => { if (saved) show(-1, true); saved = null; cur.options = null; $('#compare').hidden = true; cur.target = null; targetEl = null; cancelAnimationFrame(raf); win.__dcv.unhighlight(); $('#target').innerHTML = ''; syncUrl(); };
@@ -233,7 +233,7 @@ function renderControls() {
   bindState();
 }
 function stateControl() {
-  return cur.page.endsWith('.dc.html') ? `<span class="group"><span class="sec">State</span><input id="stateIn" size="34" class="mono" placeholder='{"active":"explore"}' value="${esc(Object.keys(cur.state).length ? JSON.stringify(cur.state) : '')}"><button class="btn small" id="stateGo">Set</button></span>` : '';
+  return cur.page.endsWith('.dc.html') ? `<span class="group"><span class="sec">State</span><input id="stateIn" size="34" class="mono" placeholder='State (JSON)' value="${esc(Object.keys(cur.state).length ? JSON.stringify(cur.state) : '')}"><button class="btn small" id="stateGo">Set</button></span>` : '';
 }
 function bindState() {
   const go = $('#stateGo'); if (!go) return;

@@ -37,6 +37,10 @@ export function preview(preset, value) {
       return `<span class="space-prev" style="width:${Math.min(n, 120)}px"></span>`;
     }
     case 'font-size': return `<span class="type-prev" style="font-size:${esc(Math.min(parseFloat(v), 48))}px">Ag</span>`;
+    case 'size-weight': {
+      const [size, weight] = v.split(' / ');
+      return `<span class="type-prev" style="font-size:${Math.min(parseFloat(size), 40)}px;font-weight:${esc(weight)}">Ag</span>`;
+    }
     case 'font-weight': return `<span class="type-prev" style="font-size:22px;font-weight:${esc(v)}">Ag</span>`;
     case 'font-family': return `<span class="type-prev" style="font-size:22px;font-family:${esc(v)}">Ag</span>`;
     case 'letter-spacing': return `<span class="type-prev" style="font-size:15px;letter-spacing:${esc(v)}">AaBb</span>`;

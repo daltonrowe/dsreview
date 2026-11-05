@@ -22,13 +22,13 @@
   main { padding: 8px 20px 120px; min-width: 0; }
   section.sec { padding-top: 18px; scroll-margin-top: calc(var(--hdr, 98px) + 4px); }
   section.sec.hidden { display: none; }
-  .sec-head { display: flex; align-items: center; gap: 14px; padding: 10px 0 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+  .sec-head { display: flex; align-items: center; gap: 12px; padding: 10px 0 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
   .sec-head h2 { margin: 0; font-size: 18px; font-weight: 650; display: flex; align-items: baseline; gap: 10px; }
   .sec-head h2 .sn { color: var(--faint); font-family: var(--mono); font-size: 14px; font-weight: 500; }
   .sec-head h2 code { font-size: 16px; }
   .sec-head .tokens { display: flex; gap: 4px; flex-wrap: wrap; }
   .sec-head .bulk { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .item { display: flex; flex-direction: column; overflow: hidden; outline: none; scroll-margin: calc(var(--hdr, 98px) + 16px) 0 16px; }
   .item.hidden { display: none; }
   .item:focus-visible, .item.focused { box-shadow: 0 0 0 2px var(--focus); }
@@ -36,17 +36,22 @@
   .item[data-decision="remove"] { border-color: var(--remove); }
   .item[data-decision="exclude"] { border-color: var(--line-2); }
   .item[data-decision="exclude"] .shot img { opacity: .55; }
-  .item-head { display: flex; align-items: center; gap: 8px; padding: 8px 10px; }
+  .item-head { display: flex; align-items: center; gap: 8px; padding: 8px 12px; }
   .item-head .num { font-weight: 700; font-size: 15px; }
-  .item-head .ref { font-family: var(--mono); font-size: 11px; color: var(--faint); }
-  .item-head { flex-wrap: wrap; row-gap: 6px; }
-  .item-head .seg { margin-left: auto; }
-  .item-head .seg button { padding: 4px 8px; }
+  .item-head .inst { margin-left: auto; color: var(--faint); font-size: 12px; }
+  .where { color: var(--muted); font-size: 12.5px; line-height: 1.35; }
+  .where b { color: var(--text); font-weight: 550; }
+  .dec { display: flex; width: 100%; }
+  .dec button { flex: 1; padding: 6px 0; }
+  .foot { display: flex; gap: 14px; font-size: 12px; }
+  .foot a, .foot button { color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none; font-size: 12px; }
+  .foot a:hover, .foot button:hover { color: var(--text); text-decoration: underline; }
+  .note[hidden] { display: none; }
   .shot { display: flex; align-items: center; justify-content: center; height: 170px; background: var(--checker); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); cursor: zoom-in; }
   .shot img { max-width: 100%; max-height: 100%; display: block; }
   .shot .none { color: var(--faint); font-size: 12px; }
-  .body { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; }
-  .decl { font-family: var(--mono); font-size: 11.5px; word-break: break-word; background: var(--panel-2); padding: 3px 6px; border-radius: 5px; }
+  .body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; }
+  .decl { font-family: var(--mono); font-size: 11.5px; word-break: break-word; color: var(--muted); }
   .decl .tok { color: var(--accent); }
   .decl .from { color: var(--faint); }
   .row { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
@@ -111,8 +116,7 @@
   <span id="meta" class="muted" style="font-size:12px"></span>
   <span class="spacer"></span>
   <div id="prog" style="display:flex;align-items:center;gap:10px"></div>
-  <a class="btn small" id="exp-md" target="_blank">Export .md</a>
-  <a class="btn small" id="exp-json" target="_blank">.json</a>
+  <a class="btn small" id="exp-md" target="_blank" title="Export decisions as Markdown (JSON: /export.json)">Export</a>
 </div>
 <div class="toolbar">
   <div class="seg" id="filter">
@@ -120,12 +124,11 @@
     <button data-f="keep" class="keep">Keep</button><button data-f="round" class="round">Round</button><button data-f="exclude" class="exclude">Exclude</button><button data-f="remove" class="remove">Remove</button>
   </div>
   <select id="pagef"><option value="">All page states</option></select>
-  <input type="search" id="q" placeholder="Filter: value, token, component, text…">
+  <input type="search" id="q" placeholder="Search…">
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Excluded usages are hidden unless this is on (or the Exclude filter is selected)"><input type="checkbox" id="showex"> Show excluded</label>
   <span id="count" class="muted" style="font-size:12px"></span>
   <span class="spacer"></span>
-  <div class="help"><span><span class="kbd">j</span>/<span class="kbd">k</span> move</span><span><span class="kbd">1</span> keep <span class="kbd">2</span> round <span class="kbd">3</span> exclude <span class="kbd">4</span> remove <span class="kbd">0</span> clear</span><span><span class="kbd">p</span> preview rounding</span><span><span class="kbd">o</span> usage (<span class="kbd">⇧o</span> new tab)</span><span><span class="kbd">n</span> note</span><span><span class="kbd">space</span> zoom</span></div>
 </div>
 </header>
 <div class="layout">
@@ -134,7 +137,7 @@
 </div>
 <div class="lightbox" id="lb"><img alt=""><div class="cap"></div></div>
 <div class="toast" id="toast"></div>
-<div class="pmodal" id="pm"><div class="box"><div class="bar"><b id="pmTitle"></b><span class="spacer"></span><a class="btn small" id="pmOpen" target="_blank">Open in tab ↗</a><button class="btn small" id="pmRound">Round to this</button><button class="btn small" id="pmClose">Close <span class="kbd">esc</span></button></div><iframe id="pmFrame"></iframe></div></div>
+<div class="pmodal" id="pm"><div class="box"><div class="bar"><b id="pmTitle"></b><span class="spacer"></span><a class="btn small" id="pmOpen" target="_blank">Open in tab ↗</a><button class="btn small" id="pmRound">Round to this</button><button class="btn small" id="pmClose">Close</button></div><iframe id="pmFrame"></iframe></div></div>
 
 <script type="module">
 import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend } from './common.js';
@@ -155,9 +158,9 @@ async function load() {
   [S, cfg] = await Promise.all([api(`/api/surveys/${encodeURIComponent(id)}`), config(), loadTokens()]);
   document.title = `${S.title} · Survey`;
   $('#title').textContent = S.title;
-  $('#meta').textContent = `${S.stats.sections} sections · ${S.stats.usages} usages · ${S.stats.instances} instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
+  $('#meta').textContent = `${S.stats.sections} values · ${S.stats.usages} usages`;
+  $('#meta').title = `${S.stats.instances} rendered instances · generated ${new Date(S.generatedAt).toLocaleString()}`;
   $('#exp-md').href = `/api/surveys/${id}/export.md`;
-  $('#exp-json').href = `/api/surveys/${id}/export.json`;
   const pages = [...new Set(S.captures.map(c => c.label))];
   $('#pagef').insertAdjacentHTML('beforeend', S.captures.map((c, i) => `<option value="${i}">${esc(c.label)}</option>`).join(''));
   $('#pagef').value = state.page;
@@ -169,19 +172,19 @@ async function load() {
 }
 
 function declHtml(it) {
-  if (!it.declared) return `<div class="decl"><span class="from">no authored declaration found (UA default / computed)</span></div>`;
+  if (!it.declared) return `<div class="decl" title="No authored declaration found (browser default)">browser default</div>`;
   const val = esc(it.declared).replace(/(--[\w-]+)/g, '<span class="tok">$1</span>');
-  const from = it.declaredFrom === 'inline' ? 'inline style' : it.declaredFrom;
-  return `<div class="decl">${esc(it.declaredProp)}: ${val}<br><span class="from">${esc(from)}${it.inheritedFrom ? ` · inherited from ${esc(it.inheritedFrom)}` : ''}</span></div>`;
+  const from = (it.declaredFrom === 'inline' ? 'Inline style' : `Rule: ${it.declaredFrom}`) + (it.inheritedFrom ? ` · inherited from ${it.inheritedFrom}` : '');
+  return `<div class="decl" title="${esc(from)}">${esc(it.declaredProp)}: ${val}${it.inheritedFrom ? ' <span class="from">(inherited)</span>' : ''}</div>`;
 }
 
 function tokenRow(s, it, d) {
   const n = s.near;
-  if (!n) return `<div class="row"><span class="lbl">Token</span><span class="faint">no ${esc(S.preset)} tokens in the design system</span></div>`;
+  if (!n || n.exact) return '';
   const saved = d.round?.to;
-  let opts = n.candidates.map((c, i) => `<option value="${i}" ${saved ? (c.token === saved ? 'selected' : '') : i === 0 ? 'selected' : ''}>${n.exact && i === 0 ? '= ' : '→ '}${esc(c.label)}</option>`).join('');
+  let opts = n.candidates.map((c, i) => `<option value="${i}" ${saved ? (c.token === saved ? 'selected' : '') : i === 0 ? 'selected' : ''}>${esc(c.label)}</option>`).join('');
   if (saved && !n.candidates.some(c => c.token === saved)) opts = `<option value="saved" selected>→ ${esc(saved)} ${esc(d.round.value || '')} (saved)</option>` + opts;
-  return `<div class="tokrow"><span class="lbl faint" style="width:64px">${n.exact ? 'Matches' : 'Nearest'}</span><select class="roundsel" title="Token to round to">${opts}</select><button class="btn small" data-preview title="Preview this rounding on the live page (p)">Preview</button></div>`;
+  return `<div class="tokrow"><select class="roundsel" title="Nearest design-system tokens">${opts}</select><button class="btn small" data-preview title="Preview this token on the live page">Preview</button></div>`;
 }
 function chosen(it) {
   const n = it.sec.near; if (!n) return null;
@@ -205,35 +208,33 @@ function secMatch(s) {
 function itemHtml(s, it) {
   const d = S.decisions[it.id] || {};
   const cap = S.captures[it.where.capture];
-  const more = it.captures.length > 1 ? ` <span class="chip" title="${esc(it.captures.map(c => S.captures[c].label).join('\n'))}">+${it.captures.length - 1} state${it.captures.length > 2 ? 's' : ''}</span>` : '';
   const src = it.source || {};
+  const states = it.captures.length > 1 ? ` <span class="faint" title="${esc(it.captures.map(c => S.captures[c].label).join('\n'))}">+${it.captures.length - 1}</span>` : '';
+  const elTip = `<${it.tag}> ${it.size[0]}×${it.size[1]}${it.text ? ` “${it.text}”` : ''}`;
   return `
   <article class="card item" tabindex="0" id="i-${it.id}" data-id="${it.id}" data-decision="${d.decision || ''}">
     <div class="item-head">
-      <span class="num">#${it.n}</span><span class="ref">S${s.n}.${it.n}</span>
-      ${it.instances > 1 ? `<span class="chip" title="rendered instances of this element">×${it.instances}</span>` : ''}
+      <span class="num" title="S${s.n}.${it.n}">#${it.n}</span>
       ${tokBadge(s)}
+      ${it.instances > 1 ? `<span class="inst" title="Rendered instances of this element">×${it.instances}</span>` : ''}
+    </div>
+    <div class="shot" data-zoom>${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : '<span class="none">no screenshot</span>'}</div>
+    <div class="body">
+      <div class="where" title="${esc(elTip)}"><b>${esc(it.component || `<${it.tag}>`)}</b> · ${esc(cap.label)}${states}</div>
+      ${declHtml(it)}
+      ${tokenRow(s, it, d)}
       <div class="seg dec">
         <button class="keep" data-d="keep" aria-pressed="${d.decision === 'keep'}">Keep</button>
         <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${s.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
         <button class="exclude" data-d="exclude" aria-pressed="${d.decision === 'exclude'}">Exclude</button>
         <button class="remove" data-d="remove" aria-pressed="${d.decision === 'remove'}">Remove</button>
       </div>
-    </div>
-    <div class="shot" data-zoom>${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : '<span class="none">no screenshot</span>'}</div>
-    <div class="body">
-      ${declHtml(it)}
-      ${tokenRow(s, it, d)}
-      <div class="row"><span class="lbl">Element</span><span><code>&lt;${esc(it.tag)}&gt;</code> ${it.size[0]}×${it.size[1]}${it.text ? ` · “${esc(it.text)}”` : ''}</span></div>
-      <div class="row"><span class="lbl">Component</span><span>${esc(it.component || '—')}</span></div>
-      <div class="row"><span class="lbl">Page</span><span>${esc(cap.label)}${more}</span></div>
-      <div class="links">
-        <a class="btn small" href="${esc(viewUrl(cap, it.where))}" target="_blank" data-open title="View this usage on the live page (⌘-click for a new tab)">Usage</a>
-        ${src.line ? `<a class="btn small" href="${esc(editorUrl(cfg.root, src.file, src.line, src.col))}" title="Open in VS Code">${esc(src.file)}:${src.line}</a>
-        <button class="btn small" data-src>Source</button>` : `<span class="chip">${esc(src.file || '')}</span>`}
+      <div class="foot">
+        <a href="${esc(viewUrl(cap, it.where))}" target="_blank" data-open title="View on the live page (⌘-click for a new tab)">Usage</a>
+        ${src.line ? `<a href="${esc(editorUrl(cfg.root, src.file, src.line, src.col))}" title="Open ${esc(src.file)}:${src.line} in VS Code">Source</a>` : ''}
+        <button data-note>${d.note ? 'Note' : 'Add note'}</button>
       </div>
-      <div class="srcbox"></div>
-      <input class="note" placeholder="Add note…" value="${esc(d.note || '')}">
+      <input class="note" placeholder="Note…" value="${esc(d.note || '')}" ${d.note ? '' : 'hidden'}>
     </div>
   </article>`;
 }
@@ -249,9 +250,8 @@ function render() {
         <h2><span class="sn">S${s.n}</span><code>${esc(s.value)}</code></h2>
         ${secMatch(s)}
         <span class="muted secount" style="font-size:12px"></span>
-        <div class="tokens">${s.tokens.map(t => `<span class="chip token">${esc(t)}</span>`).join('')}</div>
-        <div class="bulk">Set all shown:
-          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="remove" class="remove">Remove</button><button data-bulk="">Clear</button></div>
+        <div class="bulk" title="Apply to every usage shown in this section">All:
+          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="remove" class="remove">Remove</button><button data-bulk="" title="Clear decisions">✕</button></div>
         </div>
       </div>
       <div class="grid">${s.items.map(it => itemHtml(s, it)).join('')}</div>
@@ -284,9 +284,10 @@ function applyFilter() {
     if (s.near?.exact) on += n;
     $(`#s-${s.id}`).classList.toggle('hidden', !n);
     $(`nav.index a[data-sec="${s.id}"]`).classList.toggle('hidden', !n);
-    $(`#s-${s.id} .secount`).textContent = n === s.items.length ? `${n} usage${n === 1 ? '' : 's'} · ${s.instances} instances` : `${n} of ${s.items.length} usages shown`;
+    $(`#s-${s.id} .secount`).textContent = n === s.items.length ? `${n} usage${n === 1 ? '' : 's'}` : `${n} of ${s.items.length}`;
   }
-  $('#count').textContent = `${shown} shown` + (S.sections.some(s => s.near) ? ` · ${on} on-token · ${shown - on} off-token` : '');
+  $('#count').textContent = `${shown} shown`;
+  $('#count').title = S.sections.some(s => s.near) ? `${on} on-token · ${shown - on} off-token` : '';
   const q = new URLSearchParams({ id });
   if (state.f !== 'all') q.set('f', state.f);
   if (state.q) q.set('q', state.q);
@@ -312,9 +313,7 @@ function renderSuggestShell() {
   sug.tol ??= isColorPreset(S.preset) ? 2 : 1;
   $('#suggest').innerHTML = `
     <h2>Suggested Tokens</h2>
-    <p class="intro">Built from every usage that isn't <b>Excluded</b> or <b>Removed</b> (usages marked <b>Round</b> count toward their target).
-      Values within the merge distance are clustered around the most-used value. Rows that match no existing design-system token
-      and reach the minimum are suggested as <b>New</b>; existing tokens are listed for adoption counts. Updates live as you decide.</p>
+    <p class="intro">Values used across non-excluded usages, grouped with near-duplicates. <b>New</b> rows are candidates for tokens.</p>
     <div class="ctl">
       <label>Min usages <input type="number" id="sgMin" min="1" value="${sug.min}"></label>
       <label>Merge within <input type="number" id="sgTol" min="0" step="0.5" value="${sug.tol}"> ${isColorPreset(S.preset) ? 'ΔE' : 'px'}</label>
@@ -465,7 +464,7 @@ $('#main').addEventListener('click', async e => {
   const btn = e.target.closest('.dec button');
   if (btn) { const cur = S.decisions[card.dataset.id]?.decision; await decide([card.dataset.id], cur === btn.dataset.d ? null : btn.dataset.d); if (btn.dataset.d === 'exclude' || state.f !== 'all') setTimeout(applyFilter, 250); return; }
   if (e.target.closest('[data-zoom]')) { zoom(card.dataset.id); return; }
-  if (e.target.closest('[data-src]')) { toggleSource(card.dataset.id); return; }
+  if (e.target.closest('[data-note]')) { const n = $('.note', card); n.hidden = false; n.focus(); return; }
   if (e.target.closest('[data-preview]')) { openPreview(card.dataset.id); return; }
 });
 $('#main').addEventListener('change', e => {
@@ -583,7 +582,7 @@ document.addEventListener('keydown', e => {
   }
   else if (e.key === 'o' && focusedId) { openUsage(focusedId); }
   else if (e.key === 'O' && focusedId) { window.open($(`#i-${focusedId} [data-open]`).href, '_blank'); }
-  else if (e.key === 'n' && focusedId) { e.preventDefault(); $(`#i-${focusedId} .note`).focus(); }
+  else if (e.key === 'n' && focusedId) { e.preventDefault(); const n = $(`#i-${focusedId} .note`); n.hidden = false; n.focus(); }
   else if (e.key === ' ' && focusedId) { e.preventDefault(); zoom(focusedId); }
   else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
 });

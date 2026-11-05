@@ -23,7 +23,7 @@ const SURVEYS = path.join(ROOT, 'surveys');
 const PRESETS = {
   radius: 'Corner radius', 'text-color': 'Text color', background: 'Background color', gradient: 'Gradients',
   'border-color': 'Border color', 'border-width': 'Border width', shadow: 'Shadows',
-  'font-size': 'Font size', 'font-weight': 'Font weight', 'line-height': 'Line height', 'letter-spacing': 'Letter spacing',
+  'font-size': 'Font size', 'size-weight': 'Type sizes × weights', 'font-weight': 'Font weight', 'line-height': 'Line height', 'letter-spacing': 'Letter spacing',
   'font-family': 'Font family', typography: 'Type styles', gap: 'Gap', padding: 'Padding', opacity: 'Opacity',
 };
 
@@ -113,7 +113,7 @@ async function run(id, o) {
     usages: its.length, instances: its.reduce((n, i) => n + i.instances, 0),
     items: its.map((it, i) => { const { order: _, ...rest } = it; return { n: i + 1, ...rest }; }),
   }));
-  const numeric = ['radius', 'border-width', 'font-size', 'font-weight', 'line-height', 'letter-spacing', 'typography', 'gap', 'padding', 'opacity'].includes(spec.preset);
+  const numeric = ['radius', 'border-width', 'font-size', 'size-weight', 'font-weight', 'line-height', 'letter-spacing', 'typography', 'gap', 'padding', 'opacity'].includes(spec.preset);
   sections.sort(numeric ? (a, b) => firstNum(a.value) - firstNum(b.value) || a.value.localeCompare(b.value) : (a, b) => b.instances - a.instances);
   sections = sections.map((s, i) => ({ n: i + 1, ...s }));
 
