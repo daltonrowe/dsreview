@@ -15,8 +15,12 @@
   .controls .group { display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; padding-right: 10px; border-right: 1px solid var(--line); }
   .controls .group:last-child { border-right: 0; }
   .controls .sec { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--faint); }
-  #stage { flex: 1; overflow: auto; background: var(--panel-2); position: relative; }
-  #frameWrap { transform-origin: 0 0; background: #fff; box-shadow: 0 0 0 1px var(--line-2); margin: 0 auto; }
+  /* vertical scrolling happens inside the page; the stage only scrolls sideways when zoomed in */
+  #stage { flex: 1; overflow-x: auto; overflow-y: hidden; background: var(--panel-2); position: relative; }
+  #sizer { position: relative; margin: 0 auto; }
+  #frameWrap { position: absolute; left: 0; top: 0; transform-origin: 0 0; background: #fff; box-shadow: 0 0 0 1px var(--line-2); }
+  .zoom button { min-width: 28px; font-variant-numeric: tabular-nums; }
+  .zoom #zReset { min-width: 52px; }
   iframe { border: 0; display: block; background: #fff; }
   #status { font-size: 12px; color: var(--muted); }
   #status.err { color: var(--remove); }
@@ -35,6 +39,7 @@
   <select id="page"></select>
   <label class="muted" style="font-size:12.5px">Width <select id="w"><option>1440</option><option>1280</option><option>1024</option><option>768</option><option>390</option></select></label>
   <label class="muted" style="font-size:12.5px"><input type="checkbox" id="fit" checked> Fit</label>
+  <div class="seg zoom"><button id="zOut" title="Zoom out">−</button><button id="zReset" title="Reset zoom">100%</button><button id="zIn" title="Zoom in">+</button></div>
   <button class="btn small" id="reload" title="Reload with current settings">Reload</button>
   <span class="target" id="target"></span>
   <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select><button class="btn small" id="swap" title="Swap between the design as built and the selected token"></button></span>
@@ -43,7 +48,7 @@
   <button class="btn small" id="copy" title="Copy a link to this exact state">Copy link</button>
 </div>
 <div class="controls" id="controls"></div>
-<div id="stage"><div id="frameWrap"><iframe id="frame"></iframe></div></div>
+<div id="stage"><div id="sizer"><div id="frameWrap"><iframe id="frame"></iframe></div></div></div>
 
 <script type="module">
 import { api, esc, $, $$ } from './common.js';
@@ -76,6 +81,7 @@ function syncUrl() {
   if (Object.keys(cur.state).length) q.set('state', JSON.stringify(cur.state));
   if (cur.do.length) q.set('do', JSON.stringify(cur.do));
   if (cur.w !== 1440) q.set('w', cur.w);
+  if (zoom !== 1) q.set('z', zoom);
   if (cur.target) { q.set('owner', cur.target.owner); q.set('tpl', cur.target.tpl); q.set('nth', cur.target.nth); }
   if (mark !== 'border') q.set('mark', mark);
   if (cur.options) { q.set('options', JSON.stringify(cur.options)); q.set('pick', cur.pick); if (cur.orig) q.set('orig', cur.orig); }
@@ -83,16 +89,40 @@ function syncUrl() {
   history.replaceState(null, '', `?${q}`);
 }
 
+// zoom multiplies the base scale (fitted to the stage width when Fit is on, else 100%)
+const ZOOMS = [0.25, 0.33, 0.5, 0.67, 0.8, 1, 1.25, 1.5, 2, 3, 4];
+let zoom = ZOOMS.includes(Number(P.get('z'))) ? Number(P.get('z')) : 1;
+let scale = 1;
 function layout() {
-  const stage = $('#stage'), wrap = $('#frameWrap');
+  const stage = $('#stage'), wrap = $('#frameWrap'), sizer = $('#sizer');
   const avail = stage.clientWidth - 2;
-  const scale = $('#fit').checked && cur.w > avail ? avail / cur.w : 1;
+  const base = $('#fit').checked && cur.w > avail ? avail / cur.w : 1;
+  scale = base * zoom;
   frame.style.width = cur.w + 'px';
   frame.style.height = (stage.clientHeight / scale) + 'px';
   wrap.style.width = cur.w + 'px';
   wrap.style.transform = `scale(${scale})`;
-  wrap.style.marginLeft = scale < 1 ? '0' : '';
+  // the sizer gives the scaled page a real layout size, so the stage can scroll sideways
+  sizer.style.width = cur.w * scale + 'px';
+  sizer.style.height = stage.clientHeight + 'px';
+  $('#zReset').textContent = `${Math.round(scale * 100)}%`;
+  $('#zOut').disabled = zoom <= ZOOMS[0];
+  $('#zIn').disabled = zoom >= ZOOMS[ZOOMS.length - 1];
 }
+function setZoom(z) {
+  zoom = z;
+  layout();
+  syncUrl();
+  // keep the highlighted element in view: centre it inside the page, then scroll the stage to it
+  if (targetEl?.isConnected) {
+    targetEl.scrollIntoView({ block: 'center', inline: 'nearest' });
+    const r = targetEl.getBoundingClientRect(), stage = $('#stage');
+    stage.scrollLeft = (r.left + r.width / 2) * scale - stage.clientWidth / 2;
+  }
+}
+$('#zIn').onclick = () => setZoom(ZOOMS.find(z => z > zoom) ?? zoom);
+$('#zOut').onclick = () => setZoom([...ZOOMS].reverse().find(z => z < zoom) ?? zoom);
+$('#zReset').onclick = () => setZoom(1);
 addEventListener('resize', layout);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
