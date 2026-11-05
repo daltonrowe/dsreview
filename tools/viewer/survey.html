@@ -125,6 +125,13 @@
   .grp-head .num { font-weight: 700; font-size: 15px; color: var(--faint); min-width: 34px; }
   .grp-title { flex: 1; min-width: 0; }
   .grp-title b { font-size: 14.5px; }
+  .gname { cursor: text; }
+  .gname:hover { text-decoration: underline dotted; }
+  .grp-title .rn { margin-left: 6px; color: var(--faint); font-size: 13px; }
+  .gname-in { font: 600 14.5px var(--sans); width: min(520px, 100%); padding: 2px 6px; }
+  .grp[data-gid="__uncategorized"] { border-style: dashed; }
+  .rowdec { width: auto; flex: none; }
+  .rowdec button { padding: 3px 8px; font-size: 12px; }
   .grp-meta { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
   .grp-meta code { font-size: 11px; }
   .gdec { width: auto; flex: none; }
@@ -182,7 +189,7 @@
 
 <script type="module">
 import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend, cssColor } from './common.js';
-import { startLive, onDecision, liveToast, describeDecision } from './live.js';
+import { startLive, onDecision, onGroupEdits, liveToast, describeDecision } from './live.js';
 import { loadTokens, nearest, familyTokenNames, scaleFor, scaleValues, kMedians, valueDistance, isColorPreset } from './tokens.js';
 
 const setHdr = () => document.documentElement.style.setProperty('--hdr', $('header.hdr').offsetHeight + 'px');
@@ -193,6 +200,7 @@ const id = params.get('id');
 const state = { f: params.get('f') || 'all', theme: params.get('theme') || 'all', off: params.get('off') !== '0', view: params.get('view') || 'groups' }; // hide on-token usages unless ?off=0
 let G = null; // groups.json (meta-survey), when generated
 const expanded = new Set();
+let collapsedUncat = false;
 const groupsMode = () => !!G && state.view === 'groups';
 let S, cfg, focusedId = null;
 const byId = new Map();
@@ -229,8 +237,8 @@ async function load() {
   // meta-survey: usages grouped into parts of the page (tools/group.mjs)
   G = await fetch(`/surveys/${encodeURIComponent(id)}/groups.json`, { cache: 'no-store' }).then(r => (r.ok ? r.json() : null)).catch(() => null);
   if (G) {
-    for (const g of G.groups) { g.members = g.items.map(i => byId.get(i)).filter(Boolean); for (const it of g.members) it.group = g; }
-    G.groups = G.groups.filter(g => g.members.length);
+    G.base = G.groups.map(g => ({ ...g, autoLabel: g.label, baseMembers: g.items.map(i => byId.get(i)).filter(Boolean) })).filter(g => g.baseMembers.length);
+    applyGroupEdits();
     $('#viewf').hidden = false;
   }
   render();
@@ -378,6 +386,63 @@ function syncQuery() {
 }
 
 // ---------- Groups view (meta-survey) ----------
+// The generated groups (groups.json) plus the reviewers' edits (S.groupEdits: names and usages moved
+// to Uncategorized). Uncategorized is a pinned bucket whose usages are decided one by one.
+const UNCAT = '__uncategorized';
+function groupSummary(members) {
+  return {
+    pages: [...new Set(members.flatMap(it => it.captures.map(c => S.captures[c].page.replace(/\.dc\.html$/, ''))))],
+    instances: members.reduce((n, it) => n + it.instances, 0),
+  };
+}
+function applyGroupEdits() {
+  const e = S.groupEdits || { names: {}, uncategorized: [] };
+  const out = new Set(e.uncategorized);
+  const groups = [];
+  for (const b of G.base) {
+    const members = b.baseMembers.filter(it => !out.has(it.id));
+    if (!members.length) continue;
+    const g = { ...b, members, label: e.names[b.id] || b.autoLabel, renamed: !!e.names[b.id], ...groupSummary(members) };
+    for (const it of members) it.group = g;
+    groups.push(g);
+  }
+  const uncat = [...out].map(i => byId.get(i)).filter(Boolean);
+  if (uncat.length) {
+    const g = { id: UNCAT, n: '', special: true, label: 'Uncategorized', members: uncat, declared: null, ...groupSummary(uncat) };
+    for (const it of uncat) it.group = g;
+    groups.unshift(g);
+  }
+  G.groups = groups;
+}
+async function putGroupEdits(body) {
+  try {
+    S.groupEdits = await api(`/api/surveys/${id}/group-edits`, { method: 'PUT', body });
+    applyGroupEdits();
+    renderGroups();
+  } catch (err) { alert('Save failed: ' + err.message); }
+}
+function startRename(g, card) {
+  const b = card.querySelector('.gname');
+  const input = document.createElement('input');
+  input.className = 'gname-in';
+  input.value = g.label;
+  input.maxLength = 120;
+  b.replaceWith(input);
+  input.focus();
+  input.select();
+  let done = false;
+  const commit = save => {
+    if (done) return;
+    done = true;
+    const name = input.value.trim();
+    if (!save || name === g.label) { renderGroups(); return; }
+    // an empty name (or the generated one) goes back to the generated label
+    putGroupEdits({ rename: { group: g.id, name: name === g.autoLabel ? '' : name } });
+    toast(name ? `Renamed #${g.n}` : `#${g.n}: name reset`);
+  };
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') commit(true); else if (e.key === 'Escape') commit(false); e.stopPropagation(); });
+  input.addEventListener('blur', () => commit(true));
+}
 const decOf = it => S.decisions[it.id]?.decision || 'undecided';
 function groupMembers(g) {
   // the members this view is about: theme filter applies to members
@@ -422,19 +487,19 @@ function groupHtml(g) {
     + (thumbs.length > 8 ? `<button class="th more" data-expand>+${thumbs.length - 8}</button>` : '');
   const canRound = g.members.some(it => it.near);
   const pages = g.pages.length > 3 ? `${g.pages.slice(0, 3).join(', ')} +${g.pages.length - 3}` : g.pages.join(', ');
-  const open = expanded.has(g.id);
+  const open = g.special ? !collapsedUncat : expanded.has(g.id);
   return `<article class="card grp" data-gid="${g.id}" data-state="${st}">
     <div class="grp-head">
-      <span class="num">#${g.n}</span>
-      <div class="grp-title"><b>${esc(g.label)}</b>
+      <span class="num">${g.special ? '' : `#${g.n}`}</span>
+      <div class="grp-title">${g.special ? `<b>Uncategorized</b> <span class="faint">usages moved out of their groups: decide them one by one</span>` : `<b class="gname" data-rename title="Click to rename">${esc(g.label)}</b><button class="linkish rn" data-rename title="Rename this group">✎</button>${g.renamed ? ` <span class="faint" title="Generated name">(${esc(g.autoLabel)})</span>` : ''}`}
         <div class="grp-meta">${g.members.length} usage${g.members.length === 1 ? '' : 's'} · ${g.instances} instances · ${esc(pages)}${g.declared ? ` · <code title="As written: ${esc(g.declared)}">${esc(g.declared.length > 70 ? g.declared.slice(0, 70) + '…' : g.declared)}</code>` : ''}</div>
       </div>
-      <div class="seg dec gdec">
+      ${g.special ? '' : `<div class="seg dec gdec">
         <button class="keep" data-gd="keep" aria-pressed="${st === 'keep'}">Keep</button>
         <button class="round" data-gd="round" aria-pressed="${st === 'round'}" ${canRound ? '' : 'disabled title="No design-system tokens for this type"'} title="Round every usage to its nearest token">Round</button>
         <button class="exclude" data-gd="exclude" aria-pressed="${st === 'exclude'}">Exclude</button>
         <button class="unclear" data-gd="unclear" aria-pressed="${st === 'unclear'}" title="I don't understand this group" aria-label="Not understood">🤷</button>
-      </div>
+      </div>`}
     </div>
     <div class="gvals">${valsHtml}</div>
     <div class="strip">${strip}</div>
@@ -446,9 +511,15 @@ function groupHtml(g) {
           <div><b>S${it.sec.n}.${it.n}</b> <code>${esc(it.value)}</code> ${themeChipOf(it.themeKey)} ${nearChip(it)}</div>
           <div class="faint">${esc(it.component || `<${it.tag}>`)} · ${esc(S.captures[it.where.capture].label)}${it.text ? ` · “${esc(it.text.slice(0, 50))}”` : ''}</div>
         </div>
-        <span class="chip dstate">${decOf(it) === 'unclear' ? '🤷' : decOf(it)}</span>
+        <div class="seg dec rowdec">
+          <button class="keep" data-row-d="keep" aria-pressed="${decOf(it) === 'keep'}">Keep</button>
+          <button class="round" data-row-d="round" aria-pressed="${decOf(it) === 'round'}" ${it.near ? '' : 'disabled'}>Round</button>
+          <button class="exclude" data-row-d="exclude" aria-pressed="${decOf(it) === 'exclude'}">Exclude</button>
+          <button class="unclear" data-row-d="unclear" aria-pressed="${decOf(it) === 'unclear'}" title="Not understood">🤷</button>
+        </div>
         <button class="btn small" data-open-item="${it.id}">Usage</button>
         ${it.near && !it.near.exact ? `<button class="btn small" data-preview-item="${it.id}">Preview</button>` : ''}
+        ${g.special ? `<button class="btn small" data-restore="${it.id}" title="Return to its group">Return</button>` : `<button class="btn small" data-kick="${it.id}" title="Move to Uncategorized">Uncategorize</button>`}
       </div>`).join('')}</div>` : ''}
   </article>`;
 }
@@ -731,13 +802,30 @@ $('#main').addEventListener('click', e => {
   const card = e.target.closest('.grp');
   if (!card) return;
   const g = G.groups.find(x => x.id === card.dataset.gid);
+  if (e.target.closest('[data-rename]') && !g.special) { startRename(g, card); return; }
+  const kick = e.target.closest('[data-kick]');
+  if (kick) { putGroupEdits({ uncategorize: [kick.dataset.kick] }); toast('Moved to Uncategorized'); return; }
+  const back = e.target.closest('[data-restore]');
+  if (back) { putGroupEdits({ restore: [back.dataset.restore] }); toast('Returned to its group'); return; }
+  const rd = e.target.closest('[data-row-d]');
+  if (rd) {
+    const itemId = rd.closest('[data-item]').dataset.item, it = byId.get(itemId);
+    const target = decOf(it) === rd.dataset.rowD ? null : rd.dataset.rowD;
+    if (target === 'round') { const sel = $(`#i-${itemId} .roundsel`); if (sel && sel.value !== 'saved') sel.value = '0'; }
+    decide([itemId], target);
+    return;
+  }
   const d = e.target.closest('[data-gd]');
   if (d) { decideGroup(g, d.dataset.gd); return; }
   const o = e.target.closest('[data-open-item]');
   if (o) { if (e.metaKey || e.ctrlKey || e.shiftKey) window.open(popUrl(o.dataset.openItem, -1), '_blank'); else openUsage(o.dataset.openItem); return; }
   const pv = e.target.closest('[data-preview-item]');
   if (pv) { openPreview(pv.dataset.previewItem); return; }
-  if (e.target.closest('[data-expand]')) { expanded.has(g.id) ? expanded.delete(g.id) : expanded.add(g.id); renderGroups(); }
+  if (e.target.closest('[data-expand]')) {
+    if (g.special) collapsedUncat = !collapsedUncat;
+    else expanded.has(g.id) ? expanded.delete(g.id) : expanded.add(g.id);
+    renderGroups();
+  }
 });
 $('#themef').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.theme = b.dataset.t; applyFilter(); });
 $('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
@@ -861,6 +949,14 @@ function focus(itemId, scroll = true) {
   if (scroll) el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
 
+// While the preview popover is open, Z / Cmd / Ctrl go to it (Z+click zooms there) even when the
+// keyboard focus is still on this page.
+const ZOOM_KEYS = ['KeyZ', 'MetaLeft', 'MetaRight', 'ControlLeft', 'ControlRight'];
+for (const ev of ['keydown', 'keyup']) document.addEventListener(ev, e => {
+  if (!$('#pm').classList.contains('open') || !ZOOM_KEYS.includes(e.code) || e.target.matches('input, select, textarea')) return;
+  if (ev === 'keydown' && e.code === 'KeyZ' && (e.metaKey || e.ctrlKey)) e.preventDefault();
+  $('#pmFrame').contentWindow?.postMessage({ type: 'dcv-key', ev: ev === 'keydown' ? 'down' : 'up', code: e.code, mod: e.metaKey || e.ctrlKey }, location.origin);
+});
 document.addEventListener('keydown', e => {
   if (e.target.matches('input, select, textarea')) { if (e.key === 'Escape') e.target.blur(); return; }
   if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -889,6 +985,13 @@ if (!id) $('#main').innerHTML = '<div class="empty">No survey id. <a href="./">B
 else load().then(startLive).catch(err => { $('#main').innerHTML = `<div class="empty">${esc(err.message)}</div>`; });
 
 // Decisions made by other people (or this person in another tab) arrive live.
+onGroupEdits((d, { mine }) => {
+  if (!S || !G || d.survey !== S.id) return;
+  S.groupEdits = d.edits;
+  applyGroupEdits();
+  if (groupsMode()) renderGroups();
+  if (!mine) liveToast(`${d.by?.name || 'Someone'} edited the groups in ${S.title}`);
+});
 onDecision((d, { mine }) => {
   if (!S || d.survey !== S.id) { if (!mine) liveToast(describeDecision(d)); return; }
   for (const id of d.ids) {

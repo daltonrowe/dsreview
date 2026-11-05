@@ -21,6 +21,9 @@ export const liveHeaders = () => ({ 'x-client-id': me.client, 'x-client-name': e
 
 const listeners = new Set();
 export const onDecision = fn => listeners.add(fn);
+// group renames / uncategorize edits made elsewhere: fn(event, { mine })
+const groupListeners = new Set();
+export const onGroupEdits = fn => groupListeners.add(fn);
 
 let pill, toastEl, toastTimer, editor, started = false;
 
@@ -118,6 +121,11 @@ export function startLive() {
     if (d.by?.tab === me.tab) return; // made in this tab, already applied
     const mine = d.by?.client === me.client;
     for (const fn of listeners) { try { fn(d, { mine }); } catch (err) { console.error(err); } }
+  });
+  es.addEventListener('group-edits', e => {
+    const d = JSON.parse(e.data);
+    if (d.by?.tab === me.tab) return;
+    for (const fn of groupListeners) { try { fn(d, { mine: d.by?.client === me.client }); } catch (err) { console.error(err); } }
   });
 }
 

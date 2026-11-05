@@ -131,3 +131,17 @@ test('live: presence counts distinct browsers and decisions are broadcast', asyn
   assert.equal(d.by.name, 'Teal Fox');
   assert.equal(d.by.tab, 't1');
 });
+
+test('group edits (names, Uncategorized) are stored in DATA_DIR and returned with the survey', async () => {
+  const surveys = await (await fetch(`${base}/api/surveys`, { headers: auth })).json();
+  const s = surveys.find(x => x.generated);
+  const put = body => fetch(`${base}/api/surveys/${s.id}/group-edits`, { method: 'PUT', headers: { ...auth, 'content-type': 'application/json' }, body: JSON.stringify(body) }).then(r => r.json());
+  await put({ rename: { group: 'g1', name: '  Hero tiles ' }, uncategorize: ['a', 'b'] });
+  let e = await put({ restore: ['a'] });
+  assert.deepEqual(e, { names: { g1: 'Hero tiles' }, uncategorized: ['b'] });
+  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dataDir, 'groups', `${s.id}.json`), 'utf8')), e);
+  e = await put({ rename: { group: 'g1', name: '' } });
+  assert.deepEqual(e.names, {}, 'an empty name restores the generated one');
+  const full = await (await fetch(`${base}/api/surveys/${s.id}`, { headers: auth })).json();
+  assert.deepEqual(full.groupEdits, { names: {}, uncategorized: ['b'] });
+});

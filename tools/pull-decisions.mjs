@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// Copy reviewer decisions from the deployed review site into the local surveys/<id>/decisions.json.
+// Copy reviewer decisions (and group edits: names, Uncategorized) from the deployed review site into
+// the local surveys/<id>/decisions.json and surveys/<id>/group-edits.json.
 //   node tools/pull-decisions.mjs [--url https://…] [--force] [--dry]
 // Env: REVIEW_URL (default below), REVIEW_USER / REVIEW_PASS (default eezy / eezy).
 // Refuses to overwrite a local decisions file that differs from the remote one unless --force.
@@ -22,7 +23,19 @@ async function get(p) {
 const surveys = await get('/api/surveys');
 let conflicts = 0;
 for (const s of surveys.filter(x => x.generated)) {
-  const remote = (await get(`/api/surveys/${s.id}`)).decisions || {};
+  const full = await get(`/api/surveys/${s.id}`);
+  const remote = full.decisions || {};
+  // group names / Uncategorized: same rule as decisions
+  const ge = full.groupEdits;
+  const geFile = path.join(ROOT, 'surveys', s.id, 'group-edits.json');
+  if (ge && fs.existsSync(path.dirname(geFile)) && (Object.keys(ge.names || {}).length || (ge.uncategorized || []).length || fs.existsSync(geFile))) {
+    const localGe = fs.existsSync(geFile) ? JSON.parse(fs.readFileSync(geFile, 'utf8')) : null;
+    if (JSON.stringify(localGe) !== JSON.stringify(ge)) {
+      const localHas = localGe && (Object.keys(localGe.names || {}).length || (localGe.uncategorized || []).length);
+      if (localHas && !flag('--force')) { console.log(`${s.id}: local group edits differ from remote; use --force to overwrite`); conflicts++; }
+      else { if (!flag('--dry')) fs.writeFileSync(geFile, JSON.stringify(ge, null, 1) + '\n'); console.log(`${s.id}: ${flag('--dry') ? 'would write' : 'wrote'} group edits (${Object.keys(ge.names || {}).length} names, ${(ge.uncategorized || []).length} uncategorized)`); }
+    }
+  }
   const file = path.join(ROOT, 'surveys', s.id, 'decisions.json');
   if (!fs.existsSync(path.dirname(file))) { console.log(`${s.id}: not in this checkout, skipped`); continue; }
   const local = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};

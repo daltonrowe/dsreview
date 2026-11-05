@@ -18,6 +18,9 @@ const DECISIONS = ['keep', 'round', 'exclude', 'unclear'];
 export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {}) {
   const app = express();
   const decisionsPath = id => (dataDir ? path.join(dataDir, 'decisions', `${id}.json`) : path.join(SURVEYS, id, 'decisions.json'));
+  // Reviewer edits to a survey's groups (names, usages moved to Uncategorized), stored like decisions.
+  const groupEditsPath = id => (dataDir ? path.join(dataDir, 'groups', `${id}.json`) : path.join(SURVEYS, id, 'group-edits.json'));
+  const emptyEdits = () => ({ names: {}, uncategorized: [] });
 
   // Health check for kamal-proxy; must answer without credentials.
   app.get('/up', (req, res) => res.status(200).send('ok'));
@@ -150,7 +153,8 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     const survey = await readJson(path.join(dir, 'survey.json'), null);
     if (!survey) return res.status(404).json({ error: `survey "${req.params.id}" not generated. Run: node tools/survey.mjs run ${req.params.id}` });
     const decisions = await readJson(decisionsPath(req.params.id), {});
-    res.json({ ...survey, decisions, progress: progress(survey, decisions) });
+    const groupEdits = { ...emptyEdits(), ...(await readJson(groupEditsPath(req.params.id), {})) };
+    res.json({ ...survey, decisions, groupEdits, progress: progress(survey, decisions) });
   });
 
   // body: { ids: [...], decision?: 'keep'|'round'|'exclude'|'unclear'|null, note?: string,
@@ -220,6 +224,30 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     if (req.params.fmt === 'json') return res.json(out.json);
     if (req.params.fmt !== 'md') return res.status(400).end();
     res.type('text/markdown').send(out.md);
+  });
+
+  // body: { rename?: { group, name } (empty name restores the generated one),
+  //         uncategorize?: [itemId, ...], restore?: [itemId, ...] }
+  app.put('/api/surveys/:id/group-edits', async (req, res) => {
+    surveyDir(req.params.id);
+    const { rename, uncategorize, restore } = req.body || {};
+    const edits = await withLock(req.params.id + ':groups', async () => {
+      const p = groupEditsPath(req.params.id);
+      const e = { ...emptyEdits(), ...(await readJson(p, {})) };
+      if (rename?.group) {
+        const name = String(rename.name || '').replace(/[\u0000-\u001f]/g, '').trim().slice(0, 120);
+        if (name) e.names[String(rename.group)] = name; else delete e.names[String(rename.group)];
+      }
+      const set = new Set(e.uncategorized);
+      for (const i of uncategorize || []) set.add(String(i));
+      for (const i of restore || []) set.delete(String(i));
+      e.uncategorized = [...set];
+      await fsp.mkdir(path.dirname(p), { recursive: true });
+      await writeJsonAtomic(p, e);
+      return e;
+    });
+    res.json(edits);
+    broadcast('group-edits', { survey: req.params.id, edits, by: { client: req.get('x-client-id') || null, tab: req.get('x-client-tab') || null, name: cleanName(decodeHeader(req.get('x-client-name'))) || 'Someone' } });
   });
 
   // Every generated survey in one file, downloaded as an attachment.

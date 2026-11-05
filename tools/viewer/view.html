@@ -109,10 +109,27 @@ function layout() {
   $('#zOut').disabled = zoom <= ZOOMS[0];
   $('#zIn').disabled = zoom >= ZOOMS[ZOOMS.length - 1];
 }
-function setZoom(z) {
+// focus: { x, y, el } in the design page's viewport (a Z+click); otherwise the highlighted element is kept in view
+function setZoom(z, focus) {
   zoom = z;
   layout();
   syncUrl();
+  const stage = $('#stage');
+  if (focus) {
+    // the page is anchored top-left, so the clicked point keeps its viewport position after the
+    // resize; scroll it to the middle: vertically in the page (or its inner scroll area), sideways in the stage
+    const win = frame.contentWindow;
+    const dy = focus.y - win.innerHeight / 2;
+    let sc = focus.el;
+    while (sc && sc !== win.document.documentElement) {
+      const cs = win.getComputedStyle(sc);
+      if (/(auto|scroll)/.test(cs.overflowY) && sc.scrollHeight > sc.clientHeight + 2) break;
+      sc = sc.parentElement;
+    }
+    if (sc && sc !== win.document.documentElement) sc.scrollTop += dy; else win.scrollBy(0, dy);
+    stage.scrollLeft = focus.x * scale - stage.clientWidth / 2;
+    return;
+  }
   // keep the highlighted element in view: centre it inside the page, then scroll the stage to it
   if (targetEl?.isConnected) {
     targetEl.scrollIntoView({ block: 'center', inline: 'nearest' });
@@ -123,6 +140,54 @@ function setZoom(z) {
 $('#zIn').onclick = () => setZoom(ZOOMS.find(z => z > zoom) ?? zoom);
 $('#zOut').onclick = () => setZoom([...ZOOMS].reverse().find(z => z < zoom) ?? zoom);
 $('#zReset').onclick = () => setZoom(1);
+
+// ---------- Z+click zooms in at the click, Cmd/Ctrl+Z+click zooms out ----------
+// Keys arrive in this page, in the design page (iframe), or, inside the survey's popover, from the
+// parent page by postMessage. macOS drops the Z keyup while Cmd is held, so releasing Cmd or losing
+// focus also ends the zoom gesture.
+const zoom$ = { held: false, out: false };
+function zoomCursor() {
+  const doc = frame.contentDocument;
+  if (!doc) return;
+  let st = doc.getElementById('__dcv-zoomcur');
+  if (!zoom$.held) { st?.remove(); return; }
+  if (!st) { st = doc.createElement('style'); st.id = '__dcv-zoomcur'; doc.head.appendChild(st); }
+  st.textContent = `*, *::before, *::after { cursor: ${zoom$.out ? 'zoom-out' : 'zoom-in'} !important; }`;
+}
+function zoomKey(type, code, mod) {
+  if (code === 'KeyZ') zoom$.held = type === 'down';
+  if (code === 'MetaLeft' || code === 'MetaRight' || code === 'ControlLeft' || code === 'ControlRight') { if (type === 'up') zoom$.held = false; }
+  zoom$.out = !!mod;
+  zoomCursor();
+}
+function zoomKeys(w) {
+  w.addEventListener('keydown', e => {
+    if (e.target.matches?.('input, select, textarea')) return;
+    if (e.code === 'KeyZ' && (e.metaKey || e.ctrlKey)) e.preventDefault(); // not undo
+    zoomKey('down', e.code, e.metaKey || e.ctrlKey);
+  }, true);
+  w.addEventListener('keyup', e => zoomKey('up', e.code, e.metaKey || e.ctrlKey), true);
+  w.addEventListener('blur', () => { zoom$.held = false; zoomCursor(); });
+}
+zoomKeys(window);
+addEventListener('message', e => {
+  if (e.origin !== location.origin || e.data?.type !== 'dcv-key') return;
+  zoomKey(e.data.ev, e.data.code, e.data.mod);
+});
+frame.addEventListener('load', () => {
+  const w = frame.contentWindow;
+  zoomKeys(w);
+  // swallow the whole click while zooming so the design page doesn't react (links, buttons, menus)
+  const swallow = e => { if (zoom$.held) { e.preventDefault(); e.stopImmediatePropagation(); } };
+  for (const t of ['pointerdown', 'mousedown', 'pointerup', 'mouseup', 'auxclick', 'dblclick']) w.addEventListener(t, swallow, true);
+  w.addEventListener('click', e => {
+    if (!zoom$.held) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    const out = e.metaKey || e.ctrlKey;
+    const next = out ? [...ZOOMS].reverse().find(z => z < zoom) : ZOOMS.find(z => z > zoom);
+    if (next != null) setZoom(next, { x: e.clientX, y: e.clientY, el: e.target });
+  }, true);
+});
 addEventListener('resize', layout);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
