@@ -102,6 +102,8 @@
   #suggest .fit div { display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
   #suggest .fit b { font-size: 18px; font-weight: 650; }
   #suggest tr.changed td { background: color-mix(in srgb, var(--round) 6%, transparent); }
+  #suggest td.nowrap { white-space: nowrap; }
+  #suggest .sgsw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); }
   #suggest td.delta { color: var(--round); font-weight: 600; }
   #suggest .unused { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
   #suggest .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-right: 6px; opacity: .7; }
@@ -141,9 +143,9 @@
 <div class="pmodal" id="pm"><div class="box"><div class="bar"><b id="pmTitle"></b><span class="spacer"></span><a class="btn small" id="pmOpen" target="_blank">Open in tab ↗</a><button class="btn small" id="pmRound">Round to this</button><button class="btn small" id="pmClose">Close</button></div><iframe id="pmFrame"></iframe></div></div>
 
 <script type="module">
-import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend } from './common.js';
+import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend, cssColor } from './common.js';
 import { startLive, onDecision, liveToast, describeDecision } from './live.js';
-import { loadTokens, nearest, familyTokenNames, scaleFor, scaleValues, kMedians } from './tokens.js';
+import { loadTokens, nearest, familyTokenNames, scaleFor, scaleValues, kMedians, valueDistance, isColorPreset } from './tokens.js';
 
 const setHdr = () => document.documentElement.style.setProperty('--hdr', $('header.hdr').offsetHeight + 'px');
 new ResizeObserver(setHdr).observe($('header.hdr'));
@@ -382,8 +384,33 @@ function computeCoverage() {
     else r.values.set(it.value, (r.values.get(it.value) || 0) + weight(it));
     by.set(key, r);
   }
+  for (const r of by.values()) r.suggested = suggestFor(r);
   const used = new Set([...byId.values()].flatMap(it => it.sec.near?.candidates?.[0]?.names || [it.sec.near?.candidates?.[0]?.token]).filter(Boolean));
   return { rows: [...by.values()].sort((a, b) => b.usages - a.usages), unused: familyTokenNames(S.preset).filter(t => !used.has(t)) };
+}
+
+// The color part of a usage value (a border value is "1px solid #e6e9ea", "bottom: …").
+const colorPart = v => (S.preset === 'border' ? (String(v).match(/#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/i) || [null])[0] : v);
+
+// Suggested value for one token: the weighted medoid of the usages mapped onto it, i.e. the
+// value in use that is closest (perceptually, for colors) to all of them. Exact usages count at
+// the current value, and the current value wins ties so it only changes when something fits better.
+// Families without a distance (shadows, …) fall back to the most-used value.
+function suggestFor(r) {
+  const pts = [{ v: r.value, w: r.exact }];
+  for (const [v, w] of r.values) { const c = colorPart(v); if (c) pts.push({ v: c, w }); }
+  const color = isColorPreset(S.preset) || S.preset === 'border';
+  const dist = (a, b) => (a === b ? 0 : color ? valueDistance('background', a, b) : null);
+  if (!color || pts.some(p => dist(pts[0].v, p.v) == null)) {
+    const best = pts.reduce((m, p) => (p.w > m.w ? p : m), pts[0]);
+    return best.v;
+  }
+  let best = pts[0], bestCost = Infinity;
+  for (const c of pts) {
+    const cost = pts.reduce((sum, p) => sum + p.w * dist(c.v, p.v), 0);
+    if (cost < bestCost - 1e-9) { best = c; bestCost = cost; }
+  }
+  return best.v;
 }
 
 function renderSuggest() {
@@ -416,12 +443,22 @@ function renderSuggest() {
     return;
   }
   const c = computeCoverage();
-  $('#sgBody').innerHTML = `<p class="intro">These tokens aren't a single scale, so they can't be re-valued automatically. Here is how the usages map onto the existing tokens.</p>
+  const color = isColorPreset(S.preset) || S.preset === 'border';
+  // "#eee" and "#eeeeee" are the same color
+  const norm = v => String(v).toLowerCase().replace(/^#([0-9a-f])([0-9a-f])([0-9a-f])$/, '#$1$1$2$2$3$3');
+  const sw = v => (color ? `<span class="sgsw" style="background:${esc(cssColor(v))}"></span>` : '');
+  $('#sgBody').innerHTML = `<p class="intro">These tokens aren't a single scale. Each token's suggested value is the ${color ? 'color in use closest to everything mapped onto it' : 'most-used value mapped onto it'}.</p>
     <table>
-      <thead><tr><th>Nearest token</th><th>Value</th><th class="num">Usages</th><th class="num">Exact</th><th>Off-token values mapped here</th></tr></thead>
-      <tbody>${c.rows.map(x => `<tr>
-        <td class="name">${esc(x.token)}</td><td class="absorbs">${esc(x.value)}</td><td class="num">${x.usages}</td><td class="num">${x.exact}</td>
-        <td class="absorbs">${[...x.values].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([v, w]) => `<span class="val" data-q="${esc(v)}">${esc(v)}</span> (${w})`).join(', ')}</td></tr>`).join('')}</tbody>
+      <thead><tr><th>Nearest token</th><th>Current</th><th>Suggested</th><th class="num">Usages</th><th class="num">Exact</th><th>Off-token values mapped here</th></tr></thead>
+      <tbody>${c.rows.map(x => {
+        const changed = norm(x.suggested) !== norm(x.value);
+        return `<tr class="${changed ? 'changed' : ''}">
+        <td class="name">${esc(x.token)}</td>
+        <td class="absorbs nowrap">${sw(x.value)}${esc(x.value)}</td>
+        <td class="absorbs nowrap">${changed ? `${sw(x.suggested)}<b>${esc(x.suggested)}</b>` : '<span class="faint">—</span>'}</td>
+        <td class="num">${x.usages}</td><td class="num">${x.exact}</td>
+        <td class="absorbs">${[...x.values].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([v, w]) => `<span class="val" data-q="${esc(v)}">${esc(v)}</span> (${w})`).join(', ')}</td></tr>`;
+      }).join('')}</tbody>
     </table>
     ${c.unused.length ? `<div class="unused"><b>Unused tokens:</b> <code>${c.unused.map(esc).join('</code>, <code>')}</code></div>` : ''}`;
 }
