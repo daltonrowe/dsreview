@@ -1,0 +1,80 @@
+/* Resource show-page widgets — ported from apollo app/components/resources (show + actions) */
+
+/* Square action button (Collection / Similar / Share / Follow)
+   Real classes: .ez-btn.ez-btn--light.resource-action-button.resource-action-button--square */
+/* Square action button (Collection / Similar / Share / Follow)
+   Real classes: .ez-btn.ez-btn--light.resource-action-button.resource-action-button--square
+   Source: action_button_component.css — 92×64px, 18px icon, 12px/600 label */
+.resource-action-button { min-width: auto; position: relative; }
+.resource-action-button--square { flex-direction: column; gap: var(--spacing-1); height: var(--spacing-8); min-height: var(--spacing-8); padding: 0; width: 92px; }
+.resource-action-button--square .action-button-icon { display: inline-block; width: 18px; height: 18px; background: var(--ez-color--grey-100); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
+.resource-action-button__text { font-size: var(--type-body-small-size); font-weight: 600; line-height: var(--type-body-small-lineheight); color: var(--ez-color--grey-100); margin-top: 0; }
+.resource-action-button--small { height: auto; min-height: 0; max-height: none; padding: var(--spacing-2) 0; gap: var(--spacing-tiny); }
+.resource-action-button--small .action-button-icon { width: 18px; height: 18px; }
+.resource-action-button.is-favorited .action-button-icon { background: var(--ez-color--buttons-red); }
+.resource-action-button.is-favorited .resource-action-button__text { color: var(--ez-color--buttons-red); }
+
+/* Show-page actions row — .ez-resource-show__actions */
+.ez-resource-show__actions { display: flex; gap: var(--spacing-1); justify-content: space-between; }
+.ez-resource-show__actions .resource-action-button--square { width: 100%; }
+.ez-resource-show__actions form { flex: 1 1 100%; }
+
+/* Download button — source: download_button_component.css + download_button_dropdown_component.css
+   Main: .ez-btn--primary at body-vlarge (18px), min-height 72px, full width.
+   Caret: 40px trigger absolutely positioned right, #ff9f2c hairline at right: 40px. */
+.download-button { position: relative; width: 100%; }
+.download-button .download-button__main { font-size: var(--type-body-vlarge-size); padding-bottom: var(--spacing-2); padding-top: var(--spacing-2); min-height: var(--spacing-9); width: 100%; max-width: none; flex-wrap: wrap; }
+.download-button .download-button__main .ez-btn__sub-text { flex-basis: 100%; width: 100%; font-size: var(--type-body-small-size); font-weight: 400; margin-top: var(--spacing-tiny); }
+.download-button__caret { position: absolute; top: 0; bottom: 0; right: 0; width: var(--spacing-5); min-width: var(--spacing-5); max-height: var(--spacing-9); padding-left: 0; padding-right: 0; min-height: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.download-button__caret::before { content: ""; position: absolute; top: 0; bottom: 0; right: var(--spacing-5); width: 1px; background: #ff9f2c; z-index: 1; }
+.download-button__caret .action-button-icon { display: inline-block; width: 8px; height: 5px; margin-left: -2px; background: #fff; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23fff' stroke-width='2.5'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23fff' stroke-width='2.5'/%3E%3C/svg%3E") center/contain no-repeat; }
+.download-button__menu { position: absolute; top: calc(100% + var(--spacing-1)); left: 0; width: 100%; z-index: 10; background: #fff; border-radius: var(--radius-medium); box-shadow: 0 2px 12px rgba(14, 35, 50, 0.16); overflow: hidden; }
+.download-button__size-option { display: block; background-color: transparent; border: 0; cursor: pointer; font-family: var(--ez-font-stack); font-size: var(--type-body-medium-size); font-weight: normal; line-height: initial; padding: var(--spacing-2); text-align: left; width: 100%; color: var(--ez-color--text-bold, var(--color-navy-100)); }
+.download-button__size-option:hover { background-color: var(--ez-color--grey-3); }
+.download-button__menu-item:not(:last-child) { border-bottom: 1px solid var(--ez-color--grey-10); }
+
+/* Reimagine button — real classes: .reimagine-button.ez-btn.ez-btn--pro-2-secondary.w-full.flex.gap-2
+   No size modifier in the source — default .ez-btn metrics (16px text, min-height 56px, 6px radius). */
+.reimagine-button { width: 100%; max-width: none; gap: var(--spacing-1); flex-wrap: nowrap; }
+.reimagine-button .reimagine-button__icon { display: inline-block; width: 20px; height: 20px; flex-shrink: 0; background: var(--ez-color--pro2-gradient); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
+.reimagine-button:hover .reimagine-button__icon, .reimagine-button:active .reimagine-button__icon { background: #fff; }
+
+/* Reimagine Pro CTA card — .reimagine-pro-card__wrapper (gradient border) */
+.reimagine-pro-card__wrapper { background: linear-gradient(#fff, #fff) padding-box, var(--ez-color--pro-gradient) border-box; border: 2px solid transparent; border-radius: var(--radius-large); padding: var(--spacing-3); display: flex; flex-direction: column; align-items: center; gap: var(--spacing-2); text-align: center; }
+.reimagine-pro-card__icon { display: inline-block; width: 40px; height: 40px; background: var(--ez-color--pro-gradient); border-radius: 50%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
+.reimagine-pro-card__title { font-size: var(--type-body-vlarge-size); font-weight: 600; margin: 0; color: var(--ez-color--text-headers); }
+.reimagine-pro-card__desc { font-size: var(--type-body-medium-size); margin: 4px 0 0; color: var(--ez-color--text); }
+
+/* License row + info cards under the actions */
+.ez-resource-show__license { display: flex; align-items: center; gap: var(--spacing-small); font-size: 12px; }
+.ez-resource-show__license-name { font-weight: 400; color: var(--ez-color--grey-70); }
+.ez-resource-show__license a { font-weight: 600; color: var(--ez-color--accent); }
+.ez-resource-show__license a:hover { color: var(--ez-color--accent-hover); }
+.ez-resource-show__info-card { display: flex; align-items: center; gap: var(--spacing-2); border: 1px solid var(--ez-color--grey-10); border-radius: var(--radius-large); padding: var(--spacing-3); cursor: pointer; background: #fff; width: 100%; text-align: left; font-family: var(--ez-font-stack); transition: border-color 0.15s ease; }
+.ez-resource-show__info-card:hover { border-color: var(--ez-color--grey-20); }
+.ez-resource-show__info-card--center { flex-direction: column; gap: var(--spacing-1); text-align: center; }
+.ez-resource-show__info-title { font-size: var(--type-body-vlarge-size); font-weight: 700; color: var(--ez-color--text-headers); }
+.ez-resource-show__info-sub { font-size: var(--type-body-vlarge-size); font-weight: 400; color: var(--ez-color--grey-70); }
+.ez-resource-show__info-link { font-size: var(--type-body-vlarge-size); font-weight: 700; color: var(--ez-color--hyperlinks); }
+.ez-resource-show__divider { border: 0; border-top: 1px solid var(--ez-color--grey-10); margin: var(--spacing-1) 0; width: 100%; }
+
+/* Collapsible "More Info" card on the show sidebar */
+.ez-resource-show__more-info { border: 1px solid var(--ez-color--grey-10); border-radius: var(--radius-large); overflow: hidden; }
+.ez-resource-show__more-info-header { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--spacing-2) var(--spacing-3); background: #fff; border: 0; cursor: pointer; font-family: var(--ez-font-stack); font-size: 12px; font-weight: 700; color: var(--ez-color--text-headers); }
+.ez-resource-show__more-info-caret { width: 8px; height: 6px; flex-shrink: 0; background: var(--ez-color--grey-100); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 6.5l5-5 5 5' fill='none' stroke='%23000' stroke-width='2.5'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 6.5l5-5 5 5' fill='none' stroke='%23000' stroke-width='2.5'/%3E%3C/svg%3E") center/contain no-repeat; }
+.ez-resource-show__more-info-body { display: flex; align-items: center; gap: var(--spacing-small); padding: var(--spacing-2) var(--spacing-3); border-top: 1px solid var(--ez-color--grey-10); font-size: 12px; }
+.ez-resource-show__more-info-icon { width: 22px; height: 22px; flex-shrink: 0; background: var(--ez-color--grey-60); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
+.ez-resource-show__more-info-label { color: var(--ez-color--grey-70); }
+.ez-resource-show__more-info-body a { font-weight: 600; color: var(--ez-color--accent); }
+.ez-resource-show__more-info-body a:hover { color: var(--ez-color--accent-hover); }
+
+/* Ad slot placeholder (300×250 medium rectangle) */
+.ez-resource-show__ad-slot { width: 100%; aspect-ratio: 300 / 250; border: 1px dashed var(--ez-color--grey-20); border-radius: var(--radius-medium); background: var(--ez-color--grey-3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-tiny); color: var(--ez-color--grey-40); }
+.ez-resource-show__ad-slot-tag { font-family: var(--ez-font-mono, ui-monospace, monospace); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.ez-resource-show__ad-slot-size { font-size: 13px; color: var(--ez-color--grey-30); }
+
+/* Related keywords / tags — carousel of light tag chips */
+.related-tags { display: flex; flex-wrap: wrap; gap: var(--spacing-1); }
+.related-tags__tag { display: inline-flex; align-items: center; height: 40px; padding: 0 var(--spacing-2); border-radius: var(--radius-small); background: var(--ez-color--buttons-grey-light); color: var(--ez-color--grey-100); font-family: var(--ez-font-stack); font-size: var(--type-body-medium-size); font-weight: 400; cursor: pointer; white-space: nowrap; transition: background-color 0.15s ease; }
+.related-tags__tag:hover { background: var(--ez-color--buttons-grey-light-hover); }
+.related-tags__tag.is-muted { color: var(--ez-color--grey-30); }

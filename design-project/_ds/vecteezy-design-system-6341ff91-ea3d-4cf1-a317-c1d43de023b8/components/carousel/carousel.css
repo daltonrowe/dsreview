@@ -1,0 +1,40 @@
+/* Carousels — horizontal scroll rails used for keyword chips, template/resource tiles
+   and editorial image strips. Overflow is a native scroller; the trailing item fades
+   under a mask and a floating chevron advances one viewport-width. */
+.ez-carousel { position: relative; width: 100%; }
+.ez-carousel__header { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-2); margin-bottom: var(--spacing-2); }
+.ez-carousel__title { margin: 0; font-size: 20px; font-weight: 700; color: var(--ez-color--text-headers); white-space: nowrap; }
+.ez-carousel__view-all { font-size: 15px; font-weight: 600; color: var(--ez-color--accent); text-decoration: none; }
+.ez-carousel__view-all:hover { color: var(--ez-color--accent-hover); }
+.ez-carousel__viewport { position: relative; }
+.ez-carousel__track { display: flex; align-items: stretch; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; padding: 2px 0; }
+.ez-carousel__track::-webkit-scrollbar { display: none; }
+.ez-carousel--fade .ez-carousel__track { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 90px, #000 calc(100% - 90px), transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 90px, #000 calc(100% - 90px), transparent 100%); }
+.ez-carousel--fade.is-start .ez-carousel__track { -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 90px), transparent 100%); mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 90px), transparent 100%); }
+.ez-carousel--fade.is-end .ez-carousel__track { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 90px, #000 100%); mask-image: linear-gradient(90deg, transparent 0, #000 90px, #000 100%); }
+.ez-carousel--fade.is-start.is-end .ez-carousel__track { -webkit-mask-image: none; mask-image: none; }
+.ez-carousel__item { flex: 0 0 auto; }
+
+/* Nav chevrons — bare glyph on the right/left edge, vertically centred on the rail */
+.ez-carousel__nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; padding: 0; cursor: pointer; color: var(--ez-color--grey-100); transition: background 0.15s ease, color 0.15s ease; }
+.ez-carousel__nav:hover { background: var(--ez-color--grey-5); }
+.ez-carousel__nav--prev { left: -40px; }
+.ez-carousel__nav--next { right: -40px; }
+.ez-carousel__nav[disabled] { opacity: 0; pointer-events: none; }
+.ez-carousel__nav-icon { display: block; width: 5px; height: 9px; }
+
+/* Keyword chips — same chip as .related-tags, laid out on a rail instead of wrapping */
+.ez-carousel--keywords .ez-carousel__track { gap: var(--spacing-1); }
+.ez-keyword-chip { display: inline-flex; align-items: center; gap: var(--spacing-1); height: 44px; padding: 0 var(--spacing-2); border: 0; border-radius: var(--radius-small); background: var(--ez-color--buttons-grey-light); color: var(--ez-color--text-headers); font-family: inherit; font-size: 15px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: background 0.15s ease; }
+.ez-keyword-chip:hover { background: var(--ez-color--buttons-grey-light-hover); }
+.ez-keyword-chip--type { background: #fff; border: 1px solid var(--ez-color--grey-10); }
+.ez-keyword-chip--type:hover { background: var(--ez-color--grey-3); border-color: var(--ez-color--grey-20); }
+.ez-keyword-chip__icon { width: 20px; height: 20px; display: block; }
+
+/* Media tiles — templates / resources / editorial */
+.ez-carousel--media .ez-carousel__track { gap: var(--spacing-2); }
+.ez-carousel-tile { position: relative; display: block; border-radius: var(--radius-small); overflow: hidden; background: var(--ez-color--grey-5); border: 0; padding: 0; cursor: pointer; }
+.ez-carousel-tile__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ez-carousel-tile:hover .ez-carousel-tile__img { opacity: 0.92; }
+.ez-carousel-tile__caption { position: absolute; left: 0; right: 0; bottom: var(--spacing-2); padding: 0 var(--spacing-2); text-align: center; color: #fff; font-size: 17px; font-weight: 700; text-shadow: 0 1px 6px rgba(14, 35, 50, 0.6); pointer-events: none; }
+.ez-carousel-tile__scrim { position: absolute; inset: 0; background-image: linear-gradient(0deg, rgba(14, 35, 50, 0.62), rgba(14, 35, 50, 0) 50%); }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/styles.css">
+  <script src="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/_ds_bundle.js"></script>
+  <style>
+    html, body { margin: 0; background: #fff; }
+    body { font-family: system-ui, "Segoe UI", helvetica, arial, sans-serif; color: var(--ez-color--grey-100); }
+    a { color: var(--color-orange-100); text-decoration: none; }
+    a:hover { color: var(--color-orange-90); }
+    input::placeholder { color: var(--ez-color--grey-40); }
+  </style>
+</helmet>
+<div data-screen-label="Log In" style="min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; padding: 48px 24px 64px; background: linear-gradient(180deg, #ffffff, var(--ez-color--grey-3))">
+  <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex; margin-bottom: 40px">
+    <img src="assets/img/logos/rebrand/orange-horizontal-lockup.svg" alt="Vecteezy" style="height: 44px; display: block">
+  </a>
+  <div style="width: 100%; max-width: 560px; box-sizing: border-box; background: #fff; border: 1px solid var(--ez-color--grey-10); border-radius: 20px; box-shadow: 0 16px 40px rgba(16, 32, 48, 0.08); padding: 44px 48px 40px; display: flex; flex-direction: column; gap: 28px">
+    <h1 style="margin: 0; font-size: 32px; line-height: 1.15; font-weight: 700; letter-spacing: -.01em">{{ title }}</h1>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+      <button type="button" style="display: flex; align-items: center; justify-content: center; gap: 12px; height: 52px; padding: 0 20px; border: none; border-radius: 9999px; background: var(--ez-color--grey-5); color: var(--ez-color--grey-100); font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; transition: background .15s ease" style-hover="background: var(--ez-color--grey-10)">
+        <img src="assets/icons/social/google-color.svg" alt="" style="width: 22px; height: 22px">
+        <span style="white-space: nowrap">{{ googleLabel }}</span>
+      </button>
+      <button type="button" style="display: flex; align-items: center; justify-content: center; gap: 12px; height: 52px; padding: 0 20px; border: none; border-radius: 9999px; background: var(--ez-color--grey-5); color: var(--ez-color--grey-100); font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; transition: background .15s ease" style-hover="background: var(--ez-color--grey-10)">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="12" r="12" fill="#1877F2"></circle><path d="M15.12 15.47 15.65 12H12.33V9.75c0-.95.46-1.87 1.95-1.87h1.51V4.92s-1.37-.23-2.68-.23c-2.74 0-4.53 1.66-4.53 4.66V12H5.53v3.47h3.05V24a12.1 12.1 0 0 0 3.75 0v-8.53z" fill="#fff"></path></svg>
+        <span style="white-space: nowrap">{{ facebookLabel }}</span>
+      </button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 20px; color: var(--ez-color--grey-60); font-size: 14px">
+      <span style="flex: 1; height: 1px; background: var(--ez-color--grey-10)"></span>
+      <span>OR</span>
+      <span style="flex: 1; height: 1px; background: var(--ez-color--grey-10)"></span>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="display: flex; flex-direction: column; gap: 22px">
+      <label style="display: flex; flex-direction: column; gap: 8px">
+        <span style="display: flex; gap: 3px; font-size: 12px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase; color: var(--ez-color--grey-60)">{{ userLabel }}<span style="color: var(--color-red-90)">*</span></span>
+        <input value="{{ user }}" onChange="{{ onUser }}" autocomplete="username" style="height: 48px; box-sizing: border-box; padding: 0 14px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: #fff; color: var(--ez-color--grey-100); font: inherit; font-size: 16px; outline: none; transition: border-color .15s ease" style-hover="border-color: var(--ez-color--grey-40)" style-focus="border-color: var(--ez-color--grey-60)">
+      </label>
+      <label style="display: flex; flex-direction: column; gap: 8px">
+        <span style="display: flex; gap: 3px; font-size: 12px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase; color: var(--ez-color--grey-60)">Password<span style="color: var(--color-red-90)">*</span></span>
+        <span style="position: relative; display: flex">
+          <input type="{{ pwType }}" value="{{ pw }}" onChange="{{ onPw }}" autocomplete="current-password" style="flex: 1; min-width: 0; height: 48px; box-sizing: border-box; padding: 0 48px 0 14px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: #fff; color: var(--ez-color--grey-100); font: inherit; font-size: 16px; outline: none; transition: border-color .15s ease" style-hover="border-color: var(--ez-color--grey-40)" style-focus="border-color: var(--ez-color--grey-60)">
+          <button type="button" aria-label="{{ pwToggleLabel }}" title="{{ pwToggleLabel }}" onClick="{{ togglePw }}" style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 0; border: none; border-radius: 9999px; background: none; color: var(--ez-color--grey-40); cursor: pointer; transition: color .15s ease" style-hover="color: var(--ez-color--grey-100)">
+            <span style="display: inline-flex; width: 20px; height: 20px" dangerouslySetInnerHTML="{{ eyeIcon }}"></span>
+          </button>
+        </span>
+      </label>
+      <p style="margin: 0; font-size: 14px; line-height: 1.5; color: var(--ez-color--grey-60); text-wrap: pretty">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" style="color: var(--ez-color--grey-60); border-bottom: 1px dotted var(--ez-color--grey-40)">Privacy Policy</a> and <a href="https://policies.google.com/terms" style="color: var(--ez-color--grey-60); border-bottom: 1px dotted var(--ez-color--grey-40)">Terms of Service</a> apply.</p>
+      <button type="submit" disabled="{{ submitDisabled }}" style="height: 52px; border: none; border-radius: 9999px; background: {{ submitBg }}; color: {{ submitFg }}; font: inherit; font-size: 17px; font-weight: 600; cursor: {{ submitCursor }}; transition: background .15s ease, color .15s ease">{{ submitLabel }}</button>
+    </form>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; font-size: 16px">
+      <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+        <a href="#">Forgot Your Password?</a>
+      </sc-if>
+      <span style="color: var(--ez-color--grey-60)">{{ switchPrompt }} <a href="#" onClick="{{ switchMode }}">{{ switchLink }}</a></span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mode&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;login&quot;, &quot;signup&quot;], &quot;default&quot;: &quot;login&quot;, &quot;tsType&quot;: &quot;'login' | 'signup'&quot;}}">
+class Component extends DCLogic {
+  state = { mode: null, user: '', pw: '', showPw: false };
+  renderVals() {
+    const mode = this.state.mode || this.props.mode || 'login';
+    const login = mode === 'login';
+    const ready = this.state.user.trim() && this.state.pw;
+    const eyeOpen = '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>';
+    const eyeOff = '<path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/>';
+    return {
+      isLogin: login,
+      title: login ? 'Log In' : 'Sign Up',
+      googleLabel: login ? 'Login with Google' : 'Sign up with Google',
+      facebookLabel: login ? 'Login with Facebook' : 'Sign up with Facebook',
+      userLabel: login ? 'Username / Email' : 'Email',
+      submitLabel: login ? 'Log In' : 'Create Account',
+      switchPrompt: login ? "Don't have an account?" : 'Already have an account?',
+      switchLink: login ? 'Create one' : 'Log in',
+      switchMode: (e) => { e.preventDefault(); this.setState({ mode: login ? 'signup' : 'login' }); },
+      user: this.state.user, pw: this.state.pw,
+      onUser: (e) => this.setState({ user: e.target.value }),
+      onPw: (e) => this.setState({ pw: e.target.value }),
+      pwType: this.state.showPw ? 'text' : 'password',
+      pwToggleLabel: this.state.showPw ? 'Hide password' : 'Show password',
+      togglePw: () => this.setState(s => ({ showPw: !s.showPw })),
+      eyeIcon: { __html: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (this.state.showPw ? eyeOff : eyeOpen) + '</svg>' },
+      submitDisabled: !ready,
+      submitBg: ready ? 'var(--color-orange-100)' : 'var(--ez-color--grey-10)',
+      submitFg: ready ? '#fff' : 'var(--ez-color--grey-40)',
+      submitCursor: ready ? 'pointer' : 'not-allowed',
+      onSubmit: (e) => { e.preventDefault(); if (ready) window.location.href = 'AI Magic.dc.html'; }
+    };
+  }
+}
+</script>
+</body>
+</html>

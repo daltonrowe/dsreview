@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/spacing.css">
+  <style>
+    body { margin: 0; background: var(--ez-surface, #fff); }
+    a { color: var(--color-orange-100, #ff7900); }
+    a:hover { color: var(--color-orange-90, #e66d00); }
+  </style>
+</helmet>
+<div style="max-width: 860px; margin: 0 auto; padding: 56px 32px 80px; font-family: system-ui, 'Segoe UI', helvetica, arial, sans-serif; color: var(--ez-color--grey-100)">
+  <p style="margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--ez-color--grey-40)">Vecteezy style guide</p>
+  <h1 style="margin: 0 0 10px; font-size: 34px; font-weight: 700; line-height: 1.15">Action Cards</h1>
+  <p style="margin: 0 0 40px; font-size: 15px; line-height: 1.55; color: var(--ez-color--grey-60); max-width: 62ch">Action Cards appear inside an AI Magic bot response and summarize an action the user performed on the site. They sit flush under the bot message inside the grey response container.</p>
+  <h2 style="margin: 0 0 4px; font-size: 20px; font-weight: 700">Search Action Card</h2>
+  <p style="margin: 0 0 20px; font-size: 14px; line-height: 1.55; color: var(--ez-color--grey-60); max-width: 62ch">Shown when a chat query is submitted as a generic search (query appended with &#8220;(search)&#8221;). Text-only pill: orange search icon and the quoted query in bold &#8212; no images.</p>
+  <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: 20px; background: var(--ez-color--grey-3, #f7f9fa); border: 1px solid var(--ez-color--grey-10); margin-bottom: 44px">
+    <div style="max-width: 560px; width: 100%; display: flex; flex-direction: column">
+      <div style="box-sizing: border-box; padding: 12px 16px; border-radius: 14px 14px 0 0; background: var(--ez-color--grey-5); font-size: 14px; line-height: 1.5">Showing &#8220;Cat&#8221; search results with 7 filters applied.</div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: -2px; padding: 0 10px 10px; border-radius: 0 0 14px 4px; background: var(--ez-color--grey-5)">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 12px 24px 12px 18px; background: var(--ez-surface, #fff); border: 1px solid var(--ez-color--grey-10); border-radius: 9999px; width: max-content; max-width: 100%; box-sizing: border-box">
+          <span style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-orange-100)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </span>
+          <span style="min-width: 0; font-size: 17px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">&#8220;Cat&#8221;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: 160px 1fr; gap: 10px 24px; margin: -24px 0 44px; font-size: 13px; line-height: 1.5">
+    <span style="color: var(--ez-color--grey-60)">Trigger</span><span>Chat query ending in <strong>(search)</strong></span>
+    <span style="color: var(--ez-color--grey-60)">Card</span><span>White pill (9999px radius), 1px grey-10 border, 12px 24px 12px 18px padding, content-width; hover: orange border + soft shadow</span>
+    <span style="color: var(--ez-color--grey-60)">Icon</span><span>18px orange search icon; darkens on card hover</span>
+    <span style="color: var(--ez-color--grey-60)">Query</span><span>17px / 700, quoted, grey-100</span>
+  </div>
+  <h2 style="margin: 0 0 4px; font-size: 20px; font-weight: 700">Generate Search Card</h2>
+  <p style="margin: 0 0 20px; font-size: 14px; line-height: 1.55; color: var(--ez-color--grey-60); max-width: 62ch">Shown when a chat query is submitted as a generation (query appended with &#8220;(generate)&#8221;). Sparkle icon, quoted query in bold, and four small preview thumbnails, in a card matching the chat-bubble radius.</p>
+  <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px; border-radius: 20px; background: var(--ez-color--grey-3, #f7f9fa); border: 1px solid var(--ez-color--grey-10)">
+    <div style="max-width: 560px; width: 100%; display: flex; flex-direction: column">
+      <div style="box-sizing: border-box; padding: 12px 16px; border-radius: 14px 14px 0 0; background: var(--ez-color--grey-5); font-size: 14px; line-height: 1.5">Generating &#8220;Soccer&#8221; images.</div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: -2px; padding: 0 10px 10px; border-radius: 0 0 14px 4px; background: var(--ez-color--grey-5)">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 14px 24px 14px 18px; background: var(--ez-surface, #fff); border: 1px solid var(--ez-color--grey-10); border-radius: 14px; width: max-content; max-width: 100%; box-sizing: border-box">
+          <span style="display: flex; align-items: center; gap: 10px; min-width: 0; max-width: 100%">
+            <span style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-orange-100)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path></svg>
+            </span>
+            <span style="min-width: 0; font-size: 17px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">&#8220;Soccer&#8221;</span>
+          </span>
+          <span style="display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{ soccerImgs }}" as="sb" hint-placeholder-count="4">
+              <span style="display: block; width: 56px; height: 56px; border-radius: 8px; background: {{ sb.bg }}"></span>
+            </sc-for>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: grid; grid-template-columns: 160px 1fr; gap: 10px 24px; margin-top: 28px; font-size: 13px; line-height: 1.5">
+    <span style="color: var(--ez-color--grey-60)">Trigger</span><span>Chat query ending in <strong>(generate)</strong></span>
+    <span style="color: var(--ez-color--grey-60)">Container</span><span>Grey-5 wrap, flush under the bot bubble (square joint), 0 0 14px 4px radius, 10px side/bottom padding</span>
+    <span style="color: var(--ez-color--grey-60)">Card</span><span>White card, 14px radius (matches chat bubble), 1px grey-10 border, 12px 24px 12px 18px padding, content-width; hover: orange border + soft shadow</span>
+    <span style="color: var(--ez-color--grey-60)">Icon</span><span>18px orange sparkle icon; darkens on card hover</span>
+    <span style="color: var(--ez-color--grey-60)">Query</span><span>17px / 700, quoted, grey-100</span>
+    <span style="color: var(--ez-color--grey-60)">Previews</span><span>4 thumbnails, 72px square (same as chat-bubble images), 8px radius, 8px gap, on a row below the query</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const ids = ['1500382017468-9049fed747ef', '1464226184884-fa280b87c399', '1444858291040-58f756a3bdd6', '1519003300449-424ad0405076', '1543466835-00a7907e9de1'];
+    const mk = (id) => ({ bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-" + id + "?w=240&h=240&q=60&auto=format&fit=crop') center / cover no-repeat" });
+    const sample = ids.map(mk);
+    const cat = ['1514888286974-6c03e2ca1dba', '1495360010541-f48722b34f7d', '1518791841217-8f162f1e1131', '1533738363-b7f9aef128ce', '1543466835-00a7907e9de1'].map(mk);
+    return {
+      sampleImgsA: sample.slice(0, 3), sampleImgsB: sample.slice(3),
+      catImgsA: cat.slice(0, 3), catImgsB: cat.slice(3),
+      soccerImgs: ['1614632537190-23e4146777db', '1575361204480-aadea25e6e68', '1551958219-acbc608c6377', '1522778119026-d647f0596c20'].map(id => ({ bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-" + id + "?w=120&h=120&q=60&auto=format&fit=crop') center / cover no-repeat" }))
+    };
+  }
+}
+</script>
+</body>
+</html>

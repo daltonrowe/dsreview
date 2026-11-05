@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/styles.css">
+  <style>
+    body { margin: 0; }
+    a { color: var(--color-orange-100); text-decoration: none; }
+    a:hover { color: var(--color-orange-90); }
+    .vz-pricing { --ez-surface: #fff; }
+    .vz-pricing[data-ez-theme="dark"] {
+      --ez-surface: #171717;
+      --ez-color--grey-3: #0d0d0d;
+      --ez-color--grey-5: #1f1f1f;
+      --ez-color--grey-10: #292929;
+      --ez-color--grey-20: #363636;
+      --ez-color--grey-40: #7f7f7f;
+      --ez-color--grey-60: #aaaaaa;
+      --ez-color--grey-70: #c9c9c9;
+      --ez-color--grey-100: #f2f2f2;
+      color-scheme: dark;
+    }
+    @keyframes v3Ticker { from { transform: translateY(0) } to { transform: translateY(-50%) } }
+    @media (prefers-reduced-motion: reduce) { [data-screen-label="Trustpilot ticker"] > div { animation: none !important; } }
+    .vz-pricing[data-ez-theme="dark"] .tp-logo { filter: invert(1) hue-rotate(180deg); }
+    @keyframes cloud-swirl-a { 0% { transform: translate(-35%, -8%) rotate(0deg) scale(1); } 25% { transform: translate(20%, 8%) rotate(60deg) scale(1.15); } 50% { transform: translate(45%, -6%) rotate(150deg) scale(0.95); } 75% { transform: translate(5%, 10%) rotate(240deg) scale(1.1); } 100% { transform: translate(-35%, -8%) rotate(360deg) scale(1); } }
+    @keyframes cloud-swirl-b { 0% { transform: translate(35%, 10%) rotate(0deg) scale(1.1); } 25% { transform: translate(-15%, -6%) rotate(-80deg) scale(0.9); } 50% { transform: translate(-45%, 8%) rotate(-180deg) scale(1.2); } 75% { transform: translate(-5%, -12%) rotate(-270deg) scale(1); } 100% { transform: translate(35%, 10%) rotate(-360deg) scale(1.1); } }
+    .cloud-a { animation: cloud-swirl-a 14s ease-in-out infinite; }
+    .cloud-b { animation: cloud-swirl-b 18s ease-in-out infinite; }
+    .vz-pricing[data-ez-theme="dark"] .ai-home-grad .cloud-a, .vz-pricing[data-ez-theme="dark"] .ai-home-grad .cloud-b { display: none; }
+    @media (prefers-reduced-motion: reduce) { .cloud-a, .cloud-b { animation: none; } }
+    @keyframes v4Marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    .tp-marquee:hover { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) { .tp-marquee { animation: none !important; } }
+  </style>
+</helmet>
+<div class="vz-pricing" data-ez-theme="{{ theme }}" style="min-height: 100vh; display: flex; flex-direction: column; background: var(--ez-surface); color: var(--ez-color--grey-100); font-family: system-ui, 'Segoe UI', helvetica, arial, sans-serif">
+  <sc-if value="{{ isOpt1 }}" hint-placeholder-val="{{ true }}">
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 24px">
+    <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex"><img src="assets/img/logos/orange-logomark.svg" alt="Vecteezy" style="display: block; width: 40px; height: 40px"></a>
+  </header>
+  <main style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 24px 20px 80px">
+    <h1 style="margin: 0; max-width: 1100px; text-align: center; font-size: clamp(32px, 5vw, 56px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; text-wrap: balance">Join Pro to Unlock Everything</h1>
+    <p style="margin: 16px 0 0; max-width: 900px; text-align: center; font-size: 18px; line-height: 1.5; color: var(--ez-color--grey-70); text-wrap: pretty">75+ million photos, vectors and videos, plus AI tools to make them your own.</p>
+    <div role="tablist" aria-label="Billing period" style="display: flex; gap: 4px; margin-top: 40px; padding: 4px; border-radius: 9999px; background: var(--ez-color--grey-5)">
+      <button role="tab" aria-selected="{{ isYearly }}" onClick="{{ pickYearly }}" style="white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ yearlyBg }}; box-shadow: {{ yearlyShadow }}; color: {{ yearlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Yearly ({{ pct }} off)</button>
+      <button role="tab" aria-selected="{{ isMonthly }}" onClick="{{ pickMonthly }}" style="white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ monthlyBg }}; box-shadow: {{ monthlyShadow }}; color: {{ monthlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Monthly</button>
+    </div>
+    <section aria-label="Vecteezy Pro" style="width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 40px; padding: clamp(24px, 5vw, 44px); border: 2px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+          <span style="display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 9999px; background: var(--color-orange-10); color: var(--color-orange-100); font-size: 14px; font-weight: 600">On Sale Now</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+          <sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em; color: var(--ez-color--grey-40); text-decoration: line-through; text-decoration-thickness: 4px">{{ regMonthly }}</span></sc-if>
+          <span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em">{{ price }}</span>
+          <span style="display: flex; flex-direction: column; font-size: 16px; line-height: 1.3; font-weight: 600"><span>USD</span><span>per month</span></span>
+        </div>
+        <span style="display: flex; align-items: baseline; gap: 6px; font-size: 16px; font-weight: 600"><sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="color: var(--ez-color--grey-40); text-decoration: line-through">{{ yearReg }}</span>{{ billedNote }}</sc-if><sc-if value="{{ isMonthly }}" hint-placeholder-val="{{ false }}"><span><a href="#" onClick="{{ switchYearly }}">Switch to yearly</a> to get {{ pct }} off</span></sc-if></span>
+      </div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.4">
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Unlimited downloads of 75+ million creative assets</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>AI tools to generate, edit, restyle, upscale and more</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Pro Standard License for commercial use</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>Daily bundle downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path></svg>No attribution required</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>Faster downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>Priority support</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M4.929 4.929 19.07 19.071"></path></svg>No ads</li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease" style-hover="filter: brightness(1.06); color: #fff">Get Vecteezy Pro</a>
+        <div style="display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; font-size: 14px; color: var(--ez-color--grey-70)">
+          <span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Renews automatically</span>
+          <span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Cancel anytime</span>
+        </div>
+      </div>
+    </section>
+    <section aria-label="Vecteezy for Teams" style="width: 100%; max-width: 540px; box-sizing: border-box; margin-top: 24px; padding: 36px 28px; border-radius: 28px; background: var(--ez-color--grey-5); display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+      <div style="display: flex; margin-bottom: 8px">
+        <img src="https://i.pravatar.cc/120?img=12" alt="" style="width: 48px; height: 56px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 12px; transform: rotate(-8deg)">
+        <img src="https://i.pravatar.cc/120?img=47" alt="" style="width: 48px; height: 56px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 12px; margin-left: -10px; position: relative; z-index: 1">
+        <img src="https://i.pravatar.cc/120?img=33" alt="" style="width: 48px; height: 56px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 12px; margin-left: -10px; transform: rotate(8deg)">
+      </div>
+      <span style="font-size: 18px; font-weight: 700">Vecteezy Pro for Teams</span>
+      <span style="font-size: 16px; color: var(--ez-color--grey-70)">Save up to 15% with a plan for your whole team</span>
+      <a href="#" onClick="{{ noop }}" style="margin-top: 6px; font-size: 16px; font-weight: 600">Learn more</a>
+    </section>
+  </main>
+  </sc-if>
+  <sc-if value="{{ isOpt4 }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Pricing V4" style="position: relative; flex: 1; display: flex; flex-direction: column">
+  <div class="ai-home-grad" aria-hidden="true" style="position: absolute; top: 0; left: 0; right: 0; height: 260px; z-index: 0; background: linear-gradient(to bottom, transparent, var(--ez-surface)), linear-gradient(90deg, var(--ez-surface), rgba(255, 121, 0, .18) 30%, rgba(253, 49, 152, .16) 60%, rgba(96, 165, 250, .16) 85%, rgba(0, 212, 245, .18)); pointer-events: none; overflow: hidden">
+    <div class="cloud-a" style="position: absolute; left: 5%; top: -40%; width: 55%; height: 160%; background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(30px); will-change: transform"></div>
+    <div class="cloud-b" style="position: absolute; right: 0%; top: -30%; width: 60%; height: 150%; background: radial-gradient(ellipse 45% 38% at 50% 50%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 70%); filter: blur(36px); will-change: transform"></div>
+  </div>
+  <header style="position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px">
+    <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex"><img src="assets/img/logos/orange-logomark.svg" alt="Vecteezy" style="display: block; width: 40px; height: 40px"></a>
+  </header>
+  <main style="position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 28px 20px 80px">
+    <span style="font-size: 16px; font-weight: 700; letter-spacing: 0.6px; line-height: 1; text-transform: uppercase; color: var(--color-orange-100, #ff7900)">Your All-Access Pass</span>
+    <h1 style="margin: 12px 0 0; max-width: 1100px; text-align: center; font-size: clamp(36px, 5vw, 60px); line-height: 1.1; font-weight: 700; color: var(--ez-color--grey-100); text-wrap: balance">Join Pro <span style="font-family: 'EB Garamond', serif; font-style: italic; font-weight: 500; color: var(--ez-color--grey-70)">to</span> Unlock Everything</h1>
+    <p style="margin: 12px 0 0; max-width: 1050px; text-align: center; font-size: 18px; line-height: 1.6; color: var(--ez-color--grey-100); text-wrap: pretty">Access 75+ million vectors, photos, and videos, with industry leading AI tools to customize them your way.</p>
+    <div role="tablist" aria-label="Billing period" style="display: flex; gap: 4px; margin-top: 40px; padding: 4px; border-radius: 9999px; background: var(--ez-color--grey-5)">
+      <button role="tab" aria-selected="{{ isYearly }}" onClick="{{ pickYearly }}" style="white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ yearlyBg }}; box-shadow: {{ yearlyShadow }}; color: {{ yearlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Yearly ({{ pct }} off)</button>
+      <button role="tab" aria-selected="{{ isMonthly }}" onClick="{{ pickMonthly }}" style="white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ monthlyBg }}; box-shadow: {{ monthlyShadow }}; color: {{ monthlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Monthly</button>
+    </div>
+    <section aria-label="Vecteezy Pro" style="width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 40px; padding: clamp(24px, 5vw, 44px); border: 2px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px; overflow: hidden">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+          <span style="display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 9999px; background: var(--color-orange-10); color: var(--color-orange-100); font-size: 14px; font-weight: 600"><span>{{ pct }} OFF · ANNUAL PLAN</span></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+          <sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em; color: var(--ez-color--grey-40); text-decoration: line-through; text-decoration-thickness: 4px">{{ regMonthly }}</span></sc-if>
+          <span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em">{{ price }}</span>
+          <span style="display: flex; flex-direction: column; font-size: 16px; line-height: 1.3; font-weight: 600"><span>USD</span><span>per month</span></span>
+        </div>
+        <span style="display: flex; align-items: baseline; gap: 6px; font-size: 16px; font-weight: 600"><sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span>{{ yearTotal }} billed annually <span style="font-weight: 400; color: var(--ez-color--grey-60)">(regularly {{ yearReg }})</span></span></sc-if><sc-if value="{{ isMonthly }}" hint-placeholder-val="{{ false }}"><span><a href="#" onClick="{{ switchYearly }}">Switch to yearly</a> to get {{ pct }} off</span></sc-if></span>
+      </div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.4">
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-100)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Unlimited downloads of 75+ million creative assets</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-100)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Powerful AI tools to generate, edit, and transform</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-100)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 6 9 17l-5-5"></path></svg>Commercial licensing included. No attribution required.</li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease" style-hover="filter: brightness(1.06); color: #fff">Subscribe to Vecteezy Pro</a>
+        <div style="text-align: center; font-size: 14px; color: var(--ez-color--grey-70)">Cancel anytime. 30-day money back guarantee</div>
+      </div>
+    </section>
+    <a href="https://www.trustpilot.com/review/www.vecteezy.com" target="_blank" rel="noopener" aria-label="Rated 4.9 out of 5 from 33,572 reviews on Trustpilot" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 40px; color: var(--ez-color--grey-100); text-decoration: none" style-hover="color: var(--ez-color--grey-100)">
+      <span style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--ez-color--grey-100)">Rated Excellent on <img src="assets/trustpilot/logo.png" alt="Trustpilot" class="tp-logo" style="display: block; height: 20px; width: auto"></span>
+      <span style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center"><img src="assets/trustpilot/stars-5.png" alt="5 stars" style="display: block; height: 22px; width: auto"><span style="font-size: 14px; color: var(--ez-color--grey-70)">TrustScore <strong style="font-weight: 700; color: var(--ez-color--grey-100)">4.9</strong> | <strong style="font-weight: 700; color: var(--ez-color--grey-100); text-decoration: underline dotted; text-underline-offset: 3px">33,572 reviews</strong></span></span>
+    </a>
+    <section data-screen-label="Trustpilot marquee" aria-label="Recent 5-star Trustpilot reviews" style="width: 100vw; max-width: 1400px; margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 20px">
+      <div style="width: 100%; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 10%, #000 90%, transparent 100%)">
+        <div class="tp-marquee" style="display: flex; width: max-content; animation: v4Marquee 80s linear infinite">
+          <sc-for list="{{ v3Ticker }}" as="r" hint-placeholder-count="6">
+            <div style="flex: 0 0 300px; box-sizing: border-box; margin-right: 16px; display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10)">
+              <img src="assets/trustpilot/stars-5.png" alt="5 stars" style="display: block; height: 18px; width: auto; align-self: flex-start">
+              <p style="margin: 0; font-size: 14px; line-height: 1.5; color: var(--ez-color--grey-70); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden">“{{ r.text }}”</p>
+              <span style="margin-top: auto; font-size: 13px; color: var(--ez-color--grey-60)"><strong style="font-weight: 700; color: var(--ez-color--grey-100)">{{ r.name }}</strong> · {{ r.date }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+    <a href="#" onClick="{{ noop }}" aria-label="Vecteezy Pro for Teams" onMouseEnter="{{ teamsEnter }}" onMouseLeave="{{ teamsLeave }}" style="display: flex; align-items: center; gap: 14px; width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 40px; padding: 20px 24px; border: 1px solid var(--ez-color--grey-10); border-radius: 20px; background: {{ teamsBg3 }}; color: var(--ez-color--grey-100); text-decoration: none; transition: background .2s ease" style-hover="color: var(--ez-color--grey-100)">
+        <span style="display: flex; flex-shrink: 0">
+          <img src="https://i.pravatar.cc/120?img=12" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; transform: {{ teamsL }}; transition: transform .25s ease">
+          <img src="https://i.pravatar.cc/120?img=47" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; margin-left: -14px; position: relative; z-index: 1; transform: {{ teamsM }}; transition: transform .25s ease">
+          <img src="https://i.pravatar.cc/120?img=33" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; margin-left: -14px; transform: {{ teamsR }}; transition: transform .25s ease">
+        </span>
+        <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; text-align: left">
+          <span style="font-size: 15px; font-weight: 700">Buying for a team?</span>
+          <span style="font-size: 14px; color: var(--ez-color--grey-70)">Save up to 15% with Vecteezy Pro for Teams</span>
+        </span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--ez-color--grey-60)"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+  </main>
+  </div>
+  </sc-if>
+  <sc-if value="{{ isOpt2 }}" hint-placeholder-val="{{ false }}">
+  <header data-screen-label="Pricing V2 top nav" style="display: flex; align-items: center; justify-content: space-between; height: 66px; padding: 0 24px; border-bottom: 1px solid var(--ez-color--grey-10); background: var(--ez-surface)">
+    <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex"><img src="assets/img/logos/rebrand/orange-horizontal-lockup.svg" alt="Vecteezy" style="display: block; height: 32px"></a>
+    <a href="Settings.dc.html" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 6px 0 14px; box-sizing: border-box; border: 1px solid var(--ez-color--grey-10); border-radius: 12px; color: var(--ez-color--grey-100); font-size: 14px; font-weight: 600" style-hover="border-color: var(--ez-color--grey-20); color: var(--ez-color--grey-100)">My Account<img src="https://i.pravatar.cc/96?img=15" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover"></a>
+  </header>
+  <main data-screen-label="Pricing V2" style="flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; padding: 0 20px 80px; background: var(--ez-color--grey-3)">
+    <div aria-hidden="true" style="position: absolute; top: 0; left: 0; right: 0; height: 480px; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%)"></div>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 40px; color: #fff; text-align: center">
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center">
+        <img src="https://static.vecteezy.com/vite/assets/avatars-BzsINJkb.png" alt="Trustpilot reviewers" style="display: block; height: 52px; width: auto">
+        <span style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px">
+          <span style="display: flex; align-items: center; gap: 2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg><strong style="margin-left: 8px; font-size: 22px; font-weight: 700">4.9</strong></span>
+          <span style="font-size: 12px; font-weight: 500">from 33,572 reviews on Trustpilot</span>
+        </span>
+      </div>
+      <h1 style="margin: 20px 0 0; max-width: 1100px; font-size: clamp(32px, 4.6vw, 54px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; text-wrap: balance">Join Pro to Unlock Everything</h1>
+      <p style="margin: 16px 0 0; max-width: 920px; font-size: 16px; line-height: 1.5; font-weight: 500; text-wrap: balance">Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 customers around the world. It empowers brands, creators and storytellers with creative assets that save up to 76% on time and budget.</p>
+      <div role="tablist" aria-label="Billing period" style="display: flex; gap: 4px; margin-top: 28px; padding: 4px; border-radius: 9999px; background: rgba(255, 255, 255, .22)">
+        <button role="tab" aria-selected="{{ isYearly }}" onClick="{{ pickYearly }}" style="white-space: nowrap; height: 40px; padding: 0 20px; border: none; border-radius: 9999px; background: {{ v2YearlyBg }}; color: {{ v2YearlyFg }}; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Yearly ({{ pct }} off)</button>
+        <button role="tab" aria-selected="{{ isMonthly }}" onClick="{{ pickMonthly }}" style="white-space: nowrap; height: 40px; padding: 0 20px; border: none; border-radius: 9999px; background: {{ v2MonthlyBg }}; color: {{ v2MonthlyFg }}; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Monthly</button>
+      </div>
+    </div>
+    <section aria-label="Vecteezy Pro" style="position: relative; width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 36px; box-shadow: 0 8px 30px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: none; border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+          <span style="display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 9999px; background: var(--color-orange-10); color: var(--color-orange-100); font-size: 14px; font-weight: 600">On Sale Now</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+          <sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em; color: var(--ez-color--grey-40); text-decoration: line-through; text-decoration-thickness: 4px">{{ regMonthly }}</span></sc-if>
+          <span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em">{{ price }}</span>
+          <span style="display: flex; flex-direction: column; font-size: 16px; line-height: 1.3; font-weight: 600"><span>USD</span><span>per month</span></span>
+        </div>
+        <span style="display: flex; align-items: baseline; gap: 6px; font-size: 16px; font-weight: 600"><sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="color: var(--ez-color--grey-40); text-decoration: line-through">{{ yearReg }}</span>{{ billedNote }}</sc-if><sc-if value="{{ isMonthly }}" hint-placeholder-val="{{ false }}"><span><a href="#" onClick="{{ switchYearly }}">Switch to yearly</a> to get {{ pct }} off</span></sc-if></span>
+      </div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.4">
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Unlimited downloads of 75+ million creative assets</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>AI tools to generate, edit, restyle, upscale and more</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Pro Standard License for commercial use</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>Daily bundle downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path></svg>No attribution required</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>Faster downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>Priority support</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M4.929 4.929 19.07 19.071"></path></svg>No ads</li>
+      </ul>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease" style-hover="filter: brightness(1.06); color: #fff">Get Vecteezy Pro</a>
+        <div style="display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; font-size: 14px; color: var(--ez-color--grey-70)">
+          <span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Renews automatically</span>
+          <span style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Cancel anytime</span>
+        </div>
+      </div>
+    </section>
+    <section aria-label="Vecteezy for Teams" onMouseEnter="{{ teamsEnter }}" onMouseLeave="{{ teamsLeave }}" style="position: relative; width: 100%; max-width: 560px; cursor: pointer; transition: background .2s ease, box-shadow .2s ease; box-sizing: border-box; margin-top: 24px; padding: 32px 28px; border-radius: 28px; background: {{ teamsBg }}; box-shadow: {{ teamsShadow }}; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+      <div style="display: flex; margin-bottom: 8px">
+        <img src="https://i.pravatar.cc/120?img=12" alt="" style="width: 52px; height: 52px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 50%; transform: {{ teamsL }}; transition: transform .25s ease">
+        <img src="https://i.pravatar.cc/120?img=47" alt="" style="width: 52px; height: 52px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 50%; margin-left: -26px; position: relative; z-index: 1; top: -4px; transform: {{ teamsM }}; transition: transform .25s ease">
+        <img src="https://i.pravatar.cc/120?img=33" alt="" style="width: 52px; height: 52px; object-fit: cover; border: 3px solid var(--ez-surface); border-radius: 50%; margin-left: -26px; transform: {{ teamsR }}; transition: transform .25s ease">
+      </div>
+      <span style="font-size: 18px; font-weight: 700">Vecteezy Pro for Teams</span>
+      <span style="font-size: 16px; color: var(--ez-color--grey-70)">Save up to 15% with a plan for your whole team</span>
+      <a href="#" onClick="{{ noop }}" style="margin-top: 6px; font-size: 16px; font-weight: 600">Learn more</a>
+    </section>
+    <section data-screen-label="Customer reviews" aria-label="Customer reviews" style="position: relative; width: 100%; max-width: 1120px; margin-top: 88px; display: flex; flex-direction: column; gap: 28px">
+      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; font-weight: 700; letter-spacing: -.01em; color: var(--ez-color--grey-100); text-wrap: balance">Confidence backed by real customer reviews</h2>
+      <div ref="{{ revRef }}" class="no-scrollbar" style="display: flex; gap: 16px; justify-content: safe center; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 4px 2px 12px">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="4">
+          <article style="flex: 0 0 300px; box-sizing: border-box; scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 16px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05)">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px">
+              <span aria-label="5 out of 5 stars" style="display: flex; gap: 2px"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #00b67a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #00b67a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #00b67a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #00b67a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: #00b67a"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span></span>
+              <span style="font-size: 13px; color: var(--ez-color--grey-60)">{{ r.date }}</span>
+            </div>
+            <p style="margin: 0; flex: 1; font-size: 15px; line-height: 1.55; color: var(--ez-color--grey-100); text-wrap: pretty">{{ r.text }}</p>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--ez-color--grey-100)"><img src="https://static.vecteezy.com/vite/assets/truspilot-logo-dark-C9H0ZeA8.png" alt="Trustpilot" style="display: block; height: 18px; width: auto">{{ r.name }}</div>
+          </article>
+        </sc-for>
+      </div>
+      
+      <div style="display: flex; justify-content: center; gap: 8px; margin-top: -12px"><button aria-label="Previous reviews" onClick="{{ revPrev }}" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; box-sizing: border-box; border: 1px solid var(--ez-color--grey-10); border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer; transition: background .15s ease" style-hover="background: var(--ez-color--grey-5)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button><button aria-label="Next reviews" onClick="{{ revNext }}" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; box-sizing: border-box; border: 1px solid var(--ez-color--grey-10); border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer; transition: background .15s ease" style-hover="background: var(--ez-color--grey-5)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div>
+      <p style="margin: 0; text-align: center; font-size: 15px; color: var(--ez-color--grey-70)">See more reviews at <a href="https://www.trustpilot.com/review/www.vecteezy.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline dotted; text-underline-offset: 3px" style-hover="color: var(--ez-color--grey-100)">Trustpilot</a></p>
+    </section>
+    <section data-screen-label="FAQ" aria-label="Frequently Asked Questions" style="width: 100%; max-width: 760px; margin-top: 88px; display: flex; flex-direction: column; gap: 28px">
+      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; font-weight: 700; letter-spacing: -.01em; color: var(--ez-color--grey-100)">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="11">
+          <div style="border-radius: 20px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05); overflow: hidden">
+            <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 20px 24px; border: none; background: transparent; font-family: inherit; font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ez-color--grey-100); text-align: left; cursor: pointer">
+              <span>{{ f.q }}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--ez-color--grey-60); transform: {{ f.rot }}; transition: transform .2s ease"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-direction: column; gap: 12px; padding: 0 24px 22px; font-size: 15px; line-height: 1.6; color: var(--ez-color--grey-70)">
+                <sc-for list="{{ f.before }}" as="p" hint-placeholder-count="1"><p style="margin: 0; text-wrap: pretty">{{ p }}</p></sc-for>
+                <sc-if value="{{ f.hasList }}" hint-placeholder-val="{{ false }}"><ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px"><sc-for list="{{ f.list }}" as="li" hint-placeholder-count="3"><li>{{ li }}</li></sc-for></ul></sc-if>
+                <sc-for list="{{ f.after }}" as="p" hint-placeholder-count="0"><p style="margin: 0; text-wrap: pretty">{{ p }}</p></sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 0; text-align: center; font-size: 15px; color: var(--ez-color--grey-70)">Have more questions? <a href="https://www.vecteezy.com/contact" target="_blank" rel="noopener" style="font-weight: 600">Contact us</a></p>
+    </section>
+    <section data-screen-label="Bottom CTA" aria-label="Join Pro" style="position: relative; width: 100%; max-width: 1120px; box-sizing: border-box; margin-top: 88px; padding: clamp(40px, 6vw, 72px) 24px; border-radius: 28px; overflow: hidden; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%); color: #fff; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.2vw, 48px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; text-wrap: balance">Ready to get started? Join Pro</h2>
+      <p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.5; font-weight: 500; text-wrap: pretty">Unlimited downloads, AI tools and full commercial rights for one simple price. Cancel anytime.</p>
+      <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease" style-hover="transform: translateY(-1px); color: #0e2332">Get Vecteezy Pro</a>
+    </section>
+  </main>
+  </sc-if>
+<sc-if value="{{ isOpt3 }}" hint-placeholder-val="{{ false }}">
+  <header data-screen-label="Pricing V3 top nav" style="display: flex; align-items: center; justify-content: space-between; height: 66px; padding: 0 24px; border-bottom: 1px solid var(--ez-color--grey-10); background: var(--ez-surface)">
+    <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex"><img src="assets/img/logos/rebrand/orange-horizontal-lockup.svg" alt="Vecteezy" style="display: block; height: 32px"></a>
+    <a href="Settings.dc.html" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 6px 0 14px; box-sizing: border-box; border: 1px solid var(--ez-color--grey-10); border-radius: 12px; color: var(--ez-color--grey-100); font-size: 14px; font-weight: 600" style-hover="border-color: var(--ez-color--grey-20); color: var(--ez-color--grey-100)">My Account<img src="https://i.pravatar.cc/96?img=15" alt="" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover"></a>
+  </header>
+  <main data-screen-label="Pricing V3" style="flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; padding: 0 20px 80px; background: var(--ez-surface)">
+        <div data-screen-label="Pricing V3 hero" style="position: relative; width: 100%; max-width: 1120px; box-sizing: border-box; padding-top: clamp(40px, 6vw, 80px); display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: clamp(32px, 5vw, 72px)">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; color: var(--ez-color--grey-100); text-align: left">
+      <h1 style="margin: 0; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; text-wrap: balance">Join Pro to Unlock Everything</h1>
+      <p style="margin: 18px 0 0; max-width: 520px; font-size: 17px; line-height: 1.55; font-weight: 400; color: var(--ez-color--grey-70); text-wrap: pretty">Vecteezy is the world's #1 stock photo marketplace, trusted by over 90,000 customers around the world. It empowers brands, creators and storytellers with creative assets that save up to 76% on time and budget.</p>
+      <a href="https://www.trustpilot.com/review/www.vecteezy.com" target="_blank" rel="noopener" aria-label="Rated 4.9 out of 5 from 33,572 reviews on Trustpilot" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 28px; color: var(--ez-color--grey-100); text-decoration: none" style-hover="color: var(--ez-color--grey-100)">
+        <span style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+          <img src="assets/trustpilot/logo.png" alt="Trustpilot" class="tp-logo" style="display: block; height: 28px; width: auto">
+          <img src="assets/trustpilot/stars-5.png" alt="5 stars" style="display: block; height: 26px; width: auto">
+        </span>
+        <span style="font-size: 14px; color: var(--ez-color--grey-70)">TrustScore <strong style="font-weight: 700; color: var(--ez-color--grey-100)">4.9</strong> | <strong style="font-weight: 700; color: var(--ez-color--grey-100); text-decoration: underline dotted; text-underline-offset: 3px">33,572 reviews</strong></span>
+      </a>
+      <div data-screen-label="Trustpilot ticker" aria-label="Recent Trustpilot reviews" style="position: relative; width: 100%; max-width: 520px; height: 340px; margin-top: 24px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 82%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 82%, transparent 100%)">
+        <div style="display: flex; flex-direction: column; animation: v3Ticker 60s linear infinite">
+          <sc-for list="{{ v3Ticker }}" as="r" hint-placeholder-count="4">
+            <div style="display: flex; flex-direction: column; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--ez-color--grey-10)">
+              <span style="display: flex; align-items: center; gap: 8px"><span style="display: flex; gap: 2px"><span style="display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; background: #00b67a"><svg width="10" height="10" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; background: #00b67a"><svg width="10" height="10" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; background: #00b67a"><svg width="10" height="10" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; background: #00b67a"><svg width="10" height="10" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span><span style="display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; background: #00b67a"><svg width="10" height="10" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.5l7.1-.6z"></path></svg></span></span><span style="font-size: 12px; color: var(--ez-color--grey-60)">{{ r.name }} · {{ r.date }}</span></span>
+              <span style="font-size: 14px; line-height: 1.5; color: var(--ez-color--grey-70); text-wrap: pretty">“{{ r.text }}”</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+      <section aria-label="Vecteezy Pro" style="position: relative; flex: 1 1 440px; min-width: 0; max-width: 520px; box-sizing: border-box; box-shadow: 0 12px 40px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: 1px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+          <div role="tablist" aria-label="Billing period" style="display: flex; gap: 2px; padding: 3px; border-radius: 9999px; background: var(--ez-color--grey-5); border: 1px solid var(--ez-color--grey-10)">
+        <button role="tab" aria-selected="{{ isYearly }}" onClick="{{ pickYearly }}" style="white-space: nowrap; height: 30px; padding: 0 12px; border: none; border-radius: 9999px; background: {{ v3YearlyBg }}; box-shadow: {{ v3YearlyShadow }}; color: {{ v3YearlyFg }}; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Yearly ({{ pct }} off)</button>
+        <button role="tab" aria-selected="{{ isMonthly }}" onClick="{{ pickMonthly }}" style="white-space: nowrap; height: 30px; padding: 0 12px; border: none; border-radius: 9999px; background: {{ v3MonthlyBg }}; box-shadow: {{ v3MonthlyShadow }}; color: {{ v3MonthlyFg }}; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer">Monthly</button>
+      </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap">
+          <sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em; color: var(--ez-color--grey-40); text-decoration: line-through; text-decoration-thickness: 4px">{{ regMonthly }}</span></sc-if>
+          <span style="font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -.02em">{{ price }}</span>
+          <span style="display: flex; flex-direction: column; font-size: 16px; line-height: 1.3; font-weight: 600"><span>USD</span><span>per month</span></span>
+        </div>
+        <span style="display: flex; align-items: baseline; gap: 6px; font-size: 16px; font-weight: 600"><sc-if value="{{ isYearly }}" hint-placeholder-val="{{ true }}"><span style="color: var(--ez-color--grey-40); text-decoration: line-through">{{ yearReg }}</span>{{ billedNote }}</sc-if><sc-if value="{{ isMonthly }}" hint-placeholder-val="{{ false }}"><span><a href="#" onClick="{{ switchYearly }}">Switch to yearly</a> to get {{ pct }} off</span></sc-if></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198); color: #fff; font-size: 17px; font-weight: 700; transition: filter .15s ease" style-hover="filter: brightness(1.06); color: #fff">Get Vecteezy Pro</a>
+      </div>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.4">
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Unlimited downloads of 75+ million creative assets</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>AI tools to generate, edit, restyle, upscale and more</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Pro Standard License for commercial use</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg>Daily bundle downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path></svg>No attribution required</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>Faster downloads</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"></path><path d="M21 16v2a4 4 0 0 1-4 4h-5"></path></svg>Priority support</li>
+        <li style="display: flex; align-items: center; gap: 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-60)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M4.929 4.929 19.07 19.071"></path></svg>No ads</li>
+      </ul>
+    <a href="#" onClick="{{ noop }}" aria-label="Vecteezy Pro for Teams" onMouseEnter="{{ teamsEnter }}" onMouseLeave="{{ teamsLeave }}" style="display: flex; align-items: center; gap: 14px; margin: 0 calc(-1 * clamp(24px, 5vw, 44px)) calc(-1 * clamp(24px, 5vw, 44px)); padding: 18px clamp(24px, 5vw, 44px); border-top: 1px solid var(--ez-color--grey-10); border-radius: 0 0 28px 28px; background: {{ teamsBg3 }}; color: var(--ez-color--grey-100); text-decoration: none; transition: background .2s ease" style-hover="color: var(--ez-color--grey-100)">
+        <span style="display: flex; flex-shrink: 0">
+          <img src="https://i.pravatar.cc/120?img=12" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; transform: {{ teamsL }}; transition: transform .25s ease">
+          <img src="https://i.pravatar.cc/120?img=47" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; margin-left: -14px; position: relative; z-index: 1; transform: {{ teamsM }}; transition: transform .25s ease">
+          <img src="https://i.pravatar.cc/120?img=33" alt="" style="width: 36px; height: 36px; object-fit: cover; border: 2px solid var(--ez-surface); border-radius: 50%; margin-left: -14px; transform: {{ teamsR }}; transition: transform .25s ease">
+        </span>
+        <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; text-align: left">
+          <span style="font-size: 15px; font-weight: 700">Buying for a team?</span>
+          <span style="font-size: 14px; color: var(--ez-color--grey-70)">Save up to 15% with Vecteezy Pro for Teams</span>
+        </span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--ez-color--grey-60)"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </section>
+    </div>
+    <section data-screen-label="Why Vecteezy Pro" aria-label="Why go Vecteezy Pro" style="width: 100%; max-width: 1120px; margin-top: 112px; display: flex; flex-direction: column; gap: 40px">
+      <h2 style="margin: 0; text-align: center; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; color: var(--ez-color--grey-100)">Why go Vecteezy Pro</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+          <div data-screen-label="Why card unlimited" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 440px"><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">Unlimited royalty-free downloads. <span style="color: #8f8f8f">Use 75+ million photos, vectors and videos as often as you like.</span></p>
+          <div style="position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; height: 230px; align-items: end">
+            <div style="display: flex; flex-direction: column; gap: 10px"><img src="https://static.vecteezy.com/system/resources/thumbnails/028/710/295/small/sea-turtle-close-up-over-coral-reef-in-sabah-conservation-and-marine-life-concept-nature-at-it-s-best-photo.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 110px"><img src="https://static.vecteezy.com/system/resources/thumbnails/026/164/752/small/blooming-flower-in-nature-free-photo.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 110px"></div>
+            <div style="display: flex; flex-direction: column; gap: 10px"><img src="uploads/small-vecteezy_portrait-of-woman-coding-and-cybersecurity-hologram-screen_75972280_small.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 170px"><img src="https://static.vecteezy.com/system/resources/thumbnails/014/280/718/small/palm-tree-on-the-tropical-beach-with-a-beautiful-sea-view-on-blue-sky-nature-background-free-photo.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 50px"></div>
+            <div style="display: flex; flex-direction: column; gap: 10px"><img src="https://static.vecteezy.com/system/resources/thumbnails/012/574/024/small/nature-landscape-view-of-devils-bridge-in-sedona-arizona-at-sunset-photo.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 120px"><img src="https://static.vecteezy.com/system/resources/thumbnails/016/654/318/small/young-wild-roe-deer-in-grass-capreolus-capreolus-new-born-roe-deer-wild-spring-nature-photo.jpg" alt="" style="display: block; object-fit: cover; width: 100%; height: 100px"></div>
+          </div></div>
+          <div data-screen-label="Why card license" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 440px"><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">Pro Standard License. <span style="color: #8f8f8f">Use everything commercially with no attribution, backed by $10,000 in legal protection.</span></p>
+          <div style="position: absolute; right: 32px; bottom: 32px; left: 32px; display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 16px; background: #1f1f1f; border: 1px solid #2c2c2c">
+            <span style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(135deg, #ff7900, #fd3198)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+            <span style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><strong style="font-size: 15px; font-weight: 700">$10,000 legal protection</strong><span style="font-size: 13px; color: #8f8f8f">Included with every Pro download</span></span>
+          </div></div>
+        </div>
+        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+          <div data-screen-label="Why card bundles" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 320px"><span style="position: absolute; top: 0; left: 32px; z-index: 2; display: flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 0 0 10px 10px; background: linear-gradient(135deg, #ff7900, #fd3198); color: #fff; font-size: 13px; font-weight: 700">New</span><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">Daily bundle downloads. <span style="color: #8f8f8f">Grab curated packs of fonts, mockups and graphics in one click.</span></p>
+          <div style="position: absolute; right: 40px; bottom: 34px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; width: 76px; height: 96px; padding-bottom: 12px; box-sizing: border-box; border-radius: 6px 22px 6px 6px; background: #f5f5f5; color: #555; font-size: 12px; font-weight: 600; letter-spacing: .04em; box-shadow: 0 10px 30px rgba(0, 0, 0, .4)">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12v-1"></path><path d="M10 18v-2"></path><path d="M10 7V6"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 .274 1.01"></path><circle cx="10" cy="20" r="2"></circle></svg>ZIP
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" stroke="#141414" stroke-width="1.5" stroke-linejoin="round" style="position: absolute; right: -14px; bottom: -10px"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"></path></svg>
+          </div></div>
+          <div data-screen-label="Why card AI" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 560px"><span style="position: absolute; top: 0; left: 32px; z-index: 2; display: flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 0 0 10px 10px; background: linear-gradient(135deg, #ff7900, #fd3198); color: #fff; font-size: 13px; font-weight: 700">New</span><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">Edit with AI. <span style="color: #8f8f8f">Generate, restyle, upscale, crop or remove backgrounds in seconds.</span></p>
+          <div style="position: absolute; left: 32px; right: 32px; bottom: 36px; height: 300px">
+            <div style="position: absolute; inset: 0; background-color: #2a2a2a; background-image: linear-gradient(45deg, #3a3a3a 25%, transparent 25%), linear-gradient(-45deg, #3a3a3a 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #3a3a3a 75%), linear-gradient(-45deg, transparent 75%, #3a3a3a 75%); background-size: 22px 22px; background-position: 0 0, 0 11px, 11px -11px, -11px 0"></div>
+            <img src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; clip-path: inset(0 50% 0 0)">
+            <span style="position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; margin-left: -1px; background: #fff"></span>
+            <span style="position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin: -16px 0 0 -16px; border-radius: 50%; background: #fff; color: #141414; box-shadow: 0 4px 14px rgba(0, 0, 0, .35)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6"></path><path d="m15 6 6 6-6 6"></path></svg></span>
+            <span style="position: absolute; top: -6px; left: -6px; width: 26px; height: 26px; border-top: 3px solid #fff; border-left: 3px solid #fff"></span><span style="position: absolute; top: -6px; right: -6px; width: 26px; height: 26px; border-top: 3px solid #fff; border-right: 3px solid #fff"></span><span style="position: absolute; bottom: -6px; left: -6px; width: 26px; height: 26px; border-bottom: 3px solid #fff; border-left: 3px solid #fff"></span><span style="position: absolute; bottom: -6px; right: -6px; width: 26px; height: 26px; border-bottom: 3px solid #fff; border-right: 3px solid #fff"></span>
+            <span style="position: absolute; top: 14px; right: 14px; display: flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 9999px; background: rgba(20, 20, 20, .72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font-size: 13px; font-weight: 600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>Remove background</span>
+          </div></div>
+        </div>
+        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+          <div data-screen-label="Why card vectors" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 440px"><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">Editable vectors and SVGs <span style="color: #8f8f8f">that scale to any size and make your projects stand out.</span></p>
+          <img src="assets/img/login-vector-wall.jpg" alt="" style="position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 240px; object-fit: cover"></div>
+          <div data-screen-label="Why card fresh" style="position: relative; box-sizing: border-box; overflow: hidden; border-radius: 28px; background: #141414; color: #fff; height: 440px"><p style="position: relative; z-index: 1; margin: 0; padding: 32px 32px 0; font-size: 20px; line-height: 1.4; font-weight: 700; letter-spacing: -.005em; color: #fff; text-wrap: pretty">New visuals added every day. <span style="color: #8f8f8f">83,405 assets were added yesterday alone.</span></p>
+          <div style="position: absolute; left: 50%; bottom: -20px; width: 300px; height: 230px; margin-left: -150px">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/007/924/989/small/colorful-mountain-scenes-in-norway-beautiful-landscape-of-norway-scandinavia-norway-mountain-landscape-nature-in-summer-photo.jpg" alt="" style="display: block; object-fit: cover; position: absolute; right: 0; bottom: 40px; width: 110px; height: 150px; border-radius: 10px; transform: rotate(8deg)">
+            <img src="uploads/small-vecteezy_woman-is-laying-on-couch-with-her-dog_78689756_small.jpg" alt="" style="display: block; object-fit: cover; position: absolute; left: 70px; bottom: 30px; width: 150px; height: 200px; border-radius: 10px; z-index: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, .45)">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/027/788/240/small/beautiful-romantic-alley-in-a-park-with-colorful-trees-and-sunlight-autumn-natural-background-ai-generative-photo.jpg" alt="" style="display: block; object-fit: cover; position: absolute; left: 0; bottom: 20px; width: 120px; height: 140px; border-radius: 10px; z-index: 2; transform: rotate(-7deg); box-shadow: 0 10px 30px rgba(0, 0, 0, .45)">
+          </div></div>
+        </div>
+      </div>
+    </section>
+    <section data-screen-label="FAQ" aria-label="Frequently Asked Questions" style="width: 100%; max-width: 760px; margin-top: 104px; display: flex; flex-direction: column; gap: 28px">
+      <h2 style="margin: 0; text-align: center; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; font-weight: 700; letter-spacing: -.01em; color: var(--ez-color--grey-100)">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="11">
+          <div style="border-radius: 20px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05); overflow: hidden">
+            <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 20px 24px; border: none; background: transparent; font-family: inherit; font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ez-color--grey-100); text-align: left; cursor: pointer">
+              <span>{{ f.q }}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--ez-color--grey-60); transform: {{ f.rot }}; transition: transform .2s ease"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-direction: column; gap: 12px; padding: 0 24px 22px; font-size: 15px; line-height: 1.6; color: var(--ez-color--grey-70)">
+                <sc-for list="{{ f.before }}" as="p" hint-placeholder-count="1"><p style="margin: 0; text-wrap: pretty">{{ p }}</p></sc-for>
+                <sc-if value="{{ f.hasList }}" hint-placeholder-val="{{ false }}"><ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px"><sc-for list="{{ f.list }}" as="li" hint-placeholder-count="3"><li>{{ li }}</li></sc-for></ul></sc-if>
+                <sc-for list="{{ f.after }}" as="p" hint-placeholder-count="0"><p style="margin: 0; text-wrap: pretty">{{ p }}</p></sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 0; text-align: center; font-size: 15px; color: var(--ez-color--grey-70)">Have more questions? <a href="https://www.vecteezy.com/contact" target="_blank" rel="noopener" style="font-weight: 600">Contact us</a></p>
+    </section>
+    <section data-screen-label="Bottom CTA" aria-label="Join Pro" style="position: relative; width: 100%; max-width: 1120px; box-sizing: border-box; margin-top: 88px; padding: clamp(40px, 6vw, 72px) 24px; border-radius: 28px; overflow: hidden; background: linear-gradient(90deg, #ff7900 0%, #fe4d5d 40%, #fd3198 72%, #f312e3 100%); color: #fff; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.2vw, 48px); line-height: 1.1; font-weight: 700; letter-spacing: -.02em; text-wrap: balance">Ready to get started? Join Pro</h2>
+      <p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.5; font-weight: 500; text-wrap: pretty">Unlimited downloads, AI tools and full commercial rights for one simple price. Cancel anytime.</p>
+      <a href="{{ checkoutHref }}" style="display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease" style-hover="transform: translateY(-1px); color: #0e2332">Get Vecteezy Pro</a>
+    </section>
+  </main>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pricing&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;$25 / $15&quot;,&quot;$24 / $12&quot;],&quot;default&quot;:&quot;$25 / $15&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;,&quot;Option 4&quot;],&quot;default&quot;:&quot;Option 4&quot;,&quot;tsType&quot;:&quot;'Option 1' | 'Option 2' | 'Option 3' | 'Option 4'&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Light&quot;,&quot;Dark&quot;],&quot;default&quot;:&quot;Light&quot;,&quot;tsType&quot;:&quot;'Light' | 'Dark'&quot;},&quot;defaultBilling&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Yearly&quot;,&quot;Monthly&quot;],&quot;default&quot;:&quot;Yearly&quot;,&quot;tsType&quot;:&quot;'Yearly' | 'Monthly'&quot;}}">
+class Component extends DCLogic {
+  state = { billing: null };
+  renderVals() {
+    const billing = this.state.billing || this.props.defaultBilling || 'Yearly';
+    const y = billing === 'Yearly';
+    const on = { bg: 'var(--ez-surface)', sh: '0 1px 4px rgba(14, 35, 50, .12)', fg: 'var(--ez-color--grey-100)' };
+    const off = { bg: 'transparent', sh: 'none', fg: 'var(--ez-color--grey-60)' };
+    const Y = y ? on : off, M = y ? off : on;
+    const vals = {
+      theme: (this.props.theme || 'Light') === 'Dark' ? 'dark' : 'light',
+      isYearly: y, isMonthly: !y,
+      yearlyBg: Y.bg, yearlyShadow: Y.sh, yearlyFg: Y.fg,
+      monthlyBg: M.bg, monthlyShadow: M.sh, monthlyFg: M.fg,
+      pickYearly: () => this.setState({ billing: 'Yearly' }),
+      pickMonthly: () => this.setState({ billing: 'Monthly' }),
+      switchYearly: (e) => { e.preventDefault(); this.setState({ billing: 'Yearly' }); },
+      ...(() => { const alt = (this.props.pricing || '$25 / $15') === '$24 / $12'; const P = alt ? { m: 24, y: 12 } : { m: 25, y: 15 }; return { regMonthly: '$' + P.m, yearReg: '$' + (P.m * 12), yearTotal: '$' + (P.y * 12), pct: Math.round((1 - P.y / P.m) * 100) + '%', price: y ? '$' + P.y : '$' + P.m, billedNote: y ? '$' + (P.y * 12) + ' billed yearly' : 'Billed monthly', checkoutHref: 'Checkout.dc.html?plan=' + (y ? 'yearly' : 'monthly') + (alt ? '&pricing=24' : '') }; })(),
+      isOpt1: (this.props.layout || 'Option 4') === 'Option 1', isOpt2: (this.props.layout || 'Option 4') === 'Option 2',
+      isOpt4: (this.props.layout || 'Option 4') === 'Option 4',
+      isOpt3: (this.props.layout || 'Option 4') === 'Option 3',
+      v3YearlyBg: y ? 'var(--ez-surface)' : 'transparent', v3YearlyFg: y ? 'var(--ez-color--grey-100)' : 'var(--ez-color--grey-60)',
+      v3MonthlyBg: y ? 'transparent' : 'var(--ez-surface)', v3MonthlyFg: y ? 'var(--ez-color--grey-60)' : 'var(--ez-color--grey-100)',
+      v3TabShadow: '0 1px 4px rgba(14, 35, 50, .12)', v3YearlyShadow: y ? '0 1px 4px rgba(14, 35, 50, .12)' : 'none', v3MonthlyShadow: y ? 'none' : '0 1px 4px rgba(14, 35, 50, .12)',
+      teamsBg3: this.state.teamsHover ? 'var(--ez-color--grey-5)' : 'transparent',
+      v2YearlyBg: y ? '#fff' : 'transparent', v2YearlyFg: y ? '#0e2332' : '#fff',
+      v2MonthlyBg: y ? 'transparent' : '#fff', v2MonthlyFg: y ? '#fff' : '#0e2332',
+      v2Price: y ? '$15' : '$25', v2PriceNote: y ? 'per month · $180 billed yearly' : 'per month billed monthly',
+      v2Perks: ['Unlimited downloads', 'Full library access', 'Professional design tools', 'Premium AI features', 'One bundle per month', 'No attribution required', 'Faster downloads', 'Priority support', 'No ads'].map(t => ({ t })),
+      teamsEnter: () => this.setState({ teamsHover: true }), teamsLeave: () => this.setState({ teamsHover: false }),
+      teamsBg: this.state.teamsHover ? 'var(--ez-surface)' : 'var(--ez-color--grey-5)',
+      teamsShadow: this.state.teamsHover ? '0 4px 14px rgba(14, 35, 50, .06)' : 'none',
+      teamsL: this.state.teamsHover ? 'translateX(-10px) rotate(-14deg)' : 'rotate(-8deg)',
+      teamsM: this.state.teamsHover ? 'translateY(-4px)' : 'none',
+      teamsR: this.state.teamsHover ? 'translateX(10px) rotate(14deg)' : 'rotate(8deg)',
+      reviews: [{"date":"16 hours ago","text":"I can always find the right images that I need. This site has the largest amount of images available.","name":"Michelle Reynolds"},{"date":"3 days ago","text":"Have now found a useful tool to my hobby. Wonderful pictures of any kind. Love it.","name":"Karina Krogh"},{"date":"4 days ago","text":"Very high quality videos that fit the vision of my project perfectly. Lyric videos and background displays are coming together nicely","name":"B CRAT\\/"},{"date":"6 days ago","text":"This is awesome! I am using the site to download caution and warning signs for a DIY project for my son and it was extremely easy to download the ones that I needed.","name":"Courtney Adriance"},{"date":"Oct 24","text":"I immediately needed a picture of a crowd cheering. It was for a private email for a friend. Searching on Google for a few minutes returned many images -- but they didn't fit my situation. After several more search terms, Google showed me a Vecteezy image. It was perfect. Thank you!","name":"JT Nous"},{"date":"Oct 15","text":"Very nice and perfect video clips for my halloween party decoration. very easy to search and download. Perfect quality. 5 stars","name":"J Castro"},{"date":"Oct 13","text":"Vectors of super quality for free for us amateurs. And the Pro options are not that expensive!","name":"Lasse Eriksson"},{"date":"Oct 13","text":"I am getting lots of beautiful high definition pictures for different subjects and topics.... Thank You Vecteezy","name":"Abdul Khalil Shaikh"}],
+      revRef: this.revRef || (this.revRef = React.createRef()),
+      revPrev: () => { const el = this.revRef && this.revRef.current; if (el) el.scrollBy({ left: -632, behavior: 'smooth' }); },
+      revNext: () => { const el = this.revRef && this.revRef.current; if (el) el.scrollBy({ left: 632, behavior: 'smooth' }); },
+      faqs: [{"q":"How do Vecteezy subscriptions work?","before":["Our subscriptions give you access to our complete library of photos, vectors, and videos. The plans give you:"],"list":["Unlimited photo, vector, and 4k video downloads","Full commercial rights","Vecteezy online editor access","Exclusive access to bundles","No attribution required","Priority support","Faster downloads & no ads","Unlimited 4K video downloads"],"after":["Yearly plans are billed annually at a lower monthly rate than our monthly plans which are billed each month. All subscription plans offer the same great benefits though!"],"hasList":true},{"q":"Why do I need a plan if Vecteezy is free?","before":["We offer thousands of high-quality free images and videos to use for personal and commercial use just as long as you provide attribution. We also lock down some of our pro content and only make it available to our paid members. In some circumstances, it is not possible to credit the author so we offer a paid plan that allows you to purchase a license so you can download the file and not have to worry about attribution. Pro users can access/download all content on the site included in their content subscription type and experience the site ad-free. Pro subscriptions also give you full commercial rights, access to the Vecteezy online editor and bundles, faster downloads, and priority support."],"list":[],"after":[],"hasList":false},{"q":"What do I get with a Pro Standard license?","before":["Vecteezy offers a Pro Standard License with all content that is downloaded with a credit, or, all content that is available to Vecteezy Pro subscribers (except content with an Editorial Use Only license). The Pro Standard license does not require attribution and permits more broad usage rights for print, digital, TV and limited merchandise use. The Pro Standard License from Vecteezy is backed by our $10,000 legal protection (Pro content only).","This license will be found in your Dashboard by visiting \"License History\", and then clicking on the \"View License Info\" button beside the file. If you did not download your file(s) with credits or you are not a Pro member, you will not have a Pro Standard License for this content.","Please visit our Licensing Chart for more details"],"list":[],"after":[],"hasList":false},{"q":"Can I use Vecteezy content in work I create for a client?","before":["If you are licensing content on behalf of a client, then during the delivery process of the end product to your client, you may grant your client a sublicense to use that content as allowed by this License Agreement.","You must guarantee that you have full legal authority to bind your client to the terms of our License Agreement. If you do not have that authority, then your client may not use the content, unless they also obtain a license for that content directly from us. Your client must comply with our License Agreement, and you remain directly liable to Vecteezy for your client’s use of the content. If you use any content as part of an End Product or Design Project created for or delivered to a client, you agree to provide the name and contact information of your client to Vecteezy upon Vecteezy’s reasonable request for the sole purpose of monitoring proper use.","You can read about this in our License Agreement under Section 5, a. (Sub-licensing; Client Use) here."],"list":[],"after":[],"hasList":false},{"q":"Should I purchase a subscription or pay as I go?","before":["The main difference in our paid plans is the cost per file. The more you purchase up front, the cheaper your cost per download. The best value lies in our Unlimited Subscription Plan. With this plan, you'll have unlimited downloads, including unlimited access to Brusheezy.com graphics too! You also get exclusive access to bundles as a Pro subscriber. We offer simple Download Credit plans. Here, you're purchasing one-off downloads. There is no commitment with these plans and the credits do not expire for 1 year. So start with what you’re comfortable with and what best matches your budget. It’s important to note that access to bundles is an exclusive perk that comes with an active Pro subscription. Credits can not be used to download Bundles."],"list":[],"after":[],"hasList":false},{"q":"What are bundles?","before":["A bundle is a set of multiple creative resources rather than just one resource. These files are typically zipped in a folder as a single download.","Bundles are created by contributors like all other resources on Vecteezy.com. However, they might include content that is not otherwise available on our website such as fonts, slide decks, photoshop brushes, and more."],"list":[],"after":[],"hasList":false},{"q":"Can I upgrade or downgrade to a different plan?","before":["Certainly, please contact us through your settings and we can migrate you to a alternate plan."],"list":[],"after":[],"hasList":false},{"q":"Can I add seats to my account for team members?","before":["Definitely! Go to your account settings and click on Create a Team to add seats and invite team members. Then you can assign roles as desired with only Admins being able to access billing information."],"list":[],"after":[],"hasList":false},{"q":"How does auto renewal work?","before":["For your convenience, our subscriptions automatically renew each payment period meaning there is no need for you to do anything other than keep enjoying our content! If you want to alter or cancel your subscription, you can do so at anytime within your settings."],"list":[],"after":[],"hasList":false},{"q":"Can I cancel anytime?","before":["Absolutely. As much as we'd hate to see you leave, you can always cancel in just a few clicks under your settings. We offer a 30 day money-back guarantee. If you're not completely satisfied within the first 30 days, and you haven't downloaded more than 3 pro files, just let us know, and we'll give you a refund for your most recent charge."],"list":[],"after":[],"hasList":false}].map((f, i) => ({ ...f, open: this.state.faqOpen === i, rot: this.state.faqOpen === i ? 'rotate(180deg)' : 'none', toggle: () => this.setState(s => ({ faqOpen: s.faqOpen === i ? null : i })) })),
+      noop: (e) => e.preventDefault()
+    };
+    vals.v3Ticker = vals.reviews.concat(vals.reviews);
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

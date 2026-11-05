@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/styles.css">
+  <style>
+    body { margin: 0; background: var(--ez-color--grey-5); font-family: var(--ez-font-stack); }
+    button { font-family: inherit; }
+    :root { --ez-surface: #fff; }
+    [data-ez-theme="dark"] {
+      --ez-surface: #171717;
+      --ez-color--grey-3: #0d0d0d;
+      --ez-color--grey-5: #141414;
+      --ez-color--grey-10: #292929;
+      --ez-color--grey-20: #363636;
+      --ez-color--grey-40: #7f7f7f;
+      --ez-color--grey-50: #909090;
+      --ez-color--grey-60: #aaaaaa;
+      --ez-color--grey-70: #c9c9c9;
+      --ez-color--grey-100: #f2f2f2;
+    }
+    a { color: var(--color-orange-100); }
+    a:hover { color: var(--color-orange-90); }
+    .recent-view:hover .rv-x { opacity: 1 !important; }
+    [data-ez-theme="dark"] .search-dropdown-panel { border-color: rgba(255, 255, 255, .2) !important; }
+    [data-ez-theme="dark"] .kw-row:hover { border-color: #4a4e52 !important; }
+    [data-ez-theme="dark"] .rv-x { color: #111111 !important; }
+  </style>
+</helmet>
+<div style="display: flex; justify-content: center; padding: 24px; box-sizing: border-box">
+<div data-screen-label="Home search dropdown" class="search-dropdown-panel" style="position: relative; width: 100%; max-width: 800px; box-sizing: border-box; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10); border-radius: 25px; box-shadow: 0 16px 24px -8px rgba(14, 35, 50, .12); padding: 24px 28px 26px; max-height: calc(100vh - 48px); overflow-y: auto">
+    <button aria-label="Close" onClick="{{ close }}" style="position: absolute; top: 14px; right: 14px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex-shrink: 0; padding: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 2px 8px rgba(14, 35, 50, .06); box-sizing: border-box; border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-70); cursor: pointer; transition: color .15s ease, background .15s ease" style-hover="color: var(--ez-color--grey-100); background: var(--ez-color--grey-5)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <div style="display: {{ recentSectionDisplay }}">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--ez-color--grey-70); margin-bottom: 10px">Recent searches</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px">
+      <sc-for list="{{ recentSearches }}" as="r" hint-placeholder-count="3">
+        <span class="kw-row" style="display: inline-flex; align-items: stretch; height: 40px; box-sizing: border-box; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-color--grey-3); font-size: 14px; font-weight: 600; color: var(--ez-color--grey-100); overflow: hidden; transition: border-color .15s ease" style-hover="border-color: var(--ez-color--grey-30)">
+          <a href="#" onClick="{{ r.pick }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 0 14px 0 16px; color: inherit; text-decoration: none; transition: background .15s ease" style-hover="background: var(--ez-color--grey-10)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; color: var(--ez-color--grey-70)"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{{ r.term }}
+          </a>
+          <span style="width: 1px; background: var(--ez-color--grey-10); flex-shrink: 0"></span>
+          <button aria-label="Remove search" onClick="{{ r.remove }}" style="display: flex; align-items: center; justify-content: center; width: 38px; padding: 0; border: none; background: transparent; color: var(--ez-color--grey-70); cursor: pointer; transition: color .15s ease, background .15s ease" style-hover="color: var(--ez-color--grey-100); background: var(--ez-color--grey-10)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+          </button>
+        </span>
+      </sc-for>
+    </div>
+    </div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--ez-color--grey-70); margin: {{ trendingMargin }} 0 12px; padding-top: {{ trendingPad }}; border-top: {{ trendingBorder }}; display: flex; align-items: center; gap: 6px">Trending searches
+      <svg width="16" height="12" viewBox="0 0 19 10" style="border-radius: 2px; flex-shrink: 0"><rect width="19" height="10" fill="#f0f0f0"></rect><rect y="0" width="19" height="0.77" fill="#d02f44"></rect><rect y="1.54" width="19" height="0.77" fill="#d02f44"></rect><rect y="3.08" width="19" height="0.77" fill="#d02f44"></rect><rect y="4.62" width="19" height="0.77" fill="#d02f44"></rect><rect y="6.15" width="19" height="0.77" fill="#d02f44"></rect><rect y="7.69" width="19" height="0.77" fill="#d02f44"></rect><rect y="9.23" width="19" height="0.77" fill="#d02f44"></rect><rect width="7.6" height="5.38" fill="#46467f"></rect></svg></div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px">
+      <sc-for list="{{ trendingChips }}" as="tc" hint-placeholder-count="6">
+        <a href="#" onClick="{{ tc.pick }}" class="kw-row" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; box-sizing: border-box; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-color--grey-3); font-size: 14px; font-weight: 600; color: var(--ez-color--grey-100); text-decoration: none; transition: border-color .15s ease, background .15s ease" style-hover="border-color: var(--ez-color--grey-30); background: var(--ez-color--grey-10)">
+          <svg style="color: var(--ez-color--grey-70); flex-shrink: 0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>{{ tc.term }}</a>
+      </sc-for>
+    </div>
+    <div style="display: {{ viewsSectionDisplay }}">
+      <div style="border-top: 1px solid var(--ez-color--grey-10); margin-top: 18px"></div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--ez-color--grey-70); margin: 18px 0 12px">Recently viewed</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px">
+        <sc-for list="{{ recentViews }}" as="v" hint-placeholder-count="6">
+          <span class="recent-view" style="position: relative; display: block; height: 84px; width: {{ v.width }}">
+            <a href="#" title="{{ v.title }}" style="display: block; width: 100%; height: 100%; background: {{ v.bg }}; border-radius: 6px"></a>
+            <button aria-label="Remove image" class="rv-x" onClick="{{ v.remove }}" style="position: absolute; top: -6px; right: -6px; z-index: 3; display: flex; align-items: center; justify-content: center; width: 18px; height: 18px; padding: 0; border: none; border-radius: 9999px; background: var(--ez-color--grey-100); color: #fff; cursor: pointer; opacity: 0; transition: background .15s ease, transform .15s ease, opacity .15s ease" style-hover="transform: scale(1.15)">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;880px&quot;,&quot;height&quot;:&quot;520px&quot;},&quot;onPick&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(term: string) =&gt; void&quot;},&quot;onClose&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;() =&gt; void&quot;}}">
+class Component extends DCLogic {
+  state = {
+    recent: ['autumn leaves watercolor', 'business card template', 'summer sale banner'],
+    views: null
+  };
+  defaultViews() {
+    return [
+      { title: 'Golden retriever with stick', width: '112px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" },
+      { title: 'Puppy portrait', width: '84px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" },
+      { title: 'Corgi on walkway', width: '148px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" },
+      { title: 'Pug in blanket', width: '84px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" },
+      { title: 'Dog in autumn leaves', width: '126px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" },
+      { title: 'Border collie', width: '96px', bg: "var(--ez-color--grey-10) url('https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?w=400&q=60&auto=format&fit=crop') center / cover no-repeat" }
+    ];
+  }
+  renderVals() {
+    const views = this.state.views || this.defaultViews();
+    const has = this.state.recent.length > 0;
+    const pick = (term) => (e) => { e.preventDefault(); this.props.onPick && this.props.onPick(term); };
+    return {
+      close: () => this.props.onClose && this.props.onClose(),
+      recentSectionDisplay: has ? 'block' : 'none',
+      trendingMargin: has ? '18px' : '0px',
+      trendingPad: has ? '18px' : '0px',
+      trendingBorder: has ? '1px solid var(--ez-color--grey-10)' : 'none',
+      recentSearches: this.state.recent.map(term => ({
+        term,
+        pick: pick(term),
+        remove: () => this.setState(s => ({ recent: s.recent.filter(t => t !== term) }))
+      })),
+      trendingChips: ['sunflower', 'watercolor background', 'grunge texture', 'birthday invitation', 'paper texture', '4th of july fireworks'].map(term => ({ term, pick: pick(term) })),
+      viewsSectionDisplay: views.length ? 'block' : 'none',
+      recentViews: views.map(v => ({
+        ...v,
+        remove: () => this.setState(s => ({ views: (s.views || this.defaultViews()).filter(x => x.title !== v.title) }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="design_doc_mode" content="canvas">
+  <style>body { margin: 0; background: #e9ecef; font-family: system-ui, 'Segoe UI', helvetica, arial, sans-serif; }</style>
+</helmet>
+<section style="display: flex; flex-direction: column; gap: 20px; padding: 48px 48px 0">
+  <div style="font-size: 20px; font-weight: 700; color: #0e2332">Round 3 — three more layouts</div>
+  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div id="3a" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">3a</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">Settings modal — opens over the page you were on, close to return</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" layout="modal" direction="flat" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+    <div id="3b" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">3b</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">One scrolling page — every section stacked, "On this page" index follows along</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" layout="scroll" direction="cards" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+    <div id="3c" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">3c</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">In-app — keeps the product rail, settings list as a second column</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" layout="app" direction="flat" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 20px; padding: 48px 48px 0">
+  <div style="font-size: 20px; font-weight: 700; color: #0e2332">Round 2 — rethought layouts</div>
+  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div id="2a" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">2a</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">Overview hub — account summary tiles (not continuing)</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" layout="hub" direction="cards" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+    <div id="2b" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">2b</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">Account header + top tabs, with a sticky plan summary on the right</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" layout="tabs" direction="cards" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 20px; padding: 48px">
+  <div style="font-size: 20px; font-weight: 700; color: #0e2332">Settings redesign — two directions</div>
+  <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+    <div id="1a" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">1a</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">Cards — stacked sections on a tinted page</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" direction="cards" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+    <div id="1b" style="display: flex; flex-direction: column; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; height: 24px; padding: 0 9px; border-radius: 6px; background: #0e2332; color: #fff; font-size: 13px; font-weight: 700">1b</span>
+        <span style="font-size: 15px; font-weight: 600; color: #0e2332">Flat — label column left, controls right, hairline dividers</span>
+      </div>
+      <div style="width: 1440px; height: 1000px; overflow: auto; border-radius: 12px; background: #fff; box-shadow: 0 8px 30px rgba(14, 35, 50, .12); display: flex; flex-direction: column">
+        <dc-import name="Settings" direction="flat" hint-size="1440px,1000px" style="flex: 1 0 auto; display: flex; flex-direction: column"></dc-import>
+      </div>
+    </div>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

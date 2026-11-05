@@ -1,0 +1,62 @@
+/* Badge / TextPill — ported from apollo app/components/utils/text_pill/text_pill.css */
+.ez-text-pill {
+  display: inline-block;
+  border-radius: 9999px;
+  color: #fff;
+  font-family: var(--ez-font-stack);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  padding: var(--spacing-tiny) var(--spacing-small);
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ez-text-pill--large-text { font-size: var(--type-body-medium-size); text-transform: none; letter-spacing: 0; }
+.ez-text-pill--green { background-color: var(--ez-color--success); }
+.ez-text-pill--red { background-color: var(--ez-color--error); }
+.ez-text-pill--orange { background-color: var(--ez-color--accent); }
+.ez-text-pill--pro { background: var(--ez-color--pro-gradient); }
+.ez-text-pill--green-text { color: var(--ez-color--success); background-color: var(--color-green-10); }
+.ez-text-pill--red-text { color: var(--ez-color--error); background-color: var(--color-red-10); }
+.ez-text-pill--grey-text { color: var(--ez-color--grey-60); background-color: var(--ez-color--grey-5); }
+.ez-text-pill--pro-shiny {
+  position: relative;
+  z-index: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background:
+    linear-gradient(271deg, rgba(251,0,255,0.14), rgba(253,49,152,0.14), rgba(254,77,93,0.14), rgba(255,121,0,0.14)) padding-box,
+    linear-gradient(0deg, #fff, #fff) padding-box,
+    var(--ez-color--pro-gradient) border-box;
+}
+.ez-text-pill--pro-shiny__label {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  color: #fd3198;
+  background: var(--ez-color--pro-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ez-text-pill--pro-shiny__anim-overlay {
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  background: linear-gradient(271deg, rgba(251,0,255,0.14), rgba(253,49,152,0.14), rgba(254,77,93,0.14), rgba(255,121,0,0.14)) padding-box, linear-gradient(0deg, #fff, #fff) padding-box, linear-gradient(271deg, #ff7900, #fe4d5d, #fd3198, #fb00ff) border-box;
+  -webkit-mask-image: linear-gradient(250deg, rgba(0,0,0,0) 35%, #000 50%, rgba(0,0,0,0) 65%);
+  mask-image: linear-gradient(250deg, rgba(0,0,0,0) 35%, #000 50%, rgba(0,0,0,0) 65%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  -webkit-mask-position: 200%;
+  mask-position: 200%;
+  animation: ez-pill-border-shimmer 1.8s linear infinite;
+  pointer-events: none;
+}
+@keyframes ez-pill-border-shimmer { 100% { -webkit-mask-position: -200%; mask-position: -200%; } }

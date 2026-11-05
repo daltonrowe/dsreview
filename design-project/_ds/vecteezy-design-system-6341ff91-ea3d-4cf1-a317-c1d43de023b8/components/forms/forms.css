@@ -1,0 +1,70 @@
+/* Forms — ported from apollo app/javascript/styleguide/forms.css (focused subset) */
+.ez-input { position: relative; width: 100%; font-weight: 400; font-family: var(--ez-font-stack); }
+.ez-input__label {
+  display: block; font-size: var(--type-allcaps-size); font-weight: 600;
+  letter-spacing: 0.6px; margin-bottom: var(--spacing-tiny); text-align: left;
+  text-transform: uppercase; color: var(--ez-color--text-dimmed);
+}
+.ez-input__field {
+  box-sizing: border-box;
+  font-size: var(--type-body-medium-size); background-color: var(--ez-color--input-bg);
+  border: 1px solid var(--ez-color--input-border); border-radius: var(--ez-radius-input);
+  color: var(--ez-color--input-text); font-family: var(--ez-font-stack);
+  height: var(--spacing-5); padding: var(--spacing-small); width: 100%;
+  transition: border-color 0.15s ease;
+}
+.ez-input__field:hover { border-color: var(--ez-color--input-border-hover); }
+.ez-input__field:focus { border-color: var(--ez-color--input-border-focus); outline: none; background-color: #fff; }
+.ez-input__field::placeholder { color: var(--ez-color--input-placeholder); }
+.ez-input__field:disabled { border-color: var(--ez-color--grey-10); color: var(--ez-color--grey-20); pointer-events: none; }
+.ez-input__field--textarea { height: auto; min-height: 88px; resize: vertical; line-height: 1.5; }
+.ez-input--lg .ez-input__field { font-size: var(--type-subtitle-size); height: var(--spacing-7); padding-left: var(--spacing-3); padding-right: var(--spacing-3); }
+.ez-input--small { width: 135px; }
+.ez-input.has-errors .ez-input__field { border-color: var(--ez-color--error); }
+.ez-input.has-errors .ez-input__label { color: var(--ez-color--error); }
+.ez-input__error-message { color: var(--ez-color--error); font-size: var(--type-body-small-size); font-weight: 600; margin-top: var(--spacing-tiny); display: block; text-align: left; }
+.ez-input__help { color: var(--ez-color--text-dimmed); font-size: var(--type-body-small-size); margin-top: var(--spacing-tiny); display: block; }
+
+/* Checkbox */
+.ez-checkbox { display: inline-flex; align-items: flex-start; gap: var(--spacing-small); cursor: pointer; font-family: var(--ez-font-stack); font-size: var(--type-body-medium-size); color: var(--ez-color--text); line-height: 16px; }
+.ez-checkbox input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none; width: 16px; height: 16px; margin: 0;
+  border: 1px solid var(--ez-color--input-border); border-radius: var(--radius-tiny);
+  background-color: #fff; cursor: pointer; position: relative; flex-shrink: 0; top: 1px;
+}
+.ez-checkbox input[type="checkbox"]:hover { border-color: var(--ez-color--input-border-hover); }
+.ez-checkbox input[type="checkbox"]:checked { background-color: var(--ez-color--hyperlinks); border-color: var(--ez-color--hyperlinks); }
+.ez-checkbox input[type="checkbox"]:checked::before {
+  content: ""; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' style='fill: %23ffffff;'%3E%3Cpath d='M1.577 3.821c-.363-.319-.916-.282-1.235.081s-.282.916.081 1.235l2.875 2.521c.367.322.925.281 1.242-.09l5.125-6c.314-.367.27-.92-.097-1.234s-.92-.27-1.234.097L3.785 5.758 1.577 3.821z'/%3E%3C/svg%3E") no-repeat center;
+}
+.ez-checkbox--disabled { opacity: 0.5; pointer-events: none; }
+
+/* Radio */
+.ez-radio { display: inline-flex; align-items: center; gap: var(--spacing-small); cursor: pointer; font-family: var(--ez-font-stack); font-size: var(--type-body-medium-size); color: var(--ez-color--text); }
+.ez-radio input[type="radio"] {
+  appearance: none; -webkit-appearance: none; width: 19px; height: 19px; margin: 0;
+  border: 1px solid var(--ez-color--input-border); border-radius: 50%;
+  background-color: #fff; cursor: pointer; position: relative; flex-shrink: 0;
+}
+.ez-radio input[type="radio"]:hover { border-color: var(--ez-color--input-border-hover); }
+.ez-radio input[type="radio"]:checked { border-color: var(--ez-color--input-border-focus); }
+.ez-radio input[type="radio"]:checked::before { content: ""; position: absolute; width: 11px; height: 11px; top: 3px; left: 3px; border-radius: 50%; background-color: var(--ez-color--hyperlinks); }
+
+/* Select */
+.ez-select { position: relative; display: inline-block; width: 100%; }
+.ez-select select {
+  box-sizing: border-box;
+  appearance: none; -webkit-appearance: none; font-family: var(--ez-font-stack);
+  font-size: var(--type-body-medium-size); background-color: #fff;
+  border: 1px solid var(--ez-color--input-border); border-radius: var(--ez-radius-input);
+  color: var(--ez-color--input-text); height: var(--spacing-5); width: 100%;
+  padding: 0 var(--spacing-5) 0 var(--spacing-small); cursor: pointer; line-height: var(--spacing-5);
+}
+.ez-select select:hover, .ez-select select:focus { border-color: var(--ez-color--input-border-focus); outline: none; }
+.ez-select__arrow {
+  position: absolute; right: var(--spacing-small); top: 50%; transform: translateY(-50%);
+  pointer-events: none; width: 0; height: 0;
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-top: 6px solid var(--ez-color--text-headers);
+}

@@ -1,0 +1,108 @@
+/* Button — ported from eezyinc/apollo app/javascript/styleguide/buttons.css
+   SCSS flattened to plain CSS, $vars → design tokens. */
+.ez-btn {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: var(--ez-font-stack);
+  font-weight: 700;
+  justify-content: center;
+  outline: 0;
+  text-align: center;
+  text-shadow: none;
+  user-select: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+  width: fit-content;
+  border-radius: var(--ez-radius-button);
+  font-size: var(--type-body-large-size);
+  line-height: 1;
+  max-width: 100%;
+  min-height: calc(1em + var(--spacing-5));
+  min-width: var(--spacing-19);
+  padding: var(--spacing-2) var(--spacing-3);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+}
+.ez-btn:has(.ez-btn__icon) { gap: var(--spacing-small); }
+.ez-btn__icon { fill: currentcolor; flex-shrink: 0; position: relative; flex-basis: 1.2em; height: 1.2em; width: 1.2em; }
+.ez-btn__sub-text { flex-basis: 100%; width: 100%; font-size: var(--type-body-small-size); margin-top: var(--spacing-tiny); font-weight: 400; }
+.ez-btn.is-rounded { border-radius: 30px; padding-left: var(--spacing-6); padding-right: var(--spacing-6); }
+.ez-btn.is-disabled, .ez-btn:disabled { cursor: default; pointer-events: none; }
+
+/* Sizes */
+.ez-btn--lg { max-width: 300px; min-height: var(--spacing-10); min-width: var(--spacing-19); padding: 20px var(--spacing-4); width: 100%; }
+.ez-btn--lg .ez-btn__icon { height: 1em; width: 1em; }
+.ez-btn--medium { font-size: var(--type-button-size); height: auto; line-height: 1em; max-height: var(--spacing-6); min-height: 1em; min-width: 125px; padding: var(--spacing-small) 18px; }
+.ez-btn--small { font-size: var(--type-body-small-size); height: auto; line-height: 1em; max-height: var(--spacing-5); min-height: 1em; min-width: var(--spacing-10); padding: var(--spacing-small) var(--spacing-2); }
+.ez-btn--small .ez-btn__icon { height: 1.1em; width: 1.1em; }
+.ez-btn--tiny { font-size: 10px; height: auto; line-height: 1em; max-height: var(--spacing-3); min-height: 1em; min-width: var(--spacing-6); padding: var(--spacing-1) 10px; }
+.ez-btn--tiny .ez-btn__icon { height: 1em; width: 1em; }
+
+/* Colors */
+.ez-btn, .ez-btn--primary { background: var(--ez-color--buttons); color: #fff; }
+.ez-btn:hover, .ez-btn--primary:hover, .ez-btn--primary.is-active { background-color: var(--ez-color--buttons-hover); color: #fff; }
+.ez-btn:active, .ez-btn--primary:active { background-color: var(--ez-color--buttons-active); color: #fff; }
+.ez-btn--primary.is-disabled, .ez-btn--primary:disabled { background-color: var(--ez-color--buttons-disabled-bg); color: var(--ez-color--buttons-disabled-text); }
+
+.ez-btn--secondary { background-color: #fff; box-shadow: inset 0 0 0 2px var(--ez-color--buttons); color: var(--ez-color--buttons); }
+.ez-btn--secondary:hover, .ez-btn--secondary:active, .ez-btn--secondary:focus, .ez-btn--secondary.is-active { background: var(--ez-color--buttons); color: #fff; }
+
+.ez-btn--outlined { background-color: #fff; border: 1px solid var(--ez-color--grey-20); color: var(--ez-color--grey-100); }
+.ez-btn--outlined:hover, .ez-btn--outlined:focus { background-color: var(--ez-color--grey-5); border-color: var(--ez-color--grey-20); color: var(--ez-color--grey-100); }
+.ez-btn--outlined:active, .ez-btn--outlined.is-active { border-color: var(--ez-color--buttons); }
+
+.ez-btn--tertiary { background-color: var(--ez-color--grey-40); color: #fff; }
+.ez-btn--tertiary:hover, .ez-btn--tertiary:active, .ez-btn--tertiary.is-active { background-color: var(--ez-color--grey-30); color: #fff; }
+
+.ez-btn--light { background-color: var(--ez-color--buttons-grey-light); color: var(--ez-color--grey-100); font-weight: 600; }
+.ez-btn--light:hover { background-color: var(--ez-color--buttons-grey-light-hover); color: var(--ez-color--grey-100); }
+.ez-btn--light:active { background-color: var(--ez-color--buttons-grey-light-active); color: var(--ez-color--grey-100); }
+
+.ez-btn--transparent { background-color: transparent; color: var(--ez-color--grey-100); }
+.ez-btn--transparent:hover, .ez-btn--transparent:active { background-color: var(--ez-color--grey-10); color: var(--ez-color--grey-100); }
+
+.ez-btn--white { background-color: #fff; color: var(--ez-color--accent); font-weight: 600; }
+.ez-btn--white:hover { background-color: var(--ez-color--grey-3); }
+.ez-btn--white:active { background-color: #fff; }
+
+.ez-btn--dark { background-color: var(--ez-color--grey-100); color: #fff; font-weight: 600; }
+.ez-btn--dark:hover { background-color: var(--ez-color--grey-90); }
+.ez-btn--dark:active { background-color: var(--ez-color--grey-80); }
+
+.ez-btn--accent-light { background: var(--ez-color--accent-light); color: var(--ez-color--hyperlinks); }
+.ez-btn--accent-light:hover { background: var(--ez-color--accent-light-hover); }
+.ez-btn--accent-light:active { background: var(--ez-color--accent-light-active); }
+
+.ez-btn--alert { background-color: var(--ez-color--buttons-red); color: #fff; }
+.ez-btn--alert:hover { background-color: var(--ez-color--buttons-red-hover); color: #fff; }
+.ez-btn--alert:active { background-color: var(--ez-color--buttons-red-active); }
+
+.ez-btn--pro { background: var(--ez-color--pro-gradient); color: #fff; }
+.ez-btn--pro:hover, .ez-btn--pro:active { background: var(--ez-color--pro-gradient-hover); color: #fff; }
+
+.ez-btn--pro-2 { background: var(--ez-color--pro2-gradient); color: #fff; }
+.ez-btn--pro-2 .ez-btn__icon { fill: #fff; }
+
+.ez-btn--pro-2-secondary { background: linear-gradient(#fff, #fff) padding-box, var(--ez-color--pro2-gradient) border-box; border: 2px solid transparent; }
+.ez-btn--pro-2-secondary span { -webkit-text-fill-color: transparent; background: var(--ez-color--pro2-gradient); -webkit-background-clip: text; background-clip: text; line-height: 1.1em; }
+.ez-btn--pro-2-secondary:hover, .ez-btn--pro-2-secondary:active, .ez-btn--pro-2-secondary:focus, .ez-btn--pro-2-secondary.is-active { background: var(--ez-color--pro2-gradient); border: 0; }
+.ez-btn--pro-2-secondary:hover span, .ez-btn--pro-2-secondary:active span, .ez-btn--pro-2-secondary:focus span { -webkit-text-fill-color: unset; color: #fff; }
+
+/* Tab-style buttons */
+.ez-btn--tab {
+  align-items: center; background-color: transparent; border: none;
+  border-bottom: 2px solid var(--ez-color--grey-10); border-radius: 0;
+  color: var(--ez-color--grey-60); display: inline-flex; cursor: pointer;
+  font-family: var(--ez-font-stack); font-size: var(--type-button-size);
+  font-weight: 600; height: var(--spacing-6); justify-content: center;
+  min-height: 1em; padding: 0 18px; white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.ez-btn--tab .ez-btn__icon { fill: currentcolor; height: 14px; width: 14px; margin-right: var(--spacing-tiny); }
+.ez-btn--tab:hover:not(.is-selected) { border-bottom-color: var(--ez-color--grey-20); color: var(--ez-color--grey-100); }
+.ez-btn--tab.is-selected { border-bottom-color: var(--color-orange-100); color: var(--ez-color--grey-100); }

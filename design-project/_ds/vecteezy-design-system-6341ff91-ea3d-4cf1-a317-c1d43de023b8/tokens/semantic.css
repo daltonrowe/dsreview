@@ -1,0 +1,93 @@
+/* Semantic color aliases
+   Mirrors eezyinc/apollo app/javascript/styleguide/settings.css ($ez-color--*)
+   resolved to real values. This is the layer product code consumes.
+   Note: the "grey" ramp is the navy ramp — Vecteezy neutrals are cool/navy-tinted. */
+:root {
+  /* Neutral (grey == navy) */
+  --ez-color--grey-100: var(--color-navy-100);
+  --ez-color--grey-90: var(--color-navy-90);
+  --ez-color--grey-80: var(--color-navy-80);
+  --ez-color--grey-70: var(--color-navy-70);
+  --ez-color--grey-60: var(--color-navy-60);
+  --ez-color--grey-50: var(--color-navy-50);
+  --ez-color--grey-40: var(--color-navy-40);
+  --ez-color--grey-30: var(--color-navy-30);
+  --ez-color--grey-20: var(--color-navy-20);
+  --ez-color--grey-10: var(--color-navy-10);
+  --ez-color--grey-5: var(--color-navy-5);
+  --ez-color--grey-3: var(--color-navy-3);
+
+  /* Brand accent — Vecteezy orange */
+  --ez-color--accent: var(--color-orange-100);
+  --ez-color--accent-hover: var(--color-orange-90);
+  --ez-color--accent-active: var(--color-orange-70);
+  --ez-color--accent-light: var(--color-orange-10);
+  --ez-color--accent-light-hover: var(--color-orange-20);
+  --ez-color--accent-light-active: var(--color-orange-30);
+  --ez-color--accent-callout: var(--color-orange-70);
+
+  /* Text */
+  --ez-color--text: var(--color-navy-60);
+  --ez-color--text-bold: var(--color-navy-100);
+  --ez-color--text-headers: var(--color-navy-100);
+  --ez-color--text-dimmed: var(--color-navy-50);
+  --ez-color--text-on-dark: var(--color-navy-5);
+
+  /* Surfaces */
+  --ez-color--surface: #fff;
+  --ez-color--surface-sunken: var(--color-navy-5);
+  --ez-color--surface-raised: #fff;
+  --ez-color--divider: var(--color-navy-10);
+  --ez-color--dark-overlay: var(--color-navy-overlay);
+
+  /* Buttons */
+  --ez-color--buttons: var(--color-orange-100);
+  --ez-color--buttons-hover: var(--color-orange-90);
+  --ez-color--buttons-active: var(--color-orange-70);
+  --ez-color--buttons-disabled-bg: var(--color-navy-10);
+  --ez-color--buttons-disabled-text: var(--color-navy-20);
+  --ez-color--buttons-grey-light: var(--color-navy-5);
+  --ez-color--buttons-grey-light-hover: var(--color-navy-10);
+  --ez-color--buttons-grey-light-active: var(--color-navy-20);
+  --ez-color--buttons-red: var(--color-red-100);
+  --ez-color--buttons-red-hover: var(--color-red-100--hover);
+  --ez-color--buttons-red-active: var(--color-red-100--active);
+
+  /* Links */
+  --ez-color--hyperlinks: var(--color-orange-100);
+  --ez-color--hyperlinks-hover: var(--color-orange-90);
+  --ez-color--hyperlinks-active: #b35400;
+
+  /* Highlighted / selected text */
+  --ez-color--highlighted-text-bg: var(--color-orange-20);
+
+  /* Status */
+  --ez-color--success: var(--color-green-80);
+  --ez-color--success-dark: var(--color-green-100);
+  --ez-color--success-light: var(--color-green-10);
+  --ez-color--error: var(--color-red-90);
+  --ez-color--error-light: var(--color-red-10);
+  --ez-color--warning: var(--color-alert-yellow);
+  --ez-color--warning-dark: #d09600;
+  --ez-color--warning-light: var(--color-yellow-10);
+
+  /* Forms */
+  --ez-color--input-text: var(--color-navy-60);
+  --ez-color--input-placeholder: var(--color-navy-40);
+  --ez-color--input-bg: #fff;
+  --ez-color--input-border: var(--color-navy-20);
+  --ez-color--input-border-hover: var(--color-navy-30);
+  --ez-color--input-border-focus: var(--color-navy-40);
+  --ez-color--required-indicator: var(--color-red-90);
+
+  /* Footer */
+  --ez-color--footer-bg: var(--color-navy-100);
+  --ez-color--footer-link: var(--color-navy-50);
+  --ez-color--footer-link-hover: #fff;
+
+  /* Pro identity */
+  --ez-color--pro-pink: var(--color-pro-pink);
+  --ez-color--pro-gradient: var(--background-pro-gradient);
+  --ez-color--pro-gradient-hover: var(--background-pro-gradient-hover);
+  --ez-color--pro2-gradient: var(--background-pro2-gradient);
+}

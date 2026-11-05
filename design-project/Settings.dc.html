@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/styles.css">
+  <script src="_ds/vecteezy-design-system-6341ff91-ea3d-4cf1-a317-c1d43de023b8/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; }
+    a { color: var(--color-orange-100); text-decoration: none; }
+    a:hover { color: var(--color-orange-90); }
+    .vz-settings { --ez-surface: #fff; }
+    [id="1a"] .vz-settings, [id="1b"] .vz-settings, [id="2a"] .vz-settings, [id="2b"] .vz-settings, [id="3a"] .vz-settings, [id="3b"] .vz-settings, [id="3c"] .vz-settings { min-height: 1000px !important; }
+    .vz-settings[data-ez-theme="dark"] {
+      --ez-surface: #171717;
+      --ez-color--grey-3: #0d0d0d;
+      --ez-color--grey-5: #1f1f1f;
+      --ez-color--grey-10: #292929;
+      --ez-color--grey-20: #363636;
+      --ez-color--grey-40: #7f7f7f;
+      --ez-color--grey-50: #909090;
+      --ez-color--grey-60: #aaaaaa;
+      --ez-color--grey-70: #c9c9c9;
+      --ez-color--grey-100: #f2f2f2;
+      --ez-color--accent-light: rgba(255, 121, 0, .14);
+      color-scheme: dark;
+    }
+    .vz-settings[data-ez-theme="dark"] img[alt="Vecteezy"] { filter: brightness(0) invert(1); }
+    .vz-settings input::placeholder { color: var(--ez-color--grey-40); }
+    .vz-settings input:focus, .vz-settings select:focus { outline: none; border-color: var(--ez-color--grey-40) !important; }
+    [data-ez-theme="dark"] .type-menu-panel { border-color: transparent !important; background: #1c1c1c !important; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5) !important; }
+    [data-ez-theme="dark"] .type-menu-panel button { color: #ffffff !important; }
+    [data-ez-theme="dark"] .type-menu-panel button:hover { background: #2e2e2e !important; }
+    .nav-item:hover .nav-tip { display: block !important; }
+    .nav-item:hover > svg path, .nav-item:hover > svg circle, .nav-item:hover > svg polygon { stroke: url(#vzNavGrad); }
+    .nav-item:not(.nav-acct):hover { background: var(--color-orange-10) !important; }
+    [data-ez-theme="dark"] .nav-item:hover > svg path, [data-ez-theme="dark"] .nav-item:hover > svg circle, [data-ez-theme="dark"] .nav-item:hover > svg polygon { stroke: #ffffff; }
+    [data-ez-theme="dark"] .nav-item:not(.nav-acct):hover { background: #2e2e2e !important; box-shadow: 0 0 0 1px rgba(255, 255, 255, .2); }
+  </style>
+</helmet>
+<div class="vz-settings" ref="{{ rootRef }}" data-ez-theme="{{ themeMode }}" style="display: flex; flex: 1 0 auto; min-height: 100vh; box-sizing: border-box; padding: {{ rootPad }}; font-family: system-ui, 'Segoe UI', helvetica, arial, sans-serif; color: var(--ez-color--grey-100); background: {{ rootBg }}">
+<div style="position: relative; display: flex; flex: 1; width: 100%; max-width: {{ shellMaxW }}; height: {{ shellH }}; margin: {{ shellMargin }}; border-radius: {{ shellRadius }}; overflow: {{ shellOverflow }}; box-shadow: {{ shellShadow }}; background: {{ pageBg }}">
+
+  <sc-if value="{{ showAppRail }}" hint-placeholder-val="{{ false }}">
+  <aside data-screen-label="Left nav" style="position: relative; z-index: 40; width: 75px; flex-shrink: 0; align-self: stretch; border-right: 1px solid var(--ez-color--grey-10); box-sizing: border-box; background: var(--ez-surface)">
+    <div style="position: sticky; top: 0; height: 100vh; max-height: 100vh; min-height: min(100vh, 720px); display: flex; flex-direction: column; padding: 20px 12px; box-sizing: border-box">
+    <a href="AI Magic.dc.html" aria-label="Vecteezy home" style="display: flex; align-items: center; justify-content: center; padding: 0 0 31px">
+      <img src="assets/img/logos/orange-logomark.svg" alt="Vecteezy" style="height: 40px; display: block; width: 40px">
+    </a>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true"><defs><linearGradient id="vzNavGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24"><stop offset="0" stop-color="#ff7900"></stop><stop offset="1" stop-color="#fd3198"></stop></linearGradient></defs></svg>
+    <nav style="display: flex; flex-direction: column; gap: 4px; flex: 1; margin-top: -7px">
+      <sc-for list="{{ appRail }}" as="ar" hint-placeholder-count="8">
+        <a href="AI Magic.dc.html" aria-label="{{ ar.label }}" class="nav-item" style="position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: var(--ez-color--grey-100); background: transparent; transition: background .15s ease, color .15s ease" style-hover="color: var(--ez-color--grey-100)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0" dangerouslySetInnerHTML="{{ ar.icon }}"></svg>
+          <span class="nav-tip" style="display: none; position: absolute; left: calc(100% + 14px); top: 50%; transform: translateY(-50%); background: var(--ez-color--grey-100); color: {{ tipTextColor }}; font-size: 12px; font-weight: 600; padding: 5px 8px; border-radius: 6px; white-space: nowrap; pointer-events: none; z-index: 10; box-shadow: 0 2px 8px rgba(14, 35, 50, .2)" style-before="content: ''; position: absolute; left: -4px; top: 50%; margin-top: -4px; width: 8px; height: 8px; background: var(--ez-color--grey-100); transform: rotate(45deg); border-radius: 1px">{{ ar.label }}</span>
+        </a>
+      </sc-for>
+      <div style="position: absolute; left: 12px; bottom: 20px; width: 52px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--ez-surface); z-index: 5">
+        <a href="#" aria-label="Account" onClick="{{ noop }}" class="nav-item nav-acct" style="position: relative; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 9999px; background: {{ railAvatarBg }}; box-sizing: border-box; color: var(--ez-color--grey-60); transition: box-shadow .15s ease" style-hover="box-shadow: 0 0 0 2px var(--ez-surface), 0 0 0 4px var(--ez-color--accent)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: {{ railAvatarIconDisplay }}"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span style="position: absolute; top: -3px; right: -3px; display: {{ railProBadgeDisplay }}; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, #ff7900, #fd3198); border: 2px solid var(--ez-surface)">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+          </span>
+          <span class="nav-tip" style="display: none; position: absolute; left: calc(100% + 14px); top: 50%; transform: translateY(-50%); background: var(--ez-color--grey-100); color: {{ tipTextColor }}; font-size: 12px; font-weight: 600; padding: 5px 8px; border-radius: 6px; white-space: nowrap; pointer-events: none; z-index: 10; box-shadow: 0 2px 8px rgba(14, 35, 50, .2)" style-before="content: ''; position: absolute; left: -4px; top: 50%; margin-top: -4px; width: 8px; height: 8px; background: var(--ez-color--grey-100); transform: rotate(45deg); border-radius: 1px">Account</span>
+        </a>
+      </div>
+    </nav>
+    </div>
+  </aside>
+  </sc-if>
+
+
+  <sc-if value="{{ showSidebar }}" hint-placeholder-val="{{ true }}">
+  <aside data-screen-label="Settings nav" style="flex-shrink: 0; width: 256px; align-self: stretch; background: {{ sideBg }}; border-right: {{ sideBorder }}">
+  <div style="position: sticky; top: 0; height: 100vh; max-height: 100vh; min-height: min(100vh, 720px); box-sizing: border-box; padding: 24px 16px 26px; display: flex; flex-direction: column; gap: 4px">
+    <sc-if value="{{ showBackLink }}" hint-placeholder-val="{{ true }}">
+    <a href="AI Magic.dc.html" style="display: flex; align-items: center; gap: 8px; padding: 6px 12px 22px; color: var(--ez-color--grey-60); font-size: 13px; font-weight: 600">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+      Back to Vecteezy
+    </a>
+    </sc-if>
+    <div style="padding: 2px 12px 33px; font-size: 22px; font-weight: 700; letter-spacing: -.01em">Settings</div>
+    <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="6">
+      <a href="#" onClick="{{ n.go }}" style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 9999px; background: {{ n.bg }}; color: {{ n.fg }}; font-size: 15px; font-weight: {{ n.weight }}; transition: background .15s ease, color .15s ease" style-hover="background: {{ n.hoverBg }}; color: {{ n.hoverFg }}">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0" dangerouslySetInnerHTML="{{ n.icon }}"></svg>
+        <span>{{ n.label }}</span>
+      </a>
+    </sc-for>
+    <div style="flex: 1"></div>
+    <a href="#" onClick="{{ noop }}" style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 9999px; color: var(--ez-color--grey-70); font-size: 14px" style-hover="background: var(--ez-color--grey-5); color: var(--ez-color--grey-100)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path></svg>
+      Log out
+    </a>
+  </div>
+  </aside>
+  </sc-if>
+
+  <main style="flex: 1; min-width: 0; display: flex; flex-direction: column; overflow-y: {{ mainOverflow }}">
+    <sc-if value="{{ isModal }}" hint-placeholder-val="{{ false }}">
+      <a href="AI Magic.dc.html" aria-label="Close settings" title="Close" style="position: absolute; top: 16px; right: 16px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 9999px; color: var(--ez-color--grey-70)" style-hover="background: var(--ez-color--grey-5); color: var(--ez-color--grey-100)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </a>
+    </sc-if>
+    <sc-if value="{{ isTabsLayout }}" hint-placeholder-val="{{ false }}">
+      <header data-screen-label="Account header" style="background: var(--ez-surface); border-bottom: 1px solid var(--ez-color--grey-10)">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 20px 48px 0; box-sizing: border-box">
+          <a href="AI Magic.dc.html" style="display: inline-flex; align-items: center; gap: 6px; color: var(--ez-color--grey-60); font-size: 13px; font-weight: 600">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+            Back to Vecteezy
+          </a>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 20px 0 24px; flex-wrap: wrap">
+            <span style="width: 56px; height: 56px; border-radius: 9999px; flex-shrink: 0; background: var(--ez-color--grey-10) url('assets/img/avatar-jason.jpg') center / cover no-repeat"></span>
+            <div style="min-width: 0">
+              <div style="display: flex; align-items: center; gap: 10px">
+                <span style="font-size: 22px; font-weight: 700">{{ fullName }}</span>
+                <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 9999px; background: {{ planBadgeBg }}; color: {{ planBadgeFg }}; font-size: 11px; font-weight: 700; letter-spacing: .04em">{{ planBadgeLabel }}</span>
+              </div>
+              <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 2px">shawn@eezy.com</div>
+            </div>
+            <div style="flex: 1"></div>
+            <button onClick="{{ logOut }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--grey-5)">Log out</button>
+          </div>
+          <nav style="display: flex; gap: 28px; overflow-x: auto">
+            <sc-for list="{{ tabItems }}" as="tb" hint-placeholder-count="6">
+              <a href="#" onClick="{{ tb.go }}" style="padding: 12px 2px; border-bottom: 2px solid {{ tb.bar }}; color: {{ tb.fg }}; font-size: 14px; font-weight: {{ tb.weight }}; white-space: nowrap; transition: color .15s ease" style-hover="color: var(--ez-color--grey-100)">{{ tb.label }}</a>
+            </sc-for>
+          </nav>
+        </div>
+      </header>
+    </sc-if>
+    <div style="flex: 1; display: flex; gap: 40px; width: 100%; max-width: {{ rowMax }}; margin: {{ rowMargin }}; padding: 0 48px; box-sizing: border-box">
+    <div style="flex: 1; min-width: 0; padding: {{ contentPad }}">
+
+      <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ false }}">
+        <div data-screen-label="Settings overview" style="display: flex; flex-direction: column; gap: 32px">
+          <a href="AI Magic.dc.html" style="display: inline-flex; align-items: center; gap: 6px; color: var(--ez-color--grey-60); font-size: 13px; font-weight: 600; align-self: flex-start">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+            Back to Vecteezy
+          </a>
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
+            <span style="width: 72px; height: 72px; border-radius: 9999px; flex-shrink: 0; background: var(--ez-color--grey-10) url('assets/img/avatar-jason.jpg') center / cover no-repeat"></span>
+            <div style="min-width: 0">
+              <div style="display: flex; align-items: center; gap: 10px">
+                <h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700">{{ fullName }}</h1>
+                <span style="display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 9999px; background: {{ planBadgeBg }}; color: {{ planBadgeFg }}; font-size: 11px; font-weight: 700; letter-spacing: .04em">{{ planBadgeLabel }}</span>
+              </div>
+              <div style="font-size: 15px; color: var(--ez-color--grey-60); margin-top: 4px">shawn@eezy.com</div>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px">
+            <sc-for list="{{ hubTiles }}" as="ht" hint-placeholder-count="6">
+              <a href="#" onClick="{{ ht.go }}" style="display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 14px; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10); color: var(--ez-color--grey-100); transition: border-color .15s ease, box-shadow .15s ease" style-hover="border-color: var(--ez-color--grey-20); box-shadow: 0 8px 24px rgba(14, 35, 50, .08); color: var(--ez-color--grey-100)">
+                <div style="display: flex; align-items: center; justify-content: space-between">
+                  <span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: var(--ez-color--accent-light); color: var(--ez-color--accent)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" dangerouslySetInnerHTML="{{ ht.icon }}"></svg>
+                  </span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ez-color--grey-40)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                </div>
+                <div>
+                  <div style="font-size: 16px; font-weight: 600">{{ ht.label }}</div>
+                  <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 4px">{{ ht.status }}</div>
+                </div>
+                <sc-if value="{{ ht.hasBar }}" hint-placeholder-val="{{ false }}">
+                  <div style="height: 6px; border-radius: 9999px; background: var(--ez-color--grey-10); overflow: hidden"><div style="width: 35%; height: 100%; border-radius: 9999px; background: linear-gradient(-89deg, #fd3198, #ff7900)"></div></div>
+                </sc-if>
+              </a>
+            </sc-for>
+          </div>
+          <a href="#" onClick="{{ noop }}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: var(--ez-color--grey-70); font-size: 14px; font-weight: 600" style-hover="color: var(--ez-color--grey-100)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path></svg>
+            Log out
+          </a>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ showTitle }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px">
+        <div>
+          <sc-if value="{{ isHubDetail }}" hint-placeholder-val="{{ false }}">
+            <a href="#" onClick="{{ goOverview }}" style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 12px; color: var(--ez-color--grey-60); font-size: 13px; font-weight: 600">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+              All settings
+            </a>
+          </sc-if>
+          <h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -.01em">{{ sectionTitle }}</h1>
+          <p style="margin: 6px 0 0; font-size: 15px; color: var(--ez-color--grey-60); text-wrap: pretty">{{ sectionDesc }}</p>
+        </div>
+        <sc-if value="{{ showProfileLink }}" hint-placeholder-val="{{ true }}">
+          <a href="#" onClick="{{ noop }}" style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600">View public profile
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </a>
+        </sc-if>
+        <sc-if value="{{ showDevLink }}" hint-placeholder-val="{{ false }}">
+          <a href="#" onClick="{{ noop }}" style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600">API documentation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+          </a>
+        </sc-if>
+      </div>
+      </sc-if>
+
+      <div style="display: flex; flex-direction: column; gap: {{ groupGap }}">
+
+        <!-- PROFILE -->
+        <sc-if value="{{ isProfile }}" hint-placeholder-val="{{ true }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="profile" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.profile }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.profile }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.profile }}</p>
+            </div>
+          </sc-if>
+          <section data-screen-label="Profile" style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Personal info</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Your name and photo appear on your public profile.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 20px">
+              <div style="display: flex; align-items: center; gap: 16px">
+                <span style="width: 64px; height: 64px; border-radius: 9999px; flex-shrink: 0; background: var(--ez-color--grey-10) url('assets/img/avatar-jason.jpg') center / cover no-repeat"></span>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                  <button onClick="{{ noop }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; flex-shrink: 0" style-hover="background: var(--ez-color--grey-5)">Change photo</button>
+                  <button onClick="{{ noop }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: none; background: transparent; color: var(--ez-color--grey-60); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="color: var(--ez-color--grey-100)">Remove</button>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+                <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">First name
+                  <input value="{{ profile.first }}" onChange="{{ onFirst }}" style="height: 40px; padding: 0 12px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Last name
+                  <input value="{{ profile.last }}" onChange="{{ onLast }}" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Username
+                  <span style="display: flex; align-items: center; height: 40px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); overflow: hidden">
+                    <span style="padding: 0 2px 0 12px; font-size: 14px; font-weight: 400; color: var(--ez-color--grey-50)">@</span>
+                    <input value="{{ profile.username }}" onChange="{{ onUsername }}" style="flex: 1; min-width: 0; height: 100%; padding: 0 12px 0 0; border: none; background: transparent; color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+                  </span>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Country
+                  <div style="display: {{ countryScrim }}; position: fixed; inset: 0; z-index: 35" onClick="{{ closeCountry }}"></div>
+                  <span style="position: relative; display: flex">
+                    <button type="button" onClick="{{ toggleCountry }}" style="display: flex; align-items: center; width: 100%; height: 40px; padding: 0 14px 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3)); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400; cursor: pointer; white-space: nowrap; text-align: left" style-hover="border-color: var(--ez-color--grey-40)"><span style="flex: 1">{{ profile.country }}</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-left: 14px; color: var(--ez-color--grey-60)"><path d="m6 9 6 6 6-6"></path></svg></button>
+                    <sc-if value="{{ countryOpen }}" hint-placeholder-val="{{ false }}">
+                      <div class="type-menu-panel" style="position: absolute; top: calc(100% + 10px); left: 0; z-index: 40; background: #fff; border: 1px solid var(--ez-color--grey-10); border-radius: 26px; box-shadow: 0 16px 40px rgba(16, 32, 48, 0.16); padding: var(--spacing-1); min-width: 240px; display: flex; flex-direction: column; gap: 2px; text-align: left">
+                        <sc-for list="{{ countryOptions }}" as="o" hint-placeholder-count="4">
+                          <button type="button" onClick="{{ o.pick }}" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: {{ o.bg }}; border: none; border-radius: 9999px; color: #0e2332; font-family: inherit; font-size: var(--type-body-medium-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; text-align: left; white-space: nowrap" style-hover="background: #eef1f3">
+                            <span style="flex: 1">{{ o.label }}</span>
+                            <span style="display: inline-flex; flex-shrink: 0; box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: {{ o.radioBorder }}; background: {{ o.radioBg }}; box-shadow: {{ o.radioShadow }}"></span>
+                          </button>
+                        </sc-for>
+                      </div>
+                    </sc-if>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Sign-in &amp; security</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">How you log in to Vecteezy.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; padding: {{ rowPad }}">
+                <div style="min-width: 0">
+                  <div style="font-size: 14px; font-weight: 600">Email</div>
+                  <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 2px">shawn@eezy.com</div>
+                </div>
+                <button onClick="{{ noop }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; flex-shrink: 0" style-hover="background: var(--ez-color--grey-5)">Change</button>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; padding: {{ rowPad }}; border-top: 1px solid var(--ez-color--grey-10)">
+                <div style="display: flex; align-items: center; gap: 12px; min-width: 0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" style="flex-shrink: 0"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A10.6 10.6 0 0 0 12 1 11 11 0 0 0 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+                  <div>
+                    <div style="font-size: 14px; font-weight: 600">Google</div>
+                    <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 2px">Connected as shawn@eezy.com</div>
+                  </div>
+                </div>
+                <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 9999px; background: var(--ez-color--success-light); color: var(--ez-color--success-dark); font-size: 12px; font-weight: 600; flex-shrink: 0">Connected</span>
+              </div>
+            </div>
+          </section>
+
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Delete account</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">This can't be undone.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; padding: {{ rowPad }}">
+                <div style="font-size: 14px; color: var(--ez-color--grey-60); text-wrap: pretty">Permanently delete your account, license history, and saved collections.</div>
+                <button onClick="{{ noop }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: 1px solid var(--ez-color--error); background: transparent; color: var(--ez-color--error); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; flex-shrink: 0; white-space: nowrap" style-hover="background: var(--ez-color--error-light)">Delete account</button>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- PLAN & BILLING -->
+        <sc-if value="{{ isBilling }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="billing" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.billing }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.billing }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.billing }}</p>
+            </div>
+          </sc-if>
+          <section data-screen-label="Plan" style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Current plan</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Manage your subscription or credits.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 20px">
+              <sc-if value="{{ isPro }}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+                  <div>
+                    <div style="display: flex; align-items: center; gap: 10px">
+                      <span style="font-size: 20px; font-weight: 700">Pro Unlimited</span>
+                      <span style="display: inline-flex; align-items: center; height: 16px; padding: 0 6px; border-radius: 9999px; background: linear-gradient(-89deg, #fd3198, #ff7900); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: .04em">PRO</span>
+                    </div>
+                    <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 4px">Images + Videos · Individual · Billed monthly</div>
+                  </div>
+                  <div style="text-align: right">
+                    <div style="font-size: 20px; font-weight: 700">$14.84<span style="font-size: 14px; font-weight: 400; color: var(--ez-color--grey-60)">/mo</span></div>
+                    <div style="font-size: 13px; color: var(--ez-color--grey-60); margin-top: 4px">Renews Oct 4, 2026</div>
+                  </div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ isFree }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+                  <div>
+                    <div style="font-size: 20px; font-weight: 700">Free</div>
+                    <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 4px">Free downloads with attribution. 0 Pro downloads.</div>
+                  </div>
+                  <button onClick="{{ noop }}" style="height: 40px; padding: 0 18px; border-radius: 9999px; border: none; background: linear-gradient(-89deg, #fd3198, #ff7900); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="filter: brightness(1.06)">Go Pro</button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ isCredits }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+                  <div>
+                    <div style="font-size: 14px; font-weight: 600; color: var(--ez-color--grey-60)">Extended credits</div>
+                    <div style="font-size: 32px; font-weight: 700; margin-top: 2px">104 <span style="font-size: 15px; font-weight: 400; color: var(--ez-color--grey-60)">credits remaining</span></div>
+                  </div>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                    <button onClick="{{ noop }}" style="height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--grey-5)">Contact sales</button>
+                    <button onClick="{{ noop }}" style="height: 40px; padding: 0 16px; border-radius: 9999px; border: none; background: var(--ez-color--accent); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--accent-hover)">Add credits</button>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </section>
+
+          <sc-if value="{{ hasPaymentMethod }}" hint-placeholder-val="{{ true }}">
+            <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+              <div>
+                <h2 style="margin: 0; font-size: 16px; font-weight: 600">Payment method</h2>
+              </div>
+              <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; padding: {{ rowPad }}">
+                  <div style="display: flex; align-items: center; gap: 12px">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 28px; border-radius: 4px; border: 1px solid var(--ez-color--grey-20); font-size: 11px; font-weight: 800; letter-spacing: .02em; color: #1a1f71; background: #fff">VISA</span>
+                    <div>
+                      <div style="font-size: 14px; font-weight: 600">Visa ending in 4242</div>
+                      <div style="font-size: 13px; color: var(--ez-color--grey-60); margin-top: 2px">Expires 08/28</div>
+                    </div>
+                  </div>
+                  <button onClick="{{ noop }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; flex-shrink: 0" style-hover="background: var(--ez-color--grey-5)">Update</button>
+                </div>
+              </div>
+            </section>
+          </sc-if>
+
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Billing details</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Shown on your invoices and receipts.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Company name
+                <input value="{{ company.name }}" onChange="{{ onCoName }}" placeholder="Optional" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Website
+                <input value="{{ company.site }}" onChange="{{ onCoSite }}" placeholder="Optional" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; grid-column: 1 / -1">Street address
+                <input value="{{ company.street }}" onChange="{{ onCoStreet }}" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">City
+                <input value="{{ company.city }}" onChange="{{ onCoCity }}" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">State
+                <input value="{{ company.state }}" onChange="{{ onCoState }}" style="height: 40px; padding: 0 18px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 400">
+              </label>
+            </div>
+          </section>
+
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Payment history</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Download receipts for past charges.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+              <div style="display: grid; grid-template-columns: 130px minmax(0, 1fr) 80px 64px 72px; gap: 16px; align-items: center; padding: 10px {{ rowPadX }}; font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60); border-bottom: 1px solid var(--ez-color--grey-10)">
+                <span>Date</span><span>Description</span><span style="text-align: right">Amount</span><span>Status</span><span></span>
+              </div>
+              <sc-for list="{{ payments }}" as="p" hint-placeholder-count="6">
+                <div style="display: grid; grid-template-columns: 130px minmax(0, 1fr) 80px 64px 72px; gap: 16px; align-items: center; padding: 12px {{ rowPadX }}; font-size: 14px; border-bottom: 1px solid var(--ez-color--grey-10)">
+                  <span style="color: var(--ez-color--grey-100)">{{ p.date }}</span>
+                  <span style="color: var(--ez-color--grey-60); overflow: hidden; text-overflow: ellipsis; white-space: nowrap">{{ p.desc }}</span>
+                  <span style="text-align: right; font-variant-numeric: tabular-nums">{{ p.amount }}</span>
+                  <span style="display: inline-flex; align-items: center; justify-content: center; height: 22px; border-radius: 9999px; background: var(--ez-color--success-light); color: var(--ez-color--success-dark); font-size: 12px; font-weight: 600">Paid</span>
+                  <a href="#" onClick="{{ noop }}" style="display: inline-flex; align-items: center; justify-content: flex-end; gap: 4px; font-size: 14px; font-weight: 600">Receipt</a>
+                </div>
+              </sc-for>
+              <div style="display: flex; justify-content: center; padding: 12px">
+                <button onClick="{{ togglePayments }}" style="height: 32px; padding: 0 12px; border-radius: 9999px; border: none; background: transparent; color: var(--ez-color--grey-70); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--grey-5); color: var(--ez-color--grey-100)">{{ paymentsToggleLabel }}</button>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- LICENSES -->
+        <sc-if value="{{ isLicenses }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="licenses" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.licenses }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.licenses }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.licenses }}</p>
+            </div>
+          </sc-if>
+          <section data-screen-label="Licenses" style="display: flex; flex-direction: column; gap: 16px">
+            <div style="display: {{ licMenuScrim }}; position: fixed; inset: 0; z-index: 35" onClick="{{ closeLicMenus }}"></div>
+            <div style="display: flex; gap: 24px; border-bottom: 1px solid var(--ez-color--grey-10)">
+              <sc-for list="{{ licTabs }}" as="t" hint-placeholder-count="4">
+                <button onClick="{{ t.go }}" style="padding: 10px 2px; margin-bottom: -1px; border: none; border-bottom: 2px solid {{ t.bar }}; background: none; color: {{ t.fg }}; font: inherit; font-size: 14px; font-weight: {{ t.weight }}; cursor: pointer" style-hover="color: var(--ez-color--grey-100)">{{ t.label }} <span style="color: var(--ez-color--grey-50); font-weight: 400">{{ t.count }}</span></button>
+              </sc-for>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap">
+              <label style="flex: 1; min-width: 220px; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: var(--ez-surface); box-sizing: border-box; color: var(--ez-color--grey-50)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                <input value="{{ licQuery }}" onChange="{{ onLicQuery }}" placeholder="Search by ID or content type" style="flex: 1; min-width: 0; border: none; outline: none; background: transparent; color: var(--ez-color--grey-100); font: inherit; font-size: 14px">
+                <sc-if value="{{ licHasQuery }}" hint-placeholder-val="{{ false }}">
+                  <button type="button" aria-label="Clear search" onClick="{{ clearLicQuery }}" style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin-right: -6px; flex-shrink: 0; padding: 0; border: none; border-radius: 9999px; background: transparent; color: var(--ez-color--grey-60); cursor: pointer" style-hover="color: var(--ez-color--grey-100); background: var(--ez-color--grey-5)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                  </button>
+                </sc-if>
+              </label>
+              <span style="position: relative; display: inline-flex">
+                <button onClick="{{ toggleLicType }}" style="display: inline-flex; align-items: center; height: 40px; padding: 0 14px 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3)); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; cursor: pointer; white-space: nowrap" style-hover="border-color: var(--ez-color--grey-40)">{{ licType }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-left: 14px; color: var(--ez-color--grey-60)"><path d="m6 9 6 6 6-6"></path></svg></button>
+                <sc-if value="{{ licTypeOpen }}" hint-placeholder-val="{{ false }}">
+                  <div class="type-menu-panel" style="position: absolute; top: calc(100% + 10px); left: 0; z-index: 40; background: #fff; border: 1px solid var(--ez-color--grey-10); border-radius: 26px; box-shadow: 0 16px 40px rgba(16, 32, 48, 0.16); padding: var(--spacing-1); min-width: 240px; display: flex; flex-direction: column; gap: 2px; text-align: left">
+                    <sc-for list="{{ licTypeOptions }}" as="o" hint-placeholder-count="4">
+                      <button onClick="{{ o.pick }}" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: {{ o.bg }}; border: none; border-radius: 9999px; color: #0e2332; font-family: inherit; font-size: var(--type-body-medium-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; text-align: left; white-space: nowrap" style-hover="background: #eef1f3">
+                        <span style="flex: 1">{{ o.label }}</span>
+                        <span style="display: inline-flex; flex-shrink: 0; box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: {{ o.radioBorder }}; background: {{ o.radioBg }}; box-shadow: {{ o.radioShadow }}"></span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </span>
+              <span style="position: relative; display: inline-flex">
+                <button onClick="{{ toggleLicDate }}" style="display: inline-flex; align-items: center; height: 40px; padding: 0 14px 0 16px; border: 1px solid var(--ez-color--grey-20); border-radius: 9999px; background: linear-gradient(180deg, var(--ez-surface), var(--ez-color--grey-3)); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; cursor: pointer; white-space: nowrap" style-hover="border-color: var(--ez-color--grey-40)">{{ licDate }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-left: 14px; color: var(--ez-color--grey-60)"><path d="m6 9 6 6 6-6"></path></svg></button>
+                <sc-if value="{{ licDateOpen }}" hint-placeholder-val="{{ false }}">
+                  <div class="type-menu-panel" style="position: absolute; top: calc(100% + 10px); left: 0; z-index: 40; background: #fff; border: 1px solid var(--ez-color--grey-10); border-radius: 26px; box-shadow: 0 16px 40px rgba(16, 32, 48, 0.16); padding: var(--spacing-1); min-width: 240px; display: flex; flex-direction: column; gap: 2px; text-align: left">
+                    <sc-for list="{{ licDateOptions }}" as="o" hint-placeholder-count="4">
+                      <button onClick="{{ o.pick }}" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: {{ o.bg }}; border: none; border-radius: 9999px; color: #0e2332; font-family: inherit; font-size: var(--type-body-medium-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; text-align: left; white-space: nowrap" style-hover="background: #eef1f3">
+                        <span style="flex: 1">{{ o.label }}</span>
+                        <span style="display: inline-flex; flex-shrink: 0; box-sizing: border-box; width: 18px; height: 18px; border-radius: 50%; border: {{ o.radioBorder }}; background: {{ o.radioBg }}; box-shadow: {{ o.radioShadow }}"></span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </span>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+              <div style="display: grid; grid-template-columns: 56px 100px 96px minmax(0, 1fr) 120px 152px; gap: 16px; align-items: center; padding: 10px {{ rowPadX }}; font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60); border-bottom: 1px solid var(--ez-color--grey-10)">
+                <span></span><span>ID</span><span>Date</span><span>License Type</span><span>Content Type</span><span></span>
+              </div>
+              <sc-for list="{{ licenses }}" as="l" hint-placeholder-count="5">
+                <div style="display: grid; grid-template-columns: 56px 100px 96px minmax(0, 1fr) 120px 152px; gap: 16px; align-items: center; padding: 12px {{ rowPadX }}; font-size: 14px; border-bottom: 1px solid var(--ez-color--grey-10)">
+                  <span style="width: 56px; height: 40px; border-radius: 6px; background: {{ l.thumb }}"></span>
+                  <span style="font-variant-numeric: tabular-nums; color: var(--ez-color--grey-100)">{{ l.id }}</span>
+                  <span style="color: var(--ez-color--grey-60); font-variant-numeric: tabular-nums">{{ l.date }}</span>
+                  <span><span style="display: inline-flex; align-items: center; height: 22px; padding: 0 9px; border-radius: 9999px; background: {{ l.pillBg }}; color: {{ l.pillFg }}; font-size: 12px; font-weight: 600; white-space: nowrap">{{ l.type }}</span></span>
+                  <span style="color: var(--ez-color--grey-60)">{{ l.content }}</span>
+                  <span style="display: flex; align-items: center; justify-content: flex-end; gap: 8px">
+                    <sc-if value="{{ l.upgrade }}" hint-placeholder-val="{{ false }}">
+                      <a href="#" onClick="{{ noop }}" style="font-size: 13px; font-weight: 600; white-space: nowrap">Upgrade license</a>
+                    </sc-if>
+                    <button aria-label="Download" title="Download" onClick="{{ noop }}" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-80); cursor: pointer" style-hover="background: var(--ez-color--grey-5); color: var(--ez-color--grey-100)">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                    </button>
+                  </span>
+                </div>
+              </sc-for>
+              <sc-if value="{{ licEmpty }}" hint-placeholder-val="{{ false }}">
+                <div style="padding: 40px 20px; text-align: center; font-size: 14px; color: var(--ez-color--grey-60)">No licenses match your search. <a href="#" onClick="{{ clearLic }}" style="font-weight: 600">Clear filters</a></div>
+              </sc-if>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- AI USAGE -->
+        <sc-if value="{{ isAi }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="ai" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.ai }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.ai }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.ai }}</p>
+            </div>
+          </sc-if>
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Plan usage limits</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">AI Usage limits reset on Tuesday October 22, at 5:05 PM GMT.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 14px">
+              <div style="display: grid; grid-template-columns: minmax(120px, 1fr) minmax(0, 1.6fr) auto; align-items: center; gap: 24px">
+                <span style="font-size: 15px; font-weight: 600">Monthly usage</span>
+                <div style="height: 8px; border-radius: 9999px; background: var(--ez-color--grey-10); overflow: hidden"><div style="width: 27%; height: 100%; border-radius: 9999px; background: var(--color-orange-100)"></div></div>
+                <span style="font-size: 13px; color: var(--ez-color--grey-70); white-space: nowrap">27% used</span>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+                <span style="font-size: 13px; color: var(--ez-color--grey-60)">Last updated: less than a minute ago</span>
+                <a href="#" onClick="{{ noop }}" style="font-size: 13px; font-weight: 600">Learn more about usage limits</a>
+              </div>
+            </div>
+          </section>
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Current AI plan</h2>
+              
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 14px">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+                <span style="font-size: 15px; font-weight: 600">Unlimited All Access + AI Lite</span>
+                <a href="#" onClick="{{ noop }}" style="display: inline-flex; align-items: center; height: 32px; padding: 0 16px; border: 1px solid var(--color-orange-100); border-radius: 9999px; font-size: 13px; font-weight: 600; color: var(--color-orange-100); white-space: nowrap" style-hover="background: var(--color-orange-10)">Upgrade</a>
+              </div>
+            </div>
+          </section>
+          <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Auto rebill</h2>
+              
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 14px">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px">
+                <span style="font-size: 14px; line-height: 1.45; color: var(--ez-color--grey-80); text-wrap: pretty">Automatically replenish your usage credits when you reach your limit, so you can keep using Vecteezy AI without interruption.</span>
+                <button role="switch" aria-checked="{{ rebillOn }}" aria-label="Auto rebill" onClick="{{ toggleRebill }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 0; border: none; background: transparent; cursor: pointer; font-family: inherit; flex-shrink: 0">
+                  <span style="font-size: 12px; font-weight: 700; color: {{ rebillLabelColor }}; min-width: 24px; text-align: right">{{ rebillLabel }}</span>
+                  <span style="position: relative; width: 40px; height: 24px; border-radius: 9999px; background: {{ rebillTrack }}; transition: background .15s ease">
+                    <span style="position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 9999px; background: #fff; box-shadow: 0 1px 3px rgba(14, 35, 50, .25); transform: {{ rebillKnob }}; transition: transform .15s ease"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+        <!-- NOTIFICATIONS -->
+        <sc-if value="{{ isNotif }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="notifications" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.notifications }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.notifications }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.notifications }}</p>
+            </div>
+          </sc-if>
+          <sc-for list="{{ prefGroups }}" as="g" hint-placeholder-count="2">
+            <section style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+              <div>
+                <h2 style="margin: 0; font-size: 16px; font-weight: 600">{{ g.title }}</h2>
+                <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">{{ g.desc }}</p>
+              </div>
+              <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden">
+                <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="2">
+                  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: {{ rowPad }}; border-top: {{ it.rule }}">
+                    <div style="min-width: 0">
+                      <div style="font-size: 14px; font-weight: 600">{{ it.label }}</div>
+                      <div style="font-size: 13px; color: var(--ez-color--grey-60); margin-top: 2px; text-wrap: pretty">{{ it.desc }}</div>
+                    </div>
+                    <button role="switch" aria-checked="{{ it.on }}" aria-label="{{ it.label }}" onClick="{{ it.toggle }}" style="position: relative; flex-shrink: 0; width: 40px; height: 24px; padding: 0; border: none; border-radius: 9999px; background: {{ it.track }}; cursor: pointer; transition: background .15s ease">
+                      <span style="position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 9999px; background: #fff; box-shadow: 0 1px 2px rgba(14, 35, 50, .25); transform: {{ it.knob }}; transition: transform .15s ease"></span>
+                    </button>
+                  </div>
+                </sc-for>
+              </div>
+            </section>
+          </sc-for>
+        </sc-if>
+
+        <!-- DEVELOPER / API -->
+        <sc-if value="{{ isDev }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+            <div data-sec="dev" style="display: flex; flex-direction: column; gap: 4px; padding-top: {{ secHeadPad.dev }}">
+              <h2 style="margin: 0; font-size: 22px; line-height: 1.25; font-weight: 700">{{ secTitles.dev }}</h2>
+              <p style="margin: 0; font-size: 14px; color: var(--ez-color--grey-60)">{{ secDescs.dev }}</p>
+            </div>
+          </sc-if>
+          <section data-screen-label="API plan" style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">API plan</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Usage resets on the 1st of each month.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; padding: {{ cardPad }}; display: flex; flex-direction: column; gap: 18px">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+                <div>
+                  <div style="font-size: 18px; font-weight: 700">Free API</div>
+                  <div style="font-size: 14px; color: var(--ez-color--grey-60); margin-top: 2px">Need higher volume? Pay only for what you use.</div>
+                </div>
+                <button onClick="{{ noop }}" style="height: 40px; padding: 0 20px; border-radius: 9999px; border: none; background: var(--ez-color--accent); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--accent-hover)">Upgrade to Pay-As-You-Go</button>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding-top: 18px; border-top: 1px solid var(--ez-color--grey-10)">
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                  <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 600">General calls</span><span style="color: var(--ez-color--grey-60)">0 / No limit</span></div>
+                  <div style="height: 6px; border-radius: 9999px; background: var(--ez-color--grey-10)"></div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px">
+                  <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 600">Downloads</span><span style="color: var(--ez-color--grey-60)">0 / 500</span></div>
+                  <div style="height: 6px; border-radius: 9999px; background: var(--ez-color--grey-10)"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section data-screen-label="API keys" style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">API keys</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Keep your secret key private. Never expose it in the browser or client-side code.</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px">
+              <sc-if value="{{ hasKey }}" hint-placeholder-val="{{ true }}">
+                <div style="display: flex; flex-direction: column; gap: 16px; padding: {{ cardPad }}">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; font-size: 14px">
+                    <div><div style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">Name</div><div style="margin-top: 4px">Default</div></div>
+                    <div><div style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">Created</div><div style="margin-top: 4px">Sep 27, 2026</div></div>
+                    <div><div style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">Account ID</div><div style="margin-top: 4px; font-variant-numeric: tabular-nums">37968</div></div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 6px">
+                    <span style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">Secret key</span>
+                    <div style="display: flex; gap: 8px">
+                      <span style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 6px 0 12px; border: 1px solid var(--ez-color--grey-20); border-radius: 10px; background: var(--ez-color--grey-5)">
+                        <span style="flex: 1; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--ez-color--grey-80); overflow: hidden; white-space: nowrap; text-overflow: ellipsis">{{ secretDisplay }}</span>
+                        <span style="position: relative; display: inline-flex; flex-shrink: 0" onMouseEnter="{{ keyTipOn }}" onMouseLeave="{{ keyTipOff }}">
+                        <button aria-label="{{ keyTipText }}" onClick="{{ toggleKey }}" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; flex-shrink: 0; padding: 0; border: none; border-radius: 9999px; background: transparent; color: var(--ez-color--grey-60); cursor: pointer" style-hover="color: var(--ez-color--grey-100); background: var(--ez-color--grey-10)">
+                          <sc-if value="{{ keyShown }}" hint-placeholder-val="{{ false }}">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg>
+                          </sc-if>
+                          <sc-if value="{{ keyHidden }}" hint-placeholder-val="{{ true }}">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                          </sc-if>
+                        </button>
+                        <span style="display: {{ keyTipDisplay }}; position: absolute; bottom: calc(100% + 10px); right: -4px; z-index: 50; padding: 6px 10px; border-radius: 8px; background: var(--ez-color--grey-100); color: #fff; font-family: inherit; font-size: 12px; font-weight: 600; white-space: nowrap; pointer-events: none" style-after="content: ''; position: absolute; top: 100%; right: 15px; border: 5px solid transparent; border-top-color: var(--ez-color--grey-100)">{{ keyTipText }}</span>
+                        </span>
+                      </span>
+                      <button onClick="{{ copyKey }}" style="height: 40px; padding: 0 18px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); background: var(--ez-surface); color: var(--ez-color--grey-100); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; flex-shrink: 0" style-hover="background: var(--ez-color--grey-5)">Copy</button>
+                    </div>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px {{ rowPadX }}">
+                  <button onClick="{{ regenKey }}" style="height: 32px; padding: 0 10px; border-radius: 9999px; border: none; background: transparent; color: var(--ez-color--grey-70); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--grey-5); color: var(--ez-color--grey-100)">Regenerate</button>
+                  <button onClick="{{ revokeKey }}" style="height: 32px; padding: 0 10px; border-radius: 9999px; border: none; background: transparent; color: var(--ez-color--error); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--error-light)">Revoke key</button>
+                </div>
+              </sc-if>
+              <sc-if value="{{ noKey }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 20px; text-align: center">
+                  <div style="font-size: 15px; font-weight: 600">No active API keys</div>
+                  <div style="font-size: 14px; color: var(--ez-color--grey-60)">Generate a key to start making requests.</div>
+                  <button onClick="{{ genKey }}" style="height: 40px; padding: 0 16px; border-radius: 9999px; border: none; background: var(--ez-color--accent); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--accent-hover)">Generate API key</button>
+                </div>
+              </sc-if>
+            </div>
+          </section>
+
+          <section data-screen-label="API usage" style="display: grid; grid-template-columns: {{ groupCols }}; gap: 16px 40px; padding-top: {{ groupPadTop }}; border-top: {{ groupRule }}">
+            <div>
+              <h2 style="margin: 0; font-size: 16px; font-weight: 600">Usage &amp; cost</h2>
+              <p style="margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">September 2026</p>
+            </div>
+            <div style="background: {{ cardBg }}; border: {{ cardBorder }}; border-radius: 12px; overflow: hidden; font-size: 14px">
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px 80px 80px; gap: 16px; padding: 10px {{ rowPadX }}; font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60); border-bottom: 1px solid var(--ez-color--grey-10)">
+                <span>Charge</span><span>Rate</span><span style="text-align: right">Usage</span><span style="text-align: right">Cost</span>
+              </div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px 80px 80px; gap: 16px; padding: 12px {{ rowPadX }}; border-bottom: 1px solid var(--ez-color--grey-10)">
+                <span>General calls</span><span style="color: var(--ez-color--grey-60)">$0.000 / call</span><span style="text-align: right">0</span><span style="text-align: right">$0.00</span>
+              </div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px 80px 80px; gap: 16px; padding: 12px {{ rowPadX }}; border-bottom: 1px solid var(--ez-color--grey-10)">
+                <span>Downloads</span><span style="color: var(--ez-color--grey-60)">$0.00 / download</span><span style="text-align: right">0</span><span style="text-align: right">$0.00</span>
+              </div>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 80px; gap: 16px; padding: 14px {{ rowPadX }}; font-weight: 700">
+                <span>Estimated total</span><span style="text-align: right">$0.00</span>
+              </div>
+            </div>
+          </section>
+        </sc-if>
+
+      </div>
+    </div>
+    <sc-if value="{{ isScroll }}" hint-placeholder-val="{{ false }}">
+      <aside data-screen-label="On this page" style="width: 220px; flex-shrink: 0; padding-top: 48px">
+        <div style="position: sticky; top: 32px; display: flex; flex-direction: column; gap: 2px">
+          <span style="padding: 0 12px 10px; font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">On this page</span>
+          <sc-for list="{{ tocItems }}" as="tc" hint-placeholder-count="6">
+            <a href="#" onClick="{{ tc.go }}" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; border-radius: 9999px; color: {{ tc.fg }}; font-size: 14px; font-weight: {{ tc.weight }}; transition: color .15s ease" style-hover="color: var(--ez-color--grey-100)">
+              <span style="width: 3px; height: 16px; border-radius: 9999px; background: {{ tc.dot }}; flex-shrink: 0"></span>{{ tc.label }}
+            </a>
+          </sc-for>
+          <div style="height: 1px; background: var(--ez-color--grey-10); margin: 14px 12px"></div>
+          <a href="#" onClick="{{ logOut }}" style="padding: 4px 12px; font-size: 14px; color: var(--ez-color--grey-70)" style-hover="color: var(--ez-color--grey-100)">Log out</a>
+        </div>
+      </aside>
+    </sc-if>
+    <sc-if value="{{ isTabsLayout }}" hint-placeholder-val="{{ false }}">
+      <aside data-screen-label="Summary rail" style="width: 300px; flex-shrink: 0; padding-top: 32px">
+        <div style="position: sticky; top: 24px; display: flex; flex-direction: column; gap: 16px">
+          <div style="padding: 20px; border-radius: 12px; border: 1px solid var(--ez-color--grey-10); background: var(--ez-surface); display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">Your plan</span>
+            <span style="font-size: 18px; font-weight: 700">{{ planName }}</span>
+            <span style="font-size: 13px; color: var(--ez-color--grey-60)">{{ planLine }}</span>
+            <button onClick="{{ goBilling }}" style="margin-top: 10px; height: 38px; border-radius: 9999px; border: none; background: {{ planCtaBg }}; color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="filter: brightness(1.06)">{{ planCta }}</button>
+          </div>
+          <div style="padding: 20px; border-radius: 12px; border: 1px solid var(--ez-color--grey-10); background: var(--ez-surface); display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 12px; font-weight: 600; color: var(--ez-color--grey-60)">AI Magic today</span>
+            <span style="font-size: 15px; font-weight: 600">7 of 20 generations</span>
+            <div style="height: 6px; border-radius: 9999px; background: var(--ez-color--grey-10); overflow: hidden"><div style="width: 35%; height: 100%; border-radius: 9999px; background: linear-gradient(-89deg, #fd3198, #ff7900)"></div></div>
+            <a href="#" onClick="{{ goAi }}" style="font-size: 13px; font-weight: 600">View usage</a>
+          </div>
+          <div style="padding: 0 4px; font-size: 13px; line-height: 1.5; color: var(--ez-color--grey-60)">Questions about your account? <a href="#" onClick="{{ noop }}" style="font-weight: 600">Contact support</a></div>
+        </div>
+      </aside>
+    </sc-if>
+    </div>
+
+    <div style="display: {{ saveBarDisplay }}; position: sticky; bottom: 24px; z-index: 20; justify-content: center; padding: 0 24px; pointer-events: none">
+      <div style="pointer-events: auto; display: flex; align-items: center; gap: 16px; padding: 10px 10px 10px 20px; border-radius: 9999px; background: #0e2332; color: #fff; box-shadow: 0 16px 40px rgba(16, 32, 48, .24)">
+        <span style="font-size: 14px; font-weight: 600">You have unsaved changes</span>
+        <button onClick="{{ discard }}" style="height: 36px; padding: 0 14px; border-radius: 9999px; border: none; background: transparent; color: #fff; opacity: .8; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="opacity: 1; background: rgba(255, 255, 255, .1)">Discard</button>
+        <button onClick="{{ save }}" style="height: 36px; padding: 0 18px; border-radius: 9999px; border: none; background: var(--ez-color--accent); color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer" style-hover="background: var(--ez-color--accent-hover)">Save changes</button>
+      </div>
+    </div>
+    <div style="display: {{ toastDisplay }}; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 30; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 9999px; background: #0e2332; color: #fff; font-size: 14px; font-weight: 600; box-shadow: 0 16px 40px rgba(16, 32, 48, .24)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#75d16d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>{{ toast }}
+    </div>
+  </main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;authState&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;joined&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;logged-in&quot;,&quot;joined&quot;],&quot;section&quot;:&quot;Account&quot;},&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;app&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;sidebar&quot;,&quot;tabs&quot;,&quot;modal&quot;,&quot;scroll&quot;,&quot;app&quot;,&quot;hub&quot;],&quot;section&quot;:&quot;Layout&quot;},&quot;direction&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;flat&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;cards&quot;,&quot;flat&quot;],&quot;section&quot;:&quot;Layout&quot;},&quot;plan&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Pro&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;Free&quot;,&quot;Pro&quot;,&quot;Credits&quot;],&quot;section&quot;:&quot;Account&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;initialSection&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;profile&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;profile&quot;,&quot;billing&quot;,&quot;licenses&quot;,&quot;ai&quot;,&quot;notifications&quot;,&quot;dev&quot;],&quot;section&quot;:&quot;Layout&quot;},&quot;showPageAction&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Original&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;Promotional&quot;,&quot;Option One&quot;,&quot;Option Two&quot;,&quot;Option Four&quot;,&quot;Original&quot;],&quot;section&quot;:&quot;Show page&quot;}}">
+class Component extends DCLogic {
+  state = {
+    section: null,
+    profile: { first: 'Shawn', last: 'Rubel', username: 'shawnrubel', country: 'United States' },
+    savedProfile: null,
+    company: { name: '', site: '', street: '', city: '', state: 'Kentucky' },
+    savedCompany: null,
+    prefs: { newsletter: true, reminders: true, ads: true, productNews: false },
+    savedPrefs: null,
+    licTab: 'downloads', licQuery: '', licType: 'All license types',
+    showKey: false, hasKey: true, showAllPayments: false, toast: ''
+  };
+  componentDidMount() {
+    this.setState(s => ({ savedProfile: { ...s.profile }, savedCompany: { ...s.company }, savedPrefs: { ...s.prefs } }));
+    this.bindSpy();
+  }
+  componentDidUpdate() { this.bindSpy(); }
+  componentWillUnmount() { if (this._ro) this._ro.disconnect(); if (this._spyEl) this._spyEl.removeEventListener('scroll', this._onSpy); }
+  scrollParent() {
+    let n = this._root && this._root.parentElement;
+    while (n && n !== document.body) { const o = getComputedStyle(n).overflowY; if ((o === 'auto' || o === 'scroll') && n.scrollHeight > n.clientHeight) return n; n = n.parentElement; }
+    return window;
+  }
+  bindSpy() {
+    if ((this.props.layout ?? 'app') !== 'scroll' || !this._root) return;
+    const el = this.scrollParent();
+    if (this._spyEl === el) return;
+    if (this._spyEl) this._spyEl.removeEventListener('scroll', this._onSpy);
+    this._spyEl = el;
+    this._onSpy = () => {
+      const top = el === window ? 0 : el.getBoundingClientRect().top;
+      let act = 'profile';
+      this._root.querySelectorAll('[data-sec]').forEach(h => { if (h.getBoundingClientRect().top - top < 140) act = h.getAttribute('data-sec'); });
+      if (act !== this.state.tocActive) this.setState({ tocActive: act });
+    };
+    el.addEventListener('scroll', this._onSpy, { passive: true });
+  }
+  scrollToSec(id) {
+    const h = this._root && this._root.querySelector('[data-sec="' + id + '"]');
+    if (!h) return;
+    const el = this.scrollParent();
+    if (el === window) window.scrollTo({ top: h.getBoundingClientRect().top + window.scrollY - 32, behavior: 'smooth' });
+    else el.scrollTo({ top: h.getBoundingClientRect().top - el.getBoundingClientRect().top + el.scrollTop - 32, behavior: 'smooth' });
+    this.setState({ tocActive: id });
+  }
+  flash(msg) {
+    clearTimeout(this._t);
+    this.setState({ toast: msg });
+    this._t = setTimeout(() => this.setState({ toast: '' }), 2200);
+  }
+  renderVals() {
+    const s = this.state;
+    const flat = (this.props.direction ?? 'flat') === 'flat';
+    const plan = this.props.plan ?? 'Pro';
+    const layout = this.props.layout ?? 'app';
+    let urlSection = null;
+    try { urlSection = new URLSearchParams(window.location.search).get('section'); } catch (e) {}
+    const section = s.section || urlSection || (layout === 'hub' ? 'overview' : (this.props.initialSection || 'profile'));
+    const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    const dirty = s.savedProfile && (!eq(s.profile, s.savedProfile) || !eq(s.company, s.savedCompany) || !eq(s.prefs, s.savedPrefs));
+
+    const NAV = [
+      ['profile', 'Profile', 'Manage your personal info and how you sign in.', '<circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/>'],
+      ['billing', 'Plan & billing', 'Your plan, payment method, and receipts.', '<rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/>'],
+      ['licenses', 'My Files', 'Everything you’ve created, collected, and discovered, right at your fingertips.', '<path d="M12 10v6"/><path d="m15 13-3 3-3-3"/><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>'],
+      ['ai', 'AI usage', 'Track your AI Magic generations.', '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>'],
+      ['notifications', 'Notifications & privacy', 'Choose what we email you and how ads are shown.', '<path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>'],
+      ['dev', 'Developer API', 'API keys, limits, and usage.', '<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>']
+    ];
+    const cur = NAV.find(n => n[0] === section) || NAV[0];
+    const navItems = NAV.map(([id, label, , icon]) => {
+      const on = id === section;
+      return {
+        label, icon: { __html: icon },
+        bg: on ? (flat ? 'var(--ez-color--grey-5)' : 'var(--ez-color--accent-light)') : 'transparent',
+        fg: on ? (flat ? 'var(--ez-color--grey-100)' : 'var(--ez-color--accent)') : 'var(--ez-color--grey-70)',
+        weight: on ? 600 : 400,
+        hoverBg: on ? (flat ? 'var(--ez-color--grey-5)' : 'var(--ez-color--accent-light)') : 'var(--ez-color--grey-5)',
+        hoverFg: on ? (flat ? 'var(--ez-color--grey-100)' : 'var(--ez-color--accent)') : 'var(--ez-color--grey-100)',
+        go: (e) => { e.preventDefault(); this.setState({ section: id }); }
+      };
+    });
+
+    const setP = (k) => (e) => { const v = e.target.value; this.setState(st => ({ profile: { ...st.profile, [k]: v } })); };
+    const setC = (k) => (e) => { const v = e.target.value; this.setState(st => ({ company: { ...st.company, [k]: v } })); };
+
+    const PAY_DATES = ['Aug 4, 2025', 'Jul 18, 2024', 'Jun 18, 2024', 'May 18, 2024', 'Apr 18, 2024', 'Oct 20, 2023', 'Sep 20, 2023', 'Aug 20, 2023', 'Jul 20, 2023', 'Jun 20, 2023', 'May 20, 2023'];
+    const payments = PAY_DATES.slice(0, s.showAllPayments ? PAY_DATES.length : 5).map(date => ({ date, desc: 'Pro Images + Videos Unlimited, monthly', amount: '$14.84' }));
+
+    const THUMBS = ['linear-gradient(135deg,#a8c66c,#5b8c3a)', 'linear-gradient(135deg,#e9ecef,#adb5bd)', 'linear-gradient(135deg,#9fb8d8,#e8eef6)', 'linear-gradient(135deg,#f2c14e,#c8871a)', 'linear-gradient(135deg,#e24a4a,#9e1b32)', 'linear-gradient(135deg,#9bb3c4,#56707f)'];
+    const LIC = {
+      downloads: [
+        { id: '2098203', date: '08/06/2026', type: 'Free', content: 'Photo', thumb: THUMBS[0] },
+        { id: '11006398', date: '03/11/2026', type: 'Pro Standard', content: 'Vector', thumb: THUMBS[1], upgrade: true },
+        { id: '77015730', date: '02/06/2026', type: 'Editorial Social Media', content: 'Editorial image', thumb: THUMBS[2] },
+        { id: '48411623', date: '02/06/2026', type: 'Free', content: 'PNG', thumb: THUMBS[3] },
+        { id: '70644278', date: '12/23/2025', type: 'Free', content: 'Vector', thumb: THUMBS[4] }
+      ],
+      viewed: [], uploads: [], collections: []
+    };
+    const pill = (t) => t === 'Free' ? ['var(--ez-color--grey-5)', 'var(--ez-color--grey-80)'] : t === 'AI' ? ['rgba(145, 82, 236, .12)', '#9152ec'] : ['var(--ez-color--accent-light)', 'var(--ez-color--accent-callout)'];
+    const q = s.licQuery.trim().toLowerCase();
+    const licenses = (LIC[s.licTab] || []).filter(l =>
+      (s.licType === 'All license types' || l.type === s.licType) &&
+      (!q || l.id.includes(q) || l.content.toLowerCase().includes(q) || l.type.toLowerCase().includes(q))
+    ).map(l => { const [pillBg, pillFg] = pill(l.type); return { ...l, pillBg, pillFg, upgrade: !!l.upgrade }; });
+    const licTabs = [['downloads', 'Downloads'], ['viewed', 'Viewed'], ['uploads', 'Uploads'], ['collections', 'Collections']].map(([id, label]) => {
+      const on = s.licTab === id;
+      return { label, count: String(LIC[id].length), bar: on ? 'var(--ez-color--accent)' : 'transparent', fg: on ? 'var(--ez-color--grey-100)' : 'var(--ez-color--grey-60)', weight: on ? 600 : 400, go: () => this.setState({ licTab: id }) };
+    });
+
+    const AI = [['Generate photo', 42], ['Remove background', 18], ['Upscale', 11], ['Restyle photo', 6], ['Edit photo', 4]];
+    const maxAi = Math.max(...AI.map(a => a[1]));
+    const aiTools = AI.map(([name, n]) => ({ name, count: String(n), pct: Math.round(n / maxAi * 100) + '%' }));
+
+    const pr = s.prefs;
+    const mkPref = (key, label, desc, i) => ({
+      label, desc, on: pr[key] ? 'true' : 'false',
+      rule: i === 0 ? 'none' : '1px solid var(--ez-color--grey-10)',
+      track: pr[key] ? 'var(--ez-color--accent)' : 'var(--ez-color--grey-20)',
+      knob: pr[key] ? 'translateX(16px)' : 'translateX(0)',
+      toggle: () => this.setState(st => ({ prefs: { ...st.prefs, [key]: !st.prefs[key] } }))
+    });
+    const prefGroups = [
+      { title: 'Email', desc: 'Sent to shawn@eezy.com', items: [
+        mkPref('newsletter', 'Weekly newsletter', 'New content, trends, and free resources.', 0),
+        mkPref('reminders', 'Commercial license reminders', 'A reminder when a free download needs a Pro license for commercial use.', 1),
+        mkPref('productNews', 'Product updates', 'Occasional news about new Vecteezy features.', 2)
+      ] },
+      { title: 'Privacy', desc: 'Control how your data is used for advertising.', items: [
+        mkPref('ads', 'Personalized ads', 'Show ads based on your activity on Vecteezy.', 0)
+      ] }
+    ];
+
+    const planInfo = {
+      Pro: { name: 'Pro Unlimited', line: 'Individual · Renews Oct 4, 2026', cta: 'Manage plan', ctaBg: 'var(--ez-color--accent)', badge: 'PRO', badgeBg: 'linear-gradient(-89deg, #fd3198, #ff7900)', badgeFg: '#fff', tile: 'Pro Unlimited · Renews Oct 4' },
+      Free: { name: 'Free', line: 'Free downloads with attribution', cta: 'Go Pro', ctaBg: 'linear-gradient(-89deg, #fd3198, #ff7900)', badge: 'FREE', badgeBg: 'var(--ez-color--grey-10)', badgeFg: 'var(--ez-color--grey-80)', tile: 'Free plan · Upgrade to Pro' },
+      Credits: { name: 'Extended credits', line: '104 credits remaining', cta: 'Add credits', ctaBg: 'var(--ez-color--accent)', badge: '104 CREDITS', badgeBg: 'var(--ez-color--accent-light)', badgeFg: 'var(--ez-color--accent-callout)', tile: '104 credits remaining' }
+    }[plan] || {};
+    const prefOn = Object.values(pr).filter(Boolean).length;
+    const hubStatus = { profile: s.profile.first + ' ' + s.profile.last + ' · Signed in with Google', billing: planInfo.tile, licenses: LIC.downloads.length + ' downloads', ai: '7 of 20 generations today', notifications: prefOn + ' of ' + Object.keys(pr).length + ' turned on', dev: s.hasKey ? 'Free API · 1 active key' : 'Free API · No keys yet' };
+    const hubTiles = NAV.map(([id, label, , icon]) => ({ label, icon: { __html: icon }, status: hubStatus[id], hasBar: id === 'ai', go: (e) => { e.preventDefault(); this.setState({ section: id }); } }));
+    const tabItems = NAV.map(([id, label]) => { const on = id === section; return { label, bar: on ? 'var(--ez-color--accent)' : 'transparent', fg: on ? 'var(--ez-color--grey-100)' : 'var(--ez-color--grey-60)', weight: on ? 600 : 400, go: (e) => { e.preventDefault(); this.setState({ section: id }); } }; });
+    const dark = (this.props.theme ?? 'light') === 'dark';
+    const mkOpt = (label, sel, pick) => ({
+      label, pick,
+      bg: sel ? (dark ? '#2e2e2e' : '#eef1f3') : 'transparent',
+      radioBorder: sel ? '2px solid var(--ez-color--accent)' : ('2px solid ' + (dark ? '#5a5a5a' : '#cfd3d6')),
+      radioBg: sel ? 'var(--ez-color--accent)' : 'transparent',
+      radioShadow: sel ? ('inset 0 0 0 3px var(--ez-color--accent), inset 0 0 0 15px ' + (dark ? '#1c1c1c' : '#fff')) : 'none'
+    });
+    const scroll = layout === 'scroll';
+    const modal = layout === 'modal';
+    const tocActive = s.tocActive || 'profile';
+    const tocItems = NAV.map(([id, label]) => { const on = id === tocActive; return { label, fg: on ? 'var(--ez-color--grey-100)' : 'var(--ez-color--grey-60)', weight: on ? 600 : 400, dot: on ? 'var(--ez-color--accent)' : 'transparent', go: (e) => { e.preventDefault(); this.scrollToSec(id); } }; });
+    const secTitles = {}, secDescs = {}, secHeadPad = {};
+    NAV.forEach(([id, label, desc], i) => { secTitles[id] = label; secDescs[id] = desc; secHeadPad[id] = i === 0 ? '0' : '40px'; });
+    const RAILI = [
+      ['Home', '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'],
+      ['Search', '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>'],
+      ['Explore', '<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>'],
+      ['AI Tools', '<path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/>'],
+      ['My Files', '<path d="M12 10v6"/><path d="m15 13-3 3-3-3"/><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>'],
+      ['Notifications', '<path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/>']
+    ];
+    const authJoined = (this.props.authState ?? 'joined') === 'joined';
+    return {
+      rootRef: (el) => { this._root = el; if (el && !this._ro && window.ResizeObserver) { this._ro = new ResizeObserver(([e]) => { const n = e.contentRect.width < 1180; if (n !== this.state.narrow) this.setState({ narrow: n }); }); this._ro.observe(el); } },
+      showSidebar: ['sidebar', 'modal', 'app'].includes(layout), isTabsLayout: layout === 'tabs',
+      showBackLink: layout === 'sidebar', isModal: modal, isScroll: scroll, showAppRail: layout === 'app',
+      appRail: RAILI.map(([label, icon]) => ({ label, icon: { __html: icon } })),
+      tipTextColor: (this.props.theme ?? 'light') === 'dark' ? '#111111' : '#fff',
+      railAvatarBg: authJoined ? "var(--ez-color--grey-10) url('assets/img/avatar-jason.jpg') center / cover no-repeat" : 'var(--ez-color--grey-5)',
+      railAvatarIconDisplay: authJoined ? 'none' : 'block',
+      railProBadgeDisplay: authJoined ? 'flex' : 'none',
+      tocItems, secTitles, secDescs, secHeadPad,
+      showProfileLink: !scroll && section === 'profile', showDevLink: !scroll && section === 'dev',
+      rootBg: modal ? 'rgba(14, 35, 50, .55)' : 'transparent',
+      rootPad: modal ? '40px' : '0',
+      shellMaxW: modal ? '1120px' : 'none', shellH: modal ? '860px' : 'auto', shellMargin: modal ? 'auto' : '0',
+      shellRadius: modal ? '16px' : '0', shellOverflow: modal ? 'hidden' : 'visible',
+      shellShadow: modal ? '0 24px 64px rgba(14, 35, 50, .35)' : 'none', mainOverflow: modal ? 'auto' : 'visible',
+      isOverview: layout === 'hub' && section === 'overview', isHubDetail: layout === 'hub' && section !== 'overview',
+      showTitle: !(layout === 'hub' && section === 'overview'),
+      rowMax: layout === 'tabs' ? '1100px' : layout === 'hub' ? '1040px' : scroll ? '1120px' : '920px',
+      rowMargin: layout === 'app' ? '0' : '0 auto',
+      contentPad: layout === 'app' ? '37px 0 96px' : layout === 'tabs' ? '32px 0 96px' : '48px 0 96px',
+      goOverview: (e) => { e.preventDefault(); this.setState({ section: 'overview' }); },
+      goBilling: () => this.setState({ section: 'billing' }),
+      goAi: (e) => { e.preventDefault(); this.setState({ section: 'ai' }); },
+      fullName: s.profile.first + ' ' + s.profile.last,
+      planName: planInfo.name, planLine: planInfo.line, planCta: planInfo.cta, planCtaBg: planInfo.ctaBg,
+      planBadgeLabel: planInfo.badge, planBadgeBg: planInfo.badgeBg, planBadgeFg: planInfo.badgeFg,
+      hubTiles, tabItems,
+      themeMode: (this.props.theme ?? 'light') === 'dark' ? 'dark' : 'light',
+      pageBg: (flat || layout === 'tabs') ? 'var(--ez-surface)' : 'var(--ez-color--grey-3)',
+      sideBg: flat ? 'var(--ez-surface)' : 'var(--ez-surface)',
+      sideBorder: '1px solid var(--ez-color--grey-10)',
+      groupCols: (flat && !s.narrow) ? 'minmax(0, 220px) minmax(0, 1fr)' : 'minmax(0, 1fr)',
+      groupGap: flat ? '32px' : '28px',
+      groupPadTop: flat ? '32px' : '0',
+      groupRule: flat ? '1px solid var(--ez-color--grey-10)' : 'none',
+      cardBg: flat ? 'transparent' : 'var(--ez-surface)',
+      cardBorder: flat ? 'none' : '1px solid var(--ez-color--grey-10)',
+      cardPad: flat ? '0' : '20px',
+      rowPad: flat ? '14px 0' : '16px 20px',
+      rowPadX: flat ? '0' : '20px',
+      navItems,
+      sectionTitle: scroll ? 'Settings' : cur[1], sectionDesc: scroll ? 'Manage your account, plan, and preferences.' : cur[2],
+      isProfile: scroll || section === 'profile', isBilling: scroll || section === 'billing', isLicenses: scroll || section === 'licenses',
+      isAi: scroll || section === 'ai', isNotif: scroll || section === 'notifications', isDev: scroll || section === 'dev',
+      isPro: plan === 'Pro', isFree: plan === 'Free', isCredits: plan === 'Credits',
+      hasPaymentMethod: plan !== 'Free',
+      profile: s.profile, company: s.company,
+      countries: ['United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'Other'],
+      onFirst: setP('first'), onLast: setP('last'), onUsername: setP('username'), onCountry: setP('country'),
+      onCoName: setC('name'), onCoSite: setC('site'), onCoStreet: setC('street'), onCoCity: setC('city'), onCoState: setC('state'),
+      payments, togglePayments: () => this.setState(st => ({ showAllPayments: !st.showAllPayments })),
+      paymentsToggleLabel: s.showAllPayments ? 'Show less' : 'Show all ' + PAY_DATES.length + ' payments',
+      licHasQuery: s.licQuery.length > 0, clearLicQuery: (e) => { e.preventDefault(); this.setState({ licQuery: '' }); }, licTabs, licenses, licEmpty: licenses.length === 0, licQuery: s.licQuery, licType: s.licType,
+      licTypes: ['All license types', 'Free', 'Pro Standard', 'Editorial Social Media', 'AI'],
+      onLicQuery: (e) => this.setState({ licQuery: e.target.value }),
+      onLicType: (e) => this.setState({ licType: e.target.value }),
+      licDate: s.licDate || 'All dates',
+      licTypeOpen: !!s.licTypeOpen, licDateOpen: !!s.licDateOpen,
+      countryOpen: !!s.countryOpen, countryScrim: s.countryOpen ? 'block' : 'none',
+      toggleCountry: () => this.setState(st => ({ countryOpen: !st.countryOpen })), closeCountry: () => this.setState({ countryOpen: false }),
+      countryOptions: ['United States', 'Canada', 'United Kingdom', 'Australia', 'Germany', 'France', 'Other'].map(label => mkOpt(label, s.profile.country === label, () => this.setState(st => ({ profile: { ...st.profile, country: label }, countryOpen: false })))),
+      licMenuScrim: (s.licTypeOpen || s.licDateOpen) ? 'block' : 'none',
+      closeLicMenus: () => this.setState({ licTypeOpen: false, licDateOpen: false }),
+      toggleLicType: () => this.setState(st => ({ licTypeOpen: !st.licTypeOpen, licDateOpen: false })),
+      toggleLicDate: () => this.setState(st => ({ licDateOpen: !st.licDateOpen, licTypeOpen: false })),
+      licTypeOptions: ['All license types', 'Free', 'Pro Standard', 'Editorial Social Media', 'AI'].map(label => mkOpt(label, s.licType === label, () => this.setState({ licType: label, licTypeOpen: false }))),
+      licDateOptions: ['All dates', 'Last 30 days', 'Last 12 months'].map(label => mkOpt(label, (s.licDate || 'All dates') === label, () => this.setState({ licDate: label, licDateOpen: false }))),
+      clearLic: (e) => { e.preventDefault(); this.setState({ licQuery: '', licType: 'All license types' }); },
+      aiTools, prefGroups,
+      rebillOn: s.rebillOn ? 'true' : 'false', rebillLabel: s.rebillOn ? 'ON' : 'OFF',
+      rebillLabelColor: s.rebillOn ? 'var(--color-orange-100)' : 'var(--ez-color--grey-60)',
+      rebillTrack: s.rebillOn ? 'var(--color-orange-100)' : 'var(--ez-color--grey-20)',
+      rebillKnob: s.rebillOn ? 'translateX(16px)' : 'none',
+      toggleRebill: (e) => { e.preventDefault(); this.setState(x => ({ rebillOn: !x.rebillOn })); },
+      hasKey: s.hasKey, noKey: !s.hasKey,
+      secretDisplay: s.showKey ? '3HaW14Xxj6DS8QrHqz3B6NbK' : '••••••••••••••••••••6NbK',
+      keyTipDisplay: s.keyTip ? 'block' : 'none', keyTipText: s.showKey ? 'Hide secret key' : 'Reveal secret key', keyTipOn: () => this.setState({ keyTip: true }), keyTipOff: () => this.setState({ keyTip: false }), keyShown: !!s.showKey, keyHidden: !s.showKey, keyToggleLabel: s.showKey ? 'Hide' : 'Reveal',
+      toggleKey: () => this.setState(st => ({ showKey: !st.showKey })),
+      copyKey: () => { try { navigator.clipboard.writeText('3HaW14Xxj6DS8QrHqz3B6NbK'); } catch (e) {} this.flash('Secret key copied'); },
+      regenKey: () => this.flash('New key generated'),
+      revokeKey: () => { this.setState({ hasKey: false, showKey: false }); this.flash('Key revoked'); },
+      genKey: () => { this.setState({ hasKey: true }); this.flash('API key generated'); },
+      saveBarDisplay: dirty ? 'flex' : 'none',
+      discard: () => this.setState(st => ({ profile: { ...st.savedProfile }, company: { ...st.savedCompany }, prefs: { ...st.savedPrefs } })),
+      save: () => { this.setState(st => ({ savedProfile: { ...st.profile }, savedCompany: { ...st.company }, savedPrefs: { ...st.prefs } })); this.flash('Changes saved'); },
+      toastDisplay: s.toast ? 'flex' : 'none', toast: s.toast,
+      noop: (e) => { if (e && e.preventDefault) e.preventDefault(); },
+      logOut: (e) => { if (e && e.preventDefault) e.preventDefault(); window.location.href = 'AI Magic.dc.html?auth=logged-out'; }
+    };
+  }
+}
+</script>
+</body>
+</html>

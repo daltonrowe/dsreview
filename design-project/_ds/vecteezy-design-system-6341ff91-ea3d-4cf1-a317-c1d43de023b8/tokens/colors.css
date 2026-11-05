@@ -1,0 +1,96 @@
+/* Vecteezy / ez-styles base color palette
+   Source of truth: eezyinc/ez-styles tokens/css-token.css (@f9618aa)
+   Ten-step ramps at 100 (full) → 10 (tint). "navy" is the neutral/grey ramp. */
+:root {
+  /* Orange — Vecteezy brand accent */
+  --color-orange-100: #ff7900;
+  --color-orange-90: #ff861a;
+  --color-orange-80: #ff9433;
+  --color-orange-70: #ffa14d;
+  --color-orange-60: #ffaf66;
+  --color-orange-50: #ffbc80;
+  --color-orange-40: #ffc999;
+  --color-orange-30: #ffd7b3;
+  --color-orange-20: #ffe4cc;
+  --color-orange-10: #fff2e6;
+
+  /* Navy — the neutral ramp (aliased to "grey" in the semantic layer) */
+  --color-navy-100: #0e2332;
+  --color-navy-90: #273947;
+  --color-navy-80: #3e4f5b;
+  --color-navy-70: #576570;
+  --color-navy-60: #6e7b84;
+  --color-navy-50: #869198;
+  --color-navy-40: #9fa7ad;
+  --color-navy-30: #b6bdc1;
+  --color-navy-20: #cfd3d6;
+  --color-navy-10: #e6e9ea;
+  --color-navy-5: #f3f4f5;
+  --color-navy-3: #f7f9fa;
+
+  /* Red — error / destructive */
+  --color-red-100: #f64949;
+  --color-red-100--hover: #f53232;
+  --color-red-100--active: #ed2828;
+  --color-red-90: #f75b5b;
+  --color-red-80: #f86d6d;
+  --color-red-70: #f98080;
+  --color-red-60: #fa9292;
+  --color-red-50: #faa4a4;
+  --color-red-40: #fbb6b6;
+  --color-red-30: #fcc8c8;
+  --color-red-20: #fddbdb;
+  --color-red-10: #feeded;
+
+  /* Green — success */
+  --color-green-100: #52c648;
+  --color-green-90: #64cb5b;
+  --color-green-80: #75d16d;
+  --color-green-70: #86d77f;
+  --color-green-60: #98dd92;
+  --color-green-50: #a9e2a4;
+  --color-green-40: #bae8b6;
+  --color-green-30: #cbeec8;
+  --color-green-20: #dcf4db;
+  --color-green-10: #eef9ed;
+
+  /* Yellow — warning / alert */
+  --color-yellow-100: #ffc633;
+  --color-yellow-90: #ffcb47;
+  --color-yellow-80: #ffd15c;
+  --color-yellow-70: #ffd770;
+  --color-yellow-60: #ffdd84;
+  --color-yellow-50: #ffe299;
+  --color-yellow-40: #ffe8ad;
+  --color-yellow-30: #ffeec2;
+  --color-yellow-20: #fff4d6;
+  --color-yellow-10: #fff9eb;
+
+  /* Purple — Eezy family / editor accent */
+  --color-purple-100: #9152ec;
+  --color-purple-90: #9c63ee;
+  --color-purple-80: #a774f0;
+  --color-purple-70: #b286f2;
+  --color-purple-60: #bd97f4;
+  --color-purple-50: #c8a8f5;
+  --color-purple-40: #d3baf7;
+  --color-purple-30: #decbf9;
+  --color-purple-20: #e9dcfb;
+  --color-purple-10: #f4eefd;
+
+  /* Special */
+  --color-navy-overlay: #0e2332;
+  --color-alert-yellow: #ffc633;
+  --color-light-yellow: #fffedd;
+  --color-pro-pink: #fb00ff;
+
+  /* Sibling-brand accents (Eezy family) */
+  --color-videezy-accent: #312962;
+  --color-brusheezy-accent: #3f86ca;
+  --color-eezy-accent: #8eb975;
+
+  /* Gradients — Vecteezy Pro identity */
+  --background-pro-gradient: linear-gradient(-89deg, #fb00ff 0%, #fd3198 32%, #fe4d5d 70%, #ff7900 100%); /* @kind color */
+  --background-pro-gradient-hover: linear-gradient(-89deg, #e905ed 0%, #e5289d 24%, #ee4556 67%, #f87600 100%); /* @kind color */
+  --background-pro2-gradient: linear-gradient(to right, #ffa776 0%, #ee5bc2 33.33%, #648bee 66.67%, #2fb9cc 100%); /* @kind color */
+}

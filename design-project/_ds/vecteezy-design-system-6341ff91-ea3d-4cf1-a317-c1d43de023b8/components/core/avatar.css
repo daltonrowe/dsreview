@@ -1,0 +1,43 @@
+/* Avatar — ported from apollo app/javascript/styleguide/general.css (.ez-avatar) */
+.ez-avatar {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 0;
+  object-fit: cover;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+}
+.ez-avatar--large { height: var(--spacing-13); width: var(--spacing-13); }
+.ez-avatar--medium { height: var(--spacing-8); width: var(--spacing-8); }
+.ez-avatar--small { height: var(--spacing-4); width: var(--spacing-4); }
+.ez-avatar--full { height: 100%; width: 100%; }
+.ez-avatar img { border-radius: 50%; height: 100%; width: 100%; object-fit: cover; }
+.ez-avatar--missing { background-color: var(--ez-color--grey-5); color: var(--ez-color--grey-60); font-weight: 700; }
+.ez-avatar__missing-icon { width: 58%; height: 58%; background: var(--ez-color--grey-60); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; }
+.ez-avatar-wrapper { position: relative; display: inline-flex; }
+.ez-avatar-pro {
+  border-radius: 50%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--spacing-3);
+  position: absolute;
+  right: -4px;
+  width: var(--spacing-3);
+  background: var(--ez-color--pro-gradient);
+  border: 2px solid #fff;
+}
+.ez-avatar-pro-star {
+  width: 58%;
+  height: 58%;
+  background: #fff;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+}

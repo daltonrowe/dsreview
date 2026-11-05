@@ -1,0 +1,10 @@
+/* Card / media block — ported from apollo styleguide general.css (.ez-media-block) */
+.ez-media-block {
+  background-color: #fff;
+  border: 0;
+  border-radius: var(--ez-radius-media-block);
+  padding: var(--spacing-4);
+}
+.ez-media-block--bordered { border: 1px solid var(--ez-color--divider); }
+.ez-media-block--flush { padding: 0; overflow: hidden; }
+@media screen and (max-width: 799px) { .ez-media-block { padding: var(--spacing-3); } }

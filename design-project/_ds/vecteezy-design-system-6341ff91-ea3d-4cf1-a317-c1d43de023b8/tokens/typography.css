@@ -1,0 +1,53 @@
+/* Typography
+   Source: eezyinc/ez-styles css-token.css (type scale) + apollo settings.css (font stack)
+
+   IMPORTANT — font stack: the ez-styles design tokens name "Inter-*" (from the Figma
+   export), but the shipped Vecteezy product (apollo) renders with a native system-ui
+   stack — no Inter webfont is loaded. The system stack below is the CANONICAL, faithful
+   choice. Inter is a close visual stand-in if a webfont is ever required. */
+:root {
+  --ez-font-stack: system-ui, "Segoe UI", helvetica, arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --ez-font-stack-mono: courier, monaco, monospace;
+
+  /* Weights */
+  --ez-font-weight-regular: 400;
+  --ez-font-weight-medium: 500;
+  --ez-font-weight-semibold: 600;
+  --ez-font-weight-bold: 700;
+
+  /* Headings — bold display scale (h1 56 → h10 12) */
+  --type-h1-size: 56px;   --type-h1-lineheight: 65.625px;
+  --type-h2-size: 46px;   --type-h2-lineheight: 53.90625px;
+  --type-h3-size: 36px;   --type-h3-lineheight: 42.1875px;
+  --type-h4-size: 30px;   --type-h4-lineheight: 35.15625px;
+  --type-h5-size: 26px;   --type-h5-lineheight: 30.46875px;
+  --type-h6-size: 22px;   --type-h6-lineheight: 25.78125px;
+  --type-h7-size: 18px;   --type-h7-lineheight: 21.09375px;
+  --type-h8-size: 16px;   --type-h8-lineheight: 18.75px;
+  --type-h9-size: 14px;   --type-h9-lineheight: 16.40625px;
+  --type-h10-size: 12px;  --type-h10-lineheight: 14.0625px;
+
+  /* Body & UI text */
+  --type-subtitle-size: 20px;      --type-subtitle-lineheight: 30px;      /* 500 */
+  --type-body-vlarge-size: 18px;   --type-body-vlarge-lineheight: 36px;   /* 400 */
+  --type-body-large-size: 16px;    --type-body-large-lineheight: 24px;    /* 400 */
+  --type-body-medium-size: 14px;   --type-body-medium-lineheight: 21px;   /* 400 */
+  --type-body-small-size: 12px;    --type-body-small-lineheight: 18px;    /* 400 */
+  --type-button-size: 14px;        --type-button-lineheight: 16.40625px;  /* 600 */
+  --type-allcaps-size: 12px;       --type-allcaps-letterspacing: 0.6px;   /* 700 uppercase */
+}
+
+/* Utility classes (optional convenience for specimens & kits) */
+.type-h1 { font-size: var(--type-h1-size); line-height: var(--type-h1-lineheight); font-weight: 700; }
+.type-h2 { font-size: var(--type-h2-size); line-height: var(--type-h2-lineheight); font-weight: 700; }
+.type-h3 { font-size: var(--type-h3-size); line-height: var(--type-h3-lineheight); font-weight: 700; }
+.type-h4 { font-size: var(--type-h4-size); line-height: var(--type-h4-lineheight); font-weight: 700; }
+.type-h5 { font-size: var(--type-h5-size); line-height: var(--type-h5-lineheight); font-weight: 700; }
+.type-h6 { font-size: var(--type-h6-size); line-height: var(--type-h6-lineheight); font-weight: 700; }
+.type-subtitle { font-size: var(--type-subtitle-size); line-height: var(--type-subtitle-lineheight); font-weight: 500; }
+.type-body-vlarge { font-size: var(--type-body-vlarge-size); line-height: var(--type-body-vlarge-lineheight); }
+.type-body-large { font-size: var(--type-body-large-size); line-height: var(--type-body-large-lineheight); }
+.type-body-medium { font-size: var(--type-body-medium-size); line-height: var(--type-body-medium-lineheight); }
+.type-body-small { font-size: var(--type-body-small-size); line-height: var(--type-body-small-lineheight); }
+.type-allcaps { font-size: var(--type-allcaps-size); letter-spacing: var(--type-allcaps-letterspacing); font-weight: 700; text-transform: uppercase; }

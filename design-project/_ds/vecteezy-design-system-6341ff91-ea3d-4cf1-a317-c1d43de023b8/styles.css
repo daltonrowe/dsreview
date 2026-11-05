@@ -1,0 +1,26 @@
+/* Vecteezy Design System — global entry point.
+   Consumers link this one file. Import order: base palette → semantic aliases → type → spacing. */
+@import "./tokens/colors.css";
+@import "./tokens/semantic.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+
+/* Component classes (ship faithful hover/active states to consumers) */
+@import "./components/core/button.css";
+@import "./components/core/badge.css";
+@import "./components/core/avatar.css";
+@import "./components/core/card.css";
+@import "./components/forms/forms.css";
+@import "./components/search/search-filters.css";
+@import "./components/search/search-form.css";
+@import "./components/global/site-footer.css";
+@import "./components/global/site-header.css";
+@import "./components/global/home-landing.css";
+@import "./components/landing/landing-page.css";
+@import "./components/grid/resource-grid.css";
+@import "./components/carousel/carousel.css";
+@import "./components/hero/hero-slider.css";
+@import "./components/resources/resource-show.css";
+@import "./components/navigation/pagination.css";
+@import "./components/utils/utils.css";
+@import "./components/overlays/overlays.css";

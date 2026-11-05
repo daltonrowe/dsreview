@@ -1,0 +1,48 @@
+/* Site footer — recreated from the Vecteezy production footer */
+.ez-footer { background: var(--ez-color--footer-bg); color: var(--ez-color--footer-link); font-family: var(--ez-font-stack); container-type: inline-size; }
+.ez-footer__cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1360px; margin: 0 auto; padding: 56px 40px 48px; }
+.ez-footer__col-head { display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: default; }
+.ez-footer__col-title { color: #fff; font-size: 18px; font-weight: 700; margin: 0 0 28px; }
+.ez-footer__col-caret { display: none; }
+.ez-footer__link { display: block; color: var(--ez-color--grey-40); font-size: 15px; line-height: 1; margin-bottom: 26px; width: fit-content; text-decoration: none; transition: color 0.15s ease; }
+.ez-footer__link:hover { color: #fff; }
+.ez-footer__link--caret { display: inline-flex; align-items: center; gap: 6px; }
+.ez-footer__caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+
+.ez-footer__bar { border-top: 1px solid var(--ez-color--grey-90); }
+.ez-footer__bar-inner { display: flex; align-items: center; gap: 32px; max-width: 1360px; margin: 0 auto; padding: 22px 40px; flex-wrap: wrap; }
+.ez-footer__logo { height: 34px; flex-shrink: 0; }
+.ez-footer__social { display: flex; align-items: center; gap: 20px; }
+.ez-footer__social-icon { width: 22px; height: 22px; background: #fff; cursor: pointer; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; -webkit-mask-size: contain; mask-size: contain; transition: opacity 0.15s ease; }
+.ez-footer__social-icon:hover { opacity: 0.7; }
+.ez-footer__legal { margin-left: auto; display: flex; align-items: center; gap: 12px; color: var(--ez-color--grey-40); font-size: 15px; flex-wrap: wrap; }
+.ez-footer__legal-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ez-footer__legal a { color: var(--ez-color--grey-40); text-decoration: none; transition: color 0.15s ease; }
+.ez-footer__legal a:hover { color: #fff; }
+.ez-footer__legal-sep { color: var(--ez-color--grey-70); }
+.ez-footer__tagline { display: none; }
+
+/* ---- Mobile / narrow container: accordion sections + stacked bottom bar ---- */
+@container (max-width: 900px) {
+  .ez-footer__cols { display: block; padding: 8px 24px 0; }
+  .ez-footer__col { padding: 24px 0; border-bottom: 1px solid var(--ez-color--grey-90); }
+  .ez-footer__col-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; padding: 4px 0; }
+  .ez-footer__col-title { margin: 0; font-size: 14px; }
+  .ez-footer__col-caret { display: block; width: 11px; height: 11px; flex-shrink: 0; border-right: 2.5px solid #fff; border-bottom: 2.5px solid #fff; border-radius: 1px; transform: translateY(3px) rotate(-135deg); transition: transform 0.18s ease; }
+  .ez-footer__col--collapsed .ez-footer__col-caret { transform: translateY(-3px) rotate(45deg); }
+  .ez-footer__col-links { padding-top: 28px; }
+  .ez-footer__col--collapsed .ez-footer__col-links { display: none; }
+  .ez-footer__link { font-size: 14px; margin-bottom: 24px; }
+  .ez-footer__col-links .ez-footer__link:last-child { margin-bottom: 0; }
+  .ez-footer__bar { border-top: 0; }
+  .ez-footer__bar-inner { flex-direction: column; gap: 20px; padding: 40px 24px 44px; }
+  .ez-footer__logo { height: 40px; }
+  .ez-footer__social { gap: 18px; }
+  .ez-footer__social-icon { width: 16px; height: 16px; }
+  .ez-footer__legal { margin-left: 0; width: 100%; flex-direction: column; gap: 14px; text-align: center; font-size: 15px; margin-top: 12px; }
+  .ez-footer__legal > span:first-child { font-size: 13px; font-weight: 500; margin-top: 16px; }
+  .ez-footer__tagline { display: block; font-size: 13px; font-weight: 600; color: var(--ez-color--grey-40); }
+  .ez-footer__legal > .ez-footer__legal-sep { display: none; }
+  .ez-footer__legal-links { justify-content: center; gap: 14px; }
+  .ez-footer__legal-links a { font-size: 13px; color: #869198; }
+}
