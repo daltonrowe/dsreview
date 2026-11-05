@@ -64,6 +64,8 @@
   .problems { margin: 14px 0; padding: 10px 14px; font-size: 12px; color: var(--muted); }
   .problems summary { cursor: pointer; }
   .item[data-decision="round"] { border-color: var(--round); }
+  .item[data-decision="unclear"] { border-color: var(--unclear); }
+  .dec button.unclear { flex: 0 0 auto; padding-left: 10px; padding-right: 10px; }
   .tokrow { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
   .tokrow select { font-size: 12px; padding: 2px 6px; max-width: 100%; flex: 1; min-width: 0; font-family: var(--mono); }
   .chip.match { background: var(--keep-bg); color: var(--keep); font-family: var(--mono); font-size: 11px; }
@@ -118,6 +120,7 @@
   .grp[data-state="keep"] { border-color: var(--keep); }
   .grp[data-state="round"] { border-color: var(--round); }
   .grp[data-state="exclude"] { opacity: .6; }
+  .grp[data-state="unclear"] { border-color: var(--unclear); }
   .grp-head { display: flex; gap: 12px; align-items: flex-start; }
   .grp-head .num { font-weight: 700; font-size: 15px; color: var(--faint); min-width: 34px; }
   .grp-title { flex: 1; min-width: 0; }
@@ -161,7 +164,7 @@
 <div class="toolbar">
   <div class="seg" id="viewf" hidden title="Groups: one decision per part of the page. Usages: every usage on its own."><button data-v="groups">Groups</button><button data-v="usages">Usages</button></div>
   <div class="seg" id="filter">
-    <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="exclude">Excluded</button>
+    <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="unclear" title="Marked 🤷: not understood">🤷</button><button data-f="exclude">Excluded</button>
   </div>
   <div class="seg" id="themef" hidden><button data-t="all">Both</button><button data-t="light">Light</button><button data-t="dark">Dark</button></div>
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
@@ -300,6 +303,7 @@ function itemHtml(s, it) {
         <button class="keep" data-d="keep" aria-pressed="${d.decision === 'keep'}">Keep</button>
         <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${it.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
         <button class="exclude" data-d="exclude" aria-pressed="${d.decision === 'exclude'}">Exclude</button>
+        <button class="unclear" data-d="unclear" aria-pressed="${d.decision === 'unclear'}" title="I don't understand this example (4)" aria-label="Not understood">🤷</button>
       </div>
     </div>
   </article>`;
@@ -317,7 +321,7 @@ function render() {
         ${secMatch(s)}
         <span class="muted secount" style="font-size:12px"></span>
         <div class="bulk" title="Apply to every usage shown in this section">All:
-          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="" title="Clear decisions">✕</button></div>
+          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="unclear" class="unclear" title="Not understood">🤷</button><button data-bulk="" title="Clear decisions">✕</button></div>
         </div>
       </div>
       <div class="grid">${s.items.map(it => itemHtml(s, it)).join('')}</div>
@@ -332,6 +336,7 @@ function matches(it) {
   if (state.f === 'exclude' ? d !== 'exclude' : d === 'exclude') return false;
   if (state.f === 'decided' && !(d === 'keep' || d === 'round')) return false;
   if (state.f === 'undecided' && d !== 'undecided') return false;
+  if (state.f === 'unclear' && d !== 'unclear') return false;
   if (state.off && it.near?.exact) return false;
   if (S.themed && state.theme !== 'all' && !it.themes.includes(state.theme)) return false;
   return true;
@@ -387,6 +392,7 @@ function groupShown(g) {
   if (!live.length) return false;
   if (state.f === 'decided') return live.every(it => decOf(it) === 'keep' || decOf(it) === 'round');
   if (state.f === 'undecided') return live.some(it => decOf(it) === 'undecided');
+  if (state.f === 'unclear') return live.some(it => decOf(it) === 'unclear');
   return true;
 }
 function groupState(g) {
@@ -404,9 +410,9 @@ function nearChip(it) {
 
 function groupHtml(g) {
   const mem = groupMembers(g), st = groupState(g);
-  const counts = { keep: 0, round: 0, exclude: 0, undecided: 0 };
+  const counts = { keep: 0, round: 0, exclude: 0, unclear: 0, undecided: 0 };
   for (const it of g.members) counts[decOf(it)]++;
-  const status = Object.entries(counts).filter(([, n]) => n).map(([k, n]) => `${n} ${k === 'undecided' ? 'undecided' : k === 'keep' ? 'kept' : k === 'round' ? 'rounded' : 'excluded'}`).join(' · ');
+  const status = Object.entries(counts).filter(([, n]) => n).map(([k, n]) => `${n} ${k === 'undecided' ? 'undecided' : k === 'keep' ? 'kept' : k === 'round' ? 'rounded' : k === 'unclear' ? '🤷' : 'excluded'}`).join(' · ');
   // one chip per distinct value + theme, with its token match
   const vals = new Map();
   for (const it of mem) { const k = it.value + '|' + it.themeKey; if (!vals.has(k)) vals.set(k, { it, n: 0 }); vals.get(k).n++; }
@@ -427,6 +433,7 @@ function groupHtml(g) {
         <button class="keep" data-gd="keep" aria-pressed="${st === 'keep'}">Keep</button>
         <button class="round" data-gd="round" aria-pressed="${st === 'round'}" ${canRound ? '' : 'disabled title="No design-system tokens for this type"'} title="Round every usage to its nearest token">Round</button>
         <button class="exclude" data-gd="exclude" aria-pressed="${st === 'exclude'}">Exclude</button>
+        <button class="unclear" data-gd="unclear" aria-pressed="${st === 'unclear'}" title="I don't understand this group" aria-label="Not understood">🤷</button>
       </div>
     </div>
     <div class="gvals">${valsHtml}</div>
@@ -439,7 +446,7 @@ function groupHtml(g) {
           <div><b>S${it.sec.n}.${it.n}</b> <code>${esc(it.value)}</code> ${themeChipOf(it.themeKey)} ${nearChip(it)}</div>
           <div class="faint">${esc(it.component || `<${it.tag}>`)} · ${esc(S.captures[it.where.capture].label)}${it.text ? ` · “${esc(it.text.slice(0, 50))}”` : ''}</div>
         </div>
-        <span class="chip dstate">${decOf(it)}</span>
+        <span class="chip dstate">${decOf(it) === 'unclear' ? '🤷' : decOf(it)}</span>
         <button class="btn small" data-open-item="${it.id}">Usage</button>
         ${it.near && !it.near.exact ? `<button class="btn small" data-preview-item="${it.id}">Preview</button>` : ''}
       </div>`).join('')}</div>` : ''}
@@ -466,7 +473,7 @@ async function decideGroup(g, d) {
 }
 
 function updateProgress() {
-  const p = { keep: 0, round: 0, exclude: 0, undecided: 0, total: 0 };
+  const p = { keep: 0, round: 0, exclude: 0, unclear: 0, undecided: 0, total: 0 };
   for (const it of byId.values()) { p.total++; const d = S.decisions[it.id]?.decision; p[d || 'undecided']++; }
   $('#prog').innerHTML = progressBar(p) + legend(p);
   renderSuggest();
@@ -863,7 +870,7 @@ document.addEventListener('keydown', e => {
   if ($('#lb').classList.contains('open')) { if (e.key === 'Escape' || e.key === ' ') { e.preventDefault(); $('#lb').classList.remove('open'); } return; }
   const ids = visibleIds();
   const i = ids.indexOf(focusedId);
-  const map = { 1: 'keep', 2: 'round', 3: 'exclude', 0: null };
+  const map = { 1: 'keep', 2: 'round', 3: 'exclude', 4: 'unclear', 0: null };
   if (e.key === '2' && focusedId && !byId.get(focusedId).near) return;
   if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); focus(ids[Math.min(i + 1, ids.length - 1)] ?? ids[0]); }
   else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); focus(ids[Math.max(i - 1, 0)] ?? ids[0]); }

@@ -55,6 +55,23 @@ test('decisions are written to DATA_DIR and read back', async () => {
   assert.equal(after.decisions[itemId].decision, 'keep');
 });
 
+test('accepts the unclear (🤷) decision and counts it in progress', async () => {
+  const surveys = await (await fetch(`${base}/api/surveys`, { headers: auth })).json();
+  const s = surveys.find(x => x.generated);
+  const full = await (await fetch(`${base}/api/surveys/${s.id}`, { headers: auth })).json();
+  const itemId = full.sections[0].items[0].id;
+  const put = await fetch(`${base}/api/surveys/${s.id}/decisions`, {
+    method: 'PUT', headers: { ...auth, 'content-type': 'application/json' },
+    body: JSON.stringify({ ids: [itemId], decision: 'unclear' }),
+  });
+  assert.equal(put.status, 200);
+  const after = await (await fetch(`${base}/api/surveys/${s.id}`, { headers: auth })).json();
+  assert.equal(after.decisions[itemId].decision, 'unclear');
+  assert.equal(after.progress.unclear, 1);
+  const md = await (await fetch(`${base}/api/surveys/${s.id}/export.md`, { headers: auth })).text();
+  assert.match(md, /Unclear 🤷 1/);
+});
+
 test('rejects unknown decisions', async () => {
   const res = await fetch(`${base}/api/surveys/radius/decisions`, {
     method: 'PUT', headers: { ...auth, 'content-type': 'application/json' },

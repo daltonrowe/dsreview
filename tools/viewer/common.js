@@ -83,8 +83,8 @@ export function editorUrl(root, file, line, col) {
 
 export function progressBar(p) {
   const pct = k => (p.total ? ((p[k] || 0) / p.total) * 100 : 0);
-  return `<div class="progress" title="keep ${p.keep} · round ${p.round || 0} · exclude ${p.exclude} · undecided ${p.undecided}"><span class="keep" style="width:${pct('keep')}%"></span><span class="round" style="width:${pct('round')}%"></span><span class="exclude" style="width:${pct('exclude')}%"></span></div>`;
+  return `<div class="progress" title="keep ${p.keep} · round ${p.round || 0} · exclude ${p.exclude} · unclear 🤷 ${p.unclear || 0} · undecided ${p.undecided}"><span class="keep" style="width:${pct('keep')}%"></span><span class="round" style="width:${pct('round')}%"></span><span class="exclude" style="width:${pct('exclude')}%"></span><span class="unclear" style="width:${pct('unclear')}%"></span></div>`;
 }
 export function legend(p) {
-  return `<div class="legend"><span><i class="dot keep"></i>Keep <b>${p.keep}</b></span><span><i class="dot round"></i>Round <b>${p.round || 0}</b></span><span><i class="dot exclude"></i>Exclude <b>${p.exclude}</b></span><span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
+  return `<div class="legend"><span><i class="dot keep"></i>Keep <b>${p.keep}</b></span><span><i class="dot round"></i>Round <b>${p.round || 0}</b></span><span><i class="dot exclude"></i>Exclude <b>${p.exclude}</b></span><span title="Not understood"><i class="dot unclear"></i>🤷 <b>${p.unclear || 0}</b></span><span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
 }

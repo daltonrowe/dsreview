@@ -123,7 +123,7 @@ export function startLive() {
 
 // Default toast text for a decision event; pages can pass refs (e.g. "S3.4") for precision.
 export function describeDecision(d, refs) {
-  const verb = { keep: 'kept', round: 'rounded', exclude: 'excluded' }[d.decision] || (d.decision === null ? 'cleared' : 'updated');
+  const verb = { keep: 'kept', round: 'rounded', exclude: 'excluded', unclear: 'shrugged 🤷 at' }[d.decision] || (d.decision === null ? 'cleared' : 'updated');
   const what = refs?.length === 1 ? refs[0] : `${d.ids.length} usage${d.ids.length === 1 ? '' : 's'}`;
   const to = d.decision === 'round' && d.ids.length === 1 ? ` → ${d.decisions[d.ids[0]]?.round?.to}` : '';
   return `${d.by?.name || 'Someone'} ${verb} ${what}${to} in ${d.title}`;

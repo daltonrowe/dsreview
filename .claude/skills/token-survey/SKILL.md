@@ -1,6 +1,6 @@
 ---
 name: token-survey
-description: Create, run, and read design-token surveys (colors, radius, type, spacing, shadows…) over /design-project, and act on the Keep/Exclude/Remove decisions recorded in the review viewer. Use when asked to survey a token type, add page states to a survey, regenerate one, or compile/act on survey decisions.
+description: Create, run, and read design-token surveys (colors, radius, type, spacing, shadows…) over /design-project, and act on the Keep/Round/Exclude/🤷 (unclear) decisions recorded in the review viewer. Use when asked to survey a token type, add page states to a survey, regenerate one, or compile/act on survey decisions.
 ---
 
 # Token surveys
@@ -26,8 +26,9 @@ npm start                                             # viewer at http://localho
   Add states here (e.g. a modal opened via `do`) to widen coverage. A spec can set `"captures": [...]` instead of `"default"`.
 - `surveys/<id>/spec.json`: title, preset, captures.
 - `surveys/<id>/survey.json`: generated output. Never hand-edit; re-run instead.
-- `surveys/<id>/decisions.json`: `{ itemId: { decision: keep|round|exclude|remove, round?: { to: <token>, value, css }, note, at } }`, written by the viewer.
+- `surveys/<id>/decisions.json`: `{ itemId: { decision: keep|round|exclude|unclear, round?: { to: <token>, value, css }, note, at } }`, written by the viewer.
   `round` means: replace this usage's value with design-system token `round.to`.
+  `unclear` is the viewer's 🤷 button: the reviewer didn't understand the example. It is not a verdict; treat these as open questions, not as kept or excluded.
 - `design-system/tokens.json`: the target tokens (Apollo, from the Design System artifact). The viewer matches each section value to its nearest token (`tools/viewer/tokens.js`).
   Regenerating keeps it (item ids are stable hashes of preset + component + template element + value).
 - `surveys/<id>/shots/<itemId>.png`: per-usage screenshots (gitignored, regenerable).

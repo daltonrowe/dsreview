@@ -2,7 +2,7 @@
   --bg: #f6f6f4; --panel: #ffffff; --panel-2: #f0f0ed; --line: #e3e3de; --line-2: #d2d2cc;
   --text: #1c1c1a; --muted: #6b6b66; --faint: #9a9a94;
   --accent: #ff6a00; --accent-ink: #fff;
-  --keep: #1f9d55; --keep-bg: #e5f6ec; --round: #2f6bff; --round-bg: #e6edff; --exclude: #6b7280; --exclude-bg: #eceef1; --remove: #d93636; --remove-bg: #fbe9e9;
+  --keep: #1f9d55; --keep-bg: #e5f6ec; --round: #2f6bff; --round-bg: #e6edff; --exclude: #6b7280; --exclude-bg: #eceef1; --unclear: #b45a00; --unclear-bg: #fff1e0; --remove: #d93636; --remove-bg: #fbe9e9;
   --hl: #ff2bd6; --focus: #2f6bff;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
@@ -14,7 +14,7 @@
   :root:not([data-theme="light"]) {
     --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
     --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-    --keep: #4cc584; --keep-bg: #183324; --round: #7aa2ff; --round-bg: #1b2440; --round: #7aa2ff; --round-bg: #1b2440; --exclude: #9ca3af; --exclude-bg: #26282c; --remove: #f06a6a; --remove-bg: #3a1d1d;
+    --keep: #4cc584; --keep-bg: #183324; --round: #7aa2ff; --round-bg: #1b2440; --round: #7aa2ff; --round-bg: #1b2440; --exclude: #9ca3af; --exclude-bg: #26282c; --unclear: #ffb366; --unclear-bg: #3a2a14; --remove: #f06a6a; --remove-bg: #3a1d1d;
     --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
     color-scheme: dark;
   }
@@ -22,7 +22,7 @@
 :root[data-theme="dark"] {
   --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
   --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-  --keep: #4cc584; --keep-bg: #183324; --exclude: #9ca3af; --exclude-bg: #26282c; --remove: #f06a6a; --remove-bg: #3a1d1d;
+  --keep: #4cc584; --keep-bg: #183324; --exclude: #9ca3af; --exclude-bg: #26282c; --unclear: #ffb366; --unclear-bg: #3a2a14; --remove: #f06a6a; --remove-bg: #3a1d1d;
   --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
   color-scheme: dark;
 }
@@ -58,15 +58,16 @@ input:focus, select:focus { outline: 2px solid var(--focus); outline-offset: -1p
 .seg button.round[aria-pressed="true"] { background: var(--round-bg); color: var(--round); }
 .seg button:disabled { opacity: .35; cursor: not-allowed; }
 .seg button.exclude[aria-pressed="true"] { background: var(--exclude-bg); color: var(--exclude); }
+.seg button.unclear[aria-pressed="true"] { background: var(--unclear-bg); color: var(--unclear); }
 .seg button.remove[aria-pressed="true"] { background: var(--remove-bg); color: var(--remove); }
 
 .progress { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--panel-2); min-width: 120px; }
 .progress span { display: block; height: 100%; }
-.progress .keep { background: var(--keep); } .progress .round { background: var(--round); } .progress .exclude { background: var(--exclude); } .progress .remove { background: var(--remove); }
+.progress .keep { background: var(--keep); } .progress .round { background: var(--round); } .progress .exclude { background: var(--exclude); } .progress .unclear { background: var(--unclear); } .progress .remove { background: var(--remove); }
 .legend { display: flex; gap: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
 .legend b { font-weight: 600; color: var(--text); }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: 1px; }
-.dot.keep { background: var(--keep); } .dot.round { background: var(--round); } .dot.exclude { background: var(--exclude); } .dot.remove { background: var(--remove); } .dot.undecided { background: var(--line-2); }
+.dot.keep { background: var(--keep); } .dot.round { background: var(--round); } .dot.exclude { background: var(--exclude); } .dot.unclear { background: var(--unclear); } .dot.remove { background: var(--remove); } .dot.undecided { background: var(--line-2); }
 
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 

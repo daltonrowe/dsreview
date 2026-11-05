@@ -8,7 +8,8 @@ import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
 
 const SURVEYS = path.join(ROOT, 'surveys');
-const DECISIONS = ['keep', 'round', 'exclude'];
+// 'unclear' (🤷 in the viewer) marks a usage the reviewer doesn't understand: it needs a look, not a verdict.
+const DECISIONS = ['keep', 'round', 'exclude', 'unclear'];
 
 // options:
 //   user, pass  HTTP basic auth credentials (everything but /up requires them)
@@ -110,7 +111,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
   }
 
   function progress(survey, decisions) {
-    const out = { keep: 0, round: 0, exclude: 0, undecided: 0, total: 0 };
+    const out = { keep: 0, round: 0, exclude: 0, unclear: 0, undecided: 0, total: 0 };
     for (const s of survey.sections) for (const it of s.items) {
       out.total++;
       const d = decisions[it.id]?.decision;
@@ -152,7 +153,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     res.json({ ...survey, decisions, progress: progress(survey, decisions) });
   });
 
-  // body: { ids: [...], decision?: 'keep'|'round'|'exclude'|'remove'|null, note?: string,
+  // body: { ids: [...], decision?: 'keep'|'round'|'exclude'|'unclear'|null, note?: string,
   //         round?: { [itemId]: { to: token, value, css } } (required per id when decision is 'round') }
   app.put('/api/surveys/:id/decisions', async (req, res) => {
     const dir = surveyDir(req.params.id);
@@ -202,7 +203,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     const json = { id: survey.id, title: survey.title, preset: survey.preset, generatedAt: survey.generatedAt, progress: p, sections: rows };
     const H = n => '#'.repeat(h + n);
     let md = `${H(0)} ${survey.title}\n\nSurvey \`${survey.id}\` (preset \`${survey.preset}\`), generated ${survey.generatedAt}.\n\n`;
-    md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
+    md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Unclear 🤷 ${p.unclear} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
     for (const s of rows) {
       const counts = DECISIONS.map(d => `${d} ${s.items.filter(i => i.decision === d).length}`).join(', ');
       md += `${H(1)} S${s.section} · \`${s.value}\`\n\n${s.tokens.length ? `Tokens: ${s.tokens.map(t => `\`${t}\``).join(', ')}. ` : ''}${s.items.length} usages (${counts}).\n\n`;
@@ -231,8 +232,8 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     res.set('content-disposition', `attachment; filename="dsreview-export-${stamp.slice(0, 10)}.${fmt}"`);
     if (fmt === 'json') return res.json({ exportedAt: stamp, surveys: all.map(x => x.json) });
     let md = `# Design System Review: all surveys\n\nExported ${stamp}.\n\n`;
-    md += `| Survey | Keep | Round | Exclude | Undecided | Total |\n|---|---|---|---|---|---|\n`;
-    for (const { json: j } of all) md += `| ${j.title} (\`${j.id}\`) | ${j.progress.keep} | ${j.progress.round} | ${j.progress.exclude} | ${j.progress.undecided} | ${j.progress.total} |\n`;
+    md += `| Survey | Keep | Round | Exclude | Unclear 🤷 | Undecided | Total |\n|---|---|---|---|---|---|---|\n`;
+    for (const { json: j } of all) md += `| ${j.title} (\`${j.id}\`) | ${j.progress.keep} | ${j.progress.round} | ${j.progress.exclude} | ${j.progress.unclear} | ${j.progress.undecided} | ${j.progress.total} |\n`;
     md += '\n' + all.map(x => x.md).join('\n');
     res.type('text/markdown').send(md);
   });
