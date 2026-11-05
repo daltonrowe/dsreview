@@ -225,6 +225,7 @@ export function nearest(preset, value) {
       if (v === 'pill' || v === '50%') return { exact: true, candidates: [{ name: 'rounded-full', token: 'rounded-full', value: '9999px', delta: 0, label: 'rounded-full (Tailwind utility)', css: { 'border-radius': '9999px' } }] };
       if (/\s/.test(v)) return partsNearest(T.radius, v, 'border-radius', 'radius-');
       return withExact(numericNearest(T.radius, px(v), 'border-radius'));
+    case 'spacing': return withExact(numericNearest(T.spacing, px(v), 'padding'));
     case 'gap':
       if (/\s/.test(v)) return partsNearest(T.spacing, v, 'gap', 'spacing-');
       return withExact(numericNearest(T.spacing, px(v), 'gap'));
@@ -232,8 +233,13 @@ export function nearest(preset, value) {
       if (/\s/.test(v)) return partsNearest(T.spacing, v, 'padding', 'spacing-');
       return withExact(numericNearest(T.spacing, px(v), 'padding'));
     case 'text-color': return colorNearest(v, 'color');
-    case 'background': return colorNearest(v, 'background-color');
+    case 'background': case 'overlay': return colorNearest(v, 'background-color');
     case 'border-color': return colorNearest(v, 'border-color');
+    case 'border': {
+      // width/style have no tokens: round the color (single-color borders only)
+      const cols = [...new Set(v.match(/#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/gi) || [])];
+      return cols.length === 1 ? colorNearest(cols[0], 'border-color') : null;
+    }
     case 'shadow': return shadowNearest(v);
     case 'typography': return typographyNearest(v);
     case 'font-size': return typeScaleNearest('size', v, 'font-size');
@@ -253,7 +259,15 @@ function withExact(cands) {
 // ---------- helpers for the Suggested Tokens tool ----------
 // Distance between two values of a preset, or null when they can't be compared (no clustering).
 export function valueDistance(preset, a, b) {
-  if (['text-color', 'background', 'border-color'].includes(preset)) {
+  if (preset === 'border') {
+    // same widths/styles/sides, compare colors
+    const re = /#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/gi;
+    if (String(a).replace(re, '#') !== String(b).replace(re, '#')) return null;
+    const ca = String(a).match(re) || [], cb = String(b).match(re) || [];
+    if (ca.length !== 1 || cb.length !== 1) return null;
+    return valueDistance('border-color', ca[0], cb[0]);
+  }
+  if (['text-color', 'background', 'border-color', 'overlay'].includes(preset)) {
     const x = parseColor(a), y = parseColor(b);
     if (!x || !y || /,/.test(a) || /,/.test(b)) return null;
     return dE(oklab(x), oklab(y)) + Math.abs(x.a - y.a) * 100;
@@ -267,17 +281,17 @@ export function valueDistance(preset, a, b) {
   const x = single(a), y = single(b);
   return x == null || y == null ? null : Math.abs(x - y);
 }
-export const isColorPreset = p => ['text-color', 'background', 'border-color'].includes(p);
+export const isColorPreset = p => ['text-color', 'background', 'border-color', 'overlay'].includes(p);
 
 // Token names in the family a preset maps to (for "unused existing tokens").
 export function familyTokenNames(preset) {
   if (!T) return [];
   switch (preset) {
     case 'radius': return T.radius.map(t => t.name);
-    case 'gap': case 'padding': return T.spacing.map(t => t.name);
+    case 'gap': case 'padding': case 'spacing': return T.spacing.map(t => t.name);
     case 'shadow': return T.shadow.map(t => t.name);
     case 'typography': case 'size-weight': return T.styles.map(s => s.name);
-    case 'text-color': case 'background': case 'border-color': return [...new Set(T.colors.map(c => c.name))];
+    case 'text-color': case 'background': case 'border-color': case 'overlay': return [...new Set(T.colors.map(c => c.name))];
     default: return [];
   }
 }
@@ -288,6 +302,7 @@ export function suggestName(preset, value) {
   const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   switch (preset) {
     case 'radius': return /\s/.test(v) ? `radius-${slug(v.replace(/px/g, ''))}` : `radius-${num}`;
+    case 'spacing': return `spacing-${num}px`;
     case 'gap': case 'padding': return /\s/.test(v) ? `spacing-${slug(v.replace(/px/g, ''))}` : `spacing-${num}px`;
     case 'font-size': return `text-size-${num}`;
     case 'size-weight': { const [sz, w] = v.split(' / '); return `text-${parseFloat(sz)}-${w}`; }
@@ -296,9 +311,21 @@ export function suggestName(preset, value) {
     case 'letter-spacing': return `tracking-${num}`;
     case 'font-family': return `font-${slug(v)}`;
     case 'border-width': return `border-${num}`;
+    case 'border': {
+      const col = (v.match(/#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/i) || [])[0];
+      const w = parseFloat((v.match(/([\d.]+)px/) || [])[1]);
+      const side = v.includes(':') ? `-${v.split(':')[0].replace(/, /g, '-')}` : '';
+      return `border${side}-${w}${col ? '-' + suggestName('border-color', col).replace(/^color-/, '') : ''}`;
+    }
     case 'opacity': return `opacity-${Math.round(n * 100)}`;
     case 'shadow': { const s = parseShadow(v); return s ? `shadow-${s.y}-${s.blur}${s.col.a < 1 ? `-${Math.round(s.col.a * 100)}` : ''}` : `shadow-${slug(v).slice(0, 20)}`; }
     case 'typography': { const [spec] = v.split(' · '); const [size, weight] = spec.split(' / '); return `text-${parseFloat(size)}-${weight}`; }
+    case 'overlay': {
+      const c = parseColor(v); if (!c) return `overlay-${slug(v)}`;
+      const lum = (c.r + c.g + c.b) / 3, sat = Math.max(c.r, c.g, c.b) - Math.min(c.r, c.g, c.b);
+      const base = sat < 24 && lum < 40 ? 'black' : sat < 24 && lum > 215 ? 'white' : suggestName('background', `#${[c.r, c.g, c.b].map(x => x.toString(16).padStart(2, '0')).join('')}`).replace(/^color-/, '');
+      return `overlay-${base}-${Math.round(c.a * 100)}`;
+    }
     case 'text-color': case 'background': case 'border-color': {
       const near = nearest(preset, v)?.candidates?.[0]?.token || '';
       const ramp = (near.match(/^color-(grey|red|green|purple|yellow|orange|pro|ai)/) || [, near.startsWith('color-theme') ? 'grey' : 'new'])[1];
@@ -320,4 +347,65 @@ export function tokenEntry(preset, name, value, usage) {
   if (preset === 'size-weight') { const [fontSize, fontWeight] = String(value).split(' / '); return { name, fontSize, fontWeight: Number(fontWeight), usage }; }
   if (isColorPreset(preset)) { const c = parseColor(value); return { name, value: c ? (c.a < 1 ? `rgba(${c.r}, ${c.g}, ${c.b}, ${Math.round(c.a * 100) / 100})` : '#' + [c.r, c.g, c.b].map(x => x.toString(16).padStart(2, '0')).join('')) : value, usage }; }
   return { name, value, usage };
+}
+
+// ---------- rearranging existing scale tokens ----------
+// The token scale a preset maps onto: [{ name, n }] sorted by value, or null when the family
+// isn't a 1-D scale (colors, shadows, combined type styles).
+export function scaleFor(preset) {
+  if (!T) return null;
+  const distinct = field => {
+    const m = new Map();
+    for (const s of T.styles) { const v = s[field]; if (v == null || !Number.isFinite(v)) continue; if (!m.has(v)) m.set(v, []); m.get(v).push(s.name); }
+    return [...m].map(([n, names]) => ({ name: names.length > 2 ? `${names.slice(0, 2).join(' / ')} +${names.length - 2}` : names.join(' / '), n })).sort((a, b) => a.n - b.n);
+  };
+  switch (preset) {
+    case 'radius': return T.radius.map(t => ({ name: t.name, n: t.n })).sort((a, b) => a.n - b.n);
+    case 'spacing': case 'gap': case 'padding': return T.spacing.map(t => ({ name: t.name, n: t.n })).sort((a, b) => a.n - b.n);
+    case 'font-size': case 'size-weight': return distinct('size');
+    case 'line-height': return distinct('lh');
+    case 'font-weight': return distinct('weight');
+    case 'letter-spacing': return distinct('ls');
+    default: return null;
+  }
+}
+// Numbers a usage value contributes to the scale (radius corners, padding parts, the size of a size/weight pair).
+export function scaleValues(preset, value) {
+  const v = String(value);
+  if (preset === 'radius' && (v === 'pill' || v === '50%')) return []; // rounded-full, not on the scale
+  if (preset === 'size-weight') return [px(v.split(' / ')[0])].filter(Number.isFinite);
+  if (preset === 'font-weight') return [Number(v)].filter(Number.isFinite);
+  return v.split(/\s+/).map(px).filter(n => Number.isFinite(n) && n > 0);
+}
+// Optimal 1-D weighted k-medians (dynamic programming). points: [{ x, w }] sorted by x.
+// Returns k cluster centers (each an observed value) with their member points.
+export function kMedians(points, k) {
+  const n = points.length;
+  if (!n) return [];
+  if (n <= k) return points.map(p => ({ center: p.x, members: [p] }));
+  // cost[i][j]: cost of one cluster over points i..j at its weighted median
+  const cost = Array.from({ length: n }, () => new Float64Array(n));
+  const med = Array.from({ length: n }, () => new Int32Array(n));
+  for (let i = 0; i < n; i++) {
+    let total = 0;
+    for (let j = i; j < n; j++) {
+      total += points[j].w;
+      let acc = 0, m = i;
+      while (m < j && acc + points[m].w < total / 2) { acc += points[m].w; m++; }
+      med[i][j] = m;
+      let c = 0;
+      for (let t = i; t <= j; t++) c += points[t].w * Math.abs(points[t].x - points[m].x);
+      cost[i][j] = c;
+    }
+  }
+  const D = Array.from({ length: k + 1 }, () => new Float64Array(n + 1).fill(Infinity));
+  const P = Array.from({ length: k + 1 }, () => new Int32Array(n + 1));
+  D[0][0] = 0;
+  for (let c = 1; c <= k; c++) for (let j = 1; j <= n; j++) for (let i = c; i <= j; i++) {
+    const v = D[c - 1][i - 1] + cost[i - 1][j - 1];
+    if (v < D[c][j]) { D[c][j] = v; P[c][j] = i; }
+  }
+  const out = [];
+  for (let c = k, j = n; c > 0; c--) { const i = P[c][j]; out.unshift({ center: points[med[i - 1][j - 1]].x, members: points.slice(i - 1, j) }); j = i - 1; }
+  return out;
 }

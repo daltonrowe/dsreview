@@ -126,3 +126,27 @@ export async function runStep(page, step) {
   await settle(page);
 }
 
+
+// Screenshot an element with surrounding context and a dashed highlight.
+export async function shootElement(page, r, out) {
+  const box = await page.evaluate(({ owner, tpl, nth }) => {
+    const el = window.__dcv.find(owner, tpl, nth);
+    if (!el) return null;
+    el.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' });
+    const rect = window.__dcv.highlight(el, { scroll: false });
+    return rect && { x: rect.left, y: rect.top, w: rect.width, h: rect.height, vw: innerWidth, vh: innerHeight };
+  }, r);
+  if (!box) throw new Error('element not found');
+  await page.waitForTimeout(60);
+  await page.evaluate(() => Promise.all([...document.images].filter(i => !i.complete).map(i => new Promise(res => { i.onload = i.onerror = res; setTimeout(res, 1500); }))));
+  // context: at least 320x160, 24px padding, clamped to viewport
+  const pad = 24;
+  let w = Math.max(box.w + pad * 2, 320), h = Math.max(box.h + pad * 2, 160);
+  let x = box.x + box.w / 2 - w / 2, y = box.y + box.h / 2 - h / 2;
+  x = Math.max(0, Math.min(x, box.vw - w)); y = Math.max(0, Math.min(y, box.vh - h));
+  w = Math.min(w, box.vw - x); h = Math.min(h, box.vh - y);
+  await page.screenshot({ path: out, clip: { x, y, width: w, height: h }, animations: 'disabled', caret: 'hide' });
+  await page.evaluate(() => window.__dcv.unhighlight());
+  return true;
+}
+

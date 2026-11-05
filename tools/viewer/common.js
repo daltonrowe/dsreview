@@ -21,9 +21,16 @@ export function cssColor(v) {
 export function preview(preset, value) {
   const v = String(value);
   switch (preset) {
-    case 'text-color': case 'background': case 'border-color': {
+    case 'text-color': case 'background': case 'border-color': case 'overlay': {
       const cols = v.split(/,\s*(?=#)/);
       return `<span class="swatch${cols.length > 1 ? ' wide' : ''}">${cols.map((c, i) => `<i style="background:${esc(cssColor(c))};left:${(i / cols.length) * 100}%;width:${100 / cols.length}%;right:auto"></i>`).join('')}</span>`;
+    }
+    case 'border': {
+      const m = v.match(/([\d.]+px) (\w+) (#[0-9a-f]{6}(?:\s*\/\s*\d+%)?)/i);
+      if (!m) return '';
+      const sides = v.includes(':') ? v.split(':')[0].split(', ') : ['top', 'right', 'bottom', 'left'];
+      const b = `${Math.min(parseFloat(m[1]), 6)}px ${m[2]} ${cssColor(m[3])}`;
+      return `<span class="swatch" style="background:var(--panel)">${sides.map(s => `<i style="border-${s}:${esc(b)}"></i>`).join('')}</span>`;
     }
     case 'gradient': return `<span class="swatch wide"><i style="background-image:${esc(v)}"></i></span>`;
     case 'radius': {
@@ -32,7 +39,7 @@ export function preview(preset, value) {
     }
     case 'shadow': return `<span class="shadow-prev" style="box-shadow:${esc(v)}"></span>`;
     case 'opacity': return `<span class="swatch"><i style="background:var(--text);opacity:${esc(v)}"></i></span>`;
-    case 'gap': case 'padding': case 'border-width': {
+    case 'gap': case 'padding': case 'spacing': case 'border-width': {
       const n = parseFloat(v) || 0;
       return `<span class="space-prev" style="width:${Math.min(n, 120)}px"></span>`;
     }
@@ -75,8 +82,8 @@ export function editorUrl(root, file, line, col) {
 
 export function progressBar(p) {
   const pct = k => (p.total ? ((p[k] || 0) / p.total) * 100 : 0);
-  return `<div class="progress" title="keep ${p.keep} · round ${p.round || 0} · exclude ${p.exclude} · remove ${p.remove} · undecided ${p.undecided}"><span class="keep" style="width:${pct('keep')}%"></span><span class="round" style="width:${pct('round')}%"></span><span class="exclude" style="width:${pct('exclude')}%"></span><span class="remove" style="width:${pct('remove')}%"></span></div>`;
+  return `<div class="progress" title="keep ${p.keep} · round ${p.round || 0} · exclude ${p.exclude} · undecided ${p.undecided}"><span class="keep" style="width:${pct('keep')}%"></span><span class="round" style="width:${pct('round')}%"></span><span class="exclude" style="width:${pct('exclude')}%"></span></div>`;
 }
 export function legend(p) {
-  return `<div class="legend"><span><i class="dot keep"></i>Keep <b>${p.keep}</b></span><span><i class="dot round"></i>Round <b>${p.round || 0}</b></span><span><i class="dot exclude"></i>Exclude <b>${p.exclude}</b></span><span><i class="dot remove"></i>Remove <b>${p.remove}</b></span><span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
+  return `<div class="legend"><span><i class="dot keep"></i>Keep <b>${p.keep}</b></span><span><i class="dot round"></i>Round <b>${p.round || 0}</b></span><span><i class="dot exclude"></i>Exclude <b>${p.exclude}</b></span><span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
 }

@@ -55,6 +55,14 @@
       title: 'Background color', declared: ['background-color', 'background'], swatch: 'color',
       value(el, cs) { return transparent(cs.backgroundColor) ? null : normColor(cs.backgroundColor); },
     },
+    overlay: {
+      title: 'Overlays (translucent colors)', declared: ['background-color', 'background'], swatch: 'color',
+      value(el, cs) {
+        if (transparent(cs.backgroundColor)) return null;
+        const n = normColor(cs.backgroundColor);
+        return n.includes(' / ') ? n : null; // only partially transparent fills
+      },
+    },
     gradient: {
       title: 'Gradients', declared: ['background-image', 'background'], swatch: 'image',
       value(el, cs) { return /gradient\(/.test(cs.backgroundImage) ? cs.backgroundImage.replace(/rgba?\([^)]*\)/g, m => normColor(m)) : null; },
@@ -67,6 +75,21 @@
         if (!sides.length) return null;
         const cols = [...new Set(sides.map(s => normColor(cs[`border${s}Color`])))];
         return cols.join(', ');
+      },
+    },
+    border: {
+      title: 'Borders', swatch: 'border',
+      declared: ['border', 'border-top', 'border-right', 'border-bottom', 'border-left', 'border-color', 'border-width', 'border-style'],
+      value(el, cs) {
+        const sides = ['Top', 'Right', 'Bottom', 'Left']
+          .map(s => ({ s: s.toLowerCase(), w: cs[`border${s}Width`], st: cs[`border${s}Style`], c: cs[`border${s}Color`] }))
+          .filter(x => px(x.w) > 0 && x.st !== 'none' && !transparent(x.c));
+        if (!sides.length) return null;
+        const desc = x => `${x.w} ${x.st} ${normColor(x.c)}`;
+        const groups = new Map();
+        for (const x of sides) { const d = desc(x); if (!groups.has(d)) groups.set(d, []); groups.get(d).push(x.s); }
+        if (sides.length === 4 && groups.size === 1) return [...groups.keys()][0];
+        return [...groups.entries()].map(([d, ss]) => `${ss.join(', ')}: ${d}`).join('; ');
       },
     },
     'border-width': {
@@ -115,6 +138,37 @@
         const lh = cs.lineHeight === 'normal' ? 'normal' : cs.lineHeight;
         return `${cs.fontSize} / ${cs.fontWeight} / ${lh}${cs.letterSpacing !== 'normal' && px(cs.letterSpacing) ? ` / ${cs.letterSpacing}` : ''} · ${fam}${cs.fontStyle === 'italic' ? ' italic' : ''}`;
       },
+    },
+    // Multi-valued: one record per distinct length on the element, with the properties using it.
+    spacing: {
+      title: 'Spacing values', sort: 'numeric', multi: true,
+      value(el, cs) {
+        const out = new Map();
+        const add = (v, p) => {
+          if (!/px$/.test(v)) return;
+          const n = parseFloat(v);
+          if (!(n > 0) || n > 400) return;
+          const k = Math.round(n * 100) / 100 + 'px';
+          if (!out.has(k)) out.set(k, []);
+          out.get(k).push(p);
+        };
+        // auto margins (centering) compute to px; skip the sides declared auto
+        const autoSides = new Set();
+        for (const p of ['margin', 'margin-inline', 'margin-left', 'margin-right', 'margin-top', 'margin-bottom']) {
+          const d = declaredOn(el, [p]);
+          if (!d || !/auto/.test(d.value)) continue;
+          if (p === 'margin') { const parts = d.value.trim().split(/\s+/); const sides = ['top', 'right', 'bottom', 'left']; const map = parts.length === 1 ? [0, 0, 0, 0] : parts.length === 2 ? [0, 1, 0, 1] : parts.length === 3 ? [0, 1, 2, 1] : [0, 1, 2, 3]; sides.forEach((s, i) => { if (parts[map[i]] === 'auto') autoSides.add(s); }); }
+          else if (p === 'margin-inline') { autoSides.add('left'); autoSides.add('right'); }
+          else autoSides.add(p.slice(7));
+        }
+        for (const s of ['top', 'right', 'bottom', 'left']) {
+          add(cs.getPropertyValue('padding-' + s), 'padding-' + s);
+          if (!autoSides.has(s)) add(cs.getPropertyValue('margin-' + s), 'margin-' + s);
+        }
+        if (/flex|grid/.test(cs.display)) { add(cs.rowGap, 'row-gap'); add(cs.columnGap, 'column-gap'); }
+        return [...out].map(([value, props]) => ({ value, props }));
+      },
+      declaredFor: props => [...new Set(props.flatMap(p => { const base = p.split('-')[0]; return p.endsWith('gap') ? ['gap', p] : [base, `${base}-${/left|right/.test(p) ? 'inline' : 'block'}`, p]; }))],
     },
     gap: {
       title: 'Gap', declared: ['gap', 'row-gap', 'column-gap'], sort: 'numeric',
@@ -269,6 +323,74 @@
     },
     unhighlight() { const b = document.getElementById('__dcv-hl'); if (b) b.remove(); },
 
+    // ---- component candidates ----
+    // One record per (owner, tpl, signature) for styled/interactive elements. The signature is the
+    // element's own look (kind, size class, radius, fill, border, shadow, text style, icon), so
+    // identical-looking elements across pages cluster into one suggested component.
+    componentCandidates() {
+      const out = new Map();
+      const counters = new Map();
+      for (const el of document.querySelectorAll('#dc-root [data-dc-tpl]')) {
+        const tpl = el.getAttribute('data-dc-tpl'), owner = this.owner(el), ck = owner + '|' + tpl;
+        const nth = counters.get(ck) || 0; counters.set(ck, nth + 1);
+        if (!this.vis(el)) continue;
+        const cs = getComputedStyle(el), r = el.getBoundingClientRect();
+        if (r.width < 8 || r.height < 8 || (r.width > innerWidth * 0.7 && r.height > 300)) continue;
+        const tag = el.tagName.toLowerCase();
+        const bg = transparent(cs.backgroundColor) ? null : normColor(cs.backgroundColor);
+        const grad = /gradient\(/.test(cs.backgroundImage);
+        const bw = ['Top', 'Right', 'Bottom', 'Left'].filter(s => px(cs[`border${s}Width`]) > 0 && cs[`border${s}Style`] !== 'none' && !transparent(cs[`border${s}Color`]));
+        const border = bw.length === 4 ? `${cs.borderTopWidth} ${normColor(cs.borderTopColor)}` : bw.length ? 'partial' : null;
+        const shadow = cs.boxShadow !== 'none';
+        const rad = px(cs.borderTopLeftRadius);
+        const radius = rad >= Math.min(r.width, r.height) / 2 - 1 && rad > 0 ? (Math.abs(r.width - r.height) < 2 ? 'circle' : 'pill') : rad ? `${Math.round(rad)}px` : '0';
+        const interactive = ['button', 'a', 'input', 'select', 'textarea', 'label'].includes(tag) || el.getAttribute('role') === 'button' || el.getAttribute('role') === 'tab' || el.hasAttribute('onclick') || cs.cursor === 'pointer';
+        const styled = bg || grad || border || shadow;
+        if (!styled && !['input', 'select', 'textarea'].includes(tag)) continue;
+        if (!interactive && !styled) continue;
+        const text = (el.innerText || el.value || el.placeholder || '').replace(/\s+/g, ' ').trim();
+        const hasIcon = !!el.querySelector(':scope > svg, :scope > img, :scope > * > svg, :scope > i');
+        const hasImg = tag === 'img' || !!el.querySelector(':scope > img');
+        // category
+        let cat;
+        if (['input', 'select', 'textarea'].includes(tag) || (el.querySelector(':scope > input, :scope > textarea') && r.height <= 64)) cat = 'Input';
+        else if (tag === 'img' && (radius === 'circle') && r.width <= 64) cat = 'Avatar';
+        else if (el.getAttribute('role') === 'tab') cat = 'Tab';
+        else if (interactive && !text && hasIcon && r.width <= 56 && r.height <= 56) cat = 'Icon button';
+        else if (interactive && text && r.height <= 36 && radius === 'pill' && !grad && (!bg || /#f|#e/.test(bg))) cat = 'Chip';
+        else if (interactive && text && r.height <= 64 && r.width <= 420) cat = 'Button';
+        else if (!interactive && text && r.height <= 26 && r.width <= 160 && (bg || grad)) cat = 'Badge';
+        else if (r.height >= 60 && r.width >= 120 && (bg || border || shadow) && rad > 0) cat = interactive ? 'Card (clickable)' : 'Card';
+        else if (interactive && r.height <= 64) cat = 'Control';
+        else continue;
+        const h = cat.startsWith('Card') ? null : Math.round(r.height / 2) * 2;
+        const font = text && !cat.startsWith('Card') ? `${cs.fontSize}/${cs.fontWeight}` : null;
+        // exact look (a variant) and a coarse family key (the suggested component)
+        const exact = [cat, h, radius, bg, grad ? 'gradient' : null, border, shadow ? 'shadow' : null, font, hasIcon && cat !== 'Icon button' ? 'icon' : null].join('|');
+        const fillKind = grad ? 'gradient' : !bg ? 'none' : (() => {
+          const m = bg.match(/^#(..)(..)(..)/); const [R, G, B] = m.slice(1).map(x => parseInt(x, 16));
+          const sat = Math.max(R, G, B) - Math.min(R, G, B);
+          return sat < 24 ? 'neutral' : (R + G + B) / 3 > 200 ? 'tint' : 'brand';
+        })();
+        const radBucket = radius === 'pill' || radius === 'circle' ? radius : rad === 0 ? 'square' : rad <= 6 ? 'small' : rad <= 12 ? 'medium' : rad <= 20 ? 'large' : 'xl';
+        const hB = h == null ? null : Math.round(h / 4) * 4;
+        const fs = text && !cat.startsWith('Card') ? Math.round(px(cs.fontSize) / 2) * 2 : null;
+        const fw = fs ? (Number(cs.fontWeight) >= 700 ? 'bold' : Number(cs.fontWeight) >= 500 ? 'medium' : 'regular') : null;
+        const sig = [cat, hB, radBucket, fillKind, border ? 'border' : null, shadow ? 'shadow' : null, fs && `${fs}px ${fw}`].join('|');
+        const key = ck + '|' + sig;
+        const hit = out.get(key);
+        if (hit) { hit.instances++; continue; }
+        const lab = el.closest('[data-screen-label]');
+        out.set(key, {
+          sig, exact, cat, owner, tpl: Number(tpl), nth, instances: 1,
+          family: { height: hB, radius: radBucket, fill: fillKind, border: !!border, shadow, text: fs ? `${fs}px ${fw}` : null },
+          spec: { height: h, radius, bg, gradient: grad, border, shadow, font, icon: hasIcon, image: hasImg, width: Math.round(r.width) },
+          text: text.slice(0, 40), component: lab ? lab.dataset.screenLabel : null, tag,
+        });
+      }
+      return [...out.values()];
+    },
+
     // ---- survey collection ----
     // Returns one record per (owner, tpl, value) visible in the current state.
     collect(presetId) {
@@ -285,17 +407,19 @@
         if (el.closest('#__dcv-hl')) continue;
         if (!this.vis(el)) continue;
         const cs = getComputedStyle(el);
-        let value;
-        try { value = preset.value(el, cs); } catch { value = null; }
-        if (value == null) continue;
+        let raw;
+        try { raw = preset.value(el, cs); } catch { raw = null; }
+        if (raw == null) continue;
+        const recs = preset.multi ? raw : [{ value: raw, props: null }];
+        for (const { value, props } of recs) {
         const key = ck + '|' + value;
         const hit = seen.get(key);
         if (hit) { hit.instances++; continue; }
-        const d = declared(el, preset);
+        const d = declared(el, props && preset.declaredFor ? { ...preset, declared: preset.declaredFor(props) } : preset);
         const lab = el.closest('[data-screen-label]');
         const r = el.getBoundingClientRect();
         seen.set(key, {
-          value, owner, tpl: Number(tpl), nth, instances: 1,
+          value, props, owner, tpl: Number(tpl), nth, instances: 1,
           declared: d ? d.value : null, declaredProp: d ? d.prop : null, declaredFrom: d ? d.from : null, inheritedFrom: d ? d.inheritedFrom || null : null,
           tokens: d ? [...new Set((d.value.match(/--[\w-]+/g) || []))] : [],
           component: lab ? lab.dataset.screenLabel : null,
@@ -303,6 +427,7 @@
           text: (ownText(el) || el.getAttribute('aria-label') || el.getAttribute('placeholder') || '').slice(0, 80),
           size: [Math.round(r.width), Math.round(r.height)],
         });
+        }
       }
       return [...seen.values()];
     },

@@ -6,14 +6,30 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 import { exec } from 'node:child_process';
+import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
 
 const SURVEYS = path.join(ROOT, 'surveys');
 const argv = process.argv.slice(2);
 const PORT = Number(argv[argv.indexOf('--port') + 1]) || Number(process.env.PORT) || 4321;
-const DECISIONS = ['keep', 'round', 'exclude', 'remove'];
+const DECISIONS = ['keep', 'round', 'exclude'];
 
 const app = express();
+
+// HTTP basic auth on everything (override with REVIEW_USER / REVIEW_PASS)
+const AUTH_USER = process.env.REVIEW_USER || 'eezy';
+const AUTH_PASS = process.env.REVIEW_PASS || 'eezy';
+const safeEq = (a, b) => { const x = Buffer.from(String(a)), y = Buffer.from(String(b)); return x.length === y.length && crypto.timingSafeEqual(x, y); };
+app.use((req, res, next) => {
+  const [scheme, encoded] = (req.headers.authorization || '').split(' ');
+  if (scheme === 'Basic' && encoded) {
+    const raw = Buffer.from(encoded, 'base64').toString();
+    const i = raw.indexOf(':');
+    if (i >= 0 && safeEq(raw.slice(0, i), AUTH_USER) & safeEq(raw.slice(i + 1), AUTH_PASS)) return next();
+  }
+  res.set('WWW-Authenticate', 'Basic realm="Design System Review", charset="UTF-8"').status(401).send('Authentication required');
+});
+
 app.use(express.json());
 const noCache = { etag: false, lastModified: false, setHeaders: res => res.set('cache-control', 'no-store') };
 
@@ -22,6 +38,7 @@ app.get('/lib/bridge.js', (req, res) => res.set('cache-control', 'no-store').sen
 app.use('/design-project', express.static(PROJECT, noCache));
 app.use('/surveys', express.static(SURVEYS, noCache));
 app.use('/design-system', express.static(path.join(ROOT, 'design-system'), noCache));
+app.use('/analysis', express.static(path.join(ROOT, 'analysis'), noCache));
 app.use('/screenshots', express.static(path.join(ROOT, 'screenshots'), noCache));
 
 // ---------- helpers ----------
@@ -46,7 +63,7 @@ async function writeJsonAtomic(p, data) {
 }
 
 function progress(survey, decisions) {
-  const out = { keep: 0, round: 0, exclude: 0, remove: 0, undecided: 0, total: 0 };
+  const out = { keep: 0, round: 0, exclude: 0, undecided: 0, total: 0 };
   for (const s of survey.sections) for (const it of s.items) {
     out.total++;
     const d = decisions[it.id]?.decision;
@@ -60,6 +77,12 @@ app.get('/api/config', (req, res) => res.json({ root: ROOT, project: PROJECT }))
 
 app.get('/api/pages', (req, res) => {
   res.json(allPages().map(file => ({ file, dc: file.endsWith('.dc.html'), props: file.endsWith('.dc.html') ? readPropsMeta(file) : null })));
+});
+
+app.get('/api/components', async (req, res) => {
+  const data = await readJson(path.join(ROOT, 'analysis/components/components.json'), null);
+  if (!data) return res.status(404).json({ error: 'Not generated. Run: node tools/components.mjs' });
+  res.json(data);
 });
 
 app.get('/api/surveys', async (req, res) => {
@@ -126,7 +149,7 @@ app.get('/api/surveys/:id/export.:fmt', async (req, res) => {
   if (req.params.fmt !== 'md') return res.status(400).end();
   const p = progress(survey, decisions);
   let md = `# ${survey.title}\n\nSurvey \`${survey.id}\` (preset \`${survey.preset}\`), generated ${survey.generatedAt}.\n\n`;
-  md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Remove ${p.remove} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
+  md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
   for (const s of rows) {
     const counts = DECISIONS.map(d => `${d} ${s.items.filter(i => i.decision === d).length}`).join(', ');
     md += `## S${s.section} · \`${s.value}\`\n\n${s.tokens.length ? `Tokens: ${s.tokens.map(t => `\`${t}\``).join(', ')}. ` : ''}${s.items.length} usages (${counts}).\n\n`;

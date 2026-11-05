@@ -1,0 +1,472 @@
+{
+ "id": "overlay",
+ "title": "Overlays (translucent colors)",
+ "preset": "overlay",
+ "description": "",
+ "generatedAt": "2026-11-05T11:44:30.415Z",
+ "captures": [
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (logged in)",
+   "props": {
+    "authState": "logged-in"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (dark)",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore",
+   "state": {
+    "active": "explore"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools",
+   "state": {
+    "active": "collections"
+   }
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1",
+   "props": {
+    "layout": "Option 1"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2",
+   "props": {
+    "layout": "Option 2"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3",
+   "props": {
+    "layout": "Option 3"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4",
+   "props": {
+    "layout": "Option 4"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4 (dark)",
+   "props": {
+    "layout": "Option 4",
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Checkout.dc.html",
+   "label": "Checkout"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Log in",
+   "props": {
+    "mode": "Log In"
+   }
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account (dark)",
+   "props": {
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Login"
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Signup",
+   "props": {
+    "mode": "signup"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App",
+   "props": {
+    "layout": "app"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar",
+   "props": {
+    "layout": "sidebar"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs",
+   "props": {
+    "layout": "tabs"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal",
+   "props": {
+    "layout": "modal"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub",
+   "props": {
+    "layout": "hub"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan",
+   "props": {
+    "plan": "Free"
+   }
+  },
+  {
+   "page": "Style Guide - Action Cards.dc.html",
+   "label": "Style Guide · Action Cards"
+  }
+ ],
+ "stats": {
+  "sections": 5,
+  "usages": 7,
+  "instances": 39
+ },
+ "problems": [],
+ "sections": [
+  {
+   "n": 1,
+   "id": "fac40a0b75",
+   "value": "#ffffff / 14%",
+   "tokens": [],
+   "usages": 2,
+   "instances": 32,
+   "items": [
+    {
+     "n": 1,
+     "id": "15c7d7a787",
+     "value": "#ffffff / 14%",
+     "declared": "rgba(255, 255, 255, 0.14)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "div",
+     "text": "",
+     "size": [
+      297,
+      224
+     ],
+     "instances": 20,
+     "where": {
+      "capture": 14,
+      "owner": "Log In",
+      "tpl": 212,
+      "nth": 0
+     },
+     "captures": [
+      14,
+      16
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 248,
+      "col": 13,
+      "snippet": "<div style=\"display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; margin-bottom: 14px; border-radius: 18px; background: {{ sp2Card }}; border: 1px solid {{ sp2CardBorder }}; box-shadow: {{ sp2CardShadow }}; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px)\">"
+     },
+     "shot": "shots/15c7d7a787.png"
+    },
+    {
+     "n": 2,
+     "id": "d4127f3c6e",
+     "value": "#ffffff / 14%",
+     "declared": "rgba(255, 255, 255, 0.14)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Social proof V2",
+     "tag": "div",
+     "text": "",
+     "size": [
+      297,
+      179
+     ],
+     "instances": 12,
+     "where": {
+      "capture": 14,
+      "owner": "Log In",
+      "tpl": 229,
+      "nth": 2
+     },
+     "captures": [
+      14,
+      16
+     ],
+     "source": {
+      "file": "Log In.dc.html",
+      "line": 261,
+      "col": 13,
+      "snippet": "<div style=\"display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; margin-bottom: 14px; border-radius: 18px; background: {{ sp2Card }}; border: 1px solid {{ sp2CardBorder }}; box-shadow: {{ sp2CardShadow }}; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px)\">"
+     },
+     "shot": "shots/d4127f3c6e.png"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "id": "3bda223a1c",
+   "value": "#0e2332 / 62%",
+   "tokens": [],
+   "usages": 2,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "27b6ace290",
+     "value": "#0e2332 / 62%",
+     "declared": "rgba(14, 35, 50, 0.62)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Image results",
+     "tag": "span",
+     "text": "View More",
+     "size": [
+      158,
+      82
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 3,
+      "owner": "AI Magic",
+      "tpl": 3649,
+      "nth": 231
+     },
+     "captures": [
+      3,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3848,
+      "col": 17,
+      "snippet": "<span style=\"position: absolute; inset: 0; display: {{ sp.ovDisplay }}; align-items: center; justify-content: center; gap: 8px; background: rgba(14, 35, 50, .62); color: #ffffff; font-size: 14px; font-weight: 700\">"
+     },
+     "shot": "shots/27b6ace290.png"
+    },
+    {
+     "n": 2,
+     "id": "f87ae13481",
+     "value": "#0e2332 / 62%",
+     "declared": "rgba(14, 35, 50, 0.62)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Image results",
+     "tag": "span",
+     "text": "View More",
+     "size": [
+      158,
+      82
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 3,
+      "owner": "AI Magic",
+      "tpl": 3661,
+      "nth": 21
+     },
+     "captures": [
+      3,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3865,
+      "col": 17,
+      "snippet": "<span style=\"position: absolute; inset: 0; display: {{ sp.ovDisplay }}; align-items: center; justify-content: center; gap: 8px; background: rgba(14, 35, 50, .62); color: #ffffff; font-size: 14px; font-weight: 700\">"
+     },
+     "shot": "shots/f87ae13481.png"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "id": "7d86d23195",
+   "value": "#ffffff / 22%",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "41fde6efed",
+     "value": "#ffffff / 22%",
+     "declared": "rgba(255, 255, 255, 0.22)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V2",
+     "tag": "div",
+     "text": "Billing period",
+     "size": [
+      269,
+      48
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 9,
+      "owner": "Pricing",
+      "tpl": 194,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 190,
+      "col": 7,
+      "snippet": "<div role=\"tablist\" aria-label=\"Billing period\" style=\"display: flex; gap: 4px; margin-top: 28px; padding: 4px; border-radius: 9999px; background: rgba(255, 255, 255, .22)\">"
+     },
+     "shot": "shots/41fde6efed.png"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "bbf90c5c83",
+   "value": "#141414 / 72%",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "0958d88965",
+     "value": "#141414 / 72%",
+     "declared": "rgba(20, 20, 20, 0.72)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card AI",
+     "tag": "span",
+     "text": "Remove background",
+     "size": [
+      173,
+      30
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 499,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 380,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; top: 14px; right: 14px; display: flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 9999px; background: rgba(20, 20, 20, .72); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font-size: 13px; font-weight: 600\">"
+     },
+     "shot": "shots/0958d88965.png"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "id": "f54484f61d",
+   "value": "#0e2332 / 55%",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "4310783e7e",
+     "value": "#0e2332 / 55%",
+     "declared": "rgba(14, 35, 50, 0.55)",
+     "declaredProp": "background-color",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": null,
+     "tag": "div",
+     "text": "",
+     "size": [
+      1440,
+      940
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 22,
+      "owner": "Settings",
+      "tpl": 8,
+      "nth": 0
+     },
+     "captures": [
+      22
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 50,
+      "col": 1,
+      "snippet": "<div class=\"vz-settings\" ref=\"{{ rootRef }}\" data-ez-theme=\"{{ themeMode }}\" style=\"display: flex; flex: 1 0 auto; min-height: 100vh; box-sizing: border-box; padding: {{ rootPad }}; font-family: system-ui, 'Segoe UI', helvetica, arial, sans-serif; color: var(--ez-color--grey-100); background: {{ rootBg }}\">"
+     },
+     "shot": "shots/4310783e7e.png"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1812 @@
+{
+ "generatedAt": "2026-11-05T11:42:45.656Z",
+ "captures": [
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (logged in)",
+   "props": {
+    "authState": "logged-in"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (dark)",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore",
+   "state": {
+    "active": "explore"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools",
+   "state": {
+    "active": "collections"
+   }
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1",
+   "props": {
+    "layout": "Option 1"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2",
+   "props": {
+    "layout": "Option 2"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3",
+   "props": {
+    "layout": "Option 3"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4",
+   "props": {
+    "layout": "Option 4"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4 (dark)",
+   "props": {
+    "layout": "Option 4",
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Checkout.dc.html",
+   "label": "Checkout"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Log in",
+   "props": {
+    "mode": "Log In"
+   }
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account (dark)",
+   "props": {
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Login"
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Signup",
+   "props": {
+    "mode": "signup"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App",
+   "props": {
+    "layout": "app"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar",
+   "props": {
+    "layout": "sidebar"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs",
+   "props": {
+    "layout": "tabs"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal",
+   "props": {
+    "layout": "modal"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub",
+   "props": {
+    "layout": "hub"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan",
+   "props": {
+    "plan": "Free"
+   }
+  },
+  {
+   "page": "Style Guide - Action Cards.dc.html",
+   "label": "Style Guide · Action Cards"
+  }
+ ],
+ "total": 21,
+ "components": [
+  {
+   "id": "64edaa512d",
+   "category": "Card",
+   "description": "large radius · neutral fill · border",
+   "family": {
+    "height": null,
+    "radius": "large",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "16px radius · fill #ffffff · border 2px #cfd3d6",
+     "spec": {
+      "height": null,
+      "radius": "16px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "2px #cfd3d6",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 298
+     },
+     "usages": 11,
+     "instances": 33
+    },
+    {
+     "description": "16px radius · fill #171717 · border 2px #363636",
+     "spec": {
+      "height": null,
+      "radius": "16px",
+      "bg": "#171717",
+      "gradient": false,
+      "border": "2px #363636",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 298
+     },
+     "usages": 11,
+     "instances": 11
+    },
+    {
+     "description": "20px radius · fill #ffffff · border 2px #cfd3d6",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "2px #cfd3d6",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 1317
+     },
+     "usages": 2,
+     "instances": 4
+    },
+    {
+     "description": "18px radius · fill #ffffff / 14% · border 1px #ffffff / 28%",
+     "spec": {
+      "height": null,
+      "radius": "18px",
+      "bg": "#ffffff / 14%",
+      "gradient": false,
+      "border": "1px #ffffff / 28%",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 297
+     },
+     "usages": 2,
+     "instances": 32
+    },
+    {
+     "description": "20px radius · fill #f7f9fa · border 1px #e6e9ea",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#f7f9fa",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 860
+     },
+     "usages": 2,
+     "instances": 2
+    },
+    {
+     "description": "20px radius · fill #f3f4f5 · border 2px #cfd3d6",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#f3f4f5",
+      "gradient": false,
+      "border": "2px #cfd3d6",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 1317
+     },
+     "usages": 1,
+     "instances": 3
+    },
+    {
+     "description": "20px radius · fill #141414 · border 2px #363636",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#141414",
+      "gradient": false,
+      "border": "2px #363636",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 1317
+     },
+     "usages": 1,
+     "instances": 1
+    },
+    {
+     "description": "16px radius · fill #1f1f1f · border 1px #2c2c2c · with icon",
+     "spec": {
+      "height": null,
+      "radius": "16px",
+      "bg": "#1f1f1f",
+      "gradient": false,
+      "border": "1px #2c2c2c",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 296
+     },
+     "usages": 1,
+     "instances": 1
+    },
+    {
+     "description": "20px radius · fill #ffffff · border 1px #e6e9ea · with icon",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": true,
+      "width": 300
+     },
+     "usages": 1,
+     "instances": 5
+    },
+    {
+     "description": "20px radius · fill #171717 · border 1px #292929 · with icon",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#171717",
+      "gradient": false,
+      "border": "1px #292929",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": true,
+      "width": 300
+     },
+     "usages": 1,
+     "instances": 5
+    },
+    {
+     "description": "14px radius · fill #ffffff · border 1px #e6e9ea",
+     "spec": {
+      "height": null,
+      "radius": "14px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 292
+     },
+     "usages": 1,
+     "instances": 1
+    }
+   ],
+   "usages": 21,
+   "instances": 98,
+   "pages": [
+    "AI Magic",
+    "Pricing",
+    "Log In",
+    "Style Guide - Action Cards"
+   ],
+   "components": [
+    "Pre-footer",
+    "Image results",
+    "Why card license",
+    "Trustpilot marquee",
+    "Social proof V2"
+   ],
+   "examples": [
+    "Photographer One",
+    "Photographer Two",
+    "Photographer Three",
+    "Photographer Four",
+    "Social Proof",
+    "For Individuals"
+   ],
+   "example": {
+    "capture": 0,
+    "owner": "AI Magic",
+    "tpl": 1559,
+    "nth": 0
+   },
+   "shot": "shots/64edaa512d.png",
+   "related": []
+  },
+  {
+   "id": "547f7d1f0a",
+   "category": "Icon button",
+   "description": "~44px tall · circle · neutral fill · border",
+   "family": {
+    "height": 44,
+    "radius": "circle",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "42px tall · circle · fill #ffffff · border 1px #cfd3d6",
+     "spec": {
+      "height": 42,
+      "radius": "circle",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #cfd3d6",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": true,
+      "width": 42
+     },
+     "usages": 8,
+     "instances": 16
+    },
+    {
+     "description": "42px tall · circle · fill #171717 · border 1px #363636",
+     "spec": {
+      "height": 42,
+      "radius": "circle",
+      "bg": "#171717",
+      "gradient": false,
+      "border": "1px #363636",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": true,
+      "width": 42
+     },
+     "usages": 8,
+     "instances": 8
+    },
+    {
+     "description": "44px tall · circle · fill #ffffff · border 1px #e6e9ea",
+     "spec": {
+      "height": 44,
+      "radius": "circle",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 44
+     },
+     "usages": 2,
+     "instances": 2
+    }
+   ],
+   "usages": 10,
+   "instances": 26,
+   "pages": [
+    "Pricing",
+    "Log In"
+   ],
+   "components": [
+    "Customer reviews",
+    "Sign in form"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 9,
+    "owner": "Pricing",
+    "tpl": 296,
+    "nth": 0
+   },
+   "shot": "shots/547f7d1f0a.png",
+   "related": [
+    "Button",
+    "CloseButton"
+   ]
+  },
+  {
+   "id": "cd28deffac",
+   "category": "Button",
+   "description": "~40px tall · pill · neutral fill · border · shadow · 14px medium text",
+   "family": {
+    "height": 40,
+    "radius": "pill",
+    "fill": "neutral",
+    "border": true,
+    "shadow": true,
+    "text": "14px medium"
+   },
+   "variants": [
+    {
+     "description": "40px tall · pill · fill #ffffff · border 1px #e6e9ea · shadow · text 14px / 600 · with icon",
+     "spec": {
+      "height": 40,
+      "radius": "pill",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": true,
+      "font": "14px/600",
+      "icon": true,
+      "image": false,
+      "width": 150
+     },
+     "usages": 7,
+     "instances": 35
+    },
+    {
+     "description": "40px tall · pill · fill #262626 · border 1px #4a4e52 · shadow · text 14px / 600 · with icon",
+     "spec": {
+      "height": 40,
+      "radius": "pill",
+      "bg": "#262626",
+      "gradient": false,
+      "border": "1px #4a4e52",
+      "shadow": true,
+      "font": "14px/600",
+      "icon": true,
+      "image": false,
+      "width": 150
+     },
+     "usages": 7,
+     "instances": 7
+    },
+    {
+     "description": "40px tall · pill · fill #ffffff · border 1px #cfd3d6 · shadow · text 14px / 600",
+     "spec": {
+      "height": 40,
+      "radius": "pill",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #cfd3d6",
+      "shadow": true,
+      "font": "14px/600",
+      "icon": false,
+      "image": false,
+      "width": 156
+     },
+     "usages": 1,
+     "instances": 2
+    },
+    {
+     "description": "40px tall · pill · fill #f7f9fa · border 1px #cfd3d6 · shadow · text 14px / 600 · with icon",
+     "spec": {
+      "height": 40,
+      "radius": "pill",
+      "bg": "#f7f9fa",
+      "gradient": false,
+      "border": "1px #cfd3d6",
+      "shadow": true,
+      "font": "14px/600",
+      "icon": true,
+      "image": false,
+      "width": 124
+     },
+     "usages": 1,
+     "instances": 6
+    }
+   ],
+   "usages": 9,
+   "instances": 50,
+   "pages": [
+    "AI Magic",
+    "Search Dropdown"
+   ],
+   "components": [
+    "Filters",
+    "Top bar",
+    "Home search dropdown"
+   ],
+   "examples": [
+    "All Images",
+    "puppy",
+    "golden retriever",
+    "corgi",
+    "cute",
+    "running"
+   ],
+   "example": {
+    "capture": 0,
+    "owner": "AI Magic",
+    "tpl": 3467,
+    "nth": 0
+   },
+   "shot": "shots/cd28deffac.png",
+   "related": [
+    "Button"
+   ]
+  },
+  {
+   "id": "9adad75e9f",
+   "category": "Card (clickable)",
+   "description": "large radius · neutral fill · border",
+   "family": {
+    "height": null,
+    "radius": "large",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "15px radius · fill #ffffff · border 1px #e6e9ea",
+     "spec": {
+      "height": null,
+      "radius": "15px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 314
+     },
+     "usages": 4,
+     "instances": 4
+    },
+    {
+     "description": "14px radius · fill #ffffff · border 1px #e6e9ea · with icon",
+     "spec": {
+      "height": null,
+      "radius": "14px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 304
+     },
+     "usages": 1,
+     "instances": 6
+    }
+   ],
+   "usages": 5,
+   "instances": 10,
+   "pages": [
+    "Explore Page",
+    "Settings"
+   ],
+   "components": [
+    "Collections",
+    "Settings overview"
+   ],
+   "examples": [
+    "Autumn vibes 48 items",
+    "Christmas season 126 items",
+    "Nature textures 72 items",
+    "Vast landscapes 31 items",
+    "Profile Shawn Rubel · Signed in with Goo"
+   ],
+   "example": {
+    "capture": 6,
+    "owner": "Explore Page",
+    "tpl": 334,
+    "nth": 0
+   },
+   "shot": "shots/9adad75e9f.png",
+   "related": []
+  },
+  {
+   "id": "077216e336",
+   "category": "Button",
+   "description": "~20px tall · square corners · border · 14px regular text",
+   "family": {
+    "height": 20,
+    "radius": "square",
+    "fill": "none",
+    "border": true,
+    "shadow": false,
+    "text": "14px regular"
+   },
+   "variants": [
+    {
+     "description": "18px tall · square corners · partial border · text 13px / 400",
+     "spec": {
+      "height": 18,
+      "radius": "0",
+      "bg": null,
+      "gradient": false,
+      "border": "partial",
+      "shadow": false,
+      "font": "13px/400",
+      "icon": false,
+      "image": false,
+      "width": 84
+     },
+     "usages": 2,
+     "instances": 6
+    },
+    {
+     "description": "18px tall · square corners · partial border · text 14px / 400",
+     "spec": {
+      "height": 18,
+      "radius": "0",
+      "bg": null,
+      "gradient": false,
+      "border": "partial",
+      "shadow": false,
+      "font": "14px/400",
+      "icon": false,
+      "image": false,
+      "width": 89
+     },
+     "usages": 2,
+     "instances": 4
+    }
+   ],
+   "usages": 4,
+   "instances": 10,
+   "pages": [
+    "Log In",
+    "Log In v1"
+   ],
+   "components": [
+    "Sign in form",
+    "Log In"
+   ],
+   "examples": [
+    "Privacy Policy",
+    "Terms of Service"
+   ],
+   "example": {
+    "capture": 14,
+    "owner": "Log In",
+    "tpl": 122,
+    "nth": 0
+   },
+   "shot": "shots/077216e336.png",
+   "related": [
+    "Button"
+   ]
+  },
+  {
+   "id": "983af0b752",
+   "category": "Card (clickable)",
+   "description": "large radius · neutral fill",
+   "family": {
+    "height": null,
+    "radius": "large",
+    "fill": "neutral",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "15px radius · fill #cfd3d6",
+     "spec": {
+      "height": null,
+      "radius": "15px",
+      "bg": "#cfd3d6",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 339
+     },
+     "usages": 6,
+     "instances": 6
+    },
+    {
+     "description": "20px radius · fill #e6e9ea · with icon",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#e6e9ea",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 357
+     },
+     "usages": 1,
+     "instances": 100
+    }
+   ],
+   "usages": 7,
+   "instances": 106,
+   "pages": [
+    "AI Magic"
+   ],
+   "components": [
+    "Image results",
+    "Featured collections"
+   ],
+   "examples": [
+    "Amelia Cruz",
+    "COLLECTION Underwater Experiences 248 ph",
+    "COLLECTION Social Media 198 photos",
+    "COLLECTION Candid Companions 312 photos",
+    "COLLECTION Family Moments 274 photos",
+    "COLLECTION Space Exploration 186 photos"
+   ],
+   "example": {
+    "capture": 3,
+    "owner": "AI Magic",
+    "tpl": 3613,
+    "nth": 0
+   },
+   "shot": "shots/983af0b752.png",
+   "related": []
+  },
+  {
+   "id": "355da69e9f",
+   "category": "Card",
+   "description": "extra-large radius · neutral fill",
+   "family": {
+    "height": null,
+    "radius": "xl",
+    "fill": "neutral",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "28px radius · fill #141414",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#141414",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 360
+     },
+     "usages": 4,
+     "instances": 4
+    },
+    {
+     "description": "28px radius · fill #141414 · with icon",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#141414",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 360
+     },
+     "usages": 2,
+     "instances": 2
+    },
+    {
+     "description": "28px radius · fill #f3f4f5",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#f3f4f5",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 540
+     },
+     "usages": 1,
+     "instances": 1
+    }
+   ],
+   "usages": 7,
+   "instances": 7,
+   "pages": [
+    "Pricing"
+   ],
+   "components": [
+    "Why card unlimited",
+    "Why card license",
+    "Why card bundles",
+    "Why card AI",
+    "Why card vectors",
+    "Why card fresh"
+   ],
+   "examples": [
+    "Vecteezy Pro for Teams Save up to 15% wi",
+    "Unlimited royalty-free downloads. Use 75",
+    "Pro Standard License. Use everything com",
+    "New Daily bundle downloads. Grab curated",
+    "New Edit with AI. Generate, restyle, ups",
+    "Editable vectors and SVGs that scale to "
+   ],
+   "example": {
+    "capture": 8,
+    "owner": "Pricing",
+    "tpl": 83,
+    "nth": 0
+   },
+   "shot": "shots/355da69e9f.png",
+   "related": []
+  },
+  {
+   "id": "2c8c416705",
+   "category": "Card (clickable)",
+   "description": "medium radius · neutral fill",
+   "family": {
+    "height": null,
+    "radius": "medium",
+    "fill": "neutral",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "8px radius · fill #e6e9ea · with icon",
+     "spec": {
+      "height": null,
+      "radius": "8px",
+      "bg": "#e6e9ea",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 133
+     },
+     "usages": 2,
+     "instances": 56
+    },
+    {
+     "description": "7px radius · fill #ffffff · with icon",
+     "spec": {
+      "height": null,
+      "radius": "7px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 456
+     },
+     "usages": 1,
+     "instances": 1
+    }
+   ],
+   "usages": 3,
+   "instances": 57,
+   "pages": [
+    "AI Magic",
+    "Checkout"
+   ],
+   "components": [
+    "Image results",
+    "Order summary"
+   ],
+   "examples": [
+    "6-Month Subscription $114.00 Billed Ever"
+   ],
+   "example": {
+    "capture": 3,
+    "owner": "AI Magic",
+    "tpl": 3648,
+    "nth": 210
+   },
+   "shot": "shots/2c8c416705.png",
+   "related": []
+  },
+  {
+   "id": "d895aa4928",
+   "category": "Icon button",
+   "description": "~36px tall · circle · neutral fill · border · shadow",
+   "family": {
+    "height": 36,
+    "radius": "circle",
+    "fill": "neutral",
+    "border": true,
+    "shadow": true,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "36px tall · circle · fill #ffffff · border 1px #e6e9ea · shadow",
+     "spec": {
+      "height": 36,
+      "radius": "circle",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": true,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 36
+     },
+     "usages": 3,
+     "instances": 11
+    },
+    {
+     "description": "36px tall · circle · fill #171717 · border 1px #292929 · shadow",
+     "spec": {
+      "height": 36,
+      "radius": "circle",
+      "bg": "#171717",
+      "gradient": false,
+      "border": "1px #292929",
+      "shadow": true,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 36
+     },
+     "usages": 2,
+     "instances": 2
+    }
+   ],
+   "usages": 3,
+   "instances": 13,
+   "pages": [
+    "AI Magic",
+    "Search Dropdown"
+   ],
+   "components": [
+    "Filters panel",
+    "Notifications panel",
+    "Home search dropdown"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 0,
+    "owner": "AI Magic",
+    "tpl": 266,
+    "nth": 0
+   },
+   "shot": "shots/d895aa4928.png",
+   "related": [
+    "Button",
+    "CloseButton"
+   ]
+  },
+  {
+   "id": "0d2352cb86",
+   "category": "Control",
+   "description": "~48px tall · square corners · gradient fill",
+   "family": {
+    "height": 48,
+    "radius": "square",
+    "fill": "gradient",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "48px tall · square corners · gradient fill",
+     "spec": {
+      "height": 48,
+      "radius": "0",
+      "bg": null,
+      "gradient": true,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 92
+     },
+     "usages": 3,
+     "instances": 6
+    }
+   ],
+   "usages": 3,
+   "instances": 6,
+   "pages": [
+    "AI Magic",
+    "Explore Page"
+   ],
+   "components": [
+    "Home top bar",
+    "Top bar"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 0,
+    "owner": "AI Magic",
+    "tpl": 953,
+    "nth": 0
+   },
+   "shot": "shots/0d2352cb86.png",
+   "related": [
+    "Switch",
+    "ToggleSwitch",
+    "RadioSelector",
+    "NumericStepper",
+    "PaginationList"
+   ]
+  },
+  {
+   "id": "75aed34a41",
+   "category": "Card",
+   "description": "extra-large radius · neutral fill · border",
+   "family": {
+    "height": null,
+    "radius": "xl",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "28px radius · fill #ffffff · border 2px #e6e9ea",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "2px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 560
+     },
+     "usages": 2,
+     "instances": 2
+    },
+    {
+     "description": "25px radius · fill #ffffff · border 1px #e6e9ea · with icon",
+     "spec": {
+      "height": null,
+      "radius": "25px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 1317
+     },
+     "usages": 1,
+     "instances": 2
+    },
+    {
+     "description": "28px radius · fill #171717 · border 2px #292929",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#171717",
+      "gradient": false,
+      "border": "2px #292929",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 560
+     },
+     "usages": 1,
+     "instances": 1
+    }
+   ],
+   "usages": 3,
+   "instances": 5,
+   "pages": [
+    "AI Magic",
+    "Pricing"
+   ],
+   "components": [
+    "Search feedback",
+    "Pricing V4"
+   ],
+   "examples": [
+    "How was your search experience?",
+    "On Sale Now $25 $15 USD per month $300 $",
+    "40% OFF · ANNUAL PLAN $25 $15 USD per mo"
+   ],
+   "example": {
+    "capture": 3,
+    "owner": "AI Magic",
+    "tpl": 3679,
+    "nth": 0
+   },
+   "shot": "shots/75aed34a41.png",
+   "related": []
+  },
+  {
+   "id": "50b857e879",
+   "category": "Button",
+   "description": "~48px tall · pill · gradient fill · 14px medium text",
+   "family": {
+    "height": 48,
+    "radius": "pill",
+    "fill": "gradient",
+    "border": false,
+    "shadow": false,
+    "text": "14px medium"
+   },
+   "variants": [
+    {
+     "description": "48px tall · pill · gradient fill · text 14px / 600",
+     "spec": {
+      "height": 48,
+      "radius": "pill",
+      "bg": null,
+      "gradient": true,
+      "border": null,
+      "shadow": false,
+      "font": "14px/600",
+      "icon": false,
+      "image": false,
+      "width": 124
+     },
+     "usages": 3,
+     "instances": 4
+    }
+   ],
+   "usages": 3,
+   "instances": 4,
+   "pages": [
+    "AI Magic",
+    "Explore Page"
+   ],
+   "components": [
+    "Home top bar",
+    "Top bar"
+   ],
+   "examples": [
+    "Join Pro"
+   ],
+   "example": {
+    "capture": 2,
+    "owner": "AI Magic",
+    "tpl": 952,
+    "nth": 0
+   },
+   "shot": "shots/50b857e879.png",
+   "related": [
+    "Button"
+   ]
+  },
+  {
+   "id": "381c241d86",
+   "category": "Avatar",
+   "description": "~48px tall · circle · border",
+   "family": {
+    "height": 48,
+    "radius": "circle",
+    "fill": "none",
+    "border": true,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "46px tall · circle · border 2px #ffffff",
+     "spec": {
+      "height": 46,
+      "radius": "circle",
+      "bg": null,
+      "gradient": false,
+      "border": "2px #ffffff",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": true,
+      "width": 45
+     },
+     "usages": 4,
+     "instances": 4
+    },
+    {
+     "description": "46px tall · circle · border 2px #171717",
+     "spec": {
+      "height": 46,
+      "radius": "circle",
+      "bg": null,
+      "gradient": false,
+      "border": "2px #171717",
+      "shadow": false,
+      "font": null,
+      "icon": false,
+      "image": true,
+      "width": 45
+     },
+     "usages": 2,
+     "instances": 2
+    }
+   ],
+   "usages": 4,
+   "instances": 6,
+   "pages": [
+    "Pricing"
+   ],
+   "components": [
+    "Pricing V3 hero",
+    "Pricing V4"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 10,
+    "owner": "Pricing",
+    "tpl": 431,
+    "nth": 0
+   },
+   "shot": "shots/381c241d86.png",
+   "related": []
+  },
+  {
+   "id": "6b31520cde",
+   "category": "Icon button",
+   "description": "~48px tall · large radius · tint fill",
+   "family": {
+    "height": 48,
+    "radius": "large",
+    "fill": "tint",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "48px tall · 14px radius · fill #fff2e6",
+     "spec": {
+      "height": 48,
+      "radius": "14px",
+      "bg": "#fff2e6",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 50
+     },
+     "usages": 4,
+     "instances": 5
+    }
+   ],
+   "usages": 4,
+   "instances": 5,
+   "pages": [
+    "AI Magic"
+   ],
+   "components": [
+    "Left nav"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 0,
+    "owner": "AI Magic",
+    "tpl": 24,
+    "nth": 0
+   },
+   "shot": "shots/6b31520cde.png",
+   "related": [
+    "Button",
+    "CloseButton"
+   ]
+  },
+  {
+   "id": "896236bdf0",
+   "category": "Control",
+   "description": "~56px tall · pill · gradient fill · 18px bold text",
+   "family": {
+    "height": 56,
+    "radius": "pill",
+    "fill": "gradient",
+    "border": false,
+    "shadow": false,
+    "text": "18px bold"
+   },
+   "variants": [
+    {
+     "description": "56px tall · pill · gradient fill · text 17px / 700",
+     "spec": {
+      "height": 56,
+      "radius": "pill",
+      "bg": null,
+      "gradient": true,
+      "border": null,
+      "shadow": false,
+      "font": "17px/700",
+      "icon": false,
+      "image": false,
+      "width": 468
+     },
+     "usages": 4,
+     "instances": 5
+    }
+   ],
+   "usages": 4,
+   "instances": 5,
+   "pages": [
+    "Pricing"
+   ],
+   "components": [
+    "Pricing V2",
+    "Pricing V3 hero",
+    "Pricing V4"
+   ],
+   "examples": [
+    "Get Vecteezy Pro",
+    "Subscribe to Vecteezy Pro"
+   ],
+   "example": {
+    "capture": 8,
+    "owner": "Pricing",
+    "tpl": 75,
+    "nth": 0
+   },
+   "shot": "shots/896236bdf0.png",
+   "related": [
+    "Switch",
+    "ToggleSwitch",
+    "RadioSelector",
+    "NumericStepper",
+    "PaginationList"
+   ]
+  },
+  {
+   "id": "e3be57d90a",
+   "category": "Input",
+   "description": "~40px tall · small radius · neutral fill · border · 12px regular text",
+   "family": {
+    "height": 40,
+    "radius": "small",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": "12px regular"
+   },
+   "variants": [
+    {
+     "description": "40px tall · 6px radius · fill #ffffff · border 1px #cfd5da · text 11px / 400",
+     "spec": {
+      "height": 40,
+      "radius": "6px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #cfd5da",
+      "shadow": false,
+      "font": "11px/400",
+      "icon": false,
+      "image": false,
+      "width": 218
+     },
+     "usages": 4,
+     "instances": 4
+    }
+   ],
+   "usages": 4,
+   "instances": 4,
+   "pages": [
+    "Checkout"
+   ],
+   "components": [
+    "Checkout form"
+   ],
+   "examples": [
+    "MM/YYYY",
+    "CVV",
+    "🇺🇸 United States 🇨🇦 Canada 🇬🇧 Unit",
+    "42104"
+   ],
+   "example": {
+    "capture": 13,
+    "owner": "Checkout",
+    "tpl": 58,
+    "nth": 0
+   },
+   "shot": "shots/e3be57d90a.png",
+   "related": []
+  },
+  {
+   "id": "f766108beb",
+   "category": "Icon button",
+   "description": "~40px tall · circle · neutral fill",
+   "family": {
+    "height": 40,
+    "radius": "circle",
+    "fill": "neutral",
+    "border": false,
+    "shadow": false,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "40px tall · circle · fill #f3f4f5",
+     "spec": {
+      "height": 40,
+      "radius": "circle",
+      "bg": "#f3f4f5",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 40
+     },
+     "usages": 1,
+     "instances": 1
+    },
+    {
+     "description": "40px tall · circle · fill #e6e9ea",
+     "spec": {
+      "height": 40,
+      "radius": "circle",
+      "bg": "#e6e9ea",
+      "gradient": false,
+      "border": null,
+      "shadow": false,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 40
+     },
+     "usages": 1,
+     "instances": 2
+    }
+   ],
+   "usages": 2,
+   "instances": 3,
+   "pages": [
+    "AI Magic",
+    "Settings"
+   ],
+   "components": [
+    "Left nav"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 1,
+    "owner": "AI Magic",
+    "tpl": 71,
+    "nth": 0
+   },
+   "shot": "shots/f766108beb.png",
+   "related": [
+    "Button",
+    "CloseButton"
+   ]
+  },
+  {
+   "id": "6e891e9d5c",
+   "category": "Card",
+   "description": "extra-large radius · neutral fill · border · shadow",
+   "family": {
+    "height": null,
+    "radius": "xl",
+    "fill": "neutral",
+    "border": true,
+    "shadow": true,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "25px radius · fill #ffffff · border 1px #e6e9ea · shadow · with icon",
+     "spec": {
+      "height": null,
+      "radius": "25px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": true,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 800
+     },
+     "usages": 1,
+     "instances": 1
+    },
+    {
+     "description": "28px radius · fill #ffffff · border 1px #e6e9ea · shadow · with icon",
+     "spec": {
+      "height": null,
+      "radius": "28px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #e6e9ea",
+      "shadow": true,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 520
+     },
+     "usages": 1,
+     "instances": 1
+    }
+   ],
+   "usages": 2,
+   "instances": 2,
+   "pages": [
+    "Search Dropdown",
+    "Pricing"
+   ],
+   "components": [
+    "Home search dropdown",
+    "Pricing V3 hero"
+   ],
+   "examples": [
+    "RECENT SEARCHES autumn leaves watercolor",
+    "Yearly (40% off) Monthly $25 $15 USD per"
+   ],
+   "example": {
+    "capture": 7,
+    "owner": "Search Dropdown",
+    "tpl": 8,
+    "nth": 0
+   },
+   "shot": "shots/6e891e9d5c.png",
+   "related": []
+  },
+  {
+   "id": "ac21be23dd",
+   "category": "Card (clickable)",
+   "description": "large radius · neutral fill · border · shadow",
+   "family": {
+    "height": null,
+    "radius": "large",
+    "fill": "neutral",
+    "border": true,
+    "shadow": true,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "18px radius · fill #ffffff · border 7px #ffffff · shadow",
+     "spec": {
+      "height": null,
+      "radius": "18px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "7px #ffffff",
+      "shadow": true,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 235
+     },
+     "usages": 3,
+     "instances": 81
+    }
+   ],
+   "usages": 3,
+   "instances": 81,
+   "pages": [
+    "AI Magic"
+   ],
+   "components": [
+    "Popular photo categories"
+   ],
+   "examples": [],
+   "example": {
+    "capture": 4,
+    "owner": "AI Magic",
+    "tpl": 1543,
+    "nth": 0
+   },
+   "shot": "shots/ac21be23dd.png",
+   "related": []
+  },
+  {
+   "id": "f59d4049c3",
+   "category": "Card",
+   "description": "large radius · neutral fill · shadow",
+   "family": {
+    "height": null,
+    "radius": "large",
+    "fill": "neutral",
+    "border": false,
+    "shadow": true,
+    "text": null
+   },
+   "variants": [
+    {
+     "description": "20px radius · fill #ffffff · shadow · with icon",
+     "spec": {
+      "height": null,
+      "radius": "20px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": null,
+      "shadow": true,
+      "font": null,
+      "icon": true,
+      "image": false,
+      "width": 760
+     },
+     "usages": 2,
+     "instances": 20
+    },
+    {
+     "description": "16px radius · fill #ffffff · shadow",
+     "spec": {
+      "height": null,
+      "radius": "16px",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": null,
+      "shadow": true,
+      "font": null,
+      "icon": false,
+      "image": false,
+      "width": 300
+     },
+     "usages": 1,
+     "instances": 4
+    }
+   ],
+   "usages": 3,
+   "instances": 24,
+   "pages": [
+    "Pricing"
+   ],
+   "components": [
+    "Customer reviews",
+    "FAQ"
+   ],
+   "examples": [
+    "16 hours ago I can always find the right",
+    "How do Vecteezy subscriptions work?"
+   ],
+   "example": {
+    "capture": 9,
+    "owner": "Pricing",
+    "tpl": 273,
+    "nth": 0
+   },
+   "shot": "shots/f59d4049c3.png",
+   "related": []
+  },
+  {
+   "id": "8472fd8929",
+   "category": "Chip",
+   "description": "~36px tall · pill · neutral fill · border · 14px medium text",
+   "family": {
+    "height": 36,
+    "radius": "pill",
+    "fill": "neutral",
+    "border": true,
+    "shadow": false,
+    "text": "14px medium"
+   },
+   "variants": [
+    {
+     "description": "36px tall · pill · fill #ffffff · border 1px #cfd3d6 · text 14px / 600",
+     "spec": {
+      "height": 36,
+      "radius": "pill",
+      "bg": "#ffffff",
+      "gradient": false,
+      "border": "1px #cfd3d6",
+      "shadow": false,
+      "font": "14px/600",
+      "icon": false,
+      "image": false,
+      "width": 125
+     },
+     "usages": 3,
+     "instances": 11
+    }
+   ],
+   "usages": 3,
+   "instances": 11,
+   "pages": [
+    "Settings"
+   ],
+   "components": [
+    "Profile",
+    "Account header"
+   ],
+   "examples": [
+    "Change photo",
+    "Change",
+    "Log out"
+   ],
+   "example": {
+    "capture": 19,
+    "owner": "Settings",
+    "tpl": 144,
+    "nth": 0
+   },
+   "shot": "shots/8472fd8929.png",
+   "related": [
+    "TabSelector"
+   ]
+  }
+ ]
+}

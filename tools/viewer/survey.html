@@ -33,7 +33,6 @@
   .item.hidden { display: none; }
   .item:focus-visible, .item.focused { box-shadow: 0 0 0 2px var(--focus); }
   .item[data-decision="keep"] { border-color: var(--keep); }
-  .item[data-decision="remove"] { border-color: var(--remove); }
   .item[data-decision="exclude"] { border-color: var(--line-2); }
   .item[data-decision="exclude"] .shot img { opacity: .55; }
   .item-head { display: flex; align-items: center; gap: 8px; padding: 8px 12px; }
@@ -46,7 +45,6 @@
   .foot { display: flex; gap: 14px; font-size: 12px; }
   .foot a, .foot button { color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none; font-size: 12px; }
   .foot a:hover, .foot button:hover { color: var(--text); text-decoration: underline; }
-  .note[hidden] { display: none; }
   .shot { display: flex; align-items: center; justify-content: center; height: 170px; background: var(--checker); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); cursor: zoom-in; }
   .shot img { max-width: 100%; max-height: 100%; display: block; }
   .shot .none { color: var(--faint); font-size: 12px; }
@@ -57,8 +55,6 @@
   .row { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
   .row .lbl { color: var(--faint); width: 64px; flex: none; }
   .links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
-  .note { width: 100%; font-size: 12.5px; padding: 4px 8px; }
-  .note:placeholder-shown { background: transparent; border-style: dashed; }
   pre.src { margin: 4px 0 0; max-height: 220px; overflow: auto; font: 11px/1.5 var(--mono); background: var(--panel-2); padding: 6px 8px; border-radius: 6px; white-space: pre-wrap; word-break: break-all; }
   pre.src .hit { background: color-mix(in srgb, var(--accent) 22%, transparent); display: block; }
   .lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; padding: 30px; cursor: zoom-out; }
@@ -99,6 +95,11 @@
   #suggest .pvc { width: 64px; }
   #suggest .pvc > * { display: inline-block; vertical-align: middle; }
   #suggest .pvc .radius-prev { width: 26px; height: 26px; }
+  #suggest .fit { display: flex; gap: 28px; margin: 4px 0 14px; flex-wrap: wrap; }
+  #suggest .fit div { display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
+  #suggest .fit b { font-size: 18px; font-weight: 650; }
+  #suggest tr.changed td { background: color-mix(in srgb, var(--round) 6%, transparent); }
+  #suggest td.delta { color: var(--round); font-weight: 600; }
   #suggest .unused { margin-top: 14px; font-size: 12.5px; color: var(--muted); }
   #suggest .bar { display: inline-block; height: 6px; border-radius: 3px; background: var(--accent); vertical-align: middle; margin-right: 6px; opacity: .7; }
   nav.index a.sugg { grid-template-columns: 1fr; margin-top: 10px; border-top: 1px solid var(--line); border-radius: 0; padding-top: 10px; font-weight: 600; }
@@ -120,13 +121,11 @@
 </div>
 <div class="toolbar">
   <div class="seg" id="filter">
-    <button data-f="all">All</button><button data-f="undecided">Undecided</button>
-    <button data-f="keep" class="keep">Keep</button><button data-f="round" class="round">Round</button><button data-f="exclude" class="exclude">Exclude</button><button data-f="remove" class="remove">Remove</button>
+    <button data-f="all" title="Everything except excluded">All</button><button data-f="decided" title="Kept or rounded">Decided</button><button data-f="undecided">Undecided</button><button data-f="exclude">Excluded</button>
   </div>
   <select id="pagef"><option value="">All page states</option></select>
   <input type="search" id="q" placeholder="Search…">
   <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Hide usages whose value already equals a design-system token value"><input type="checkbox" id="offtok"> Hide on-token</label>
-  <label class="muted" style="font-size:12.5px;display:inline-flex;gap:5px;align-items:center" title="Excluded usages are hidden unless this is on (or the Exclude filter is selected)"><input type="checkbox" id="showex"> Show excluded</label>
   <span id="count" class="muted" style="font-size:12px"></span>
   <span class="spacer"></span>
 </div>
@@ -141,14 +140,14 @@
 
 <script type="module">
 import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend } from './common.js';
-import { loadTokens, nearest, valueDistance, isColorPreset, familyTokenNames, suggestName, tokenEntry } from './tokens.js';
+import { loadTokens, nearest, familyTokenNames, scaleFor, scaleValues, kMedians } from './tokens.js';
 
 const setHdr = () => document.documentElement.style.setProperty('--hdr', $('header.hdr').offsetHeight + 'px');
 new ResizeObserver(setHdr).observe($('header.hdr'));
 
 const params = new URLSearchParams(location.search);
 const id = params.get('id');
-const state = { f: params.get('f') || 'all', q: params.get('q') || '', page: params.get('page') || '', off: params.get('off') === '1', showEx: params.get('ex') === '1' };
+const state = { f: params.get('f') || 'all', q: params.get('q') || '', page: params.get('page') || '', off: params.get('off') === '1' };
 let S, cfg, focusedId = null;
 const byId = new Map();
 
@@ -166,11 +165,16 @@ async function load() {
   $('#pagef').value = state.page;
   for (const s of S.sections) { s.near = nearest(S.preset, s.value); for (const it of s.items) { it.sec = s; byId.set(it.id, it); } }
   $('#offtok').checked = state.off;
-  $('#showex').checked = state.showEx;
   render();
   applyFilter();
 }
 
+function propsLabel(props) {
+  // padding-top/right/bottom/left -> "padding (all sides)", etc.
+  const by = {};
+  for (const p of props) { const [base, side] = p.endsWith('gap') ? ['gap', p.replace('-gap', '')] : p.split('-'); (by[base] ||= []).push(side); }
+  return Object.entries(by).map(([b, sides]) => b === 'gap' ? (sides.length === 2 ? 'gap' : `${sides[0]} gap`) : sides.length === 4 ? `${b} (all sides)` : `${b}-${sides.join('/')}`).join(' · ');
+}
 function declHtml(it) {
   if (!it.declared) return `<div class="decl" title="No authored declaration found (browser default)">browser default</div>`;
   const val = esc(it.declared).replace(/(--[\w-]+)/g, '<span class="tok">$1</span>');
@@ -190,8 +194,11 @@ function chosen(it) {
   const n = it.sec.near; if (!n) return null;
   const sel = $(`#i-${it.id} .roundsel`);
   if (sel?.value === 'saved') { const r = S.decisions[it.id].round; return { token: r.to, value: r.value, css: r.css, label: r.to }; }
-  return n.candidates[Number(sel?.value || 0)] || n.candidates[0];
+  const c = n.candidates[Number(sel?.value || 0)] || n.candidates[0];
+  return c && { ...c, css: cssFor(it, c) };
 }
+// multi-property usages (spacing) apply the token to exactly the properties that use the value
+function cssFor(it, c) { return it.props?.length ? Object.fromEntries(it.props.map(p => [p, c.value])) : c.css; }
 function tokBadge(s) {
   if (!s.near) return '';
   const c = s.near.candidates[0];
@@ -221,20 +228,13 @@ function itemHtml(s, it) {
     <div class="shot" data-zoom>${it.shot ? `<img loading="lazy" src="/surveys/${esc(S.id)}/${esc(it.shot)}" alt="">` : '<span class="none">no screenshot</span>'}</div>
     <div class="body">
       <div class="where" title="${esc(elTip)}"><b>${esc(it.component || `<${it.tag}>`)}</b> · ${esc(cap.label)}${states}</div>
-      ${declHtml(it)}
+      ${it.props?.length ? `<div class="decl" title="Properties using this value">${esc(propsLabel(it.props))}</div>` : declHtml(it)}
       ${tokenRow(s, it, d)}
       <div class="seg dec">
         <button class="keep" data-d="keep" aria-pressed="${d.decision === 'keep'}">Keep</button>
         <button class="round" data-d="round" aria-pressed="${d.decision === 'round'}" ${s.near ? '' : 'disabled title="No design-system tokens for this type"'}>Round</button>
         <button class="exclude" data-d="exclude" aria-pressed="${d.decision === 'exclude'}">Exclude</button>
-        <button class="remove" data-d="remove" aria-pressed="${d.decision === 'remove'}">Remove</button>
       </div>
-      <div class="foot">
-        <a href="${esc(viewUrl(cap, it.where))}" target="_blank" data-open title="View on the live page (⌘-click for a new tab)">Usage</a>
-        ${src.line ? `<a href="${esc(editorUrl(cfg.root, src.file, src.line, src.col))}" title="Open ${esc(src.file)}:${src.line} in VS Code">Source</a>` : ''}
-        <button data-note>${d.note ? 'Note' : 'Add note'}</button>
-      </div>
-      <input class="note" placeholder="Note…" value="${esc(d.note || '')}" ${d.note ? '' : 'hidden'}>
     </div>
   </article>`;
 }
@@ -251,7 +251,7 @@ function render() {
         ${secMatch(s)}
         <span class="muted secount" style="font-size:12px"></span>
         <div class="bulk" title="Apply to every usage shown in this section">All:
-          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="remove" class="remove">Remove</button><button data-bulk="" title="Clear decisions">✕</button></div>
+          <div class="seg"><button data-bulk="keep" class="keep">Keep</button><button data-bulk="round" class="round" ${s.near ? '' : 'disabled'}>Round</button><button data-bulk="exclude" class="exclude">Exclude</button><button data-bulk="" title="Clear decisions">✕</button></div>
         </div>
       </div>
       <div class="grid">${s.items.map(it => itemHtml(s, it)).join('')}</div>
@@ -262,8 +262,9 @@ function render() {
 
 function matches(it) {
   const d = S.decisions[it.id]?.decision || 'undecided';
-  if (state.f !== 'all' && d !== state.f) return false;
-  if (d === 'exclude' && state.f !== 'exclude' && !state.showEx) return false;
+  if (state.f === 'exclude' ? d !== 'exclude' : d === 'exclude') return false;
+  if (state.f === 'decided' && !(d === 'keep' || d === 'round')) return false;
+  if (state.f === 'undecided' && d !== 'undecided') return false;
   if (state.page !== '' && !it.captures.includes(Number(state.page))) return false;
   if (state.off && it.sec.near?.exact) return false;
   if (state.q) {
@@ -293,113 +294,137 @@ function applyFilter() {
   if (state.q) q.set('q', state.q);
   if (state.page !== '') q.set('page', state.page);
   if (state.off) q.set('off', '1');
-  if (state.showEx) q.set('ex', '1');
   history.replaceState(null, '', `?${q}${location.hash}`);
 }
 
 function updateProgress() {
-  const p = { keep: 0, round: 0, exclude: 0, remove: 0, undecided: 0, total: 0 };
+  const p = { keep: 0, round: 0, exclude: 0, undecided: 0, total: 0 };
   for (const it of byId.values()) { p.total++; const d = S.decisions[it.id]?.decision; p[d || 'undecided']++; }
   $('#prog').innerHTML = progressBar(p) + legend(p);
   renderSuggest();
 }
 
-// ---------- Suggested Tokens ----------
-// All usages except excluded/removed; rounded usages count toward their target value.
-// Near-identical values are clustered around the most-used one; clusters that match no existing
-// token and clear the threshold are suggested as new tokens.
-const sug = { min: 3, tol: null, by: 'usages', existing: true, below: false };
+// ---------- Suggested Tokens: rearrange the existing tokens to fit usage ----------
+// Uses every usage that isn't Excluded, at its as-designed value. For scale families the same tokens
+// (same names, same count, same order) get the values that minimise total rounding distance
+// (optimal weighted 1-D k-medians). Other families show how usage spreads over the existing tokens.
+const sug = { by: 'usages' };
+const unit = () => (S.preset === 'font-weight' ? '' : 'px');
+const fmtN = n => `${Math.round(n * 100) / 100}${unit()}`;
+
 function renderSuggestShell() {
-  sug.tol ??= isColorPreset(S.preset) ? 2 : 1;
   $('#suggest').innerHTML = `
     <h2>Suggested Tokens</h2>
-    <p class="intro">Values used across non-excluded usages, grouped with near-duplicates. <b>New</b> rows are candidates for tokens.</p>
+    <p class="intro">How the existing tokens could be re-valued to best fit how they're used. Same tokens, same order, new values. Excluded usages are ignored.</p>
     <div class="ctl">
-      <label>Min usages <input type="number" id="sgMin" min="1" value="${sug.min}"></label>
-      <label>Merge within <input type="number" id="sgTol" min="0" step="0.5" value="${sug.tol}"> ${isColorPreset(S.preset) ? 'ΔE' : 'px'}</label>
-      <label>Rank by <select id="sgBy"><option value="usages">usages</option><option value="instances">instances</option><option value="pages">pages</option></select></label>
-      <label><input type="checkbox" id="sgEx" ${sug.existing ? 'checked' : ''}> Show existing tokens</label>
-      <label><input type="checkbox" id="sgBelow" ${sug.below ? 'checked' : ''}> Show below minimum</label>
+      <label>Weight by <select id="sgBy"><option value="usages">usages</option><option value="instances">instances</option></select></label>
       <span class="spacer"></span>
-      <button class="btn small" id="sgCopy" title="Copy the New suggestions as tokens.json entries">Copy new as tokens.json</button>
+      <button class="btn small" id="sgCopy">Copy proposal</button>
     </div>
     <div id="sgBody"></div>`;
   $('#sgBy').value = sug.by;
-  const upd = () => { sug.min = Math.max(1, Number($('#sgMin').value) || 1); sug.tol = Math.max(0, Number($('#sgTol').value) || 0); sug.by = $('#sgBy').value; sug.existing = $('#sgEx').checked; sug.below = $('#sgBelow').checked; renderSuggest(); };
-  ['#sgMin', '#sgTol', '#sgBy', '#sgEx', '#sgBelow'].forEach(id => $(id).addEventListener('input', upd));
+  $('#sgBy').addEventListener('input', () => { sug.by = $('#sgBy').value; renderSuggest(); });
   $('#sgCopy').onclick = async () => {
-    const rows = computeSuggest().filter(r => r.isNew && r.usages >= sug.min);
-    const json = JSON.stringify(rows.map(r => tokenEntry(S.preset, r.name, r.value, `Suggested from ${r.usages} usages (${r.instances} instances) across ${r.pages} page states in survey "${S.id}".${r.absorbs.length ? ` Absorbs ${r.absorbs.map(a => a.value).join(', ')}.` : ''}`)), null, 2);
-    await navigator.clipboard.writeText(json);
-    toast(`Copied ${rows.length} suggestion${rows.length === 1 ? '' : 's'}`);
+    const r = computeSuggest();
+    if (!r?.rows) return;
+    await navigator.clipboard.writeText(JSON.stringify(r.rows.map(x => ({ name: x.token, current: fmtN(x.current), proposed: fmtN(x.proposed) })), null, 2));
+    toast('Copied proposal');
   };
 }
 
+function weight(it) { return sug.by === 'instances' ? it.instances : 1; }
+function counted() { return [...byId.values()].filter(it => S.decisions[it.id]?.decision !== 'exclude'); }
+
 function computeSuggest() {
-  // effective value per counted usage
-  const groups = new Map();
-  for (const it of byId.values()) {
-    const d = S.decisions[it.id];
-    if (d?.decision === 'exclude' || d?.decision === 'remove') continue;
-    const value = d?.decision === 'round' && d.round?.value ? d.round.value : it.value;
-    let g = groups.get(value);
-    if (!g) groups.set(value, g = { value, usages: 0, instances: 0, pages: new Set(), refs: [] });
-    g.usages++; g.instances += it.instances;
-    it.captures.forEach(c => g.pages.add(S.captures[c].label));
-    g.refs.push(`S${it.sec.n}.${it.n}`);
+  const scale = scaleFor(S.preset);
+  if (!scale?.length) return null;
+  // weighted points from as-designed values
+  const pts = new Map();
+  let total = 0;
+  for (const it of counted()) {
+    const xs = [...new Set(scaleValues(S.preset, it.value).map(x => Math.round(x * 100) / 100))];
+    for (const x of xs) { pts.set(x, (pts.get(x) || 0) + weight(it)); total += weight(it); }
   }
-  const metric = g => (sug.by === 'pages' ? g.pages.size : g[sug.by]);
-  const list = [...groups.values()].sort((a, b) => b.usages - a.usages || b.instances - a.instances);
-  // cluster: most-used value seeds, absorbs unassigned values within tolerance
-  const clusters = [], taken = new Set();
-  for (const g of list) {
-    if (taken.has(g.value)) continue;
-    taken.add(g.value);
-    const c = { ...g, pages: new Set(g.pages), absorbs: [] };
-    if (sug.tol > 0) for (const o of list) {
-      if (taken.has(o.value)) continue;
-      const dist = valueDistance(S.preset, g.value, o.value);
-      if (dist != null && dist <= sug.tol) {
-        taken.add(o.value);
-        c.absorbs.push({ value: o.value, usages: o.usages });
-        c.usages += o.usages; c.instances += o.instances; o.pages.forEach(p => c.pages.add(p)); c.refs.push(...o.refs);
-      }
-    }
-    clusters.push(c);
+  const points = [...pts].map(([x, w]) => ({ x, w })).sort((a, b) => a.x - b.x);
+  const k = scale.length;
+  let clusters = kMedians(points, k);
+  // fewer distinct values than tokens: keep the current values of the tokens furthest from any used value
+  let centers = clusters.map(c => c.center);
+  if (centers.length < k) {
+    const spare = scale.map(t => t.n).filter(n => !centers.includes(n))
+      .sort((a, b) => Math.min(...centers.map(c => Math.abs(c - b))) - Math.min(...centers.map(c => Math.abs(c - a))))
+      .slice(0, k - centers.length);
+    centers = [...centers, ...spare];
   }
-  return clusters.map(c => {
-    const n = nearest(S.preset, c.value);
-    const existing = n?.exact ? n.candidates[0] : null;
-    return { ...c, pages: c.pages.size, isNew: !existing, existing: existing?.token || null, existingNames: existing?.names || (existing ? [existing.token] : []), name: existing ? existing.token : suggestName(S.preset, c.value), near: !existing && n ? n.candidates[0] : null };
-  }).sort((a, b) => metric(b) - metric(a) || b.usages - a.usages);
+  centers.sort((a, b) => a - b);
+  const members = new Map(clusters.map(c => [c.center, c.members]));
+  const rows = scale.map((t, i) => {
+    const m = members.get(centers[i]) || [];
+    return { token: t.name, current: t.n, proposed: centers[i], usages: m.reduce((s, p) => s + p.w, 0), absorbs: m.filter(p => p.x !== centers[i]) };
+  });
+  const fit = vals => {
+    let exact = 0, dist = 0;
+    for (const p of points) { const d = Math.min(...vals.map(v => Math.abs(v - p.x))); if (d < 0.01) exact += p.w; dist += d * p.w; }
+    return { exact: total ? exact / total : 0, avg: total ? dist / total : 0 };
+  };
+  return { rows, total, before: fit(scale.map(t => t.n)), after: fit(centers) };
+}
+
+// Non-scale families (colors, shadows, type styles): usage per existing token.
+function computeCoverage() {
+  const by = new Map();
+  for (const it of counted()) {
+    const c = it.sec.near?.candidates?.[0];
+    if (!c) continue;
+    const key = c.token;
+    const r = by.get(key) || { token: c.name || c.token, value: c.value, usages: 0, exact: 0, values: new Map() };
+    r.usages += weight(it);
+    if (it.sec.near.exact) r.exact += weight(it);
+    else r.values.set(it.value, (r.values.get(it.value) || 0) + weight(it));
+    by.set(key, r);
+  }
+  const used = new Set([...byId.values()].flatMap(it => it.sec.near?.candidates?.[0]?.names || [it.sec.near?.candidates?.[0]?.token]).filter(Boolean));
+  return { rows: [...by.values()].sort((a, b) => b.usages - a.usages), unused: familyTokenNames(S.preset).filter(t => !used.has(t)) };
 }
 
 function renderSuggest() {
   if (!$('#sgBody')) return;
-  const all = computeSuggest();
-  const rows = all.filter(r => (sug.existing || r.isNew) && (sug.below || !r.isNew || r.usages >= sug.min));
-  const nNew = all.filter(r => r.isNew && r.usages >= sug.min).length;
-  const max = Math.max(1, ...rows.map(r => r.usages));
-  const used = new Set(all.flatMap(r => r.existingNames));
-  const unused = familyTokenNames(S.preset).filter(t => !used.has(t));
-  $('#sgCopy').disabled = !nNew;
-  $('#sgBody').innerHTML = !rows.length ? '<div class="empty">Nothing to suggest with these settings.</div>' : `
+  const r = computeSuggest();
+  $('#sgCopy').hidden = !r;
+  if (r) {
+    const pct = x => `${Math.round(x * 100)}%`;
+    const maxU = Math.max(1, ...r.rows.map(x => x.usages));
+    $('#sgBody').innerHTML = `
+      <div class="fit">
+        <div><span class="faint">On a token exactly</span><b>${pct(r.before.exact)} → ${pct(r.after.exact)}</b></div>
+        <div><span class="faint">Average rounding</span><b>${fmtN(r.before.avg)} → ${fmtN(r.after.avg)}</b></div>
+        <div><span class="faint">Values counted</span><b>${r.total}</b></div>
+      </div>
+      <table>
+        <thead><tr><th>Token</th><th class="num">Current</th><th class="num">Proposed</th><th class="num">Change</th><th class="num">Usages</th><th>Absorbs</th></tr></thead>
+        <tbody>${r.rows.map(x => {
+          const d = Math.round((x.proposed - x.current) * 100) / 100;
+          return `<tr class="${d ? 'changed' : ''}">
+            <td class="name">${esc(x.token)}</td>
+            <td class="num">${fmtN(x.current)}</td>
+            <td class="num"><b>${fmtN(x.proposed)}</b></td>
+            <td class="num ${d ? 'delta' : 'faint'}">${d ? (d > 0 ? '+' : '−') + fmtN(Math.abs(d)) : '—'}</td>
+            <td class="num"><span class="bar" style="width:${Math.round((x.usages / maxU) * 50)}px"></span>${x.usages}</td>
+            <td class="absorbs">${x.absorbs.map(p => `<span class="val" data-q="${esc(fmtN(p.x))}">${esc(fmtN(p.x))}</span> (${p.w})`).join(', ')}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>`;
+    return;
+  }
+  const c = computeCoverage();
+  $('#sgBody').innerHTML = `<p class="intro">These tokens aren't a single scale, so they can't be re-valued automatically. Here is how the usages map onto the existing tokens.</p>
     <table>
-      <thead><tr><th>#</th><th class="pvc"></th><th>Value</th><th>Status</th><th>Suggested name</th><th class="num">Usages</th><th class="num">Instances</th><th class="num">Pages</th><th>Absorbs</th></tr></thead>
-      <tbody>${rows.map((r, i) => `
-        <tr class="${r.isNew ? '' : 'existing'} ${r.isNew && r.usages < sug.min ? 'below' : ''}">
-          <td class="faint">${i + 1}</td>
-          <td class="pvc">${preview(S.preset, r.value)}</td>
-          <td><span class="val" data-q="${esc(r.value)}" title="Filter the list to this value">${esc(r.value)}</span></td>
-          <td>${r.isNew ? `<span class="chip offtok">New</span>${r.near ? ` <span class="faint" title="Nearest existing token">≈ ${esc(r.near.label)}</span>` : ''}` : `<span class="chip ontok">Existing</span>`}</td>
-          <td class="name">${esc(r.name)}</td>
-          <td class="num"><span class="bar" style="width:${Math.round((r.usages / max) * 60)}px"></span>${r.usages}</td>
-          <td class="num">${r.instances}</td>
-          <td class="num">${r.pages}</td>
-          <td class="absorbs">${r.absorbs.map(a => `${esc(a.value)} (${a.usages})`).join(', ')}</td>
-        </tr>`).join('')}</tbody>
+      <thead><tr><th>Nearest token</th><th>Value</th><th class="num">Usages</th><th class="num">Exact</th><th>Off-token values mapped here</th></tr></thead>
+      <tbody>${c.rows.map(x => `<tr>
+        <td class="name">${esc(x.token)}</td><td class="absorbs">${esc(x.value)}</td><td class="num">${x.usages}</td><td class="num">${x.exact}</td>
+        <td class="absorbs">${[...x.values].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([v, w]) => `<span class="val" data-q="${esc(v)}">${esc(v)}</span> (${w})`).join(', ')}</td></tr>`).join('')}</tbody>
     </table>
-    <div class="unused">${nNew} new token${nNew === 1 ? '' : 's'} suggested · ${all.filter(r => !r.isNew).length} existing tokens in use${unused.length ? ` · <b>Unused existing tokens:</b> <code>${unused.map(esc).join('</code>, <code>')}</code>` : ''}</div>`;
+    ${c.unused.length ? `<div class="unused"><b>Unused tokens:</b> <code>${c.unused.map(esc).join('</code>, <code>')}</code></div>` : ''}`;
 }
 $('#main').addEventListener('click', e => {
   const v = e.target.closest('#suggest .val');
@@ -439,7 +464,6 @@ function paint(itemId) {
 $('#filter').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.f = b.dataset.f; applyFilter(); });
 $('#pagef').addEventListener('change', e => { state.page = e.target.value; applyFilter(); });
 $('#offtok').addEventListener('change', e => { state.off = e.target.checked; applyFilter(); });
-$('#showex').addEventListener('change', e => { state.showEx = e.target.checked; applyFilter(); });
 let qt; $('#q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); applyFilter(); }, 120); });
 
 $('#main').addEventListener('click', async e => {
@@ -464,7 +488,6 @@ $('#main').addEventListener('click', async e => {
   const btn = e.target.closest('.dec button');
   if (btn) { const cur = S.decisions[card.dataset.id]?.decision; await decide([card.dataset.id], cur === btn.dataset.d ? null : btn.dataset.d); if (btn.dataset.d === 'exclude' || state.f !== 'all') setTimeout(applyFilter, 250); return; }
   if (e.target.closest('[data-zoom]')) { zoom(card.dataset.id); return; }
-  if (e.target.closest('[data-note]')) { const n = $('.note', card); n.hidden = false; n.focus(); return; }
   if (e.target.closest('[data-preview]')) { openPreview(card.dataset.id); return; }
 });
 $('#main').addEventListener('change', e => {
@@ -500,7 +523,7 @@ $('#lb').addEventListener('click', () => $('#lb').classList.remove('open'));
 let pmItem = null;
 function roundOptions(it) {
   const n = it.sec.near; if (!n) return [];
-  const opts = n.candidates.map(c => ({ label: `${c.token} · ${c.value}`, token: c.token, value: c.value, css: c.css }));
+  const opts = n.candidates.map(c => ({ label: `${c.token} · ${c.value}`, token: c.token, value: c.value, css: cssFor(it, c) }));
   const r = S.decisions[it.id]?.round;
   if (r?.css && !opts.some(o => o.token === r.to)) opts.unshift({ label: `${r.to} · ${r.value} (saved)`, token: r.to, value: r.value, css: r.css });
   return opts;
@@ -570,7 +593,7 @@ document.addEventListener('keydown', e => {
   if ($('#lb').classList.contains('open')) { if (e.key === 'Escape' || e.key === ' ') { e.preventDefault(); $('#lb').classList.remove('open'); } return; }
   const ids = visibleIds();
   const i = ids.indexOf(focusedId);
-  const map = { 1: 'keep', 2: 'round', 3: 'exclude', 4: 'remove', 0: null };
+  const map = { 1: 'keep', 2: 'round', 3: 'exclude', 0: null };
   if (e.key === '2' && focusedId && !byId.get(focusedId).sec.near) return;
   if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); focus(ids[Math.min(i + 1, ids.length - 1)] ?? ids[0]); }
   else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); focus(ids[Math.max(i - 1, 0)] ?? ids[0]); }
@@ -581,8 +604,7 @@ document.addEventListener('keydown', e => {
     if (state.f !== 'all' || map[e.key] === 'exclude') setTimeout(applyFilter, 250);
   }
   else if (e.key === 'o' && focusedId) { openUsage(focusedId); }
-  else if (e.key === 'O' && focusedId) { window.open($(`#i-${focusedId} [data-open]`).href, '_blank'); }
-  else if (e.key === 'n' && focusedId) { e.preventDefault(); const n = $(`#i-${focusedId} .note`); n.hidden = false; n.focus(); }
+  else if (e.key === 'O' && focusedId) { window.open(popUrl(focusedId, -1), '_blank'); }
   else if (e.key === ' ' && focusedId) { e.preventDefault(); zoom(focusedId); }
   else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
 });

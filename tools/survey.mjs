@@ -14,7 +14,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { ROOT, PROJECT, startServer, openPage, settle } from './lib/render.mjs';
+import { ROOT, PROJECT, startServer, openPage, settle, shootElement as shoot } from './lib/render.mjs';
 import { tplSource } from './lib/source.mjs';
 
 const SURVEYS = path.join(ROOT, 'surveys');
@@ -22,7 +22,7 @@ const SURVEYS = path.join(ROOT, 'surveys');
 // Keep in sync with PRESETS in tools/lib/bridge.js (titles only; logic lives there).
 const PRESETS = {
   radius: 'Corner radius', 'text-color': 'Text color', background: 'Background color', gradient: 'Gradients',
-  'border-color': 'Border color', 'border-width': 'Border width', shadow: 'Shadows',
+  overlay: 'Overlays (translucent colors)', border: 'Borders', spacing: 'Spacing values', 'border-color': 'Border color', 'border-width': 'Border width', shadow: 'Shadows',
   'font-size': 'Font size', 'size-weight': 'Type sizes × weights', 'font-weight': 'Font weight', 'line-height': 'Line height', 'letter-spacing': 'Letter spacing',
   'font-family': 'Font family', typography: 'Type styles', gap: 'Gap', padding: 'Padding', opacity: 'Opacity',
 };
@@ -83,7 +83,7 @@ async function run(id, o) {
         const item = {
           id: itemId, order: order++, value: r.value,
           declared: r.declared, declaredProp: r.declaredProp, declaredFrom: r.declaredFrom, inheritedFrom: r.inheritedFrom, tokens: r.tokens,
-          component: r.component, tag: r.tag, text: r.text, size: r.size, instances: r.instances,
+          props: r.props || undefined, component: r.component, tag: r.tag, text: r.text, size: r.size, instances: r.instances,
           where: { capture: ci, owner: r.owner, tpl: r.tpl, nth: r.nth },
           captures: [ci], source: sourceFor(r.owner, r.tpl), shot: null,
         };
@@ -113,7 +113,7 @@ async function run(id, o) {
     usages: its.length, instances: its.reduce((n, i) => n + i.instances, 0),
     items: its.map((it, i) => { const { order: _, ...rest } = it; return { n: i + 1, ...rest }; }),
   }));
-  const numeric = ['radius', 'border-width', 'font-size', 'size-weight', 'font-weight', 'line-height', 'letter-spacing', 'typography', 'gap', 'padding', 'opacity'].includes(spec.preset);
+  const numeric = ['radius', 'spacing', 'border-width', 'font-size', 'size-weight', 'font-weight', 'line-height', 'letter-spacing', 'typography', 'gap', 'padding', 'opacity'].includes(spec.preset);
   sections.sort(numeric ? (a, b) => firstNum(a.value) - firstNum(b.value) || a.value.localeCompare(b.value) : (a, b) => b.instances - a.instances);
   sections = sections.map((s, i) => ({ n: i + 1, ...s }));
 
@@ -136,29 +136,6 @@ function sourceFor(owner, tpl) {
   if (!fs.existsSync(abs)) return { file, line: null };
   const src = tplSource(abs, tpl);
   return src ? { file, line: src.line, col: src.col, snippet: src.snippet.length > 600 ? src.snippet.slice(0, 600) + '…' : src.snippet } : { file, line: null };
-}
-
-// Screenshot an element with surrounding context and a dashed highlight.
-async function shoot(page, r, out) {
-  const box = await page.evaluate(({ owner, tpl, nth }) => {
-    const el = window.__dcv.find(owner, tpl, nth);
-    if (!el) return null;
-    el.scrollIntoView({ block: 'center', inline: 'nearest', behavior: 'instant' });
-    const rect = window.__dcv.highlight(el, { scroll: false });
-    return rect && { x: rect.left, y: rect.top, w: rect.width, h: rect.height, vw: innerWidth, vh: innerHeight };
-  }, r);
-  if (!box) throw new Error('element not found');
-  await page.waitForTimeout(60);
-  await page.evaluate(() => Promise.all([...document.images].filter(i => !i.complete).map(i => new Promise(res => { i.onload = i.onerror = res; setTimeout(res, 1500); }))));
-  // context: at least 320x160, 24px padding, clamped to viewport
-  const pad = 24;
-  let w = Math.max(box.w + pad * 2, 320), h = Math.max(box.h + pad * 2, 160);
-  let x = box.x + box.w / 2 - w / 2, y = box.y + box.h / 2 - h / 2;
-  x = Math.max(0, Math.min(x, box.vw - w)); y = Math.max(0, Math.min(y, box.vh - h));
-  w = Math.min(w, box.vw - x); h = Math.min(h, box.vh - y);
-  await page.screenshot({ path: out, clip: { x, y, width: w, height: h }, animations: 'disabled', caret: 'hide' });
-  await page.evaluate(() => window.__dcv.unhighlight());
-  return true;
 }
 
 async function main() {

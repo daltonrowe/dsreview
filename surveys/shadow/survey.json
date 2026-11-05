@@ -1,0 +1,1954 @@
+{
+ "id": "shadow",
+ "title": "Shadows",
+ "preset": "shadow",
+ "description": "",
+ "generatedAt": "2026-11-05T11:32:15.895Z",
+ "captures": [
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home"
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (logged in)",
+   "props": {
+    "authState": "logged-in"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Home (dark)",
+   "props": {
+    "theme": "dark"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Search results",
+   "state": {
+    "active": "search",
+    "aiHome": false
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · Explore",
+   "state": {
+    "active": "explore"
+   }
+  },
+  {
+   "page": "AI Magic.dc.html",
+   "label": "AI Magic · AI Tools",
+   "state": {
+    "active": "collections"
+   }
+  },
+  {
+   "page": "Explore Page.dc.html",
+   "label": "Explore Page"
+  },
+  {
+   "page": "Search Dropdown.dc.html",
+   "label": "Search Dropdown"
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 1",
+   "props": {
+    "layout": "Option 1"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 2",
+   "props": {
+    "layout": "Option 2"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 3",
+   "props": {
+    "layout": "Option 3"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4",
+   "props": {
+    "layout": "Option 4"
+   }
+  },
+  {
+   "page": "Pricing.dc.html",
+   "label": "Pricing · Option 4 (dark)",
+   "props": {
+    "layout": "Option 4",
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Checkout.dc.html",
+   "label": "Checkout"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account"
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Log in",
+   "props": {
+    "mode": "Log In"
+   }
+  },
+  {
+   "page": "Log In.dc.html",
+   "label": "Log In · Create account (dark)",
+   "props": {
+    "theme": "Dark"
+   }
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Login"
+  },
+  {
+   "page": "Log In v1.dc.html",
+   "label": "Log In v1 · Signup",
+   "props": {
+    "mode": "signup"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · App",
+   "props": {
+    "layout": "app"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Sidebar",
+   "props": {
+    "layout": "sidebar"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Tabs",
+   "props": {
+    "layout": "tabs"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Modal",
+   "props": {
+    "layout": "modal"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Hub",
+   "props": {
+    "layout": "hub"
+   }
+  },
+  {
+   "page": "Settings.dc.html",
+   "label": "Settings · Free plan",
+   "props": {
+    "plan": "Free"
+   }
+  },
+  {
+   "page": "Style Guide - Action Cards.dc.html",
+   "label": "Style Guide · Action Cards"
+  }
+ ],
+ "stats": {
+  "sections": 20,
+  "usages": 44,
+  "instances": 224
+ },
+ "problems": [],
+ "sections": [
+  {
+   "n": 1,
+   "id": "d5721f0bd4",
+   "value": "#0e2332 / 22% 0px 6px 18px 0px",
+   "tokens": [],
+   "usages": 3,
+   "instances": 81,
+   "items": [
+    {
+     "n": 1,
+     "id": "23fcbc6fd8",
+     "value": "#0e2332 / 22% 0px 6px 18px 0px",
+     "declared": "rgba(14, 35, 50, 0.22) 0px 6px 18px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      235,
+      247
+     ],
+     "instances": 27,
+     "where": {
+      "capture": 4,
+      "owner": "AI Magic",
+      "tpl": 1543,
+      "nth": 0
+     },
+     "captures": [
+      4
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2110,
+      "col": 15,
+      "snippet": "<span class=\"cat-stack__c cat-stack__c3\" style=\"position: absolute; left: 30px; bottom: 0; width: 170px; height: 210px; background: {{ pc.stackBg3 }}; border: 7px solid #fff; box-sizing: border-box; border-radius: 18px; box-shadow: 0 6px 18px rgba(14, 35, 50, .22); transform-origin: 50% 115%; transform: rotate(-32deg) scale(.92); transition: transform .28s ease\">"
+     },
+     "shot": "shots/23fcbc6fd8.png"
+    },
+    {
+     "n": 2,
+     "id": "3cd5017ccb",
+     "value": "#0e2332 / 22% 0px 6px 18px 0px",
+     "declared": "rgba(14, 35, 50, 0.22) 0px 6px 18px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      235,
+      247
+     ],
+     "instances": 27,
+     "where": {
+      "capture": 4,
+      "owner": "AI Magic",
+      "tpl": 1544,
+      "nth": 0
+     },
+     "captures": [
+      4
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2111,
+      "col": 15,
+      "snippet": "<span class=\"cat-stack__c cat-stack__c2\" style=\"position: absolute; left: 30px; bottom: 0; width: 170px; height: 210px; background: {{ pc.stackBg2 }}; border: 7px solid #fff; box-sizing: border-box; border-radius: 18px; box-shadow: 0 6px 18px rgba(14, 35, 50, .22); transform-origin: 50% 115%; transform: rotate(-32deg) scale(.92); transition: transform .28s ease\">"
+     },
+     "shot": "shots/3cd5017ccb.png"
+    },
+    {
+     "n": 3,
+     "id": "7f65b97989",
+     "value": "#0e2332 / 22% 0px 6px 18px 0px",
+     "declared": "rgba(14, 35, 50, 0.22) 0px 6px 18px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Popular photo categories",
+     "tag": "span",
+     "text": "",
+     "size": [
+      255,
+      268
+     ],
+     "instances": 27,
+     "where": {
+      "capture": 4,
+      "owner": "AI Magic",
+      "tpl": 1545,
+      "nth": 0
+     },
+     "captures": [
+      4
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2112,
+      "col": 15,
+      "snippet": "<span class=\"cat-stack__c cat-stack__c1\" style=\"position: absolute; left: 30px; bottom: 0; width: 170px; height: 210px; background: {{ pc.stackBg1 }}; border: 7px solid #fff; box-sizing: border-box; border-radius: 18px; box-shadow: 0 6px 18px rgba(14, 35, 50, .22); transform-origin: 50% 115%; transform: rotate(-32deg); transition: transform .28s ease\">"
+     },
+     "shot": "shots/7f65b97989.png"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "id": "09b1a227f8",
+   "value": "#0e2332 / 3% 0px 1px 1px 0px",
+   "tokens": [],
+   "usages": 13,
+   "instances": 75,
+   "items": [
+    {
+     "n": 1,
+     "id": "e07a9a7418",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "Search settings",
+     "size": [
+      40,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3454,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3656,
+      "col": 7,
+      "snippet": "<button aria-label=\"Search settings\" class=\"gear-btn\" ref=\"{{ gearBtnRef }}\" onClick=\"{{ toggleGearMenu }}\" onMouseEnter=\"{{ enterGear }}\" onMouseLeave=\"{{ leaveGear }}\" style=\"position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; flex-shrink: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); border-radius: 9999px; transition: border-color .15s ease; background: var(--ez-surface); color: var(--ez-color--grey-100); cursor: pointer\" style-hover=\"border-color: var(--ez-co…"
+     },
+     "shot": "shots/e07a9a7418.png"
+    },
+    {
+     "n": 2,
+     "id": "06bb00cc11",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "",
+     "size": [
+      150,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3467,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3661,
+      "col": 7,
+      "snippet": "<button onClick=\"{{ toggleContentMenu }}\" style=\"display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/06bb00cc11.png"
+    },
+    {
+     "n": 3,
+     "id": "ea2cf6dac1",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "span",
+     "text": "",
+     "size": [
+      196,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3471,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3665,
+      "col": 7,
+      "snippet": "<span style=\"display: inline-flex; align-items: stretch; height: 40px; border-radius: 9999px; border: 1px solid {{ licBorder }}; background: {{ licBg }}; color: {{ licColor }}; box-sizing: border-box; overflow: hidden; box-shadow: 0 1px 1px rgba(14, 35, 50, .03); transition: border-color .15s ease\" class=\"{{ licChipClass }}\">"
+     },
+     "shot": "shots/ea2cf6dac1.png"
+    },
+    {
+     "n": 4,
+     "id": "896be542a6",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "span",
+     "text": "",
+     "size": [
+      156,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3482,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3675,
+      "col": 7,
+      "snippet": "<span style=\"display: inline-flex; align-items: stretch; height: 40px; border-radius: 9999px; border: 1px solid {{ orBorder }}; background: {{ orBg }}; color: {{ orColor }}; box-sizing: border-box; overflow: hidden; box-shadow: 0 1px 1px rgba(14, 35, 50, .03); transition: border-color .15s ease\" class=\"{{ orChipClass }}\">"
+     },
+     "shot": "shots/896be542a6.png"
+    },
+    {
+     "n": 5,
+     "id": "f441229512",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "puppy",
+     "size": [
+      99,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3497,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3690,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/f441229512.png"
+    },
+    {
+     "n": 6,
+     "id": "ee851c4923",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "golden retriever",
+     "size": [
+      164,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3501,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3691,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/ee851c4923.png"
+    },
+    {
+     "n": 7,
+     "id": "f1822ead11",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "corgi",
+     "size": [
+      91,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3505,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3692,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/f1822ead11.png"
+    },
+    {
+     "n": 8,
+     "id": "65fd5eab96",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "cute",
+     "size": [
+      87,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3509,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3693,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/65fd5eab96.png"
+    },
+    {
+     "n": 9,
+     "id": "ffad7e7cc4",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "running",
+     "size": [
+      109,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3513,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3694,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/ffad7e7cc4.png"
+    },
+    {
+     "n": 10,
+     "id": "11328338b0",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "park",
+     "size": [
+      87,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3517,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3695,
+      "col": 7,
+      "snippet": "<button style=\"display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-surface); color: var(--ez-color--grey-100); gap: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40)\">"
+     },
+     "shot": "shots/11328338b0.png"
+    },
+    {
+     "n": 11,
+     "id": "17b29dceba",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters",
+     "tag": "button",
+     "text": "Scroll filters",
+     "size": [
+      40,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 3540,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3704,
+      "col": 7,
+      "snippet": "<button aria-label=\"Scroll filters\" class=\"rail-arrow\" onClick=\"{{ scrollFilters }}\" style=\"position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 2; display: {{ filterRightDisplay }}; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--ez-color--grey-10); border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-100); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); cursor: pointer; transition: border-color .15s ease, box-shadow .15s ease\" style-hover=\"border-color: var(--ez-color--grey-40); bo…"
+     },
+     "shot": "shots/17b29dceba.png"
+    },
+    {
+     "n": 12,
+     "id": "dbe8c6065b",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home search dropdown",
+     "tag": "span",
+     "text": "",
+     "size": [
+      267,
+      40
+     ],
+     "instances": 3,
+     "where": {
+      "capture": 7,
+      "owner": "Search Dropdown",
+      "tpl": 17,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "Search Dropdown.dc.html",
+      "line": 49,
+      "col": 9,
+      "snippet": "<span class=\"kw-row\" style=\"display: inline-flex; align-items: stretch; height: 40px; box-sizing: border-box; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-color--grey-3); font-size: 14px; font-weight: 600; color: var(--ez-color--grey-100); overflow: hidden; transition: border-color .15s ease\" style-hover=\"border-color: var(--ez-color--grey-30)\">"
+     },
+     "shot": "shots/dbe8c6065b.png"
+    },
+    {
+     "n": 13,
+     "id": "d4a409179d",
+     "value": "#0e2332 / 3% 0px 1px 1px 0px",
+     "declared": "rgba(14, 35, 50, 0.03) 0px 1px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home search dropdown",
+     "tag": "a",
+     "text": "",
+     "size": [
+      124,
+      40
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 7,
+      "owner": "Search Dropdown",
+      "tpl": 40,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "Search Dropdown.dc.html",
+      "line": 65,
+      "col": 9,
+      "snippet": "<a href=\"#\" onClick=\"{{ tc.pick }}\" class=\"kw-row\" style=\"display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; box-sizing: border-box; border-radius: 9999px; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 1px rgba(14, 35, 50, .03); background: var(--ez-color--grey-3); font-size: 14px; font-weight: 600; color: var(--ez-color--grey-100); text-decoration: none; transition: border-color .15s ease, background .15s ease\" style-hover=\"border-color: var(--ez-color--grey-30); background: var(--ez-color--grey-10)\">"
+     },
+     "shot": "shots/d4a409179d.png"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "id": "9fa3a1d16d",
+   "value": "#0e2332 / 5% 0px 2px 10px 0px",
+   "tokens": [],
+   "usages": 3,
+   "instances": 24,
+   "items": [
+    {
+     "n": 1,
+     "id": "09403e5c86",
+     "value": "#0e2332 / 5% 0px 2px 10px 0px",
+     "declared": "rgba(14, 35, 50, 0.05) 0px 2px 10px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Customer reviews",
+     "tag": "article",
+     "text": "",
+     "size": [
+      300,
+      323
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 9,
+      "owner": "Pricing",
+      "tpl": 273,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 239,
+      "col": 11,
+      "snippet": "<article style=\"flex: 0 0 300px; box-sizing: border-box; scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px; padding: 24px; border-radius: 16px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05)\">"
+     },
+     "shot": "shots/09403e5c86.png"
+    },
+    {
+     "n": 2,
+     "id": "43e94f7c8a",
+     "value": "#0e2332 / 5% 0px 2px 10px 0px",
+     "declared": "rgba(14, 35, 50, 0.05) 0px 2px 10px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "FAQ",
+     "tag": "div",
+     "text": "",
+     "size": [
+      760,
+      64
+     ],
+     "instances": 10,
+     "where": {
+      "capture": 9,
+      "owner": "Pricing",
+      "tpl": 308,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 257,
+      "col": 11,
+      "snippet": "<div style=\"border-radius: 20px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05); overflow: hidden\">"
+     },
+     "shot": "shots/43e94f7c8a.png"
+    },
+    {
+     "n": 3,
+     "id": "27c5b861ca",
+     "value": "#0e2332 / 5% 0px 2px 10px 0px",
+     "declared": "rgba(14, 35, 50, 0.05) 0px 2px 10px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "FAQ",
+     "tag": "div",
+     "text": "",
+     "size": [
+      760,
+      64
+     ],
+     "instances": 10,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 518,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 399,
+      "col": 11,
+      "snippet": "<div style=\"border-radius: 20px; background: var(--ez-surface); box-shadow: 0 2px 10px rgba(14, 35, 50, .05); overflow: hidden\">"
+     },
+     "shot": "shots/27c5b861ca.png"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "id": "65943f0587",
+   "value": "#0e2332 / 6% 0px 2px 8px 0px",
+   "tokens": [],
+   "usages": 3,
+   "instances": 13,
+   "items": [
+    {
+     "n": 1,
+     "id": "5a799819f0",
+     "value": "#0e2332 / 6% 0px 2px 8px 0px",
+     "declared": "rgba(14, 35, 50, 0.06) 0px 2px 8px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Filters panel",
+     "tag": "button",
+     "text": "Close filters",
+     "size": [
+      36,
+      36
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 266,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 705,
+      "col": 7,
+      "snippet": "<button aria-label=\"Close filters\" title=\"Close\" onClick=\"{{ closeFilterPanel }}\" style=\"display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex-shrink: 0; margin: 0 -2px 0 -4px; padding: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 2px 8px rgba(14, 35, 50, .06); box-sizing: border-box; border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-70); cursor: pointer; transition: color .15s ease, background .15s ease\" style-hover=\"color: var(--ez-color--grey-100); background: var(--ez-color--grey-5)\">"
+     },
+     "shot": "shots/5a799819f0.png"
+    },
+    {
+     "n": 2,
+     "id": "6efe0ab76e",
+     "value": "#0e2332 / 6% 0px 2px 8px 0px",
+     "declared": "rgba(14, 35, 50, 0.06) 0px 2px 8px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Notifications panel",
+     "tag": "button",
+     "text": "Close panel",
+     "size": [
+      36,
+      36
+     ],
+     "instances": 6,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 1795,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2412,
+      "col": 7,
+      "snippet": "<button aria-label=\"Close panel\" onClick=\"{{ closeNotif }}\" style=\"display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex-shrink: 0; padding: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 2px 8px rgba(14, 35, 50, .06); box-sizing: border-box; border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-70); cursor: pointer; transition: color .15s ease, background .15s ease\" style-hover=\"color: var(--ez-color--grey-100); background: var(--ez-color--grey-5)\">"
+     },
+     "shot": "shots/6efe0ab76e.png"
+    },
+    {
+     "n": 3,
+     "id": "3eae89cc6d",
+     "value": "#0e2332 / 6% 0px 2px 8px 0px",
+     "declared": "rgba(14, 35, 50, 0.06) 0px 2px 8px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home search dropdown",
+     "tag": "button",
+     "text": "Close",
+     "size": [
+      36,
+      36
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 7,
+      "owner": "Search Dropdown",
+      "tpl": 9,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "Search Dropdown.dc.html",
+      "line": 42,
+      "col": 5,
+      "snippet": "<button aria-label=\"Close\" onClick=\"{{ close }}\" style=\"position: absolute; top: 14px; right: 14px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex-shrink: 0; padding: 0; border: 1px solid var(--ez-color--grey-10); box-shadow: 0 2px 8px rgba(14, 35, 50, .06); box-sizing: border-box; border-radius: 9999px; background: var(--ez-surface); color: var(--ez-color--grey-70); cursor: pointer; transition: color .15s ease, background .15s ease\" style-hover=\"color: var(--ez-color--grey-100); background: var(--ez-color--grey-5)\">"
+     },
+     "shot": "shots/3eae89cc6d.png"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "id": "d820d7ddd5",
+   "value": "#0e2332 / 8% 0px 1px 4px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 5,
+   "items": [
+    {
+     "n": 1,
+     "id": "b06fd161d0",
+     "value": "#0e2332 / 8% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Hero masthead",
+     "tag": "button",
+     "text": "",
+     "size": [
+      185,
+      56
+     ],
+     "instances": 3,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 989,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1539,
+      "col": 13,
+      "snippet": "<button onClick=\"{{ toggleHeroTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 24px; border-radius: 9999px; background: #fff; border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: var(--type-body-size); font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap; transition: background .15s ease, border-color .15s ease\" style-hover=\"background: var(--ez-color--grey-5); border-color: var(--ez-colo…"
+     },
+     "shot": "shots/b06fd161d0.png"
+    },
+    {
+     "n": 2,
+     "id": "9a99513d00",
+     "value": "#0e2332 / 8% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Top bar",
+     "tag": "button",
+     "text": "",
+     "size": [
+      156,
+      40
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 3,
+      "owner": "AI Magic",
+      "tpl": 3123,
+      "nth": 0
+     },
+     "captures": [
+      3,
+      4
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 3349,
+      "col": 11,
+      "snippet": "<button onClick=\"{{ toggleStickyTypeMenu }}\" class=\"type-chip-btn\" style=\"display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 9999px; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-20); box-shadow: 0 1px 4px rgba(14, 35, 50, 0.08); color: var(--ez-color--text-headers); font-family: inherit; font-size: 14px; font-weight: var(--ez-font-weight-semibold); cursor: pointer; white-space: nowrap\" style-hover=\"background: var(--ez-color--grey-5)\">"
+     },
+     "shot": "shots/9a99513d00.png"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "id": "879a747362",
+   "value": "#0e2332 / 20% 0px 1px 4px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 5,
+   "items": [
+    {
+     "n": 1,
+     "id": "b03dcc04dd",
+     "value": "#0e2332 / 20% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.2) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Footer theme toggle",
+     "tag": "span",
+     "text": "",
+     "size": [
+      28,
+      28
+     ],
+     "instances": 4,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 1594,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1,
+      2,
+      4
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 2183,
+      "col": 15,
+      "snippet": "<span style=\"position: absolute; top: 2px; left: {{ themeThumbLeft }}; width: 28px; height: 28px; border-radius: 9999px; background: #fff; box-shadow: 0 1px 4px rgba(14, 35, 50, .2); transition: left .15s ease\">"
+     },
+     "shot": "shots/b03dcc04dd.png"
+    },
+    {
+     "n": 2,
+     "id": "e81b43a66a",
+     "value": "#0e2332 / 20% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.2) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Top bar",
+     "tag": "span",
+     "text": "",
+     "size": [
+      40,
+      40
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 6,
+      "owner": "Explore Page",
+      "tpl": 152,
+      "nth": 0
+     },
+     "captures": [
+      6
+     ],
+     "source": {
+      "file": "Explore Page.dc.html",
+      "line": 169,
+      "col": 11,
+      "snippet": "<span style=\"position: absolute; top: 2px; left: {{ thumbLeft }}; width: 40px; height: 40px; border-radius: 9999px; background: {{ modeThumbBg }}; box-shadow: 0 1px 4px rgba(14, 35, 50, .2); transition: left .15s ease\">"
+     },
+     "shot": "shots/e81b43a66a.png"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "id": "c7283d2a6c",
+   "value": "#0e2332 / 12% 0px 1px 4px 0px",
+   "tokens": [],
+   "usages": 3,
+   "instances": 4,
+   "items": [
+    {
+     "n": 1,
+     "id": "d2cefdfef2",
+     "value": "#0e2332 / 12% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.12) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": null,
+     "tag": "button",
+     "text": "Yearly ( off)",
+     "size": [
+      169,
+      44
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 8,
+      "owner": "Pricing",
+      "tpl": 17,
+      "nth": 0
+     },
+     "captures": [
+      8
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 57,
+      "col": 7,
+      "snippet": "<button role=\"tab\" aria-selected=\"{{ isYearly }}\" onClick=\"{{ pickYearly }}\" style=\"white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ yearlyBg }}; box-shadow: {{ yearlyShadow }}; color: {{ yearlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer\">"
+     },
+     "shot": "shots/d2cefdfef2.png"
+    },
+    {
+     "n": 2,
+     "id": "42eddf297f",
+     "value": "#0e2332 / 12% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.12) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V3 hero",
+     "tag": "button",
+     "text": "Yearly ( off)",
+     "size": [
+      129,
+      30
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 374,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 313,
+      "col": 9,
+      "snippet": "<button role=\"tab\" aria-selected=\"{{ isYearly }}\" onClick=\"{{ pickYearly }}\" style=\"white-space: nowrap; height: 30px; padding: 0 12px; border: none; border-radius: 9999px; background: {{ v3YearlyBg }}; box-shadow: {{ v3YearlyShadow }}; color: {{ v3YearlyFg }}; font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer\">"
+     },
+     "shot": "shots/42eddf297f.png"
+    },
+    {
+     "n": 3,
+     "id": "b7df31b0ac",
+     "value": "#0e2332 / 12% 0px 1px 4px 0px",
+     "declared": "rgba(14, 35, 50, 0.12) 0px 1px 4px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V4",
+     "tag": "button",
+     "text": "Yearly ( off)",
+     "size": [
+      169,
+      44
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 11,
+      "owner": "Pricing",
+      "tpl": 105,
+      "nth": 0
+     },
+     "captures": [
+      11,
+      12
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 116,
+      "col": 7,
+      "snippet": "<button role=\"tab\" aria-selected=\"{{ isYearly }}\" onClick=\"{{ pickYearly }}\" style=\"white-space: nowrap; height: 44px; padding: 0 22px; border: none; border-radius: 9999px; background: {{ yearlyBg }}; box-shadow: {{ yearlyShadow }}; color: {{ yearlyFg }}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer\">"
+     },
+     "shot": "shots/b7df31b0ac.png"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "id": "bccf15956d",
+   "value": "#ffffff 0px 0px 20px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "8cab1a382e",
+     "value": "#ffffff 0px 0px 20px 0px",
+     "declared": "rgb(255, 255, 255) 0px 0px 20px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home top bar",
+     "tag": "a",
+     "text": "Join Pro",
+     "size": [
+      124,
+      48
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 0,
+      "owner": "AI Magic",
+      "tpl": 952,
+      "nth": 0
+     },
+     "captures": [
+      0,
+      1
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 1496,
+      "col": 7,
+      "snippet": "<a href=\"Pricing.dc.html\" class=\"join-pro-glow\" style=\"display: {{ joinProDisplay }}; align-items: center; height: 48px; padding: 0 22px; border-radius: 9999px; background: linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; transition: background .15s ease; text-align: center; width: 80px; justify-content: center; position: relative; overflow: hidden; box-shadow: 0 0 20px #ffffff\" style-hover=\"background: linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%); color: #fff\" on…"
+     },
+     "shot": "shots/8cab1a382e.png"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "id": "1a15dadd5f",
+   "value": "#0e2332 / 15% 0px 6px 20px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "b41f4fc1bc",
+     "value": "#0e2332 / 15% 0px 6px 20px 0px",
+     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      320,
+      56
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 9,
+      "owner": "Pricing",
+      "tpl": 328,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 277,
+      "col": 7,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
+     },
+     "shot": "shots/b41f4fc1bc.png"
+    },
+    {
+     "n": 2,
+     "id": "ddcc1ab80e",
+     "value": "#0e2332 / 15% 0px 6px 20px 0px",
+     "declared": "rgba(14, 35, 50, 0.15) 0px 6px 20px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Bottom CTA",
+     "tag": "a",
+     "text": "Get Vecteezy Pro",
+     "size": [
+      320,
+      56
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 538,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 419,
+      "col": 7,
+      "snippet": "<a href=\"{{ checkoutHref }}\" style=\"display: flex; align-items: center; justify-content: center; height: 56px; width: 100%; max-width: 320px; margin-top: 14px; border-radius: 9999px; background: #fff; color: #0e2332; font-size: 17px; font-weight: 700; box-shadow: 0 6px 20px rgba(14, 35, 50, .15); transition: transform .15s ease\" style-hover=\"transform: translateY(-1px); color: #0e2332\">"
+     },
+     "shot": "shots/ddcc1ab80e.png"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "id": "799c968335",
+   "value": "#000000 / 45% 0px 10px 30px 0px",
+   "tokens": [],
+   "usages": 2,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "342a1c9dbe",
+     "value": "#000000 / 45% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card fresh",
+     "tag": "img",
+     "text": "",
+     "size": [
+      150,
+      200
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 512,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 389,
+      "col": 13,
+      "snippet": "<img src=\"uploads/small-vecteezy_woman-is-laying-on-couch-with-her-dog_78689756_small.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 70px; bottom: 30px; width: 150px; height: 200px; border-radius: 10px; z-index: 1; box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
+     },
+     "shot": "shots/342a1c9dbe.png"
+    },
+    {
+     "n": 2,
+     "id": "1e7ee86764",
+     "value": "#000000 / 45% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.45) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card fresh",
+     "tag": "img",
+     "text": "",
+     "size": [
+      136,
+      154
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 513,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 390,
+      "col": 13,
+      "snippet": "<img src=\"https://static.vecteezy.com/system/resources/thumbnails/027/788/240/small/beautiful-romantic-alley-in-a-park-with-colorful-trees-and-sunlight-autumn-natural-background-ai-generative-photo.jpg\" alt=\"\" style=\"display: block; object-fit: cover; position: absolute; left: 0; bottom: 20px; width: 120px; height: 140px; border-radius: 10px; z-index: 2; transform: rotate(-7deg); box-shadow: 0 10px 30px rgba(0, 0, 0, .45)\">"
+     },
+     "shot": "shots/1e7ee86764.png"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "id": "c01400b3c1",
+   "value": "#102030 / 8% 0px 16px 40px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 2,
+   "items": [
+    {
+     "n": 1,
+     "id": "3b8a285623",
+     "value": "#102030 / 8% 0px 16px 40px 0px",
+     "declared": "rgba(16, 32, 48, 0.08) 0px 16px 40px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Log In",
+     "tag": "div",
+     "text": "",
+     "size": [
+      560,
+      656
+     ],
+     "instances": 2,
+     "where": {
+      "capture": 17,
+      "owner": "Log In v1",
+      "tpl": 11,
+      "nth": 0
+     },
+     "captures": [
+      17,
+      18
+     ],
+     "source": {
+      "file": "Log In v1.dc.html",
+      "line": 29,
+      "col": 3,
+      "snippet": "<div style=\"width: 100%; max-width: 560px; box-sizing: border-box; background: #fff; border: 1px solid var(--ez-color--grey-10); border-radius: 20px; box-shadow: 0 16px 40px rgba(16, 32, 48, 0.08); padding: 44px 48px 40px; display: flex; flex-direction: column; gap: 28px\">"
+     },
+     "shot": "shots/3b8a285623.png"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "id": "723f7d19ab",
+   "value": "#ffffff / 20% 0px 0px 0px 1px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "60ea6355ce",
+     "value": "#ffffff / 20% 0px 0px 0px 1px",
+     "declared": "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "[data-ez-theme=\"dark\"] .nav-item:hover, [data-ez-theme=\"dark\"] .nav-item.nav-on",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Left nav",
+     "tag": "a",
+     "text": "Home",
+     "size": [
+      50,
+      48
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 2,
+      "owner": "AI Magic",
+      "tpl": 24,
+      "nth": 0
+     },
+     "captures": [
+      2
+     ],
+     "source": {
+      "file": "AI Magic.dc.html",
+      "line": 471,
+      "col": 7,
+      "snippet": "<a href=\"#\" aria-label=\"Home\" onClick=\"{{ goHome }}\" class=\"nav-item {{ homeOnClass }}\" style=\"position: relative; display: flex; align-items: center; justify-content: center; width: 50px; height: 48px; box-sizing: border-box; align-self: center; padding: 12px 13px; border-radius: 14px; color: {{ homeColor }}; background: {{ homeBg }}; transition: background .15s ease, color .15s ease\" style-hover=\"color: var(--ez-color--grey-100)\">"
+     },
+     "shot": "shots/60ea6355ce.png"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "id": "5ebf11f7eb",
+   "value": "#ffffff 0px 0px 0px 2px",
+   "tokens": [
+    "--ez-surface"
+   ],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "defb8dc573",
+     "value": "#ffffff 0px 0px 0px 2px",
+     "declared": "0 0 0 2px var(--ez-surface)",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [
+      "--ez-surface"
+     ],
+     "component": "Left nav",
+     "tag": "span",
+     "text": "",
+     "size": [
+      8,
+      8
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 6,
+      "owner": "Explore Page",
+      "tpl": 38,
+      "nth": 0
+     },
+     "captures": [
+      6
+     ],
+     "source": {
+      "file": "Explore Page.dc.html",
+      "line": 75,
+      "col": 11,
+      "snippet": "<span style=\"display: {{ dotDisplay }}; position: absolute; top: -1px; right: -1px; width: 8px; height: 8px; border-radius: 9999px; background: {{ dotColor }}; box-shadow: 0 0 0 2px {{ dotRing }}\">"
+     },
+     "shot": "shots/defb8dc573.png"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "id": "3cc4c65d89",
+   "value": "#0e2332 / 12% 0px 16px 24px -8px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "36fa6b0393",
+     "value": "#0e2332 / 12% 0px 16px 24px -8px",
+     "declared": "rgba(14, 35, 50, 0.12) 0px 16px 24px -8px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Home search dropdown",
+     "tag": "div",
+     "text": "",
+     "size": [
+      800,
+      465
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 7,
+      "owner": "Search Dropdown",
+      "tpl": 8,
+      "nth": 0
+     },
+     "captures": [
+      7
+     ],
+     "source": {
+      "file": "Search Dropdown.dc.html",
+      "line": 41,
+      "col": 1,
+      "snippet": "<div data-screen-label=\"Home search dropdown\" class=\"search-dropdown-panel\" style=\"position: relative; width: 100%; max-width: 800px; box-sizing: border-box; background: var(--ez-surface); border: 1px solid var(--ez-color--grey-10); border-radius: 25px; box-shadow: 0 16px 24px -8px rgba(14, 35, 50, .12); padding: 24px 28px 26px; max-height: calc(100vh - 48px); overflow-y: auto\">"
+     },
+     "shot": "shots/36fa6b0393.png"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "id": "444e7fcf30",
+   "value": "#0e2332 / 8% 0px 8px 30px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "6bc2daf5b3",
+     "value": "#0e2332 / 8% 0px 8px 30px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 8px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V2",
+     "tag": "section",
+     "text": "Vecteezy Pro",
+     "size": [
+      560,
+      662
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 9,
+      "owner": "Pricing",
+      "tpl": 197,
+      "nth": 0
+     },
+     "captures": [
+      9
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 195,
+      "col": 5,
+      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; width: 100%; max-width: 560px; box-sizing: border-box; margin-top: 36px; box-shadow: 0 8px 30px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: none; border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
+     },
+     "shot": "shots/6bc2daf5b3.png"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "id": "1587ac0fb8",
+   "value": "#0e2332 / 8% 0px 12px 40px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "d2b585d425",
+     "value": "#0e2332 / 8% 0px 12px 40px 0px",
+     "declared": "rgba(14, 35, 50, 0.08) 0px 12px 40px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Pricing V3 hero",
+     "tag": "section",
+     "text": "Vecteezy Pro",
+     "size": [
+      520,
+      702
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 370,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 309,
+      "col": 7,
+      "snippet": "<section aria-label=\"Vecteezy Pro\" style=\"position: relative; flex: 1 1 440px; min-width: 0; max-width: 520px; box-sizing: border-box; box-shadow: 0 12px 40px rgba(14, 35, 50, .08); padding: clamp(24px, 5vw, 44px); border: 1px solid var(--ez-color--grey-10); border-radius: 28px; background: var(--ez-surface); display: flex; flex-direction: column; gap: 28px\">"
+     },
+     "shot": "shots/d2b585d425.png"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "id": "5eaca7957f",
+   "value": "#000000 / 40% 0px 10px 30px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "cfe472e684",
+     "value": "#000000 / 40% 0px 10px 30px 0px",
+     "declared": "rgba(0, 0, 0, 0.4) 0px 10px 30px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card bundles",
+     "tag": "div",
+     "text": "ZIP",
+     "size": [
+      76,
+      96
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 473,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 369,
+      "col": 11,
+      "snippet": "<div style=\"position: absolute; right: 40px; bottom: 34px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; width: 76px; height: 96px; padding-bottom: 12px; box-sizing: border-box; border-radius: 6px 22px 6px 6px; background: #f5f5f5; color: #555; font-size: 12px; font-weight: 600; letter-spacing: .04em; box-shadow: 0 10px 30px rgba(0, 0, 0, .4)\">"
+     },
+     "shot": "shots/cfe472e684.png"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "id": "03d014a388",
+   "value": "#000000 / 35% 0px 4px 14px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "2f78835778",
+     "value": "#000000 / 35% 0px 4px 14px 0px",
+     "declared": "rgba(0, 0, 0, 0.35) 0px 4px 14px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Why card AI",
+     "tag": "span",
+     "text": "",
+     "size": [
+      32,
+      32
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 10,
+      "owner": "Pricing",
+      "tpl": 491,
+      "nth": 0
+     },
+     "captures": [
+      10
+     ],
+     "source": {
+      "file": "Pricing.dc.html",
+      "line": 378,
+      "col": 13,
+      "snippet": "<span style=\"position: absolute; top: 50%; left: 50%; display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin: -16px 0 0 -16px; border-radius: 50%; background: #fff; color: #141414; box-shadow: 0 4px 14px rgba(0, 0, 0, .35)\">"
+     },
+     "shot": "shots/2f78835778.png"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "id": "2b1839128e",
+   "value": "#ff7900 0px 0px 0px 1px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "0717cc9527",
+     "value": "#ff7900 0px 0px 0px 1px",
+     "declared": "rgb(255, 121, 0) 0px 0px 0px 1px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": "Order summary",
+     "tag": "div",
+     "text": "",
+     "size": [
+      456,
+      82
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 13,
+      "owner": "Checkout",
+      "tpl": 87,
+      "nth": 0
+     },
+     "captures": [
+      13
+     ],
+     "source": {
+      "file": "Checkout.dc.html",
+      "line": 100,
+      "col": 7,
+      "snippet": "<div onClick=\"{{ pickMonthly }}\" role=\"radio\" aria-checked=\"{{ isMonthly }}\" style=\"display: flex; align-items: center; gap: 18px; margin-top: 34px; padding: 22px 20px; border: 1px solid {{ monthlyBorder }}; box-shadow: {{ monthlyRing }}; border-radius: 7px; background: #fff; cursor: pointer\">"
+     },
+     "shot": "shots/0717cc9527.png"
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "id": "3830127094",
+   "value": "#0e2332 / 35% 0px 24px 64px 0px",
+   "tokens": [],
+   "usages": 1,
+   "instances": 1,
+   "items": [
+    {
+     "n": 1,
+     "id": "7eae835553",
+     "value": "#0e2332 / 35% 0px 24px 64px 0px",
+     "declared": "rgba(14, 35, 50, 0.35) 0px 24px 64px",
+     "declaredProp": "box-shadow",
+     "declaredFrom": "inline",
+     "inheritedFrom": null,
+     "tokens": [],
+     "component": null,
+     "tag": "div",
+     "text": "",
+     "size": [
+      1120,
+      860
+     ],
+     "instances": 1,
+     "where": {
+      "capture": 22,
+      "owner": "Settings",
+      "tpl": 9,
+      "nth": 0
+     },
+     "captures": [
+      22
+     ],
+     "source": {
+      "file": "Settings.dc.html",
+      "line": 51,
+      "col": 1,
+      "snippet": "<div style=\"position: relative; display: flex; flex: 1; width: 100%; max-width: {{ shellMaxW }}; height: {{ shellH }}; margin: {{ shellMargin }}; border-radius: {{ shellRadius }}; overflow: {{ shellOverflow }}; box-shadow: {{ shellShadow }}; background: {{ pageBg }}\">"
+     },
+     "shot": "shots/7eae835553.png"
+    }
+   ]
+  }
+ ]
+}

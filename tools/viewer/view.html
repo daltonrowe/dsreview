@@ -37,7 +37,7 @@
   <label class="muted" style="font-size:12.5px"><input type="checkbox" id="fit" checked> Fit</label>
   <button class="btn small" id="reload" title="Reload with current settings">Reload</button>
   <span class="target" id="target"></span>
-  <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select></span>
+  <span class="compare" id="compare" hidden><label class="faint" for="opts">Round to</label><select id="opts" class="mono"></select><button class="btn small" id="swap" title="Swap between the design as built and the selected token"></button></span>
   <span class="spacer"></span>
   <span id="status">Loading…</span>
   <button class="btn small" id="copy" title="Copy a link to this exact state">Copy link</button>
@@ -188,6 +188,7 @@ function setupCompare() {
   $('#opts').innerHTML = `<option value="-1">Original (as designed)</option>` + cur.options.map((o, i) =>
     `<option value="${i}" title="${esc(Object.entries(o.css).map(([k, v]) => `${k}: ${v}`).join('; '))}">${i + 1}. ${esc(o.label)}</option>`).join('');
   $('#opts').onchange = e => show(Number(e.target.value));
+  $('#swap').onclick = () => show(showing >= 0 ? -1 : lastPick);
   lastPick = cur.pick >= 0 ? cur.pick : 0;
   show(cur.pick, true);
 }
@@ -200,6 +201,7 @@ function show(i, initial) {
   showing = i; cur.pick = i;
   $('#opts').value = String(i);
   $('#opts').classList.toggle('picked', i >= 0);
+  $('#swap').textContent = i >= 0 ? 'Show as designed' : `Show ${cur.options[lastPick]?.token || 'rounded'}`;
   syncUrl();
   if (!initial && window.parent !== window) window.parent.postMessage({ type: 'dcv-pick', pick: i }, location.origin);
 }

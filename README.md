@@ -10,6 +10,8 @@ npm start          # review viewer at http://localhost:4321 (opens browser)
 npm run serve      # same, without opening a browser
 ```
 
+The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER` / `REVIEW_PASS`).
+
 ## Layout
 
 | Path | What |
@@ -22,14 +24,16 @@ npm run serve      # same, without opening a browser
 | `tools/dc.mjs` | Screenshot CLI |
 | `tools/lib/` | Shared code: `render.mjs` (Playwright), `bridge.js` (in-page helpers + token presets), `source.mjs` (element → source line) |
 | `surveys/` | `captures.json` (page states to scan) and one folder per survey |
+| `analysis/components/` | Suggested Components output (`tools/components.mjs`) |
 | `.claude/skills/` | `view-design`, `token-survey`: how Claude Code uses the tools |
 
 ## Viewer
 
 - **Home** (`/`): surveys with progress, and every page.
-- **Survey** (`/survey.html?id=radius`): sections (S1, S2…) per distinct value. In each section, usages are numbered #1… and each one shows a screenshot, the authored declaration (inline, CSS rule, or inherited, plus any `var(--token)`), its component, the page state, a **Usage** button (opens the live page in a popover; ⌘-click for a new tab), a source link (`file:line` opens VS Code), the **nearest design-system token** (or an exact match), and **Keep / Round / Exclude / Remove** buttons with a note. **Round** records the token picked in the Nearest dropdown. **Preview** (and the **Usage** popover) shows the page with a **Round to** bar: Original plus each nearest token, applied live to the element. Pick with a click or `0`–`3`, toggle with `t`, then use **Round to <token>** to save it. Each usage is badged **On-token** (its value equals a design-system token value) or **Off-token**. You can filter by decision, page state, or text, hide on-token usages, show excluded ones (hidden by default), set a decision for a whole section, and export to `.md` or `.json`.
-  Keys: `j`/`k` move, `1` keep, `2` round, `3` exclude, `4` remove, `0` clear, `p` preview rounding, `o` usage (`O` new tab), `n` note, `space` zoom, `/` search.
-- **Suggested Tokens** (bottom of each survey): clusters every usage that isn't Excluded or Removed (Rounded usages count toward their target) around its most-used value. Each cluster is shown as an **Existing** token or a suggested **New** one with a name, ranked by usages, instances or pages. Controls: minimum usages, merge distance (px or ΔE), and **Copy new as tokens.json**. It also lists existing tokens no usage maps to. Updates live as you decide.
+- **Survey** (`/survey.html?id=radius`): sections (S1, S2…) per distinct value. In each section, usages are numbered #1… and each one shows a screenshot, the authored declaration (inline, CSS rule, or inherited, plus any `var(--token)`), its component, the page state, a **Usage** button (opens the live page in a popover; ⌘-click for a new tab), a source link (`file:line` opens VS Code), the **nearest design-system token** (or an exact match), and **Keep / Round / Exclude** buttons. **Round** records the token picked in the Nearest dropdown. **Preview** (and the **Usage** popover) shows the page with a **Round to** bar: Original plus each nearest token, applied live to the element. Pick with a click or `0`–`3`, toggle with `t`, then use **Round to <token>** to save it. Each usage is badged **On-token** (its value equals a design-system token value) or **Off-token**. You can filter All / Decided / Undecided / Excluded (All hides excluded), by page state or text, hide on-token usages, set a decision for a whole section, and export to `.md` or `.json`.
+  Keys: `j`/`k` move, `1` keep, `2` round, `3` exclude, `0` clear, `p` preview, `o` usage popover, `space` zoom, `/` search.
+- **Suggested Tokens** (bottom of each survey): re-values the *existing* tokens to best fit non-excluded usage (same names, same count, same order; optimal weighted 1-D k-medians). It shows each token's current → proposed value, what it absorbs, and the fit before → after (exact matches, average rounding). For colors and shadows, which aren't scales, it shows how usage spreads over the existing tokens and lists unused ones.
+- **Suggested Components** (home page, collapsed): look-alike elements (kind, size, shape, fill, border, text style) that recur across the redesign, with screenshot, uses/pages, visual variants and related design-system components. Generate with `node tools/components.mjs` → `analysis/components/`.
 - **Page viewer** (`/view.html?page=…`): the live page with prop controls, internal state, and width. When opened from a usage, it applies that usage's state and marks the element. **Mark** chooses Border (dashed outline), Highlight (tinted fill) or None; `m` cycles through them and the choice is remembered.
 
 ## Token surveys
