@@ -30,4 +30,5 @@ const server = app.listen(PORT, HOST, () => {
 });
 
 // Kamal stops the old container with SIGTERM; close cleanly so in-flight requests finish.
-for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => server.close(() => process.exit(0)));
+// Open live (SSE) streams would keep close() waiting forever, so end them first.
+for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => { app.closeLive(); server.close(() => process.exit(0)); server.closeAllConnections(); });

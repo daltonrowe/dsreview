@@ -142,6 +142,7 @@
 
 <script type="module">
 import { api, esc, $, $$, preview, viewUrl, config, editorUrl, progressBar, legend } from './common.js';
+import { startLive, onDecision, liveToast, describeDecision } from './live.js';
 import { loadTokens, nearest, familyTokenNames, scaleFor, scaleValues, kMedians } from './tokens.js';
 
 const setHdr = () => document.documentElement.style.setProperty('--hdr', $('header.hdr').offsetHeight + 'px');
@@ -601,7 +602,19 @@ document.addEventListener('keydown', e => {
 });
 
 if (!id) $('#main').innerHTML = '<div class="empty">No survey id. <a href="./">Back</a></div>';
-else load().catch(err => { $('#main').innerHTML = `<div class="empty">${esc(err.message)}</div>`; });
+else load().then(startLive).catch(err => { $('#main').innerHTML = `<div class="empty">${esc(err.message)}</div>`; });
+
+// Decisions made by other people (or this person in another tab) arrive live.
+onDecision((d, { mine }) => {
+  if (!S || d.survey !== S.id) { if (!mine) liveToast(describeDecision(d)); return; }
+  for (const id of d.ids) {
+    if (d.decisions[id]) S.decisions[id] = d.decisions[id]; else delete S.decisions[id];
+    paint(id);
+  }
+  updateProgress();
+  applyFilter();
+  if (!mine) liveToast(describeDecision(d, d.ids.map(id => byId.get(id)).filter(Boolean).map(it => `S${it.sec.n}.${it.n}`)));
+});
 </script>
 </body>
 </html>

@@ -23,6 +23,13 @@ proxy:
   app_port: 3000
   healthcheck:
     path: /up
+  # Live collaboration streams server-sent events from /api/live for as long as a tab is open.
+  # Buffered responses would hold events back, and the default 30s response timeout would cut
+  # every stream (browsers reconnect, but presence would flicker), so stream unbuffered and
+  # allow an hour per connection.
+  buffering:
+    responses: false
+  response_timeout: 3600
 
 # Reviewer decisions (DATA_DIR). A named volume survives deploys and rollbacks.
 volumes:

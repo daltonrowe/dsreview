@@ -47,6 +47,7 @@
 
 <script type="module">
 import { api, esc, $, $$ } from './common.js';
+import { startLive, onDecision, liveToast, describeDecision } from './live.js';
 
 const P = new URLSearchParams(location.search);
 const parse = (k, d) => { try { return P.get(k) ? JSON.parse(P.get(k)) : d; } catch { return d; } };
@@ -261,6 +262,8 @@ $('#reload').onclick = load;
 $('#copy').onclick = async () => { await navigator.clipboard.writeText(location.href); status('Link copied'); };
 document.title = `${cur.page.replace(/\.dc\.html$/, '')} · Viewer`;
 load();
+startLive();
+onDecision((d, { mine }) => { if (!mine) liveToast(describeDecision(d)); });
 </script>
 </body>
 </html>

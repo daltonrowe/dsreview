@@ -62,3 +62,55 @@ test('rejects unknown decisions', async () => {
   });
   assert.equal(res.status, 400);
 });
+
+// Reads server-sent events from /api/live until `until(events)` is satisfied.
+async function liveEvents(query, until, during = async () => {}) {
+  const ctrl = new AbortController();
+  const res = await fetch(`${base}/api/live?${query}`, { headers: auth, signal: ctrl.signal });
+  const reader = res.body.getReader(), dec = new TextDecoder(), events = [];
+  let buf = '';
+  const reading = (async () => {
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) return;
+      buf += dec.decode(value, { stream: true });
+      let i;
+      while ((i = buf.indexOf('\n\n')) >= 0) {
+        const block = buf.slice(0, i); buf = buf.slice(i + 2);
+        const ev = block.match(/^event: (.*)$/m)?.[1], data = block.match(/^data: (.*)$/m)?.[1];
+        if (ev && data) events.push({ event: ev, data: JSON.parse(data) });
+        if (until(events)) return;
+      }
+    }
+  })();
+  await during();
+  await Promise.race([reading, new Promise((_, rej) => setTimeout(() => rej(new Error('timed out waiting for events')), 3000))]);
+  ctrl.abort();
+  return events;
+}
+
+test('live: presence counts distinct browsers and decisions are broadcast', async () => {
+  // a second browser (two tabs) is already connected
+  const other = new AbortController();
+  for (let i = 0; i < 2; i++) fetch(`${base}/api/live?client=b&name=Teal%20Fox`, { headers: auth, signal: other.signal }).catch(() => {});
+  await new Promise(r => setTimeout(r, 100));
+  const surveys = await (await fetch(`${base}/api/surveys`, { headers: auth })).json();
+  const s = surveys.find(x => x.generated);
+  const itemId = (await (await fetch(`${base}/api/surveys/${s.id}`, { headers: auth })).json()).sections[0].items[0].id;
+  const events = await liveEvents('client=a&name=Amber%20Otter', ev => ev.some(e => e.event === 'decision'), async () => {
+    await new Promise(r => setTimeout(r, 100));
+    await fetch(`${base}/api/surveys/${s.id}/decisions`, {
+      method: 'PUT', headers: { ...auth, 'content-type': 'application/json', 'x-client-id': 'b', 'x-client-tab': 't1', 'x-client-name': 'Teal Fox' },
+      body: JSON.stringify({ ids: [itemId], decision: 'exclude' }),
+    });
+  });
+  other.abort();
+  const presence = events.find(e => e.event === 'presence').data;
+  assert.equal(presence.online, 2, 'two tabs of browser b + browser a = 2 people');
+  const d = events.find(e => e.event === 'decision').data;
+  assert.equal(d.survey, s.id);
+  assert.deepEqual(d.ids, [itemId]);
+  assert.equal(d.decisions[itemId].decision, 'exclude');
+  assert.equal(d.by.name, 'Teal Fox');
+  assert.equal(d.by.tab, 't1');
+});

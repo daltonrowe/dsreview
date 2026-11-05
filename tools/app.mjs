@@ -34,6 +34,50 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
   });
 
   app.use(express.json());
+
+  // ---------- live collaboration (server-sent events) ----------
+  // Each browser opens GET /api/live?client=<id>&name=<name>. The server tracks connections,
+  // broadcasts who is online (distinct clients, so several tabs count once) and pushes every
+  // saved decision so other viewers can update and show a toast.
+  const live = new Map(); // connection -> { client, name }
+  const cleanName = n => String(n || '').replace(/[\u0000-\u001f]/g, '').trim().slice(0, 40);
+  const send = (res, event, data) => res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+  const broadcast = (event, data) => { for (const res of live.keys()) send(res, event, data); };
+  const presence = () => {
+    const people = new Map();
+    for (const c of live.values()) people.set(c.client, c.name);
+    return { online: people.size, people: [...people].map(([client, name]) => ({ client, name })) };
+  };
+  app.get('/api/live', (req, res) => {
+    const client = String(req.query.client || '').slice(0, 64) || crypto.randomUUID();
+    const name = cleanName(req.query.name) || 'Someone';
+    res.set({ 'content-type': 'text/event-stream', 'cache-control': 'no-store', connection: 'keep-alive', 'x-accel-buffering': 'no' });
+    res.flushHeaders();
+    res.write('retry: 3000\n\n');
+    live.set(res, { client, name });
+    broadcast('presence', presence());
+    req.on('close', () => { live.delete(res); broadcast('presence', presence()); });
+  });
+  // Rename this browser (x-client-id) on every open connection, then re-announce presence.
+  app.put('/api/live/name', (req, res) => {
+    const client = req.get('x-client-id'), name = cleanName(req.body?.name);
+    if (!client || !name) return res.status(400).json({ error: 'x-client-id header and a name are required' });
+    for (const c of live.values()) if (c.client === client) c.name = name;
+    broadcast('presence', presence());
+    res.json({ name });
+  });
+  // keep idle connections (and any proxy in front) from timing them out
+  const heartbeat = setInterval(() => { for (const res of live.keys()) res.write(': ping\n\n'); }, 20000);
+  heartbeat.unref();
+  // lets the launcher end open streams on shutdown
+  app.closeLive = () => { clearInterval(heartbeat); for (const res of live.keys()) res.end(); live.clear(); };
+  // names travel URL-encoded in headers (headers are ASCII-only)
+  const decodeHeader = v => { try { return v ? decodeURIComponent(v) : v; } catch { return v; } };
+  const surveyTitles = new Map();
+  const surveyTitle = async id => {
+    if (!surveyTitles.has(id)) surveyTitles.set(id, (await readJson(path.join(SURVEYS, id, 'spec.json'), {})).title || id);
+    return surveyTitles.get(id);
+  };
   const noCache = { etag: false, lastModified: false, setHeaders: res => res.set('cache-control', 'no-store') };
 
   app.use('/', express.static(path.join(ROOT, 'tools/viewer'), noCache));
@@ -134,6 +178,10 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
       return Object.fromEntries(ids.map(id => [id, all[id] || null]));
     });
     res.json(result);
+    broadcast('decision', {
+      survey: req.params.id, title: await surveyTitle(req.params.id), ids, decision: decision === undefined ? undefined : decision,
+      decisions: result, by: { client: req.get('x-client-id') || null, tab: req.get('x-client-tab') || null, name: cleanName(decodeHeader(req.get('x-client-name'))) || 'Someone' },
+    });
   });
 
   app.get('/api/surveys/:id/export.:fmt', async (req, res) => {

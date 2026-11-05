@@ -61,7 +61,9 @@
 </main>
 <script type="module">
 import { api, esc, progressBar, legend, viewUrl, $ } from './common.js';
+import { startLive, onDecision, liveToast, describeDecision } from './live.js';
 
+async function renderSurveys() {
 const surveys = await api('/api/surveys');
 $('#surveys').innerHTML = surveys.length ? surveys.map(s => s.generated ? `
   <a class="card survey" href="survey.html?id=${encodeURIComponent(s.id)}">
@@ -71,6 +73,10 @@ $('#surveys').innerHTML = surveys.length ? surveys.map(s => s.generated ? `
   </a>` : `
   <div class="card survey"><h3>${esc(s.title)}</h3><div class="meta">Not generated yet: <code>node tools/survey.mjs run ${esc(s.id)}</code></div></div>`).join('')
   : `<div class="card howto">No surveys yet. Create one:<br><code>node tools/survey.mjs new radius --preset radius</code><br><code>node tools/survey.mjs run radius</code><br>Presets: <code>node tools/survey.mjs presets</code></div>`;
+}
+await renderSurveys();
+startLive();
+onDecision((d, { mine }) => { renderSurveys(); if (!mine) liveToast(describeDecision(d)); });
 
 // ---------- Suggested Components ----------
 let comps = null, cat = 'All';
