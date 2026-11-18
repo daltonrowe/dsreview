@@ -17,6 +17,13 @@ fs.writeFileSync(path.join(compDir, 'home', 'report.json'), JSON.stringify({
   findings: [finding('typography:a#0', 'typography', 'high'), finding('color:b#0', 'color', 'medium')],
 }));
 
+// tiny screenshots so the per-finding download can cut crops
+import jpeg from 'jpeg-js';
+const shot = (w, h) => { const data = Buffer.alloc(w * h * 4, 255); return jpeg.encode({ width: w, height: h, data }, 90).data; };
+fs.writeFileSync(path.join(compDir, 'home', 'design.jpg'), shot(200, 120));
+fs.writeFileSync(path.join(compDir, 'home', 'live.jpg'), shot(200, 120));
+{ const r = JSON.parse(fs.readFileSync(path.join(compDir, 'home', 'report.json'), 'utf8')); r.design.shot = 'design.jpg'; r.live.shot = 'live.jpg'; r.design.width = r.live.width = 200; r.design.height = r.live.height = 120; fs.writeFileSync(path.join(compDir, 'home', 'report.json'), JSON.stringify(r)); }
+
 const auth = { authorization: 'Basic ' + Buffer.from('tester:secret').toString('base64') };
 let server, base;
 
@@ -134,4 +141,17 @@ test('live: presence counts distinct browsers and decisions are broadcast', asyn
   assert.equal(d.decisions['typography:a#0'].decision, 'ignore');
   assert.equal(d.by.name, 'Teal Fox');
   assert.equal(d.by.tab, 't1');
+});
+
+test('downloads one finding as a zip with a write-up and named screenshots', async () => {
+  const res = await fetch(`${base}/api/comparisons/home/findings/${encodeURIComponent('typography:a#0')}/download`, { headers: auth });
+  assert.equal(res.status, 200);
+  assert.equal(res.headers.get('content-type'), 'application/zip');
+  assert.match(res.headers.get('content-disposition'), /home-typography-typography-a-0\.zip/);
+  const buf = Buffer.from(await res.arrayBuffer());
+  assert.equal(buf.readUInt32LE(0), 0x04034b50, 'zip local header');
+  // names are stored uncompressed in the central directory
+  const names = [...buf.toString('latin1').matchAll(/home-typography-typography-a-0[\w.-]*\.(?:md|png)/g)].map(m => m[0]);
+  for (const n of ['home-typography-typography-a-0.md', 'home-typography-typography-a-0-design.png', 'home-typography-typography-a-0-live.png', 'home-typography-typography-a-0-design-context.png']) assert.ok(names.includes(n), n);
+  assert.equal((await fetch(`${base}/api/comparisons/home/findings/nope/download`, { headers: auth })).status, 404);
 });

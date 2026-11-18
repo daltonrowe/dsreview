@@ -31,6 +31,13 @@ Reports land in `comparisons/<id>/` and are reviewed in the viewer (`npm start` 
   Stored in `comparisons/<id>/decisions.json` locally (deployed: `DATA_DIR/compare/<id>.json`; pull with
   `npm run pull-decisions`). Finding ids: `<category>:<kind>@<x/16>,<y/16>` (design position).
 
+- **Grid**: tiles packed together over 2+ rows and columns (masonry `columns` or justified `rows`);
+  compared on where it starts/ends, columns, ragged bottom, the gap after it.
+- **Whole page**: captures are the full page height (footer included) via a very tall viewport, up to 16000px.
+- **Review** (`reviews.json`): a smaller model (Claude Haiku 5.5) explains each finding from its crops,
+  with a verdict real/noise/unsure. Needs `ANTHROPIC_API_KEY` (or `.env`); `run` does it when available.
+- **Meta-findings** (`groups.json`): YOUR job when asked to group or regroup. See "Grouping" below.
+
 ## Workflow
 ```bash
 node tools/compare.mjs list                         # configured pairs + report status
@@ -38,6 +45,10 @@ node tools/compare.mjs run                          # all pairs, light + dark (~
 node tools/compare.mjs show home --severity medium  # findings as text; --category color,size --limit N
 node tools/compare.mjs add show-page --label "Show page" --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
 node tools/compare.mjs live /free-photos/dog --full # screenshot a live page → screenshots/
+node tools/compare.mjs review home                  # smaller-model explanations (needs ANTHROPIC_API_KEY)
+node tools/compare.mjs findings home                # ids, for grouping
+node tools/compare.mjs crop home <findingId>        # close crops → screenshots/crops/
+node tools/compare.mjs group home groups.json       # install meta-findings
 ```
 Then Read `comparisons/<id>/design.jpg` and `live.jpg` (same width, page coordinates) to see both sides.
 
@@ -47,6 +58,20 @@ as missing/extra. Look at the live page first (`compare.mjs live <path>`), then 
 `node tools/dc.mjs list` / `inspect`. Known: the live sign-up/log-in pages use the **Original** left
 panel; the live home shows **Sign Up** (design: **Log In**) and the **Vectors** search scope;
 `/signups/join-pro` on live is still the old pricing page (the redesign isn't there yet).
+
+## Grouping (meta-findings)
+When asked to group findings, or after a `run` warns that grouped findings no longer exist:
+1. `node tools/compare.mjs findings <id>`: every finding with its id, positions and measurements.
+2. Look at `comparisons/<id>/design.jpg` / `live.jpg`, and `node tools/compare.mjs crop <id> <findingId>`
+   for close crops (design magenta, live blue, partner grey dashed, guides green) in screenshots/crops/.
+3. Group by one cause a designer would recognise (a section that moved and the gaps it changed; one
+   palette shift across many colours; a component that differs; a grid that ends elsewhere). Title names
+   the cause with the key number; summary says what the elements actually are and why they belong
+   together; severity by how much a designer would care; `hint` for "likely noise" (analysis artifacts)
+   or "content difference" (copy, sample photos). Every finding in exactly one group.
+4. Write `{ "by": "claude", "groups": [ { "id", "title", "summary", "severity", "hint"?, "findings": [ids] } ] }`
+   to a file and install it: `node tools/compare.mjs group <id> <file>` (fix what it reports).
+Light and dark are separate comparisons (`<id>` and `<id>--dark`) and need their own groups.
 
 ## Reading results
 - Check what the analysis saw: in the viewer, turn on **Elements** (`e`), or read

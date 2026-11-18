@@ -38,26 +38,34 @@ export async function openLive(ctx, base, p, o = {}, log = []) {
   return page;
 }
 
-// Make the whole page (up to maxHeight) fit in the viewport so nothing scrolls: page coordinates
-// then equal viewport coordinates, fixed/sticky bars sit where they belong, and every element can
-// be hovered without scrolling. Handles pages that scroll inside an inner container (the design canvas).
-export async function fitViewport(page, maxHeight) {
+// Make the whole page fit in the viewport: a very tall viewport instead of the browser's full-page
+// screenshot, which mis-draws sticky and fixed elements. Page coordinates then equal viewport
+// coordinates and sticky bars sit where they belong. Handles pages that scroll inside an inner
+// container (the design canvas). Grows in steps until the height stops changing, because a taller
+// viewport loads lazy content that makes the page taller. maxHeight caps it (Chromium can't paint a
+// screenshot taller than ~16k px).
+export const MAX_SHOT_HEIGHT = 16000;
+export async function fitViewport(page, maxHeight = MAX_SHOT_HEIGHT) {
   await page.addStyleTag({ content: FREEZE_CSS }).catch(() => {});
-  const want = await page.evaluate(() => {
-    const doc = document.documentElement.scrollHeight;
-    if (doc > innerHeight + 4) return doc;
-    let extra = 0;
-    for (const el of document.querySelectorAll('body *')) {
-      const d = el.scrollHeight - el.clientHeight;
-      if (d > extra && el.clientHeight > innerHeight * 0.5 && /(auto|scroll)/.test(getComputedStyle(el).overflowY)) extra = d;
-    }
-    return innerHeight + extra;
-  });
-  const vp = page.viewportSize();
-  const h = Math.max(vp.height, Math.min(want, maxHeight));
-  if (h !== vp.height) await page.setViewportSize({ width: vp.width, height: h });
-  // lazy images and infinite lists load as they come into view
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await settle(page);
+  const cap = Math.min(maxHeight, MAX_SHOT_HEIGHT);
+  let h = page.viewportSize().height;
+  for (let round = 0; round < 6; round++) {
+    const want = await page.evaluate(() => {
+      const doc = Math.max(document.documentElement.scrollHeight, document.body?.scrollHeight || 0);
+      if (doc > innerHeight + 4) return doc;
+      let extra = 0;
+      for (const el of document.querySelectorAll('body *')) {
+        const d = el.scrollHeight - el.clientHeight;
+        if (d > extra && el.clientHeight > innerHeight * 0.5 && /(auto|scroll)/.test(getComputedStyle(el).overflowY)) extra = d;
+      }
+      return innerHeight + extra;
+    });
+    const next = Math.min(Math.max(h, want), cap);
+    if (next <= h + 4) break; // stable (or a 100vh layout that only grows with the viewport)
+    h = next;
+    await page.setViewportSize({ width: page.viewportSize().width, height: h });
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await settle(page);
+  }
   return h;
 }

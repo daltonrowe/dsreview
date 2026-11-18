@@ -30,6 +30,9 @@
   .fh .cat { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; flex: none; }
   .fh .txt { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
   .fh .sec { flex: none; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11.5px; color: var(--faint); }
+  .why { font-size: 12.5px; line-height: 1.45; color: var(--text); }
+  .verdict { display: inline-block; font-size: 10.5px; font-weight: 650; text-transform: uppercase; letter-spacing: .04em; padding: 0 6px; border-radius: 999px; margin-right: 4px; vertical-align: 1px; }
+  .verdict.real { background: var(--keep-bg); color: var(--keep); } .verdict.noise { background: var(--ignore-bg); color: var(--ignore); } .verdict.unsure { background: var(--panel-2); color: var(--muted); }
   .crops { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .crop { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
   .crop .lab { font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
@@ -56,10 +59,38 @@
   .notetext { font-size: 12.5px; color: var(--muted); white-space: pre-wrap; }
   .notetext::before { content: '✎ '; }
 
+  /* meta-findings */
+  .g { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--line-2); border-radius: var(--radius); padding: 10px 12px; cursor: pointer; display: flex; flex-direction: column; gap: 8px; scroll-margin: 10px; }
+  .g.high { border-left-color: var(--high); } .g.medium { border-left-color: var(--medium); } .g.low { border-left-color: var(--low); }
+  .g:hover { border-color: var(--line-2); }
+  .g.sel { border-color: var(--focus); box-shadow: 0 0 0 1px var(--focus); }
+  .g.decided:not(.sel) { opacity: .62; }
+  .g .gh { display: flex; align-items: baseline; gap: 6px; }
+  .g .gh .kind { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; flex: none; }
+  .g .gh .title { flex: 1; font-weight: 650; }
+  .g .gh .n { flex: none; font-size: 12px; color: var(--faint); }
+  .hint-tag { display: inline-block; font-size: 10.5px; font-weight: 600; color: var(--muted); background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 0 6px; vertical-align: 2px; }
+  .g .summary { font-size: 13px; color: var(--text); line-height: 1.45; }
+  .g .mixed { font-size: 11.5px; color: var(--muted); }
+  .g .members { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--line); padding-top: 6px; }
+  .g .members button.toggle { align-self: flex-start; border: 0; background: none; color: var(--muted); font-size: 12px; cursor: pointer; padding: 0; }
+  .g .m { display: grid; grid-template-columns: 10px 76px 1fr auto; gap: 6px; align-items: baseline; font-size: 12px; padding: 3px 4px; border-radius: 5px; cursor: pointer; }
+  .g .m:hover { background: var(--panel-2); }
+  .g .m.sel { background: color-mix(in srgb, var(--focus) 14%, transparent); }
+  .g .m .c { color: var(--muted); text-transform: uppercase; font-size: 10.5px; letter-spacing: .04em; }
+  .g .m .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .g .m .d { color: var(--faint); font-size: 11px; }
+  .listhead { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; margin: 8px 2px 0; }
+
   /* stage */
-  #stage { overflow: auto; position: relative; background: var(--panel-2); }
-  .panes { display: flex; gap: 16px; padding: 12px 16px 40px; align-items: flex-start; width: max-content; min-width: 100%; }
-  .pane { display: flex; flex-direction: column; gap: 6px; }
+  #stage { overflow: hidden; position: relative; background: var(--panel-2); min-height: 0; }
+  /* each pane is its own viewport, so zooming in keeps design and live side by side; they scroll together */
+  .panes { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 16px; padding: 12px 16px 12px; height: 100%; }
+  .pane { display: flex; flex-direction: column; gap: 6px; min-width: 0; min-height: 0; }
+  .view { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+  .view .canvas { margin-bottom: 40px; }
+  #stage.panning, #stage.panning * { cursor: grab !important; }
+  #stage.dragging, #stage.dragging * { cursor: grabbing !important; user-select: none; }
   .pane h4 { margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; display: flex; gap: 8px; align-items: center; }
   .pane h4 a { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 420px; }
   .pane.d h4 { color: var(--design); } .pane.l h4 { color: var(--live); } .pane.o h4 { color: var(--text); }
@@ -82,6 +113,7 @@
   .elems i.unmatched { box-shadow: inset 0 0 0 999px rgba(225, 29, 72, .12); }
   .boxes b.rel { border-style: dashed; border-width: 2px; pointer-events: none; }
   .boxes b.rel.d { border-color: var(--design); } .boxes b.rel.l { border-color: var(--live); }
+  .boxes b.sel.member::after { content: none; }
   .boxes b.sel::after { content: attr(data-lab); position: absolute; left: -2px; bottom: 100%; margin-bottom: 3px; font: 600 10.5px/1.4 var(--sans); color: #fff; padding: 0 5px; border-radius: 4px; white-space: nowrap; }
   .boxes b.sel.d::after { background: var(--design); } .boxes b.sel.l::after { background: var(--live); top: 100%; bottom: auto; margin: 3px 0 0; }
   /* Find: a big bouncing arrow pointing at the selected difference */
@@ -111,6 +143,7 @@
   <a class="btn" id="export" download title="This comparison as Markdown (JSON: same URL with .json)">Export</a>
 </div>
 <div class="toolbar">
+  <div class="seg" id="view" title="Groups: meta-findings Claude made by judgement, one decision each"></div>
   <div class="seg cats" id="cats"></div>
   <div class="seg" id="sev" title="Minimum severity"></div>
   <div class="seg" id="status"></div>
@@ -141,7 +174,7 @@ const st = {
   id: params.get('id'), report: null, decisions: {},
   cats: new Set(), minSev: store.get('minSev', 1), status: store.get('status', 'all'), q: '',
   mode: store.get('mode', 'side'), mix: 50, zoom: Number(store.get('zoomLevel', 1)) || 1,
-  sel: params.get('f'), noteOpen: null, find: null,
+  sel: params.get('f'), noteOpen: null, find: null, view: store.get('view', 'groups'), open: new Set(),
 };
 
 // ---------- data ----------
@@ -162,7 +195,7 @@ if (!st.id) { $('#list').innerHTML = `<div class="empty">No comparison has been 
 
 async function load() {
   const r = await api(`/api/comparisons/${encodeURIComponent(st.id)}`);
-  st.report = r; st.decisions = r.decisions || {};
+  st.report = r; st.decisions = r.decisions || {}; st._byId = null;
   document.title = `${r.label} · Design vs Live`;
   $('#export').href = `/api/comparisons/${encodeURIComponent(st.id)}/export.md`;
   $('#links').innerHTML = `<a class="btn small" href="${esc(r.design.view)}" target="_blank" title="${esc(r.design.page)} ${esc(JSON.stringify({ props: r.design.props, state: r.design.state }))}">Design page ↗</a><a class="btn small" href="${esc(r.live.url)}" target="_blank" title="${esc(r.live.url)}">Live page ↗</a><span class="hint" title="Re-run: node tools/compare.mjs run ${esc(r.id)}">captured ${esc(new Date(r.generatedAt).toLocaleString())}</span>`;
@@ -184,14 +217,47 @@ function visible() {
     if (st.status === 'todo' && d) return false;
     if (st.status === 'done' && !d) return false;
     if (st.status !== 'all' && st.status !== 'todo' && st.status !== 'done' && d !== st.status) return false;
-    if (q && !`${f.text} ${f.section || ''} ${f.category} ${f.props.map(p => `${p.prop} ${p.design} ${p.live}`).join(' ')} ${st.decisions[f.id]?.note || ''}`.toLowerCase().includes(q)) return false;
+    if (q && !`${f.text} ${f.section || ''} ${f.category} ${f.props.map(p => `${p.prop} ${p.design} ${p.live}`).join(' ')} ${st.decisions[f.id]?.note || ''} ${f.review?.explanation || ''} ${f.review?.verdict || ''}`.toLowerCase().includes(q)) return false;
     return true;
   });
 }
 
 // ---------- toolbar ----------
+// ---------- meta-findings (groups) ----------
+const byId = () => (st._byId ||= new Map(st.report.findings.map(f => [f.id, f])));
+const groups = () => (st.report.groups?.groups || []).map(g => ({ ...g, members: g.findings.map(i => byId().get(i)).filter(Boolean) })).filter(g => g.members.length);
+const groupOf = gid => groups().find(g => g.id === gid);
+const isGroupSel = id => typeof id === 'string' && id.startsWith('g:');
+// findings the current selection is about: a group's members, or one finding
+function selFindings() {
+  if (!st.sel) return [];
+  if (isGroupSel(st.sel)) return groupOf(st.sel.slice(2))?.members || [];
+  const f = byId().get(st.sel);
+  return f ? [f] : [];
+}
+const groupDecision = g => { const ds = new Set(g.members.map(f => decisionOf(f) || '')); return ds.size === 1 ? [...ds][0] || null : 'mixed'; };
+const union = boxes => { if (!boxes.length) return null; const x = Math.min(...boxes.map(b => b.x)), y = Math.min(...boxes.map(b => b.y)); return { x, y, w: Math.max(...boxes.map(b => b.x + b.w)) - x, h: Math.max(...boxes.map(b => b.y + b.h)) - y }; };
+// what the list shows: in Groups view, groups with a visible member, then the visible ungrouped findings
+function items() {
+  const vis = visible(), visIds = new Set(vis.map(f => f.id));
+  if (st.view !== 'groups' || !groups().length) return vis.map(f => ({ type: 'f', id: f.id, f }));
+  const grouped = new Set(groups().flatMap(g => g.members.map(f => f.id)));
+  const gs = groups().filter(g => g.members.some(f => visIds.has(f.id))).filter(g => {
+    // the status filter applies to the group as a whole
+    const d = groupDecision(g);
+    if (st.status === 'todo') return d === null || d === 'mixed';
+    if (st.status === 'done') return d && d !== 'mixed';
+    if (st.status !== 'all') return d === st.status;
+    return true;
+  });
+  return [...gs.map(g => ({ type: 'g', id: `g:${g.id}`, g })), ...vis.filter(f => !grouped.has(f.id)).map(f => ({ type: 'f', id: f.id, f }))];
+}
+
 function renderToolbar() {
   const all = st.report.findings;
+  const ng = groups().length;
+  $('#view').hidden = !ng;
+  $('#view').innerHTML = [['groups', `Groups ${ng}`], ['findings', `Findings ${all.length}`]].map(([v, l]) => `<button data-v="${v}" aria-pressed="${st.view === v}">${l}</button>`).join('');
   $('#cats').innerHTML = CATS.filter(c => all.some(f => f.category === c)).map(c => `<button data-c="${c}" aria-pressed="${st.cats.has(c)}">${c}<span class="n">${all.filter(f => f.category === c).length}</span></button>`).join('');
   $('#sev').innerHTML = [[1, 'All'], [2, 'Medium+'], [3, 'High']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${st.minSev === v}">${l}</button>`).join('');
   $('#status').innerHTML = [['all', 'All'], ['todo', 'To do'], ['done', 'Decided'], ...DECISIONS.map(d => [d, LABELS[d]])].map(([v, l]) => `<button data-v="${v}" class="${DECISIONS.includes(v) ? v : ''}" aria-pressed="${st.status === v}" title="${esc(TITLES[v] || '')}">${l}</button>`).join('');
@@ -203,6 +269,7 @@ function renderToolbar() {
   const p = progress();
   $('#prog').innerHTML = progressBar(p) + legend(p);
 }
+$('#view').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.view = b.dataset.v; store.set('view', st.view); refresh(); };
 $('#cats').onclick = e => { const b = e.target.closest('button'); if (!b) return; const c = b.dataset.c; if (e.metaKey || e.ctrlKey || e.shiftKey) st.cats.has(c) ? st.cats.delete(c) : st.cats.add(c); else st.cats = st.cats.has(c) && st.cats.size === 1 ? new Set() : new Set([c]); refresh(); };
 $('#sev').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.minSev = Number(b.dataset.v); store.set('minSev', st.minSev); refresh(); };
 $('#status').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.status = b.dataset.v; store.set('status', st.status); refresh(); };
@@ -260,6 +327,7 @@ function cardHtml(f) {
   const showText = f.liveText ? `<div class="hint">live text: “${esc(f.liveText)}”</div>` : '';
   return `<div class="f${f.id === st.sel ? ' sel' : ''}${d ? ' decided' : ''}" data-id="${esc(f.id)}">
     <div class="fh"><i class="dot ${f.severity}" title="${f.severity}"></i><span class="cat">${f.category}</span><span class="txt" title="${esc(f.text)}">${esc(f.text)}</span>${f.section ? `<span class="sec" title="${esc(f.section)}">${esc(f.section)}</span>` : ''}</div>
+    ${f.review?.explanation ? `<div class="why"><span class="verdict ${f.review.verdict}" title="${esc(`${f.review.model}, ${f.review.confidence} confidence`)}">${f.review.verdict === 'noise' ? 'Looks like noise' : f.review.verdict === 'real' ? 'Real' : 'Unsure'}</span> ${esc(f.review.explanation)}</div>` : ''}
     <div class="crops">
       <div class="crop d"><span class="lab">Design${f.design ? '' : ' <em>same spot</em>'}</span>${crop('d', f, 'design.jpg', dBox, !f.design)}</div>
       <div class="crop l"><span class="lab">Live${f.live ? '' : ' <em>same spot</em>'}</span>${crop('l', f, 'live.jpg', lBox, !f.live)}</div>
@@ -268,15 +336,39 @@ function cardHtml(f) {
     ${showText}
     <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-d="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
       <button class="btn small" data-act="find" title="Point at it on the screenshots (f)">➜ Find</button>
-      <button class="btn small" data-act="note" title="Add a note (n)">✎</button><span class="spacer"></span>
+      <button class="btn small" data-act="note" title="Add a note (n)">✎</button>
+      <a class="btn small" href="/api/comparisons/${encodeURIComponent(st.id)}/findings/${encodeURIComponent(f.id)}/download" download title="Download a zip: write-up (.md) and named screenshots" aria-label="Download"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.25 1.5h1.5v7.19l2.47-2.47 1.06 1.06L8 11.56 3.72 7.28l1.06-1.06 2.47 2.47zM2 13h12v1.5H2z"/></svg></a><span class="spacer"></span>
       ${f.design?.where ? `<a href="${esc(viewUrl({ ...st.report.design, width: st.report.design.width }, f.design.where))}" target="_blank" title="Open the design page with this element marked">design ↗</a>` : ''}
       ${f.design?.source ? `<a href="${esc(editorUrl(root, f.design.source.file, f.design.source.line, f.design.source.col))}" title="Open the source in VS Code">${esc(f.design.source.file.replace(/\.dc\.html$/, ''))}:${f.design.source.line}</a>` : ''}</div>
     ${st.noteOpen === f.id ? `<textarea class="note" placeholder="Note (saved when you leave the box)">${esc(note || '')}</textarea>` : note ? `<div class="notetext">${esc(note)}</div>` : ''}
   </div>`;
 }
+function groupHtml(g) {
+  const d = groupDecision(g), open = st.open.has(g.id);
+  const dBoxes = g.members.filter(f => f.design).map(f => f.design.box), lBoxes = g.members.filter(f => f.live).map(f => f.live.box);
+  const pseudo = { design: { box: union(dBoxes) || union(lBoxes) }, live: { box: union(lBoxes) || union(dBoxes) } };
+  const sel = st.sel === `g:${g.id}`;
+  const cats = [...new Set(g.members.map(f => f.category))];
+  const shown = open ? g.members : g.members.slice(0, 4);
+  return `<div class="g ${g.severity}${sel ? ' sel' : ''}${d && d !== 'mixed' ? ' decided' : ''}" data-g="${esc(g.id)}">
+    <div class="gh"><span class="kind">Group</span><span class="title">${esc(g.title)}${g.hint ? ` <span class="hint-tag">${esc(g.hint)}</span>` : ''}</span><span class="n">${g.members.length} finding${g.members.length === 1 ? '' : 's'} · ${esc(cats.join(', '))}</span></div>
+    ${g.summary ? `<div class="summary">${esc(g.summary)}</div>` : ''}
+    <div class="crops">
+      <div class="crop d"><span class="lab">Design</span>${crop('d', pseudo, 'design.jpg', pseudo.design.box, !dBoxes.length)}</div>
+      <div class="crop l"><span class="lab">Live</span>${crop('l', pseudo, 'live.jpg', pseudo.live.box, !lBoxes.length)}</div>
+    </div>
+    <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-gd="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} — all ${g.members.length} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
+      ${d === 'mixed' ? '<span class="mixed">mixed decisions</span>' : ''}
+      <button class="btn small" data-act="gfind" title="Point at it on the screenshots (f)">➜ Find</button></div>
+    <div class="members">${shown.map(f => { const fd = decisionOf(f); return `<div class="m${st.sel === f.id ? ' sel' : ''}" data-id="${esc(f.id)}" title="${esc(f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('\n'))}"><i class="dot ${f.severity}"></i><span class="c">${f.category}</span><span class="t">${esc(f.text)} · ${esc(f.props[0] ? `${f.props[0].prop}: ${f.props[0].design} → ${f.props[0].live}` : '')}</span><span class="d">${fd ? LABELS[fd] : ''}</span></div>`; }).join('')}
+      ${g.members.length > 4 ? `<button class="toggle" data-act="gopen">${open ? 'Show fewer' : `Show all ${g.members.length}`}</button>` : ''}</div>
+  </div>`;
+}
 function renderList() {
-  const list = visible();
-  $('#list').innerHTML = list.length ? list.map(cardHtml).join('') : `<div class="empty">Nothing matches these filters.</div>`;
+  const list = items();
+  const firstUngrouped = list.findIndex(it => it.type === 'f');
+  const html = list.map((it, i) => (i === firstUngrouped && st.view === 'groups' && groups().length ? `<div class="listhead">Not in a group</div>` : '') + (it.type === 'g' ? groupHtml(it.g) : cardHtml(it.f)));
+  $('#list').innerHTML = list.length ? html.join('') : `<div class="empty">Nothing matches these filters.</div>`;
   if (st.noteOpen) $(`.f[data-id="${CSS.escape(st.noteOpen)}"] textarea`)?.focus();
 }
 function renderCard(id) {
@@ -284,6 +376,18 @@ function renderCard(id) {
   if (f && el) el.outerHTML = cardHtml(f);
 }
 $('#list').addEventListener('click', e => {
+  const gc = e.target.closest('.g');
+  if (gc) {
+    const g = groupOf(gc.dataset.g);
+    const gb = e.target.closest('button[data-gd]');
+    if (gb) { decide(g.members.map(f => f.id), groupDecision(g) === gb.dataset.gd ? null : gb.dataset.gd, `g:${g.id}`); return; }
+    if (e.target.closest('[data-act=gopen]')) { st.open.has(g.id) ? st.open.delete(g.id) : st.open.add(g.id); renderList(); return; }
+    if (e.target.closest('[data-act=gfind]')) { find(`g:${g.id}`); return; }
+    const m = e.target.closest('.m');
+    if (m) { select(m.dataset.id, { scrollList: false }); return; }
+    select(`g:${g.id}`, { scrollList: false });
+    return;
+  }
   const card = e.target.closest('.f'); if (!card) return;
   const id = card.dataset.id;
   const b = e.target.closest('button[data-d]');
@@ -305,13 +409,14 @@ async function save(ids, body) {
   const res = await api(`/api/comparisons/${encodeURIComponent(st.id)}/decisions`, { method: 'PUT', body: { ids, ...body } });
   for (const [id, v] of Object.entries(res)) { if (v) st.decisions[id] = v; else delete st.decisions[id]; }
 }
-async function decide(ids, decision) {
-  const before = visible().map(f => f.id);
+// item: the list item being decided (a finding id or "g:<group>"), so selection moves on from it
+async function decide(ids, decision, item = ids.length === 1 ? ids[0] : null) {
+  const before = items().map(it => it.id);
   await save(ids, { decision });
-  // keep moving: when the decided card drops out of the current filter, select the next one
-  if (ids.length === 1 && ids[0] === st.sel) {
-    const still = visible().some(f => f.id === st.sel);
-    if (!still || decision) { const i = before.indexOf(st.sel); const after = visible().map(f => f.id); st.sel = after.find(id => before.indexOf(id) > i) || after[after.length - 1] || null; }
+  // keep moving: after deciding the selected item, select the next one
+  if (item && item === st.sel && decision) {
+    const i = before.indexOf(st.sel); const after = items().map(it => it.id);
+    st.sel = after.find(id => before.indexOf(id) > i) || after.find(id => id !== item) || null;
   }
   refresh();
   if (st.sel) select(st.sel);
@@ -322,8 +427,20 @@ let scale = 1;
 // Zoom: st.zoom multiplies the fitted scale (1 = both screenshots fit the stage).
 const ZSTEP = 1.6, ZMIN = 0.5, ZMAX = 12;
 function fitScale() {
-  const nPanes = st.mode === 'side' ? 2 : 1, r = st.report, avail = $('#stage').clientWidth - 32 - (nPanes - 1) * 16;
+  const nPanes = st.mode === 'side' ? 2 : 1, r = st.report, avail = $('#stage').clientWidth - 32 - (nPanes - 1) * 16 - 16;
   return Math.min(1, avail / nPanes / Math.max(r.design.width, r.live.width));
+}
+// The views (one per pane). Scroll positions are kept equal, so both show the same part of the page.
+const views = () => $$('.view');
+let syncing = false;
+function syncFrom(v) {
+  if (syncing) return;
+  syncing = true;
+  for (const o of views()) if (o !== v) { o.scrollLeft = v.scrollLeft; o.scrollTop = v.scrollTop; }
+  syncing = false;
+}
+function scrollViews(left, top, smooth) {
+  for (const v of views()) v.scrollTo({ left: Math.max(0, left), top: Math.max(0, top), behavior: smooth ? 'smooth' : 'instant' });
 }
 function stageScale() { return fitScale() * st.zoom; }
 function renderZoom() {
@@ -332,35 +449,36 @@ function renderZoom() {
 }
 function setZoom(z) { st.zoom = Math.max(ZMIN, Math.min(ZMAX, z)); store.set('zoomLevel', st.zoom); renderZoom(); renderStage(); }
 // Zoom by `factor`, keeping the screenshot point under (clientX, clientY) where it is.
+// Each view zooms around the same page point, so design and live stay comparable side by side.
 function zoomAt(factor, clientX, clientY) {
-  const stage = $('#stage'), r = stage.getBoundingClientRect();
-  const canvas = $('.canvas'), cr = canvas.getBoundingClientRect();
-  const before = scale;
-  // the point in the first canvas' screenshot coordinates (stays put; panes share the scale)
-  const ox = stage.scrollLeft + (cr.left - r.left), oy = stage.scrollTop + (cr.top - r.top);
-  const px = (stage.scrollLeft + clientX - r.left - ox) / before, py = (stage.scrollTop + clientY - r.top - oy) / before;
+  // the view under the pointer (else the first) gives the page point and where it sits on screen
+  const v = views().find(x => { const r = x.getBoundingClientRect(); return clientX >= r.left && clientX <= r.right && clientY >= r.top && clientY <= r.bottom; }) || views()[0];
+  if (!v) return;
+  const r = v.getBoundingClientRect(), before = scale;
+  const sx = clientX - r.left, sy = clientY - r.top;
+  const px = (v.scrollLeft + sx) / before, py = (v.scrollTop + sy) / before;
   setZoom(st.zoom * factor);
-  const c2 = $('.canvas').getBoundingClientRect();
-  const ox2 = stage.scrollLeft + (c2.left - r.left), oy2 = stage.scrollTop + (c2.top - r.top);
-  stage.scrollLeft = ox2 + px * scale - (clientX - r.left);
-  stage.scrollTop = oy2 + py * scale - (clientY - r.top);
+  scrollViews(px * scale - sx, py * scale - sy);
 }
 function renderStage() {
+  const keep = views()[0] && { left: views()[0].scrollLeft / scale, top: views()[0].scrollTop / scale };
   const r = st.report, base = `/comparisons/${encodeURIComponent(r.id)}/`;
   const side = st.mode === 'side';
   scale = stageScale();
   const canvas = (cls, w, h, imgs) => `<div class="canvas ${cls}" style="width:${w * scale}px;height:${h * scale}px">${imgs}<div class="boxes"></div></div>`;
   if (side) {
     $('#stage').innerHTML = `<div class="panes">
-      <div class="pane d"><h4>Design <a href="${esc(r.design.view)}" target="_blank">${esc(r.design.page)}</a></h4>${canvas('dc', r.design.width, r.design.height, `<img src="${base}design.jpg" alt="design">`)}</div>
-      <div class="pane l"><h4>Live <a href="${esc(r.live.url)}" target="_blank">${esc(r.live.path)}</a></h4>${canvas('lc', r.live.width, r.live.height, `<img src="${base}live.jpg" alt="live">`)}</div>
+      <div class="pane d"><h4>Design <a href="${esc(r.design.view)}" target="_blank">${esc(r.design.page)}</a></h4><div class="view">${canvas('dc', r.design.width, r.design.height, `<img src="${base}design.jpg" alt="design">`)}</div></div>
+      <div class="pane l"><h4>Live <a href="${esc(r.live.url)}" target="_blank">${esc(r.live.path)}</a></h4><div class="view">${canvas('lc', r.live.width, r.live.height, `<img src="${base}live.jpg" alt="live">`)}</div></div>
     </div>`;
   } else {
     const h = Math.max(r.design.height, r.live.height);
-    $('#stage').innerHTML = `<div class="panes"><div class="pane o"><h4><span style="color:var(--design)">Design</span> + <span style="color:var(--live)">Live</span> <span class="hint">${st.mode === 'difference' ? 'identical pixels are black' : st.mode === 'swipe' ? 'live to the right of the line' : 'slider sets live opacity'}</span></h4>${canvas(`oc ${st.mode}`, Math.max(r.design.width, r.live.width), h, `<img src="${base}design.jpg" alt="design"><img class="over" src="${base}live.jpg" alt="live">${st.mode === 'swipe' ? '<div class="swipe-line"></div>' : ''}`)}</div></div>`;
+    $('#stage').innerHTML = `<div class="panes"><div class="pane o"><h4><span style="color:var(--design)">Design</span> + <span style="color:var(--live)">Live</span> <span class="hint">${st.mode === 'difference' ? 'identical pixels are black' : st.mode === 'swipe' ? 'live to the right of the line' : 'slider sets live opacity'}</span></h4><div class="view">${canvas(`oc ${st.mode}`, Math.max(r.design.width, r.live.width), h, `<img src="${base}design.jpg" alt="design"><img class="over" src="${base}live.jpg" alt="live">${st.mode === 'swipe' ? '<div class="swipe-line"></div>' : ''}`)}</div></div></div>`;
     $('#mix').value = st.mix;
     applyMix();
   }
+  for (const v of views()) v.addEventListener('scroll', () => syncFrom(v), { passive: true });
+  if (keep) scrollViews(keep.left * scale, keep.top * scale);
   drawBoxes();
   drawElems();
 }
@@ -372,13 +490,14 @@ function applyMix() {
 }
 function boxEl(f, side, box) {
   const lab = `${f.category}: ${f.text}`.slice(0, 60);
-  return `<b class="${side}${f.id === st.sel ? ' sel' : ''}" data-id="${esc(f.id)}" data-lab="${esc(lab)}" title="${esc(lab)}" style="left:${box.x * scale - 2}px;top:${box.y * scale - 2}px;width:${Math.max(box.w * scale, 2) + 4}px;height:${Math.max(box.h * scale, 2) + 4}px"></b>`;
+  const on = f.id === st.sel || (isGroupSel(st.sel) && selFindings().includes(f));
+  return `<b class="${side}${on ? ' sel' : ''}${on && isGroupSel(st.sel) ? ' member' : ''}" data-id="${esc(f.id)}" data-lab="${esc(lab)}" title="${esc(lab)}" style="left:${box.x * scale - 2}px;top:${box.y * scale - 2}px;width:${Math.max(box.w * scale, 2) + 4}px;height:${Math.max(box.h * scale, 2) + 4}px"></b>`;
 }
 function drawBoxes() {
   // a selected finding is shown alone; with nothing selected (Esc), every finding shown is outlined to pick from
-  const sel = st.sel && st.report.findings.find(f => f.id === st.sel);
-  const list = sel ? [sel] : visible();
-  $('#boxHint').textContent = sel ? 'Esc shows every box' : 'Click a box to select its finding';
+  const sel = selFindings();
+  const list = sel.length ? sel : visible();
+  $('#boxHint').textContent = sel.length ? 'Esc shows every box' : 'Click a box to select its finding';
   if (st.mode === 'side') {
     $('.canvas.dc .boxes').innerHTML = list.filter(f => f.design).map(f => boxEl(f, 'd', f.design.box)).join('');
     $('.canvas.lc .boxes').innerHTML = list.filter(f => f.live).map(f => boxEl(f, 'l', f.live.box)).join('');
@@ -406,7 +525,7 @@ $('#elems').onchange = e => { showElems = e.target.checked; drawElems(); };
 
 function drawGuides() {
   $$('.canvas .guide, .boxes b.rel').forEach(x => x.remove());
-  const f = st.sel && st.report.findings.find(x => x.id === st.sel);
+  const f = !isGroupSel(st.sel) && st.sel && byId().get(st.sel);
   if (!f) return;
   const rel = (sel, side, key) => { const layer = $(sel); if (!layer) return; for (const r of f.related || []) if (r[key]) layer.insertAdjacentHTML('beforeend', `<b class="rel ${side}" title="${esc(r.text || '')}" style="left:${r[key].x * scale - 2}px;top:${r[key].y * scale - 2}px;width:${r[key].w * scale + 4}px;height:${r[key].h * scale + 4}px"></b>`); };
   const lines = (sel, vals) => { const c = $(sel); if (!c || !f.guide) return; for (const v of vals) c.insertAdjacentHTML('beforeend', f.guide.axis === 'y' ? `<u class="guide h" style="top:${v * scale}px"></u>` : `<u class="guide v" style="left:${v * scale}px"></u>`); };
@@ -430,8 +549,10 @@ function arrowEl(side, box) {
 }
 function drawArrows() {
   $$('.find-arrow').forEach(a => a.remove());
-  const f = st.find && st.find === st.sel && st.report.findings.find(x => x.id === st.find);
-  if (!f) return;
+  if (!st.find || st.find !== st.sel) return;
+  const fs = selFindings();
+  const f = fs.length === 1 ? fs[0] : { design: { box: union(fs.filter(x => x.design).map(x => x.design.box)) }, live: { box: union(fs.filter(x => x.live).map(x => x.live.box)) } };
+  if (!f.design?.box && !f.live?.box) return;
   const put = (sel, side, box) => { const layer = $(sel); if (layer && box) layer.insertAdjacentHTML('beforeend', arrowEl(side, box)); };
   if (st.mode === 'side') { put('.canvas.dc .boxes', 'd', f.design?.box); put('.canvas.lc .boxes', 'l', f.live?.box); }
   else { put('.canvas.oc .boxes', 'd', f.design?.box); put('.canvas.oc .boxes', 'l', f.live?.box); }
@@ -445,7 +566,26 @@ $('#stage').addEventListener('click', e => {
   if (zHeld) { e.preventDefault(); e.stopPropagation(); zoomAt(e.metaKey || e.ctrlKey ? 1 / ZSTEP : ZSTEP, e.clientX, e.clientY); return; }
   const b = e.target.closest('.boxes b'); if (b) select(b.dataset.id, { scrollStage: false });
 }, true);
-let zHeld = false;
+let zHeld = false, shiftHeld = false, drag = null;
+// Hold Shift and drag to pan (both views move together)
+function panCursor() { $('#stage').classList.toggle('panning', shiftHeld && !drag); $('#stage').classList.toggle('dragging', !!drag); }
+$('#stage').addEventListener('mousedown', e => {
+  if (!e.shiftKey || e.button !== 0) return;
+  const v = views()[0]; if (!v) return;
+  e.preventDefault();
+  drag = { x: e.clientX, y: e.clientY, left: v.scrollLeft, top: v.scrollTop, moved: false };
+  panCursor();
+});
+addEventListener('mousemove', e => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 2) drag.moved = true;
+  scrollViews(drag.left - dx, drag.top - dy);
+});
+addEventListener('mouseup', () => { if (!drag) return; const moved = drag.moved; drag = null; panCursor(); if (moved) { const stop = ev => { ev.stopPropagation(); ev.preventDefault(); }; $('#stage').addEventListener('click', stop, { capture: true, once: true }); } });
+addEventListener('keydown', e => { if (e.key === 'Shift' && !e.target.matches?.('input, textarea, select')) { shiftHeld = true; panCursor(); } });
+addEventListener('keyup', e => { if (e.key === 'Shift') { shiftHeld = false; panCursor(); } });
+addEventListener('blur', () => { shiftHeld = false; drag = null; panCursor(); });
 function zoomCursor(e) { $('#stage').classList.toggle('zoom-in', zHeld && !(e?.metaKey || e?.ctrlKey)); $('#stage').classList.toggle('zoom-out', zHeld && !!(e?.metaKey || e?.ctrlKey)); }
 addEventListener('keydown', e => {
   if (e.target.matches?.('input, textarea, select')) return;
@@ -464,19 +604,18 @@ function select(id, { scrollList = true, scrollStage = true } = {}) {
   if (id !== st.find) st.find = null;
   st.sel = id;
   const u = new URL(location.href); if (id) u.searchParams.set('f', id); else u.searchParams.delete('f'); history.replaceState(null, '', u);
-  $$('.f.sel').forEach(el => el.classList.remove('sel'));
-  const card = id && $(`.f[data-id="${CSS.escape(id)}"]`);
+  $$('.f.sel, .g.sel, .g .m.sel').forEach(el => el.classList.remove('sel'));
+  const card = id && (isGroupSel(id) ? $(`.g[data-g="${CSS.escape(id.slice(2))}"]`) : $(`.f[data-id="${CSS.escape(id)}"]`) || $(`.g .m[data-id="${CSS.escape(id)}"]`));
   card?.classList.add('sel');
   if (card && scrollList) card.scrollIntoView({ block: 'nearest' });
   drawBoxes();
-  const f = st.report.findings.find(x => x.id === id);
-  if (f && scrollStage) {
+  if (selFindings().length && scrollStage) {
     const b = $(`.boxes b.sel`);
     if (b) {
-      const stage = $('#stage'), sr = stage.getBoundingClientRect(), br = b.getBoundingClientRect();
-      const top = stage.scrollTop + br.top - sr.top - stage.clientHeight / 2 + br.height / 2;
-      const left = stage.scrollLeft + br.left - sr.left - stage.clientWidth / 2 + br.width / 2;
-      stage.scrollTo({ top: Math.max(0, top), left: Math.max(0, left), behavior: 'smooth' });
+      const v = b.closest('.view'), vr = v.getBoundingClientRect(), br = b.getBoundingClientRect();
+      const top = v.scrollTop + br.top - vr.top - v.clientHeight / 2 + br.height / 2;
+      const left = v.scrollLeft + br.left - vr.left - v.clientWidth / 2 + br.width / 2;
+      scrollViews(left, top, true);
     }
   }
 }
@@ -487,13 +626,17 @@ function refresh() { renderToolbar(); renderList(); drawBoxes(); }
 addEventListener('keydown', e => {
   if (e.target.matches('input, textarea, select')) { if (e.key === 'Escape') e.target.blur(); return; }
   if (e.metaKey || e.ctrlKey || e.altKey) return;
-  const list = visible(), i = list.findIndex(f => f.id === st.sel);
-  const cur = list[i];
+  const list = items(), i = list.findIndex(it => it.id === st.sel);
+  const it = list[i], cur = it?.type === 'f' ? it.f : null;
+  // a group member selected inside its group card: decisions apply to that one finding
+  const member = !it && st.sel && !isGroupSel(st.sel) ? byId().get(st.sel) : null;
+  const target = it?.type === 'g' ? { ids: it.g.members.map(f => f.id), d: groupDecision(it.g), item: it.id } : (cur || member) ? { ids: [(cur || member).id], d: decisionOf(cur || member), item: (cur || member).id } : null;
   if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); const n = list[Math.min(i + 1, list.length - 1)]; if (n) select(n.id); }
   else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); const n = list[Math.max(i - 1, 0)]; if (n) select(n.id); }
-  else if (/^[1-2]$/.test(e.key) && cur) { const d = DECISIONS[Number(e.key) - 1]; decide([cur.id], decisionOf(cur) === d ? null : d); }
-  else if (e.key === '0' && cur) decide([cur.id], null);
-  else if (e.key === 'f' && cur) find(cur.id);
+  else if (/^[1-2]$/.test(e.key) && target) { const d = DECISIONS[Number(e.key) - 1]; decide(target.ids, target.d === d ? null : d, target.item); }
+  else if (e.key === '0' && target) decide(target.ids, null, target.item);
+  else if (e.key === 'f' && st.sel) find(st.sel);
+  else if (e.key === 'g' && groups().length) { st.view = st.view === 'groups' ? 'findings' : 'groups'; store.set('view', st.view); refresh(); }
   else if (e.key === 'n' && cur) { e.preventDefault(); st.noteOpen = cur.id; renderCard(cur.id); $(`.f[data-id="${CSS.escape(cur.id)}"] textarea`)?.focus(); }
   else if (e.key === 'm') setMode(MODES[(MODES.findIndex(m => m[0] === st.mode) + 1) % MODES.length][0]);
   else if (e.key === 'Escape' && st.sel) select(null);
@@ -514,8 +657,8 @@ onDecision((d, { mine }) => {
 renderToolbar();
 renderList();
 renderStage();
-if (st.sel && st.report.findings.some(f => f.id === st.sel)) setTimeout(() => select(st.sel), 50);
-else { const first = visible()[0]; if (first) select(first.id, { scrollStage: false }); }
+if (st.sel && selFindings().length) setTimeout(() => select(st.sel), 50);
+else { const first = items()[0]; if (first) select(first.id, { scrollStage: false }); }
 </script>
 </body>
 </html>

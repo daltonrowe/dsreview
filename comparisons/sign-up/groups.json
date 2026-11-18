@@ -1,0 +1,115 @@
+{
+ "by": "claude",
+ "at": "2026-11-18T13:06:56.346Z",
+ "reportGeneratedAt": "2026-11-18T13:06:15.243Z",
+ "groups": [
+  {
+   "id": "social-buttons",
+   "title": "Social sign-in: 2 centred buttons on live vs a row of 8 in the design",
+   "summary": "The design shows a full-width row of 8 round social buttons (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) starting at x=870. Live shows only Google and Facebook, centred at x=1034, so the remaining icons are missing and the matcher pairs the wrong icons (Microsoft vs Facebook colour).",
+   "severity": "high",
+   "findings": [
+    "alignment:icon@56,36:left",
+    "color:icon@69,36",
+    "missing:icon@59,36",
+    "missing:text@62,36",
+    "missing:icon@62,36",
+    "missing:icon@66,36",
+    "missing:icon@73,36",
+    "missing:icon@76,36",
+    "missing:icon@79,36"
+   ]
+  },
+  {
+   "id": "recommendations-checkbox",
+   "title": "\"Send me recommendations\" checkbox missing on live",
+   "summary": "The design has an orange checked checkbox with the label \"Send me recommendations\" under the social buttons; live has no opt-in row at all.",
+   "severity": "medium",
+   "findings": [
+    "missing:icon@61,39",
+    "missing:text@68,39"
+   ]
+  },
+  {
+   "id": "create-button",
+   "title": "Create account button 6px taller, label nearly invisible on live",
+   "summary": "The disabled Create account pill is 52px tall on live vs 46px in the design, and its label is so faint on live it isn't detected (design label is a readable mid grey).",
+   "severity": "medium",
+   "findings": [
+    "size:panel@68,30",
+    "missing:text@68,30"
+   ]
+  },
+  {
+   "id": "or-separator",
+   "title": "\"or\" separator: lighter text and stronger rules on live, 10px lower",
+   "summary": "The \"or\" divider below the button: live text is a pale grey #b9b9b9 (design #6e7b84, blue-grey) and the horizontal rules either side are darker and get detected only on live. It also sits ~10px lower because the button is taller.",
+   "severity": "low",
+   "findings": [
+    "color:text@68,33",
+    "extra:live:line@60,34",
+    "extra:live:line@75,34"
+   ]
+  },
+  {
+   "id": "form-header-spacing",
+   "title": "Form header spacing: 4px more gap under subtitle, 3px under Password label",
+   "summary": "Live's \"Create an account\" heading block sits 5-7px higher, with the gap under \"Already have an account? Log in\" growing 21→25px, and the gap between the PASSWORD label and its field growing 8→11px. Same field-label/stack spacing difference.",
+   "severity": "low",
+   "findings": [
+    "spacing:text@62,17",
+    "spacing:text@57,24"
+   ]
+  },
+  {
+   "id": "heading-ink",
+   "title": "Heading ink neutral #171717 on live vs blue-tinted #0e2332",
+   "summary": "The \"Create an account\" heading uses the design's blue-tinted ink (#0e2332); live uses neutral near-black #171717.",
+   "severity": "low",
+   "findings": [
+    "color:text@62,14"
+   ]
+  },
+  {
+   "id": "marketing-headline-size",
+   "title": "Marketing headline 3px smaller on live",
+   "summary": "\"Better work in half the time.\" on the left panel is set smaller on live (31px → 28px text height, line narrower).",
+   "severity": "medium",
+   "findings": [
+    "typography:text@19,44"
+   ]
+  },
+  {
+   "id": "legal-copy",
+   "title": "Legal copy rewritten (adds terms acceptance line)",
+   "summary": "Below the form, live adds \"By signing up you accept our Privacy Policy, Terms & Licensing Agreement\" before the reCAPTCHA notice, so the block is 4 lines instead of 2.",
+   "severity": "low",
+   "hint": "content difference",
+   "findings": [
+    "missing:text@68,42",
+    "extra:live:text@67,41"
+   ]
+  },
+  {
+   "id": "stats-copy",
+   "title": "Asset stats line differs (live numbers, no \"added yesterday\")",
+   "summary": "First check-list item on the marketing panel: design reads \"Access 74,540,405 creative assets (89,304 added yesterday)\", live \"Access 60,869,326 creative assets\". Sample data vs live data.",
+   "severity": "low",
+   "hint": "content difference",
+   "findings": [
+    "missing:text@20,48",
+    "extra:live:text@13,48"
+   ]
+  },
+  {
+   "id": "button-edge-noise",
+   "title": "Button top edge read as a divider",
+   "summary": "The 366×1 \"divider\" at y=456 is the top edge of live's Create account pill, picked up as a line; covered by the button-height group.",
+   "severity": "low",
+   "hint": "likely noise",
+   "findings": [
+    "extra:live:line@68,29"
+   ]
+  }
+ ]
+}

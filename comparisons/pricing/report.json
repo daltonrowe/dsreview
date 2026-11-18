@@ -3,7 +3,7 @@
  "baseId": "pricing",
  "theme": "light",
  "label": "Join Pro (pricing)",
- "generatedAt": "2026-11-18T12:37:00.982Z",
+ "generatedAt": "2026-11-18T13:06:40.427Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -143,6 +143,13 @@
      "live": "#ff7900",
      "swatch": true,
      "sev": "high"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "none",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "high"
     }
    ],
    "design": {
@@ -178,6 +185,60 @@
    "match": "look"
   },
   {
+   "id": "color:text@45,50",
+   "category": "color",
+   "severity": "high",
+   "text": "Text 304×14",
+   "section": "at 568, 790",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#576570",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "medium"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "none",
+     "live": "#ff7900",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 568,
+     "y": 790,
+     "w": 304,
+     "h": 14
+    },
+    "textBox": {
+     "x": 568,
+     "y": 790,
+     "w": 304,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 428,
+     "y": 884,
+     "w": 584,
+     "h": 14
+    },
+    "textBox": {
+     "x": 428,
+     "y": 884,
+     "w": 584,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "match": "look"
+  },
+  {
    "id": "color:text@49,56",
    "category": "color",
    "severity": "high",
@@ -188,6 +249,13 @@
      "prop": "text color",
      "design": "#04da8d",
      "live": "#191919",
+     "swatch": true,
+     "sev": "high"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "#232323",
+     "live": "#00b67a",
      "swatch": true,
      "sev": "high"
     }
@@ -1140,53 +1208,6 @@
      "y": 1481,
      "w": 287,
      "h": 16
-    },
-    "kind": "text"
-   },
-   "match": "look"
-  },
-  {
-   "id": "color:text@45,50",
-   "category": "color",
-   "severity": "medium",
-   "text": "Text 304×14",
-   "section": "at 568, 790",
-   "props": [
-    {
-     "prop": "text color",
-     "design": "#576570",
-     "live": "#7f7f7f",
-     "swatch": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "box": {
-     "x": 568,
-     "y": 790,
-     "w": 304,
-     "h": 14
-    },
-    "textBox": {
-     "x": 568,
-     "y": 790,
-     "w": 304,
-     "h": 14
-    },
-    "kind": "text"
-   },
-   "live": {
-    "box": {
-     "x": 428,
-     "y": 884,
-     "w": 584,
-     "h": 14
-    },
-    "textBox": {
-     "x": 428,
-     "y": 884,
-     "w": 584,
-     "h": 14
     },
     "kind": "text"
    },
@@ -8071,8 +8092,8 @@
   },
   "bySeverity": {
    "low": 188,
-   "medium": 34,
-   "high": 13
+   "medium": 33,
+   "high": 14
   }
  }
 }

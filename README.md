@@ -23,13 +23,13 @@ The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER
 | `design-project/` | The exported design project (`*.dc.html` live pages, `Vecteezy *.html` standalone exports) |
 | `design-system/` | Target design-system tokens (`tokens.json` source; `tokens.css` / `tokens.md` generated views) |
 | `comparisons/pairs.json` | Which design page state is compared with which live URL |
-| `comparisons/<id>/`, `comparisons/<id>--dark/` | One comparison (light, dark): its `report.json`, `design.jpg`, `live.jpg`, reviewer `decisions.json` (and a gitignored `snapshot.json`: the elements found in each screenshot) |
+| `comparisons/<id>/`, `comparisons/<id>--dark/` | One comparison (light, dark): its `report.json`, `design.jpg`, `live.jpg`, `groups.json` (meta-findings), `reviews.json` (model explanations), reviewer `decisions.json` (and a gitignored `snapshot.json`: the elements found in each screenshot) |
 | `tools/compare.mjs` | Comparison CLI: run, show, add, screenshot live pages |
 | `tools/dc.mjs` | Design-project screenshot CLI |
 | `tools/app.mjs`, `tools/server.mjs` | Express app (viewer, reports, decisions API, live collaboration) and its launcher |
 | `tools/pull-decisions.mjs` | Copies decisions from the deployed site into local `comparisons/*/decisions.json` |
 | `tools/viewer/` | Viewer UI: home, comparison review, design page viewer |
-| `tools/lib/` | `render.mjs` (design pages in Playwright), `live.mjs` (live pages: consent wall, ?skip=1, full-height capture), `vision.mjs` (elements from pixels), `pixeldiff.mjs` (pairing + findings), `pairs.mjs` (pairs × themes), `bridge.js` (design runtime helpers for the page viewer) |
+| `tools/lib/` | `render.mjs` (design pages in Playwright), `live.mjs` (live pages: consent wall, ?skip=1, whole-page capture), `vision.mjs` (elements and grids from pixels), `pixeldiff.mjs` (pairing + findings), `pairs.mjs` (pairs × themes), `review.mjs` (the smaller-model review), `crops.mjs` (finding screenshots), `zip.mjs`, `bridge.js` (design runtime helpers for the page viewer) |
 | `.claude/skills/` | `view-design`, `compare-live`: how Claude Code uses the tools |
 
 ## How a comparison works
@@ -43,8 +43,10 @@ browser renders each page; after that, nothing reads the DOM or CSS: every findi
    prop get no dark run.
 2. Both pages render in headless Chromium at the same width (1440). The live site gets `?skip=1`, its
    consent manager and ad/analytics scripts are blocked, and the Rails profiler badge is hidden. Animations,
-   transitions and scrollbars are turned off on both sides. The viewport grows to the page's full height
-   (capped at `maxHeight`, default 3000px) and each side is captured as one screenshot. A live page that
+   transitions and scrollbars are turned off on both sides. Each page is captured whole, footer included:
+   the viewport is made as tall as the page (grown in steps until the height stops changing, since a
+   taller viewport loads lazy content) rather than using the browser's full-page screenshot, which
+   mis-draws sticky and fixed elements. The cap is 16000px (`maxHeight`). A live page that
    answers with an error (4xx/5xx) stops the run instead of being compared.
 3. **Seeing** (`tools/lib/vision.mjs`): in each screenshot, pixels that differ visibly from their neighbour
    are edges; edges within ~6px join into one element. Each element gets a tight box and a kind:
@@ -52,7 +54,10 @@ browser renders each page; after that, nothing reads the DOM or CSS: every findi
    buttons, chips, inputs, cards, the masthead), **divider**, **picture** (an outline around a busy,
    many-colored inside; what's inside a picture is its content and is ignored) or **shape**. It also gets
    the color behind it, its own (ink) color, how much ink it has, and a small grayscale thumbnail of its
-   look. Panels get their fill, an estimated corner radius and their border.
+   look. Panels get their fill, an estimated corner radius and their border. Tiles packed together over
+   two or more rows and columns also make a **grid** (masonry columns or justified rows), so the grid's
+   extent is compared even when its tiles are sample content: where it starts and ends, its columns, how
+   ragged its bottom is, the gap after it.
 4. **Pairing** (`tools/lib/pixeldiff.mjs`): distinctive elements that look alike on both sides (and are
    each other's best look-alike) become anchors; they say how far each part of the page moved. Every
    element then pairs with the best look-alike near where it's expected. Large flat things (a gradient
@@ -64,6 +69,17 @@ browser renders each page; after that, nothing reads the DOM or CSS: every findi
    anywhere on the page in the design and no longer do on live, e.g. the masthead's top and the first
    rail button; the element that moved is named), and **missing** / **extra** elements.
 
+7. **Review** (optional, `tools/lib/review.mjs`): a smaller model (Claude Haiku 5.5) looks at each
+   finding's two crops and measurements and writes what's off in plain words, with a verdict (real /
+   noise / unsure). Runs after `run` when credentials are available (`ANTHROPIC_API_KEY`, e.g. in `.env`),
+   or with `node tools/compare.mjs review <id>`. Kept in `comparisons/<id>/reviews.json`; findings whose
+   measurements didn't change keep their review across runs.
+8. **Meta-findings** (`comparisons/<id>/groups.json`): Claude groups findings that share one cause by
+   judgement ("Masthead sits 15px lower", "Live uses neutral greys…", "Resource grid ends 207px lower"),
+   with a title, a summary, a severity and an optional hint ("likely noise", "content difference"). Make
+   them with `node tools/compare.mjs findings <id>` (the input), `crop` (to look closer) and
+   `group <id> <file>` (checks and installs). A re-run warns when grouped findings no longer exist.
+
 There's no hover/behavior check: a screenshot shows one state. To compare a hover or an open menu, add a
 pair whose `design.do` / `live.do` steps put both pages in that state.
 
@@ -73,6 +89,10 @@ node tools/compare.mjs run                 # all pairs, light + dark; or: run ho
 node tools/compare.mjs show home --severity medium
 node tools/compare.mjs add show --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
 node tools/compare.mjs live /free-photos/dog --full --theme dark
+node tools/compare.mjs review home          # explanations from the smaller model
+node tools/compare.mjs findings home        # every finding with its id (input for grouping)
+node tools/compare.mjs crop home <findingId> # close crops + context strips → screenshots/crops/
+node tools/compare.mjs group home groups.json # install meta-findings
 ```
 
 Elements have no names (there's no markup to name them from), so findings are titled by kind and size
@@ -85,6 +105,10 @@ the category, kind and design position on a 16px grid, so they survive re-runs w
   decision progress. The design pages are listed below (collapsed) with links to the page viewer.
 - **Comparison** (`/compare.html?id=home`): findings on the left, the two screenshots on the right.
   - **☀ Light / ☾ Dark** switches between the two versions of the comparison.
+  - **Groups / Findings** (`g`): Groups lists the meta-findings first (title, summary, crops of all
+    members, its members), then the findings not in a group. **Keep / Ignore** on a group decides all its
+    members; a member can still be selected and decided on its own. Selecting a group outlines all its
+    members on the screenshots.
   - Views: **Side by side** (one scroll for both), **Overlay** (slider sets live opacity), **Difference**
     (identical pixels are black), **Swipe** (slider moves the split). The selected finding's boxes are the
     only ones drawn (magenta design, blue live); **Esc** clears the selection and outlines every finding
@@ -92,17 +116,21 @@ the category, kind and design position on a 16px grid, so they survive re-runs w
     lines** across the whole screenshot at the edge that should line up (one line in the design, one per
     element on live, so the gap shows), with the partner box dashed.
   - **Zoom**: hold **Z** and click to zoom in at that spot, **⌘ + Z + click** (Ctrl + Z + click elsewhere)
-    to zoom out, or use − / Fit / + / 1:1.
+    to zoom out, or use − / Fit / + / 1:1. Design and live each have their own viewport and zoom around
+    the same page point, so they stay side by side; scrolling one scrolls the other. Hold **Shift** and
+    drag to pan both.
   - **Elements** (`e`) outlines everything the analysis found in each screenshot, colored by kind
     (text red, icon purple, panel teal, picture dashed yellow, divider green); unpaired ones are tinted.
     Use it to check what the comparison saw.
-  - Each finding shows design and live crops, the property rows (design → live, with swatches) and the
-    decision buttons:
+  - Each finding shows the reviewer's explanation and verdict (when reviewed), design and live crops, the
+    property rows (design → live, with swatches), a **download** button (a zip with a Markdown write-up
+    and named screenshots: close crops with outlines and guides, and full-width context strips, cut on
+    the fly) and the decision buttons:
     **Keep** (a real difference) or **Ignore** (noise), plus a note (✎). **➜ Find** scrolls the screenshots to the difference and points at it with a big bouncing arrow on each side.
   - Filter by category (click; ⌘/shift-click for several), severity, decision status and text. **Set all
     shown…** decides every finding in the current filter. **Export** downloads Markdown (`.json` too).
   - Keys: `j`/`k` move, `1` keep, `2` ignore, `0` clear, `f` find (big arrow on the selected difference), `n` note, `m` cycle
-    view, `[`/`]` slider, `Esc` clear selection (show all boxes), `e` elements, `/` search.
+    view, `[`/`]` slider, `Esc` clear selection (show all boxes), `e` elements, `g` groups/findings, `/` search.
 - **Live collaboration**: each browser gets a random name (e.g. "Teal Fox") and streams updates from
   `/api/live` (server-sent events). A yellow **N online** pill appears when more than one person is on the
   site; decisions made elsewhere update open pages in place and show a toast.

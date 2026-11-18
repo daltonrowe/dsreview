@@ -1,9 +1,9 @@
 {
-  "_doc": "Each comparison pairs a design-project page state with a live-site page. design: page/props/state/do (same as tools/dc.mjs). live: path (?skip=1 is added) and optional do steps. Optional per-pair width/height/maxHeight. Edit by hand or with `node tools/compare.mjs add`.",
+  "_doc": "Each comparison pairs a design-project page state with a live-site page. design: page/props/state/do (same as tools/dc.mjs). live: path (?skip=1 is added) and optional do steps. Optional per-pair width/height/maxHeight (default: the whole page, up to 16000px). Edit by hand or with `node tools/compare.mjs add`.",
   "base": "https://ao-4276-redesign-rollup.xeezy.com",
   "width": 1440,
   "height": 900,
-  "maxHeight": 3000,
+  "maxHeight": 16000,
   "pairs": [
     {
       "id": "home",
@@ -50,8 +50,7 @@
       "live": {
         "path": "/users/sign_up",
         "do": []
-      },
-      "maxHeight": 900
+      }
     },
     {
       "id": "log-in",
@@ -68,8 +67,7 @@
       "live": {
         "path": "/users/sign_in",
         "do": []
-      },
-      "maxHeight": 900
+      }
     },
     {
       "id": "pricing",

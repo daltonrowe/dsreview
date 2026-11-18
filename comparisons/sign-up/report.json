@@ -3,7 +3,7 @@
  "baseId": "sign-up",
  "theme": "light",
  "label": "Create an account",
- "generatedAt": "2026-11-18T12:36:33.468Z",
+ "generatedAt": "2026-11-18T13:06:15.243Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -32,7 +32,6 @@
   "items": 26,
   "background": "#fcfcfc",
   "log": [
-   "pageerror: google is not defined",
    "pageerror: Cannot read properties of undefined (reading 'init')"
   ]
  },

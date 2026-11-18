@@ -3,7 +3,7 @@
  "baseId": "log-in",
  "theme": "light",
  "label": "Log in",
- "generatedAt": "2026-11-18T12:36:46.160Z",
+ "generatedAt": "2026-11-18T13:06:28.078Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -33,7 +33,6 @@
   "items": 26,
   "background": "#fcfcfc",
   "log": [
-   "pageerror: google is not defined",
    "pageerror: Cannot read properties of undefined (reading 'init')"
   ]
  },

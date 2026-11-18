@@ -1,0 +1,118 @@
+{
+ "by": "claude",
+ "at": "2026-11-18T13:06:57.205Z",
+ "reportGeneratedAt": "2026-11-18T13:06:33.309Z",
+ "groups": [
+  {
+   "id": "social-row",
+   "title": "Social sign-in: 2 centred buttons on live vs a row of 8 in the design",
+   "summary": "The design shows 8 round social buttons (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the form width from x=870. Live only has Google and Facebook, centred (starting at x=1034, 19px lower). The missing icons, the shifted left edge and the 'Microsoft → Facebook' colour mismatch all come from that one change.",
+   "severity": "high",
+   "findings": [
+    "color:icon@69,38",
+    "alignment:icon@56,38:left",
+    "missing:text@62,38",
+    "missing:icon@59,38",
+    "missing:icon@66,38",
+    "missing:icon@73,38",
+    "missing:icon@76,38",
+    "missing:icon@79,38",
+    "missing:icon@62,38"
+   ]
+  },
+  {
+   "id": "forgot-link-white",
+   "title": "Orange links turn white on live (dark): “Forgot Your Password?” and “Sign up”",
+   "summary": "In the dark design both links on the log-in form are orange (#ff7900): “Forgot Your Password?” and the “Sign up” link after “Don’t have an account?”. On live both are plain white like the text around them, so they no longer read as links.",
+   "severity": "high",
+   "findings": [
+    "color:text@76,29",
+    "color:text@62,17"
+   ]
+  },
+  {
+   "id": "login-button-fill",
+   "title": "Disabled Log in button: lighter grey fill (#292929 → #5a5a5a), label nearly invisible",
+   "summary": "Live's disabled button is a much lighter grey, and its 'Log in' label has almost no contrast against it, where the design shows a dark fill with a readable grey label.",
+   "severity": "medium",
+   "findings": [
+    "color:panel@68,32",
+    "typography:text@68,32"
+   ]
+  },
+  {
+   "id": "login-button-height",
+   "title": "Log in button 6px taller (46 → 52px)",
+   "summary": "The Log in button is 52px tall on live vs 46px in the design, pushing the divider, social row and legal copy down.",
+   "severity": "medium",
+   "findings": [
+    "size:panel@68,32"
+   ]
+  },
+  {
+   "id": "button-edge-noise",
+   "title": "Button corner/edge detections from the low-contrast design button",
+   "summary": "The design's dark button barely stands out from the background, so its pill edges were read as two horizontal hairlines and a square corner. Both versions are pill-shaped.",
+   "severity": "low",
+   "hint": "likely noise",
+   "findings": [
+    "shape:panel@68,32",
+    "missing:line@68,30",
+    "missing:line@68,33"
+   ]
+  },
+  {
+   "id": "dark-greys-lighter",
+   "title": "Live's dark-mode greys are a step lighter (e.g. #aaaaaa → #d3d3d3)",
+   "summary": "Secondary text and lines on the form are consistently lighter on live: subtitle, PASSWORD label, 'or', the eye icon, legal copy, and input borders (#555 → #7f7f7f). One cause: live maps the dark grey scale one step brighter.",
+   "severity": "medium",
+   "findings": [
+    "color:text@57,24",
+    "color:icon@79,26",
+    "color:text@68,35",
+    "color:text@68,41",
+    "shape:panel@68,21",
+    "shape:panel@68,26"
+   ]
+  },
+  {
+   "id": "field-label-gap",
+   "title": "Field labels sit ~2-3px further above their inputs",
+   "summary": "In the design the USERNAME / EMAIL label sits close enough to its input to merge with it; on live there is a slightly larger gap (and no space before the asterisk), so it is found as a separate label.",
+   "severity": "low",
+   "findings": [
+    "missing:text@68,21",
+    "extra:live:text@59,19"
+   ]
+  },
+  {
+   "id": "title-weight",
+   "title": "'Log in' title renders slightly heavier",
+   "summary": "The page title measures heavier on live (ink 41% → 49%), probably a font rendering/weight difference.",
+   "severity": "low",
+   "findings": [
+    "typography:text@57,14"
+   ]
+  },
+  {
+   "id": "hero-headline",
+   "title": "Marketing headline smaller (31 → 28px text height)",
+   "summary": "'Better work in half the time.' on the left panel is set ~10% smaller on live (it ends at x≈511 instead of 549).",
+   "severity": "medium",
+   "findings": [
+    "typography:text@19,44"
+   ]
+  },
+  {
+   "id": "bullet-copy",
+   "title": "First benefit bullet copy/stats differ (content)",
+   "summary": "Design: 'Access 74,540,405 creative assets (89,304 added yesterday)'. Live: 'Access 60,869,326 creative assets' with no 'added yesterday' part, so the line is shorter.",
+   "severity": "low",
+   "hint": "content difference",
+   "findings": [
+    "missing:text@20,48",
+    "extra:live:text@13,48"
+   ]
+  }
+ ]
+}

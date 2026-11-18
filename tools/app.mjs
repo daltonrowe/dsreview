@@ -6,6 +6,11 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
+import { findingShots } from './lib/crops.mjs';
+import { zip } from './lib/zip.mjs';
+
+// same fingerprint as tools/lib/review.mjs (kept here so the server doesn't load the SDK)
+const fingerprint = f => crypto.createHash('sha1').update(JSON.stringify([f.category, f.props.map(p => [p.prop, p.design, p.live]), f.design?.box, f.live?.box])).digest('hex').slice(0, 12);
 import { readConfig, expandPairs } from './lib/pairs.mjs';
 
 const COMPARISONS = path.join(ROOT, 'comparisons');
@@ -91,7 +96,13 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     return path.join(comparisonsDir, id);
   };
   const readJson = async (p, fallback) => { try { return JSON.parse(await fsp.readFile(p, 'utf8')); } catch { return fallback; } };
-  const readReport = id => readJson(path.join(compDir(id), 'report.json'), null);
+  const readReport = async id => {
+    const r = await readJson(path.join(compDir(id), 'report.json'), null);
+    if (!r) return r;
+    const reviews = await readJson(path.join(compDir(id), 'reviews.json'), {});
+    for (const f of r.findings) if (reviews[f.id] && reviews[f.id].fingerprint === fingerprint(f)) f.review = reviews[f.id];
+    return r;
+  };
 
   // serialize writes per comparison so concurrent clicks never clobber each other
   const queues = new Map();
@@ -144,7 +155,14 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     const r = await readReport(req.params.id);
     if (!r) return res.status(404).json({ error: `comparison "${req.params.id}" has no report. Run: node tools/compare.mjs run ${req.params.id}` });
     const decisions = await readJson(decisionsPath(req.params.id), {});
-    res.json({ ...r, decisions, progress: progress(r, decisions) });
+    // meta-findings: groups of findings Claude made by judgement (comparisons/<id>/groups.json)
+    const groups = await readJson(path.join(compDir(req.params.id), 'groups.json'), null);
+    res.json({ ...r, decisions, groups, progress: progress(r, decisions) });
+  });
+
+  // the second pass (reviews.json): one explanation per finding, when it still matches the finding
+  app.get('/api/comparisons/:id/reviews', async (req, res) => {
+    res.json(await readJson(path.join(compDir(req.params.id), 'reviews.json'), {}));
   });
 
   // body: { ids: [...], decision?: one of DECISIONS or null (clear), note?: string }
@@ -186,6 +204,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
       id: f.id, category: f.category, severity: f.severity, text: f.text, section: f.section,
       decision: decisions[f.id]?.decision || null, note: decisions[f.id]?.note || null,
       props: f.props.map(x => ({ prop: x.prop, design: x.design, live: x.live })),
+      explanation: f.review?.explanation || null, verdict: f.review?.verdict || null,
       source: f.design?.where ? `${r.design.page} tpl ${f.design.where.tpl}` : null,
     }));
     const json = { id: r.id, label: r.label, theme: r.theme || 'light', generatedAt: r.generatedAt, design: { page: r.design.page, props: r.design.props, state: r.design.state }, live: r.live.url, progress: p, findings: rows };
@@ -193,8 +212,21 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     const esc = s => String(s ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
     let md = `${H(0)} ${r.label}${r.theme ? ` (${r.theme})` : ''}\n\nDesign \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })} vs live ${r.live.url}, captured ${r.generatedAt}.\n\n`;
     md += DECISIONS.map(d => `${DECISION_LABELS[d]} ${p[d]}`).join(' · ') + ` · Undecided ${p.undecided} · Total ${p.total}\n\n`;
-    md += `| Decision | Severity | Category | Element | Difference (design → live) | Note |\n|---|---|---|---|---|---|\n`;
-    for (const f of rows) md += `| ${f.decision ? DECISION_LABELS[f.decision] : '—'} | ${f.severity} | ${f.category} | ${esc(f.text)} | ${esc(f.props.map(x => `${x.prop}: ${x.design} → ${x.live}`).join('; '))} | ${esc(f.note)} |\n`;
+    const groups = (await readJson(path.join(compDir(id), 'groups.json'), null))?.groups || [];
+    const byId = new Map(rows.map(f => [f.id, f]));
+    if (groups.length) {
+      md += `${H(1)} Groups\n\n`;
+      for (const g of groups) {
+        const members = g.findings.map(i => byId.get(i)).filter(Boolean);
+        if (!members.length) continue;
+        const ds = [...new Set(members.map(m => m.decision || '—'))];
+        md += `${H(2)} ${g.title} (${g.severity || 'medium'}, ${members.length} findings, ${ds.length === 1 ? (ds[0] === '—' ? 'undecided' : DECISION_LABELS[ds[0]]) : 'mixed'})\n\n${g.summary || ''}\n\n`;
+      }
+      json.groups = groups;
+      md += `${H(1)} All findings\n\n`;
+    }
+    md += `| Decision | Severity | Category | Element | Difference (design → live) | What's off (reviewer) | Note |\n|---|---|---|---|---|---|---|\n`;
+    for (const f of rows) md += `| ${f.decision ? DECISION_LABELS[f.decision] : '—'} | ${f.severity} | ${f.category} | ${esc(f.text)} | ${esc(f.props.map(x => `${x.prop}: ${x.design} → ${x.live}`).join('; '))} | ${esc(f.explanation ? `${f.explanation}${f.verdict ? ` (${f.verdict})` : ''}` : '')} | ${esc(f.note)} |\n`;
     return { json, md };
   }
 
@@ -204,6 +236,34 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     if (req.params.fmt === 'json') return res.json(out.json);
     if (req.params.fmt !== 'md') return res.status(400).end();
     res.type('text/markdown').send(out.md);
+  });
+
+  // One finding as a zip: a Markdown write-up and named screenshots (close crops with the element(s)
+  // outlined and guides drawn, plus full-width context strips), cut from the screenshots on the fly.
+  app.get('/api/comparisons/:id/findings/:fid/download', async (req, res) => {
+    const r = await readReport(req.params.id);
+    const f = r?.findings.find(x => x.id === req.params.fid);
+    if (!f) return res.status(404).json({ error: 'no such finding' });
+    const decisions = await readJson(decisionsPath(req.params.id), {});
+    const groups = (await readJson(path.join(compDir(req.params.id), 'groups.json'), null))?.groups || [];
+    const group = groups.find(g => g.findings.includes(f.id));
+    const slug = `${r.id}-${f.category}-${f.text}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70);
+    const shots = findingShots(r, f, compDir(req.params.id)).map(x => ({ name: `${slug}-${x.name}`, data: x.data }));
+    const d = decisions[f.id];
+    const cell = v => String(v ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
+    let md = `# ${f.category[0].toUpperCase() + f.category.slice(1)}: ${f.text}\n\n`;
+    md += `**${r.label}**${r.theme ? ` (${r.theme})` : ''} · severity **${f.severity}** · ${f.section || ''}\n\n`;
+    md += `- Design: \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })}\n- Live: ${r.live.url}\n- Captured: ${r.generatedAt}\n- Finding id: \`${f.id}\`\n\n`;
+    if (f.review?.explanation) md += `## What's off\n\n${f.review.explanation}\n\n${f.review.verdict ? `_Reviewer (${f.review.model}): ${f.review.verdict}${f.review.confidence ? `, ${f.review.confidence} confidence` : ''}._\n\n` : ''}`;
+    md += `## Difference\n\n| Property | Design | Live |\n|---|---|---|\n${f.props.map(p => `| ${cell(p.prop)} | ${cell(p.design)} | ${cell(p.live)} |`).join('\n')}\n\n`;
+    if (f.related?.length) md += `Lines up with / measured against: ${f.related.map(x => x.text).join(', ')}.\n\n`;
+    if (group) md += `## Part of: ${group.title}\n\n${group.summary || ''}\n\n`;
+    if (d?.decision || d?.note) md += `## Review\n\n${d.decision ? `Decision: **${DECISION_LABELS[d.decision]}**\n\n` : ''}${d.note ? `Note: ${d.note}\n\n` : ''}`;
+    md += `## Screenshots\n\nMagenta: the design element · blue: the live element · grey dashed: what it's measured against · green: alignment guide.\n\n`;
+    md += shots.map(x => `![${x.name}](${x.name})`).join('\n\n') + '\n';
+    const body = zip([{ name: `${slug}.md`, data: md }, ...shots]);
+    res.set({ 'content-type': 'application/zip', 'content-disposition': `attachment; filename="${slug}.zip"`, 'cache-control': 'no-store' });
+    res.send(body);
   });
 
   // Every comparison in one file, downloaded as an attachment.

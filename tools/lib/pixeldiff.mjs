@@ -28,7 +28,7 @@ const ratio = (a, b) => Math.max(a / b, b / a);
 const contains = (o, b) => b.x >= o.x - 1 && b.y >= o.y - 1 && b.x + b.w <= o.x + o.w + 1 && b.y + b.h <= o.y + o.h + 1;
 
 // What kinds may be the same thing on the other side (a placeholder panel may be a photo on live).
-const COMPAT = { text: ['text', 'icon'], icon: ['icon', 'shape', 'text'], shape: ['shape', 'icon', 'image'], panel: ['panel', 'image', 'shape'], image: ['image', 'panel', 'shape'], line: ['line'] };
+const COMPAT = { grid: ['grid'], text: ['text', 'icon'], icon: ['icon', 'shape', 'text'], shape: ['shape', 'icon', 'image'], panel: ['panel', 'image', 'shape'], image: ['image', 'panel', 'shape'], line: ['line'] };
 
 const MAX_JUMP = 400;
 export function matchBlobs(D, L) {
@@ -66,6 +66,8 @@ export function matchBlobs(D, L) {
     const ex = expected(d.box);
     for (const l of L) {
       if (!COMPAT[d.kind].includes(l.kind)) continue;
+      // grids pair by where they start and how wide they are: their height is what may differ
+      if (d.kind === 'grid') { const top = Math.min(Math.abs(ex.y - l.box.y), Math.abs(d.box.y - l.box.y)), left = Math.min(Math.abs(ex.x - l.box.x), Math.abs(d.box.x - l.box.x)); if (top <= 500 && left <= 80 && ratio(d.box.w, l.box.w) < 1.25) cands.push({ d, l, cost: (top + left) / 50, how: 'region' }); continue; }
       const jump = dist(ex, l.box);
       if (jump > MAX_JUMP) continue;
       const sr = ratio(d.box.w, l.box.w) + ratio(d.box.h, l.box.h) - 2;
@@ -89,6 +91,24 @@ export function matchBlobs(D, L) {
 }
 
 // ---------- per element ----------
+// A design placeholder where live shows a picture: the tile's shape and colour come from the content.
+const placeholderPair = (d, l) => (d.kind === 'panel' || d.kind === 'shape') && l.kind === 'image';
+
+function grid(d, l) {
+  if (d.kind !== 'grid' || l.kind !== 'grid') return [];
+  const rows = [];
+  const endD = d.box.y + d.box.h, endL = l.box.y + l.box.h, dEnd = endL - endD;
+  if (Math.abs(dEnd) >= 8) rows.push({ prop: 'ends at', design: `y=${endD}`, live: `y=${endL} (${Math.abs(dEnd)}px ${dEnd > 0 ? 'lower' : 'higher'})`, sev: Math.abs(dEnd) >= 40 ? 'high' : 'medium' });
+  if (Math.abs(l.box.y - d.box.y) >= 6) rows.push({ prop: 'starts at', design: `y=${d.box.y}`, live: `y=${l.box.y}`, sev: Math.abs(l.box.y - d.box.y) >= 16 ? 'medium' : 'low' });
+  if (d.layout !== l.layout) rows.push({ prop: 'layout', design: d.layout === 'columns' ? `${d.columns} columns (masonry)` : 'justified rows', live: l.layout === 'columns' ? `${l.columns} columns (masonry)` : 'justified rows', sev: 'high' });
+  else if (d.layout === 'columns' && d.columns !== l.columns) rows.push({ prop: 'columns', design: d.columns, live: l.columns, sev: 'high' });
+  if (Math.abs(d.box.w - l.box.w) > 4) rows.push({ prop: 'width', design: `${d.box.w}px`, live: `${l.box.w}px`, sev: 'medium' });
+  // masonry: how unevenly the columns end
+  const spread = e => Math.max(...e) - Math.min(...e);
+  if (d.layout === 'columns' && d.columns === l.columns && Math.abs(spread(d.columnEnds) - spread(l.columnEnds)) >= 40) rows.push({ prop: 'ragged bottom', design: `columns end within ${spread(d.columnEnds)}px`, live: `within ${spread(l.columnEnds)}px`, sev: 'low' });
+  return rows;
+}
+
 function typography(d, l) {
   if (d.kind !== 'text' || l.kind !== 'text') return [];
   const rows = [];
@@ -106,9 +126,15 @@ function typography(d, l) {
 
 function colors(d, l) {
   const rows = [];
+  if (placeholderPair(d, l)) return rows;
   if ((d.kind === 'text' || d.kind === 'icon' || d.kind === 'line') && d.color && l.color && d.kind === l.kind) {
     const c = cdist(d.color, l.color);
     if (c > 14) rows.push({ prop: `${d.kind} color`, design: d.color, live: l.color, swatch: true, sev: colorSev(c) });
+    // a second ink within the line (a coloured link in a grey sentence)
+    if (d.kind === 'text' && (d.accent || l.accent)) {
+      const ca = d.accent && l.accent ? cdist(d.accent, l.accent) : 999;
+      if (ca > 20) rows.push({ prop: 'accent color (e.g. a link)', design: d.accent || 'none', live: l.accent || 'none (all one colour)', swatch: true, sev: !d.accent || !l.accent ? 'high' : colorSev(ca) });
+    }
   }
   if (d.kind === 'panel' && l.kind === 'panel') {
     const c = cdist(d.fill, l.fill);
@@ -118,7 +144,7 @@ function colors(d, l) {
 }
 
 function size(d, l) {
-  if (d.kind === 'text') return []; // text size is typography
+  if (d.kind === 'text' || d.kind === 'grid' || placeholderPair(d, l)) return []; // text: typography; grid: its own rows
   const rows = [];
   for (const [k, prop] of [['w', 'width'], ['h', 'height']]) {
     const x = d.box[k], y = l.box[k], dd = Math.abs(x - y);
@@ -262,8 +288,8 @@ function spacing(pairs, name) {
 }
 
 // ---------- top level ----------
-const KIND = { text: 'Text', icon: 'Icon', panel: 'Panel', image: 'Picture', line: 'Divider', shape: 'Shape', page: 'Page' };
-export const blobName = b => `${KIND[b.kind]} ${b.box.w}×${b.box.h}`;
+const KIND = { grid: 'Grid', text: 'Text', icon: 'Icon', panel: 'Panel', image: 'Picture', line: 'Divider', shape: 'Shape', page: 'Page' };
+export const blobName = b => (b.kind === 'grid' ? `Grid of ${b.tiles} tiles, ${b.layout === 'columns' ? `${b.columns} columns` : `${b.rows} rows`} (${b.box.w}×${b.box.h})` : `${KIND[b.kind]} ${b.box.w}×${b.box.h}`);
 const where = b => `at ${b.box.x}, ${b.box.y}`;
 
 export function compareImages(design, live) {
@@ -291,7 +317,7 @@ export function compareImages(design, live) {
     const sides = { design: side(p.d), live: side(p.l), match: p.how };
     push('typography', p.d, typography(p.d, p.l), sides);
     push('color', p.d, colors(p.d, p.l), sides);
-    push('size', p.d, size(p.d, p.l), sides);
+    push('size', p.d, [...grid(p.d, p.l), ...size(p.d, p.l)], sides);
     push('shape', p.d, shape(p.d, p.l), sides);
     push('spacing', p.d, gaps.get(i) || [], sides);
   });

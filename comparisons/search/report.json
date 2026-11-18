@@ -3,7 +3,7 @@
  "baseId": "search",
  "theme": "light",
  "label": "Search results",
- "generatedAt": "2026-11-18T12:36:16.206Z",
+ "generatedAt": "2026-11-18T13:05:53.336Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -16,9 +16,9 @@
   "do": [],
   "view": "view.html?page=AI+Magic.dc.html&state=%7B%22active%22%3A%22search%22%2C%22aiHome%22%3Afalse%7D",
   "width": 1440,
-  "height": 3000,
+  "height": 5067,
   "shot": "design.jpg",
-  "items": 122,
+  "items": 158,
   "background": "#f4fcfc",
   "log": []
  },
@@ -28,18 +28,13 @@
   "url": "https://ao-4276-redesign-rollup.xeezy.com/free-photos/dog?skip=1",
   "finalUrl": "https://ao-4276-redesign-rollup.xeezy.com/free-photos/dog?skip=1",
   "width": 1440,
-  "height": 3000,
+  "height": 13010,
   "shot": "live.jpg",
-  "items": 118,
+  "items": 380,
   "background": "#fcfcfc",
   "log": []
  },
  "pairs": [
-  {
-   "design": 0,
-   "live": 0,
-   "how": "shape"
-  },
   {
    "design": 64,
    "live": 20,
@@ -51,8 +46,8 @@
    "how": "look"
   },
   {
-   "design": 105,
-   "live": 114,
+   "design": 135,
+   "live": 367,
    "how": "look"
   },
   {
@@ -111,11 +106,6 @@
    "how": "look"
   },
   {
-   "design": 103,
-   "live": 113,
-   "how": "look"
-  },
-  {
    "design": 5,
    "live": 6,
    "how": "look"
@@ -156,24 +146,29 @@
    "how": "look"
   },
   {
-   "design": 110,
+   "design": 140,
    "live": 29,
    "how": "look"
   },
   {
-   "design": 109,
+   "design": 139,
    "live": 27,
    "how": "look"
   },
   {
-   "design": 113,
+   "design": 143,
    "live": 30,
    "how": "look"
   },
   {
-   "design": 108,
+   "design": 138,
    "live": 26,
    "how": "look"
+  },
+  {
+   "design": 157,
+   "live": 379,
+   "how": "region"
   },
   {
    "design": 9,
@@ -188,6 +183,16 @@
   {
    "design": 11,
    "live": 9,
+   "how": "place"
+  },
+  {
+   "design": 99,
+   "live": 109,
+   "how": "place"
+  },
+  {
+   "design": 106,
+   "live": 371,
    "how": "place"
   },
   {
@@ -527,6 +532,64 @@
    "match": "look"
   },
   {
+   "id": "size:grid@47,150",
+   "category": "size",
+   "severity": "high",
+   "text": "Grid of 52 tiles, 15 rows (1317×4386)",
+   "section": "at 99, 200",
+   "props": [
+    {
+     "prop": "ends at",
+     "design": "y=4586",
+     "live": "y=11571 (6985px lower)",
+     "sev": "high"
+    },
+    {
+     "prop": "starts at",
+     "design": "y=200",
+     "live": "y=485",
+     "sev": "medium"
+    },
+    {
+     "prop": "width",
+     "design": "1317px",
+     "live": "1298px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 200,
+     "w": 1317,
+     "h": 4386
+    },
+    "textBox": {
+     "x": 99,
+     "y": 200,
+     "w": 1317,
+     "h": 4386
+    },
+    "kind": "grid"
+   },
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 485,
+     "w": 1298,
+     "h": 11086
+    },
+    "textBox": {
+     "x": 108,
+     "y": 485,
+     "w": 1298,
+     "h": 11086
+    },
+    "kind": "grid"
+   },
+   "match": "region"
+  },
+  {
    "id": "size:image@75,37",
    "category": "size",
    "severity": "high",
@@ -567,6 +630,110 @@
      "y": 485,
      "w": 422,
      "h": 282
+    },
+    "kind": "image"
+   },
+   "match": "place"
+  },
+  {
+   "id": "size:image@19,191",
+   "category": "size",
+   "severity": "high",
+   "text": "Picture 401×267",
+   "section": "at 99, 2928",
+   "props": [
+    {
+     "prop": "width",
+     "design": "401px",
+     "live": "422px",
+     "sev": "high"
+    },
+    {
+     "prop": "height",
+     "design": "267px",
+     "live": "282px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 2928,
+     "w": 401,
+     "h": 267
+    },
+    "textBox": {
+     "x": 99,
+     "y": 2928,
+     "w": 401,
+     "h": 267
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 2915,
+     "w": 422,
+     "h": 282
+    },
+    "textBox": {
+     "x": 108,
+     "y": 2915,
+     "w": 422,
+     "h": 282
+    },
+    "kind": "image"
+   },
+   "match": "place"
+  },
+  {
+   "id": "size:image@78,209",
+   "category": "size",
+   "severity": "high",
+   "text": "Picture 321×242",
+   "section": "at 1095, 3215",
+   "props": [
+    {
+     "prop": "width",
+     "design": "321px",
+     "live": "298px",
+     "sev": "high"
+    },
+    {
+     "prop": "height",
+     "design": "242px",
+     "live": "271px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1095,
+     "y": 3215,
+     "w": 321,
+     "h": 242
+    },
+    "textBox": {
+     "x": 1095,
+     "y": 3215,
+     "w": 321,
+     "h": 242
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 1108,
+     "y": 3226,
+     "w": 298,
+     "h": 271
+    },
+    "textBox": {
+     "x": 1108,
+     "y": 3226,
+     "w": 298,
+     "h": 271
     },
     "kind": "image"
    },
@@ -996,6 +1163,160 @@
       "y": 16,
       "w": 918,
       "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@68,3",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Text 50×14",
+   "section": "at 1058, 33",
+   "props": [
+    {
+     "prop": "gap below → Grid of 52 tiles, 15 rows (1317×4386) (+5 more above it, same change)",
+     "design": "153px",
+     "live": "436px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1058,
+     "y": 33,
+     "w": 50,
+     "h": 14
+    },
+    "textBox": {
+     "x": 1058,
+     "y": 33,
+     "w": 50,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 1058,
+     "y": 35,
+     "w": 50,
+     "h": 14
+    },
+    "textBox": {
+     "x": 1058,
+     "y": 35,
+     "w": 50,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     47,
+     200
+    ],
+    "live": [
+     49,
+     485
+    ]
+   },
+   "related": [
+    {
+     "text": "Grid of 52 tiles, 15 rows (1317×4386)",
+     "design": {
+      "x": 99,
+      "y": 200,
+      "w": 1317,
+      "h": 4386
+     },
+     "live": {
+      "x": 108,
+      "y": 485,
+      "w": 1298,
+      "h": 11086
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@11,3",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Text 70×14",
+   "section": "at 143, 33",
+   "props": [
+    {
+     "prop": "gap below → Grid of 52 tiles, 15 rows (1317×4386) (+1 more above it, same change)",
+     "design": "153px",
+     "live": "438px",
+     "sev": "high"
+    },
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "47px",
+     "live": "51px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
+    },
+    "textBox": {
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 151,
+     "y": 33,
+     "w": 52,
+     "h": 14
+    },
+    "textBox": {
+     "x": 151,
+     "y": 33,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "match": "place",
+   "guide": {
+    "axis": "y",
+    "design": [
+     47,
+     200
+    ],
+    "live": [
+     47,
+     485
+    ]
+   },
+   "related": [
+    {
+     "text": "Grid of 52 tiles, 15 rows (1317×4386)",
+     "design": {
+      "x": 99,
+      "y": 200,
+      "w": 1317,
+      "h": 4386
+     },
+     "live": {
+      "x": 108,
+      "y": 485,
+      "w": 1298,
+      "h": 11086
      }
     }
    ]
@@ -1649,6 +1970,78 @@
    ]
   },
   {
+   "id": "alignment:grid@47,150:top",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Grid of 52 tiles, 15 rows (1317×4386)",
+   "section": "at 99, 200",
+   "props": [
+    {
+     "prop": "top edge",
+     "design": "lines up with Icon 22×22 at y=200",
+     "live": "off by 284px ↓ (485 vs 201)",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 200,
+     "w": 1317,
+     "h": 4386
+    },
+    "textBox": {
+     "x": 99,
+     "y": 200,
+     "w": 1317,
+     "h": 4386
+    },
+    "kind": "grid"
+   },
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 485,
+     "w": 1298,
+     "h": 11086
+    },
+    "textBox": {
+     "x": 108,
+     "y": 485,
+     "w": 1298,
+     "h": 11086
+    },
+    "kind": "grid"
+   },
+   "guide": {
+    "axis": "y",
+    "design": [
+     200
+    ],
+    "live": [
+     485,
+     201
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 22×22",
+     "design": {
+      "x": 26,
+      "y": 201,
+      "w": 22,
+      "h": 22
+     },
+     "live": {
+      "x": 27,
+      "y": 201,
+      "w": 22,
+      "h": 22
+     }
+    }
+   ]
+  },
+  {
    "id": "alignment:image@75,37:right",
    "category": "alignment",
    "severity": "high",
@@ -1822,7 +2215,7 @@
     {
      "prop": "icon color",
      "design": "#a7afb4",
-     "live": "#919191",
+     "live": "#929292",
      "swatch": true,
      "sev": "medium"
     }
@@ -2494,6 +2887,37 @@
    ]
   },
   {
+   "id": "missing:line@5,158",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Divider 1×5066",
+   "section": "at 74, 1",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "1×5066",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 74,
+     "y": 1,
+     "w": 1,
+     "h": 5066
+    },
+    "textBox": {
+     "x": 74,
+     "y": 1,
+     "w": 1,
+     "h": 5066
+    },
+    "kind": "line"
+   },
+   "live": null
+  },
+  {
    "id": "missing:text@10,7",
    "category": "missing",
    "severity": "medium",
@@ -2583,6 +3007,130 @@
      "h": 40
     },
     "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:panel@47,308",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Panel 1317×229",
+   "section": "at 99, 4814",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "1317×229",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 4814,
+     "w": 1317,
+     "h": 229
+    },
+    "textBox": {
+     "x": 99,
+     "y": 4814,
+     "w": 1317,
+     "h": 229
+    },
+    "kind": "panel"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:line@47,301",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Divider 1290×3",
+   "section": "at 113, 4815",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "1290×3",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 113,
+     "y": 4815,
+     "w": 1290,
+     "h": 3
+    },
+    "textBox": {
+     "x": 113,
+     "y": 4815,
+     "w": 1290,
+     "h": 3
+    },
+    "kind": "line"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:text@47,305",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Text 318×20",
+   "section": "at 599, 4874",
+   "props": [
+    {
+     "prop": "text",
+     "design": "318×20",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 599,
+     "y": 4874,
+     "w": 318,
+     "h": 20
+    },
+    "textBox": {
+     "x": 599,
+     "y": 4874,
+     "w": 318,
+     "h": 20
+    },
+    "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:line@47,315",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Divider 1285×3",
+   "section": "at 113, 5039",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "1285×3",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 113,
+     "y": 5039,
+     "w": 1285,
+     "h": 3
+    },
+    "textBox": {
+     "x": 113,
+     "y": 5039,
+     "w": 1285,
+     "h": 3
+    },
+    "kind": "line"
    },
    "live": null
   },
@@ -3010,53 +3558,6 @@
    "match": "look"
   },
   {
-   "id": "color:icon@2,185",
-   "category": "color",
-   "severity": "low",
-   "text": "Icon 19×20",
-   "section": "at 28, 2946",
-   "props": [
-    {
-     "prop": "icon color",
-     "design": "#0e2332",
-     "live": "#171717",
-     "swatch": true,
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "box": {
-     "x": 28,
-     "y": 2946,
-     "w": 19,
-     "h": 20
-    },
-    "textBox": {
-     "x": 28,
-     "y": 2946,
-     "w": 19,
-     "h": 20
-    },
-    "kind": "icon"
-   },
-   "live": {
-    "box": {
-     "x": 28,
-     "y": 2950,
-     "w": 20,
-     "h": 20
-    },
-    "textBox": {
-     "x": 28,
-     "y": 2950,
-     "w": 20,
-     "h": 20
-    },
-    "kind": "icon"
-   },
-   "match": "look"
-  },
-  {
    "id": "shape:panel@35,2",
    "category": "shape",
    "severity": "low",
@@ -3102,69 +3603,6 @@
     "kind": "panel"
    },
    "match": "look"
-  },
-  {
-   "id": "spacing:text@11,3",
-   "category": "spacing",
-   "severity": "low",
-   "text": "Text 70×14",
-   "section": "at 143, 33",
-   "props": [
-    {
-     "prop": "inset left in Panel 927×48",
-     "design": "47px",
-     "live": "51px",
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "box": {
-     "x": 143,
-     "y": 33,
-     "w": 70,
-     "h": 14
-    },
-    "textBox": {
-     "x": 143,
-     "y": 33,
-     "w": 70,
-     "h": 14
-    },
-    "kind": "text"
-   },
-   "live": {
-    "box": {
-     "x": 151,
-     "y": 33,
-     "w": 52,
-     "h": 14
-    },
-    "textBox": {
-     "x": 151,
-     "y": 33,
-     "w": 52,
-     "h": 14
-    },
-    "kind": "text"
-   },
-   "match": "place",
-   "related": [
-    {
-     "text": "Panel 927×48",
-     "design": {
-      "x": 96,
-      "y": 14,
-      "w": 927,
-      "h": 48
-     },
-     "live": {
-      "x": 100,
-      "y": 16,
-      "w": 918,
-      "h": 48
-     }
-    }
-   ]
   },
   {
    "id": "alignment:text@70,2:top",
@@ -3797,35 +4235,283 @@
    "live": null
   },
   {
-   "id": "missing:text@43,187",
+   "id": "missing:text@47,291",
    "category": "missing",
    "severity": "low",
-   "text": "Text 23×9",
-   "section": "at 670, 2991",
+   "text": "Text 82×17",
+   "section": "at 717, 4655",
    "props": [
     {
      "prop": "text",
-     "design": "23×9",
+     "design": "82×17",
      "live": "not found",
      "sev": "low"
     }
    ],
    "design": {
     "box": {
-     "x": 670,
-     "y": 2991,
-     "w": 23,
-     "h": 9
+     "x": 717,
+     "y": 4655,
+     "w": 82,
+     "h": 17
     },
     "textBox": {
-     "x": 670,
-     "y": 2991,
-     "w": 23,
-     "h": 9
+     "x": 717,
+     "y": 4655,
+     "w": 82,
+     "h": 17
     },
     "kind": "text"
    },
    "live": null
+  },
+  {
+   "id": "missing:icon@46,297",
+   "category": "missing",
+   "severity": "low",
+   "text": "Icon 10×12",
+   "section": "at 726, 4738",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "10×12",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 726,
+     "y": 4738,
+     "w": 10,
+     "h": 12
+    },
+    "textBox": {
+     "x": 726,
+     "y": 4738,
+     "w": 10,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:text@56,297",
+   "category": "missing",
+   "severity": "low",
+   "text": "Text 28×13",
+   "section": "at 879, 4738",
+   "props": [
+    {
+     "prop": "text",
+     "design": "28×13",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 879,
+     "y": 4738,
+     "w": 28,
+     "h": 13
+    },
+    "textBox": {
+     "x": 879,
+     "y": 4738,
+     "w": 28,
+     "h": 13
+    },
+    "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:line@6,308",
+   "category": "missing",
+   "severity": "low",
+   "text": "Divider 3×202",
+   "section": "at 100, 4828",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "3×202",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 100,
+     "y": 4828,
+     "w": 3,
+     "h": 202
+    },
+    "textBox": {
+     "x": 100,
+     "y": 4828,
+     "w": 3,
+     "h": 202
+    },
+    "kind": "line"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:line@88,308",
+   "category": "missing",
+   "severity": "low",
+   "text": "Divider 3×197",
+   "section": "at 1412, 4828",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "3×197",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1412,
+     "y": 4828,
+     "w": 3,
+     "h": 197
+    },
+    "textBox": {
+     "x": 1412,
+     "y": 4828,
+     "w": 3,
+     "h": 197
+    },
+    "kind": "line"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:icon@45,310",
+   "category": "missing",
+   "severity": "low",
+   "text": "Icon 22×22",
+   "section": "at 706, 4943",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "22×22",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 706,
+     "y": 4943,
+     "w": 22,
+     "h": 22
+    },
+    "textBox": {
+     "x": 706,
+     "y": 4943,
+     "w": 22,
+     "h": 22
+    },
+    "kind": "icon"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:icon@50,310",
+   "category": "missing",
+   "severity": "low",
+   "text": "Icon 22×22",
+   "section": "at 786, 4943",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "22×22",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 786,
+     "y": 4943,
+     "w": 22,
+     "h": 22
+    },
+    "textBox": {
+     "x": 786,
+     "y": 4943,
+     "w": 22,
+     "h": 22
+    },
+    "kind": "icon"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:icon@2,314",
+   "category": "missing",
+   "severity": "low",
+   "text": "Icon 19×20",
+   "section": "at 28, 5013",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "19×20",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 28,
+     "y": 5013,
+     "w": 19,
+     "h": 20
+    },
+    "textBox": {
+     "x": 28,
+     "y": 5013,
+     "w": 19,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "live": null
+  },
+  {
+   "id": "extra:live:panel@47,407",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 1365×13009",
+   "section": "at 75, 1",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "1365×13009",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 75,
+     "y": 1,
+     "w": 1365,
+     "h": 13009
+    },
+    "textBox": {
+     "x": 75,
+     "y": 1,
+     "w": 1365,
+     "h": 13009
+    },
+    "kind": "panel"
+   }
   },
   {
    "id": "extra:live:icon@8,3",
@@ -5595,59 +6281,5081 @@
    }
   },
   {
-   "id": "extra:live:shape@62,185",
+   "id": "extra:live:text@39,222",
    "category": "extra",
    "severity": "low",
-   "text": "Shape 24×85",
-   "section": "at 984, 2915",
+   "text": "Text 27×10",
+   "section": "at 614, 3543",
    "props": [
     {
-     "prop": "shape",
+     "prop": "text",
      "design": "not in design",
-     "live": "24×85",
+     "live": "27×10",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
     "box": {
-     "x": 984,
-     "y": 2915,
-     "w": 24,
-     "h": 85
+     "x": 614,
+     "y": 3543,
+     "w": 27,
+     "h": 10
     },
     "textBox": {
-     "x": 984,
-     "y": 2915,
-     "w": 24,
-     "h": 85
+     "x": 614,
+     "y": 3543,
+     "w": 27,
+     "h": 10
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@36,338",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 27×10",
+   "section": "at 564, 5406",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "27×10",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 564,
+     "y": 5406,
+     "w": 27,
+     "h": 10
+    },
+    "textBox": {
+     "x": 564,
+     "y": 5406,
+     "w": 27,
+     "h": 10
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:shape@48,365",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 424×283",
+   "section": "at 548, 5691",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "424×283",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 548,
+     "y": 5691,
+     "w": 424,
+     "h": 283
+    },
+    "textBox": {
+     "x": 548,
+     "y": 5691,
+     "w": 424,
+     "h": 283
     },
     "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:text@48,364",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 68×46",
+   "section": "at 729, 5805",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "68×46",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 729,
+     "y": 5805,
+     "w": 68,
+     "h": 46
+    },
+    "textBox": {
+     "x": 729,
+     "y": 5805,
+     "w": 68,
+     "h": 46
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@39,365",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 14×13",
+   "section": "at 610, 5827",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "14×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 610,
+     "y": 5827,
+     "w": 14,
+     "h": 13
+    },
+    "textBox": {
+     "x": 610,
+     "y": 5827,
+     "w": 14,
+     "h": 13
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@41,367",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 22×38",
+   "section": "at 645, 5852",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "22×38",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 645,
+     "y": 5852,
+     "w": 22,
+     "h": 38
+    },
+    "textBox": {
+     "x": 645,
+     "y": 5852,
+     "w": 22,
+     "h": 38
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,372",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 15×12",
+   "section": "at 626, 5950",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "15×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 626,
+     "y": 5950,
+     "w": 15,
+     "h": 12
+    },
+    "textBox": {
+     "x": 626,
+     "y": 5950,
+     "w": 15,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:panel@72,385",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 518×345",
+   "section": "at 888, 5990",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "518×345",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 888,
+     "y": 5990,
+     "w": 518,
+     "h": 345
+    },
+    "textBox": {
+     "x": 888,
+     "y": 5990,
+     "w": 518,
+     "h": 345
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@65,378",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 48×50",
+   "section": "at 1023, 6026",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "48×50",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1023,
+     "y": 6026,
+     "w": 48,
+     "h": 50
+    },
+    "textBox": {
+     "x": 1023,
+     "y": 6026,
+     "w": 48,
+     "h": 50
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@74,378",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 190×31",
+   "section": "at 1081, 6038",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "190×31",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1081,
+     "y": 6038,
+     "w": 190,
+     "h": 31
+    },
+    "textBox": {
+     "x": 1081,
+     "y": 6038,
+     "w": 190,
+     "h": 31
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@72,383",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 338×26",
+   "section": "at 978, 6113",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "338×26",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 978,
+     "y": 6113,
+     "w": 338,
+     "h": 26
+    },
+    "textBox": {
+     "x": 978,
+     "y": 6113,
+     "w": 338,
+     "h": 26
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@72,385",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 174×26",
+   "section": "at 1060, 6152",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "174×26",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1060,
+     "y": 6152,
+     "w": 174,
+     "h": 26
+    },
+    "textBox": {
+     "x": 1060,
+     "y": 6152,
+     "w": 174,
+     "h": 26
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@72,391",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 204×82",
+   "section": "at 1045, 6217",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "204×82",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1045,
+     "y": 6217,
+     "w": 204,
+     "h": 82
+    },
+    "textBox": {
+     "x": 1045,
+     "y": 6217,
+     "w": 204,
+     "h": 82
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@72,391",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 134×20",
+   "section": "at 1080, 6248",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "134×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1080,
+     "y": 6248,
+     "w": 134,
+     "h": 20
+    },
+    "textBox": {
+     "x": 1080,
+     "y": 6248,
+     "w": 134,
+     "h": 20
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:shape@31,465",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 770×342",
+   "section": "at 108, 7263",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "770×342",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 7263,
+     "w": 770,
+     "h": 342
+    },
+    "textBox": {
+     "x": 108,
+     "y": 7263,
+     "w": 770,
+     "h": 342
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:panel@26,486",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 606×305",
+   "section": "at 108, 7621",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "606×305",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 7621,
+     "w": 606,
+     "h": 305
+    },
+    "textBox": {
+     "x": 108,
+     "y": 7621,
+     "w": 606,
+     "h": 305
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@48,477",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 27×10",
+   "section": "at 747, 7634",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "27×10",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 747,
+     "y": 7634,
+     "w": 27,
+     "h": 10
+    },
+    "textBox": {
+     "x": 747,
+     "y": 7634,
+     "w": 27,
+     "h": 10
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@29,479",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 23×9",
+   "section": "at 454, 7656",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "23×9",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 454,
+     "y": 7656,
+     "w": 23,
+     "h": 9
+    },
+    "textBox": {
+     "x": 454,
+     "y": 7656,
+     "w": 23,
+     "h": 9
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@34,481",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 30×25",
+   "section": "at 533, 7677",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "30×25",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 533,
+     "y": 7677,
+     "w": 30,
+     "h": 25
+    },
+    "textBox": {
+     "x": 533,
+     "y": 7677,
+     "w": 30,
+     "h": 25
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@30,481",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 26×23",
+   "section": "at 465, 7682",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "26×23",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 465,
+     "y": 7682,
+     "w": 26,
+     "h": 23
+    },
+    "textBox": {
+     "x": 465,
+     "y": 7682,
+     "w": 26,
+     "h": 23
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:shape@37,484",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 47×105",
+   "section": "at 573, 7685",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "47×105",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 573,
+     "y": 7685,
+     "w": 47,
+     "h": 105
+    },
+    "textBox": {
+     "x": 573,
+     "y": 7685,
+     "w": 47,
+     "h": 105
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@27,484",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 13×11",
+   "section": "at 421, 7736",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "13×11",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 421,
+     "y": 7736,
+     "w": 13,
+     "h": 11
+    },
+    "textBox": {
+     "x": 421,
+     "y": 7736,
+     "w": 13,
+     "h": 11
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:panel@42,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 108×40",
+   "section": "at 611, 8249",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "108×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 611,
+     "y": 8249,
+     "w": 108,
+     "h": 40
+    },
+    "textBox": {
+     "x": 611,
+     "y": 8249,
+     "w": 108,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@49,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 115×40",
+   "section": "at 731, 8249",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "115×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 731,
+     "y": 8249,
+     "w": 115,
+     "h": 40
+    },
+    "textBox": {
+     "x": 731,
+     "y": 8249,
+     "w": 115,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 630, 8263",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 630,
+     "y": 8263,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 630,
+     "y": 8263,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@47,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 750, 8263",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 750,
+     "y": 8263,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 750,
+     "y": 8263,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@42,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 50×14",
+   "section": "at 652, 8264",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "50×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 652,
+     "y": 8264,
+     "w": 50,
+     "h": 14
+    },
+    "textBox": {
+     "x": 652,
+     "y": 8264,
+     "w": 50,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@50,517",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 59×14",
+   "section": "at 771, 8264",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "59×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 771,
+     "y": 8264,
+     "w": 59,
+     "h": 14
+    },
+    "textBox": {
+     "x": 771,
+     "y": 8264,
+     "w": 59,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@42,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 128×40",
+   "section": "at 611, 8301",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "128×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 611,
+     "y": 8301,
+     "w": 128,
+     "h": 40
+    },
+    "textBox": {
+     "x": 611,
+     "y": 8301,
+     "w": 128,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@50,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 89×40",
+   "section": "at 751, 8301",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "89×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 751,
+     "y": 8301,
+     "w": 89,
+     "h": 40
+    },
+    "textBox": {
+     "x": 751,
+     "y": 8301,
+     "w": 89,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@56,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 90×40",
+   "section": "at 852, 8301",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "90×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 852,
+     "y": 8301,
+     "w": 90,
+     "h": 40
+    },
+    "textBox": {
+     "x": 852,
+     "y": 8301,
+     "w": 90,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 630, 8315",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 630,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 630,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@49,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 770, 8315",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 770,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 770,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@55,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 871, 8315",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 871,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 871,
+     "y": 8315,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@43,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 70×14",
+   "section": "at 652, 8316",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "70×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 652,
+     "y": 8316,
+     "w": 70,
+     "h": 14
+    },
+    "textBox": {
+     "x": 652,
+     "y": 8316,
+     "w": 70,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@50,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 33×14",
+   "section": "at 791, 8316",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "33×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 791,
+     "y": 8316,
+     "w": 33,
+     "h": 14
+    },
+    "textBox": {
+     "x": 791,
+     "y": 8316,
+     "w": 33,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@57,520",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 33×11",
+   "section": "at 893, 8316",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "33×11",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 893,
+     "y": 8316,
+     "w": 33,
+     "h": 11
+    },
+    "textBox": {
+     "x": 893,
+     "y": 8316,
+     "w": 33,
+     "h": 11
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@42,523",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 124×40",
+   "section": "at 611, 8353",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "124×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 611,
+     "y": 8353,
+     "w": 124,
+     "h": 40
+    },
+    "textBox": {
+     "x": 611,
+     "y": 8353,
+     "w": 124,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@50,523",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 98×40",
+   "section": "at 747, 8353",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "98×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 747,
+     "y": 8353,
+     "w": 98,
+     "h": 40
+    },
+    "textBox": {
+     "x": 747,
+     "y": 8353,
+     "w": 98,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,523",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 630, 8367",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 630,
+     "y": 8367,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 630,
+     "y": 8367,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@48,523",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 766, 8367",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 766,
+     "y": 8367,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 766,
+     "y": 8367,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@43,523",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 67×14",
+   "section": "at 651, 8368",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "67×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 651,
+     "y": 8368,
+     "w": 67,
+     "h": 14
+    },
+    "textBox": {
+     "x": 651,
+     "y": 8368,
+     "w": 67,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@51,524",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 42×11",
+   "section": "at 787, 8371",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "42×11",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 787,
+     "y": 8371,
+     "w": 42,
+     "h": 11
+    },
+    "textBox": {
+     "x": 787,
+     "y": 8371,
+     "w": 42,
+     "h": 11
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@42,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 121×40",
+   "section": "at 611, 8405",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "121×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 611,
+     "y": 8405,
+     "w": 121,
+     "h": 40
+    },
+    "textBox": {
+     "x": 611,
+     "y": 8405,
+     "w": 121,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@50,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 119×40",
+   "section": "at 744, 8405",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "119×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 744,
+     "y": 8405,
+     "w": 119,
+     "h": 40
+    },
+    "textBox": {
+     "x": 744,
+     "y": 8405,
+     "w": 119,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 630, 8419",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 630,
+     "y": 8419,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 630,
+     "y": 8419,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@48,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 763, 8419",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 763,
+     "y": 8419,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 763,
+     "y": 8419,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@43,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 65×14",
+   "section": "at 651, 8420",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "65×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 651,
+     "y": 8420,
+     "w": 65,
+     "h": 14
+    },
+    "textBox": {
+     "x": 651,
+     "y": 8420,
+     "w": 65,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@51,527",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 61×14",
+   "section": "at 785, 8420",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "61×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 785,
+     "y": 8420,
+     "w": 61,
+     "h": 14
+    },
+    "textBox": {
+     "x": 785,
+     "y": 8420,
+     "w": 61,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@43,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 151×40",
+   "section": "at 611, 8457",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "151×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 611,
+     "y": 8457,
+     "w": 151,
+     "h": 40
+    },
+    "textBox": {
+     "x": 611,
+     "y": 8457,
+     "w": 151,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@52,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 100×40",
+   "section": "at 774, 8457",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "100×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 774,
+     "y": 8457,
+     "w": 100,
+     "h": 40
+    },
+    "textBox": {
+     "x": 774,
+     "y": 8457,
+     "w": 100,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@40,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 630, 8471",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 630,
+     "y": 8471,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 630,
+     "y": 8471,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@50,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 793, 8471",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 793,
+     "y": 8471,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 793,
+     "y": 8471,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@44,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 95×14",
+   "section": "at 651, 8472",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "95×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 651,
+     "y": 8472,
+     "w": 95,
+     "h": 14
+    },
+    "textBox": {
+     "x": 651,
+     "y": 8472,
+     "w": 95,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@52,530",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 44×11",
+   "section": "at 814, 8472",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "44×11",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 814,
+     "y": 8472,
+     "w": 44,
+     "h": 11
+    },
+    "textBox": {
+     "x": 814,
+     "y": 8472,
+     "w": 44,
+     "h": 11
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@36,589",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 27×10",
+   "section": "at 563, 9420",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "27×10",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 563,
+     "y": 9420,
+     "w": 27,
+     "h": 10
+    },
+    "textBox": {
+     "x": 563,
+     "y": 9420,
+     "w": 27,
+     "h": 10
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@31,638",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 775×339",
+   "section": "at 108, 10046",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "775×339",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 10046,
+     "w": 775,
+     "h": 339
+    },
+    "textBox": {
+     "x": 108,
+     "y": 10046,
+     "w": 775,
+     "h": 339
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@58,629",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 27×10",
+   "section": "at 916, 10059",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "27×10",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 916,
+     "y": 10059,
+     "w": 27,
+     "h": 10
+    },
+    "textBox": {
+     "x": 916,
+     "y": 10059,
+     "w": 27,
+     "h": 10
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@31,630",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 11×11",
+   "section": "at 491, 10070",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "11×11",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 491,
+     "y": 10070,
+     "w": 11,
+     "h": 11
+    },
+    "textBox": {
+     "x": 491,
+     "y": 10070,
+     "w": 11,
+     "h": 11
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@30,632",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 40×52",
+   "section": "at 454, 10090",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "40×52",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 454,
+     "y": 10090,
+     "w": 40,
+     "h": 52
+    },
+    "textBox": {
+     "x": 454,
+     "y": 10090,
+     "w": 40,
+     "h": 52
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:shape@19,633",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 18×55",
+   "section": "at 292, 10093",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "18×55",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 292,
+     "y": 10093,
+     "w": 18,
+     "h": 55
+    },
+    "textBox": {
+     "x": 292,
+     "y": 10093,
+     "w": 18,
+     "h": 55
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@75,632",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 15×22",
+   "section": "at 1195, 10094",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "15×22",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1195,
+     "y": 10094,
+     "w": 15,
+     "h": 22
+    },
+    "textBox": {
+     "x": 1195,
+     "y": 10094,
+     "w": 15,
+     "h": 22
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@21,633",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 49×35",
+   "section": "at 307, 10103",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "49×35",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 307,
+     "y": 10103,
+     "w": 49,
+     "h": 35
+    },
+    "textBox": {
+     "x": 307,
+     "y": 10103,
+     "w": 49,
+     "h": 35
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@31,634",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 31×19",
+   "section": "at 484, 10128",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "31×19",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 484,
+     "y": 10128,
+     "w": 31,
+     "h": 19
+    },
+    "textBox": {
+     "x": 484,
+     "y": 10128,
+     "w": 31,
+     "h": 19
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:shape@74,638",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 21×150",
+   "section": "at 1169, 10138",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "21×150",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1169,
+     "y": 10138,
+     "w": 21,
+     "h": 150
+    },
+    "textBox": {
+     "x": 1169,
+     "y": 10138,
+     "w": 21,
+     "h": 150
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@31,635",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 10×15",
+   "section": "at 495, 10154",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "10×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 495,
+     "y": 10154,
+     "w": 10,
+     "h": 15
+    },
+    "textBox": {
+     "x": 495,
+     "y": 10154,
+     "w": 10,
+     "h": 15
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@20,635",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 26×15",
+   "section": "at 314, 10158",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "26×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 314,
+     "y": 10158,
+     "w": 26,
+     "h": 15
+    },
+    "textBox": {
+     "x": 314,
+     "y": 10158,
+     "w": 26,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@22,638",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 33×39",
+   "section": "at 331, 10182",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "33×39",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 331,
+     "y": 10182,
+     "w": 33,
+     "h": 39
+    },
+    "textBox": {
+     "x": 331,
+     "y": 10182,
+     "w": 33,
+     "h": 39
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:shape@69,642",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 27×161",
+   "section": "at 1097, 10196",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "27×161",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1097,
+     "y": 10196,
+     "w": 27,
+     "h": 161
+    },
+    "textBox": {
+     "x": 1097,
+     "y": 10196,
+     "w": 27,
+     "h": 161
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@31,642",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 13×15",
+   "section": "at 495, 10257",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "13×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 495,
+     "y": 10257,
+     "w": 13,
+     "h": 15
+    },
+    "textBox": {
+     "x": 495,
+     "y": 10257,
+     "w": 13,
+     "h": 15
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:shape@72,642",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 5×34",
+   "section": "at 1155, 10262",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "5×34",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1155,
+     "y": 10262,
+     "w": 5,
+     "h": 34
+    },
+    "textBox": {
+     "x": 1155,
+     "y": 10262,
+     "w": 5,
+     "h": 34
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@30,643",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×31",
+   "section": "at 467, 10265",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×31",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 467,
+     "y": 10265,
+     "w": 20,
+     "h": 31
+    },
+    "textBox": {
+     "x": 467,
+     "y": 10265,
+     "w": 20,
+     "h": 31
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@73,645",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 29×58",
+   "section": "at 1155, 10296",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "29×58",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1155,
+     "y": 10296,
+     "w": 29,
+     "h": 58
+    },
+    "textBox": {
+     "x": 1155,
+     "y": 10296,
+     "w": 29,
+     "h": 58
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:shape@17,646",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 75×35",
+   "section": "at 230, 10318",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "75×35",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 230,
+     "y": 10318,
+     "w": 75,
+     "h": 35
+    },
+    "textBox": {
+     "x": 230,
+     "y": 10318,
+     "w": 75,
+     "h": 35
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:icon@22,646",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 16×14",
+   "section": "at 349, 10323",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "16×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 349,
+     "y": 10323,
+     "w": 16,
+     "h": 14
+    },
+    "textBox": {
+     "x": 349,
+     "y": 10323,
+     "w": 16,
+     "h": 14
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@33,647",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 53×36",
+   "section": "at 501, 10339",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "53×36",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 501,
+     "y": 10339,
+     "w": 53,
+     "h": 36
+    },
+    "textBox": {
+     "x": 501,
+     "y": 10339,
+     "w": 53,
+     "h": 36
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@26,648",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 113×29",
+   "section": "at 358, 10348",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "113×29",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 358,
+     "y": 10348,
+     "w": 113,
+     "h": 29
+    },
+    "textBox": {
+     "x": 358,
+     "y": 10348,
+     "w": 113,
+     "h": 29
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@21,648",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 22×13",
+   "section": "at 328, 10355",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "22×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 328,
+     "y": 10355,
+     "w": 22,
+     "h": 13
+    },
+    "textBox": {
+     "x": 328,
+     "y": 10355,
+     "w": 22,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:shape@72,677",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 517×345",
+   "section": "at 889, 10662",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "517×345",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 889,
+     "y": 10662,
+     "w": 517,
+     "h": 345
+    },
+    "textBox": {
+     "x": 889,
+     "y": 10662,
+     "w": 517,
+     "h": 345
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:text@10,708",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 68×13",
+   "section": "at 124, 11315",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "68×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 124,
+     "y": 11315,
+     "w": 68,
+     "h": 13
+    },
+    "textBox": {
+     "x": 124,
+     "y": 11315,
+     "w": 68,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:shape@22,712",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 73×101",
+   "section": "at 308, 11346",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "73×101",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 308,
+     "y": 11346,
+     "w": 73,
+     "h": 101
+    },
+    "textBox": {
+     "x": 308,
+     "y": 11346,
+     "w": 73,
+     "h": 101
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:shape@18,713",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 51×100",
+   "section": "at 266, 11363",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "51×100",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 266,
+     "y": 11363,
+     "w": 51,
+     "h": 100
+    },
+    "textBox": {
+     "x": 266,
+     "y": 11363,
+     "w": 51,
+     "h": 100
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:shape@21,717",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 74×48",
+   "section": "at 294, 11444",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "74×48",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 294,
+     "y": 11444,
+     "w": 74,
+     "h": 48
+    },
+    "textBox": {
+     "x": 294,
+     "y": 11444,
+     "w": 74,
+     "h": 48
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:shape@17,717",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 4×31",
+   "section": "at 276, 11453",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "4×31",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 276,
+     "y": 11453,
+     "w": 4,
+     "h": 31
+    },
+    "textBox": {
+     "x": 276,
+     "y": 11453,
+     "w": 4,
+     "h": 31
+    },
+    "kind": "shape"
+   }
+  },
+  {
+   "id": "extra:live:text@17,720",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 50×29",
+   "section": "at 240, 11501",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "50×29",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 240,
+     "y": 11501,
+     "w": 50,
+     "h": 29
+    },
+    "textBox": {
+     "x": 240,
+     "y": 11501,
+     "w": 50,
+     "h": 29
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@21,719",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 32×15",
+   "section": "at 313, 11502",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "32×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 313,
+     "y": 11502,
+     "w": 32,
+     "h": 15
+    },
+    "textBox": {
+     "x": 313,
+     "y": 11502,
+     "w": 32,
+     "h": 15
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@24,721",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 175×34",
+   "section": "at 291, 11525",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "175×34",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 291,
+     "y": 11525,
+     "w": 175,
+     "h": 34
+    },
+    "textBox": {
+     "x": 291,
+     "y": 11525,
+     "w": 175,
+     "h": 34
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@47,732",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 208×56",
+   "section": "at 654, 11683",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "208×56",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 654,
+     "y": 11683,
+     "w": 208,
+     "h": 56
+    },
+    "textBox": {
+     "x": 654,
+     "y": 11683,
+     "w": 208,
+     "h": 56
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@47,732",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 86×17",
+   "section": "at 716, 11704",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "86×17",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 716,
+     "y": 11704,
+     "w": 86,
+     "h": 17
+    },
+    "textBox": {
+     "x": 716,
+     "y": 11704,
+     "w": 86,
+     "h": 17
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@36,738",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 44×44",
+   "section": "at 547, 11779",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "44×44",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 547,
+     "y": 11779,
+     "w": 44,
+     "h": 44
+    },
+    "textBox": {
+     "x": 547,
+     "y": 11779,
+     "w": 44,
+     "h": 44
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@42,738",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 10×13",
+   "section": "at 672, 11795",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "10×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 672,
+     "y": 11795,
+     "w": 10,
+     "h": 13
+    },
+    "textBox": {
+     "x": 672,
+     "y": 11795,
+     "w": 10,
+     "h": 13
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@46,738",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 10×12",
+   "section": "at 726, 11795",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "10×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 726,
+     "y": 11795,
+     "w": 10,
+     "h": 12
+    },
+    "textBox": {
+     "x": 726,
+     "y": 11795,
+     "w": 10,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@56,738",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 17×12",
+   "section": "at 884, 11795",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "17×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 884,
+     "y": 11795,
+     "w": 17,
+     "h": 12
+    },
+    "textBox": {
+     "x": 884,
+     "y": 11795,
+     "w": 17,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@47,750",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 1300×233",
+   "section": "at 108, 11887",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "1300×233",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 11887,
+     "w": 1300,
+     "h": 233
+    },
+    "textBox": {
+     "x": 108,
+     "y": 11887,
+     "w": 1300,
+     "h": 233
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:text@47,748",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 290×19",
+   "section": "at 614, 11954",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "290×19",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 614,
+     "y": 11954,
+     "w": 290,
+     "h": 19
+    },
+    "textBox": {
+     "x": 614,
+     "y": 11954,
+     "w": 290,
+     "h": 19
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@45,752",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 56×56",
+   "section": "at 694, 11999",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "56×56",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 694,
+     "y": 11999,
+     "w": 56,
+     "h": 56
+    },
+    "textBox": {
+     "x": 694,
+     "y": 11999,
+     "w": 56,
+     "h": 56
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@50,752",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 56×56",
+   "section": "at 766, 11999",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "56×56",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 766,
+     "y": 11999,
+     "w": 56,
+     "h": 56
+    },
+    "textBox": {
+     "x": 766,
+     "y": 11999,
+     "w": 56,
+     "h": 56
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@45,752",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 712, 12017",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 712,
+     "y": 12017,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 712,
+     "y": 12017,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@50,752",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 784, 12017",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 784,
+     "y": 12017,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 784,
+     "y": 12017,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@47,770",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 463×21",
+   "section": "at 526, 12309",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "463×21",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 526,
+     "y": 12309,
+     "w": 463,
+     "h": 21
+    },
+    "textBox": {
+     "x": 526,
+     "y": 12309,
+     "w": 463,
+     "h": 21
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@10,777",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 77×15",
+   "section": "at 117, 12419",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "77×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12419,
+     "w": 77,
+     "h": 15
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12419,
+     "w": 77,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@30,777",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 70×15",
+   "section": "at 447, 12419",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "70×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 447,
+     "y": 12419,
+     "w": 70,
+     "h": 15
+    },
+    "textBox": {
+     "x": 447,
+     "y": 12419,
+     "w": 70,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@52,777",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 96×14",
+   "section": "at 779, 12420",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "96×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12420,
+     "w": 96,
+     "h": 14
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12420,
+     "w": 96,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@72,777",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 94×17",
+   "section": "at 1110, 12420",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "94×17",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12420,
+     "w": 94,
+     "h": 17
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12420,
+     "w": 94,
+     "h": 17
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@11,779",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 122×12",
+   "section": "at 117, 12452",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "122×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12452,
+     "w": 122,
+     "h": 12
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12452,
+     "w": 122,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@31,779",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 90×13",
+   "section": "at 448, 12452",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "90×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12452,
+     "w": 90,
+     "h": 13
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12452,
+     "w": 90,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,779",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 48×15",
+   "section": "at 1110, 12452",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "48×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12452,
+     "w": 48,
+     "h": 15
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12452,
+     "w": 48,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@50,779",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 35×13",
+   "section": "at 779, 12453",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "35×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12453,
+     "w": 35,
+     "h": 13
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12453,
+     "w": 35,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@11,780",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 110×12",
+   "section": "at 117, 12480",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "110×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12480,
+     "w": 110,
+     "h": 12
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12480,
+     "w": 110,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@31,780",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 110×15",
+   "section": "at 447, 12480",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "110×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 447,
+     "y": 12480,
+     "w": 110,
+     "h": 15
+    },
+    "textBox": {
+     "x": 447,
+     "y": 12480,
+     "w": 110,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@52,780",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 114×15",
+   "section": "at 779, 12480",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "114×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12480,
+     "w": 114,
+     "h": 15
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12480,
+     "w": 114,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,780",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 52×15",
+   "section": "at 1110, 12480",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "52×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12480,
+     "w": 52,
+     "h": 15
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12480,
+     "w": 52,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@11,782",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 127×15",
+   "section": "at 117, 12508",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "127×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12508,
+     "w": 127,
+     "h": 15
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12508,
+     "w": 127,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@31,782",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 99×15",
+   "section": "at 447, 12508",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "99×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 447,
+     "y": 12508,
+     "w": 99,
+     "h": 15
+    },
+    "textBox": {
+     "x": 447,
+     "y": 12508,
+     "w": 99,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@52,782",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 114×15",
+   "section": "at 778, 12508",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "114×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 778,
+     "y": 12508,
+     "w": 114,
+     "h": 15
+    },
+    "textBox": {
+     "x": 778,
+     "y": 12508,
+     "w": 114,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@72,782",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 69×15",
+   "section": "at 1110, 12508",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "69×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12508,
+     "w": 69,
+     "h": 15
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12508,
+     "w": 69,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@17,782",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 30×14",
+   "section": "at 252, 12509",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "30×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 252,
+     "y": 12509,
+     "w": 30,
+     "h": 14
+    },
+    "textBox": {
+     "x": 252,
+     "y": 12509,
+     "w": 30,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@31,784",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 111×15",
+   "section": "at 448, 12536",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "111×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12536,
+     "w": 111,
+     "h": 15
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12536,
+     "w": 111,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@53,784",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 124×15",
+   "section": "at 778, 12536",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "124×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 778,
+     "y": 12536,
+     "w": 124,
+     "h": 15
+    },
+    "textBox": {
+     "x": 778,
+     "y": 12536,
+     "w": 124,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,784",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 55×12",
+   "section": "at 1110, 12536",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "55×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12536,
+     "w": 55,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12536,
+     "w": 55,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@10,784",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 87×12",
+   "section": "at 117, 12537",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "87×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12537,
+     "w": 87,
+     "h": 12
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12537,
+     "w": 87,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@36,784",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 30×14",
+   "section": "at 568, 12537",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "30×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 568,
+     "y": 12537,
+     "w": 30,
+     "h": 14
+    },
+    "textBox": {
+     "x": 568,
+     "y": 12537,
+     "w": 30,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,786",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 56×16",
+   "section": "at 1110, 12564",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "56×16",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12564,
+     "w": 56,
+     "h": 16
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12564,
+     "w": 56,
+     "h": 16
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@10,786",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 80×13",
+   "section": "at 117, 12565",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "80×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12565,
+     "w": 80,
+     "h": 13
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12565,
+     "w": 80,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@32,786",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 129×15",
+   "section": "at 448, 12565",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "129×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12565,
+     "w": 129,
+     "h": 15
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12565,
+     "w": 129,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@51,786",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 63×13",
+   "section": "at 778, 12565",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "63×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 778,
+     "y": 12565,
+     "w": 63,
+     "h": 13
+    },
+    "textBox": {
+     "x": 778,
+     "y": 12565,
+     "w": 63,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@72,787",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 78×12",
+   "section": "at 1110, 12592",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "78×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12592,
+     "w": 78,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12592,
+     "w": 78,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@11,788",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 108×15",
+   "section": "at 116, 12593",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "108×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 116,
+     "y": 12593,
+     "w": 108,
+     "h": 15
+    },
+    "textBox": {
+     "x": 116,
+     "y": 12593,
+     "w": 108,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@29,787",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 36×13",
+   "section": "at 448, 12593",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "36×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12593,
+     "w": 36,
+     "h": 13
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12593,
+     "w": 36,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@51,788",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 59×15",
+   "section": "at 779, 12593",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "59×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12593,
+     "w": 59,
+     "h": 15
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12593,
+     "w": 59,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,789",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 56×13",
+   "section": "at 1110, 12620",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "56×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12620,
+     "w": 56,
+     "h": 13
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12620,
+     "w": 56,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@9,789",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 62×13",
+   "section": "at 116, 12621",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "62×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 116,
+     "y": 12621,
+     "w": 62,
+     "h": 13
+    },
+    "textBox": {
+     "x": 116,
+     "y": 12621,
+     "w": 62,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@53,789",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 131×15",
+   "section": "at 779, 12621",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "131×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12621,
+     "w": 131,
+     "h": 15
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12621,
+     "w": 131,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@13,789",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 30×14",
+   "section": "at 186, 12622",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "30×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 186,
+     "y": 12622,
+     "w": 30,
+     "h": 14
+    },
+    "textBox": {
+     "x": 186,
+     "y": 12622,
+     "w": 30,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@29,789",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 38×12",
+   "section": "at 448, 12622",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "38×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12622,
+     "w": 38,
+     "h": 12
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12622,
+     "w": 38,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@71,791",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 48×12",
+   "section": "at 1110, 12648",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "48×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1110,
+     "y": 12648,
+     "w": 48,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1110,
+     "y": 12648,
+     "w": 48,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@29,791",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 36×13",
+   "section": "at 448, 12649",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "36×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12649,
+     "w": 36,
+     "h": 13
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12649,
+     "w": 36,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@50,791",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 43×13",
+   "section": "at 779, 12649",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "43×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12649,
+     "w": 43,
+     "h": 13
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12649,
+     "w": 43,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@13,791",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 169×15",
+   "section": "at 116, 12650",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "169×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 116,
+     "y": 12650,
+     "w": 169,
+     "h": 15
+    },
+    "textBox": {
+     "x": 116,
+     "y": 12650,
+     "w": 169,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@31,793",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 108×15",
+   "section": "at 448, 12677",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "108×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12677,
+     "w": 108,
+     "h": 15
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12677,
+     "w": 108,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@51,793",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 76×13",
+   "section": "at 779, 12677",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "76×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 779,
+     "y": 12677,
+     "w": 76,
+     "h": 13
+    },
+    "textBox": {
+     "x": 779,
+     "y": 12677,
+     "w": 76,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@12,793",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 161×15",
+   "section": "at 116, 12678",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "161×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 116,
+     "y": 12678,
+     "w": 161,
+     "h": 15
+    },
+    "textBox": {
+     "x": 116,
+     "y": 12678,
+     "w": 161,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@36,793",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 30×14",
+   "section": "at 564, 12678",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "30×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 564,
+     "y": 12678,
+     "w": 30,
+     "h": 14
+    },
+    "textBox": {
+     "x": 564,
+     "y": 12678,
+     "w": 30,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@12,795",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 134×14",
+   "section": "at 117, 12706",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "134×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12706,
+     "w": 134,
+     "h": 14
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12706,
+     "w": 134,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@32,795",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 115×13",
+   "section": "at 448, 12706",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "115×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 448,
+     "y": 12706,
+     "w": 115,
+     "h": 13
+    },
+    "textBox": {
+     "x": 448,
+     "y": 12706,
+     "w": 115,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@10,796",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 95×15",
+   "section": "at 117, 12734",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "95×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12734,
+     "w": 95,
+     "h": 15
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12734,
+     "w": 95,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@10,798",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 100×15",
+   "section": "at 117, 12762",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "100×15",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 117,
+     "y": 12762,
+     "w": 100,
+     "h": 15
+    },
+    "textBox": {
+     "x": 117,
+     "y": 12762,
+     "w": 100,
+     "h": 15
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@11,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 132×32",
+   "section": "at 116, 12841",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "132×32",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 116,
+     "y": 12841,
+     "w": 132,
+     "h": 32
+    },
+    "textBox": {
+     "x": 116,
+     "y": 12841,
+     "w": 132,
+     "h": 32
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@18,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 281, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 281,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 281,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@21,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 321, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 321,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 321,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@23,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 361, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 361,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 361,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@26,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 401, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 401,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 401,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@28,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 16×18",
+   "section": "at 443, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "16×18",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 443,
+     "y": 12847,
+     "w": 16,
+     "h": 18
+    },
+    "textBox": {
+     "x": 443,
+     "y": 12847,
+     "w": 16,
+     "h": 18
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@31,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 481, 12847",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 481,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 481,
+     "y": 12847,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@33,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×16",
+   "section": "at 521, 12849",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×16",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 521,
+     "y": 12849,
+     "w": 20,
+     "h": 16
+    },
+    "textBox": {
+     "x": 521,
+     "y": 12849,
+     "w": 20,
+     "h": 16
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@69,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 87×12",
+   "section": "at 1058, 12851",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "87×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1058,
+     "y": 12851,
+     "w": 87,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1058,
+     "y": 12851,
+     "w": 87,
+     "h": 12
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@77,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 91×14",
+   "section": "at 1179, 12851",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "91×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1179,
+     "y": 12851,
+     "w": 91,
+     "h": 14
+    },
+    "textBox": {
+     "x": 1179,
+     "y": 12851,
+     "w": 91,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@85,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 96×14",
+   "section": "at 1304, 12851",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "96×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1304,
+     "y": 12851,
+     "w": 96,
+     "h": 14
+    },
+    "textBox": {
+     "x": 1304,
+     "y": 12851,
+     "w": 96,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@56,804",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 238×14",
+   "section": "at 781, 12852",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "238×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 781,
+     "y": 12852,
+     "w": 238,
+     "h": 14
+    },
+    "textBox": {
+     "x": 781,
+     "y": 12852,
+     "w": 238,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@86,808",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 60×32",
+   "section": "at 1340, 12914",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "60×32",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1340,
+     "y": 12914,
+     "w": 60,
+     "h": 32
+    },
+    "textBox": {
+     "x": 1340,
+     "y": 12914,
+     "w": 60,
+     "h": 32
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@80,808",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 96×14",
+   "section": "at 1232, 12925",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "96×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1232,
+     "y": 12925,
+     "w": 96,
+     "h": 14
+    },
+    "textBox": {
+     "x": 1232,
+     "y": 12925,
+     "w": 96,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@2,811",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×20",
+   "section": "at 28, 12960",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×20",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 28,
+     "y": 12960,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 28,
+     "y": 12960,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@10,812",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 129×16",
+   "section": "at 92, 12991",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "129×16",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 92,
+     "y": 12991,
+     "w": 129,
+     "h": 16
+    },
+    "textBox": {
+     "x": 92,
+     "y": 12991,
+     "w": 129,
+     "h": 16
+    },
+    "kind": "text"
    }
   }
  ],
  "stats": {
-  "designItems": 122,
-  "liveItems": 118,
-  "matched": 32,
-  "anchors": 6,
-  "missing": 22,
-  "extra": 58,
-  "findings": 133,
+  "designItems": 158,
+  "liveItems": 380,
+  "matched": 33,
+  "anchors": 8,
+  "missing": 34,
+  "extra": 221,
+  "findings": 312,
   "byCategory": {
    "typography": 3,
-   "color": 18,
-   "size": 8,
+   "color": 17,
+   "size": 11,
    "shape": 5,
-   "spacing": 15,
-   "alignment": 4,
-   "missing": 22,
-   "extra": 58
+   "spacing": 16,
+   "alignment": 5,
+   "missing": 34,
+   "extra": 221
   },
   "bySeverity": {
-   "low": 90,
-   "medium": 19,
-   "high": 24
+   "low": 258,
+   "medium": 24,
+   "high": 30
   }
  }
 }

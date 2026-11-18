@@ -3,7 +3,7 @@
  "baseId": "log-in",
  "theme": "dark",
  "label": "Log in",
- "generatedAt": "2026-11-18T12:36:53.507Z",
+ "generatedAt": "2026-11-18T13:06:33.309Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -34,6 +34,7 @@
   "items": 25,
   "background": "#1c1c1c",
   "log": [
+   "pageerror: google is not defined",
    "pageerror: Cannot read properties of undefined (reading 'init')"
   ]
  },
@@ -109,13 +110,13 @@
    "how": "shape"
   },
   {
-   "design": 25,
-   "live": 18,
+   "design": 9,
+   "live": 10,
    "how": "look"
   },
   {
-   "design": 9,
-   "live": 10,
+   "design": 25,
+   "live": 18,
    "how": "look"
   },
   {
@@ -196,6 +197,60 @@
      "y": 510,
      "w": 44,
      "h": 15
+    },
+    "kind": "text"
+   },
+   "match": "look"
+  },
+  {
+   "id": "color:text@62,17",
+   "category": "color",
+   "severity": "high",
+   "text": "Text 230×16",
+   "section": "at 871, 262",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#c9c9c9",
+     "live": "#e0e0e0",
+     "swatch": true,
+     "sev": "low"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "#ff7900",
+     "live": "none (all one colour)",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 871,
+     "y": 262,
+     "w": 230,
+     "h": 16
+    },
+    "textBox": {
+     "x": 871,
+     "y": 262,
+     "w": 230,
+     "h": 16
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 871,
+     "y": 258,
+     "w": 230,
+     "h": 16
+    },
+    "textBox": {
+     "x": 871,
+     "y": 258,
+     "w": 230,
+     "h": 16
     },
     "kind": "text"
    },
@@ -520,14 +575,14 @@
    "live": {
     "box": {
      "x": 57,
-     "y": 691,
-     "w": 454,
+     "y": 690,
+     "w": 451,
      "h": 28
     },
     "textBox": {
      "x": 57,
-     "y": 691,
-     "w": 454,
+     "y": 690,
+     "w": 451,
      "h": 28
     },
     "kind": "text"
@@ -955,53 +1010,6 @@
    "live": null
   },
   {
-   "id": "color:text@62,17",
-   "category": "color",
-   "severity": "low",
-   "text": "Text 230×16",
-   "section": "at 871, 262",
-   "props": [
-    {
-     "prop": "text color",
-     "design": "#c9c9c9",
-     "live": "#e0e0e0",
-     "swatch": true,
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "box": {
-     "x": 871,
-     "y": 262,
-     "w": 230,
-     "h": 16
-    },
-    "textBox": {
-     "x": 871,
-     "y": 262,
-     "w": 230,
-     "h": 16
-    },
-    "kind": "text"
-   },
-   "live": {
-    "box": {
-     "x": 871,
-     "y": 258,
-     "w": 230,
-     "h": 16
-    },
-    "textBox": {
-     "x": 871,
-     "y": 258,
-     "w": 230,
-     "h": 16
-    },
-    "kind": "text"
-   },
-   "match": "look"
-  },
-  {
    "id": "shape:panel@68,21",
    "category": "shape",
    "severity": "low",
@@ -1425,9 +1433,9 @@
    "extra": 2
   },
   "bySeverity": {
-   "low": 13,
+   "low": 12,
    "medium": 12,
-   "high": 4
+   "high": 5
   }
  }
 }

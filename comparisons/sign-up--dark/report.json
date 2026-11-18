@@ -3,7 +3,7 @@
  "baseId": "sign-up",
  "theme": "dark",
  "label": "Create an account",
- "generatedAt": "2026-11-18T12:36:40.215Z",
+ "generatedAt": "2026-11-18T13:06:20.746Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -190,6 +190,60 @@
      "y": 476,
      "w": 117,
      "h": 12
+    },
+    "kind": "text"
+   },
+   "match": "look"
+  },
+  {
+   "id": "color:text@62,17",
+   "category": "color",
+   "severity": "high",
+   "text": "Text 235×16",
+   "section": "at 870, 262",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#c9c9c9",
+     "live": "#e0e0e0",
+     "swatch": true,
+     "sev": "low"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "#ff7900",
+     "live": "none (all one colour)",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 870,
+     "y": 262,
+     "w": 235,
+     "h": 16
+    },
+    "textBox": {
+     "x": 870,
+     "y": 262,
+     "w": 235,
+     "h": 16
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 870,
+     "y": 255,
+     "w": 235,
+     "h": 16
+    },
+    "textBox": {
+     "x": 870,
+     "y": 255,
+     "w": 235,
+     "h": 16
     },
     "kind": "text"
    },
@@ -887,53 +941,6 @@
    "live": null
   },
   {
-   "id": "color:text@62,17",
-   "category": "color",
-   "severity": "low",
-   "text": "Text 235×16",
-   "section": "at 870, 262",
-   "props": [
-    {
-     "prop": "text color",
-     "design": "#c9c9c9",
-     "live": "#e0e0e0",
-     "swatch": true,
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "box": {
-     "x": 870,
-     "y": 262,
-     "w": 235,
-     "h": 16
-    },
-    "textBox": {
-     "x": 870,
-     "y": 262,
-     "w": 235,
-     "h": 16
-    },
-    "kind": "text"
-   },
-   "live": {
-    "box": {
-     "x": 870,
-     "y": 255,
-     "w": 235,
-     "h": 16
-    },
-    "textBox": {
-     "x": 870,
-     "y": 255,
-     "w": 235,
-     "h": 16
-    },
-    "kind": "text"
-   },
-   "match": "look"
-  },
-  {
    "id": "shape:panel@68,21",
    "category": "shape",
    "severity": "low",
@@ -1462,9 +1469,9 @@
    "extra": 2
   },
   "bySeverity": {
-   "low": 15,
+   "low": 14,
    "medium": 12,
-   "high": 3
+   "high": 4
   }
  }
 }

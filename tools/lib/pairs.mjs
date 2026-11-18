@@ -16,7 +16,7 @@ export const DEFAULT_BASE = 'https://ao-4276-redesign-rollup.xeezy.com';
 export function readConfig(dir = DIR) {
   let raw;
   try { raw = JSON.parse(fs.readFileSync(path.join(dir, 'pairs.json'), 'utf8')); } catch { raw = { pairs: [] }; }
-  return { base: DEFAULT_BASE, width: 1440, height: 900, maxHeight: 3000, themes: ['light', 'dark'], ...raw };
+  return { base: DEFAULT_BASE, width: 1440, height: 900, maxHeight: 16000, themes: ['light', 'dark'], ...raw };
 }
 
 function hasThemeProp(page) {

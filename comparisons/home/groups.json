@@ -1,0 +1,375 @@
+{
+ "by": "claude",
+ "at": "2026-11-18T13:07:12.860Z",
+ "reportGeneratedAt": "2026-11-18T13:05:27.810Z",
+ "groups": [
+  {
+   "id": "masthead-lower",
+   "title": "Masthead sits 15px lower, its headline and subtitle 3–6px lower inside it",
+   "severity": "high",
+   "summary": "In the design the orange hero (masthead) panel’s top edge lines up with the first left-rail button (y=85); on live it starts at y=99, so the top-bar logo/Join Pro/Log In all get ~16px more air below them, and the headline and subtitle sit 3–6px lower inside the panel. One cause: more space between the top bar and the masthead on live.",
+   "findings": [
+    "alignment:panel@47,16:top",
+    "spacing:image@77,3",
+    "spacing:text@85,3",
+    "spacing:text@47,12",
+    "spacing:text@47,15"
+   ]
+  },
+  {
+   "id": "resource-grid-end",
+   "title": "Resource grid ends 207px lower, with a ragged bottom",
+   "summary": "The design's three masonry columns all end flush at y≈1907; on live the grid runs 207px further and its columns end up to 56px apart. The gap to the next section (Featured Photographers) grows from 102px to 145px. The tiles' own content (photos vs placeholders) is grouped separately.",
+   "severity": "high",
+   "findings": [
+    "size:grid@47,76",
+    "spacing:grid@47,76"
+   ]
+  },
+  {
+   "id": "top-bar-buttons",
+   "title": "Top bar: “Sign Up” instead of “Log In”, Join Pro 5px narrower, buttons 2px higher",
+   "severity": "medium",
+   "hint": "partly a content difference",
+   "summary": "The right-hand top-bar button reads “Sign Up” on live (wider label, button 7px wider) where the design has “Log In”; the Join Pro pill is 5px narrower; the Explore chevron and buttons sit 2–4px higher.",
+   "findings": [
+    "typography:text@85,3",
+    "size:image@77,3",
+    "size:panel@85,3",
+    "alignment:text@70,3:top"
+   ]
+  },
+  {
+   "id": "left-rail-alerts",
+   "title": "Left rail: no Alerts (bell) button on live",
+   "severity": "medium",
+   "summary": "The design’s left icon rail ends with a bell (alerts) button under the folder icon; live stops at the folder icon.",
+   "findings": [
+    "missing:icon@2,23"
+   ]
+  },
+  {
+   "id": "search-bar",
+   "title": "Search bar: content 13–19px further left, smaller text, a grey outline, “Vectors” scope",
+   "severity": "medium",
+   "summary": "Inside the hero search field the scope button, search icon, placeholder and visual-search icon sit 5–19px further left, the scope label and placeholder are 2–3px smaller, and the field gets a 1px grey outline the design doesn’t have. The scope control reads “Vectors” with a pen icon on live vs “All Images” with a grid icon in the design (default content), and its chevron is light grey instead of dark navy.",
+   "findings": [
+    "spacing:icon@30,20",
+    "spacing:text@35,20",
+    "spacing:text@26,20",
+    "spacing:icon@77,20",
+    "typography:text@35,20",
+    "typography:text@22,20",
+    "typography:text@26,20",
+    "color:text@26,20",
+    "shape:panel@47,20",
+    "missing:icon@19,20",
+    "extra:live:icon@19,21"
+   ]
+  },
+  {
+   "id": "tabs-icon-merge",
+   "title": "Category tabs: an icon read as part of its “Motion Graphics” label",
+   "severity": "low",
+   "hint": "likely noise",
+   "summary": "In the design the Motion Graphics tab icon and label were read as one wider/taller text, on live as icon + label, which produces the “smaller text”, gap and 3px top-edge findings. The tab row itself looks the same.",
+   "findings": [
+    "typography:text@70,30",
+    "extra:live:icon@66,31",
+    "spacing:text@61,30",
+    "alignment:icon@79,30:top"
+   ]
+  },
+  {
+   "id": "resource-grid-content",
+   "title": "Resource grid: real photos on live vs gradient placeholders",
+   "severity": "low",
+   "hint": "content difference",
+   "summary": "The design’s masonry grid uses gradient placeholder tiles; live shows real images (lime pattern, paint pots, etc.), so tiles, the fade at the bottom and a divider inside a photo don’t pair up. The grid also runs ~250px longer on live, which pushes every section below it down.",
+   "findings": [
+    "missing:panel@47,99",
+    "extra:live:panel@47,102",
+    "extra:live:shape@20,126",
+    "extra:live:line@75,130",
+    "extra:live:text@47,133"
+   ]
+  },
+  {
+   "id": "section-headings",
+   "title": "Section headings 3–4px smaller with ~26px more space below; sections 23px taller",
+   "severity": "high",
+   "summary": "The bold section titles (Featured Photographers, Creator Community, Explore More Features, Frequently Asked Questions) are 3–4px shorter on live and have about twice the gap to the content below (26→52px), which makes Featured Photographers and Creator Community panels 23px taller. One heading style difference.",
+   "findings": [
+    "typography:text@47,129",
+    "typography:text@47,213",
+    "typography:text@47,245",
+    "typography:text@47,269",
+    "spacing:text@47,129",
+    "spacing:text@47,213",
+    "spacing:text@47,245",
+    "size:panel@47,142",
+    "size:panel@47,223",
+    "spacing:panel@47,223"
+   ]
+  },
+  {
+   "id": "placeholder-labels",
+   "title": "Placeholder labels (Social Proof, Join Pro, For Individuals/Teams/Education) 31px → 23px",
+   "severity": "high",
+   "summary": "The grey labels inside the Social Proof and Join Pro placeholder blocks and the three Join Pro cards are about a quarter smaller on live, so they shift right/down when centred. The Social Proof block’s dashed outline is also much fainter on live (read as “border → none”).",
+   "findings": [
+    "typography:text@47,167",
+    "typography:text@47,178",
+    "typography:text@21,194",
+    "typography:text@74,194",
+    "typography:text@47,194",
+    "spacing:text@47,167",
+    "spacing:text@47,178",
+    "spacing:text@21,194",
+    "spacing:text@74,194",
+    "spacing:text@47,194",
+    "shape:panel@47,167"
+   ]
+  },
+  {
+   "id": "explore-chips",
+   "title": "Explore More Features chips 6px taller and wrap 5/5/3 instead of 5/4/4",
+   "severity": "medium",
+   "summary": "Every link chip in Explore More Features is 58px tall on live vs 52px. Live’s second row fits five chips (Vecteezy for Enterprises moves up), so the third row starts and ends elsewhere; the alignment, missing/extra chip findings and the unpaired section panel all come from that re-wrap.",
+   "findings": [
+    "size:panel@21,250",
+    "size:panel@37,250",
+    "size:panel@51,250",
+    "size:panel@74,250",
+    "size:panel@62,250",
+    "size:panel@42,254",
+    "size:panel@55,254",
+    "size:panel@68,254",
+    "size:panel@27,254",
+    "size:panel@68,257",
+    "size:panel@57,257",
+    "size:panel@44,257",
+    "alignment:panel@27,254:left",
+    "alignment:panel@27,254:right",
+    "alignment:panel@68,254:right",
+    "alignment:text@27,254:left",
+    "missing:panel@29,257",
+    "missing:text@29,257",
+    "extra:live:panel@76,273",
+    "extra:live:text@76,273",
+    "alignment:panel@47,194:left",
+    "missing:panel@47,251",
+    "extra:live:panel@47,270"
+   ]
+  },
+  {
+   "id": "faq-rows",
+   "title": "FAQ rows 134px narrower (900 → 766), no row borders, more space below",
+   "severity": "high",
+   "summary": "The FAQ question rows are 766px wide on live vs 900px in the design, so questions start 62px further right; the design rows’ 1px top/bottom borders aren’t found on live, and the gap from the last row to the footer banner grows ~78px. The negative-gap findings are just the last two rows pairing out of order.",
+   "findings": [
+    "size:panel@47,274",
+    "size:panel@47,279",
+    "size:panel@47,283",
+    "size:panel@47,288",
+    "size:panel@47,292",
+    "spacing:panel@47,283",
+    "spacing:panel@47,288",
+    "spacing:panel@47,292",
+    "spacing:text@34,288",
+    "alignment:text@28,274:right",
+    "missing:line@47,272",
+    "missing:line@47,276",
+    "missing:line@47,277",
+    "missing:line@47,280",
+    "missing:line@47,281",
+    "missing:line@47,285",
+    "missing:line@47,286",
+    "missing:line@47,289",
+    "missing:line@47,290",
+    "missing:line@47,294"
+   ]
+  },
+  {
+   "id": "ink-palette",
+   "title": "Live uses neutral greys where the design’s ink and greys are blue-tinted",
+   "severity": "low",
+   "summary": "Every navy text/icon colour in the design (#0e2332, #273947, #2e404d) is a neutral near-black on live (#171717, #292929, #353535), and the blue-grey secondaries (#9fa7ad search placeholder, #9aa0a6 footer links) are neutral grey (#919191/#909090). Same lightness, different hue: one palette/token decision across the top bar, tabs, headings, chips, FAQ and footer.",
+   "findings": [
+    "color:text@68,3",
+    "color:text@85,3",
+    "color:icon@2,10",
+    "color:icon@2,13",
+    "color:icon@2,17",
+    "color:icon@2,20",
+    "color:icon@30,20",
+    "color:text@22,20",
+    "color:text@35,20",
+    "color:text@70,30",
+    "color:icon@59,30",
+    "color:icon@49,30",
+    "color:text@26,30",
+    "color:text@52,30",
+    "color:text@61,30",
+    "color:text@81,30",
+    "color:text@35,30",
+    "color:text@43,30",
+    "color:text@47,129",
+    "color:text@47,213",
+    "color:text@47,245",
+    "color:text@21,250",
+    "color:text@74,250",
+    "color:text@37,250",
+    "color:text@51,250",
+    "color:text@62,250",
+    "color:text@42,254",
+    "color:text@68,254",
+    "color:text@55,254",
+    "color:text@27,254",
+    "color:text@44,257",
+    "color:text@57,257",
+    "color:text@68,257",
+    "color:text@47,269",
+    "color:text@28,274",
+    "color:text@73,274",
+    "color:text@27,279",
+    "color:text@73,279",
+    "color:text@28,283",
+    "color:text@73,283",
+    "color:text@34,288",
+    "color:text@73,288",
+    "color:text@31,292",
+    "color:text@73,292",
+    "color:text@11,311",
+    "color:text@31,311",
+    "color:text@71,312",
+    "color:text@50,312",
+    "color:text@11,313",
+    "color:text@31,313",
+    "color:text@71,313",
+    "color:text@52,313",
+    "color:text@11,315",
+    "color:text@31,315",
+    "color:text@72,315",
+    "color:text@52,315",
+    "color:text@71,317",
+    "color:text@31,317",
+    "color:text@10,317",
+    "color:text@71,318",
+    "color:text@10,318",
+    "color:text@32,318",
+    "color:text@51,318",
+    "color:text@72,320",
+    "color:text@11,320",
+    "color:text@29,320",
+    "color:text@50,320",
+    "color:text@71,322",
+    "color:text@9,322",
+    "color:text@53,322",
+    "color:text@29,322",
+    "color:text@71,323",
+    "color:text@29,323",
+    "color:text@50,323",
+    "color:text@12,323",
+    "color:text@31,325",
+    "color:text@51,325",
+    "color:text@12,325",
+    "color:text@11,327",
+    "color:text@32,327",
+    "color:text@10,329",
+    "color:text@10,330",
+    "color:text@56,337",
+    "color:text@77,337",
+    "color:text@69,337",
+    "color:text@84,337",
+    "color:icon@2,341"
+   ]
+  },
+  {
+   "id": "footer-layout",
+   "title": "Footer: link lists 3px lower, tighter bottom row, no “More Languages” link",
+   "severity": "low",
+   "summary": "In the dark footer the column headings have 3px more space under them, the gap from the last Products link to the logo row shrinks 83→64px, the logo is 2px smaller and the copyright/legal links are spaced a few px wider. Live’s Languages column has no “More Languages” link. Two alignment findings are coincidental guides.",
+   "findings": [
+    "spacing:text@10,310",
+    "spacing:text@30,310",
+    "spacing:text@72,310",
+    "spacing:text@52,310",
+    "spacing:text@10,330",
+    "typography:text@12,337",
+    "spacing:text@56,337",
+    "spacing:text@77,337",
+    "typography:text@84,337",
+    "alignment:text@31,315:right",
+    "alignment:text@32,327:right",
+    "missing:text@73,325"
+   ]
+  },
+  {
+   "id": "footer-theme-toggle",
+   "title": "Footer theme toggle: lighter label and track",
+   "severity": "low",
+   "summary": "The “Light mode on” label and the sun/moon toggle track in the footer’s bottom-right are lighter on live (#e0e0e0 vs #c5c5c6 / #f3f4f5) and the label is slightly wider.",
+   "findings": [
+    "color:text@80,342",
+    "typography:text@80,342",
+    "color:icon@86,341"
+   ]
+  },
+  {
+   "id": "footer-new-badges",
+   "title": "Footer “NEW” badges read differently on each side",
+   "severity": "low",
+   "hint": "likely noise",
+   "summary": "The small NEW badges next to footer links were found as shapes in the design and as text (or merged into the link, e.g. Motion Graphics) on live, so they show up as missing + extra. They look the same.",
+   "findings": [
+    "missing:shape@17,315",
+    "missing:shape@36,317",
+    "missing:shape@55,317",
+    "missing:shape@13,322",
+    "missing:shape@36,325",
+    "missing:shape@15,330",
+    "missing:text@51,317",
+    "extra:live:text@17,335",
+    "extra:live:text@53,337",
+    "extra:live:text@36,337",
+    "extra:live:text@13,342",
+    "extra:live:text@36,345"
+   ]
+  },
+  {
+   "id": "headline-fragments",
+   "title": "Letter fragments of big headings read as panels",
+   "severity": "low",
+   "hint": "likely noise",
+   "summary": "Pieces of the hero headline (“for”, “Everyone”) and of the Featured Photographers / FAQ titles were detected as panels on one side only.",
+   "findings": [
+    "missing:panel@30,12",
+    "missing:panel@60,12",
+    "extra:live:panel@70,13",
+    "missing:panel@37,269",
+    "extra:live:panel@37,288",
+    "extra:live:panel@58,145",
+    "color:text@47,15"
+   ]
+  },
+  {
+   "id": "page-length",
+   "title": "Page is 349px longer on live",
+   "severity": "medium",
+   "summary": "The whole page runs 5851px on live vs 5502px. It adds up from the longer resource grid (~250px), the taller section headings (2×23px), taller chips and the extra space under the FAQ; fixing those fixes this.",
+   "findings": [
+    "size:panel@47,172"
+   ]
+  },
+  {
+   "id": "split-test-text",
+   "title": "“Current Split Test:” debug text under the live footer",
+   "severity": "low",
+   "summary": "Live prints a “Current Split Test:” line below the footer; it isn’t in the design (likely a staging/debug output).",
+   "findings": [
+    "extra:live:text@10,365"
+   ]
+  }
+ ]
+}

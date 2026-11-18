@@ -3,7 +3,7 @@
  "baseId": "pricing",
  "theme": "dark",
  "label": "Join Pro (pricing)",
- "generatedAt": "2026-11-18T12:37:07.335Z",
+ "generatedAt": "2026-11-18T13:06:47.241Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "method": "screenshots",
  "design": {
@@ -192,6 +192,13 @@
      "live": "#ff7900",
      "swatch": true,
      "sev": "high"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "none",
+     "live": "#d4d4d4",
+     "swatch": true,
+     "sev": "high"
     }
    ],
    "design": {
@@ -237,6 +244,13 @@
      "prop": "text color",
      "design": "#008b3e",
      "live": "#ffffff",
+     "swatch": true,
+     "sev": "high"
+    },
+    {
+     "prop": "accent color (e.g. a link)",
+     "design": "#dcdcdc",
+     "live": "#00b67a",
      "swatch": true,
      "sev": "high"
     }

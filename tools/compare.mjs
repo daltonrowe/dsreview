@@ -8,6 +8,11 @@ import { ROOT, resolvePage, startServer, openPage, settle, splitProps, jsonish, 
 import { openLive, fitViewport, liveUrl } from './lib/live.mjs';
 import { DIR, DEFAULT_BASE, readConfig, expandPairs } from './lib/pairs.mjs';
 import { decodePng, segment } from './lib/vision.mjs';
+import { reviewReport, reviewAvailable, REVIEW_MODEL } from './lib/review.mjs';
+import { findingShots } from './lib/crops.mjs';
+
+// credentials for the review model, from .env when present (ANTHROPIC_API_KEY)
+if (fs.existsSync(path.join(ROOT, '.env'))) { try { process.loadEnvFile(path.join(ROOT, '.env')); } catch { } }
 import { compareImages, CATEGORIES } from './lib/pixeldiff.mjs';
 
 const PAIRS = path.join(DIR, 'pairs.json');
@@ -28,6 +33,24 @@ pixels only (no DOM, no CSS): alignment, size, color, type, shape, spacing, miss
   node tools/compare.mjs show <id> [--category c[,c]] [--severity high|medium|low] [--limit N]
       Print a report's findings as text.
 
+  node tools/compare.mjs review [<id> ...] [--force] [--model id]
+      Second pass: a smaller model (${REVIEW_MODEL}) looks at each finding's crops and measurements
+      and explains what's off, with a verdict (real / noise / unsure). Kept in reviews.json; only new or
+      changed findings are reviewed again. Needs ANTHROPIC_API_KEY (or .env). \`run\` does this
+      automatically when credentials are available (--no-review to skip).
+
+  node tools/compare.mjs crop <id> <findingId> [...]
+      Write a finding's screenshots (design/live close crops with outlines and guides, plus
+      full-width context strips) to screenshots/crops/. Prints the PNG paths.
+
+  node tools/compare.mjs findings <id>
+      Every finding with its id, compactly: the input for grouping them into meta-findings.
+
+  node tools/compare.mjs group <id> <groups.json>
+      Check a set of meta-findings (groups of finding ids, written by judgement) and install it as
+      comparisons/<id>/groups.json. Format: { "groups": [ { "id", "title", "summary", "severity",
+      "findings": [ids] } ] }. Reports unknown ids, findings in two groups and what's left ungrouped.
+
   node tools/compare.mjs add <id> --label "Home" --design <page> [--props k=v] [--state k=v] [--do step]
                                   --live <path> [--live-do step] [--max-height N]
       Add (or replace) a comparison in comparisons/pairs.json. Design options are the same as
@@ -47,7 +70,7 @@ function parseArgs(argv) {
     const a = argv[i];
     if (!a.startsWith('--')) { pos.push(a); continue; }
     const k = a.slice(2);
-    if (['no-hover', 'full', 'json'].includes(k)) { o[k.replace(/-(\w)/g, (_, c) => c.toUpperCase())] = true; continue; }
+    if (['no-hover', 'no-review', 'full', 'json', 'force'].includes(k)) { o[k.replace(/-(\w)/g, (_, c) => c.toUpperCase())] = true; continue; }
     const v = argv[++i];
     if (k === 'props') for (const kv of splitProps(v)) { const j = kv.indexOf('='); o.props[kv.slice(0, j).trim()] = coerce(kv.slice(j + 1).trim()); }
     else if (k === 'state') for (const kv of splitProps(v)) { const j = kv.indexOf('='); o.state[kv.slice(0, j).trim()] = jsonish(kv.slice(j + 1).trim()); }
@@ -155,6 +178,79 @@ async function main() {
     return;
   }
 
+  if (cmd === 'findings') {
+    const rp = path.join(DIR, args[0] || '', 'report.json');
+    if (!args[0] || !fs.existsSync(rp)) throw new Error(`no report for "${args[0]}"`);
+    const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+    console.log(`# ${r.label} (${r.theme || 'light'}) · ${r.findings.length} findings · design ${r.design.page} vs live ${r.live.url}`);
+    console.log(`# screenshots: comparisons/${r.id}/design.jpg, comparisons/${r.id}/live.jpg (${r.design.width}×${r.design.height} / ${r.live.width}×${r.live.height})`);
+    for (const f of r.findings) {
+      const b = (f.design || f.live).box, lb = f.live?.box;
+      console.log(`${f.id}\t${f.severity}\t${f.category}\t${f.text}\td@${b.x},${b.y}${lb && f.design ? ` l@${lb.x},${lb.y}` : ''}\t${f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('; ')}`);
+    }
+    return;
+  }
+
+  if (cmd === 'crop') {
+    const [id, ...fids] = args;
+    const rp = path.join(DIR, id || '', 'report.json');
+    if (!id || !fs.existsSync(rp) || !fids.length) throw new Error('crop <id> <findingId> [...]');
+    const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+    const out = path.join(ROOT, 'screenshots', 'crops');
+    fs.mkdirSync(out, { recursive: true });
+    for (const fid of fids) {
+      const f = r.findings.find(x => x.id === fid);
+      if (!f) { console.log(`${fid}: no such finding`); continue; }
+      const slug = `${id}-${fid}`.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
+      for (const s of findingShots(r, f, path.join(DIR, id))) {
+        const file = path.join(out, `${slug}-${s.name}`);
+        fs.writeFileSync(file, s.data);
+        console.log(path.relative(process.cwd(), file));
+      }
+    }
+    return;
+  }
+
+  if (cmd === 'review') {
+    const all = expandPairs(readConfig()).filter(p => !o.theme || p.theme === o.theme);
+    const ids = args.length ? args.flatMap(a => all.filter(p => p.id === a || p.baseId === a).map(p => p.id)) : all.map(p => p.id);
+    for (const id of ids) {
+      const rp = path.join(DIR, id, 'report.json');
+      if (!fs.existsSync(rp)) { console.log(`${id}: no report`); continue; }
+      const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+      const t = Date.now();
+      const rv = await reviewReport(r, path.join(DIR, id), { model: o.model || REVIEW_MODEL, force: !!o.force, log: m => console.log(m) });
+      console.log(`${id}: ${rv.done} reviewed, ${rv.skipped} unchanged${rv.failed ? `, ${rv.failed} failed` : ''} (${Math.round((Date.now() - t) / 1000)}s)`);
+    }
+    return;
+  }
+
+  if (cmd === 'group') {
+    const [id, file] = args;
+    const rp = path.join(DIR, id || '', 'report.json');
+    if (!id || !fs.existsSync(rp)) throw new Error(`no report for "${id}"`);
+    if (!file || !fs.existsSync(file)) throw new Error('group <id> <groups.json>: file not found');
+    const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+    const input = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const groups = Array.isArray(input) ? input : input.groups;
+    if (!Array.isArray(groups)) throw new Error('expected { "groups": [...] }');
+    const known = new Set(r.findings.map(f => f.id)), seen = new Map(), problems = [];
+    groups.forEach((g, i) => {
+      if (!g.id) g.id = String(g.title || `group-${i + 1}`).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      if (!g.title) problems.push(`group ${g.id}: no title`);
+      if (!['high', 'medium', 'low'].includes(g.severity)) g.severity = 'medium';
+      g.findings = (g.findings || []).filter(fid => { if (!known.has(fid)) { problems.push(`group ${g.id}: unknown finding ${fid}`); return false; } return true; });
+      for (const fid of g.findings) { if (seen.has(fid)) problems.push(`${fid} is in both ${seen.get(fid)} and ${g.id}`); else seen.set(fid, g.id); }
+    });
+    const ids = new Set(groups.map(g => g.id));
+    if (ids.size !== groups.length) problems.push('group ids must be unique');
+    const ungrouped = r.findings.filter(f => !seen.has(f.id));
+    fs.writeFileSync(path.join(DIR, id, 'groups.json'), JSON.stringify({ by: input.by || 'claude', at: new Date().toISOString(), reportGeneratedAt: r.generatedAt, groups }, null, 1) + '\n');
+    console.log(`${id}: ${groups.length} groups covering ${seen.size} of ${r.findings.length} findings (${ungrouped.length} ungrouped)`);
+    for (const p of problems) console.log(`  ! ${p}`);
+    return;
+  }
+
   if (cmd === 'add') {
     const id = args[0];
     if (!id || !/^[\w-]+$/.test(id)) throw new Error('add <id>: letters, digits, - and _ only');
@@ -196,6 +292,16 @@ async function main() {
           const t = Date.now();
           const r = await runPair(pair, cfg, { browser, designBase });
           console.log(`${summary(r)}  (${Math.round((Date.now() - t) / 1000)}s)`);
+          if (!o.noReview && reviewAvailable()) {
+            try { const rv = await reviewReport(r, path.join(DIR, id), { log: m => console.log(m) }); console.log(`  review: ${rv.done} reviewed, ${rv.skipped} unchanged${rv.failed ? `, ${rv.failed} failed` : ''}`); }
+            catch (e) { console.log(`  review skipped: ${e.message}`); }
+          }
+          const gp = path.join(DIR, id, 'groups.json');
+          if (fs.existsSync(gp)) {
+            const known = new Set(r.findings.map(f => f.id));
+            const gone = JSON.parse(fs.readFileSync(gp, 'utf8')).groups.flatMap(g => g.findings).filter(f => !known.has(f));
+            if (gone.length) console.log(`  groups.json: ${gone.length} grouped findings no longer exist; regroup (node tools/compare.mjs findings ${id})`);
+          }
           for (const l of [...r.design.log.map(x => 'design ' + x), ...r.live.log.map(x => 'live ' + x)].slice(0, 8)) console.log(`  ${l}`);
         }
       } finally { srv.close(); }

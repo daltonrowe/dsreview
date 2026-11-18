@@ -1,0 +1,85 @@
+{
+ "by": "claude",
+ "at": "2026-11-18T13:06:56.896Z",
+ "reportGeneratedAt": "2026-11-18T13:06:28.078Z",
+ "groups": [
+  {
+   "id": "social-row",
+   "title": "Social sign-in: 2 centred buttons on live vs a row of 8 in the design",
+   "summary": "The design shows 8 round social buttons (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the form width from x=870. Live only has Google and Facebook, centred (starting at x=1034, 19px lower). The missing icons, the shifted left edge and the 'Microsoft → Facebook' colour mismatch all come from that one change.",
+   "severity": "high",
+   "findings": [
+    "color:icon@69,38",
+    "alignment:icon@56,38:left",
+    "missing:text@62,38",
+    "missing:icon@59,38",
+    "missing:icon@66,38",
+    "missing:icon@73,38",
+    "missing:icon@76,38",
+    "missing:icon@79,38",
+    "missing:icon@62,38"
+   ]
+  },
+  {
+   "id": "login-button",
+   "title": "Log in button 6px taller (46 → 52px), label almost invisible",
+   "summary": "The disabled 'Log in' button is 52px tall on live vs 46px in the design, pushing everything below it down ~9-19px. Its label is so faint on live that it is not detected at all.",
+   "severity": "medium",
+   "findings": [
+    "size:panel@68,32",
+    "missing:text@68,32"
+   ]
+  },
+  {
+   "id": "field-label-gap",
+   "title": "Field labels sit ~3px further above their inputs",
+   "summary": "USERNAME / EMAIL and PASSWORD labels have an 8px gap to their input in the design and ~11px on live (live also drops the space before the red asterisk). In the design the label was close enough to merge with the input box, hence the missing/extra pair.",
+   "severity": "low",
+   "findings": [
+    "spacing:text@57,24",
+    "missing:text@68,21",
+    "extra:live:text@59,19"
+   ]
+  },
+  {
+   "id": "or-separator",
+   "title": "'or' separator: lighter label and visible divider lines on live",
+   "summary": "The 'or' divider under the Log in button: live's 'or' text is a lighter neutral grey (#6e7b84 → #b9b9b9) and its two hairlines are strong enough to be detected, where the design's are fainter.",
+   "severity": "low",
+   "findings": [
+    "color:text@68,35",
+    "extra:live:line@60,36",
+    "extra:live:line@75,36"
+   ]
+  },
+  {
+   "id": "hero-headline",
+   "title": "Marketing headline smaller (31 → 28px text height)",
+   "summary": "'Better work in half the time.' on the left panel is set ~10% smaller on live (it ends at x≈511 instead of 549).",
+   "severity": "medium",
+   "findings": [
+    "typography:text@19,44"
+   ]
+  },
+  {
+   "id": "title-ink",
+   "title": "'Log in' title is neutral black instead of the design's blue-tinted ink",
+   "summary": "The page title uses #171717 on live where the design uses ink #0e2332.",
+   "severity": "low",
+   "findings": [
+    "color:text@57,14"
+   ]
+  },
+  {
+   "id": "bullet-copy",
+   "title": "First benefit bullet copy/stats differ (content)",
+   "summary": "Design: 'Access 74,540,405 creative assets (89,304 added yesterday)'. Live: 'Access 60,869,326 creative assets' with no 'added yesterday' part, so the line is shorter. Live data, not a styling issue.",
+   "severity": "low",
+   "hint": "content difference",
+   "findings": [
+    "missing:text@20,48",
+    "extra:live:text@13,48"
+   ]
+  }
+ ]
+}
