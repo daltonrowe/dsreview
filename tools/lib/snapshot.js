@@ -241,7 +241,10 @@
           if (!name) continue;
           text = name; kind = tag === 'IMG' ? 'image' : 'control';
           // an icon button is drawn by its icon: measure that, not the hit area
-          graphic = [...el.querySelectorAll('svg, img')].find(g => visible(g) && g.getBoundingClientRect().width <= 64) || null;
+          graphic = [...el.querySelectorAll('svg, img')].find(g => visible(g) && !hidden(g, g.getBoundingClientRect()) && g.getBoundingClientRect().width <= 64) || null;
+          // nothing drawn (an empty hit area, a logo hidden until a rail reveals): not part of what's seen
+          if (tag !== 'IMG' && !graphic && !painted(getComputedStyle(el)) && ![...el.querySelectorAll('svg, img')].some(g => visible(g) && !hidden(g, g.getBoundingClientRect()))) continue;
+          if (!graphic && tag !== 'IMG') graphic = [...el.querySelectorAll('svg, img')].find(g => visible(g) && !hidden(g, g.getBoundingClientRect())) || null;
         }
         if (text.length > 160) text = text.slice(0, 157) + '…';
         if (!visible(el)) continue;

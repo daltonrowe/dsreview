@@ -3,7 +3,7 @@
  "baseId": "log-in",
  "theme": "light",
  "label": "Log in",
- "generatedAt": "2026-11-18T11:57:53.632Z",
+ "generatedAt": "2026-11-18T12:05:11.900Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -31,7 +31,6 @@
   "shot": "live.jpg",
   "items": 25,
   "log": [
-   "pageerror: google is not defined",
    "pageerror: Cannot read properties of undefined (reading 'init')"
   ]
  },
@@ -39,11 +38,6 @@
   {
    "design": 3,
    "live": 3,
-   "how": "text"
-  },
-  {
-   "design": 8,
-   "live": 8,
    "how": "text"
   },
   {
@@ -59,11 +53,6 @@
   {
    "design": 31,
    "live": 24,
-   "how": "text"
-  },
-  {
-   "design": 7,
-   "live": 7,
    "how": "text"
   },
   {
@@ -87,6 +76,11 @@
    "how": "text"
   },
   {
+   "design": 9,
+   "live": 9,
+   "how": "text"
+  },
+  {
    "design": 1,
    "live": 1,
    "how": "text"
@@ -102,13 +96,18 @@
    "how": "text"
   },
   {
-   "design": 9,
-   "live": 9,
+   "design": 23,
+   "live": 17,
    "how": "text"
   },
   {
-   "design": 23,
-   "live": 17,
+   "design": 8,
+   "live": 8,
+   "how": "text"
+  },
+  {
+   "design": 7,
+   "live": 7,
    "how": "text"
   },
   {
@@ -502,21 +501,6 @@
      }
     },
     {
-     "text": "Don't have an account?",
-     "design": {
-      "x": 870,
-      "y": 259.5,
-      "w": 174.3,
-      "h": 18
-     },
-     "live": {
-      "x": 870,
-      "y": 255.8,
-      "w": 174.3,
-      "h": 18
-     }
-    },
-    {
      "text": "Log in",
      "design": {
       "x": 870,
@@ -529,6 +513,21 @@
       "y": 489.8,
       "w": 420,
       "h": 52
+     }
+    },
+    {
+     "text": "Don't have an account?",
+     "design": {
+      "x": 870,
+      "y": 259.5,
+      "w": 174.3,
+      "h": 18
+     },
+     "live": {
+      "x": 870,
+      "y": 255.8,
+      "w": 174.3,
+      "h": 18
      }
     }
    ]

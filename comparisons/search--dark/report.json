@@ -3,7 +3,7 @@
  "baseId": "search",
  "theme": "dark",
  "label": "Search results",
- "generatedAt": "2026-11-18T11:57:28.520Z",
+ "generatedAt": "2026-11-18T12:04:46.400Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -20,7 +20,7 @@
   "width": 1440,
   "height": 3000,
   "shot": "design.jpg",
-  "items": 71,
+  "items": 70,
   "log": []
  },
  "live": {
@@ -68,18 +68,13 @@
    "how": "text"
   },
   {
-   "design": 14,
+   "design": 13,
    "live": 11,
    "how": "text"
   },
   {
-   "design": 15,
+   "design": 14,
    "live": 12,
-   "how": "text"
-  },
-  {
-   "design": 11,
-   "live": 8,
    "how": "text"
   },
   {
@@ -88,12 +83,12 @@
    "how": "text"
   },
   {
-   "design": 12,
+   "design": 11,
    "live": 10,
    "how": "text"
   },
   {
-   "design": 20,
+   "design": 19,
    "live": 17,
    "how": "text"
   }
@@ -156,7 +151,7 @@
    "match": "text"
   },
   {
-   "id": "color:search#1",
+   "id": "color:search#0",
    "category": "color",
    "severity": "high",
    "text": "Search",
@@ -286,11 +281,11 @@
      "design": "86px",
      "live": "105px",
      "sev": "high",
-     "ref": 14
+     "ref": 13
     }
    ],
    "design": {
-    "n": 12,
+    "n": 11,
     "textBox": {
      "x": 951.3,
      "y": 28,
@@ -380,7 +375,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    },
    "guide": {
@@ -426,7 +421,7 @@
     }
    ],
    "design": {
-    "n": 14,
+    "n": 13,
     "textBox": {
      "x": 1057.3,
      "y": 29.5,
@@ -485,7 +480,7 @@
     }
    ],
    "design": {
-    "n": 20,
+    "n": 19,
     "textBox": {
      "x": 543.1,
      "y": 102,
@@ -545,7 +540,7 @@
     }
    ],
    "design": {
-    "n": 15,
+    "n": 14,
     "textBox": {
      "x": 1200.5,
      "y": 29.5,
@@ -605,7 +600,7 @@
     }
    ],
    "design": {
-    "n": 20,
+    "n": 19,
     "textBox": {
      "x": 543.1,
      "y": 102,
@@ -664,7 +659,7 @@
     }
    ],
    "design": {
-    "n": 15,
+    "n": 14,
     "textBox": {
      "x": 1200.5,
      "y": 29.5,
@@ -731,7 +726,7 @@
     }
    ],
    "design": {
-    "n": 12,
+    "n": 11,
     "textBox": {
      "x": 951.3,
      "y": 28,
@@ -805,7 +800,7 @@
     }
    ],
    "design": {
-    "n": 14,
+    "n": 13,
     "textBox": {
      "x": 1057.3,
      "y": 29.5,
@@ -924,7 +919,7 @@
    "match": "text"
   },
   {
-   "id": "behavior:search#1",
+   "id": "behavior:search#0",
    "category": "behavior",
    "severity": "medium",
    "text": "Search",
@@ -1220,7 +1215,7 @@
     }
    ],
    "design": {
-    "n": 13,
+    "n": 12,
     "textBox": {
      "x": 987.3,
      "y": 28,
@@ -1295,7 +1290,7 @@
     }
    ],
    "design": {
-    "n": 16,
+    "n": 15,
     "textBox": {
      "x": 1340.5,
      "y": 29.5,
@@ -1337,7 +1332,7 @@
     }
    ],
    "design": {
-    "n": 17,
+    "n": 16,
     "textBox": {
      "x": 99,
      "y": 94,
@@ -1379,7 +1374,7 @@
     }
    ],
    "design": {
-    "n": 19,
+    "n": 18,
     "textBox": {
      "x": 238.5,
      "y": 102,
@@ -1421,7 +1416,7 @@
     }
    ],
    "design": {
-    "n": 21,
+    "n": 20,
     "textBox": {
      "x": 132.4,
      "y": 137.5,
@@ -1454,7 +1449,7 @@
     }
    ],
    "design": {
-    "n": 32,
+    "n": 31,
     "textBox": {
      "x": 1387,
      "y": 151,
@@ -1496,7 +1491,7 @@
     }
    ],
    "design": {
-    "n": 22,
+    "n": 21,
     "textBox": {
      "x": 192,
      "y": 151.5,
@@ -1529,7 +1524,7 @@
     }
    ],
    "design": {
-    "n": 23,
+    "n": 22,
     "textBox": {
      "x": 354,
      "y": 151.5,
@@ -1562,7 +1557,7 @@
     }
    ],
    "design": {
-    "n": 25,
+    "n": 24,
     "textBox": {
      "x": 561.8,
      "y": 151.5,
@@ -1595,7 +1590,7 @@
     }
    ],
    "design": {
-    "n": 26,
+    "n": 25,
     "textBox": {
      "x": 743.7,
      "y": 151.5,
@@ -1637,7 +1632,7 @@
     }
    ],
    "design": {
-    "n": 27,
+    "n": 26,
     "textBox": {
      "x": 855,
      "y": 151.5,
@@ -1679,7 +1674,7 @@
     }
    ],
    "design": {
-    "n": 28,
+    "n": 27,
     "textBox": {
      "x": 1031.5,
      "y": 151.5,
@@ -1721,7 +1716,7 @@
     }
    ],
    "design": {
-    "n": 29,
+    "n": 28,
     "textBox": {
      "x": 1134.8,
      "y": 151.5,
@@ -1763,7 +1758,7 @@
     }
    ],
    "design": {
-    "n": 30,
+    "n": 29,
     "textBox": {
      "x": 1233.6,
      "y": 151.5,
@@ -1805,7 +1800,7 @@
     }
    ],
    "design": {
-    "n": 31,
+    "n": 30,
     "textBox": {
      "x": 1354.4,
      "y": 151.5,
@@ -1847,7 +1842,7 @@
     }
    ],
    "design": {
-    "n": 24,
+    "n": 23,
     "textBox": {
      "x": 481.3,
      "y": 153,
@@ -1889,7 +1884,7 @@
     }
    ],
    "design": {
-    "n": 33,
+    "n": 32,
     "textBox": {
      "x": 99,
      "y": 200,
@@ -1931,7 +1926,7 @@
     }
    ],
    "design": {
-    "n": 34,
+    "n": 33,
     "textBox": {
      "x": 476.1,
      "y": 200,
@@ -1973,7 +1968,7 @@
     }
    ],
    "design": {
-    "n": 35,
+    "n": 34,
     "textBox": {
      "x": 686.6,
      "y": 200,
@@ -2015,7 +2010,7 @@
     }
    ],
    "design": {
-    "n": 36,
+    "n": 35,
     "textBox": {
      "x": 992.3,
      "y": 200,
@@ -2099,7 +2094,7 @@
     }
    ],
    "design": {
-    "n": 37,
+    "n": 36,
     "textBox": {
      "x": 99,
      "y": 458.1,
@@ -2141,7 +2136,7 @@
     }
    ],
    "design": {
-    "n": 38,
+    "n": 37,
     "textBox": {
      "x": 387.6,
      "y": 458.1,
@@ -2183,7 +2178,7 @@
     }
    ],
    "design": {
-    "n": 39,
+    "n": 38,
     "textBox": {
      "x": 609,
      "y": 458.1,
@@ -2225,7 +2220,7 @@
     }
    ],
    "design": {
-    "n": 40,
+    "n": 39,
     "textBox": {
      "x": 986.3,
      "y": 458.1,
@@ -2267,7 +2262,7 @@
     }
    ],
    "design": {
-    "n": 41,
+    "n": 40,
     "textBox": {
      "x": 121,
      "y": 768.7,
@@ -2309,7 +2304,7 @@
     }
    ],
    "design": {
-    "n": 42,
+    "n": 41,
     "textBox": {
      "x": 1267.5,
      "y": 923.2,
@@ -2351,7 +2346,7 @@
     }
    ],
    "design": {
-    "n": 43,
+    "n": 42,
     "textBox": {
      "x": 99,
      "y": 1018.7,
@@ -2393,7 +2388,7 @@
     }
    ],
    "design": {
-    "n": 44,
+    "n": 43,
     "textBox": {
      "x": 393.9,
      "y": 1018.7,
@@ -2435,7 +2430,7 @@
     }
    ],
    "design": {
-    "n": 45,
+    "n": 44,
     "textBox": {
      "x": 638.8,
      "y": 1018.7,
@@ -2477,7 +2472,7 @@
     }
    ],
    "design": {
-    "n": 46,
+    "n": 45,
     "textBox": {
      "x": 1103.6,
      "y": 1018.7,
@@ -2519,7 +2514,7 @@
     }
    ],
    "design": {
-    "n": 47,
+    "n": 46,
     "textBox": {
      "x": 99,
      "y": 1288.6,
@@ -2561,7 +2556,7 @@
     }
    ],
    "design": {
-    "n": 48,
+    "n": 47,
     "textBox": {
      "x": 520.2,
      "y": 1288.6,
@@ -2603,7 +2598,7 @@
     }
    ],
    "design": {
-    "n": 49,
+    "n": 48,
     "textBox": {
      "x": 754.1,
      "y": 1288.6,
@@ -2645,7 +2640,7 @@
     }
    ],
    "design": {
-    "n": 50,
+    "n": 49,
     "textBox": {
      "x": 1148.5,
      "y": 1288.6,
@@ -2687,7 +2682,7 @@
     }
    ],
    "design": {
-    "n": 51,
+    "n": 50,
     "textBox": {
      "x": 99,
      "y": 1576,
@@ -2729,7 +2724,7 @@
     }
    ],
    "design": {
-    "n": 52,
+    "n": 51,
     "textBox": {
      "x": 548.5,
      "y": 1576,
@@ -2771,7 +2766,7 @@
     }
    ],
    "design": {
-    "n": 53,
+    "n": 52,
     "textBox": {
      "x": 858,
      "y": 1576,
@@ -2813,7 +2808,7 @@
     }
    ],
    "design": {
-    "n": 54,
+    "n": 53,
     "textBox": {
      "x": 1095.1,
      "y": 1576,
@@ -2855,7 +2850,7 @@
     }
    ],
    "design": {
-    "n": 55,
+    "n": 54,
     "textBox": {
      "x": 99,
      "y": 1837.3,
@@ -2897,7 +2892,7 @@
     }
    ],
    "design": {
-    "n": 56,
+    "n": 55,
     "textBox": {
      "x": 499.9,
      "y": 1837.3,
@@ -2939,7 +2934,7 @@
     }
    ],
    "design": {
-    "n": 57,
+    "n": 56,
     "textBox": {
      "x": 799.3,
      "y": 1837.3,
@@ -2981,7 +2976,7 @@
     }
    ],
    "design": {
-    "n": 58,
+    "n": 57,
     "textBox": {
      "x": 1009.7,
      "y": 1837.3,
@@ -3023,7 +3018,7 @@
     }
    ],
    "design": {
-    "n": 59,
+    "n": 58,
     "textBox": {
      "x": 99,
      "y": 2111.2,
@@ -3065,7 +3060,7 @@
     }
    ],
    "design": {
-    "n": 60,
+    "n": 59,
     "textBox": {
      "x": 476.1,
      "y": 2111.2,
@@ -3107,7 +3102,7 @@
     }
    ],
    "design": {
-    "n": 61,
+    "n": 60,
     "textBox": {
      "x": 686.6,
      "y": 2111.2,
@@ -3149,7 +3144,7 @@
     }
    ],
    "design": {
-    "n": 62,
+    "n": 61,
     "textBox": {
      "x": 992.3,
      "y": 2111.2,
@@ -3191,7 +3186,7 @@
     }
    ],
    "design": {
-    "n": 63,
+    "n": 62,
     "textBox": {
      "x": 99,
      "y": 2369.3,
@@ -3233,7 +3228,7 @@
     }
    ],
    "design": {
-    "n": 64,
+    "n": 63,
     "textBox": {
      "x": 387.6,
      "y": 2369.3,
@@ -3275,7 +3270,7 @@
     }
    ],
    "design": {
-    "n": 65,
+    "n": 64,
     "textBox": {
      "x": 609,
      "y": 2369.3,
@@ -3317,7 +3312,7 @@
     }
    ],
    "design": {
-    "n": 66,
+    "n": 65,
     "textBox": {
      "x": 986.3,
      "y": 2369.3,
@@ -3359,7 +3354,7 @@
     }
    ],
    "design": {
-    "n": 67,
+    "n": 66,
     "textBox": {
      "x": 99,
      "y": 2657.9,
@@ -3401,7 +3396,7 @@
     }
    ],
    "design": {
-    "n": 68,
+    "n": 67,
     "textBox": {
      "x": 393.9,
      "y": 2657.9,
@@ -3443,7 +3438,7 @@
     }
    ],
    "design": {
-    "n": 69,
+    "n": 68,
     "textBox": {
      "x": 638.8,
      "y": 2657.9,
@@ -3485,7 +3480,7 @@
     }
    ],
    "design": {
-    "n": 70,
+    "n": 69,
     "textBox": {
      "x": 1103.6,
      "y": 2657.9,
@@ -3569,7 +3564,7 @@
     }
    ],
    "design": {
-    "n": 15,
+    "n": 14,
     "textBox": {
      "x": 1200.5,
      "y": 29.5,
@@ -3614,7 +3609,7 @@
    "match": "text"
   },
   {
-   "id": "shape:search#1",
+   "id": "shape:search#0",
    "category": "shape",
    "severity": "low",
    "text": "Search",
@@ -3684,7 +3679,7 @@
      "design": "9px",
      "live": "12px",
      "sev": "low",
-     "ref": 12
+     "ref": 11
     }
    ],
    "design": {
@@ -3724,56 +3719,6 @@
    "match": "text"
   },
   {
-   "id": "alignment:section:top bar",
-   "category": "alignment",
-   "severity": "low",
-   "text": "Top bar (5 matched elements)",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "region x",
-     "design": "265px",
-     "live": "252.2px (← 6.8px)",
-     "sev": "low"
-    }
-   ],
-   "region": true,
-   "design": {
-    "n": null,
-    "textBox": {
-     "x": 265,
-     "y": 14,
-     "w": 1025,
-     "h": 48
-    },
-    "box": {
-     "x": 265,
-     "y": 14,
-     "w": 1025,
-     "h": 48
-    },
-    "section": "Top bar",
-    "where": null
-   },
-   "live": {
-    "n": null,
-    "textBox": {
-     "x": 252.2,
-     "y": 16,
-     "w": 1031.1000000000001,
-     "h": 48
-    },
-    "box": {
-     "x": 252.2,
-     "y": 16,
-     "w": 1031.1000000000001,
-     "h": 48
-    },
-    "section": "Top bar",
-    "where": null
-   }
-  },
-  {
    "id": "behavior:join pro#0",
    "category": "behavior",
    "severity": "low",
@@ -3789,7 +3734,7 @@
     }
    ],
    "design": {
-    "n": 15,
+    "n": 14,
     "textBox": {
      "x": 1200.5,
      "y": 29.5,
@@ -3848,7 +3793,7 @@
     }
    ],
    "design": {
-    "n": 18,
+    "n": 17,
     "textBox": {
      "x": 294.8,
      "y": 102,
@@ -3874,6 +3819,39 @@
     }
    },
    "live": null
+  },
+  {
+   "id": "extra:live:search#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Search",
+   "section": "form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Search",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 8,
+    "textBox": {
+     "x": 252.2,
+     "y": 28,
+     "w": 24,
+     "h": 24
+    },
+    "box": {
+     "x": 252.2,
+     "y": 28,
+     "w": 24,
+     "h": 24
+    },
+    "section": "form",
+    "where": null
+   }
   },
   {
    "id": "extra:live:photos#0",
@@ -4540,7 +4518,7 @@
    "category": "extra",
    "severity": "low",
    "text": "A cute brown dog lying and relaxing on the beach full of sand close to the seaside waiting for the owner or looking for something by the sea. Vacation holida…",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4564,7 +4542,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4573,7 +4551,7 @@
    "category": "extra",
    "severity": "low",
    "text": "English Springer Spaniel hunting dog breed.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4597,7 +4575,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4606,7 +4584,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Close-up portrait of tricolor australian shepherd dog lying on the table of a natural eye park around him",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4630,7 +4608,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4639,7 +4617,7 @@
    "category": "extra",
    "severity": "low",
    "text": "brown short hair Chihuahua dog sitting on green grass in the garden with yellow flowers blackground, looking at camera.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4663,7 +4641,7 @@
      "w": 451,
      "h": 272
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4672,7 +4650,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Emotional support animal concept. Sleeping Pomeranian dog in floor. pet is rest. Close up, copy space, background",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4696,7 +4674,7 @@
      "w": 408,
      "h": 272
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4705,7 +4683,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Siberian husky puppy lying on sofa in living room. Dog on sofa.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4729,7 +4707,7 @@
      "w": 407,
      "h": 272
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4738,7 +4716,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Happy young woman lying in the bed with her dogs",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4762,7 +4740,7 @@
      "w": 475,
      "h": 317
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4771,7 +4749,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Dog looks poor.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4795,7 +4773,7 @@
      "w": 317,
      "h": 317
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4804,7 +4782,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Black young woman laughing while resting with her dog on her sofa",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4828,7 +4806,7 @@
      "w": 474,
      "h": 317
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4837,7 +4815,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog with white background",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4861,7 +4839,7 @@
      "w": 278,
      "h": 278
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4870,7 +4848,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Happy dog looks out from car window. Road trip with dog.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4894,7 +4872,7 @@
      "w": 417,
      "h": 278
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4903,7 +4881,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Black and white cute Alaskan dog",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4927,7 +4905,7 @@
      "w": 278,
      "h": 278
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4936,7 +4914,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Generative AI, Portrait of a happy dog looking at the camera with mouth open on pink background",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4960,7 +4938,7 @@
      "w": 277,
      "h": 278
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -4969,7 +4947,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Brown dog relax and sitting in the garden",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -4993,7 +4971,7 @@
      "w": 397,
      "h": 265
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5002,7 +4980,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Husky dog on snow background with empty space for text",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5026,7 +5004,7 @@
      "w": 473,
      "h": 265
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5035,7 +5013,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Shih Tzu dog on the street. Shih Tzu is a breed of dog in the Shih Tzu family.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5059,7 +5037,7 @@
      "w": 396,
      "h": 265
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5068,7 +5046,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog outdoors lying on the grass travel animal",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5092,7 +5070,7 @@
      "w": 439,
      "h": 293
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5101,7 +5079,7 @@
    "category": "extra",
    "severity": "low",
    "text": "portrait of little dog on the seaside during sunset.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5125,7 +5103,7 @@
      "w": 440,
      "h": 293
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5134,7 +5112,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute image of a Shih Tzu dog wearing sunglasses at the beach",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5158,7 +5136,7 @@
      "w": 387,
      "h": 293
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5167,7 +5145,7 @@
    "category": "extra",
    "severity": "low",
    "text": "small puppy of wire-haired dachshund on the hands of person on light background. Portrait of dog",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5191,7 +5169,7 @@
      "w": 172,
      "h": 249
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5200,7 +5178,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute dog in birthday cap. Illustration",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5224,7 +5202,7 @@
      "w": 374,
      "h": 249
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5233,7 +5211,7 @@
    "category": "extra",
    "severity": "low",
    "text": "A Yorkshire Terrier dog sitting on a beige chair",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5257,7 +5235,7 @@
      "w": 372,
      "h": 249
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5266,7 +5244,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog breed",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5290,7 +5268,7 @@
      "w": 124.8,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5299,7 +5277,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog lover",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5323,7 +5301,7 @@
      "w": 118.7,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5332,7 +5310,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog playing",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5356,7 +5334,7 @@
      "w": 134.5,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5365,7 +5343,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog background",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5389,7 +5367,7 @@
      "w": 166,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5398,7 +5376,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog owner",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5422,7 +5400,7 @@
      "w": 127.2,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5431,7 +5409,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cool dog",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5455,7 +5433,7 @@
      "w": 114,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5464,7 +5442,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog care",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5488,7 +5466,7 @@
      "w": 115,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5497,7 +5475,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog love",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5521,7 +5499,7 @@
      "w": 113,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5530,7 +5508,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog doodle",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5554,7 +5532,7 @@
      "w": 131.8,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5563,7 +5541,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cute puppy",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5587,7 +5565,7 @@
      "w": 131.7,
      "h": 40
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5596,7 +5574,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute beagle puppies. Happy beagle dog relaxing looking sleepy and sitting on the white marble table at home outside. Animals mamal dog concept.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5620,7 +5598,7 @@
      "w": 519,
      "h": 346
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5629,7 +5607,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Closeup the dog. It's man's best friend.",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5653,7 +5631,7 @@
      "w": 519,
      "h": 346
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5662,7 +5640,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog with weird smile",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5686,7 +5664,7 @@
      "w": 228,
      "h": 346
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5695,7 +5673,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Hunting dog breed Basenji",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5719,7 +5697,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5728,7 +5706,7 @@
    "category": "extra",
    "severity": "low",
    "text": "lonely stray dog portrait with sweet look",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5752,7 +5730,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5761,7 +5739,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cute dog in a sunshine day",
-   "section": "ul#grid3246",
+   "section": "ul#grid9531",
    "props": [
     {
      "prop": "control",
@@ -5785,7 +5763,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid3246",
+    "section": "ul#grid9531",
     "where": null
    }
   },
@@ -5862,14 +5840,14 @@
   }
  ],
  "stats": {
-  "designItems": 71,
+  "designItems": 70,
   "liveItems": 115,
-  "matched": 12,
+  "matched": 11,
   "designBoxes": 83,
   "liveBoxes": 78,
   "matchedBoxes": 9,
   "missing": 58,
-  "extra": 59,
+  "extra": 60,
   "findings": 139,
   "byCategory": {
    "typography": 4,
@@ -5877,11 +5855,11 @@
    "size": 1,
    "shape": 2,
    "spacing": 2,
-   "alignment": 2,
+   "alignment": 1,
    "icon": 0,
    "behavior": 8,
    "missing": 58,
-   "extra": 59
+   "extra": 60
   },
   "bySeverity": {
    "low": 65,

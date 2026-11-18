@@ -99,3 +99,12 @@ test('whole page: boxes in different regions that lined up in the design are fla
   assert.match(lay[0].props[0].live, /off by 15px ↓/);
   assert.deepEqual(lay[0].guide, { axis: 'y', design: [84], live: [99, 84] });
 });
+
+test('icon-only controls with the same name but a different shape are not paired', () => {
+  // the design's rail logo (50x71) and the live top-bar logo (164x40) are both "Vecteezy home"
+  const ctl = (x, y, w, h) => item('Vecteezy home', x, y, { w, h, extra: { kind: 'control', interactive: true } });
+  const { pairs, unmatchedD, unmatchedL } = matchItems([ctl(12, 20, 50, 71), item('Home', 25, 96)], [ctl(100, 20, 164, 40), item('Home', 25, 96)]);
+  assert.deepEqual(pairs.map(p => p.d.text), ['Home']);
+  assert.equal(unmatchedD[0].text, 'Vecteezy home');
+  assert.equal(unmatchedL[0].text, 'Vecteezy home');
+});

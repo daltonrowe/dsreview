@@ -72,7 +72,8 @@ export function matchItems(D, L) {
   let anchors = [];
   for (const [k, ds] of gD) {
     const ls = gL.get(k);
-    if (ds.length === 1 && ls?.length === 1 && k.length >= 2) anchors.push({ d: ds[0], dx: ls[0].textBox.x - ds[0].textBox.x, dy: ls[0].textBox.y - ds[0].textBox.y });
+    // anchors are visible text only: accessible names (aria-label) are reused for different things
+    if (ds.length === 1 && ls?.length === 1 && k.length >= 2 && ds[0].kind === 'text' && ls[0].kind === 'text') anchors.push({ d: ds[0], dx: ls[0].textBox.x - ds[0].textBox.x, dy: ls[0].textBox.y - ds[0].textBox.y });
   }
   const med = a => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };
   const nearest = (b, list, k) => list.map(a => ({ a, dd: dist(b, a.d.textBox) })).sort((x, y) => x.dd - y.dd).slice(0, k).map(x => x.a);
@@ -97,9 +98,16 @@ export function matchItems(D, L) {
       pairs.push({ d: c.d, l: c.l, how: c.how });
     }
   };
+  // an icon or image is only the same thing if it's about the same size
+  const sameShape = (d, l) => {
+    if (isText(d) && isText(l)) return true;
+    const a = d.textBox, b = l.textBox;
+    return Math.max(a.w / b.w, b.w / a.w) <= 1.8 && Math.max(a.h / b.h, b.h / a.h) <= 1.8;
+  };
   const exact = [];
   for (const [k, ds] of gD) for (const d of ds) for (const l of gL.get(k) || []) {
     if ((d.kind === 'image') !== (l.kind === 'image')) continue;
+    if (!sameShape(d, l)) continue;
     const jump = dist(exp.get(d.n), l.textBox);
     if (jump <= MAX_JUMP) exact.push({ d, l, cost: jump, how: 'text' });
   }
@@ -113,7 +121,7 @@ export function matchItems(D, L) {
       const kl = keyOf(l);
       if (Math.min(kd.length, kl.length) / Math.max(kd.length, kl.length) < 0.5) continue;
       const s = similarity(kd, kl), jump = dist(exp.get(d.n), l.textBox);
-      if (s >= 0.72 && jump <= MAX_JUMP) fuzzy.push({ d, l, cost: (1 - s) * 1000 + jump / 10, how: 'similar text' });
+      if (s >= 0.72 && jump <= MAX_JUMP && sameShape(d, l)) fuzzy.push({ d, l, cost: (1 - s) * 1000 + jump / 10, how: 'similar text' });
     }
   }
   greedy(fuzzy);
@@ -245,7 +253,7 @@ function outerBoxes(items) {
 }
 
 // ---------- per-pair property diffs ----------
-const isText = it => it.kind === 'text' || it.kind === 'field';
+function isText(it) { return it.kind === 'text' || it.kind === 'field'; }
 // "normal" line height is roughly 1.2em for the fonts in play
 const lh = st => (st.lineHeight === 'normal' ? Math.round(st.fontSize * 1.2 * 10) / 10 : st.lineHeight);
 function typography(d, l) {

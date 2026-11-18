@@ -3,7 +3,7 @@
  "baseId": "home",
  "theme": "light",
  "label": "Home (logged out)",
- "generatedAt": "2026-11-18T11:56:33.534Z",
+ "generatedAt": "2026-11-18T12:03:52.014Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -15,7 +15,7 @@
   "width": 1440,
   "height": 3000,
   "shot": "design.jpg",
-  "items": 35,
+  "items": 33,
   "log": []
  },
  "live": {
@@ -27,137 +27,134 @@
   "height": 3000,
   "shot": "live.jpg",
   "items": 56,
-  "log": []
+  "log": [
+   "pageerror: Failed to fetch"
+  ]
  },
  "pairs": [
   {
-   "design": 1,
-   "live": 0,
-   "how": "text"
-  },
-  {
-   "design": 2,
-   "live": 1,
-   "how": "text"
-  },
-  {
-   "design": 3,
-   "live": 2,
-   "how": "text"
-  },
-  {
-   "design": 4,
-   "live": 3,
-   "how": "text"
-  },
-  {
-   "design": 5,
-   "live": 4,
-   "how": "text"
-  },
-  {
-   "design": 16,
+   "design": 15,
    "live": 12,
    "how": "text"
   },
   {
-   "design": 21,
+   "design": 19,
    "live": 16,
    "how": "text"
   },
   {
-   "design": 22,
+   "design": 20,
    "live": 17,
    "how": "text"
   },
   {
-   "design": 23,
+   "design": 21,
    "live": 18,
    "how": "text"
   },
   {
-   "design": 24,
+   "design": 22,
    "live": 19,
    "how": "text"
   },
   {
-   "design": 25,
+   "design": 23,
    "live": 20,
    "how": "text"
   },
   {
-   "design": 26,
+   "design": 24,
    "live": 21,
    "how": "text"
   },
   {
-   "design": 27,
+   "design": 25,
    "live": 22,
    "how": "text"
   },
   {
-   "design": 28,
+   "design": 26,
    "live": 23,
    "how": "text"
   },
   {
-   "design": 30,
+   "design": 28,
    "live": 55,
    "how": "text"
   },
   {
-   "design": 32,
+   "design": 30,
    "live": 57,
    "how": "text"
   },
   {
-   "design": 31,
+   "design": 29,
    "live": 56,
    "how": "text"
   },
   {
-   "design": 33,
+   "design": 31,
    "live": 58,
    "how": "text"
   },
   {
-   "design": 34,
+   "design": 32,
    "live": 59,
    "how": "text"
   },
   {
-   "design": 14,
+   "design": 13,
    "live": 11,
    "how": "text"
   },
   {
-   "design": 19,
-   "live": 14,
+   "design": 0,
+   "live": 0,
    "how": "text"
   },
   {
-   "design": 10,
+   "design": 1,
+   "live": 1,
+   "how": "text"
+  },
+  {
+   "design": 2,
+   "live": 2,
+   "how": "text"
+  },
+  {
+   "design": 3,
+   "live": 3,
+   "how": "text"
+  },
+  {
+   "design": 4,
+   "live": 4,
+   "how": "text"
+  },
+  {
+   "design": 9,
    "live": 7,
    "how": "text"
   },
   {
-   "design": 11,
+   "design": 10,
    "live": 8,
    "how": "text"
   },
   {
-   "design": 29,
+   "design": 27,
    "live": 54,
    "how": "text"
   },
   {
-   "design": 0,
-   "live": 6,
-   "how": "text"
+   "design": 12,
+   "live": 10,
+   "how": "similar text"
   },
   {
-   "design": 13,
-   "live": 10,
+   "design": 7,
+   "live": 6,
    "how": "similar text"
   }
  ],
@@ -183,7 +180,7 @@
     }
    ],
    "design": {
-    "n": 29,
+    "n": 27,
     "textBox": {
      "x": 485.3,
      "y": 2035,
@@ -248,7 +245,7 @@
     }
    ],
    "design": {
-    "n": 34,
+    "n": 32,
     "textBox": {
      "x": 649.6,
      "y": 2650.5,
@@ -308,7 +305,7 @@
     }
    ],
    "design": {
-    "n": 1,
+    "n": 0,
     "textBox": {
      "x": 25,
      "y": 96,
@@ -351,154 +348,6 @@
     "where": null
    },
    "match": "text"
-  },
-  {
-   "id": "spacing:vecteezy home#0",
-   "category": "spacing",
-   "severity": "high",
-   "text": "Vecteezy home",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "gap below → “Search”",
-     "design": "57px",
-     "live": "88px",
-     "sev": "high",
-     "ref": 2
-    }
-   ],
-   "design": {
-    "n": 0,
-    "textBox": {
-     "x": 12,
-     "y": 20,
-     "w": 50,
-     "h": 71
-    },
-    "box": {
-     "x": 12,
-     "y": 20,
-     "w": 50,
-     "h": 71
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 16,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 466,
-     "col": 5
-    }
-   },
-   "live": {
-    "n": 6,
-    "textBox": {
-     "x": 100,
-     "y": 20,
-     "w": 164.3,
-     "h": 40
-    },
-    "box": {
-     "x": 100,
-     "y": 20,
-     "w": 164.3,
-     "h": 40
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "alignment:vecteezy home#0",
-   "category": "alignment",
-   "severity": "high",
-   "text": "Vecteezy home",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "right edge",
-     "design": "aligned with “Home”",
-     "live": "off by 201.8px →",
-     "sev": "high",
-     "ref": 1,
-     "dd": 201.8
-    }
-   ],
-   "design": {
-    "n": 0,
-    "textBox": {
-     "x": 12,
-     "y": 20,
-     "w": 50,
-     "h": 71
-    },
-    "box": {
-     "x": 12,
-     "y": 20,
-     "w": 50,
-     "h": 71
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 16,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 466,
-     "col": 5
-    }
-   },
-   "live": {
-    "n": 6,
-    "textBox": {
-     "x": 100,
-     "y": 20,
-     "w": 164.3,
-     "h": 40
-    },
-    "box": {
-     "x": 100,
-     "y": 20,
-     "w": 164.3,
-     "h": 40
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text",
-   "guide": {
-    "axis": "x",
-    "design": [
-     62
-    ],
-    "live": [
-     264.3,
-     62.5
-    ]
-   },
-   "related": [
-    {
-     "text": "Home",
-     "design": {
-      "x": 12,
-      "y": 84,
-      "w": 50,
-      "h": 48
-     },
-     "live": {
-      "x": 12.5,
-      "y": 84,
-      "w": 50,
-      "h": 48
-     }
-    }
-   ]
   },
   {
    "id": "alignment:layout:hero masthead:top",
@@ -578,104 +427,16 @@
    ]
   },
   {
-   "id": "alignment:home#0",
-   "category": "alignment",
-   "severity": "high",
-   "text": "Home",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "right edge",
-     "design": "aligned with “Vecteezy home”",
-     "live": "off by -201.8px ←",
-     "sev": "high",
-     "ref": 0,
-     "dd": 201.8
-    }
-   ],
-   "design": {
-    "n": 1,
-    "textBox": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12,
-     "y": 84,
-     "w": 50,
-     "h": 48
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 24,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 471,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 0,
-    "textBox": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12.5,
-     "y": 84,
-     "w": 50,
-     "h": 48
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text",
-   "guide": {
-    "axis": "x",
-    "design": [
-     62
-    ],
-    "live": [
-     62.5,
-     264.3
-    ]
-   },
-   "related": [
-    {
-     "text": "Vecteezy home",
-     "design": {
-      "x": 12,
-      "y": 20,
-      "w": 50,
-      "h": 71
-     },
-     "live": {
-      "x": 100,
-      "y": 20,
-      "w": 164.3,
-      "h": 40
-     }
-    }
-   ]
-  },
-  {
    "id": "alignment:section:hero masthead",
    "category": "alignment",
    "severity": "high",
-   "text": "Hero masthead (4 matched elements)",
+   "text": "Hero masthead (3 matched elements)",
    "section": "Hero masthead",
    "props": [
     {
      "prop": "region y",
      "design": "145px",
-     "live": "162px (↓ 20px)",
+     "live": "162px (↓ 17px)",
      "sev": "high"
     }
    ],
@@ -686,13 +447,13 @@
      "x": 324.9,
      "y": 145,
      "w": 865.1999999999999,
-     "h": 189
+     "h": 108
     },
     "box": {
      "x": 324.9,
      "y": 145,
      "w": 865.1999999999999,
-     "h": 189
+     "h": 108
     },
     "section": "Hero masthead",
     "where": null
@@ -703,13 +464,13 @@
      "x": 325.4,
      "y": 162,
      "w": 865.1999999999999,
-     "h": 192
+     "h": 111
     },
     "box": {
      "x": 325.4,
      "y": 162,
      "w": 865.1999999999999,
-     "h": 192
+     "h": 111
     },
     "section": "Hero masthead",
     "where": null
@@ -830,7 +591,7 @@
     }
    ],
    "design": {
-    "n": 10,
+    "n": 9,
     "textBox": {
      "x": 1057.3,
      "y": 33.5,
@@ -889,7 +650,7 @@
     }
    ],
    "design": {
-    "n": 14,
+    "n": 13,
     "textBox": {
      "x": 817.2,
      "y": 145,
@@ -939,7 +700,7 @@
     }
    ],
    "design": {
-    "n": 13,
+    "n": 12,
     "textBox": {
      "x": 344.9,
      "y": 147,
@@ -990,7 +751,7 @@
     }
    ],
    "design": {
-    "n": 30,
+    "n": 28,
     "textBox": {
      "x": 204.5,
      "y": 2309,
@@ -1049,7 +810,7 @@
     }
    ],
    "design": {
-    "n": 32,
+    "n": 30,
     "textBox": {
      "x": 842.3,
      "y": 2309,
@@ -1108,7 +869,7 @@
     }
    ],
    "design": {
-    "n": 31,
+    "n": 29,
     "textBox": {
      "x": 526.4,
      "y": 2309,
@@ -1167,7 +928,7 @@
     }
    ],
    "design": {
-    "n": 33,
+    "n": 31,
     "textBox": {
      "x": 1169.4,
      "y": 2309,
@@ -1227,7 +988,7 @@
     }
    ],
    "design": {
-    "n": 11,
+    "n": 10,
     "textBox": {
      "x": 1200.5,
      "y": 33.5,
@@ -1286,7 +1047,7 @@
     }
    ],
    "design": {
-    "n": 11,
+    "n": 10,
     "textBox": {
      "x": 1200.5,
      "y": 33.5,
@@ -1345,7 +1106,7 @@
     }
    ],
    "design": {
-    "n": 11,
+    "n": 10,
     "textBox": {
      "x": 1200.5,
      "y": 33.5,
@@ -1404,7 +1165,7 @@
     }
    ],
    "design": {
-    "n": 21,
+    "n": 19,
     "textBox": {
      "x": 212.9,
      "y": 470,
@@ -1455,7 +1216,7 @@
     }
    ],
    "design": {
-    "n": 1,
+    "n": 0,
     "textBox": {
      "x": 25,
      "y": 96,
@@ -1500,48 +1261,6 @@
    "match": "text"
   },
   {
-   "id": "missing:vecteezy#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Vecteezy",
-   "section": "Home top bar",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Vecteezy",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 8,
-    "textBox": {
-     "x": 99,
-     "y": 22,
-     "w": 164.3,
-     "h": 40
-    },
-    "box": {
-     "x": 99,
-     "y": 22,
-     "w": 164.3,
-     "h": 40
-    },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 910,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1445,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
    "id": "missing:log in#0",
    "category": "missing",
    "severity": "medium",
@@ -1556,7 +1275,7 @@
     }
    ],
    "design": {
-    "n": 12,
+    "n": 11,
     "textBox": {
      "x": 1340.5,
      "y": 33.5,
@@ -1598,7 +1317,7 @@
     }
    ],
    "design": {
-    "n": 15,
+    "n": 14,
     "textBox": {
      "x": 886.5,
      "y": 147,
@@ -1631,7 +1350,7 @@
     }
    ],
    "design": {
-    "n": 18,
+    "n": 17,
     "textBox": {
      "x": 494.5,
      "y": 302,
@@ -1664,7 +1383,7 @@
     }
    ],
    "design": {
-    "n": 20,
+    "n": 18,
     "textBox": {
      "x": 1214.5,
      "y": 311,
@@ -1706,7 +1425,7 @@
     }
    ],
    "design": {
-    "n": 17,
+    "n": 16,
     "textBox": {
      "x": 315.5,
      "y": 313,
@@ -1739,7 +1458,7 @@
     }
    ],
    "design": {
-    "n": 6,
+    "n": 5,
     "textBox": {
      "x": 25,
      "y": 356,
@@ -1781,7 +1500,7 @@
     }
    ],
    "design": {
-    "n": 35,
+    "n": 33,
     "textBox": {
      "x": 684.5,
      "y": 2830,
@@ -1823,7 +1542,7 @@
     }
    ],
    "design": {
-    "n": 7,
+    "n": 6,
     "textBox": {
      "x": 26,
      "y": 2945,
@@ -1865,7 +1584,7 @@
     }
    ],
    "design": {
-    "n": 11,
+    "n": 10,
     "textBox": {
      "x": 1200.5,
      "y": 33.5,
@@ -1925,7 +1644,7 @@
     }
    ],
    "design": {
-    "n": 10,
+    "n": 9,
     "textBox": {
      "x": 1057.3,
      "y": 33.5,
@@ -1985,7 +1704,7 @@
     }
    ],
    "design": {
-    "n": 22,
+    "n": 20,
     "textBox": {
      "x": 407.1,
      "y": 470,
@@ -2036,7 +1755,7 @@
     }
    ],
    "design": {
-    "n": 23,
+    "n": 21,
     "textBox": {
      "x": 543.6,
      "y": 470,
@@ -2087,7 +1806,7 @@
     }
    ],
    "design": {
-    "n": 24,
+    "n": 22,
     "textBox": {
      "x": 675.5,
      "y": 470,
@@ -2138,7 +1857,7 @@
     }
    ],
    "design": {
-    "n": 25,
+    "n": 23,
     "textBox": {
      "x": 798.8,
      "y": 470,
@@ -2189,7 +1908,7 @@
     }
    ],
    "design": {
-    "n": 26,
+    "n": 24,
     "textBox": {
      "x": 953.3,
      "y": 470,
@@ -2240,7 +1959,7 @@
     }
    ],
    "design": {
-    "n": 27,
+    "n": 25,
     "textBox": {
      "x": 1076.1,
      "y": 470,
@@ -2291,7 +2010,7 @@
     }
    ],
    "design": {
-    "n": 28,
+    "n": 26,
     "textBox": {
      "x": 1272.7,
      "y": 470,
@@ -2342,7 +2061,7 @@
     }
    ],
    "design": {
-    "n": 29,
+    "n": 27,
     "textBox": {
      "x": 485.3,
      "y": 2035,
@@ -2402,7 +2121,7 @@
     }
    ],
    "design": {
-    "n": 30,
+    "n": 28,
     "textBox": {
      "x": 204.5,
      "y": 2309,
@@ -2462,7 +2181,7 @@
     }
    ],
    "design": {
-    "n": 32,
+    "n": 30,
     "textBox": {
      "x": 842.3,
      "y": 2309,
@@ -2522,7 +2241,7 @@
     }
    ],
    "design": {
-    "n": 31,
+    "n": 29,
     "textBox": {
      "x": 526.4,
      "y": 2309,
@@ -2582,7 +2301,7 @@
     }
    ],
    "design": {
-    "n": 33,
+    "n": 31,
     "textBox": {
      "x": 1169.4,
      "y": 2309,
@@ -2642,7 +2361,7 @@
     }
    ],
    "design": {
-    "n": 34,
+    "n": 32,
     "textBox": {
      "x": 649.6,
      "y": 2650.5,
@@ -2698,11 +2417,11 @@
      "design": "7px",
      "live": "10px",
      "sev": "low",
-     "ref": 16
+     "ref": 15
     }
    ],
    "design": {
-    "n": 14,
+    "n": 13,
     "textBox": {
      "x": 817.2,
      "y": 145,
@@ -2749,11 +2468,11 @@
      "design": "12px",
      "live": "15px",
      "sev": "low",
-     "ref": 16
+     "ref": 15
     }
    ],
    "design": {
-    "n": 13,
+    "n": 12,
     "textBox": {
      "x": 344.9,
      "y": 147,
@@ -2812,7 +2531,7 @@
     }
    ],
    "design": {
-    "n": 10,
+    "n": 9,
     "textBox": {
      "x": 1057.3,
      "y": 33.5,
@@ -2872,7 +2591,7 @@
     }
    ],
    "design": {
-    "n": 11,
+    "n": 10,
     "textBox": {
      "x": 1200.5,
      "y": 33.5,
@@ -2932,7 +2651,7 @@
     }
    ],
    "design": {
-    "n": 2,
+    "n": 1,
     "textBox": {
      "x": 25,
      "y": 148,
@@ -2992,7 +2711,7 @@
     }
    ],
    "design": {
-    "n": 3,
+    "n": 2,
     "textBox": {
      "x": 25,
      "y": 200,
@@ -3052,7 +2771,7 @@
     }
    ],
    "design": {
-    "n": 4,
+    "n": 3,
     "textBox": {
      "x": 25,
      "y": 252,
@@ -3112,7 +2831,7 @@
     }
    ],
    "design": {
-    "n": 5,
+    "n": 4,
     "textBox": {
      "x": 25,
      "y": 304,
@@ -3219,6 +2938,39 @@
      "h": 56
     },
     "section": "input#search",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:search#1",
+   "category": "extra",
+   "severity": "low",
+   "text": "Search",
+   "section": "form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Search",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 445.4,
+     "y": 330,
+     "w": 24,
+     "h": 24
+    },
+    "box": {
+     "x": 445.4,
+     "y": 330,
+     "w": 24,
+     "h": 24
+    },
+    "section": "form",
     "where": null
    }
   },
@@ -3786,12 +3538,8 @@
  ],
  "boxPairs": [
   {
-   "design": 1,
-   "live": 1
-  },
-  {
-   "design": 12,
-   "live": 6
+   "design": 14,
+   "live": 8
   },
   {
    "design": 36,
@@ -3818,8 +3566,8 @@
    "live": 5
   },
   {
-   "design": 14,
-   "live": 8
+   "design": 1,
+   "live": 1
   },
   {
    "design": 35,
@@ -3832,6 +3580,14 @@
   {
    "design": 0,
    "live": 0
+  },
+  {
+   "design": 3,
+   "live": 4
+  },
+  {
+   "design": 12,
+   "live": 6
   },
   {
    "design": 30,
@@ -3855,31 +3611,31 @@
   }
  ],
  "stats": {
-  "designItems": 35,
+  "designItems": 33,
   "liveItems": 56,
-  "matched": 26,
+  "matched": 25,
   "designBoxes": 41,
   "liveBoxes": 30,
-  "matchedBoxes": 17,
-  "missing": 9,
-  "extra": 19,
-  "findings": 73,
+  "matchedBoxes": 18,
+  "missing": 8,
+  "extra": 20,
+  "findings": 70,
   "byCategory": {
    "typography": 10,
    "color": 16,
    "size": 1,
    "shape": 1,
-   "spacing": 3,
-   "alignment": 6,
+   "spacing": 2,
+   "alignment": 4,
    "icon": 1,
    "behavior": 7,
-   "missing": 9,
-   "extra": 19
+   "missing": 8,
+   "extra": 20
   },
   "bySeverity": {
-   "low": 42,
-   "medium": 21,
-   "high": 10
+   "low": 43,
+   "medium": 20,
+   "high": 7
   }
  }
 }

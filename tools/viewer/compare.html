@@ -115,7 +115,7 @@
   <div class="seg" id="mode" title="m cycles"></div>
   <label id="mixLab" hidden><span id="mixName">Live</span> <input type="range" id="mix" min="0" max="100" value="50"></label>
   <div class="seg" id="zoom"></div>
-  <label title="Outline every finding shown (b)"><input type="checkbox" id="allBoxes" checked> All boxes</label>
+  <span class="hint" id="boxHint"></span>
 </div>
 <div class="main">
   <aside id="list"></aside>
@@ -134,7 +134,7 @@ const params = new URLSearchParams(location.search);
 const st = {
   id: params.get('id'), report: null, decisions: {},
   cats: new Set(), minSev: store.get('minSev', 1), status: store.get('status', 'all'), q: '',
-  mode: store.get('mode', 'side'), mix: 50, zoom: Number(store.get('zoomLevel', 1)) || 1, allBoxes: store.get('allBoxes', true),
+  mode: store.get('mode', 'side'), mix: 50, zoom: Number(store.get('zoomLevel', 1)) || 1,
   sel: params.get('f'), noteOpen: null, find: null,
 };
 
@@ -194,7 +194,6 @@ function renderToolbar() {
   $('#bulk').innerHTML = `<option value="">Set all shown…</option>${DECISIONS.map(d => `<option value="${d}">${LABELS[d]}</option>`).join('')}<option value="clear">Clear</option>`;
   $('#mixLab').hidden = st.mode === 'side';
   $('#mixName').textContent = st.mode === 'swipe' ? 'Swipe' : 'Live';
-  $('#allBoxes').checked = st.allBoxes;
   const p = progress();
   $('#prog').innerHTML = progressBar(p) + legend(p);
 }
@@ -212,7 +211,6 @@ $('#zoom').onclick = e => {
 };
 $('#q').oninput = e => { st.q = e.target.value; renderList(); renderStage(); };
 $('#mix').oninput = e => { st.mix = Number(e.target.value); applyMix(); };
-$('#allBoxes').onchange = e => { st.allBoxes = e.target.checked; store.set('allBoxes', st.allBoxes); drawBoxes(); };
 $('#bulk').onchange = async e => {
   const v = e.target.value; e.target.value = '';
   if (!v) return;
@@ -370,7 +368,10 @@ function boxEl(f, side, box) {
   return `<b class="${side}${f.id === st.sel ? ' sel' : ''}" data-id="${esc(f.id)}" data-lab="${esc(lab)}" title="${esc(lab)}" style="left:${box.x * scale - 2}px;top:${box.y * scale - 2}px;width:${Math.max(box.w * scale, 2) + 4}px;height:${Math.max(box.h * scale, 2) + 4}px"></b>`;
 }
 function drawBoxes() {
-  const list = st.allBoxes ? visible() : visible().filter(f => f.id === st.sel);
+  // a selected finding is shown alone; with nothing selected (Esc), every finding shown is outlined to pick from
+  const sel = st.sel && st.report.findings.find(f => f.id === st.sel);
+  const list = sel ? [sel] : visible();
+  $('#boxHint').textContent = sel ? 'Esc shows every box' : 'Click a box to select its finding';
   if (st.mode === 'side') {
     $('.canvas.dc .boxes').innerHTML = list.filter(f => f.design).map(f => boxEl(f, 'd', f.design.box)).join('');
     $('.canvas.lc .boxes').innerHTML = list.filter(f => f.live).map(f => boxEl(f, 'l', f.live.box)).join('');
@@ -475,7 +476,7 @@ addEventListener('keydown', e => {
   else if (e.key === 'f' && cur) find(cur.id);
   else if (e.key === 'n' && cur) { e.preventDefault(); st.noteOpen = cur.id; renderCard(cur.id); $(`.f[data-id="${CSS.escape(cur.id)}"] textarea`)?.focus(); }
   else if (e.key === 'm') setMode(MODES[(MODES.findIndex(m => m[0] === st.mode) + 1) % MODES.length][0]);
-  else if (e.key === 'b') { st.allBoxes = !st.allBoxes; store.set('allBoxes', st.allBoxes); renderToolbar(); drawBoxes(); }
+  else if (e.key === 'Escape' && st.sel) select(null);
   else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
   else if ((e.key === '[' || e.key === ']') && st.mode !== 'side') { st.mix = Math.max(0, Math.min(100, st.mix + (e.key === ']' ? 10 : -10))); $('#mix').value = st.mix; applyMix(); }
 });

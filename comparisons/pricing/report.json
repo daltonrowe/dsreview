@@ -3,7 +3,7 @@
  "baseId": "pricing",
  "theme": "light",
  "label": "Join Pro (pricing)",
- "generatedAt": "2026-11-18T11:58:14.865Z",
+ "generatedAt": "2026-11-18T12:05:32.533Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -29,14 +29,50 @@
   "items": 114,
   "log": []
  },
- "pairs": [
-  {
-   "design": 0,
-   "live": 0,
-   "how": "text"
-  }
- ],
+ "pairs": [],
  "findings": [
+  {
+   "id": "missing:vecteezy home#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Vecteezy home",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Vecteezy home",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 0,
+    "textBox": {
+     "x": 24,
+     "y": 20,
+     "w": 40,
+     "h": 40
+    },
+    "box": {
+     "x": 24,
+     "y": 20,
+     "w": 40,
+     "h": 40
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 97,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 109,
+     "col": 5
+    }
+   },
+   "live": null
+  },
   {
    "id": "missing:your all-access pass#0",
    "category": "missing",
@@ -1998,6 +2034,39 @@
     "where": null
    },
    "live": null
+  },
+  {
+   "id": "extra:live:vecteezy home#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Vecteezy home",
+   "section": "header",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Vecteezy home",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 0,
+    "textBox": {
+     "x": 24,
+     "y": 20,
+     "w": 164.3,
+     "h": 40
+    },
+    "box": {
+     "x": 24,
+     "y": 20,
+     "w": 164.3,
+     "h": 40
+    },
+    "section": "header",
+    "where": null
+   }
   },
   {
    "id": "extra:live:join pro#0",
@@ -5733,13 +5802,13 @@
  "stats": {
   "designItems": 60,
   "liveItems": 114,
-  "matched": 1,
+  "matched": 0,
   "designBoxes": 13,
   "liveBoxes": 26,
   "matchedBoxes": 0,
-  "missing": 51,
-  "extra": 113,
-  "findings": 164,
+  "missing": 52,
+  "extra": 114,
+  "findings": 166,
   "byCategory": {
    "typography": 0,
    "color": 0,
@@ -5749,12 +5818,12 @@
    "alignment": 0,
    "icon": 0,
    "behavior": 0,
-   "missing": 51,
-   "extra": 113
+   "missing": 52,
+   "extra": 114
   },
   "bySeverity": {
-   "low": 137,
-   "medium": 27,
+   "low": 138,
+   "medium": 28,
    "high": 0
   }
  }

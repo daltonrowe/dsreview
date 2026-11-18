@@ -3,7 +3,7 @@
  "baseId": "sign-up",
  "theme": "light",
  "label": "Create an account",
- "generatedAt": "2026-11-18T11:57:36.263Z",
+ "generatedAt": "2026-11-18T12:04:54.972Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -50,11 +50,6 @@
    "how": "text"
   },
   {
-   "design": 9,
-   "live": 9,
-   "how": "text"
-  },
-  {
    "design": 1,
    "live": 1,
    "how": "text"
@@ -92,6 +87,11 @@
   {
    "design": 7,
    "live": 7,
+   "how": "text"
+  },
+  {
+   "design": 9,
+   "live": 9,
    "how": "text"
   },
   {
@@ -4038,16 +4038,16 @@
  ],
  "boxPairs": [
   {
+   "design": 0,
+   "live": 0
+  },
+  {
    "design": 2,
    "live": 2
   },
   {
    "design": 15,
    "live": 11
-  },
-  {
-   "design": 0,
-   "live": 0
   },
   {
    "design": 3,

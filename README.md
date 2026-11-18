@@ -75,8 +75,9 @@ Re-running keeps decisions: finding ids are stable (`<category>:<text>#<occurren
 - **Comparison** (`/compare.html?id=home`): findings on the left, the two screenshots on the right.
   - **☀ Light / ☾ Dark** switches between the two versions of the comparison.
   - Views: **Side by side** (one scroll for both), **Overlay** (slider sets live opacity), **Difference**
-    (identical pixels are black), **Swipe** (slider moves the split). Boxes outline every finding shown
-    (magenta design, blue live); click one to select its finding. Alignment findings draw green **guide
+    (identical pixels are black), **Swipe** (slider moves the split). The selected finding's boxes are the
+    only ones drawn (magenta design, blue live); **Esc** clears the selection and outlines every finding
+    shown, so you can click a box to pick one. Alignment findings draw green **guide
     lines** across the whole screenshot at the edge that should line up (one line in the design, one per
     element on live, so the gap shows), with the partner box dashed.
   - **Zoom**: hold **Z** and click to zoom in at that spot, **⌘ + Z + click** (Ctrl + Z + click elsewhere)
@@ -87,7 +88,7 @@ Re-running keeps decisions: finding ids are stable (`<category>:<text>#<occurren
   - Filter by category (click; ⌘/shift-click for several), severity, decision status and text. **Set all
     shown…** decides every finding in the current filter. **Export** downloads Markdown (`.json` too).
   - Keys: `j`/`k` move, `1` keep, `2` ignore, `0` clear, `f` find (big arrow on the selected difference), `n` note, `m` cycle
-    view, `[`/`]` slider, `b` toggle all boxes, `/` search.
+    view, `[`/`]` slider, `Esc` clear selection (show all boxes), `/` search.
 - **Live collaboration**: each browser gets a random name (e.g. "Teal Fox") and streams updates from
   `/api/live` (server-sent events). A yellow **N online** pill appears when more than one person is on the
   site; decisions made elsewhere update open pages in place and show a toast.
