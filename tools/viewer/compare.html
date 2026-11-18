@@ -456,15 +456,24 @@ function fitScale() {
 }
 // The views (one per pane). Scroll positions are kept equal, so both show the same part of the page.
 const views = () => $$('.view');
-let syncing = false;
+// Scroll sync with a leader: the view being scrolled (by wheel, drag, keys or a smooth scroll-to) leads
+// and the other views copy its position. A follower's own scroll events are ignored while the leader is
+// active, so they never push back (setting scrollTop would also cancel the leader's smooth scroll).
+let leader = null, leaderUntil = 0;
+function lead(v, ms = 250) { leader = v; leaderUntil = performance.now() + ms; }
 function syncFrom(v) {
-  if (syncing) return;
-  syncing = true;
-  for (const o of views()) if (o !== v) { o.scrollLeft = v.scrollLeft; o.scrollTop = v.scrollTop; }
-  syncing = false;
+  const now = performance.now();
+  if (leader && leader !== v && now < leaderUntil) return; // a follower's echo
+  lead(v, 200); // whoever scrolls now leads; each of its scroll events extends that a little
+  for (const o of views()) if (o !== v && (o.scrollTop !== v.scrollTop || o.scrollLeft !== v.scrollLeft)) { o.scrollLeft = v.scrollLeft; o.scrollTop = v.scrollTop; }
 }
 function scrollViews(left, top, smooth) {
-  for (const v of views()) v.scrollTo({ left: Math.max(0, left), top: Math.max(0, top), behavior: smooth ? 'smooth' : 'instant' });
+  const [first, ...rest] = views();
+  if (!first) return;
+  const to = { left: Math.max(0, left), top: Math.max(0, top) };
+  if (smooth) { lead(first, 1200); first.scrollTo({ ...to, behavior: 'smooth' }); return; }
+  lead(first, 100);
+  for (const v of [first, ...rest]) v.scrollTo({ ...to, behavior: 'instant' });
 }
 function stageScale() { return fitScale() * st.zoom; }
 function renderZoom() {
@@ -501,7 +510,10 @@ function renderStage() {
     $('#mix').value = st.mix;
     applyMix();
   }
-  for (const v of views()) v.addEventListener('scroll', () => syncFrom(v), { passive: true });
+  for (const v of views()) {
+    v.addEventListener('scroll', () => syncFrom(v), { passive: true });
+    for (const ev of ['wheel', 'pointerdown', 'touchstart']) v.addEventListener(ev, () => lead(v, 400), { passive: true });
+  }
   if (keep) scrollViews(keep.left * scale, keep.top * scale);
   drawBoxes();
   drawElems();
