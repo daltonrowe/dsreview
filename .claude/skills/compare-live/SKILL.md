@@ -34,8 +34,11 @@ Reports land in `comparisons/<id>/` and are reviewed in the viewer (`npm start` 
 - **Grid**: tiles packed together over 2+ rows and columns (masonry `columns` or justified `rows`);
   compared on where it starts/ends, columns, ragged bottom, the gap after it.
 - **Whole page**: captures are the full page height (footer included) via a very tall viewport, up to 16000px.
-- **Review** (`reviews.json`): a smaller model (Claude Haiku 5.5) explains each finding from its crops,
-  with a verdict real/noise/unsure. Needs `ANTHROPIC_API_KEY` (or `.env`); `run` does it when available.
+- **Explanations** (`reviews.json`): Claude Sonnet 5.5 explains each finding for a designer, with a
+  verdict real/noise/unsure, from its context (page, measurements, its group's title and summary, other
+  differences on the same element, close-up and context crops). Run `review` AFTER grouping (the group
+  gives it context). Needs `ANTHROPIC_API_KEY` (or `.env`). Explanations are model-written: don't
+  replace them with templated text.
 - **Meta-findings** (`groups.json`): YOUR job when asked to group or regroup. See "Grouping" below.
 
 ## Workflow
@@ -45,7 +48,7 @@ node tools/compare.mjs run                          # all pairs, light + dark (~
 node tools/compare.mjs show home --severity medium  # findings as text; --category color,size --limit N
 node tools/compare.mjs add show-page --label "Show page" --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
 node tools/compare.mjs live /free-photos/dog --full # screenshot a live page → screenshots/
-node tools/compare.mjs review home                  # smaller-model explanations (needs ANTHROPIC_API_KEY)
+node tools/compare.mjs review home                  # Sonnet explanations, after grouping (needs ANTHROPIC_API_KEY)
 node tools/compare.mjs findings home                # ids, for grouping
 node tools/compare.mjs crop home <findingId>        # close crops → screenshots/crops/
 node tools/compare.mjs group home groups.json       # install meta-findings

@@ -69,16 +69,19 @@ browser renders each page; after that, nothing reads the DOM or CSS: every findi
    anywhere on the page in the design and no longer do on live, e.g. the masthead's top and the first
    rail button; the element that moved is named), and **missing** / **extra** elements.
 
-7. **Review** (optional, `tools/lib/review.mjs`): a smaller model (Claude Haiku 5.5) looks at each
-   finding's two crops and measurements and writes what's off in plain words, with a verdict (real /
-   noise / unsure). Runs after `run` when credentials are available (`ANTHROPIC_API_KEY`, e.g. in `.env`),
-   or with `node tools/compare.mjs review <id>`. Kept in `comparisons/<id>/reviews.json`; findings whose
-   measurements didn't change keep their review across runs.
-8. **Meta-findings** (`comparisons/<id>/groups.json`): Claude groups findings that share one cause by
+7. **Meta-findings** (`comparisons/<id>/groups.json`): Claude groups findings that share one cause by
    judgement ("Masthead sits 15px lower", "Live uses neutral greys…", "Resource grid ends 207px lower"),
    with a title, a summary, a severity and an optional hint ("likely noise", "content difference"). Make
    them with `node tools/compare.mjs findings <id>` (the input), `crop` (to look closer) and
    `group <id> <file>` (checks and installs). A re-run warns when grouped findings no longer exist.
+8. **Explanations** (`tools/lib/review.mjs`, after grouping): Claude Sonnet 5.5 writes, for each
+   finding, what's off in a designer's words, with a verdict (real / noise / unsure). Its context: the
+   page and theme, the measurements and what they're measured against, the finding's group (title and
+   summary), the other differences on the same element, and close-up and full-width context crops of
+   both sides. `node tools/compare.mjs review <id>` (needs `ANTHROPIC_API_KEY`, e.g. in `.env`). Kept in
+   `comparisons/<id>/reviews.json`; findings whose measurements didn't change keep their explanation
+   across runs (`--force` redoes them). Server-side fallbacks are on: if Sonnet declines a request on a
+   safety classifier, the API answers it with a fallback model instead.
 
 There's no hover/behavior check: a screenshot shows one state. To compare a hover or an open menu, add a
 pair whose `design.do` / `live.do` steps put both pages in that state.
@@ -89,7 +92,7 @@ node tools/compare.mjs run                 # all pairs, light + dark; or: run ho
 node tools/compare.mjs show home --severity medium
 node tools/compare.mjs add show --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
 node tools/compare.mjs live /free-photos/dog --full --theme dark
-node tools/compare.mjs review home          # explanations from the smaller model
+node tools/compare.mjs review home          # explanations by Claude Sonnet 5.5 (after grouping)
 node tools/compare.mjs findings home        # every finding with its id (input for grouping)
 node tools/compare.mjs crop home <findingId> # close crops + context strips → screenshots/crops/
 node tools/compare.mjs group home groups.json # install meta-findings
@@ -122,7 +125,8 @@ the category, kind and design position on a 16px grid, so they survive re-runs w
   - **Elements** (`e`) outlines everything the analysis found in each screenshot, colored by kind
     (text red, icon purple, panel teal, picture dashed yellow, divider green); unpaired ones are tinted.
     Use it to check what the comparison saw.
-  - Each finding shows the reviewer's explanation and verdict (when reviewed), design and live crops, the
+  - Each finding (and each member listed in a group) shows its explanation and verdict once explained
+    (two lines; click to read all), design and live crops, the
     property rows (design → live, with swatches), a **download** button (a zip with a Markdown write-up
     and named screenshots: close crops with outlines and guides, and full-width context strips, cut on
     the fly) and the decision buttons:

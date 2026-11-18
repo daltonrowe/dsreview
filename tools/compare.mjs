@@ -8,7 +8,7 @@ import { ROOT, resolvePage, startServer, openPage, settle, splitProps, jsonish, 
 import { openLive, fitViewport, liveUrl } from './lib/live.mjs';
 import { DIR, DEFAULT_BASE, readConfig, expandPairs } from './lib/pairs.mjs';
 import { decodePng, segment } from './lib/vision.mjs';
-import { reviewReport, reviewAvailable, REVIEW_MODEL } from './lib/review.mjs';
+import { reviewReport, withReviews, REVIEW_MODEL, context, readGroups, readReviews, reviewsPath, fingerprint } from './lib/review.mjs';
 import { findingShots } from './lib/crops.mjs';
 
 // credentials for the review model, from .env when present (ANTHROPIC_API_KEY)
@@ -34,14 +34,21 @@ pixels only (no DOM, no CSS): alignment, size, color, type, shape, spacing, miss
       Print a report's findings as text.
 
   node tools/compare.mjs review [<id> ...] [--force] [--model id]
-      Second pass: a smaller model (${REVIEW_MODEL}) looks at each finding's crops and measurements
-      and explains what's off, with a verdict (real / noise / unsure). Kept in reviews.json; only new or
-      changed findings are reviewed again. Needs ANTHROPIC_API_KEY (or .env). \`run\` does this
-      automatically when credentials are available (--no-review to skip).
+      Explanations: ${REVIEW_MODEL} looks at each finding with its context (page, measurements, its
+      group's title and summary, other differences on the same element, close-up and context crops of
+      both sides) and writes what's off for a designer, with a verdict (real / noise / unsure). Run it
+      after grouping. Kept in reviews.json; only new or changed findings are explained again
+      (--force redoes all). Needs ANTHROPIC_API_KEY (or .env).
 
-  node tools/compare.mjs crop <id> <findingId> [...]
-      Write a finding's screenshots (design/live close crops with outlines and guides, plus
-      full-width context strips) to screenshots/crops/. Prints the PNG paths.
+  node tools/compare.mjs context <id> [--group gid] [--ids a,b] [--todo]
+      For writing explanations by hand (e.g. Claude Code subagents): each finding's context (page,
+      measurements, its group, other differences on the same element) and its four crops, written to
+      screenshots/crops/<id>/ (design/live close-up and context). --todo: only findings without a
+      current explanation.
+
+  node tools/compare.mjs explain-save <id> <file.json> [--model name]
+      Store explanations written by hand: { "<findingId>": { "explanation", "verdict", "confidence" } }.
+      Checks the ids, adds the fingerprint (so they survive re-runs) and merges into reviews.json.
 
   node tools/compare.mjs findings <id>
       Every finding with its id, compactly: the input for grouping them into meta-findings.
@@ -151,6 +158,7 @@ function printFindings(r, o) {
     const b = f.design?.box || f.live.box;
     console.log(`[${f.severity}] ${f.category} · “${f.text}”${f.section ? ` (${f.section})` : ''} @${Math.round(b.x)},${Math.round(b.y)}`);
     for (const p of f.props) console.log(`    ${p.prop}: ${p.design}  →  ${p.live}`);
+    if (f.review?.explanation) console.log(`    ${f.review.explanation}`);
   }
   if (list.length > limit) console.log(`\n… ${list.length - limit} more (--limit N)`);
 }
@@ -174,7 +182,7 @@ async function main() {
   if (cmd === 'show') {
     const rp = path.join(DIR, args[0] || '', 'report.json');
     if (!args[0] || !fs.existsSync(rp)) throw new Error(`no report for "${args[0]}". Run: node tools/compare.mjs run ${args[0] || '<id>'}`);
-    printFindings(JSON.parse(fs.readFileSync(rp, 'utf8')), o);
+    printFindings(withReviews(JSON.parse(fs.readFileSync(rp, 'utf8')), path.dirname(rp)), o);
     return;
   }
 
@@ -188,6 +196,55 @@ async function main() {
       const b = (f.design || f.live).box, lb = f.live?.box;
       console.log(`${f.id}\t${f.severity}\t${f.category}\t${f.text}\td@${b.x},${b.y}${lb && f.design ? ` l@${lb.x},${lb.y}` : ''}\t${f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('; ')}`);
     }
+    return;
+  }
+
+  if (cmd === 'context') {
+    const [id] = args;
+    const rp = path.join(DIR, id || '', 'report.json');
+    if (!id || !fs.existsSync(rp)) throw new Error('context <id>');
+    const dir = path.join(DIR, id), r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+    const groups = readGroups(dir), reviews = readReviews(dir);
+    let list = r.findings;
+    if (o.group) { const g = groups.find(x => x.id === o.group); if (!g) throw new Error(`no group ${o.group}. Groups: ${groups.map(x => x.id).join(', ')}`); list = list.filter(f => g.findings.includes(f.id)); }
+    if (o.ids) { const want = new Set(String(o.ids).split(',')); list = list.filter(f => want.has(f.id)); }
+    if (o.todo) list = list.filter(f => reviews[f.id]?.fingerprint !== fingerprint(f));
+    const out = path.join(ROOT, 'screenshots', 'crops', id);
+    fs.mkdirSync(out, { recursive: true });
+    console.log(`# ${list.length} findings · ${r.label} (${r.theme || 'light'})\n`);
+    for (const f of list) {
+      const slug = f.id.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
+      const files = findingShots(r, f, dir).map(s => { const file = path.join(out, `${slug}-${s.name}`); fs.writeFileSync(file, s.data); return path.relative(process.cwd(), file); });
+      console.log(`## ${f.id}\n${context(r, f, groups)}\nImages: ${files.join('  ')}\n`);
+    }
+    return;
+  }
+
+  if (cmd === 'explain-save') {
+    const [id, file] = args;
+    const rp = path.join(DIR, id || '', 'report.json');
+    if (!id || !fs.existsSync(rp) || !file || !fs.existsSync(file)) throw new Error('explain-save <id> <file.json>');
+    const dir = path.join(DIR, id), r = JSON.parse(fs.readFileSync(rp, 'utf8'));
+    const byId = new Map(r.findings.map(f => [f.id, f]));
+    const input = JSON.parse(fs.readFileSync(file, 'utf8')), reviews = readReviews(dir);
+    let saved = 0;
+    const problems = [];
+    for (const [fid, e] of Object.entries(input)) {
+      const f = byId.get(fid);
+      if (!f) { problems.push(`unknown finding ${fid}`); continue; }
+      if (!e?.explanation) { problems.push(`${fid}: no explanation`); continue; }
+      reviews[fid] = {
+        explanation: String(e.explanation).trim(),
+        verdict: ['real', 'noise', 'unsure'].includes(e.verdict) ? e.verdict : 'unsure',
+        confidence: ['high', 'medium', 'low'].includes(e.confidence) ? e.confidence : 'medium',
+        model: o.model || 'claude-sonnet (Claude Code subagent)', fingerprint: fingerprint(f), at: new Date().toISOString(),
+      };
+      saved++;
+    }
+    fs.writeFileSync(reviewsPath(dir), JSON.stringify(reviews, null, 1) + '\n');
+    const missing = r.findings.filter(f => reviews[f.id]?.fingerprint !== fingerprint(f)).length;
+    console.log(`${id}: saved ${saved}; ${missing} of ${r.findings.length} findings still without an explanation`);
+    for (const p of problems.slice(0, 20)) console.log(`  ! ${p}`);
     return;
   }
 
@@ -220,7 +277,7 @@ async function main() {
       const r = JSON.parse(fs.readFileSync(rp, 'utf8'));
       const t = Date.now();
       const rv = await reviewReport(r, path.join(DIR, id), { model: o.model || REVIEW_MODEL, force: !!o.force, log: m => console.log(m) });
-      console.log(`${id}: ${rv.done} reviewed, ${rv.skipped} unchanged${rv.failed ? `, ${rv.failed} failed` : ''} (${Math.round((Date.now() - t) / 1000)}s)`);
+      console.log(`${id}: ${rv.done} explained, ${rv.skipped} unchanged${rv.failed ? `, ${rv.failed} failed` : ''} (${Math.round((Date.now() - t) / 1000)}s)`);
     }
     return;
   }
@@ -292,10 +349,6 @@ async function main() {
           const t = Date.now();
           const r = await runPair(pair, cfg, { browser, designBase });
           console.log(`${summary(r)}  (${Math.round((Date.now() - t) / 1000)}s)`);
-          if (!o.noReview && reviewAvailable()) {
-            try { const rv = await reviewReport(r, path.join(DIR, id), { log: m => console.log(m) }); console.log(`  review: ${rv.done} reviewed, ${rv.skipped} unchanged${rv.failed ? `, ${rv.failed} failed` : ''}`); }
-            catch (e) { console.log(`  review skipped: ${e.message}`); }
-          }
           const gp = path.join(DIR, id, 'groups.json');
           if (fs.existsSync(gp)) {
             const known = new Set(r.findings.map(f => f.id));

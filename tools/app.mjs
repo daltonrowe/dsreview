@@ -100,7 +100,9 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     const r = await readJson(path.join(compDir(id), 'report.json'), null);
     if (!r) return r;
     const reviews = await readJson(path.join(compDir(id), 'reviews.json'), {});
-    for (const f of r.findings) if (reviews[f.id] && reviews[f.id].fingerprint === fingerprint(f)) f.review = reviews[f.id];
+    for (const f of r.findings) {
+      if (reviews[f.id] && reviews[f.id].fingerprint === fingerprint(f)) f.review = reviews[f.id];
+    }
     return r;
   };
 
@@ -254,7 +256,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     let md = `# ${f.category[0].toUpperCase() + f.category.slice(1)}: ${f.text}\n\n`;
     md += `**${r.label}**${r.theme ? ` (${r.theme})` : ''} · severity **${f.severity}** · ${f.section || ''}\n\n`;
     md += `- Design: \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })}\n- Live: ${r.live.url}\n- Captured: ${r.generatedAt}\n- Finding id: \`${f.id}\`\n\n`;
-    if (f.review?.explanation) md += `## What's off\n\n${f.review.explanation}\n\n${f.review.verdict ? `_Reviewer (${f.review.model}): ${f.review.verdict}${f.review.confidence ? `, ${f.review.confidence} confidence` : ''}._\n\n` : ''}`;
+    if (f.review?.explanation) md += `## What's off\n\n${f.review.explanation}\n\n${f.review?.verdict ? `_Reviewer (${f.review.model}): ${f.review.verdict}${f.review.confidence ? `, ${f.review.confidence} confidence` : ''}._\n\n` : ''}`;
     md += `## Difference\n\n| Property | Design | Live |\n|---|---|---|\n${f.props.map(p => `| ${cell(p.prop)} | ${cell(p.design)} | ${cell(p.live)} |`).join('\n')}\n\n`;
     if (f.related?.length) md += `Lines up with / measured against: ${f.related.map(x => x.text).join(', ')}.\n\n`;
     if (group) md += `## Part of: ${group.title}\n\n${group.summary || ''}\n\n`;

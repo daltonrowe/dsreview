@@ -31,6 +31,7 @@
   .fh .txt { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
   .fh .sec { flex: none; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11.5px; color: var(--faint); }
   .why { font-size: 12.5px; line-height: 1.45; color: var(--text); }
+  .why.auto { color: var(--muted); }
   .verdict { display: inline-block; font-size: 10.5px; font-weight: 650; text-transform: uppercase; letter-spacing: .04em; padding: 0 6px; border-radius: 999px; margin-right: 4px; vertical-align: 1px; }
   .verdict.real { background: var(--keep-bg); color: var(--keep); } .verdict.noise { background: var(--ignore-bg); color: var(--ignore); } .verdict.unsure { background: var(--panel-2); color: var(--muted); }
   .crops { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -65,16 +66,21 @@
   .g:hover { border-color: var(--line-2); }
   .g.sel { border-color: var(--focus); box-shadow: 0 0 0 1px var(--focus); }
   .g.decided:not(.sel) { opacity: .62; }
-  .g .gh { display: flex; align-items: baseline; gap: 6px; }
-  .g .gh .kind { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; flex: none; }
-  .g .gh .title { flex: 1; font-weight: 650; }
-  .g .gh .n { flex: none; font-size: 12px; color: var(--faint); }
-  .hint-tag { display: inline-block; font-size: 10.5px; font-weight: 600; color: var(--muted); background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 0 6px; vertical-align: 2px; }
+  .g .gh { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .g .gh .meta { font-size: 11.5px; color: var(--faint); display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; }
+  .g .gh .kind { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+  .g .gh .title { font-weight: 650; font-size: 14px; line-height: 1.35; }
+  .hint-tag { display: inline-block; font-size: 10.5px; font-weight: 600; color: var(--muted); background: var(--panel-2); border: 1px solid var(--line); border-radius: 999px; padding: 0 6px; }
   .g .summary { font-size: 13px; color: var(--text); line-height: 1.45; }
+  /* long text: two lines, click to expand */
+  .clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+  .clamp.open { display: block; -webkit-line-clamp: unset; }
+  .clamp:not(.open):hover { color: var(--muted); }
   .g .mixed { font-size: 11.5px; color: var(--muted); }
   .g .members { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--line); padding-top: 6px; }
   .g .members button.toggle { align-self: flex-start; border: 0; background: none; color: var(--muted); font-size: 12px; cursor: pointer; padding: 0; }
-  .g .m { display: grid; grid-template-columns: 10px 76px 1fr auto; gap: 6px; align-items: baseline; font-size: 12px; padding: 3px 4px; border-radius: 5px; cursor: pointer; }
+  .g .m { display: grid; grid-template-columns: 10px 76px 1fr auto; gap: 2px 6px; align-items: baseline; font-size: 12px; padding: 4px; border-radius: 5px; cursor: pointer; }
+  .g .m .x { grid-column: 3 / 5; color: var(--muted); font-size: 12px; line-height: 1.4; }
   .g .m:hover { background: var(--panel-2); }
   .g .m.sel { background: color-mix(in srgb, var(--focus) 14%, transparent); }
   .g .m .c { color: var(--muted); text-transform: uppercase; font-size: 10.5px; letter-spacing: .04em; }
@@ -174,7 +180,7 @@ const st = {
   id: params.get('id'), report: null, decisions: {},
   cats: new Set(), minSev: store.get('minSev', 1), status: store.get('status', 'all'), q: '',
   mode: store.get('mode', 'side'), mix: 50, zoom: Number(store.get('zoomLevel', 1)) || 1,
-  sel: params.get('f'), noteOpen: null, find: null, view: store.get('view', 'groups'), open: new Set(),
+  sel: params.get('f'), noteOpen: null, find: null, view: store.get('view', 'groups'), open: new Set(), expanded: new Set(),
 };
 
 // ---------- data ----------
@@ -327,7 +333,7 @@ function cardHtml(f) {
   const showText = f.liveText ? `<div class="hint">live text: “${esc(f.liveText)}”</div>` : '';
   return `<div class="f${f.id === st.sel ? ' sel' : ''}${d ? ' decided' : ''}" data-id="${esc(f.id)}">
     <div class="fh"><i class="dot ${f.severity}" title="${f.severity}"></i><span class="cat">${f.category}</span><span class="txt" title="${esc(f.text)}">${esc(f.text)}</span>${f.section ? `<span class="sec" title="${esc(f.section)}">${esc(f.section)}</span>` : ''}</div>
-    ${f.review?.explanation ? `<div class="why"><span class="verdict ${f.review.verdict}" title="${esc(`${f.review.model}, ${f.review.confidence} confidence`)}">${f.review.verdict === 'noise' ? 'Looks like noise' : f.review.verdict === 'real' ? 'Real' : 'Unsure'}</span> ${esc(f.review.explanation)}</div>` : ''}
+    ${explainHtml(f, 'why')}
     <div class="crops">
       <div class="crop d"><span class="lab">Design${f.design ? '' : ' <em>same spot</em>'}</span>${crop('d', f, 'design.jpg', dBox, !f.design)}</div>
       <div class="crop l"><span class="lab">Live${f.live ? '' : ' <em>same spot</em>'}</span>${crop('l', f, 'live.jpg', lBox, !f.live)}</div>
@@ -343,6 +349,14 @@ function cardHtml(f) {
     ${st.noteOpen === f.id ? `<textarea class="note" placeholder="Note (saved when you leave the box)">${esc(note || '')}</textarea>` : note ? `<div class="notetext">${esc(note)}</div>` : ''}
   </div>`;
 }
+// What's off, in words, written by the review model (compare.mjs review). Two lines; click to read all.
+function explainHtml(f, cls) {
+  const text = f.review?.explanation;
+  if (!text) return '';
+  const k = `x:${f.id}`, open = st.expanded.has(k);
+  const verdict = f.review?.verdict ? `<span class="verdict ${f.review.verdict}" title="${esc(`${f.review.model}, ${f.review.confidence} confidence`)}">${f.review.verdict === 'noise' ? 'Looks like noise' : f.review.verdict === 'real' ? 'Real' : 'Unsure'}</span> ` : '';
+  return `<div class="${cls} clamp${open ? ' open' : ''}" data-x="${esc(k)}" title="Written by ${esc(f.review.model)}. Click to ${open ? 'collapse' : 'read all'}">${verdict}${esc(text)}</div>`;
+}
 function groupHtml(g) {
   const d = groupDecision(g), open = st.open.has(g.id);
   const dBoxes = g.members.filter(f => f.design).map(f => f.design.box), lBoxes = g.members.filter(f => f.live).map(f => f.live.box);
@@ -351,8 +365,8 @@ function groupHtml(g) {
   const cats = [...new Set(g.members.map(f => f.category))];
   const shown = open ? g.members : g.members.slice(0, 4);
   return `<div class="g ${g.severity}${sel ? ' sel' : ''}${d && d !== 'mixed' ? ' decided' : ''}" data-g="${esc(g.id)}">
-    <div class="gh"><span class="kind">Group</span><span class="title">${esc(g.title)}${g.hint ? ` <span class="hint-tag">${esc(g.hint)}</span>` : ''}</span><span class="n">${g.members.length} finding${g.members.length === 1 ? '' : 's'} · ${esc(cats.join(', '))}</span></div>
-    ${g.summary ? `<div class="summary">${esc(g.summary)}</div>` : ''}
+    <div class="gh"><div class="meta"><span class="kind">Group</span><span>${g.members.length} finding${g.members.length === 1 ? '' : 's'} · ${esc(cats.join(', '))}</span>${g.hint ? `<span class="hint-tag">${esc(g.hint)}</span>` : ''}</div><div class="title">${esc(g.title)}</div></div>
+    ${g.summary ? `<div class="summary clamp${st.expanded.has(`g:${g.id}`) ? ' open' : ''}" data-x="g:${esc(g.id)}" title="Click to ${st.expanded.has(`g:${g.id}`) ? 'collapse' : 'read all'}">${esc(g.summary)}</div>` : ''}
     <div class="crops">
       <div class="crop d"><span class="lab">Design</span>${crop('d', pseudo, 'design.jpg', pseudo.design.box, !dBoxes.length)}</div>
       <div class="crop l"><span class="lab">Live</span>${crop('l', pseudo, 'live.jpg', pseudo.live.box, !lBoxes.length)}</div>
@@ -360,7 +374,7 @@ function groupHtml(g) {
     <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-gd="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} — all ${g.members.length} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
       ${d === 'mixed' ? '<span class="mixed">mixed decisions</span>' : ''}
       <button class="btn small" data-act="gfind" title="Point at it on the screenshots (f)">➜ Find</button></div>
-    <div class="members">${shown.map(f => { const fd = decisionOf(f); return `<div class="m${st.sel === f.id ? ' sel' : ''}" data-id="${esc(f.id)}" title="${esc(f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('\n'))}"><i class="dot ${f.severity}"></i><span class="c">${f.category}</span><span class="t">${esc(f.text)} · ${esc(f.props[0] ? `${f.props[0].prop}: ${f.props[0].design} → ${f.props[0].live}` : '')}</span><span class="d">${fd ? LABELS[fd] : ''}</span></div>`; }).join('')}
+    <div class="members">${shown.map(f => { const fd = decisionOf(f); return `<div class="m${st.sel === f.id ? ' sel' : ''}" data-id="${esc(f.id)}" title="${esc(f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('\n'))}"><i class="dot ${f.severity}"></i><span class="c">${f.category}</span><span class="t">${esc(f.text)} · ${esc(f.props[0] ? `${f.props[0].prop}: ${f.props[0].design} → ${f.props[0].live}` : '')}</span><span class="d">${fd ? LABELS[fd] : ''}</span>${explainHtml(f, 'x')}</div>`; }).join('')}
       ${g.members.length > 4 ? `<button class="toggle" data-act="gopen">${open ? 'Show fewer' : `Show all ${g.members.length}`}</button>` : ''}</div>
   </div>`;
 }
@@ -376,6 +390,14 @@ function renderCard(id) {
   if (f && el) el.outerHTML = cardHtml(f);
 }
 $('#list').addEventListener('click', e => {
+  const cl = e.target.closest('.clamp');
+  if (cl) {
+    const k = cl.dataset.x;
+    st.expanded.has(k) ? st.expanded.delete(k) : st.expanded.add(k);
+    cl.classList.toggle('open', st.expanded.has(k));
+    cl.title = `Click to ${st.expanded.has(k) ? 'collapse' : 'read all'}`;
+    return;
+  }
   const gc = e.target.closest('.g');
   if (gc) {
     const g = groupOf(gc.dataset.g);
