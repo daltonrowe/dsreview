@@ -6,11 +6,12 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
+import { readConfig, expandPairs } from './lib/pairs.mjs';
 
 const COMPARISONS = path.join(ROOT, 'comparisons');
-// What to do about a finding. 'unclear' (🤷) = needs a look, not a verdict.
-export const DECISIONS = ['fix-live', 'fix-design', 'ok', 'unclear'];
-export const DECISION_LABELS = { 'fix-live': 'Fix live', 'fix-design': 'Update design', ok: 'Fine as is', unclear: 'Unclear 🤷' };
+// A finding is either a real difference worth keeping on the list, or noise to ignore.
+export const DECISIONS = ['keep', 'ignore'];
+export const DECISION_LABELS = { keep: 'Keep', ignore: 'Ignore' };
 
 // options:
 //   user, pass  HTTP basic auth credentials (everything but /up requires them)
@@ -123,15 +124,15 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     res.json(allPages().map(file => ({ file, dc: file.endsWith('.dc.html'), props: file.endsWith('.dc.html') ? readPropsMeta(file) : null })));
   });
 
-  // Every configured comparison (comparisons/pairs.json), with its report summary when it has one.
+  // Every configured comparison (comparisons/pairs.json × light/dark), with its report summary when it has one.
   app.get('/api/comparisons', async (req, res) => {
-    const cfg = await readJson(path.join(comparisonsDir, 'pairs.json'), { pairs: [] });
+    const cfg = readConfig(comparisonsDir);
     const out = [];
-    for (const p of cfg.pairs) {
+    for (const p of expandPairs(cfg)) {
       const r = await readReport(p.id);
       const decisions = await readJson(decisionsPath(p.id), {});
       out.push({
-        id: p.id, label: p.label || p.id, design: p.design, live: p.live,
+        id: p.id, baseId: p.baseId, theme: p.theme, label: p.label || p.id, design: p.design, live: p.live,
         generated: !!r, generatedAt: r?.generatedAt || null, stats: r?.stats || null,
         liveUrl: r?.live.url || null, progress: r ? progress(r, decisions) : null,
       });
@@ -187,10 +188,10 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
       props: f.props.map(x => ({ prop: x.prop, design: x.design, live: x.live })),
       source: f.design?.where ? `${r.design.page} tpl ${f.design.where.tpl}` : null,
     }));
-    const json = { id: r.id, label: r.label, generatedAt: r.generatedAt, design: { page: r.design.page, props: r.design.props, state: r.design.state }, live: r.live.url, progress: p, findings: rows };
+    const json = { id: r.id, label: r.label, theme: r.theme || 'light', generatedAt: r.generatedAt, design: { page: r.design.page, props: r.design.props, state: r.design.state }, live: r.live.url, progress: p, findings: rows };
     const H = n => '#'.repeat(h + n);
     const esc = s => String(s ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
-    let md = `${H(0)} ${r.label}\n\nDesign \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })} vs live ${r.live.url}, captured ${r.generatedAt}.\n\n`;
+    let md = `${H(0)} ${r.label}${r.theme ? ` (${r.theme})` : ''}\n\nDesign \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })} vs live ${r.live.url}, captured ${r.generatedAt}.\n\n`;
     md += DECISIONS.map(d => `${DECISION_LABELS[d]} ${p[d]}`).join(' · ') + ` · Undecided ${p.undecided} · Total ${p.total}\n\n`;
     md += `| Decision | Severity | Category | Element | Difference (design → live) | Note |\n|---|---|---|---|---|---|\n`;
     for (const f of rows) md += `| ${f.decision ? DECISION_LABELS[f.decision] : '—'} | ${f.severity} | ${f.category} | ${esc(f.text)} | ${esc(f.props.map(x => `${x.prop}: ${x.design} → ${x.live}`).join('; '))} | ${esc(f.note)} |\n`;
@@ -209,8 +210,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
   app.get('/api/export.:fmt', async (req, res) => {
     const fmt = req.params.fmt;
     if (fmt !== 'md' && fmt !== 'json') return res.status(400).end();
-    const cfg = await readJson(path.join(comparisonsDir, 'pairs.json'), { pairs: [] });
-    const all = (await Promise.all(cfg.pairs.map(p => buildExport(p.id, 2)))).filter(Boolean);
+    const all = (await Promise.all(expandPairs(readConfig(comparisonsDir)).map(p => buildExport(p.id, 2)))).filter(Boolean);
     const stamp = new Date().toISOString();
     res.set('content-disposition', `attachment; filename="design-vs-live-${stamp.slice(0, 10)}.${fmt}"`);
     if (fmt === 'json') return res.json({ exportedAt: stamp, comparisons: all.map(x => x.json) });

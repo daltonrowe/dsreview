@@ -61,14 +61,14 @@ async function render() {
     <a class="card comp" href="compare.html?id=${encodeURIComponent(c.id)}">
       <div class="thumbs"><div class="d" style="background-image:url('/comparisons/${esc(c.id)}/design.jpg')"><span>Design</span></div><div class="l" style="background-image:url('/comparisons/${esc(c.id)}/live.jpg')"><span>Live</span></div></div>
       <div class="body">
-        <h3>${esc(c.label)}</h3>
+        <h3>${esc(c.label)} <span class="chip">${c.theme === 'dark' ? '☾ Dark' : '☀ Light'}</span></h3>
         <div class="meta" title="${esc(c.design.page)} ↔ ${esc(c.live.path)}">${esc(c.design.page.replace(/\.dc\.html$/, ''))} ↔ <code>${esc(c.live.path)}</code> · ${new Date(c.generatedAt).toLocaleString()}</div>
         <div class="sev"><span><i class="dot high"></i><b>${c.stats.bySeverity.high}</b> high</span><span><i class="dot medium"></i><b>${c.stats.bySeverity.medium}</b> medium</span><span><i class="dot low"></i><b>${c.stats.bySeverity.low}</b> low</span><span class="faint">${c.stats.matched} matched elements</span></div>
         <div class="cats">${CATS.filter(k => c.stats.byCategory[k]).map(k => `<span class="chip">${k} ${c.stats.byCategory[k]}</span>`).join('')}</div>
         ${progressBar(c.progress)}${legend(c.progress)}
       </div>
     </a>` : `
-    <div class="card comp"><div class="body"><h3>${esc(c.label)}</h3><div class="meta">${esc(c.design.page)} ↔ <code>${esc(c.live.path)}</code></div><div class="howto" style="padding:0">Not run yet: <code>node tools/compare.mjs run ${esc(c.id)}</code></div></div></div>`).join('')
+    <div class="card comp"><div class="body"><h3>${esc(c.label)} <span class="chip">${c.theme === 'dark' ? '☾ Dark' : '☀ Light'}</span></h3><div class="meta">${esc(c.design.page)} ↔ <code>${esc(c.live.path)}</code></div><div class="howto" style="padding:0">Not run yet: <code>node tools/compare.mjs run ${esc(c.id)}</code></div></div></div>`).join('')
     : `<div class="card howto">No comparisons configured. Add one:<br><code>node tools/compare.mjs add home --design "ai magic" --live /</code><br><code>node tools/compare.mjs run home</code></div>`;
 }
 await render();

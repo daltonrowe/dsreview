@@ -1,7 +1,9 @@
 {
  "id": "home",
+ "baseId": "home",
+ "theme": "light",
  "label": "Home (logged out)",
- "generatedAt": "2026-11-18T11:38:43.128Z",
+ "generatedAt": "2026-11-18T11:56:33.534Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -469,7 +471,111 @@
     "section": "header",
     "where": null
    },
-   "match": "text"
+   "match": "text",
+   "guide": {
+    "axis": "x",
+    "design": [
+     62
+    ],
+    "live": [
+     264.3,
+     62.5
+    ]
+   },
+   "related": [
+    {
+     "text": "Home",
+     "design": {
+      "x": 12,
+      "y": 84,
+      "w": 50,
+      "h": 48
+     },
+     "live": {
+      "x": 12.5,
+      "y": 84,
+      "w": 50,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "alignment:layout:hero masthead:top",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Hero masthead",
+   "section": "Hero masthead",
+   "props": [
+    {
+     "prop": "top edge",
+     "design": "lines up with Home (Left nav) at y=85",
+     "live": "off by 15px ↓ (99 vs 84)",
+     "sev": "high"
+    }
+   ],
+   "layout": true,
+   "design": {
+    "n": null,
+    "textBox": {
+     "x": 99,
+     "y": 85,
+     "w": 1317,
+     "h": 333
+    },
+    "box": {
+     "x": 99,
+     "y": 85,
+     "w": 1317,
+     "h": 333
+    },
+    "section": "Hero masthead",
+    "where": null
+   },
+   "live": {
+    "n": null,
+    "textBox": {
+     "x": 100,
+     "y": 99,
+     "w": 1316,
+     "h": 339
+    },
+    "box": {
+     "x": 100,
+     "y": 99,
+     "w": 1316,
+     "h": 339
+    },
+    "section": null,
+    "where": null
+   },
+   "guide": {
+    "axis": "y",
+    "design": [
+     85
+    ],
+    "live": [
+     99,
+     84
+    ]
+   },
+   "related": [
+    {
+     "text": "Home",
+     "design": {
+      "x": 12,
+      "y": 84,
+      "w": 50,
+      "h": 48
+     },
+     "live": {
+      "x": 12.5,
+      "y": 84,
+      "w": 50,
+      "h": 48
+     }
+    }
+   ]
   },
   {
    "id": "alignment:home#0",
@@ -530,7 +636,34 @@
     "section": "nav#global-navbar-guest",
     "where": null
    },
-   "match": "text"
+   "match": "text",
+   "guide": {
+    "axis": "x",
+    "design": [
+     62
+    ],
+    "live": [
+     62.5,
+     264.3
+    ]
+   },
+   "related": [
+    {
+     "text": "Vecteezy home",
+     "design": {
+      "x": 12,
+      "y": 20,
+      "w": 50,
+      "h": 71
+     },
+     "live": {
+      "x": 100,
+      "y": 20,
+      "w": 164.3,
+      "h": 40
+     }
+    }
+   ]
   },
   {
    "id": "alignment:section:hero masthead",
@@ -3651,20 +3784,93 @@
    }
   }
  ],
+ "boxPairs": [
+  {
+   "design": 1,
+   "live": 1
+  },
+  {
+   "design": 12,
+   "live": 6
+  },
+  {
+   "design": 36,
+   "live": 25
+  },
+  {
+   "design": 37,
+   "live": 26
+  },
+  {
+   "design": 38,
+   "live": 27
+  },
+  {
+   "design": 39,
+   "live": 28
+  },
+  {
+   "design": 40,
+   "live": 29
+  },
+  {
+   "design": 8,
+   "live": 5
+  },
+  {
+   "design": 14,
+   "live": 8
+  },
+  {
+   "design": 35,
+   "live": 24
+  },
+  {
+   "design": 6,
+   "live": 2
+  },
+  {
+   "design": 0,
+   "live": 0
+  },
+  {
+   "design": 30,
+   "live": 11
+  },
+  {
+   "design": 9,
+   "live": 7
+  },
+  {
+   "design": 7,
+   "live": 3
+  },
+  {
+   "design": 27,
+   "live": 15
+  },
+  {
+   "design": 31,
+   "live": 13
+  }
+ ],
  "stats": {
   "designItems": 35,
   "liveItems": 56,
   "matched": 26,
+  "designBoxes": 41,
+  "liveBoxes": 30,
+  "matchedBoxes": 17,
   "missing": 9,
   "extra": 19,
-  "findings": 72,
+  "findings": 73,
   "byCategory": {
    "typography": 10,
    "color": 16,
    "size": 1,
    "shape": 1,
    "spacing": 3,
-   "alignment": 5,
+   "alignment": 6,
    "icon": 1,
    "behavior": 7,
    "missing": 9,
@@ -3673,7 +3879,7 @@
   "bySeverity": {
    "low": 42,
    "medium": 21,
-   "high": 9
+   "high": 10
   }
  }
 }

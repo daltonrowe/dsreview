@@ -187,6 +187,34 @@
     return blockIds.get(cur);
   }
 
+  // Every painted box that shapes the layout (masthead, rail buttons, cards, bars, inputs…), so the
+  // page can be compared as a whole and not only text by text. Photos and media are content, not layout.
+  function layoutBoxes(maxHeight) {
+    const W = innerWidth, out = [], seen = new Set();
+    for (const el of document.body.querySelectorAll('*')) {
+      if (el.matches(SKIP) || el.closest('#cmpwrapper, .profiler-results')) continue;
+      if (['IMG', 'VIDEO', 'CANVAS', 'PICTURE', 'IFRAME', 'svg'].includes(el.tagName)) continue;
+      const cs = getComputedStyle(el);
+      if (!painted(cs)) continue;
+      if (cs.backgroundImage !== 'none' && !/gradient\(/.test(cs.backgroundImage) && !color(cs.backgroundColor)) continue; // a photo set as background
+      const r = el.getBoundingClientRect();
+      if (r.width < 16 || r.height < 16 || r.top > maxHeight || r.bottom < 0 || r.left > W || r.right < 0) continue;
+      if (r.width >= W - 2 && r.height >= Math.min(document.documentElement.scrollHeight, maxHeight) - 2) continue; // the page itself
+      if (!visible(el) || hidden(el, r)) continue;
+      const key = `${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)},${Math.round(r.height)}`;
+      if (seen.has(key)) continue; // nested wrappers painting the same rectangle
+      seen.add(key);
+      const lab = el.closest('[data-screen-label]');
+      const lr = lab && lab.getBoundingClientRect();
+      const own = lab && Math.abs(lr.left - r.left) < 3 && Math.abs(lr.top - r.top) < 3 && Math.abs(lr.width - r.width) < 3 && Math.abs(lr.height - r.height) < 3;
+      const st = boxStyle(el);
+      out.push({ b: out.length, tag: st.tag, box: st.box, background: st.background, backgroundImage: st.backgroundImage, border: st.border, radius: st.radius, shadow: st.shadow,
+        label: own ? lab.dataset.screenLabel : (el.getAttribute('aria-label') || null), section: sectionOf(el), interactive: !!el.closest(INTERACTIVE) });
+      if (out.length >= 800) break;
+    }
+    return out;
+  }
+
   const items = [];
   const api = {
     // maxHeight: ignore anything below this y (page coordinates; the caller sizes the viewport so
@@ -244,7 +272,7 @@
           where: window.__dcv && window.__dcv.address ? safe(() => window.__dcv.address(el)) : null,
         });
       }
-      return { width: W, height: Math.min(document.documentElement.scrollHeight, maxHeight), items: out };
+      return { width: W, height: Math.min(document.documentElement.scrollHeight, maxHeight), items: out, boxes: layoutBoxes(maxHeight) };
     },
     // Hover-sensitive styles of item n: its text, its interactive target and its container.
     hoverState(n) {

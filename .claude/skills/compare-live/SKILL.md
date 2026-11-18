@@ -12,17 +12,26 @@ Reports land in `comparisons/<id>/` and are reviewed in the viewer (`npm start` 
 - **Comparison (pair)**: one design page state ↔ one live URL, configured in `comparisons/pairs.json`.
   Design side = `page` + `props` + `state` + `do` (exactly the `tools/dc.mjs` options, see the `view-design` skill).
   Live side = `path` (`?skip=1` is added to get past the staging OAuth wall) + optional `do` steps.
+- **Themes**: every pair runs light and dark. The dark comparison's id is `<id>--dark` (design `theme`
+  prop = dark; live browser `prefers-color-scheme: dark`, which the live site follows). `run home` runs
+  both; `--theme dark` one. Pair options: `"themes": ["light"]`, `"dark": { "design": {…}, "live": {…} }`.
 - **Item**: a visible piece of text, form field, or icon-only control/image with an accessible name.
   Both pages are snapshotted the same way (`tools/lib/snapshot.js`): text box, typography, and the nearest
   painted box around it (button, chip, input, card) with its size, background, border, radius, shadow, icon.
+- **Box**: every painted box on the page (masthead, rail buttons, bars, panels, cards; not photos), so
+  the page is compared as a whole. Boxes pair by the matched text they hold, or by size and expected
+  position when empty.
 - **Match**: items are paired by text (case/quote-insensitive, then fuzzy) near where they're expected
   (offsets learned from unique "anchor" texts), so a repeated label never pairs across the page.
 - **Finding**: one difference for one matched element and one category (`typography`, `color`, `size`,
   `shape`, `spacing`, `alignment`, `icon`, `behavior`, `missing`, `extra`), with severity high/medium/low and
   property rows (`design → live`). Alignment also reports whole regions (design `data-screen-label`
-  sections) that moved. Behavior compares hover effects (each interactive item is hovered on both sides),
+  sections) that moved, and **layout** findings (`layout: true`, id `alignment:layout:<box>:<edge>`): box
+  edges that lined up anywhere on the page in the design and no longer do (masthead top vs the first rail
+  button). Alignment findings carry `guide` (`axis`, design/live edge values) and `related` partner boxes. Behavior compares hover effects (each interactive item is hovered on both sides),
   clickability and cursor.
-- **Decision** (reviewer, in the viewer): `fix-live`, `fix-design`, `ok`, `unclear` (🤷), plus a free-text note.
+- **Decision** (reviewer, in the viewer): `keep` (a real difference) or `ignore` (noise, not meaningful), plus a free-text note.
+  The app only identifies differences; it doesn't decide who fixes what.
   Stored in `comparisons/<id>/decisions.json` locally (deployed: `DATA_DIR/compare/<id>.json`; pull with
   `npm run pull-decisions`). Finding ids are stable across re-runs (`<category>:<text>#<occurrence>`).
 
@@ -53,7 +62,8 @@ panel; the live home shows **Sign Up** (design: **Log In**) and the **Vectors** 
 - Raw snapshots for debugging the matcher: `comparisons/<id>/snapshot.json` (gitignored).
 
 ## Acting on decisions
-Read `decisions.json` (or `GET /api/comparisons/<id>/export.md`) and join with `report.json` findings by id:
-`fix-live` → change the live site (Rails app, not in this repo; describe the property changes);
-`fix-design` → update the design project (each finding with a design element carries
-`design.source` = `{ file, line }` in `design-project/`); `unclear` → look again and explain.
+Read `decisions.json` (or `GET /api/comparisons/<id>/export.md`) and join with `report.json` findings by id.
+`keep` = a confirmed difference between design and live; `ignore` = noise. When asked to compile the
+differences, list the kept ones (with their property rows, design → live); findings with a design element
+carry `design.source` = `{ file, line }` in `design-project/`. Use ignored findings to tune the matcher
+(`tools/lib/diff.mjs`) when the same kind of noise keeps coming back.

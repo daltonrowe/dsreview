@@ -1,7 +1,9 @@
 {
  "id": "log-in",
+ "baseId": "log-in",
+ "theme": "light",
  "label": "Log in",
- "generatedAt": "2026-11-18T11:39:21.252Z",
+ "generatedAt": "2026-11-18T11:57:53.632Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -29,6 +31,7 @@
   "shot": "live.jpg",
   "items": 25,
   "log": [
+   "pageerror: google is not defined",
    "pageerror: Cannot read properties of undefined (reading 'init')"
   ]
  },
@@ -64,13 +67,13 @@
    "how": "text"
   },
   {
-   "design": 0,
-   "live": 0,
+   "design": 22,
+   "live": 16,
    "how": "text"
   },
   {
-   "design": 22,
-   "live": 16,
+   "design": 0,
+   "live": 0,
    "how": "text"
   },
   {
@@ -195,15 +198,15 @@
     "n": 19,
     "textBox": {
      "x": 257.4,
-     "y": 685,
-     "w": 28,
-     "h": 41
+     "y": 682,
+     "w": 30.4,
+     "h": 47
     },
     "box": {
      "x": 257.4,
-     "y": 685,
-     "w": 28,
-     "h": 41
+     "y": 682,
+     "w": 30.4,
+     "h": 47
     },
     "section": null,
     "where": null
@@ -260,20 +263,127 @@
     "n": 18,
     "textBox": {
      "x": 56,
-     "y": 682,
-     "w": 453.6,
+     "y": 683,
+     "w": 456,
      "h": 43
     },
     "box": {
      "x": 56,
-     "y": 682,
-     "w": 453.6,
+     "y": 683,
+     "w": 456,
      "h": 43
     },
     "section": null,
     "where": null
    },
    "match": "text"
+  },
+  {
+   "id": "alignment:layout:continue with google:left",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Continue with Google",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "left edge",
+     "design": "lines up with box around “Show password” +2 at x=870",
+     "live": "off by 164px → (1034 vs 870)",
+     "sev": "high"
+    }
+   ],
+   "layout": true,
+   "design": {
+    "n": null,
+    "textBox": {
+     "x": 870,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "box": {
+     "x": 870,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": null,
+    "textBox": {
+     "x": 1034,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "box": {
+     "x": 1034,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     870
+    ],
+    "live": [
+     1034,
+     870
+    ]
+   },
+   "related": [
+    {
+     "text": "box around “Show password”",
+     "design": {
+      "x": 870,
+      "y": 395.5,
+      "w": 420,
+      "h": 44
+     },
+     "live": {
+      "x": 870,
+      "y": 400.8,
+      "w": 420,
+      "h": 44
+     }
+    },
+    {
+     "text": "box around “Log in”",
+     "design": {
+      "x": 870,
+      "y": 480.5,
+      "w": 420,
+      "h": 46
+     },
+     "live": {
+      "x": 870,
+      "y": 489.8,
+      "w": 420,
+      "h": 52
+     }
+    },
+    {
+     "text": "input 420×44",
+     "design": {
+      "x": 870,
+      "y": 316.5,
+      "w": 420,
+      "h": 44
+     },
+     "live": {
+      "x": 870,
+      "y": 318.8,
+      "w": 420,
+      "h": 44
+     }
+    }
+   ]
   },
   {
    "id": "alignment:continue with google#0",
@@ -334,7 +444,94 @@
     "section": "form",
     "where": null
    },
-   "match": "text"
+   "match": "text",
+   "guide": {
+    "axis": "x",
+    "design": [
+     870
+    ],
+    "live": [
+     1034,
+     870
+    ]
+   },
+   "related": [
+    {
+     "text": "Username / Email",
+     "design": {
+      "x": 870,
+      "y": 295.5,
+      "w": 125.5,
+      "h": 15
+     },
+     "live": {
+      "x": 870,
+      "y": 295.8,
+      "w": 125.5,
+      "h": 15
+     }
+    },
+    {
+     "text": "Log in",
+     "design": {
+      "x": 870,
+      "y": 210,
+      "w": 82.1,
+      "h": 35
+     },
+     "live": {
+      "x": 870,
+      "y": 208.3,
+      "w": 83.9,
+      "h": 35
+     }
+    },
+    {
+     "text": "Password",
+     "design": {
+      "x": 870,
+      "y": 374.5,
+      "w": 74.5,
+      "h": 15
+     },
+     "live": {
+      "x": 870,
+      "y": 377.8,
+      "w": 74.5,
+      "h": 15
+     }
+    },
+    {
+     "text": "Don't have an account?",
+     "design": {
+      "x": 870,
+      "y": 259.5,
+      "w": 174.3,
+      "h": 18
+     },
+     "live": {
+      "x": 870,
+      "y": 255.8,
+      "w": 174.3,
+      "h": 18
+     }
+    },
+    {
+     "text": "Log in",
+     "design": {
+      "x": 870,
+      "y": 480.5,
+      "w": 420,
+      "h": 46
+     },
+     "live": {
+      "x": 870,
+      "y": 489.8,
+      "w": 420,
+      "h": 52
+     }
+    }
+   ]
   },
   {
    "id": "typography:dont have an account?#0",
@@ -814,13 +1011,13 @@
     "n": 17,
     "textBox": {
      "x": 56,
-     "y": 644,
+     "y": 645,
      "w": 165.7,
      "h": 15
     },
     "box": {
      "x": 56,
-     "y": 644,
+     "y": 645,
      "w": 165.7,
      "h": 15
     },
@@ -3087,13 +3284,13 @@
     "n": 17,
     "textBox": {
      "x": 56,
-     "y": 644,
+     "y": 645,
      "w": 165.7,
      "h": 15
     },
     "box": {
      "x": 56,
-     "y": 644,
+     "y": 645,
      "w": 165.7,
      "h": 15
     },
@@ -3699,20 +3896,65 @@
    }
   }
  ],
+ "boxPairs": [
+  {
+   "design": 2,
+   "live": 2
+  },
+  {
+   "design": 14,
+   "live": 8
+  },
+  {
+   "design": 0,
+   "live": 0
+  },
+  {
+   "design": 3,
+   "live": 3
+  },
+  {
+   "design": 13,
+   "live": 7
+  },
+  {
+   "design": 12,
+   "live": 6
+  },
+  {
+   "design": 5,
+   "live": 5
+  },
+  {
+   "design": 4,
+   "live": 4
+  },
+  {
+   "design": 1,
+   "live": 1
+  },
+  {
+   "design": 15,
+   "live": 9
+  }
+ ],
  "stats": {
   "designItems": 32,
   "liveItems": 25,
   "matched": 22,
+  "designBoxes": 16,
+  "liveBoxes": 10,
+  "matchedBoxes": 10,
   "missing": 10,
   "extra": 3,
-  "findings": 64,
+  "findings": 65,
   "byCategory": {
    "typography": 18,
    "color": 11,
    "size": 3,
    "shape": 2,
    "spacing": 4,
-   "alignment": 2,
+   "alignment": 3,
    "icon": 2,
    "behavior": 9,
    "missing": 10,
@@ -3721,7 +3963,7 @@
   "bySeverity": {
    "low": 35,
    "medium": 26,
-   "high": 3
+   "high": 4
   }
  }
 }

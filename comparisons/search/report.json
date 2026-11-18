@@ -1,7 +1,9 @@
 {
  "id": "search",
+ "baseId": "search",
+ "theme": "light",
  "label": "Search results",
- "generatedAt": "2026-11-18T11:39:05.126Z",
+ "generatedAt": "2026-11-18T11:57:08.150Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -387,6 +389,83 @@
     "where": null
    },
    "match": "text"
+  },
+  {
+   "id": "alignment:layout:image results:right",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Image results",
+   "section": "Image results",
+   "props": [
+    {
+     "prop": "right edge",
+     "design": "lines up with a 110×48 (Top bar) at x=1416.1",
+     "live": "off by -10px ← (1406 vs 1416)",
+     "sev": "high"
+    }
+   ],
+   "layout": true,
+   "design": {
+    "n": null,
+    "textBox": {
+     "x": 986.3,
+     "y": 458.1,
+     "w": 429.8,
+     "h": 268.6
+    },
+    "box": {
+     "x": 986.3,
+     "y": 458.1,
+     "w": 429.8,
+     "h": 268.6
+    },
+    "section": "Image results",
+    "where": null
+   },
+   "live": {
+    "n": null,
+    "textBox": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "box": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "section": "ul#grid1487",
+    "where": null
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     1416.1
+    ],
+    "live": [
+     1406,
+     1416
+    ]
+   },
+   "related": [
+    {
+     "text": "a 110×48",
+     "design": {
+      "x": 1306,
+      "y": 14,
+      "w": 110,
+      "h": 48
+     },
+     "live": {
+      "x": 1299.3,
+      "y": 16,
+      "w": 116.7,
+      "h": 48
+     }
+    }
+   ]
   },
   {
    "id": "typography:explore#0",
@@ -4402,7 +4481,7 @@
    "category": "extra",
    "severity": "low",
    "text": "A cute brown dog lying and relaxing on the beach full of sand close to the seaside waiting for the owner or looking for something by the sea. Vacation holida…",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4426,7 +4505,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4435,7 +4514,7 @@
    "category": "extra",
    "severity": "low",
    "text": "English Springer Spaniel hunting dog breed.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4459,7 +4538,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4468,7 +4547,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Close-up portrait of tricolor australian shepherd dog lying on the table of a natural eye park around him",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4492,7 +4571,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4501,7 +4580,7 @@
    "category": "extra",
    "severity": "low",
    "text": "brown short hair Chihuahua dog sitting on green grass in the garden with yellow flowers blackground, looking at camera.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4525,7 +4604,7 @@
      "w": 451,
      "h": 272
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4534,7 +4613,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Emotional support animal concept. Sleeping Pomeranian dog in floor. pet is rest. Close up, copy space, background",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4558,7 +4637,7 @@
      "w": 408,
      "h": 272
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4567,7 +4646,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Siberian husky puppy lying on sofa in living room. Dog on sofa.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4591,7 +4670,7 @@
      "w": 407,
      "h": 272
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4600,7 +4679,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Happy young woman lying in the bed with her dogs",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4624,7 +4703,7 @@
      "w": 475,
      "h": 317
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4633,7 +4712,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Dog looks poor.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4657,7 +4736,7 @@
      "w": 317,
      "h": 317
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4666,7 +4745,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Black young woman laughing while resting with her dog on her sofa",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4690,7 +4769,7 @@
      "w": 474,
      "h": 317
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4699,7 +4778,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog with white background",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4723,7 +4802,7 @@
      "w": 278,
      "h": 278
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4732,7 +4811,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Happy dog looks out from car window. Road trip with dog.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4756,7 +4835,7 @@
      "w": 417,
      "h": 278
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4765,7 +4844,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Black and white cute Alaskan dog",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4789,7 +4868,7 @@
      "w": 278,
      "h": 278
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4798,7 +4877,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Generative AI, Portrait of a happy dog looking at the camera with mouth open on pink background",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4822,7 +4901,7 @@
      "w": 277,
      "h": 278
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4831,7 +4910,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Brown dog relax and sitting in the garden",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4855,7 +4934,7 @@
      "w": 397,
      "h": 265
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4864,7 +4943,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Husky dog on snow background with empty space for text",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4888,7 +4967,7 @@
      "w": 473,
      "h": 265
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4897,7 +4976,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Shih Tzu dog on the street. Shih Tzu is a breed of dog in the Shih Tzu family.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4921,7 +5000,7 @@
      "w": 396,
      "h": 265
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4930,7 +5009,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog outdoors lying on the grass travel animal",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4954,7 +5033,7 @@
      "w": 439,
      "h": 293
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4963,7 +5042,7 @@
    "category": "extra",
    "severity": "low",
    "text": "portrait of little dog on the seaside during sunset.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -4987,7 +5066,7 @@
      "w": 440,
      "h": 293
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -4996,7 +5075,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute image of a Shih Tzu dog wearing sunglasses at the beach",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5020,7 +5099,7 @@
      "w": 387,
      "h": 293
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5029,7 +5108,7 @@
    "category": "extra",
    "severity": "low",
    "text": "small puppy of wire-haired dachshund on the hands of person on light background. Portrait of dog",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5053,7 +5132,7 @@
      "w": 172,
      "h": 249
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5062,7 +5141,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute dog in birthday cap. Illustration",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5086,7 +5165,7 @@
      "w": 374,
      "h": 249
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5095,7 +5174,7 @@
    "category": "extra",
    "severity": "low",
    "text": "A Yorkshire Terrier dog sitting on a beige chair",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5119,7 +5198,7 @@
      "w": 372,
      "h": 249
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5128,7 +5207,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog breed",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5152,7 +5231,7 @@
      "w": 124.8,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5161,7 +5240,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog lover",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5185,7 +5264,7 @@
      "w": 118.7,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5194,7 +5273,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog playing",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5218,7 +5297,7 @@
      "w": 134.5,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5227,7 +5306,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog background",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5251,7 +5330,7 @@
      "w": 166,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5260,7 +5339,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog owner",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5284,7 +5363,7 @@
      "w": 127.2,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5293,7 +5372,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cool dog",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5317,7 +5396,7 @@
      "w": 114,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5326,7 +5405,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog care",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5350,7 +5429,7 @@
      "w": 115,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5359,7 +5438,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog love",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5383,7 +5462,7 @@
      "w": 113,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5392,7 +5471,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog doodle",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5416,7 +5495,7 @@
      "w": 131.8,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5425,7 +5504,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cute puppy",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5449,7 +5528,7 @@
      "w": 131.7,
      "h": 40
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5458,7 +5537,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Cute beagle puppies. Happy beagle dog relaxing looking sleepy and sitting on the white marble table at home outside. Animals mamal dog concept.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5482,7 +5561,7 @@
      "w": 519,
      "h": 346
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5491,7 +5570,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Closeup the dog. It's man's best friend.",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5515,7 +5594,7 @@
      "w": 519,
      "h": 346
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5524,7 +5603,7 @@
    "category": "extra",
    "severity": "low",
    "text": "dog with weird smile",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5548,7 +5627,7 @@
      "w": 228,
      "h": 346
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5557,7 +5636,7 @@
    "category": "extra",
    "severity": "low",
    "text": "Hunting dog breed Basenji",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5581,7 +5660,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5590,7 +5669,7 @@
    "category": "extra",
    "severity": "low",
    "text": "lonely stray dog portrait with sweet look",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5614,7 +5693,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5623,7 +5702,7 @@
    "category": "extra",
    "severity": "low",
    "text": "cute dog in a sunshine day",
-   "section": "ul#grid6602",
+   "section": "ul#grid1487",
    "props": [
     {
      "prop": "control",
@@ -5647,7 +5726,7 @@
      "w": 422,
      "h": 282
     },
-    "section": "ul#grid6602",
+    "section": "ul#grid1487",
     "where": null
    }
   },
@@ -5685,20 +5764,61 @@
    }
   }
  ],
+ "boxPairs": [
+  {
+   "design": 1,
+   "live": 2
+  },
+  {
+   "design": 0,
+   "live": 0
+  },
+  {
+   "design": 3,
+   "live": 4
+  },
+  {
+   "design": 2,
+   "live": 3
+  },
+  {
+   "design": 7,
+   "live": 6
+  },
+  {
+   "design": 8,
+   "live": 7
+  },
+  {
+   "design": 4,
+   "live": 5
+  },
+  {
+   "design": 31,
+   "live": 42
+  },
+  {
+   "design": 30,
+   "live": 41
+  }
+ ],
  "stats": {
   "designItems": 71,
   "liveItems": 115,
   "matched": 12,
+  "designBoxes": 83,
+  "liveBoxes": 78,
+  "matchedBoxes": 9,
   "missing": 58,
   "extra": 59,
-  "findings": 138,
+  "findings": 139,
   "byCategory": {
    "typography": 4,
    "color": 4,
    "size": 1,
    "shape": 1,
    "spacing": 2,
-   "alignment": 1,
+   "alignment": 2,
    "icon": 0,
    "behavior": 8,
    "missing": 58,
@@ -5707,7 +5827,7 @@
   "bySeverity": {
    "low": 69,
    "medium": 64,
-   "high": 5
+   "high": 6
   }
  }
 }

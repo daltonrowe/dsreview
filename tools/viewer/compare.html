@@ -6,6 +6,7 @@
 <title>Design vs Live</title>
 <link rel="stylesheet" href="app.css">
 <style>
+  :root { --guide: #12b84a; }
   html, body { height: 100%; }
   body { display: flex; flex-direction: column; overflow: hidden; }
   .topbar { position: static; }
@@ -37,6 +38,10 @@
   .crop .img { position: relative; background-repeat: no-repeat; border-radius: 6px; border: 1px solid var(--line); background-color: var(--panel-2); max-width: 100%; }
   .crop .img i { position: absolute; border: 1.5px solid; border-radius: 2px; pointer-events: none; }
   .crop.d .img i { border-color: var(--design); } .crop.l .img i { border-color: var(--live); }
+  .crop .img { overflow: hidden; }
+  .guide { position: absolute; pointer-events: none; background: var(--guide); box-shadow: 0 0 0 .5px rgba(255,255,255,.7); z-index: 4; }
+  .guide.h { left: 0; right: 0; height: 1.5px; margin-top: -.75px; }
+  .guide.v { top: 0; bottom: 0; width: 1.5px; margin-left: -.75px; }
   .crop .none { font-size: 12px; color: var(--faint); padding: 18px 0; text-align: center; border: 1px dashed var(--line-2); border-radius: 6px; }
   table.props { border-collapse: collapse; font-size: 12px; width: 100%; table-layout: fixed; }
   table.props td { padding: 2px 4px; vertical-align: top; overflow-wrap: anywhere; }
@@ -70,10 +75,22 @@
   .boxes b.sel { border-width: 2.5px; z-index: 3; }
   .boxes b.sel.d { border-color: var(--design); background: color-mix(in srgb, var(--design) 10%, transparent); }
   .boxes b.sel.l { border-color: var(--live); background: color-mix(in srgb, var(--live) 10%, transparent); }
+  .boxes b.rel { border-style: dashed; border-width: 2px; pointer-events: none; }
+  .boxes b.rel.d { border-color: var(--design); } .boxes b.rel.l { border-color: var(--live); }
   .boxes b.sel::after { content: attr(data-lab); position: absolute; left: -2px; bottom: 100%; margin-bottom: 3px; font: 600 10.5px/1.4 var(--sans); color: #fff; padding: 0 5px; border-radius: 4px; white-space: nowrap; }
   .boxes b.sel.d::after { background: var(--design); } .boxes b.sel.l::after { background: var(--live); top: 100%; bottom: auto; margin: 3px 0 0; }
+  /* Find: a big bouncing arrow pointing at the selected difference */
+  .find-arrow { position: absolute; z-index: 5; pointer-events: none; width: 64px; height: 84px; margin-left: -32px; filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 3px 6px rgba(0,0,0,.35)); animation: find-bounce .55s ease-in-out 5 alternate; }
+  .find-arrow.d { color: var(--design); } .find-arrow.l { color: var(--live); }
+  .find-arrow.up { transform: rotate(180deg); }
+  .find-arrow svg { width: 100%; height: 100%; display: block; }
+  @keyframes find-bounce { from { translate: 0 -14px; } to { translate: 0 0; } }
+  @media (prefers-reduced-motion: reduce) { .find-arrow { animation: none; } }
   .swipe-line { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--live); z-index: 2; pointer-events: none; box-shadow: 0 0 0 1px rgba(255,255,255,.6); }
   #mix { width: 120px; }
+  #stage.zoom-in, #stage.zoom-in * { cursor: zoom-in !important; }
+  #stage.zoom-out, #stage.zoom-out * { cursor: zoom-out !important; }
+  #theme button:disabled { opacity: .4; }
   .hint { font-size: 11.5px; color: var(--faint); }
   .empty { padding: 40px 20px; }
 </style>
@@ -82,6 +99,7 @@
 <div class="topbar">
   <a class="crumb" href="./">← Comparisons</a>
   <select id="pick" title="Comparison"></select>
+  <div class="seg" id="theme" title="Light / dark version of this comparison"></div>
   <div class="links" id="links"></div>
   <span class="spacer"></span>
   <div class="prog" id="prog"></div>
@@ -116,8 +134,8 @@ const params = new URLSearchParams(location.search);
 const st = {
   id: params.get('id'), report: null, decisions: {},
   cats: new Set(), minSev: store.get('minSev', 1), status: store.get('status', 'all'), q: '',
-  mode: store.get('mode', 'side'), mix: 50, zoom: store.get('zoom', 'fit'), allBoxes: store.get('allBoxes', true),
-  sel: params.get('f'), noteOpen: null,
+  mode: store.get('mode', 'side'), mix: 50, zoom: Number(store.get('zoomLevel', 1)) || 1, allBoxes: store.get('allBoxes', true),
+  sel: params.get('f'), noteOpen: null, find: null,
 };
 
 // ---------- data ----------
@@ -125,7 +143,14 @@ const { comparisons } = await api('/api/comparisons');
 const { root } = await config();
 const ready = comparisons.filter(c => c.generated);
 if (!st.id || !ready.some(c => c.id === st.id)) st.id = ready[0]?.id;
-$('#pick').innerHTML = comparisons.map(c => `<option value="${esc(c.id)}" ${c.generated ? '' : 'disabled'} ${c.id === st.id ? 'selected' : ''}>${esc(c.label)}${c.generated ? '' : ' (not run)'}</option>`).join('');
+$('#pick').innerHTML = comparisons.map(c => `<option value="${esc(c.id)}" ${c.generated ? '' : 'disabled'} ${c.id === st.id ? 'selected' : ''}>${esc(c.label)}${c.theme === 'dark' ? ' · dark' : ''}${c.generated ? '' : ' (not run)'}</option>`).join('');
+{
+  // light/dark versions of the same pair
+  const cur = comparisons.find(c => c.id === st.id);
+  const sibs = comparisons.filter(c => cur && c.baseId === cur.baseId);
+  $('#theme').innerHTML = ['light', 'dark'].map(t => { const c = sibs.find(x => x.theme === t); return `<button data-id="${esc(c?.id || '')}" aria-pressed="${cur?.theme === t}" ${c?.generated ? '' : `disabled title="${c ? `Not run: node tools/compare.mjs run ${esc(c.id)}` : 'This page has no dark theme'}"`}>${t === 'light' ? '☀ Light' : '☾ Dark'}</button>`; }).join('');
+  $('#theme').onclick = e => { const b = e.target.closest('button'); if (b && !b.disabled && b.dataset.id !== st.id) { const u = new URL(location.href); u.searchParams.set('id', b.dataset.id); u.searchParams.delete('f'); location.href = u; } };
+}
 $('#pick').onchange = e => { location.search = `?id=${encodeURIComponent(e.target.value)}`; };
 if (!st.id) { $('#list').innerHTML = `<div class="empty">No comparison has been run. <code>node tools/compare.mjs run</code></div>`; throw new Error('nothing to show'); }
 
@@ -165,7 +190,7 @@ function renderToolbar() {
   $('#sev').innerHTML = [[1, 'All'], [2, 'Medium+'], [3, 'High']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${st.minSev === v}">${l}</button>`).join('');
   $('#status').innerHTML = [['all', 'All'], ['todo', 'To do'], ['done', 'Decided'], ...DECISIONS.map(d => [d, LABELS[d]])].map(([v, l]) => `<button data-v="${v}" class="${DECISIONS.includes(v) ? v : ''}" aria-pressed="${st.status === v}" title="${esc(TITLES[v] || '')}">${l}</button>`).join('');
   $('#mode').innerHTML = MODES.map(([v, l]) => `<button data-v="${v}" aria-pressed="${st.mode === v}">${l}</button>`).join('');
-  $('#zoom').innerHTML = [['fit', 'Fit'], ['1', '100%']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${st.zoom === v}">${l}</button>`).join('');
+  renderZoom();
   $('#bulk').innerHTML = `<option value="">Set all shown…</option>${DECISIONS.map(d => `<option value="${d}">${LABELS[d]}</option>`).join('')}<option value="clear">Clear</option>`;
   $('#mixLab').hidden = st.mode === 'side';
   $('#mixName').textContent = st.mode === 'swipe' ? 'Swipe' : 'Live';
@@ -177,7 +202,14 @@ $('#cats').onclick = e => { const b = e.target.closest('button'); if (!b) return
 $('#sev').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.minSev = Number(b.dataset.v); store.set('minSev', st.minSev); refresh(); };
 $('#status').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.status = b.dataset.v; store.set('status', st.status); refresh(); };
 $('#mode').onclick = e => { const b = e.target.closest('button'); if (!b) return; setMode(b.dataset.v); };
-$('#zoom').onclick = e => { const b = e.target.closest('button'); if (!b) return; st.zoom = b.dataset.v; store.set('zoom', st.zoom); renderToolbar(); renderStage(); };
+$('#zoom').onclick = e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const stage = $('#stage').getBoundingClientRect(), cx = stage.left + stage.width / 2, cy = stage.top + stage.height / 2;
+  if (b.dataset.v === 'in') zoomAt(ZSTEP, cx, cy);
+  else if (b.dataset.v === 'out') zoomAt(1 / ZSTEP, cx, cy);
+  else if (b.dataset.v === 'fit') setZoom(1);
+  else if (b.dataset.v === 'real') zoomAt(1 / fitScale() / st.zoom, cx, cy);
+};
 $('#q').oninput = e => { st.q = e.target.value; renderList(); renderStage(); };
 $('#mix').oninput = e => { st.mix = Number(e.target.value); applyMix(); };
 $('#allBoxes').onchange = e => { st.allBoxes = e.target.checked; store.set('allBoxes', st.allBoxes); drawBoxes(); };
@@ -192,12 +224,31 @@ function setMode(m) { st.mode = m; store.set('mode', m); renderToolbar(); render
 
 // ---------- findings list ----------
 const CROP_W = 205, CROP_H = 130, PAD = 18;
+// The part of a screenshot a finding is about. For an alignment with a partner (the masthead vs the
+// first rail button), the window spans the meeting point of the two along the guide line.
+function cropRegion(box, partner, guide) {
+  if (!partner || !guide) return { x: box.x - PAD, y: box.y - PAD, w: Math.max(box.w + PAD * 2, 90), h: Math.max(box.h + PAD * 2, 40) };
+  const lo = Math.min(...guide) - 50, hi = Math.max(...guide) + 50;
+  if (guide.axis === 'y') {
+    const [L, R] = box.x <= partner.x ? [box, partner] : [partner, box];
+    const x0 = L.x + Math.max(0, L.w - 140) - PAD, x1 = R.x + Math.min(R.w, 140) + PAD;
+    return { x: x0, y: lo, w: x1 - x0, h: hi - lo };
+  }
+  const [T, B] = box.y <= partner.y ? [box, partner] : [partner, box];
+  const y0 = T.y + Math.max(0, T.h - 100) - PAD, y1 = B.y + Math.min(B.h, 100) + PAD;
+  return { x: lo, y: y0, w: hi - lo, h: y1 - y0 };
+}
 function crop(side, f, shot, box, note) {
   const r = st.report, W = r[side === 'd' ? 'design' : 'live'].width, H = r[side === 'd' ? 'design' : 'live'].height;
-  const rx = Math.max(0, box.x - PAD), ry = Math.max(0, box.y - PAD);
-  const rw = Math.min(W - rx, Math.max(box.w + PAD * 2, 90)), rh = Math.min(H - ry, Math.max(box.h + PAD * 2, 40));
+  const partner = f.related?.[0]?.[side === 'd' ? 'design' : 'live'];
+  const g = f.guide && Object.assign([...f.guide[side === 'd' ? 'design' : 'live']], { axis: f.guide.axis });
+  const reg = cropRegion(box, partner, g);
+  const rx = Math.max(0, reg.x), ry = Math.max(0, reg.y);
+  const rw = Math.min(W - rx, reg.w), rh = Math.min(H - ry, reg.h);
   const s = Math.min(CROP_W / rw, CROP_H / rh, 2);
-  return `<div class="img" style="width:${rw * s}px;height:${rh * s}px;background-image:url('/comparisons/${esc(r.id)}/${shot}');background-size:${W * s}px auto;background-position:${-rx * s}px ${-ry * s}px"><i style="left:${(box.x - rx) * s - 2}px;top:${(box.y - ry) * s - 2}px;width:${box.w * s + 4}px;height:${box.h * s + 4}px${note ? ';border-style:dashed' : ''}"></i></div>`;
+  const outline = (b, extra = '') => `<i style="left:${(b.x - rx) * s - 2}px;top:${(b.y - ry) * s - 2}px;width:${b.w * s + 4}px;height:${b.h * s + 4}px${extra}"></i>`;
+  const lines = g ? g.map(v => g.axis === 'y' ? `<u class="guide h" style="top:${(v - ry) * s}px"></u>` : `<u class="guide v" style="left:${(v - rx) * s}px"></u>`).join('') : '';
+  return `<div class="img" style="width:${rw * s}px;height:${rh * s}px;background-image:url('/comparisons/${esc(r.id)}/${shot}');background-size:${W * s}px auto;background-position:${-rx * s}px ${-ry * s}px">${outline(box, note ? ';border-style:dashed' : '')}${partner ? outline(partner, ';border-style:dashed;opacity:.8') : ''}${lines}</div>`;
 }
 function cardHtml(f) {
   const d = decisionOf(f), note = st.decisions[f.id]?.note;
@@ -212,6 +263,7 @@ function cardHtml(f) {
     <table class="props"><tr class="head"><td></td><td class="dv">Design</td><td class="lv">Live</td></tr>${f.props.map(p => `<tr><td>${esc(p.prop)}</td><td class="dv"><span>${p.swatch || p.gradient ? swatch(p.design) : ''}${esc(p.design)}</span></td><td class="lv"><span>${p.swatch || p.gradient ? swatch(p.live) : ''}${esc(p.live)}</span></td></tr>`).join('')}</table>
     ${showText}
     <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-d="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
+      <button class="btn small" data-act="find" title="Point at it on the screenshots (f)">➜ Find</button>
       <button class="btn small" data-act="note" title="Add a note (n)">✎</button><span class="spacer"></span>
       ${f.design?.where ? `<a href="${esc(viewUrl({ ...st.report.design, width: st.report.design.width }, f.design.where))}" target="_blank" title="Open the design page with this element marked">design ↗</a>` : ''}
       ${f.design?.source ? `<a href="${esc(editorUrl(root, f.design.source.file, f.design.source.line, f.design.source.col))}" title="Open the source in VS Code">${esc(f.design.source.file.replace(/\.dc\.html$/, ''))}:${f.design.source.line}</a>` : ''}</div>
@@ -232,6 +284,7 @@ $('#list').addEventListener('click', e => {
   const id = card.dataset.id;
   const b = e.target.closest('button[data-d]');
   if (b) { const f = st.report.findings.find(x => x.id === id); decide([id], decisionOf(f) === b.dataset.d ? null : b.dataset.d); return; }
+  if (e.target.closest('[data-act=find]')) { find(id); return; }
   if (e.target.closest('[data-act=note]')) { st.noteOpen = st.noteOpen === id ? null : id; renderCard(id); $(`.f[data-id="${CSS.escape(id)}"] textarea`)?.focus(); return; }
   if (e.target.closest('a, textarea')) return;
   select(id, { scrollList: false });
@@ -262,14 +315,36 @@ async function decide(ids, decision) {
 
 // ---------- stage ----------
 let scale = 1;
-function stageScale(nPanes) {
-  const r = st.report, avail = $('#stage').clientWidth - 32 - (nPanes - 1) * 16;
-  return st.zoom === '1' ? 1 : Math.min(1, avail / nPanes / Math.max(r.design.width, r.live.width));
+// Zoom: st.zoom multiplies the fitted scale (1 = both screenshots fit the stage).
+const ZSTEP = 1.6, ZMIN = 0.5, ZMAX = 12;
+function fitScale() {
+  const nPanes = st.mode === 'side' ? 2 : 1, r = st.report, avail = $('#stage').clientWidth - 32 - (nPanes - 1) * 16;
+  return Math.min(1, avail / nPanes / Math.max(r.design.width, r.live.width));
+}
+function stageScale() { return fitScale() * st.zoom; }
+function renderZoom() {
+  const pct = Math.round(stageScale() * 100);
+  $('#zoom').innerHTML = `<button data-v="out" title="Zoom out (⌘/Ctrl + Z + click)">−</button><button data-v="fit" title="Fit (current zoom ${pct}%)" aria-pressed="${st.zoom === 1}">${st.zoom === 1 ? 'Fit' : pct + '%'}</button><button data-v="in" title="Zoom in (hold Z + click)">+</button><button data-v="real" title="Actual pixels">1:1</button>`;
+}
+function setZoom(z) { st.zoom = Math.max(ZMIN, Math.min(ZMAX, z)); store.set('zoomLevel', st.zoom); renderZoom(); renderStage(); }
+// Zoom by `factor`, keeping the screenshot point under (clientX, clientY) where it is.
+function zoomAt(factor, clientX, clientY) {
+  const stage = $('#stage'), r = stage.getBoundingClientRect();
+  const canvas = $('.canvas'), cr = canvas.getBoundingClientRect();
+  const before = scale;
+  // the point in the first canvas' screenshot coordinates (stays put; panes share the scale)
+  const ox = stage.scrollLeft + (cr.left - r.left), oy = stage.scrollTop + (cr.top - r.top);
+  const px = (stage.scrollLeft + clientX - r.left - ox) / before, py = (stage.scrollTop + clientY - r.top - oy) / before;
+  setZoom(st.zoom * factor);
+  const c2 = $('.canvas').getBoundingClientRect();
+  const ox2 = stage.scrollLeft + (c2.left - r.left), oy2 = stage.scrollTop + (c2.top - r.top);
+  stage.scrollLeft = ox2 + px * scale - (clientX - r.left);
+  stage.scrollTop = oy2 + py * scale - (clientY - r.top);
 }
 function renderStage() {
   const r = st.report, base = `/comparisons/${encodeURIComponent(r.id)}/`;
   const side = st.mode === 'side';
-  scale = stageScale(side ? 2 : 1);
+  scale = stageScale();
   const canvas = (cls, w, h, imgs) => `<div class="canvas ${cls}" style="width:${w * scale}px;height:${h * scale}px">${imgs}<div class="boxes"></div></div>`;
   if (side) {
     $('#stage').innerHTML = `<div class="panes">
@@ -302,11 +377,70 @@ function drawBoxes() {
   } else {
     $('.canvas.oc .boxes').innerHTML = list.map(f => (f.design ? boxEl(f, 'd', f.design.box) : '') + (f.live ? boxEl(f, 'l', f.live.box) : '')).join('');
   }
+  drawGuides();
+  drawArrows();
 }
-$('#stage').addEventListener('click', e => { const b = e.target.closest('.boxes b'); if (b) select(b.dataset.id, { scrollStage: false }); });
+
+// Alignment findings: guide lines across the whole screenshot at the edge that should line up
+// (design: one line; live: one per element, showing the gap), and the partner boxes dashed.
+function drawGuides() {
+  $$('.canvas .guide, .boxes b.rel').forEach(x => x.remove());
+  const f = st.sel && st.report.findings.find(x => x.id === st.sel);
+  if (!f) return;
+  const rel = (sel, side, key) => { const layer = $(sel); if (!layer) return; for (const r of f.related || []) if (r[key]) layer.insertAdjacentHTML('beforeend', `<b class="rel ${side}" title="${esc(r.text || '')}" style="left:${r[key].x * scale - 2}px;top:${r[key].y * scale - 2}px;width:${r[key].w * scale + 4}px;height:${r[key].h * scale + 4}px"></b>`); };
+  const lines = (sel, vals) => { const c = $(sel); if (!c || !f.guide) return; for (const v of vals) c.insertAdjacentHTML('beforeend', f.guide.axis === 'y' ? `<u class="guide h" style="top:${v * scale}px"></u>` : `<u class="guide v" style="left:${v * scale}px"></u>`); };
+  if (st.mode === 'side') {
+    rel('.canvas.dc .boxes', 'd', 'design'); rel('.canvas.lc .boxes', 'l', 'live');
+    if (f.guide) { lines('.canvas.dc', f.guide.design); lines('.canvas.lc', f.guide.live); }
+  } else {
+    rel('.canvas.oc .boxes', 'd', 'design'); rel('.canvas.oc .boxes', 'l', 'live');
+    if (f.guide) lines('.canvas.oc', [...f.guide.design, ...f.guide.live]);
+  }
+}
+
+// ---------- find: a big arrow on the selected difference ----------
+const ARROW = `<svg viewBox="0 0 64 84" aria-hidden="true"><path fill="currentColor" d="M22 0h20v46h18L32 84 4 46h18z"/></svg>`;
+function arrowEl(side, box) {
+  const ah = 84, gap = 6, cx = (box.x + box.w / 2) * scale, top = box.y * scale;
+  // not enough room above (top of the page): point up from below instead
+  const up = top < ah + gap;
+  const y = up ? (box.y + box.h) * scale + gap : top - ah - gap;
+  return `<div class="find-arrow ${side}${up ? ' up' : ''}" style="left:${cx}px;top:${y}px">${ARROW}</div>`;
+}
+function drawArrows() {
+  $$('.find-arrow').forEach(a => a.remove());
+  const f = st.find && st.find === st.sel && st.report.findings.find(x => x.id === st.find);
+  if (!f) return;
+  const put = (sel, side, box) => { const layer = $(sel); if (layer && box) layer.insertAdjacentHTML('beforeend', arrowEl(side, box)); };
+  if (st.mode === 'side') { put('.canvas.dc .boxes', 'd', f.design?.box); put('.canvas.lc .boxes', 'l', f.live?.box); }
+  else { put('.canvas.oc .boxes', 'd', f.design?.box); put('.canvas.oc .boxes', 'l', f.live?.box); }
+}
+function find(id) {
+  st.find = id;
+  select(id, { scrollList: false });
+}
+$('#stage').addEventListener('click', e => {
+  // hold Z and click to zoom in there; ⌘/Ctrl + Z + click zooms out
+  if (zHeld) { e.preventDefault(); e.stopPropagation(); zoomAt(e.metaKey || e.ctrlKey ? 1 / ZSTEP : ZSTEP, e.clientX, e.clientY); return; }
+  const b = e.target.closest('.boxes b'); if (b) select(b.dataset.id, { scrollStage: false });
+}, true);
+let zHeld = false;
+function zoomCursor(e) { $('#stage').classList.toggle('zoom-in', zHeld && !(e?.metaKey || e?.ctrlKey)); $('#stage').classList.toggle('zoom-out', zHeld && !!(e?.metaKey || e?.ctrlKey)); }
+addEventListener('keydown', e => {
+  if (e.target.matches?.('input, textarea, select')) return;
+  if (e.key === 'z' || e.key === 'Z') { zHeld = true; if (e.metaKey || e.ctrlKey) e.preventDefault(); }
+  zoomCursor(e);
+}, true);
+addEventListener('keyup', e => {
+  // macOS swallows the Z keyup while ⌘ is down, so letting go of ⌘ ends it too
+  if (e.key === 'z' || e.key === 'Z' || e.key === 'Meta') zHeld = false;
+  zoomCursor(e);
+});
+addEventListener('blur', () => { zHeld = false; zoomCursor(); });
 addEventListener('resize', () => renderStage());
 
 function select(id, { scrollList = true, scrollStage = true } = {}) {
+  if (id !== st.find) st.find = null;
   st.sel = id;
   const u = new URL(location.href); if (id) u.searchParams.set('f', id); else u.searchParams.delete('f'); history.replaceState(null, '', u);
   $$('.f.sel').forEach(el => el.classList.remove('sel'));
@@ -321,7 +455,7 @@ function select(id, { scrollList = true, scrollStage = true } = {}) {
       const stage = $('#stage'), sr = stage.getBoundingClientRect(), br = b.getBoundingClientRect();
       const top = stage.scrollTop + br.top - sr.top - stage.clientHeight / 2 + br.height / 2;
       const left = stage.scrollLeft + br.left - sr.left - stage.clientWidth / 2 + br.width / 2;
-      stage.scrollTo({ top: Math.max(0, top), left: st.zoom === '1' ? Math.max(0, left) : stage.scrollLeft, behavior: 'smooth' });
+      stage.scrollTo({ top: Math.max(0, top), left: Math.max(0, left), behavior: 'smooth' });
     }
   }
 }
@@ -336,8 +470,9 @@ addEventListener('keydown', e => {
   const cur = list[i];
   if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); const n = list[Math.min(i + 1, list.length - 1)]; if (n) select(n.id); }
   else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); const n = list[Math.max(i - 1, 0)]; if (n) select(n.id); }
-  else if (/^[1-4]$/.test(e.key) && cur) { const d = DECISIONS[Number(e.key) - 1]; decide([cur.id], decisionOf(cur) === d ? null : d); }
+  else if (/^[1-2]$/.test(e.key) && cur) { const d = DECISIONS[Number(e.key) - 1]; decide([cur.id], decisionOf(cur) === d ? null : d); }
   else if (e.key === '0' && cur) decide([cur.id], null);
+  else if (e.key === 'f' && cur) find(cur.id);
   else if (e.key === 'n' && cur) { e.preventDefault(); st.noteOpen = cur.id; renderCard(cur.id); $(`.f[data-id="${CSS.escape(cur.id)}"] textarea`)?.focus(); }
   else if (e.key === 'm') setMode(MODES[(MODES.findIndex(m => m[0] === st.mode) + 1) % MODES.length][0]);
   else if (e.key === 'b') { st.allBoxes = !st.allBoxes; store.set('allBoxes', st.allBoxes); renderToolbar(); drawBoxes(); }

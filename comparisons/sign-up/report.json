@@ -1,7 +1,9 @@
 {
  "id": "sign-up",
+ "baseId": "sign-up",
+ "theme": "light",
  "label": "Create an account",
- "generatedAt": "2026-11-18T11:39:13.930Z",
+ "generatedAt": "2026-11-18T11:57:36.263Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -450,6 +452,113 @@
    "match": "text"
   },
   {
+   "id": "alignment:layout:continue with google:left",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Continue with Google",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "left edge",
+     "design": "lines up with box around “Show password” +2 at x=870",
+     "live": "off by 164px → (1034 vs 870)",
+     "sev": "high"
+    }
+   ],
+   "layout": true,
+   "design": {
+    "n": null,
+    "textBox": {
+     "x": 870,
+     "y": 553.3,
+     "w": 42,
+     "h": 42
+    },
+    "box": {
+     "x": 870,
+     "y": 553.3,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": null,
+    "textBox": {
+     "x": 1034,
+     "y": 565.3,
+     "w": 40,
+     "h": 40
+    },
+    "box": {
+     "x": 1034,
+     "y": 565.3,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     870
+    ],
+    "live": [
+     1034,
+     870
+    ]
+   },
+   "related": [
+    {
+     "text": "box around “Show password”",
+     "design": {
+      "x": 870,
+      "y": 396.3,
+      "w": 420,
+      "h": 44
+     },
+     "live": {
+      "x": 870,
+      "y": 398.3,
+      "w": 420,
+      "h": 44
+     }
+    },
+    {
+     "text": "box around “Create account”",
+     "design": {
+      "x": 870,
+      "y": 454.3,
+      "w": 420,
+      "h": 46
+     },
+     "live": {
+      "x": 870,
+      "y": 456.3,
+      "w": 420,
+      "h": 52
+     }
+    },
+    {
+     "text": "input 420×44",
+     "design": {
+      "x": 870,
+      "y": 317.3,
+      "w": 420,
+      "h": 44
+     },
+     "live": {
+      "x": 870,
+      "y": 316.3,
+      "w": 420,
+      "h": 44
+     }
+    }
+   ]
+  },
+  {
    "id": "alignment:continue with google#0",
    "category": "alignment",
    "severity": "high",
@@ -508,7 +617,94 @@
     "section": "form",
     "where": null
    },
-   "match": "text"
+   "match": "text",
+   "guide": {
+    "axis": "x",
+    "design": [
+     870
+    ],
+    "live": [
+     1034,
+     870
+    ]
+   },
+   "related": [
+    {
+     "text": "Create account",
+     "design": {
+      "x": 870,
+      "y": 454.3,
+      "w": 420,
+      "h": 46
+     },
+     "live": {
+      "x": 870,
+      "y": 456.3,
+      "w": 420,
+      "h": 52
+     }
+    },
+    {
+     "text": "Already have an account?",
+     "design": {
+      "x": 870,
+      "y": 260.3,
+      "w": 189.8,
+      "h": 18
+     },
+     "live": {
+      "x": 870,
+      "y": 253.3,
+      "w": 189.8,
+      "h": 18
+     }
+    },
+    {
+     "text": "Email",
+     "design": {
+      "x": 870,
+      "y": 296.3,
+      "w": 40.3,
+      "h": 15
+     },
+     "live": {
+      "x": 870,
+      "y": 293.3,
+      "w": 40.3,
+      "h": 15
+     }
+    },
+    {
+     "text": "Create an account",
+     "design": {
+      "x": 870,
+      "y": 210.8,
+      "w": 250.7,
+      "h": 35
+     },
+     "live": {
+      "x": 870,
+      "y": 205.8,
+      "w": 255.8,
+      "h": 35
+     }
+    },
+    {
+     "text": "Password",
+     "design": {
+      "x": 870,
+      "y": 375.3,
+      "w": 74.5,
+      "h": 15
+     },
+     "live": {
+      "x": 870,
+      "y": 375.3,
+      "w": 74.5,
+      "h": 15
+     }
+    }
+   ]
   },
   {
    "id": "typography:already have an account?#0",
@@ -3840,20 +4036,65 @@
    }
   }
  ],
+ "boxPairs": [
+  {
+   "design": 2,
+   "live": 2
+  },
+  {
+   "design": 15,
+   "live": 11
+  },
+  {
+   "design": 0,
+   "live": 0
+  },
+  {
+   "design": 3,
+   "live": 3
+  },
+  {
+   "design": 14,
+   "live": 10
+  },
+  {
+   "design": 13,
+   "live": 9
+  },
+  {
+   "design": 5,
+   "live": 5
+  },
+  {
+   "design": 4,
+   "live": 4
+  },
+  {
+   "design": 16,
+   "live": 12
+  },
+  {
+   "design": 1,
+   "live": 1
+  }
+ ],
  "stats": {
   "designItems": 32,
   "liveItems": 27,
   "matched": 21,
+  "designBoxes": 17,
+  "liveBoxes": 13,
+  "matchedBoxes": 10,
   "missing": 11,
   "extra": 6,
-  "findings": 68,
+  "findings": 69,
   "byCategory": {
    "typography": 17,
    "color": 11,
    "size": 3,
    "shape": 2,
    "spacing": 7,
-   "alignment": 1,
+   "alignment": 2,
    "icon": 2,
    "behavior": 8,
    "missing": 11,
@@ -3862,7 +4103,7 @@
   "bySeverity": {
    "low": 37,
    "medium": 25,
-   "high": 6
+   "high": 7
   }
  }
 }

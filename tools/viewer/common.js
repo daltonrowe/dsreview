@@ -42,9 +42,9 @@ export function editorUrl(root, file, line, col) {
   return `vscode://file${root}/design-project/${file}${line ? `:${line}${col ? `:${col}` : ''}` : ''}`;
 }
 
-export const DECISIONS = ['fix-live', 'fix-design', 'ok', 'unclear'];
-export const LABELS = { 'fix-live': 'Fix live', 'fix-design': 'Update design', ok: 'Fine', unclear: '🤷' };
-export const TITLES = { 'fix-live': 'The live site should match the design', 'fix-design': 'The live site is right; update the design', ok: 'Difference is acceptable / not real', unclear: 'Not sure; needs a look' };
+export const DECISIONS = ['keep', 'ignore'];
+export const LABELS = { keep: 'Keep', ignore: 'Ignore' };
+export const TITLES = { keep: 'A real difference: keep it on the list', ignore: 'Not a real or meaningful difference' };
 
 export function progressBar(p) {
   const pct = k => (p.total ? ((p[k] || 0) / p.total) * 100 : 0);

@@ -84,3 +84,18 @@ test('finding ids are stable across runs', () => {
   assert.deepEqual(mk(), mk());
   assert.deepEqual(mk(), ['typography:a#0']);
 });
+
+test('whole page: boxes in different regions that lined up in the design are flagged when they drift apart', () => {
+  // the masthead's top lines up with the first rail button in the design; on live the masthead sits 15px lower
+  const pb = (b, x, y, w, h, o = {}) => ({ b, tag: 'div', box: { x, y, w, h }, background: '#ff7900', backgroundImage: null, border: null, radius: '24px', shadow: null, label: null, section: 'Main', interactive: false, ...o });
+  const D = [item('Beautiful Visuals', 300, 150, { section: 'Hero masthead' }), item('Home', 25, 96, { section: 'Left nav' }), item('Search', 25, 150, { section: 'Left nav' })];
+  const L = [item('Beautiful Visuals', 300, 165, { section: 'Hero masthead' }), item('Home', 25, 96, { section: 'Left nav' }), item('Search', 25, 150, { section: 'Left nav' })];
+  const design = { ...snap(D), boxes: [pb(0, 99, 84, 1300, 330, { section: 'Hero masthead' }), pb(1, 12, 84, 50, 48, { section: 'Left nav', label: 'Home' })] };
+  const live = { ...snap(L), boxes: [pb(0, 99, 99, 1300, 330), pb(1, 12, 84, 50, 48, { label: 'Home' })] };
+  const lay = compareSnapshots(design, live).findings.filter(f => f.layout);
+  assert.equal(lay.length, 1, 'one finding for the pair, named after the bigger box');
+  assert.equal(lay[0].text, 'Hero masthead');
+  assert.equal(lay[0].props[0].prop, 'top edge');
+  assert.match(lay[0].props[0].live, /off by 15px ↓/);
+  assert.deepEqual(lay[0].guide, { axis: 'y', design: [84], live: [99, 84] });
+});

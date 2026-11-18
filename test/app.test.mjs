@@ -51,19 +51,21 @@ test('serves the viewer and the design project with credentials', async () => {
 test('lists configured comparisons, with or without a report', async () => {
   const { base: live, comparisons } = await (await fetch(`${base}/api/comparisons`, { headers: auth })).json();
   assert.equal(live, 'https://example.test');
-  assert.deepEqual(comparisons.map(c => [c.id, c.generated]), [['home', true], ['later', false]]);
+  // every pair runs light and dark (both test pages have a theme prop); dark ids get "--dark"
+  assert.deepEqual(comparisons.map(c => [c.id, c.theme, c.generated]), [['home', 'light', true], ['home--dark', 'dark', false], ['later', 'light', false], ['later--dark', 'dark', false]]);
+  assert.equal(comparisons[1].design.props.theme, 'dark');
   assert.equal(comparisons[0].progress.total, 2);
   assert.equal((await fetch(`${base}/api/comparisons/later`, { headers: auth })).status, 404);
 });
 
 test('decisions and notes are written to DATA_DIR and read back', async () => {
-  assert.equal((await put({ ids: ['typography:a#0'], decision: 'fix-live', note: 'heading too small' })).status, 200);
+  assert.equal((await put({ ids: ['typography:a#0'], decision: 'keep', note: 'heading too small' })).status, 200);
   assert.ok(fs.existsSync(path.join(dataDir, 'compare', 'home.json')));
   assert.ok(!fs.existsSync(path.join(compDir, 'home', 'decisions.json')), 'local decisions file untouched when DATA_DIR is set');
   const full = await (await fetch(`${base}/api/comparisons/home`, { headers: auth })).json();
-  assert.equal(full.decisions['typography:a#0'].decision, 'fix-live');
+  assert.equal(full.decisions['typography:a#0'].decision, 'keep');
   assert.equal(full.decisions['typography:a#0'].note, 'heading too small');
-  assert.equal(full.progress['fix-live'], 1);
+  assert.equal(full.progress.keep, 1);
   assert.equal(full.progress.undecided, 1);
   // clearing the decision keeps the note; clearing both drops the entry
   await put({ ids: ['typography:a#0'], decision: null });
@@ -75,17 +77,17 @@ test('decisions and notes are written to DATA_DIR and read back', async () => {
 });
 
 test('rejects unknown decisions and bad ids', async () => {
-  assert.equal((await put({ ids: ['x'], decision: 'keep' })).status, 400);
-  assert.equal((await put({ ids: [], decision: 'ok' })).status, 400);
+  assert.equal((await put({ ids: ['x'], decision: 'fix-live' })).status, 400);
+  assert.equal((await put({ ids: [], decision: 'keep' })).status, 400);
   const bad = await fetch(`${base}/api/comparisons/..%2Fx/decisions`, { method: 'PUT', headers: { ...auth, 'content-type': 'application/json' }, body: JSON.stringify({ ids: ['a'], decision: 'ok' }) });
   assert.equal(bad.status, 400);
 });
 
 test('exports Markdown with decisions', async () => {
-  await put({ ids: ['color:b#0'], decision: 'unclear' });
+  await put({ ids: ['color:b#0'], decision: 'ignore' });
   const md = await (await fetch(`${base}/api/comparisons/home/export.md`, { headers: auth })).text();
   assert.match(md, /# Home/);
-  assert.match(md, /\| Unclear 🤷 \| medium \| color \|/);
+  assert.match(md, /\| Ignore \| medium \| color \|/);
   const all = await (await fetch(`${base}/api/export.json`, { headers: auth })).json();
   assert.equal(all.comparisons.length, 1);
 });
@@ -122,14 +124,14 @@ test('live: presence counts distinct browsers and decisions are broadcast', asyn
   await new Promise(r => setTimeout(r, 100));
   const events = await liveEvents('client=a&name=Amber%20Otter', ev => ev.some(e => e.event === 'decision'), async () => {
     await new Promise(r => setTimeout(r, 100));
-    await put({ ids: ['typography:a#0'], decision: 'fix-design' }, { 'x-client-id': 'b', 'x-client-tab': 't1', 'x-client-name': 'Teal Fox' });
+    await put({ ids: ['typography:a#0'], decision: 'ignore' }, { 'x-client-id': 'b', 'x-client-tab': 't1', 'x-client-name': 'Teal Fox' });
   });
   other.abort();
   assert.equal(events.find(e => e.event === 'presence').data.online, 2, 'two tabs of browser b + browser a = 2 people');
   const d = events.find(e => e.event === 'decision').data;
   assert.equal(d.comparison, 'home');
   assert.equal(d.title, 'Home');
-  assert.equal(d.decisions['typography:a#0'].decision, 'fix-design');
+  assert.equal(d.decisions['typography:a#0'].decision, 'ignore');
   assert.equal(d.by.name, 'Teal Fox');
   assert.equal(d.by.tab, 't1');
 });

@@ -23,7 +23,7 @@ The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER
 | `design-project/` | The exported design project (`*.dc.html` live pages, `Vecteezy *.html` standalone exports) |
 | `design-system/` | Target design-system tokens (`tokens.json` source; `tokens.css` / `tokens.md` generated views) |
 | `comparisons/pairs.json` | Which design page state is compared with which live URL |
-| `comparisons/<id>/` | One comparison's `report.json`, `design.jpg`, `live.jpg`, reviewer `decisions.json` (and a gitignored `snapshot.json`) |
+| `comparisons/<id>/`, `comparisons/<id>--dark/` | One comparison (light, dark): its `report.json`, `design.jpg`, `live.jpg`, reviewer `decisions.json` (and a gitignored `snapshot.json`) |
 | `tools/compare.mjs` | Comparison CLI: run, show, add, screenshot live pages |
 | `tools/dc.mjs` | Design-project screenshot CLI |
 | `tools/app.mjs`, `tools/server.mjs` | Express app (viewer, reports, decisions API, live collaboration) and its launcher |
@@ -34,29 +34,36 @@ The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER
 
 ## How a comparison works
 
-1. Both pages render in headless Chromium at the same width (1440). The live site gets `?skip=1`, its
+1. Every pair runs twice, **light** and **dark** (`<id>--dark`). Dark sets the design page's `theme`
+   prop and makes the browser prefer a dark color scheme, which the live site follows. A pair can set
+   `"themes": ["light"]` or a `"dark": { "design": {…}, "live": {…} }` override; pages without a `theme`
+   prop get no dark run.
+2. Both pages render in headless Chromium at the same width (1440). The live site gets `?skip=1`, its
    consent manager and ad/analytics scripts are blocked, and the Rails profiler badge is hidden. Animations,
    transitions and scrollbars are turned off on both sides.
-2. The viewport grows to the page's full height (capped at `maxHeight`, default 3000px), including design
+3. The viewport grows to the page's full height (capped at `maxHeight`, default 3000px), including design
    pages that scroll inside an inner container, so page and screen coordinates agree and nothing is hidden
    behind a scroll.
-3. Each side is snapshotted (`tools/lib/snapshot.js`): every visible piece of text, form field and
+4. Each side is snapshotted (`tools/lib/snapshot.js`): every visible piece of text, form field and
    icon-only control, with its text box, typography and the painted box around it (button, chip, input,
-   card). Hidden things (sr-only text, collapsed drawers, covered panels) are skipped.
-4. Every interactive item is hovered on both sides and its styles read before and after.
-5. Items are matched by text near where they're expected (`tools/lib/diff.mjs`), then compared:
+   card), plus **every painted box on the page** (masthead, rail buttons, bars, panels, cards), so the
+   page is compared as a whole. Hidden things (sr-only text, collapsed drawers, covered panels) are skipped.
+5. Every interactive item is hovered on both sides and its styles read before and after.
+6. Items are matched by text near where they're expected (`tools/lib/diff.mjs`), then compared:
    **typography**, **color** (text, background, gradient), **size** of the box, **shape** (radius, border,
    shadow, box present on one side only), **spacing** (gap to the next element below/right, text inset),
-   **alignment** (an element that stops lining up with the things it lined up with in the design; whole
-   regions that moved), **icon** count/size, **behavior** (hover effect, clickability, cursor), and
+   **alignment**: an element that stops lining up with the things it lined up with in the design; whole
+   regions that moved; and, across the **whole screenshot**, painted boxes whose edges lined up in the
+   design and no longer do (e.g. the masthead's top edge and the first left-rail button). Boxes are paired
+   by the text they hold, or by size and position when empty. These findings carry a guide line; **icon** count/size, **behavior** (hover effect, clickability, cursor), and
    **missing** / **extra** items.
 
 ```bash
 node tools/compare.mjs list
-node tools/compare.mjs run                 # all pairs; or: run home sign-up; --no-hover is faster
+node tools/compare.mjs run                 # all pairs, light + dark; or: run home sign-up; --theme dark; --no-hover is faster
 node tools/compare.mjs show home --severity medium
 node tools/compare.mjs add show --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
-node tools/compare.mjs live /free-photos/dog --full
+node tools/compare.mjs live /free-photos/dog --full --theme dark
 ```
 
 Re-running keeps decisions: finding ids are stable (`<category>:<text>#<occurrence>`).
@@ -66,15 +73,20 @@ Re-running keeps decisions: finding ids are stable (`<category>:<text>#<occurren
 - **Home** (`/`): each comparison with design/live thumbnails, finding counts by severity and category, and
   decision progress. The design pages are listed below (collapsed) with links to the page viewer.
 - **Comparison** (`/compare.html?id=home`): findings on the left, the two screenshots on the right.
+  - **☀ Light / ☾ Dark** switches between the two versions of the comparison.
   - Views: **Side by side** (one scroll for both), **Overlay** (slider sets live opacity), **Difference**
     (identical pixels are black), **Swipe** (slider moves the split). Boxes outline every finding shown
-    (magenta design, blue live); click one to select its finding. **Fit** / **100%** zoom.
+    (magenta design, blue live); click one to select its finding. Alignment findings draw green **guide
+    lines** across the whole screenshot at the edge that should line up (one line in the design, one per
+    element on live, so the gap shows), with the partner box dashed.
+  - **Zoom**: hold **Z** and click to zoom in at that spot, **⌘ + Z + click** (Ctrl + Z + click elsewhere)
+    to zoom out, or use − / Fit / + / 1:1.
   - Each finding shows design and live crops, the property rows (design → live, with swatches), links to
     the design page with the element marked and to its source line, and the decision buttons:
-    **Fix live**, **Update design**, **Fine**, **🤷**, plus a note (✎).
+    **Keep** (a real difference) or **Ignore** (noise), plus a note (✎). **➜ Find** scrolls the screenshots to the difference and points at it with a big bouncing arrow on each side.
   - Filter by category (click; ⌘/shift-click for several), severity, decision status and text. **Set all
     shown…** decides every finding in the current filter. **Export** downloads Markdown (`.json` too).
-  - Keys: `j`/`k` move, `1` fix live, `2` update design, `3` fine, `4` 🤷, `0` clear, `n` note, `m` cycle
+  - Keys: `j`/`k` move, `1` keep, `2` ignore, `0` clear, `f` find (big arrow on the selected difference), `n` note, `m` cycle
     view, `[`/`]` slider, `b` toggle all boxes, `/` search.
 - **Live collaboration**: each browser gets a random name (e.g. "Teal Fox") and streams updates from
   `/api/live` (server-sent events). A yellow **N online** pill appears when more than one person is on the

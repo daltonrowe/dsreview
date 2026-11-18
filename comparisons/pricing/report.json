@@ -1,7 +1,9 @@
 {
  "id": "pricing",
+ "baseId": "pricing",
+ "theme": "light",
  "label": "Join Pro (pricing)",
- "generatedAt": "2026-11-18T11:39:33.432Z",
+ "generatedAt": "2026-11-18T11:58:14.865Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
  "hover": true,
  "design": {
@@ -5727,10 +5729,14 @@
    }
   }
  ],
+ "boxPairs": [],
  "stats": {
   "designItems": 60,
   "liveItems": 114,
   "matched": 1,
+  "designBoxes": 13,
+  "liveBoxes": 26,
+  "matchedBoxes": 0,
   "missing": 51,
   "extra": 113,
   "findings": 164,

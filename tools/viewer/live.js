@@ -123,6 +123,6 @@ export function startLive() {
 
 // Default toast text for a decision event.
 export function describeDecision(d) {
-  const verb = { 'fix-live': 'marked “fix live” on', 'fix-design': 'marked “update design” on', ok: 'marked fine', unclear: 'shrugged 🤷 at' }[d.decision] || (d.decision === null ? 'cleared' : 'noted');
+  const verb = { keep: 'kept', ignore: 'ignored' }[d.decision] || (d.decision === null ? 'cleared' : 'noted');
   return `${d.by?.name || 'Someone'} ${verb} ${d.ids.length} finding${d.ids.length === 1 ? '' : 's'} in ${d.title}`;
 }

@@ -5,11 +5,11 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, resolvePage, startServer, openPage, settle, splitProps, jsonish, coerce } from './lib/render.mjs';
-import { SNAPSHOT, DEFAULT_BASE, openLive, fitViewport, liveUrl } from './lib/live.mjs';
+import { SNAPSHOT, openLive, fitViewport, liveUrl } from './lib/live.mjs';
+import { DIR, DEFAULT_BASE, readConfig, expandPairs } from './lib/pairs.mjs';
 import { compareSnapshots, CATEGORIES } from './lib/diff.mjs';
 import { tplSource } from './lib/source.mjs';
 
-export const DIR = path.join(ROOT, 'comparisons');
 const PAIRS = path.join(DIR, 'pairs.json');
 
 const HELP = `
@@ -18,10 +18,11 @@ compare.mjs: compare design-project pages with the live site (alignment, size, c
   node tools/compare.mjs list
       Configured comparisons (comparisons/pairs.json) and whether each has a report.
 
-  node tools/compare.mjs run [<id> ...] [--no-hover] [--base URL]
+  node tools/compare.mjs run [<id> ...] [--theme light|dark] [--no-hover] [--base URL]
       Capture the design page and the live page at the same width, match their elements and write
       comparisons/<id>/report.json + design.jpg + live.jpg. No ids = all comparisons.
-      --no-hover skips the hover probe (faster).
+      Every pair runs in light and dark (dark: the page's theme prop + prefers-color-scheme: dark on
+      live; its id is <id>--dark). --theme runs one. --no-hover skips the hover probe (faster).
 
   node tools/compare.mjs show <id> [--category c[,c]] [--severity high|medium|low] [--limit N]
       Print a report's findings as text.
@@ -31,7 +32,7 @@ compare.mjs: compare design-project pages with the live site (alignment, size, c
       Add (or replace) a comparison in comparisons/pairs.json. Design options are the same as
       tools/dc.mjs; --live-do steps run on the live page (same syntax).
 
-  node tools/compare.mjs live <path> [--do step] [--full] [--out file.png] [--width N]
+  node tools/compare.mjs live <path> [--do step] [--theme dark] [--full] [--out file.png] [--width N]
       Screenshot a live page (consent wall and profiler hidden). Prints the PNG path.
 
 Live site: ${DEFAULT_BASE} (override with --base or LIVE_BASE; ?skip=1 is added to every URL).
@@ -56,10 +57,6 @@ function parseArgs(argv) {
   return { cmd: pos[0], args: pos.slice(1), o };
 }
 
-export function readPairs() {
-  const cfg = JSON.parse(fs.readFileSync(PAIRS, 'utf8'));
-  return { base: DEFAULT_BASE, width: 1440, height: 900, maxHeight: 3000, ...cfg };
-}
 
 // ---------- capture one side ----------
 async function probeHover(page, items, log) {
@@ -104,7 +101,7 @@ export async function runPair(pair, cfg, { hover = true, browser, designBase }) 
   fs.mkdirSync(out, { recursive: true });
   const logD = [], logL = [];
   const file = resolvePage(pair.design.page);
-  const ctxOpts = { viewport: { width, height }, reducedMotion: 'reduce', deviceScaleFactor: 1 };
+  const ctxOpts = { viewport: { width, height }, reducedMotion: 'reduce', deviceScaleFactor: 1, colorScheme: pair.theme === 'dark' ? 'dark' : 'light' };
 
   const dctx = await browser.newContext(ctxOpts);
   await dctx.addInitScript({ path: SNAPSHOT });
@@ -128,7 +125,7 @@ export async function runPair(pair, cfg, { hover = true, browser, designBase }) 
     if (hit) f.design.source = { file: `${w.owner}.dc.html`, line: hit.line, col: hit.col };
   }
   const report = {
-    id: pair.id, label: pair.label || pair.id, generatedAt: new Date().toISOString(), base: cfg.base, hover,
+    id: pair.id, baseId: pair.baseId, theme: pair.theme, label: pair.label || pair.id, generatedAt: new Date().toISOString(), base: cfg.base, hover,
     design: { ...pair.design, page: file, view: viewerUrl({ ...pair.design, page: file }), width, height: design.height, shot: 'design.jpg', items: design.items.length, log: [...new Set(logD)] },
     live: { ...pair.live, url: liveUrl(cfg.base, pair.live.path), finalUrl, width, height: live.height, shot: 'live.jpg', items: live.items.length, log: [...new Set(logL)] },
     ...result,
@@ -163,14 +160,15 @@ function printFindings(r, o) {
 async function main() {
   const { cmd, args, o } = parseArgs(process.argv.slice(2));
   if (!cmd || cmd === 'help' || cmd === '--help') { console.log(HELP); return; }
-  const cfg = readPairs();
+  const cfg = readConfig();
+  const all = expandPairs(cfg).filter(p => !o.theme || p.theme === o.theme);
   if (o.base || process.env.LIVE_BASE) cfg.base = (o.base || process.env.LIVE_BASE).replace(/\/$/, '');
 
   if (cmd === 'list') {
-    for (const p of cfg.pairs) {
+    for (const p of all) {
       const rp = path.join(DIR, p.id, 'report.json');
       const r = fs.existsSync(rp) ? JSON.parse(fs.readFileSync(rp, 'utf8')) : null;
-      console.log(`${p.id.padEnd(14)} ${p.label || ''}\n  design: ${p.design.page} ${JSON.stringify({ props: p.design.props || {}, state: p.design.state || {}, do: p.design.do || [] })}\n  live:   ${p.live.path}${p.live.do?.length ? ` do ${JSON.stringify(p.live.do)}` : ''}\n  ${r ? `report ${r.generatedAt}: ${r.stats.findings} findings` : 'no report yet'}`);
+      console.log(`${p.id.padEnd(16)} ${p.label || ''} (${p.theme})\n  design: ${p.design.page} ${JSON.stringify({ props: p.design.props || {}, state: p.design.state || {}, do: p.design.do || [] })}\n  live:   ${p.live.path}${p.live.do?.length ? ` do ${JSON.stringify(p.live.do)}` : ''}\n  ${r ? `report ${r.generatedAt}: ${r.stats.findings} findings` : 'no report yet'}`);
     }
     return;
   }
@@ -200,12 +198,12 @@ async function main() {
   try {
     if (cmd === 'live') {
       const width = Number(o.width) || cfg.width;
-      const ctx = await browser.newContext({ viewport: { width, height: cfg.height }, reducedMotion: 'reduce' });
+      const ctx = await browser.newContext({ viewport: { width, height: cfg.height }, reducedMotion: 'reduce', colorScheme: o.theme === 'dark' ? 'dark' : 'light' });
       const log = [];
       const page = await openLive(ctx, cfg.base, args[0] || '/', { do: o.do }, log);
       if (o.full) await fitViewport(page, Number(o.maxHeight) || 8000);
       await settle(page);
-      const out = o.out ? path.resolve(o.out) : path.join(ROOT, 'screenshots', `live__${(args[0] || '/').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '') || 'home'}${o.full ? '__full' : ''}.png`);
+      const out = o.out ? path.resolve(o.out) : path.join(ROOT, 'screenshots', `live__${(args[0] || '/').replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '') || 'home'}${o.theme === 'dark' ? '__dark' : ''}${o.full ? '__full' : ''}.png`);
       fs.mkdirSync(path.dirname(out), { recursive: true });
       await page.screenshot({ path: out });
       console.log(path.relative(process.cwd(), out));
@@ -213,13 +211,13 @@ async function main() {
       return;
     }
     if (cmd === 'run') {
-      const ids = args.length ? args : cfg.pairs.map(p => p.id);
+      // an id names one comparison, or a pair's id runs all its themes
+      const ids = args.length ? args.flatMap(a => { const hit = all.filter(p => p.id === a || p.baseId === a).map(p => p.id); if (!hit.length) throw new Error(`unknown comparison "${a}". Known: ${all.map(p => p.id).join(', ')}`); return hit; }) : all.map(p => p.id);
       const srv = await startServer();
       const designBase = `http://127.0.0.1:${srv.address().port}`;
       try {
         for (const id of ids) {
-          const pair = cfg.pairs.find(p => p.id === id);
-          if (!pair) throw new Error(`unknown comparison "${id}". Known: ${cfg.pairs.map(p => p.id).join(', ')}`);
+          const pair = all.find(p => p.id === id);
           const t = Date.now();
           const r = await runPair(pair, cfg, { hover: !o.noHover, browser, designBase });
           console.log(`${summary(r)}  (${Math.round((Date.now() - t) / 1000)}s)`);

@@ -2,7 +2,7 @@
   --bg: #f6f6f4; --panel: #ffffff; --panel-2: #f0f0ed; --line: #e3e3de; --line-2: #d2d2cc;
   --text: #1c1c1a; --muted: #6b6b66; --faint: #9a9a94;
   --accent: #ff6a00; --accent-ink: #fff;
-  --fix-live: #d93636; --fix-live-bg: #fbe9e9; --fix-design: #2f6bff; --fix-design-bg: #e6edff; --ok: #1f9d55; --ok-bg: #e5f6ec; --unclear: #b45a00; --unclear-bg: #fff1e0;
+  --keep: #1f9d55; --keep-bg: #e5f6ec; --ignore: #6b7280; --ignore-bg: #eceef1;
   --design: #e0179f; --live: #0a8fd6; --high: #d93636; --medium: #e08a00; --low: #9a9a94;
   --hl: #ff2bd6; --focus: #2f6bff;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -15,7 +15,7 @@
   :root:not([data-theme="light"]) {
     --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
     --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-    --fix-live: #f06a6a; --fix-live-bg: #3a1d1d; --fix-design: #7aa2ff; --fix-design-bg: #1b2440; --ok: #4cc584; --ok-bg: #183324; --unclear: #ffb366; --unclear-bg: #3a2a14; --design: #ff5cc8; --live: #3cb6ff;
+    --keep: #4cc584; --keep-bg: #183324; --ignore: #9ca3af; --ignore-bg: #26282c; --design: #ff5cc8; --live: #3cb6ff;
     --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
     color-scheme: dark;
   }
@@ -23,7 +23,7 @@
 :root[data-theme="dark"] {
   --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
   --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-  --fix-live: #f06a6a; --fix-live-bg: #3a1d1d; --fix-design: #7aa2ff; --fix-design-bg: #1b2440; --ok: #4cc584; --ok-bg: #183324; --unclear: #ffb366; --unclear-bg: #3a2a14; --design: #ff5cc8; --live: #3cb6ff;
+  --keep: #4cc584; --keep-bg: #183324; --ignore: #9ca3af; --ignore-bg: #26282c; --design: #ff5cc8; --live: #3cb6ff;
   --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
   color-scheme: dark;
 }
@@ -56,15 +56,12 @@ input:focus, select:focus { outline: 2px solid var(--focus); outline-offset: -1p
 .seg button:hover { color: var(--text); background: var(--panel-2); }
 .seg button[aria-pressed="true"] { color: var(--text); background: var(--panel-2); font-weight: 600; }
 .seg button:disabled { opacity: .35; cursor: not-allowed; }
-.seg button.fix-live[aria-pressed="true"] { background: var(--fix-live-bg); color: var(--fix-live); }
-.seg button.fix-design[aria-pressed="true"] { background: var(--fix-design-bg); color: var(--fix-design); }
-.seg button.ok[aria-pressed="true"] { background: var(--ok-bg); color: var(--ok); }
-.seg button.unclear[aria-pressed="true"] { background: var(--unclear-bg); color: var(--unclear); }
+.seg button.keep[aria-pressed="true"] { background: var(--keep-bg); color: var(--keep); }
+.seg button.ignore[aria-pressed="true"] { background: var(--ignore-bg); color: var(--ignore); }
 
 .progress { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--panel-2); min-width: 120px; }
 .progress span { display: block; height: 100%; }
-.progress .fix-live, .dot.fix-live { background: var(--fix-live); } .progress .fix-design, .dot.fix-design { background: var(--fix-design); }
-.progress .ok, .dot.ok { background: var(--ok); } .progress .unclear, .dot.unclear { background: var(--unclear); }
+.progress .keep, .dot.keep { background: var(--keep); } .progress .ignore, .dot.ignore { background: var(--ignore); }
 .legend { display: flex; gap: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
 .legend b { font-weight: 600; color: var(--text); }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: 1px; }

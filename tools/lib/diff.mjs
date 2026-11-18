@@ -82,11 +82,12 @@ export function matchItems(D, L) {
     if (nb.length < 2) return Math.abs(a.dy) < 1000;
     return Math.abs(a.dy - med(nb.map(x => x.dy))) < 300 && Math.abs(a.dx - med(nb.map(x => x.dx))) < 300;
   });
-  const expected = d => {
-    const nb = nearest(d.textBox, anchors, 5);
-    return { ...d.textBox, x: d.textBox.x + med(nb.map(x => x.dx)), y: d.textBox.y + med(nb.map(x => x.dy)) };
+  // where a design box should be on the live page
+  const expected = b => {
+    const nb = nearest(b, anchors, 5);
+    return { ...b, x: b.x + med(nb.map(x => x.dx)), y: b.y + med(nb.map(x => x.dy)) };
   };
-  const exp = new Map(D.map(d => [d.n, expected(d)]));
+  const exp = new Map(D.map(d => [d.n, expected(d.textBox)]));
 
   const greedy = cands => {
     cands.sort((a, b) => a.cost - b.cost);
@@ -116,7 +117,121 @@ export function matchItems(D, L) {
     }
   }
   greedy(fuzzy);
-  return { pairs, unmatchedD: D.filter(d => !usedD.has(d.n)), unmatchedL: L.filter(l => !usedL.has(l.n)) };
+  return { pairs, unmatchedD: D.filter(d => !usedD.has(d.n)), unmatchedL: L.filter(l => !usedL.has(l.n)), expected };
+}
+
+// ---------- layout boxes (whole page) ----------
+const contains = (o, b) => { const c = center(b); return c.x >= o.x && c.x <= o.x + o.w && c.y >= o.y && c.y <= o.y + o.h && o.w * o.h >= b.w * b.h; };
+// Pair painted boxes across the pages: boxes holding the same matched text are the same box; empty
+// boxes (icons' pills, dividers, decorative panels) pair by size near where they're expected.
+export function matchBoxes(Db, Lb, pairs, D, L, expected) {
+  const d2l = new Map(pairs.map(p => [p.d.n, p.l.n]));
+  const matchedL = new Set(pairs.map(p => p.l.n));
+  const inside = (boxes, items, keep) => boxes.map(b => new Set(items.filter(it => keep(it.n) && contains(b.box, it.textBox)).map(it => it.n)));
+  const inD = inside(Db, D, n => d2l.has(n)).map(set => new Set([...set].map(n => d2l.get(n))));
+  const inL = inside(Lb, L, n => matchedL.has(n));
+  const cands = [];
+  for (let i = 0; i < Db.length; i++) {
+    const a = Db[i].box, ex = expected(a);
+    for (let j = 0; j < Lb.length; j++) {
+      const b = Lb[j].box;
+      const sr = Math.max(a.w / b.w, b.w / a.w) + Math.max(a.h / b.h, b.h / a.h) - 2; // 0 = same size
+      if (inD[i].size || inL[j].size) {
+        if (!inD[i].size || !inL[j].size) continue;
+        let inter = 0;
+        for (const n of inD[i]) if (inL[j].has(n)) inter++;
+        const jac = inter / (inD[i].size + inL[j].size - inter);
+        if (jac < 0.5) continue;
+        cands.push({ i, j, cost: (1 - jac) * 10 + Math.min(sr, 5) + dist(ex, b) / 400 });
+      } else {
+        if (sr > 0.35) continue;
+        const dd = dist(ex, b);
+        if (dd > 60) continue;
+        cands.push({ i, j, cost: 20 + sr * 10 + dd / 10 });
+      }
+    }
+  }
+  cands.sort((x, y) => x.cost - y.cost);
+  const usedD = new Set(), usedL = new Set(), out = [];
+  for (const c of cands) {
+    if (usedD.has(c.i) || usedL.has(c.j)) continue;
+    usedD.add(c.i); usedL.add(c.j);
+    out.push({ d: Db[c.i], l: Lb[c.j], items: [...inD[c.i]] });
+  }
+  return out;
+}
+
+// What to call a box: its screen label, else the text it holds, else its shape.
+function boxName(bp, D, pairs, biggest) {
+  if (bp.d.label) return bp.d.label;
+  // the biggest box of a labelled region is that region (the masthead's gradient panel is "Hero masthead")
+  if (bp.d.section && biggest.get(bp.d.section) === bp) return bp.d.section;
+  const l2d = new Map(pairs.map(p => [p.l.n, p.d]));
+  // name it after its most prominent text: largest type, then longest
+  const texts = bp.items.map(n => l2d.get(n)).filter(Boolean).sort((a, b) => b.style.fontSize - a.style.fontSize || b.text.length - a.text.length);
+  if (texts.length) return `box around “${short(texts[0].text)}”`;
+  return `${bp.d.tag} ${Math.round(bp.d.box.w)}×${Math.round(bp.d.box.h)}`;
+}
+
+// Edges that line up anywhere on the page in the design (the masthead's top with the first rail
+// button, a card column with the search bar…) and no longer do on live. Per box and edge: flagged when
+// it breaks most of its design alignments, so the box that moved is named, not everything around it.
+const BOX_EDGES = ['left', 'right', 'top', 'bottom'];
+function layoutAlignment(bpairs, D, pairs) {
+  const res = [];
+  const biggest = new Map();
+  for (const bp of bpairs) { const k = bp.d.section, cur = biggest.get(k); if (k && (!cur || bp.d.box.w * bp.d.box.h > cur.d.box.w * cur.d.box.h)) biggest.set(k, bp); }
+  const boxName_ = bp => boxName(bp, D, pairs, biggest);
+  const N = bpairs.length;
+  const nested = (a, b) => (a.x <= b.x && a.y <= b.y && a.x + a.w >= b.x + b.w && a.y + a.h >= b.y + b.h) || (b.x <= a.x && b.y <= a.y && b.x + b.w >= a.x + a.w && b.y + b.h >= a.y + a.h);
+  const per = new Map(); // `${i}:${edge}` -> { kept, broken: [{ j, off }] }
+  for (const edge of BOX_EDGES) {
+    const f = EDGES[edge];
+    for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+      const A = bpairs[i], B = bpairs[j];
+      if (Math.abs(f(A.d.box) - f(B.d.box)) > 1) continue;
+      // a box flush inside its parent shares an edge by construction (no padding): not a design choice
+      if (nested(A.d.box, B.d.box)) continue;
+      const off = f(A.l.box) - f(B.l.box), ok = Math.abs(off) <= 2;
+      for (const [x, y, o] of [[i, j, off], [j, i, -off]]) {
+        const k = `${x}:${edge}`;
+        if (!per.has(k)) per.set(k, { kept: 0, broken: [] });
+        if (ok) per.get(k).kept++; else per.get(k).broken.push({ j: y, off: o });
+      }
+    }
+  }
+  const movers = new Map();
+  for (const [k, v] of per) if (v.broken.length && v.broken.length >= 2 * v.kept) movers.set(k, v);
+  const done = new Set();
+  for (const [k, v] of movers) {
+    const [i, edge] = [Number(k.split(':')[0]), k.split(':')[1]];
+    // a mutual pair (each the other's only broken partner) is one finding, named after the bigger box
+    if (v.broken.length === 1) {
+      const j = v.broken[0].j, other = movers.get(`${j}:${edge}`);
+      if (other && other.broken.length === 1 && other.broken[0].j === i) {
+        const a = bpairs[i].d.box, b = bpairs[j].d.box;
+        if (a.w * a.h < b.w * b.h || done.has(`${j}:${i}:${edge}`)) continue;
+        done.add(`${i}:${j}:${edge}`);
+      }
+    }
+    const offs = v.broken.map(b => b.off).sort((a, b) => a - b);
+    const med = offs[Math.floor(offs.length / 2)], dd = Math.abs(med);
+    const A = bpairs[i], B = bpairs[v.broken[0].j];
+    const isX = edge === 'left' || edge === 'right', f = EDGES[edge];
+    const nameA = boxName_(A), nameB = boxName_(B);
+    res.push({
+      key: `${normKey(nameA)}:${edge}`, name: nameA, A, B, edge,
+      row: {
+        prop: `${edge} edge`,
+        design: `lines up with ${nameB}${B.d.section && B.d.section !== A.d.section ? ` (${B.d.section})` : ''}${v.broken.length > 1 ? ` +${v.broken.length - 1}` : ''} at ${isX ? 'x' : 'y'}=${r1(f(A.d.box))}`,
+        live: `off by ${r1(med)}px ${isX ? (med > 0 ? '→' : '←') : (med > 0 ? '↓' : '↑')} (${r1(f(A.l.box))} vs ${r1(f(B.l.box))})`,
+        sev: dd >= 8 ? 'high' : dd >= 4 ? 'medium' : 'low',
+      },
+      guide: { axis: isX ? 'x' : 'y', design: [f(A.d.box)], live: [f(A.l.box), f(B.l.box)] },
+      related: v.broken.slice(0, 6).map(b => ({ text: boxName_(bpairs[b.j]), design: bpairs[b.j].d.box, live: bpairs[b.j].l.box })),
+    });
+  }
+  return res;
 }
 
 // The box that represents an item visually: its container when that container is "its own"
@@ -301,6 +416,8 @@ function alignment(pairs, outD, outL) {
           prop: `${edge} edge`, design: `aligned with “${short(ref.d.text)}”${broken.length > 1 ? ` +${broken.length - 1}` : ''}`,
           live: `off by ${r1(med)}px ${isX ? (med > 0 ? '→' : '←') : (med > 0 ? '↓' : '↑')}`,
           sev: dd >= 8 ? 'high' : dd >= 4 ? 'medium' : 'low', ref: ref.d.n, dd,
+          guide: { axis: isX ? 'x' : 'y', design: [f(A.bd)], live: [f(A.bl), f(P[broken[0].j].bl)] },
+          related: broken.slice(0, 6).map(b => ({ text: P[b.j].p.d.text, design: P[b.j].bd, live: P[b.j].bl })),
         });
       }
     }
@@ -354,7 +471,8 @@ const short = s => (s.length > 28 ? s.slice(0, 27) + '…' : s);
 // ---------- top level ----------
 export function compareSnapshots(design, live) {
   const D = design.items, L = live.items;
-  const { pairs, unmatchedD, unmatchedL } = matchItems(D, L);
+  const { pairs, unmatchedD, unmatchedL, expected } = matchItems(D, L);
+  const bpairs = matchBoxes(design.boxes || [], live.boxes || [], pairs, D, L, expected);
   const outD = outerBoxes(D), outL = outerBoxes(L);
   const align = alignment(pairs, outD, outL);
   const gaps = spacing(pairs, outD, outL, D, L);
@@ -378,7 +496,10 @@ export function compareSnapshots(design, live) {
     push('size', p.d, size(p.d, p.l), sides);
     push('shape', p.d, shape(p.d, p.l), sides);
     push('spacing', p.d, [...inset(p.d, p.l), ...(gaps.get(i) || [])], sides);
-    push('alignment', p.d, align.get(i) || [], sides);
+    const al = align.get(i) || [];
+    // the most telling misalignment draws its guide line and partners in the viewer
+    const top = [...al].sort((a, b) => b.dd - a.dd)[0];
+    push('alignment', p.d, al.map(({ guide, related, ...r }) => r), top ? { ...sides, guide: top.guide, related: top.related } : sides);
     push('icon', p.d, icons(p.d, p.l), sides);
     push('behavior', p.d, behavior(p.d, p.l, design.hover?.[p.d.n], live.hover?.[p.l.n]), sides);
   });
@@ -399,6 +520,13 @@ export function compareSnapshots(design, live) {
     findings.push({ id: `alignment:section:${normKey(name)}`, category: 'alignment', severity: maxSev(rows.map(r => r.sev)), text: `${name} (${ps.length} matched elements)`, section: name, props: rows, region: true,
       design: { n: null, textBox: bd, box: bd, section: name, where: null }, live: { n: null, textBox: bl, box: bl, section: name, where: null } });
   }
+  // Whole-page alignment of painted boxes, across regions.
+  for (const a of layoutAlignment(bpairs, D, pairs)) {
+    const b = a.A;
+    findings.push({ id: `alignment:layout:${a.key}`, category: 'alignment', severity: a.row.sev, text: a.name, section: b.d.section, props: [a.row], layout: true,
+      design: { n: null, textBox: b.d.box, box: b.d.box, section: b.d.section, where: null }, live: { n: null, textBox: b.l.box, box: b.l.box, section: b.l.section, where: null },
+      guide: a.guide, related: a.related });
+  }
   const notable = it => it.interactive || it.style.fontSize >= 18 || it.style.fontWeight >= 600;
   for (const it of unmatchedD) {
     if (it.kind === 'image') continue;
@@ -418,6 +546,7 @@ export function compareSnapshots(design, live) {
   return {
     pairs: pairs.map(p => ({ design: p.d.n, live: p.l.n, how: p.how })),
     findings,
-    stats: { designItems: D.length, liveItems: L.length, matched: pairs.length, missing: byCategory.missing, extra: byCategory.extra, findings: findings.length, byCategory, bySeverity },
+    boxPairs: bpairs.map(b => ({ design: b.d.b, live: b.l.b })),
+    stats: { designItems: D.length, liveItems: L.length, matched: pairs.length, designBoxes: (design.boxes || []).length, liveBoxes: (live.boxes || []).length, matchedBoxes: bpairs.length, missing: byCategory.missing, extra: byCategory.extra, findings: findings.length, byCategory, bySeverity },
   };
 }
