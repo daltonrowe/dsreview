@@ -5,24 +5,25 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, resolvePage, startServer, openPage, settle, splitProps, jsonish, coerce } from './lib/render.mjs';
-import { SNAPSHOT, openLive, fitViewport, liveUrl } from './lib/live.mjs';
+import { openLive, fitViewport, liveUrl } from './lib/live.mjs';
 import { DIR, DEFAULT_BASE, readConfig, expandPairs } from './lib/pairs.mjs';
-import { compareSnapshots, CATEGORIES } from './lib/diff.mjs';
-import { tplSource } from './lib/source.mjs';
+import { decodePng, segment } from './lib/vision.mjs';
+import { compareImages, CATEGORIES } from './lib/pixeldiff.mjs';
 
 const PAIRS = path.join(DIR, 'pairs.json');
 
 const HELP = `
-compare.mjs: compare design-project pages with the live site (alignment, size, color, type, behavior)
+compare.mjs: compare screenshots of design-project pages and the live site, as a designer would:
+pixels only (no DOM, no CSS): alignment, size, color, type, shape, spacing, missing/extra
 
   node tools/compare.mjs list
       Configured comparisons (comparisons/pairs.json) and whether each has a report.
 
-  node tools/compare.mjs run [<id> ...] [--theme light|dark] [--no-hover] [--base URL]
-      Capture the design page and the live page at the same width, match their elements and write
+  node tools/compare.mjs run [<id> ...] [--theme light|dark] [--base URL]
+      Capture the design page and the live page at the same width, find the visual elements in each screenshot (pixels only), pair them and write
       comparisons/<id>/report.json + design.jpg + live.jpg. No ids = all comparisons.
       Every pair runs in light and dark (dark: the page's theme prop + prefers-color-scheme: dark on
-      live; its id is <id>--dark). --theme runs one. --no-hover skips the hover probe (faster).
+      live; its id is <id>--dark). --theme runs one.
 
   node tools/compare.mjs show <id> [--category c[,c]] [--severity high|medium|low] [--limit N]
       Print a report's findings as text.
@@ -59,32 +60,14 @@ function parseArgs(argv) {
 
 
 // ---------- capture one side ----------
-async function probeHover(page, items, log) {
-  const ns = items.filter(i => i.interactive).map(i => i.n).slice(0, 250);
-  const vp = page.viewportSize();
-  await page.mouse.move(vp.width - 1, 1);
-  const before = await page.evaluate(ns => Object.fromEntries(ns.map(n => [n, window.__cmp.hoverState(n)])), ns);
-  const out = {};
-  let failed = 0;
-  for (const n of ns) {
-    try {
-      await page.locator(`[data-cmp="${n}"]`).first().hover({ timeout: 1500, force: true });
-      await page.waitForTimeout(40);
-      out[n] = { before: before[n], after: await page.evaluate(n => window.__cmp.hoverState(n), n) };
-    } catch { failed++; }
-  }
-  await page.mouse.move(vp.width - 1, 1);
-  if (failed) log.push(`hover probe: ${failed} of ${ns.length} elements could not be hovered`);
-  return out;
-}
-
-async function capture(page, maxHeight, shotPath, hover, log) {
+// The browser only renders the page; everything after the screenshot works on its pixels.
+async function capture(page, maxHeight, shotPath) {
   const height = await fitViewport(page, maxHeight);
-  const snap = await page.evaluate(m => window.__cmp.snapshot({ maxHeight: m }), maxHeight);
+  const png = await page.screenshot({ type: 'png', animations: 'disabled', caret: 'hide' });
   await page.screenshot({ path: shotPath, type: 'jpeg', quality: 82, animations: 'disabled', caret: 'hide' });
-  snap.height = height;
-  if (hover) snap.hover = await probeHover(page, snap.items, log);
-  return snap;
+  const seg = segment(decodePng(png));
+  seg.height = height;
+  return seg;
 }
 
 const viewerUrl = d => {
@@ -95,7 +78,7 @@ const viewerUrl = d => {
   return `view.html?${q}`;
 };
 
-export async function runPair(pair, cfg, { hover = true, browser, designBase }) {
+export async function runPair(pair, cfg, { browser, designBase }) {
   const width = pair.width || cfg.width, height = pair.height || cfg.height, maxHeight = pair.maxHeight || cfg.maxHeight;
   const out = path.join(DIR, pair.id);
   fs.mkdirSync(out, { recursive: true });
@@ -104,42 +87,34 @@ export async function runPair(pair, cfg, { hover = true, browser, designBase }) 
   const ctxOpts = { viewport: { width, height }, reducedMotion: 'reduce', deviceScaleFactor: 1, colorScheme: pair.theme === 'dark' ? 'dark' : 'light' };
 
   const dctx = await browser.newContext(ctxOpts);
-  await dctx.addInitScript({ path: SNAPSHOT });
   const dpage = await openPage(dctx, designBase, file, { props: { ...pair.design.props }, state: { ...pair.design.state }, do: [...(pair.design.do || [])] }, logD);
-  const design = await capture(dpage, maxHeight, path.join(out, 'design.jpg'), hover, logD);
+  const design = await capture(dpage, maxHeight, path.join(out, 'design.jpg'));
   await dctx.close();
 
   const lctx = await browser.newContext(ctxOpts);
   const lpage = await openLive(lctx, cfg.base, pair.live.path, { do: pair.live.do || [] }, logL);
   const finalUrl = lpage.url();
-  const live = await capture(lpage, maxHeight, path.join(out, 'live.jpg'), hover, logL);
+  const live = await capture(lpage, maxHeight, path.join(out, 'live.jpg'));
   await lctx.close();
 
-  const result = compareSnapshots(design, live);
-  // design element -> source line (owner is the component name; its file is <owner>.dc.html)
-  for (const f of result.findings) {
-    const w = f.design?.where;
-    if (!w) continue;
-    const src = path.join(ROOT, 'design-project', `${w.owner}.dc.html`);
-    const hit = fs.existsSync(src) && tplSource(src, w.tpl);
-    if (hit) f.design.source = { file: `${w.owner}.dc.html`, line: hit.line, col: hit.col };
-  }
+  const result = compareImages(design, live);
   const report = {
-    id: pair.id, baseId: pair.baseId, theme: pair.theme, label: pair.label || pair.id, generatedAt: new Date().toISOString(), base: cfg.base, hover,
-    design: { ...pair.design, page: file, view: viewerUrl({ ...pair.design, page: file }), width, height: design.height, shot: 'design.jpg', items: design.items.length, log: [...new Set(logD)] },
-    live: { ...pair.live, url: liveUrl(cfg.base, pair.live.path), finalUrl, width, height: live.height, shot: 'live.jpg', items: live.items.length, log: [...new Set(logL)] },
+    id: pair.id, baseId: pair.baseId, theme: pair.theme, label: pair.label || pair.id, generatedAt: new Date().toISOString(), base: cfg.base, method: 'screenshots',
+    design: { ...pair.design, page: file, view: viewerUrl({ ...pair.design, page: file }), width, height: design.height, shot: 'design.jpg', items: design.blobs.length, background: design.background, log: [...new Set(logD)] },
+    live: { ...pair.live, url: liveUrl(cfg.base, pair.live.path), finalUrl, width, height: live.height, shot: 'live.jpg', items: live.blobs.length, background: live.background, log: [...new Set(logL)] },
     ...result,
   };
   fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 1) + '\n');
-  // raw snapshots, for debugging the matcher (not served)
-  fs.writeFileSync(path.join(out, 'snapshot.json'), JSON.stringify({ design, live }) + '\n');
+  // the elements found in each screenshot, for debugging the vision (gitignored; signatures dropped)
+  const strip = sg => ({ ...sg, blobs: sg.blobs.map(({ sig, ...b }) => b) });
+  fs.writeFileSync(path.join(out, 'snapshot.json'), JSON.stringify({ design: strip(design), live: strip(live) }) + '\n');
   return report;
 }
 
 function summary(r) {
   const s = r.stats;
   const cats = CATEGORIES.filter(c => s.byCategory[c]).map(c => `${c} ${s.byCategory[c]}`).join(', ');
-  return `${r.id}: ${s.matched} matched (${s.designItems} design / ${s.liveItems} live items) · ${s.findings} findings [high ${s.bySeverity.high}, medium ${s.bySeverity.medium}, low ${s.bySeverity.low}] · ${cats}`;
+  return `${r.id}: ${s.matched} matched (${s.designItems} design / ${s.liveItems} live elements) · ${s.findings} findings [high ${s.bySeverity.high}, medium ${s.bySeverity.medium}, low ${s.bySeverity.low}] · ${cats}`;
 }
 
 function printFindings(r, o) {
@@ -219,7 +194,7 @@ async function main() {
         for (const id of ids) {
           const pair = all.find(p => p.id === id);
           const t = Date.now();
-          const r = await runPair(pair, cfg, { hover: !o.noHover, browser, designBase });
+          const r = await runPair(pair, cfg, { browser, designBase });
           console.log(`${summary(r)}  (${Math.round((Date.now() - t) / 1000)}s)`);
           for (const l of [...r.design.log.map(x => 'design ' + x), ...r.live.log.map(x => 'live ' + x)].slice(0, 8)) console.log(`  ${l}`);
         }

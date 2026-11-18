@@ -2,7 +2,6 @@
 import path from 'node:path';
 import { ROOT, settle, runStep } from './render.mjs';
 
-export const SNAPSHOT = path.join(ROOT, 'tools/lib/snapshot.js');
 export const DEFAULT_BASE = 'https://ao-4276-redesign-rollup.xeezy.com';
 
 // Third parties that only add noise (consent wall, ads, analytics, chat). Blocked on the live site.
@@ -29,10 +28,10 @@ export async function openLive(ctx, base, p, o = {}, log = []) {
   await page.route('**/*', route => (BLOCK.test(route.request().url()) ? route.abort() : route.continue()));
   page.on('pageerror', e => log.push('pageerror: ' + e.message.split('\n')[0]));
   page.on('response', r => { if (r.status() >= 400 && r.url().startsWith(base) && r.request().resourceType() === 'document') log.push(`${r.status()}: ${r.url().replace(base, '')}`); });
-  await page.addInitScript({ path: SNAPSHOT });
   const url = liveUrl(base, p);
   const res = await page.goto(url, { waitUntil: 'load', timeout: 60000 });
-  if (res && res.status() >= 400) log.push(`live page answered ${res.status()}: ${url}`);
+  // an error page is not the page: comparing it would overwrite a good report with noise
+  if (res && res.status() >= 400) { await page.close(); throw new Error(`live page answered ${res.status()}: ${url} (staging down or wrong path?)`); }
   await page.addStyleTag({ content: FREEZE_CSS });
   await settle(page);
   for (const step of o.do || []) await runStep(page, step);

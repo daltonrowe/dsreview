@@ -75,6 +75,11 @@
   .boxes b.sel { border-width: 2.5px; z-index: 3; }
   .boxes b.sel.d { border-color: var(--design); background: color-mix(in srgb, var(--design) 10%, transparent); }
   .boxes b.sel.l { border-color: var(--live); background: color-mix(in srgb, var(--live) 10%, transparent); }
+  .elems { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .elems i { position: absolute; border: 1px solid; opacity: .75; }
+  .elems i.text { border-color: #e11d48; } .elems i.icon { border-color: #7c3aed; } .elems i.panel { border-color: #0891b2; border-width: 2px; }
+  .elems i.image { border-color: #ca8a04; border-style: dashed; } .elems i.line { border-color: #16a34a; } .elems i.shape { border-color: #64748b; }
+  .elems i.unmatched { box-shadow: inset 0 0 0 999px rgba(225, 29, 72, .12); }
   .boxes b.rel { border-style: dashed; border-width: 2px; pointer-events: none; }
   .boxes b.rel.d { border-color: var(--design); } .boxes b.rel.l { border-color: var(--live); }
   .boxes b.sel::after { content: attr(data-lab); position: absolute; left: -2px; bottom: 100%; margin-bottom: 3px; font: 600 10.5px/1.4 var(--sans); color: #fff; padding: 0 5px; border-radius: 4px; white-space: nowrap; }
@@ -115,6 +120,7 @@
   <div class="seg" id="mode" title="m cycles"></div>
   <label id="mixLab" hidden><span id="mixName">Live</span> <input type="range" id="mix" min="0" max="100" value="50"></label>
   <div class="seg" id="zoom"></div>
+  <label title="Outline every element found in each screenshot, by kind (e)"><input type="checkbox" id="elems"> Elements</label>
   <span class="hint" id="boxHint"></span>
 </div>
 <div class="main">
@@ -356,6 +362,7 @@ function renderStage() {
     applyMix();
   }
   drawBoxes();
+  drawElems();
 }
 function applyMix() {
   const over = $('.canvas img.over'); if (!over) return;
@@ -384,6 +391,19 @@ function drawBoxes() {
 
 // Alignment findings: guide lines across the whole screenshot at the edge that should line up
 // (design: one line; live: one per element, showing the gap), and the partner boxes dashed.
+// Every element the vision found in each screenshot (from snapshot.json; not on the deployed site).
+let elems = null, showElems = false;
+async function drawElems() {
+  for (const x of $$('.elems')) x.parentNode.removeChild(x);
+  if (!showElems) return;
+  if (!elems) { try { elems = await (await fetch(`/comparisons/${encodeURIComponent(st.id)}/snapshot.json`)).json(); } catch { elems = { design: { blobs: [] }, live: { blobs: [] } }; } }
+  const matched = { d: new Set(st.report.pairs.map(p => p.design)), l: new Set(st.report.pairs.map(p => p.live)) };
+  const layer = (side, blobs) => `<div class="elems">${blobs.map(b => `<i class="${b.kind}${matched[side].has(b.id) ? '' : ' unmatched'}" title="${b.kind} ${b.box.w}×${b.box.h}${matched[side].has(b.id) ? '' : ' (unmatched)'}" style="left:${b.box.x * scale}px;top:${b.box.y * scale}px;width:${b.box.w * scale}px;height:${b.box.h * scale}px"></i>`).join('')}</div>`;
+  if (st.mode === 'side') { $('.canvas.dc')?.insertAdjacentHTML('beforeend', layer('d', elems.design.blobs)); $('.canvas.lc')?.insertAdjacentHTML('beforeend', layer('l', elems.live.blobs)); }
+  else $('.canvas.oc')?.insertAdjacentHTML('beforeend', layer('d', elems.design.blobs) + layer('l', elems.live.blobs));
+}
+$('#elems').onchange = e => { showElems = e.target.checked; drawElems(); };
+
 function drawGuides() {
   $$('.canvas .guide, .boxes b.rel').forEach(x => x.remove());
   const f = st.sel && st.report.findings.find(x => x.id === st.sel);
@@ -477,6 +497,7 @@ addEventListener('keydown', e => {
   else if (e.key === 'n' && cur) { e.preventDefault(); st.noteOpen = cur.id; renderCard(cur.id); $(`.f[data-id="${CSS.escape(cur.id)}"] textarea`)?.focus(); }
   else if (e.key === 'm') setMode(MODES[(MODES.findIndex(m => m[0] === st.mode) + 1) % MODES.length][0]);
   else if (e.key === 'Escape' && st.sel) select(null);
+  else if (e.key === 'e') { showElems = !showElems; $('#elems').checked = showElems; drawElems(); }
   else if (e.key === '/') { e.preventDefault(); $('#q').focus(); }
   else if ((e.key === '[' || e.key === ']') && st.mode !== 'side') { st.mix = Math.max(0, Math.min(100, st.mix + (e.key === ']' ? 10 : -10))); $('#mix').value = st.mix; applyMix(); }
 });

@@ -3,9 +3,9 @@
  "baseId": "search",
  "theme": "dark",
  "label": "Search results",
- "generatedAt": "2026-11-18T12:04:46.400Z",
+ "generatedAt": "2026-11-18T12:36:26.243Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
- "hover": true,
+ "method": "screenshots",
  "design": {
   "page": "AI Magic.dc.html",
   "props": {
@@ -20,7 +20,8 @@
   "width": 1440,
   "height": 3000,
   "shot": "design.jpg",
-  "items": 70,
+  "items": 120,
+  "background": "#0c0c0c",
   "log": []
  },
  "live": {
@@ -31,357 +32,2144 @@
   "width": 1440,
   "height": 3000,
   "shot": "live.jpg",
-  "items": 115,
-  "log": [
-   "pageerror: Failed to fetch"
-  ]
+  "items": 119,
+  "background": "#0c0c0c",
+  "log": []
  },
  "pairs": [
   {
+   "design": 63,
+   "live": 21,
+   "how": "look"
+  },
+  {
+   "design": 15,
+   "live": 15,
+   "how": "look"
+  },
+  {
+   "design": 30,
+   "live": 18,
+   "how": "look"
+  },
+  {
+   "design": 60,
+   "live": 19,
+   "how": "look"
+  },
+  {
+   "design": 14,
+   "live": 14,
+   "how": "look"
+  },
+  {
    "design": 0,
    "live": 0,
-   "how": "text"
+   "how": "shape"
   },
   {
-   "design": 2,
-   "live": 1,
-   "how": "text"
+   "design": 13,
+   "live": 13,
+   "how": "look"
   },
   {
-   "design": 3,
-   "live": 2,
-   "how": "text"
+   "design": 61,
+   "live": 20,
+   "how": "look"
   },
   {
    "design": 4,
+   "live": 4,
+   "how": "look"
+  },
+  {
+   "design": 2,
+   "live": 2,
+   "how": "look"
+  },
+  {
+   "design": 10,
+   "live": 12,
+   "how": "look"
+  },
+  {
+   "design": 18,
+   "live": 17,
+   "how": "look"
+  },
+  {
+   "design": 1,
+   "live": 1,
+   "how": "look"
+  },
+  {
+   "design": 8,
+   "live": 10,
+   "how": "look"
+  },
+  {
+   "design": 3,
    "live": 3,
-   "how": "text"
+   "how": "look"
+  },
+  {
+   "design": 106,
+   "live": 112,
+   "how": "look"
   },
   {
    "design": 5,
-   "live": 4,
-   "how": "text"
+   "live": 6,
+   "how": "look"
   },
   {
    "design": 6,
    "live": 5,
-   "how": "text"
+   "how": "look"
   },
   {
-   "design": 13,
+   "design": 40,
+   "live": 51,
+   "how": "look"
+  },
+  {
+   "design": 105,
+   "live": 113,
+   "how": "shape"
+  },
+  {
+   "design": 24,
+   "live": 29,
+   "how": "look"
+  },
+  {
+   "design": 38,
+   "live": 41,
+   "how": "look"
+  },
+  {
+   "design": 36,
+   "live": 40,
+   "how": "look"
+  },
+  {
+   "design": 39,
+   "live": 42,
+   "how": "look"
+  },
+  {
+   "design": 34,
+   "live": 38,
+   "how": "look"
+  },
+  {
+   "design": 35,
+   "live": 39,
+   "how": "look"
+  },
+  {
+   "design": 23,
+   "live": 27,
+   "how": "look"
+  },
+  {
+   "design": 77,
+   "live": 62,
+   "how": "look"
+  },
+  {
+   "design": 27,
+   "live": 30,
+   "how": "look"
+  },
+  {
+   "design": 22,
+   "live": 26,
+   "how": "look"
+  },
+  {
+   "design": 9,
+   "live": 8,
+   "how": "place"
+  },
+  {
+   "design": 12,
    "live": 11,
-   "how": "text"
-  },
-  {
-   "design": 14,
-   "live": 12,
-   "how": "text"
-  },
-  {
-   "design": 10,
-   "live": 9,
-   "how": "text"
+   "how": "place"
   },
   {
    "design": 11,
-   "live": 10,
-   "how": "text"
+   "live": 9,
+   "how": "place"
   },
   {
-   "design": 19,
-   "live": 17,
-   "how": "text"
+   "design": 68,
+   "live": 54,
+   "how": "place"
+  },
+  {
+   "design": 67,
+   "live": 116,
+   "how": "place"
   }
  ],
  "findings": [
   {
-   "id": "typography:dog#0",
+   "id": "typography:text@19,3",
    "category": "typography",
    "severity": "high",
-   "text": "Dog",
-   "section": "Top bar",
+   "text": "Text 26×13",
+   "section": "at 296, 34",
    "props": [
     {
-     "prop": "font-size",
-     "design": "14px",
-     "live": "16px",
+     "prop": "text height",
+     "design": "13px",
+     "live": "16px (bigger)",
      "sev": "high"
-    },
-    {
-     "prop": "line-height",
-     "design": "normal (~17px)",
-     "live": "normal (~19px)",
-     "sev": "low"
     }
    ],
    "design": {
-    "n": 10,
-    "textBox": {
-     "x": 295,
-     "y": 18,
-     "w": 647.3,
-     "h": 40
-    },
     "box": {
-     "x": 295,
-     "y": 18,
-     "w": 647.3,
-     "h": 40
+     "x": 296,
+     "y": 34,
+     "w": 26,
+     "h": 13
     },
-    "section": "Top bar",
-    "where": null
+    "textBox": {
+     "x": 296,
+     "y": 34,
+     "w": 26,
+     "h": 13
+    },
+    "kind": "text"
    },
    "live": {
-    "n": 9,
-    "textBox": {
-     "x": 288.2,
-     "y": 21,
-     "w": 628.5,
-     "h": 38
-    },
     "box": {
-     "x": 288.2,
-     "y": 21,
-     "w": 628.5,
-     "h": 38
+     "x": 289,
+     "y": 33,
+     "w": 28,
+     "h": 16
     },
-    "section": "input#search_fullwidth",
-    "where": null
+    "textBox": {
+     "x": 289,
+     "y": 33,
+     "w": 28,
+     "h": 16
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "place"
   },
   {
-   "id": "color:search#0",
+   "id": "color:icon@17,2",
    "category": "color",
    "severity": "high",
-   "text": "Search",
-   "section": "Left nav",
+   "text": "Icon 17×17",
+   "section": "at 266, 30",
    "props": [
     {
-     "prop": "background",
-     "design": "#2e2e2e",
-     "live": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+     "prop": "icon color",
+     "design": "#7e7e7e",
+     "live": "#f2f2f2",
      "swatch": true,
      "sev": "high"
     }
    ],
    "design": {
-    "n": 3,
-    "textBox": {
-     "x": 25,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 12,
-     "y": 136,
-     "w": 50,
-     "h": 48
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 29,
-     "nth": 0
+    "textBox": {
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 475,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 2,
-    "textBox": {
-     "x": 25.5,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 12.5,
-     "y": 136,
-     "w": 50,
-     "h": 48
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
     },
-    "section": "nav#global-navbar-guest",
-    "where": null
+    "textBox": {
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "shape:vecteezy home#0",
-   "category": "shape",
+   "id": "color:icon@60,2",
+   "category": "color",
    "severity": "high",
-   "text": "Vecteezy home",
-   "section": "Left nav",
+   "text": "Icon 12×12",
+   "section": "at 955, 32",
    "props": [
     {
-     "prop": "box",
-     "design": "none",
-     "live": "a (bg #ffffff)",
+     "prop": "icon color",
+     "design": "#747474",
+     "live": "#bbbbbb",
+     "swatch": true,
      "sev": "high"
     }
    ],
    "design": {
-    "n": 0,
-    "textBox": {
-     "x": 17,
-     "y": 20,
-     "w": 40,
-     "h": 40
-    },
     "box": {
-     "x": 17,
-     "y": 20,
-     "w": 40,
-     "h": 40
+     "x": 955,
+     "y": 32,
+     "w": 12,
+     "h": 12
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 16,
-     "nth": 0
+    "textBox": {
+     "x": 955,
+     "y": 32,
+     "w": 12,
+     "h": 12
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 466,
-     "col": 5
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 0,
-    "textBox": {
-     "x": 17.5,
-     "y": 20,
-     "w": 40,
-     "h": 40
-    },
     "box": {
-     "x": 17.5,
-     "y": 20,
-     "w": 40,
-     "h": 40
+     "x": 934,
+     "y": 33,
+     "w": 14,
+     "h": 14
     },
-    "section": "nav#global-navbar-guest",
-    "where": null
+    "textBox": {
+     "x": 934,
+     "y": 33,
+     "w": 14,
+     "h": 14
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "spacing:clear search#0",
-   "category": "spacing",
+   "id": "color:icon@76,10",
+   "category": "color",
    "severity": "high",
-   "text": "Clear search",
-   "section": "Top bar",
+   "text": "Icon 13×13",
+   "section": "at 1212, 154",
    "props": [
     {
-     "prop": "gap right → “Explore”",
-     "design": "86px",
-     "live": "105px",
-     "sev": "high",
-     "ref": 13
+     "prop": "icon color",
+     "design": "#ececec",
+     "live": "#aaaaaa",
+     "swatch": true,
+     "sev": "high"
     }
    ],
    "design": {
-    "n": 11,
-    "textBox": {
-     "x": 951.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
-    },
     "box": {
-     "x": 951.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
+     "x": 1212,
+     "y": 154,
+     "w": 13,
+     "h": 13
     },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3136,
-     "nth": 0
+    "textBox": {
+     "x": 1212,
+     "y": 154,
+     "w": 13,
+     "h": 13
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3368,
-     "col": 9
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 10,
-    "textBox": {
-     "x": 928.7,
-     "y": 28,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 928.7,
-     "y": 28,
-     "w": 24,
-     "h": 24
+     "x": 1195,
+     "y": 441,
+     "w": 12,
+     "h": 12
     },
-    "section": "form",
-    "where": null
+    "textBox": {
+     "x": 1195,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "alignment:layout:image results:right",
+   "id": "color:icon@64,10",
+   "category": "color",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 1010, 154",
+   "props": [
+    {
+     "prop": "icon color",
+     "design": "#ececec",
+     "live": "#aaaaaa",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1010,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 1010,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1033,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1033,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "color:icon@46,10",
+   "category": "color",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 722, 154",
+   "props": [
+    {
+     "prop": "icon color",
+     "design": "#ececec",
+     "live": "#aaaaaa",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 722,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 722,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 778,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 778,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "color:icon@52,10",
+   "category": "color",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 833, 154",
+   "props": [
+    {
+     "prop": "icon color",
+     "design": "#ececec",
+     "live": "#aaaaaa",
+     "swatch": true,
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 833,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 833,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 905,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 905,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:icon@17,2",
+   "category": "size",
+   "severity": "high",
+   "text": "Icon 17×17",
+   "section": "at 266, 30",
+   "props": [
+    {
+     "prop": "width",
+     "design": "17px",
+     "live": "20px",
+     "sev": "high"
+    },
+    {
+     "prop": "height",
+     "design": "17px",
+     "live": "20px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
+    },
+    "textBox": {
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@56,10",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 165×40",
+   "section": "at 815, 140",
+   "props": [
+    {
+     "prop": "width",
+     "design": "165px",
+     "live": "150px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 815,
+     "y": 140,
+     "w": 165,
+     "h": 40
+    },
+    "textBox": {
+     "x": 815,
+     "y": 140,
+     "w": 165,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 1014,
+     "y": 427,
+     "w": 150,
+     "h": 40
+    },
+    "textBox": {
+     "x": 1014,
+     "y": 427,
+     "w": 150,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@47,10",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 99×40",
+   "section": "at 704, 140",
+   "props": [
+    {
+     "prop": "width",
+     "design": "99px",
+     "live": "115px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 704,
+     "y": 140,
+     "w": 99,
+     "h": 40
+    },
+    "textBox": {
+     "x": 704,
+     "y": 140,
+     "w": 99,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 759,
+     "y": 427,
+     "w": 115,
+     "h": 40
+    },
+    "textBox": {
+     "x": 759,
+     "y": 427,
+     "w": 115,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@78,10",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 108×40",
+   "section": "at 1194, 140",
+   "props": [
+    {
+     "prop": "width",
+     "design": "108px",
+     "live": "137px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1194,
+     "y": 140,
+     "w": 108,
+     "h": 40
+    },
+    "textBox": {
+     "x": 1194,
+     "y": 140,
+     "w": 108,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 1176,
+     "y": 427,
+     "w": 137,
+     "h": 40
+    },
+    "textBox": {
+     "x": 1176,
+     "y": 427,
+     "w": 137,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@37,10",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 156×40",
+   "section": "at 521, 140",
+   "props": [
+    {
+     "prop": "width",
+     "design": "156px",
+     "live": "127px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 521,
+     "y": 140,
+     "w": 156,
+     "h": 40
+    },
+    "textBox": {
+     "x": 521,
+     "y": 140,
+     "w": 156,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 620,
+     "y": 427,
+     "w": 127,
+     "h": 40
+    },
+    "textBox": {
+     "x": 620,
+     "y": 427,
+     "w": 127,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:image@75,37",
+   "category": "size",
+   "severity": "high",
+   "text": "Picture 430×269",
+   "section": "at 986, 458",
+   "props": [
+    {
+     "prop": "height",
+     "design": "269px",
+     "live": "282px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 986,
+     "y": 458,
+     "w": 430,
+     "h": 269
+    },
+    "textBox": {
+     "x": 986,
+     "y": 458,
+     "w": 430,
+     "h": 269
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "textBox": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "kind": "image"
+   },
+   "match": "place"
+  },
+  {
+   "id": "size:image@49,37",
+   "category": "size",
+   "severity": "high",
+   "text": "Picture 357×269",
+   "section": "at 609, 458",
+   "props": [
+    {
+     "prop": "width",
+     "design": "357px",
+     "live": "382px",
+     "sev": "high"
+    },
+    {
+     "prop": "height",
+     "design": "269px",
+     "live": "282px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
+    },
+    "textBox": {
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
+    },
+    "textBox": {
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
+    },
+    "kind": "image"
+   },
+   "match": "place"
+  },
+  {
+   "id": "size:image@20,106",
+   "category": "size",
+   "severity": "high",
+   "text": "Picture 429×241",
+   "section": "at 99, 1576",
+   "props": [
+    {
+     "prop": "width",
+     "design": "429px",
+     "live": "278px",
+     "sev": "high"
+    },
+    {
+     "prop": "height",
+     "design": "241px",
+     "live": "278px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 1576,
+     "w": 429,
+     "h": 241
+    },
+    "textBox": {
+     "x": 99,
+     "y": 1576,
+     "w": 429,
+     "h": 241
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 108,
+     "y": 1404,
+     "w": 278,
+     "h": 278
+    },
+    "textBox": {
+     "x": 108,
+     "y": 1404,
+     "w": 278,
+     "h": 278
+    },
+    "kind": "image"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:line@31,186",
+   "category": "size",
+   "severity": "high",
+   "text": "Divider 2×60",
+   "section": "at 498, 2940",
+   "props": [
+    {
+     "prop": "height",
+     "design": "60px",
+     "live": "47px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 498,
+     "y": 2940,
+     "w": 2,
+     "h": 60
+    },
+    "textBox": {
+     "x": 498,
+     "y": 2940,
+     "w": 2,
+     "h": 60
+    },
+    "kind": "line"
+   },
+   "live": {
+    "box": {
+     "x": 546,
+     "y": 2953,
+     "w": 1,
+     "h": 47
+    },
+    "textBox": {
+     "x": 546,
+     "y": 2953,
+     "w": 1,
+     "h": 47
+    },
+    "kind": "line"
+   },
+   "match": "shape"
+  },
+  {
+   "id": "spacing:image@77,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Picture 124×48",
+   "section": "at 1166, 14",
+   "props": [
+    {
+     "prop": "gap below → Panel 108×40",
+     "design": "78px",
+     "live": "363px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1166,
+     "y": 14,
+     "w": 124,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1166,
+     "y": 14,
+     "w": 124,
+     "h": 48
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 1164,
+     "y": 16,
+     "w": 119,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1164,
+     "y": 16,
+     "w": 119,
+     "h": 48
+    },
+    "kind": "image"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     62,
+     140
+    ],
+    "live": [
+     64,
+     427
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 108×40",
+     "design": {
+      "x": 1194,
+      "y": 140,
+      "w": 108,
+      "h": 40
+     },
+     "live": {
+      "x": 1176,
+      "y": 427,
+      "w": 137,
+      "h": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:panel@35,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Panel 927×48",
+   "section": "at 96, 14",
+   "props": [
+    {
+     "prop": "gap below → Panel 165×40 (+1 more above it, same change)",
+     "design": "78px",
+     "live": "363px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 96,
+     "y": 14,
+     "w": 927,
+     "h": 48
+    },
+    "textBox": {
+     "x": 96,
+     "y": 14,
+     "w": 927,
+     "h": 48
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 100,
+     "y": 16,
+     "w": 918,
+     "h": 48
+    },
+    "textBox": {
+     "x": 100,
+     "y": 16,
+     "w": 918,
+     "h": 48
+    },
+    "kind": "panel"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     62,
+     140
+    ],
+    "live": [
+     64,
+     427
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 165×40",
+     "design": {
+      "x": 815,
+      "y": 140,
+      "w": 165,
+      "h": 40
+     },
+     "live": {
+      "x": 1014,
+      "y": 427,
+      "w": 150,
+      "h": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:panel@85,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Panel 110×48",
+   "section": "at 1306, 14",
+   "props": [
+    {
+     "prop": "gap below → Icon 6×12",
+     "design": "92px",
+     "live": "378px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1306,
+     "y": 14,
+     "w": 110,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1306,
+     "y": 14,
+     "w": 110,
+     "h": 48
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 1299,
+     "y": 16,
+     "w": 117,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1299,
+     "y": 16,
+     "w": 117,
+     "h": 48
+    },
+    "kind": "panel"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     62,
+     154
+    ],
+    "live": [
+     64,
+     442
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 6×12",
+     "design": {
+      "x": 1393,
+      "y": 154,
+      "w": 6,
+      "h": 12
+     },
+     "live": {
+      "x": 1385,
+      "y": 442,
+      "w": 6,
+      "h": 10
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@62,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 18×18",
+   "section": "at 988, 29",
+   "props": [
+    {
+     "prop": "gap right → Text 50×14",
+     "design": "52px",
+     "live": "67px",
+     "sev": "high"
+    },
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "892px",
+     "live": "871px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 988,
+     "y": 29,
+     "w": 18,
+     "h": 18
+    },
+    "textBox": {
+     "x": 988,
+     "y": 29,
+     "w": 18,
+     "h": 18
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 971,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 971,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     1006,
+     1058
+    ],
+    "live": [
+     991,
+     1058
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 50×14",
+     "design": {
+      "x": 1058,
+      "y": 33,
+      "w": 50,
+      "h": 14
+     },
+     "live": {
+      "x": 1058,
+      "y": 35,
+      "w": 50,
+      "h": 14
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@17,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 17×17",
+   "section": "at 266, 30",
+   "props": [
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "170px",
+     "live": "154px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
+    },
+    "textBox": {
+     "x": 266,
+     "y": 30,
+     "w": 17,
+     "h": 17
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 254,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@60,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 12×12",
+   "section": "at 955, 32",
+   "props": [
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "859px",
+     "live": "834px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 955,
+     "y": 32,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 955,
+     "y": 32,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 934,
+     "y": 33,
+     "w": 14,
+     "h": 14
+    },
+    "textBox": {
+     "x": 934,
+     "y": 33,
+     "w": 14,
+     "h": 14
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@19,3",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Text 26×13",
+   "section": "at 296, 34",
+   "props": [
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "200px",
+     "live": "189px",
+     "sev": "high"
+    },
+    {
+     "prop": "inset top in Panel 927×48",
+     "design": "20px",
+     "live": "17px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 296,
+     "y": 34,
+     "w": 26,
+     "h": 13
+    },
+    "textBox": {
+     "x": 296,
+     "y": 34,
+     "w": 26,
+     "h": 13
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 289,
+     "y": 33,
+     "w": 28,
+     "h": 16
+    },
+    "textBox": {
+     "x": 289,
+     "y": 33,
+     "w": 28,
+     "h": 16
+    },
+    "kind": "text"
+   },
+   "match": "place",
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@14,2",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Text 10×6",
+   "section": "at 225, 35",
+   "props": [
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "129px",
+     "live": "114px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 225,
+     "y": 35,
+     "w": 10,
+     "h": 6
+    },
+    "textBox": {
+     "x": 225,
+     "y": 35,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 214,
+     "y": 37,
+     "w": 10,
+     "h": 6
+    },
+    "textBox": {
+     "x": 214,
+     "y": 37,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:panel@56,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Panel 165×40",
+   "section": "at 815, 140",
+   "props": [
+    {
+     "prop": "gap right → Icon 13×13",
+     "design": "30px",
+     "live": "-131px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 815,
+     "y": 140,
+     "w": 165,
+     "h": 40
+    },
+    "textBox": {
+     "x": 815,
+     "y": 140,
+     "w": 165,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 1014,
+     "y": 427,
+     "w": 150,
+     "h": 40
+    },
+    "textBox": {
+     "x": 1014,
+     "y": 427,
+     "w": 150,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     980,
+     1010
+    ],
+    "live": [
+     1164,
+     1033
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 13×13",
+     "design": {
+      "x": 1010,
+      "y": 154,
+      "w": 13,
+      "h": 13
+     },
+     "live": {
+      "x": 1033,
+      "y": 441,
+      "w": 12,
+      "h": 12
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:panel@47,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Panel 99×40",
+   "section": "at 704, 140",
+   "props": [
+    {
+     "prop": "gap right → Panel 165×40",
+     "design": "12px",
+     "live": "140px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 704,
+     "y": 140,
+     "w": 99,
+     "h": 40
+    },
+    "textBox": {
+     "x": 704,
+     "y": 140,
+     "w": 99,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 759,
+     "y": 427,
+     "w": 115,
+     "h": 40
+    },
+    "textBox": {
+     "x": 759,
+     "y": 427,
+     "w": 115,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     803,
+     815
+    ],
+    "live": [
+     874,
+     1014
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 165×40",
+     "design": {
+      "x": 815,
+      "y": 140,
+      "w": 165,
+      "h": 40
+     },
+     "live": {
+      "x": 1014,
+      "y": 427,
+      "w": 150,
+      "h": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:panel@37,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Panel 156×40",
+   "section": "at 521, 140",
+   "props": [
+    {
+     "prop": "gap right → Panel 99×40",
+     "design": "27px",
+     "live": "12px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 521,
+     "y": 140,
+     "w": 156,
+     "h": 40
+    },
+    "textBox": {
+     "x": 521,
+     "y": 140,
+     "w": 156,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 620,
+     "y": 427,
+     "w": 127,
+     "h": 40
+    },
+    "textBox": {
+     "x": 620,
+     "y": 427,
+     "w": 127,
+     "h": 40
+    },
+    "kind": "panel"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     677,
+     704
+    ],
+    "live": [
+     747,
+     759
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 99×40",
+     "design": {
+      "x": 704,
+      "y": 140,
+      "w": 99,
+      "h": 40
+     },
+     "live": {
+      "x": 759,
+      "y": 427,
+      "w": 115,
+      "h": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@76,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 1212, 154",
+   "props": [
+    {
+     "prop": "gap right → Icon 13×13",
+     "design": "107px",
+     "live": "137px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1212,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 1212,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1195,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1195,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     1225,
+     1332
+    ],
+    "live": [
+     1207,
+     1344
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 13×13",
+     "design": {
+      "x": 1332,
+      "y": 154,
+      "w": 13,
+      "h": 13
+     },
+     "live": {
+      "x": 1344,
+      "y": 441,
+      "w": 12,
+      "h": 12
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@84,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 1332, 154",
+   "props": [
+    {
+     "prop": "gap right → Icon 6×12",
+     "design": "48px",
+     "live": "29px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1332,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 1332,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1344,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1344,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     1345,
+     1393
+    ],
+    "live": [
+     1356,
+     1385
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 6×12",
+     "design": {
+      "x": 1393,
+      "y": 154,
+      "w": 6,
+      "h": 12
+     },
+     "live": {
+      "x": 1385,
+      "y": 442,
+      "w": 6,
+      "h": 10
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@46,10",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Icon 13×13",
+   "section": "at 722, 154",
+   "props": [
+    {
+     "prop": "gap right → Panel 165×40",
+     "design": "80px",
+     "live": "224px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 722,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 722,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 778,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 778,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "x",
+    "design": [
+     735,
+     815
+    ],
+    "live": [
+     790,
+     1014
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 165×40",
+     "design": {
+      "x": 815,
+      "y": 140,
+      "w": 165,
+      "h": 40
+     },
+     "live": {
+      "x": 1014,
+      "y": 427,
+      "w": 150,
+      "h": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "alignment:panel@35,2:right",
    "category": "alignment",
    "severity": "high",
-   "text": "Image results",
-   "section": "Image results",
+   "text": "Panel 927×48",
+   "section": "at 96, 14",
    "props": [
     {
      "prop": "right edge",
-     "design": "lines up with a 110×48 (Top bar) at x=1416.1",
-     "live": "off by -10px ← (1406 vs 1416)",
+     "design": "lines up with Icon 13×13 at x=1023",
+     "live": "off by -27px ← (1018 vs 1045)",
      "sev": "high"
     }
    ],
-   "layout": true,
    "design": {
-    "n": null,
-    "textBox": {
-     "x": 986.3,
-     "y": 458.1,
-     "w": 429.8,
-     "h": 268.6
-    },
     "box": {
-     "x": 986.3,
-     "y": 458.1,
-     "w": 429.8,
-     "h": 268.6
+     "x": 96,
+     "y": 14,
+     "w": 927,
+     "h": 48
     },
-    "section": "Image results",
-    "where": null
+    "textBox": {
+     "x": 96,
+     "y": 14,
+     "w": 927,
+     "h": 48
+    },
+    "kind": "panel"
    },
    "live": {
-    "n": null,
-    "textBox": {
-     "x": 984,
-     "y": 485,
-     "w": 422,
-     "h": 282
-    },
     "box": {
-     "x": 984,
-     "y": 485,
-     "w": 422,
-     "h": 282
+     "x": 100,
+     "y": 16,
+     "w": 918,
+     "h": 48
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 100,
+     "y": 16,
+     "w": 918,
+     "h": 48
+    },
+    "kind": "panel"
    },
    "guide": {
     "axis": "x",
     "design": [
-     1416.1
+     1023
+    ],
+    "live": [
+     1018,
+     1045
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 13×13",
+     "design": {
+      "x": 1010,
+      "y": 154,
+      "w": 13,
+      "h": 13
+     },
+     "live": {
+      "x": 1033,
+      "y": 441,
+      "w": 12,
+      "h": 12
+     }
+    }
+   ]
+  },
+  {
+   "id": "alignment:image@49,37:right",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Picture 357×269",
+   "section": "at 609, 458",
+   "props": [
+    {
+     "prop": "right edge",
+     "design": "lines up with Icon 12×12 at x=966",
+     "live": "off by 20px → (968 vs 948)",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
+    },
+    "textBox": {
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
+    },
+    "textBox": {
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
+    },
+    "kind": "image"
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     966
+    ],
+    "live": [
+     968,
+     948
+    ]
+   },
+   "related": [
+    {
+     "text": "Icon 12×12",
+     "design": {
+      "x": 955,
+      "y": 32,
+      "w": 12,
+      "h": 12
+     },
+     "live": {
+      "x": 934,
+      "y": 33,
+      "w": 14,
+      "h": 14
+     }
+    }
+   ]
+  },
+  {
+   "id": "alignment:image@75,37:right",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Picture 430×269",
+   "section": "at 986, 458",
+   "props": [
+    {
+     "prop": "right edge",
+     "design": "lines up with Panel 110×48 at x=1416",
+     "live": "off by -10px ← (1406 vs 1416)",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 986,
+     "y": 458,
+     "w": 430,
+     "h": 269
+    },
+    "textBox": {
+     "x": 986,
+     "y": 458,
+     "w": 430,
+     "h": 269
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "textBox": {
+     "x": 984,
+     "y": 485,
+     "w": 422,
+     "h": 282
+    },
+    "kind": "image"
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     1416
     ],
     "live": [
      1406,
@@ -390,7 +2178,7 @@
    },
    "related": [
     {
-     "text": "a 110×48",
+     "text": "Panel 110×48",
      "design": {
       "x": 1306,
       "y": 14,
@@ -398,5473 +2186,3197 @@
       "h": 48
      },
      "live": {
-      "x": 1299.3,
+      "x": 1299,
       "y": 16,
-      "w": 116.7,
+      "w": 117,
       "h": 48
      }
     }
    ]
   },
   {
-   "id": "typography:explore#0",
+   "id": "typography:text@11,3",
    "category": "typography",
    "severity": "medium",
-   "text": "Explore",
-   "section": "Top bar",
+   "text": "Text 70×14",
+   "section": "at 143, 33",
    "props": [
     {
-     "prop": "line-height",
-     "design": "normal (~17px)",
-     "live": "21px",
+     "prop": "text width",
+     "design": "70px",
+     "live": "52px (narrower: spacing or copy)",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 13,
-    "textBox": {
-     "x": 1057.3,
-     "y": 29.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.3,
-     "y": 29.5,
-     "w": 50.7,
-     "h": 17
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
     },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3307,
-     "nth": 0
+    "textBox": {
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3504,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 11,
-    "textBox": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
+     "x": 151,
+     "y": 33,
+     "w": 52,
+     "h": 14
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 151,
+     "y": 33,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "place"
   },
   {
-   "id": "typography:dog#1",
+   "id": "typography:text@85,3",
    "category": "typography",
    "severity": "medium",
-   "text": "\"Dog\"",
-   "section": "main",
+   "text": "Text 40×13",
+   "section": "at 1341, 34",
    "props": [
     {
-     "prop": "font-weight",
-     "design": 700,
-     "live": 600,
+     "prop": "text width",
+     "design": "40px",
+     "live": "52px (wider: spacing or copy)",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 19,
-    "textBox": {
-     "x": 543.1,
-     "y": 102,
-     "w": 43.4,
-     "h": 17
-    },
     "box": {
-     "x": 543.1,
-     "y": 102,
-     "w": 43.4,
-     "h": 17
+     "x": 1341,
+     "y": 34,
+     "w": 40,
+     "h": 13
     },
-    "section": "main",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3451,
-     "nth": 0
+    "textBox": {
+     "x": 1341,
+     "y": 34,
+     "w": 40,
+     "h": 13
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3650,
-     "col": 186
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 17,
-    "textBox": {
-     "x": 857.6,
-     "y": 108.5,
-     "w": 27.3,
-     "h": 17
-    },
     "box": {
-     "x": 857.6,
-     "y": 108.5,
-     "w": 27.3,
-     "h": 17
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "place"
   },
   {
-   "id": "color:join pro#0",
+   "id": "color:icon@62,2",
    "category": "color",
    "severity": "medium",
-   "text": "Join Pro",
-   "section": "Top bar",
+   "text": "Icon 18×18",
+   "section": "at 988, 29",
    "props": [
     {
-     "prop": "gradient",
-     "design": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)",
-     "live": "linear-gradient(-89deg, #fb00ff, #fd3198 32%, #fe4d5d 70%, #ff7900)",
-     "gradient": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 14,
-    "textBox": {
-     "x": 1200.5,
-     "y": 29.5,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1166,
-     "y": 14,
-     "w": 124,
-     "h": 48
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3349,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3553,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 12,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1164.4,
-     "y": 16,
-     "w": 118.9,
-     "h": 48
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "color:dog#1",
-   "category": "color",
-   "severity": "medium",
-   "text": "\"Dog\"",
-   "section": "main",
-   "props": [
-    {
-     "prop": "text color",
-     "design": "#c9c9c9",
-     "live": "#f2f2f2",
+     "prop": "icon color",
+     "design": "#aaaaaa",
+     "live": "#d4d4d4",
      "swatch": true,
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 19,
-    "textBox": {
-     "x": 543.1,
-     "y": 102,
-     "w": 43.4,
-     "h": 17
-    },
     "box": {
-     "x": 543.1,
-     "y": 102,
-     "w": 43.4,
-     "h": 17
+     "x": 988,
+     "y": 29,
+     "w": 18,
+     "h": 18
     },
-    "section": "main",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3451,
-     "nth": 0
+    "textBox": {
+     "x": 988,
+     "y": 29,
+     "w": 18,
+     "h": 18
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3650,
-     "col": 186
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 17,
-    "textBox": {
-     "x": 857.6,
-     "y": 108.5,
-     "w": 27.3,
-     "h": 17
-    },
     "box": {
-     "x": 857.6,
-     "y": 108.5,
-     "w": 27.3,
-     "h": 17
+     "x": 971,
+     "y": 30,
+     "w": 20,
+     "h": 20
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 971,
+     "y": 30,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "size:join pro#0",
+   "id": "color:icon@87,10",
+   "category": "color",
+   "severity": "medium",
+   "text": "Icon 6×12",
+   "section": "at 1393, 154",
+   "props": [
+    {
+     "prop": "icon color",
+     "design": "#bdbdbd",
+     "live": "#868686",
+     "swatch": true,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1393,
+     "y": 154,
+     "w": 6,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1393,
+     "y": 154,
+     "w": 6,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1385,
+     "y": 442,
+     "w": 6,
+     "h": 10
+    },
+    "textBox": {
+     "x": 1385,
+     "y": 442,
+     "w": 6,
+     "h": 10
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "color:icon@84,10",
+   "category": "color",
+   "severity": "medium",
+   "text": "Icon 13×13",
+   "section": "at 1332, 154",
+   "props": [
+    {
+     "prop": "icon color",
+     "design": "#acacac",
+     "live": "#838383",
+     "swatch": true,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1332,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "textBox": {
+     "x": 1332,
+     "y": 154,
+     "w": 13,
+     "h": 13
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1344,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 1344,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:image@77,2",
    "category": "size",
    "severity": "medium",
-   "text": "Join Pro",
-   "section": "Top bar",
+   "text": "Picture 124×48",
+   "section": "at 1166, 14",
    "props": [
     {
      "prop": "width",
      "design": "124px",
-     "live": "118.9px",
+     "live": "119px",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 14,
-    "textBox": {
-     "x": 1200.5,
-     "y": 29.5,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
      "x": 1166,
      "y": 14,
      "w": 124,
      "h": 48
     },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3349,
-     "nth": 0
+    "textBox": {
+     "x": 1166,
+     "y": 14,
+     "w": 124,
+     "h": 48
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3553,
-     "col": 7
-    }
+    "kind": "image"
    },
    "live": {
-    "n": 12,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
-     "x": 1164.4,
+     "x": 1164,
      "y": 16,
-     "w": 118.9,
+     "w": 119,
      "h": 48
     },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:clear search#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Clear search",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "hover color",
-     "design": "#aaaaaa → #ffffff",
-     "live": "no change",
-     "swatch": true,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover background",
-     "design": "none → #4a4a4a",
-     "live": "no change",
-     "swatch": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 11,
     "textBox": {
-     "x": 951.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
-    },
-    "box": {
-     "x": 951.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3136,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3368,
-     "col": 9
-    }
-   },
-   "live": {
-    "n": 10,
-    "textBox": {
-     "x": 928.7,
-     "y": 28,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 928.7,
-     "y": 28,
-     "w": 24,
-     "h": 24
-    },
-    "section": "form",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:explore#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Explore",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #141414",
-     "live": "no change",
-     "swatch": true,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover color",
-     "design": "no change",
-     "live": "#f2f2f2 → none",
-     "swatch": true,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover backgroundImage",
-     "design": "no change",
-     "live": "none → linear-gradient(to right in oklab, #ff7900 0%, #fd3198 100%)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 13,
-    "textBox": {
-     "x": 1057.3,
-     "y": 29.5,
-     "w": 50.7,
-     "h": 17
-    },
-    "box": {
-     "x": 1057.3,
-     "y": 29.5,
-     "w": 50.7,
-     "h": 17
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3307,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3504,
-     "col": 11
-    }
-   },
-   "live": {
-    "n": 11,
-    "textBox": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
-    "box": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:home#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Home",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 2,
-    "textBox": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 24,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 471,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 1,
-    "textBox": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:search#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Search",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover color",
-     "design": "#ffffff → #f2f2f2",
-     "live": "no change",
-     "swatch": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 3,
-    "textBox": {
-     "x": 25,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12,
-     "y": 136,
-     "w": 50,
+     "x": 1164,
+     "y": 16,
+     "w": 119,
      "h": 48
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 29,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 475,
-     "col": 7
-    }
+    "kind": "image"
    },
-   "live": {
-    "n": 2,
-    "textBox": {
-     "x": 25.5,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12.5,
-     "y": 136,
-     "w": 50,
-     "h": 48
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "behavior:explore#1",
-   "category": "behavior",
+   "id": "size:panel@85,2",
+   "category": "size",
    "severity": "medium",
-   "text": "Explore",
-   "section": "Left nav",
+   "text": "Panel 110×48",
+   "section": "at 1306, 14",
    "props": [
     {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
+     "prop": "width",
+     "design": "110px",
+     "live": "117px",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 4,
-    "textBox": {
-     "x": 25,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 34,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 479,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 3,
-    "textBox": {
-     "x": 25.5,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:ai tools#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "AI Tools",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 5,
-    "textBox": {
-     "x": 25,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 39,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 483,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 4,
-    "textBox": {
-     "x": 25.5,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:my files#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "My Files",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 6,
-    "textBox": {
-     "x": 25,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 47,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 487,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 5,
-    "textBox": {
-     "x": 25.5,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "missing:search by image#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Search by image",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Search by image",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 12,
-    "textBox": {
-     "x": 987.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
-    },
-    "box": {
-     "x": 987.3,
-     "y": 28,
-     "w": 20,
-     "h": 20
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3140,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3371,
-     "col": 9
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:all images#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "All Images",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "control",
-     "design": "All Images",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 9,
-    "textBox": {
-     "x": 143,
-     "y": 29.5,
-     "w": 70,
-     "h": 17
-    },
-    "box": {
-     "x": 100,
-     "y": 18,
-     "w": 156,
-     "h": 40
-    },
-    "section": "Top bar",
-    "where": null
-   },
-   "live": null
-  },
-  {
-   "id": "missing:log in#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Log In",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Log In",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 15,
-    "textBox": {
-     "x": 1340.5,
-     "y": 29.5,
-     "w": 40.9,
-     "h": 17
-    },
     "box": {
      "x": 1306,
      "y": 14,
      "w": 110,
      "h": 48
     },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3352,
-     "nth": 0
+    "textBox": {
+     "x": 1306,
+     "y": 14,
+     "w": 110,
+     "h": 48
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3554,
-     "col": 451
-    }
+    "kind": "panel"
    },
-   "live": null
+   "live": {
+    "box": {
+     "x": 1299,
+     "y": 16,
+     "w": 117,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1299,
+     "y": 16,
+     "w": 117,
+     "h": 48
+    },
+    "kind": "panel"
+   },
+   "match": "look"
   },
   {
-   "id": "missing:dog photos#0",
+   "id": "alignment:text@14,2:top",
+   "category": "alignment",
+   "severity": "medium",
+   "text": "Text 10×6",
+   "section": "at 225, 35",
+   "props": [
+    {
+     "prop": "top edge",
+     "design": "lines up with Text 26×13 at y=35",
+     "live": "off by 4px ↓ (37 vs 33)",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 225,
+     "y": 35,
+     "w": 10,
+     "h": 6
+    },
+    "textBox": {
+     "x": 225,
+     "y": 35,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 214,
+     "y": 37,
+     "w": 10,
+     "h": 6
+    },
+    "textBox": {
+     "x": 214,
+     "y": 37,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "guide": {
+    "axis": "y",
+    "design": [
+     35
+    ],
+    "live": [
+     37,
+     33
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 26×13",
+     "design": {
+      "x": 296,
+      "y": 34,
+      "w": 26,
+      "h": 13
+     },
+     "live": {
+      "x": 289,
+      "y": 33,
+      "w": 28,
+      "h": 16
+     }
+    }
+   ]
+  },
+  {
+   "id": "missing:text@10,7",
    "category": "missing",
    "severity": "medium",
-   "text": "Dog Photos",
-   "section": "main",
+   "text": "Text 128×23",
+   "section": "at 100, 99",
    "props": [
     {
      "prop": "text",
-     "design": "Dog Photos",
+     "design": "128×23",
      "live": "not found",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 16,
-    "textBox": {
-     "x": 99,
-     "y": 94,
-     "w": 129.5,
-     "h": 28
-    },
     "box": {
-     "x": 99,
-     "y": 94,
-     "w": 129.5,
-     "h": 28
+     "x": 100,
+     "y": 99,
+     "w": 128,
+     "h": 23
     },
-    "section": "main",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3448,
-     "nth": 0
+    "textBox": {
+     "x": 100,
+     "y": 99,
+     "w": 128,
+     "h": 23
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3649,
-     "col": 7
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:173,834#0",
+   "id": "missing:text@26,7",
    "category": "missing",
    "severity": "medium",
-   "text": "173,834",
-   "section": "main",
+   "text": "Text 347×14",
+   "section": "at 239, 105",
    "props": [
     {
      "prop": "text",
-     "design": "173,834",
+     "design": "347×14",
      "live": "not found",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 18,
-    "textBox": {
-     "x": 238.5,
-     "y": 102,
-     "w": 56.3,
-     "h": 17
-    },
     "box": {
-     "x": 238.5,
-     "y": 102,
-     "w": 56.3,
-     "h": 17
+     "x": 239,
+     "y": 105,
+     "w": 347,
+     "h": 14
     },
-    "section": "main",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3450,
-     "nth": 0
+    "textBox": {
+     "x": 239,
+     "y": 105,
+     "w": 347,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3650,
-     "col": 123
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:1#0",
+   "id": "missing:text@85,10",
    "category": "missing",
    "severity": "medium",
-   "text": "1",
-   "section": "Filters",
+   "text": "Text 102×40",
+   "section": "at 1314, 140",
    "props": [
     {
-     "prop": "control",
-     "design": "1",
+     "prop": "text",
+     "design": "102×40",
      "live": "not found",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 20,
-    "textBox": {
-     "x": 132.4,
-     "y": 137.5,
-     "w": 5.6,
-     "h": 11
-    },
     "box": {
-     "x": 126.4,
-     "y": 135,
-     "w": 17.6,
-     "h": 16
+     "x": 1314,
+     "y": 140,
+     "w": 102,
+     "h": 40
     },
-    "section": "Filters",
-    "where": null
+    "textBox": {
+     "x": 1314,
+     "y": 140,
+     "w": 102,
+     "h": 40
+    },
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:scroll filters#0",
+   "id": "missing:text@60,187",
    "category": "missing",
    "severity": "medium",
-   "text": "Scroll filters",
-   "section": "Filters",
+   "text": "Text 101×18",
+   "section": "at 911, 2982",
    "props": [
     {
-     "prop": "control",
-     "design": "Scroll filters",
+     "prop": "text",
+     "design": "101×18",
      "live": "not found",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 31,
-    "textBox": {
-     "x": 1387,
-     "y": 151,
-     "w": 18,
+    "box": {
+     "x": 911,
+     "y": 2982,
+     "w": 101,
      "h": 18
     },
-    "box": {
-     "x": 1376,
-     "y": 140,
-     "w": 40,
-     "h": 40
+    "textBox": {
+     "x": 911,
+     "y": 2982,
+     "w": 101,
+     "h": 18
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3540,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3704,
-     "col": 7
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:all images#1",
-   "category": "missing",
-   "severity": "medium",
-   "text": "All Images",
-   "section": "Filters",
+   "id": "spacing:line@5,94",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Divider 1×2999",
+   "section": "at 75, 1",
    "props": [
     {
-     "prop": "control",
-     "design": "All Images",
-     "live": "not found",
-     "sev": "medium"
+     "prop": "gap right → Panel 927×48",
+     "design": "20px",
+     "live": "24px",
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 21,
-    "textBox": {
-     "x": 192,
-     "y": 151.5,
-     "w": 70,
-     "h": 17
+    "box": {
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
     },
+    "textBox": {
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
+    },
+    "kind": "line"
+   },
+   "live": {
+    "box": {
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
+    },
+    "textBox": {
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
+    },
+    "kind": "line"
+   },
+   "match": "shape",
+   "guide": {
+    "axis": "x",
+    "design": [
+     76,
+     96
+    ],
+    "live": [
+     76,
+     100
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@11,3",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Text 70×14",
+   "section": "at 143, 33",
+   "props": [
+    {
+     "prop": "inset left in Panel 927×48",
+     "design": "47px",
+     "live": "51px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
+    },
+    "textBox": {
+     "x": 143,
+     "y": 33,
+     "w": 70,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "live": {
     "box": {
      "x": 151,
-     "y": 140,
-     "w": 150,
-     "h": 40
+     "y": 33,
+     "w": 52,
+     "h": 14
     },
-    "section": "Filters",
-    "where": null
+    "textBox": {
+     "x": 151,
+     "y": 33,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
    },
-   "live": null
+   "match": "place",
+   "related": [
+    {
+     "text": "Panel 927×48",
+     "design": {
+      "x": 96,
+      "y": 14,
+      "w": 927,
+      "h": 48
+     },
+     "live": {
+      "x": 100,
+      "y": 16,
+      "w": 918,
+      "h": 48
+     }
+    }
+   ]
   },
   {
-   "id": "missing:license (3)#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "License (3)",
-   "section": "Filters",
+   "id": "spacing:image@49,37",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Picture 357×269",
+   "section": "at 609, 458",
    "props": [
     {
-     "prop": "control",
-     "design": "License (3)",
-     "live": "not found",
-     "sev": "medium"
+     "prop": "gap right → Picture 430×269",
+     "design": "20px",
+     "live": "16px",
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 22,
-    "textBox": {
-     "x": 354,
-     "y": 151.5,
-     "w": 75.8,
-     "h": 17
-    },
     "box": {
-     "x": 313,
-     "y": 140,
-     "w": 195.8,
-     "h": 40
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
     },
-    "section": "Filters",
-    "where": null
-   },
-   "live": null
-  },
-  {
-   "id": "missing:orientation#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Orientation",
-   "section": "Filters",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Orientation",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 24,
     "textBox": {
-     "x": 561.8,
-     "y": 151.5,
-     "w": 75.9,
-     "h": 17
+     "x": 609,
+     "y": 458,
+     "w": 357,
+     "h": 269
     },
+    "kind": "image"
+   },
+   "live": {
     "box": {
-     "x": 520.8,
-     "y": 140,
-     "w": 155.9,
-     "h": 40
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
     },
-    "section": "Filters",
-    "where": null
+    "textBox": {
+     "x": 586,
+     "y": 485,
+     "w": 382,
+     "h": 282
+    },
+    "kind": "image"
    },
-   "live": null
+   "match": "place",
+   "guide": {
+    "axis": "x",
+    "design": [
+     966,
+     986
+    ],
+    "live": [
+     968,
+     984
+    ]
+   },
+   "related": [
+    {
+     "text": "Picture 430×269",
+     "design": {
+      "x": 986,
+      "y": 458,
+      "w": 430,
+      "h": 269
+     },
+     "live": {
+      "x": 984,
+      "y": 485,
+      "w": 422,
+      "h": 282
+     }
+    }
+   ]
   },
   {
-   "id": "missing:puppy#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "puppy",
-   "section": "Filters",
+   "id": "alignment:text@70,2:top",
+   "category": "alignment",
+   "severity": "low",
+   "text": "Text 10×6",
+   "section": "at 1119, 35",
    "props": [
     {
-     "prop": "control",
-     "design": "puppy",
-     "live": "not found",
-     "sev": "medium"
+     "prop": "top edge",
+     "design": "lines up with Text 40×13 at y=35",
+     "live": "off by 3px ↓ (37 vs 34)",
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 25,
-    "textBox": {
-     "x": 743.7,
-     "y": 151.5,
-     "w": 42.3,
-     "h": 17
-    },
     "box": {
-     "x": 703.7,
-     "y": 140,
-     "w": 99.3,
-     "h": 40
+     "x": 1119,
+     "y": 35,
+     "w": 10,
+     "h": 6
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3497,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3690,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:golden retriever#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "golden retriever",
-   "section": "Filters",
-   "props": [
-    {
-     "prop": "control",
-     "design": "golden retriever",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 26,
     "textBox": {
-     "x": 855,
-     "y": 151.5,
-     "w": 107.5,
-     "h": 17
+     "x": 1119,
+     "y": 35,
+     "w": 10,
+     "h": 6
     },
+    "kind": "text"
+   },
+   "live": {
     "box": {
-     "x": 815,
-     "y": 140,
-     "w": 164.5,
-     "h": 40
+     "x": 1119,
+     "y": 37,
+     "w": 10,
+     "h": 6
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3501,
-     "nth": 0
+    "textBox": {
+     "x": 1119,
+     "y": 37,
+     "w": 10,
+     "h": 6
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3691,
-     "col": 7
-    }
+    "kind": "text"
    },
-   "live": null
+   "guide": {
+    "axis": "y",
+    "design": [
+     35
+    ],
+    "live": [
+     37,
+     34
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 40×13",
+     "design": {
+      "x": 1341,
+      "y": 34,
+      "w": 40,
+      "h": 13
+     },
+     "live": {
+      "x": 1332,
+      "y": 34,
+      "w": 52,
+      "h": 14
+     }
+    }
+   ]
   },
   {
-   "id": "missing:corgi#0",
+   "id": "missing:icon@8,2",
    "category": "missing",
-   "severity": "medium",
-   "text": "corgi",
-   "section": "Filters",
+   "severity": "low",
+   "text": "Icon 14×14",
+   "section": "at 120, 31",
    "props": [
     {
-     "prop": "control",
-     "design": "corgi",
+     "prop": "icon",
+     "design": "14×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 27,
-    "textBox": {
-     "x": 1031.5,
-     "y": 151.5,
-     "w": 34.3,
-     "h": 17
-    },
     "box": {
-     "x": 991.5,
-     "y": 140,
-     "w": 91.3,
-     "h": 40
+     "x": 120,
+     "y": 31,
+     "w": 14,
+     "h": 14
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3505,
-     "nth": 0
+    "textBox": {
+     "x": 120,
+     "y": 31,
+     "w": 14,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3692,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:cute#0",
+   "id": "missing:icon@8,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "cute",
-   "section": "Filters",
+   "severity": "low",
+   "text": "Icon 43×43",
+   "section": "at 99, 137",
    "props": [
     {
-     "prop": "control",
-     "design": "cute",
+     "prop": "icon",
+     "design": "43×43",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 28,
-    "textBox": {
-     "x": 1134.8,
-     "y": 151.5,
-     "w": 29.8,
-     "h": 17
-    },
     "box": {
-     "x": 1094.8,
-     "y": 140,
-     "w": 86.8,
-     "h": 40
+     "x": 99,
+     "y": 137,
+     "w": 43,
+     "h": 43
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3509,
-     "nth": 0
+    "textBox": {
+     "x": 99,
+     "y": 137,
+     "w": 43,
+     "h": 43
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3693,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:running#0",
+   "id": "missing:icon@21,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "running",
-   "section": "Filters",
+   "severity": "low",
+   "text": "Icon 12×16",
+   "section": "at 332, 152",
    "props": [
     {
-     "prop": "control",
-     "design": "running",
+     "prop": "icon",
+     "design": "12×16",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 29,
-    "textBox": {
-     "x": 1233.6,
-     "y": 151.5,
-     "w": 51.8,
-     "h": 17
-    },
     "box": {
-     "x": 1193.6,
-     "y": 140,
-     "w": 108.8,
-     "h": 40
+     "x": 332,
+     "y": 152,
+     "w": 12,
+     "h": 16
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3513,
-     "nth": 0
+    "textBox": {
+     "x": 332,
+     "y": 152,
+     "w": 12,
+     "h": 16
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3694,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:park#0",
+   "id": "missing:icon@11,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "park",
-   "section": "Filters",
+   "severity": "low",
+   "text": "Icon 14×14",
+   "section": "at 169, 153",
    "props": [
     {
-     "prop": "control",
-     "design": "park",
+     "prop": "icon",
+     "design": "14×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 30,
-    "textBox": {
-     "x": 1354.4,
-     "y": 151.5,
-     "w": 30.4,
-     "h": 17
-    },
     "box": {
-     "x": 1314.4,
-     "y": 140,
-     "w": 87.4,
-     "h": 40
-    },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3517,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3695,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:clear license filters#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Clear license filters",
-   "section": "Filters",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Clear license filters",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 23,
-    "textBox": {
-     "x": 481.3,
+     "x": 169,
      "y": 153,
      "w": 14,
      "h": 14
     },
-    "box": {
-     "x": 467.8,
-     "y": 141,
-     "w": 40,
-     "h": 38
+    "textBox": {
+     "x": 169,
+     "y": 153,
+     "w": 14,
+     "h": 14
     },
-    "section": "Filters",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3478,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3670,
-     "col": 9
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:amelia cruz amelia cruz 1,200 assets#0",
+   "id": "missing:icon@34,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Amelia Cruz Amelia Cruz 1,200 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Icon 14×14",
+   "section": "at 539, 153",
    "props": [
     {
-     "prop": "control",
-     "design": "Amelia Cruz Amelia Cruz 1,200 assets",
+     "prop": "icon",
+     "design": "14×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 32,
-    "textBox": {
-     "x": 99,
-     "y": 200,
-     "w": 357.1,
-     "h": 238.1
-    },
     "box": {
-     "x": 99,
-     "y": 200,
-     "w": 357.1,
-     "h": 238.1
+     "x": 539,
+     "y": 153,
+     "w": 14,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 0
+    "textBox": {
+     "x": 539,
+     "y": 153,
+     "w": 14,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:studio wren studio wren 3,337 assets#0",
+   "id": "missing:icon@70,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Studio Wren Studio Wren 3,337 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Icon 13×13",
+   "section": "at 1113, 154",
    "props": [
     {
-     "prop": "control",
-     "design": "Studio Wren Studio Wren 3,337 assets",
+     "prop": "icon",
+     "design": "13×13",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 33,
-    "textBox": {
-     "x": 476.1,
-     "y": 200,
-     "w": 190.5,
-     "h": 238.1
-    },
     "box": {
-     "x": 476.1,
-     "y": 200,
-     "w": 190.5,
-     "h": 238.1
+     "x": 1113,
+     "y": 154,
+     "w": 13,
+     "h": 13
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 1
+    "textBox": {
+     "x": 1113,
+     "y": 154,
+     "w": 13,
+     "h": 13
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "missing:jonas falk jonas falk 5,474 assets#0",
+   "id": "missing:text@14,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Jonas Falk Jonas Falk 5,474 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Jonas Falk Jonas Falk 5,474 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 34,
-    "textBox": {
-     "x": 686.6,
-     "y": 200,
-     "w": 285.7,
-     "h": 238.1
-    },
-    "box": {
-     "x": 686.6,
-     "y": 200,
-     "w": 285.7,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 2
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:priya nair priya nair 7,611 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Priya Nair Priya Nair 7,611 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Priya Nair Priya Nair 7,611 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 35,
-    "textBox": {
-     "x": 992.3,
-     "y": 200,
-     "w": 423.8,
-     "h": 238.1
-    },
-    "box": {
-     "x": 992.3,
-     "y": 200,
-     "w": 423.8,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 3
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:alerts#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Alerts",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Alerts",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 7,
-    "textBox": {
-     "x": 25,
-     "y": 356,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 356,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 53,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 491,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:tomas rivera tomas rivera 9,748 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Tomas Rivera Tomas Rivera 9,748 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Tomas Rivera Tomas Rivera 9,748 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 36,
-    "textBox": {
-     "x": 99,
-     "y": 458.1,
-     "w": 268.6,
-     "h": 268.6
-    },
-    "box": {
-     "x": 99,
-     "y": 458.1,
-     "w": 268.6,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 4
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:elin sørensen elin sørensen 11,885 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Elin Sørensen Elin Sørensen 11,885 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Elin Sørensen Elin Sørensen 11,885 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 37,
-    "textBox": {
-     "x": 387.6,
-     "y": 458.1,
-     "w": 201.4,
-     "h": 268.6
-    },
-    "box": {
-     "x": 387.6,
-     "y": 458.1,
-     "w": 201.4,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 5
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:marta kowalska marta kowalska 14,022 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Marta Kowalska Marta Kowalska 14,022 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Marta Kowalska Marta Kowalska 14,022 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 38,
-    "textBox": {
-     "x": 609,
-     "y": 458.1,
-     "w": 357.2,
-     "h": 268.6
-    },
-    "box": {
-     "x": 609,
-     "y": 458.1,
-     "w": 357.2,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 6
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:dev patel dev patel 16,159 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Dev Patel Dev Patel 16,159 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Dev Patel Dev Patel 16,159 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 39,
-    "textBox": {
-     "x": 986.3,
-     "y": 458.1,
-     "w": 429.8,
-     "h": 268.6
-    },
-    "box": {
-     "x": 986.3,
-     "y": 458.1,
-     "w": 429.8,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 7
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:sponsored results#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Sponsored results",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 70×14",
+   "section": "at 192, 155",
    "props": [
     {
      "prop": "text",
-     "design": "Sponsored results",
+     "design": "70×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 40,
-    "textBox": {
-     "x": 121,
-     "y": 768.7,
-     "w": 158.9,
-     "h": 16
-    },
     "box": {
-     "x": 121,
-     "y": 768.7,
-     "w": 158.9,
-     "h": 16
+     "x": 192,
+     "y": 155,
+     "w": 70,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3644,
-     "nth": 7
+    "textBox": {
+     "x": 192,
+     "y": 155,
+     "w": 70,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3842,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:view more#0",
+   "id": "missing:text@25,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "View More",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 74×14",
+   "section": "at 355, 155",
    "props": [
     {
-     "prop": "control",
-     "design": "View More",
+     "prop": "text",
+     "design": "74×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 41,
-    "textBox": {
-     "x": 1267.5,
-     "y": 923.2,
-     "w": 72.2,
-     "h": 17
-    },
     "box": {
-     "x": 1236.1,
-     "y": 890.7,
-     "w": 157.9,
-     "h": 82
+     "x": 355,
+     "y": 155,
+     "w": 74,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3649,
-     "nth": 231
+    "textBox": {
+     "x": 355,
+     "y": 155,
+     "w": 74,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3848,
-     "col": 17
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:amelia cruz amelia cruz 18,296 assets#0",
+   "id": "missing:text@37,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Amelia Cruz Amelia Cruz 18,296 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 75×12",
+   "section": "at 562, 155",
    "props": [
     {
-     "prop": "control",
-     "design": "Amelia Cruz Amelia Cruz 18,296 assets",
+     "prop": "text",
+     "design": "75×12",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 42,
-    "textBox": {
-     "x": 99,
-     "y": 1018.7,
-     "w": 274.9,
-     "h": 249.9
-    },
     "box": {
-     "x": 99,
-     "y": 1018.7,
-     "w": 274.9,
-     "h": 249.9
+     "x": 562,
+     "y": 155,
+     "w": 75,
+     "h": 12
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 8
+    "textBox": {
+     "x": 562,
+     "y": 155,
+     "w": 75,
+     "h": 12
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:studio wren studio wren 20,433 assets#0",
+   "id": "missing:text@57,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Studio Wren Studio Wren 20,433 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 108×14",
+   "section": "at 855, 155",
    "props": [
     {
-     "prop": "control",
-     "design": "Studio Wren Studio Wren 20,433 assets",
+     "prop": "text",
+     "design": "108×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 43,
-    "textBox": {
-     "x": 393.9,
-     "y": 1018.7,
-     "w": 224.9,
-     "h": 249.9
-    },
     "box": {
-     "x": 393.9,
-     "y": 1018.7,
-     "w": 224.9,
-     "h": 249.9
+     "x": 855,
+     "y": 155,
+     "w": 108,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 9
+    "textBox": {
+     "x": 855,
+     "y": 155,
+     "w": 108,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:jonas falk jonas falk 22,570 assets#0",
+   "id": "missing:text@66,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Jonas Falk Jonas Falk 22,570 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 33×14",
+   "section": "at 1032, 155",
    "props": [
     {
-     "prop": "control",
-     "design": "Jonas Falk Jonas Falk 22,570 assets",
+     "prop": "text",
+     "design": "33×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 44,
-    "textBox": {
-     "x": 638.8,
-     "y": 1018.7,
-     "w": 444.8,
-     "h": 249.9
-    },
     "box": {
-     "x": 638.8,
-     "y": 1018.7,
-     "w": 444.8,
-     "h": 249.9
+     "x": 1032,
+     "y": 155,
+     "w": 33,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 10
+    "textBox": {
+     "x": 1032,
+     "y": 155,
+     "w": 33,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:priya nair priya nair 24,707 assets#0",
+   "id": "missing:text@79,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Priya Nair Priya Nair 24,707 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 51×14",
+   "section": "at 1234, 155",
    "props": [
     {
-     "prop": "control",
-     "design": "Priya Nair Priya Nair 24,707 assets",
+     "prop": "text",
+     "design": "51×14",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 45,
-    "textBox": {
-     "x": 1103.6,
-     "y": 1018.7,
-     "w": 312.4,
-     "h": 249.9
-    },
     "box": {
-     "x": 1103.6,
-     "y": 1018.7,
-     "w": 312.4,
-     "h": 249.9
+     "x": 1234,
+     "y": 155,
+     "w": 51,
+     "h": 14
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 11
+    "textBox": {
+     "x": 1234,
+     "y": 155,
+     "w": 51,
+     "h": 14
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:tomas rivera tomas rivera 26,844 assets#0",
+   "id": "missing:text@72,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Tomas Rivera Tomas Rivera 26,844 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 30×11",
+   "section": "at 1135, 156",
    "props": [
     {
-     "prop": "control",
-     "design": "Tomas Rivera Tomas Rivera 26,844 assets",
+     "prop": "text",
+     "design": "30×11",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 46,
-    "textBox": {
-     "x": 99,
-     "y": 1288.6,
-     "w": 401.2,
-     "h": 267.5
-    },
     "box": {
-     "x": 99,
-     "y": 1288.6,
-     "w": 401.2,
-     "h": 267.5
+     "x": 1135,
+     "y": 156,
+     "w": 30,
+     "h": 11
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 12
+    "textBox": {
+     "x": 1135,
+     "y": 156,
+     "w": 30,
+     "h": 11
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:elin sørensen elin sørensen 28,981 assets#0",
+   "id": "missing:text@48,10",
    "category": "missing",
-   "severity": "medium",
-   "text": "Elin Sørensen Elin Sørensen 28,981 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 42×11",
+   "section": "at 744, 158",
    "props": [
     {
-     "prop": "control",
-     "design": "Elin Sørensen Elin Sørensen 28,981 assets",
+     "prop": "text",
+     "design": "42×11",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 47,
-    "textBox": {
-     "x": 520.2,
-     "y": 1288.6,
-     "w": 214,
-     "h": 267.5
-    },
     "box": {
-     "x": 520.2,
-     "y": 1288.6,
-     "w": 214,
-     "h": 267.5
+     "x": 744,
+     "y": 158,
+     "w": 42,
+     "h": 11
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 13
+    "textBox": {
+     "x": 744,
+     "y": 158,
+     "w": 42,
+     "h": 11
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:marta kowalska marta kowalska 31,118 assets#0",
+   "id": "missing:text@88,13",
    "category": "missing",
-   "severity": "medium",
-   "text": "Marta Kowalska Marta Kowalska 31,118 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Text 24×12",
+   "section": "at 1390, 200",
    "props": [
     {
-     "prop": "control",
-     "design": "Marta Kowalska Marta Kowalska 31,118 assets",
+     "prop": "text",
+     "design": "24×12",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 48,
-    "textBox": {
-     "x": 754.1,
-     "y": 1288.6,
-     "w": 374.4,
-     "h": 267.5
-    },
     "box": {
-     "x": 754.1,
-     "y": 1288.6,
-     "w": 374.4,
-     "h": 267.5
+     "x": 1390,
+     "y": 200,
+     "w": 24,
+     "h": 12
     },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 14
+    "textBox": {
+     "x": 1390,
+     "y": 200,
+     "w": 24,
+     "h": 12
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "missing:dev patel dev patel 33,255 assets#0",
+   "id": "missing:icon@2,23",
    "category": "missing",
-   "severity": "medium",
-   "text": "Dev Patel Dev Patel 33,255 assets",
-   "section": "Image results",
+   "severity": "low",
+   "text": "Icon 20×22",
+   "section": "at 27, 357",
    "props": [
     {
-     "prop": "control",
-     "design": "Dev Patel Dev Patel 33,255 assets",
+     "prop": "icon",
+     "design": "20×22",
      "live": "not found",
-     "sev": "medium"
+     "sev": "low"
     }
    ],
    "design": {
-    "n": 49,
-    "textBox": {
-     "x": 1148.5,
-     "y": 1288.6,
-     "w": 267.5,
-     "h": 267.5
-    },
     "box": {
-     "x": 1148.5,
-     "y": 1288.6,
-     "w": 267.5,
-     "h": 267.5
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 15
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:amelia cruz amelia cruz 35,392 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Amelia Cruz Amelia Cruz 35,392 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Amelia Cruz Amelia Cruz 35,392 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 50,
-    "textBox": {
-     "x": 99,
-     "y": 1576,
-     "w": 429.5,
-     "h": 241.3
-    },
-    "box": {
-     "x": 99,
-     "y": 1576,
-     "w": 429.5,
-     "h": 241.3
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 16
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:studio wren studio wren 37,529 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Studio Wren Studio Wren 37,529 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Studio Wren Studio Wren 37,529 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 51,
-    "textBox": {
-     "x": 548.5,
-     "y": 1576,
-     "w": 289.5,
-     "h": 241.3
-    },
-    "box": {
-     "x": 548.5,
-     "y": 1576,
-     "w": 289.5,
-     "h": 241.3
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 17
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:jonas falk jonas falk 39,666 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Jonas Falk Jonas Falk 39,666 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Jonas Falk Jonas Falk 39,666 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 52,
-    "textBox": {
-     "x": 858,
-     "y": 1576,
-     "w": 217.1,
-     "h": 241.3
-    },
-    "box": {
-     "x": 858,
-     "y": 1576,
-     "w": 217.1,
-     "h": 241.3
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 18
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:priya nair priya nair 41,803 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Priya Nair Priya Nair 41,803 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Priya Nair Priya Nair 41,803 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 53,
-    "textBox": {
-     "x": 1095.1,
-     "y": 1576,
-     "w": 320.9,
-     "h": 241.3
-    },
-    "box": {
-     "x": 1095.1,
-     "y": 1576,
-     "w": 320.9,
-     "h": 241.3
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 19
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:tomas rivera tomas rivera 1,940 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Tomas Rivera Tomas Rivera 1,940 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Tomas Rivera Tomas Rivera 1,940 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 54,
-    "textBox": {
-     "x": 99,
-     "y": 1837.3,
-     "w": 380.9,
-     "h": 253.9
-    },
-    "box": {
-     "x": 99,
-     "y": 1837.3,
-     "w": 380.9,
-     "h": 253.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 20
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:elin sørensen elin sørensen 4,077 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Elin Sørensen Elin Sørensen 4,077 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Elin Sørensen Elin Sørensen 4,077 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 55,
-    "textBox": {
-     "x": 499.9,
-     "y": 1837.3,
-     "w": 279.3,
-     "h": 253.9
-    },
-    "box": {
-     "x": 499.9,
-     "y": 1837.3,
-     "w": 279.3,
-     "h": 253.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 21
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:marta kowalska marta kowalska 6,214 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Marta Kowalska Marta Kowalska 6,214 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Marta Kowalska Marta Kowalska 6,214 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 56,
-    "textBox": {
-     "x": 799.3,
-     "y": 1837.3,
-     "w": 190.5,
-     "h": 253.9
-    },
-    "box": {
-     "x": 799.3,
-     "y": 1837.3,
-     "w": 190.5,
-     "h": 253.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 22
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:dev patel dev patel 8,351 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Dev Patel Dev Patel 8,351 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Dev Patel Dev Patel 8,351 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 57,
-    "textBox": {
-     "x": 1009.7,
-     "y": 1837.3,
-     "w": 406.3,
-     "h": 253.9
-    },
-    "box": {
-     "x": 1009.7,
-     "y": 1837.3,
-     "w": 406.3,
-     "h": 253.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 23
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:amelia cruz amelia cruz 10,488 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Amelia Cruz Amelia Cruz 10,488 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Amelia Cruz Amelia Cruz 10,488 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 58,
-    "textBox": {
-     "x": 99,
-     "y": 2111.2,
-     "w": 357.1,
-     "h": 238.1
-    },
-    "box": {
-     "x": 99,
-     "y": 2111.2,
-     "w": 357.1,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 24
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:studio wren studio wren 12,625 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Studio Wren Studio Wren 12,625 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Studio Wren Studio Wren 12,625 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 59,
-    "textBox": {
-     "x": 476.1,
-     "y": 2111.2,
-     "w": 190.5,
-     "h": 238.1
-    },
-    "box": {
-     "x": 476.1,
-     "y": 2111.2,
-     "w": 190.5,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 25
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:jonas falk jonas falk 14,762 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Jonas Falk Jonas Falk 14,762 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Jonas Falk Jonas Falk 14,762 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 60,
-    "textBox": {
-     "x": 686.6,
-     "y": 2111.2,
-     "w": 285.7,
-     "h": 238.1
-    },
-    "box": {
-     "x": 686.6,
-     "y": 2111.2,
-     "w": 285.7,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 26
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:priya nair priya nair 16,899 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Priya Nair Priya Nair 16,899 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Priya Nair Priya Nair 16,899 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 61,
-    "textBox": {
-     "x": 992.3,
-     "y": 2111.2,
-     "w": 423.8,
-     "h": 238.1
-    },
-    "box": {
-     "x": 992.3,
-     "y": 2111.2,
-     "w": 423.8,
-     "h": 238.1
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 27
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:tomas rivera tomas rivera 19,036 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Tomas Rivera Tomas Rivera 19,036 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Tomas Rivera Tomas Rivera 19,036 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 62,
-    "textBox": {
-     "x": 99,
-     "y": 2369.3,
-     "w": 268.6,
-     "h": 268.6
-    },
-    "box": {
-     "x": 99,
-     "y": 2369.3,
-     "w": 268.6,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 28
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:elin sørensen elin sørensen 21,173 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Elin Sørensen Elin Sørensen 21,173 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Elin Sørensen Elin Sørensen 21,173 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 63,
-    "textBox": {
-     "x": 387.6,
-     "y": 2369.3,
-     "w": 201.4,
-     "h": 268.6
-    },
-    "box": {
-     "x": 387.6,
-     "y": 2369.3,
-     "w": 201.4,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 29
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:marta kowalska marta kowalska 23,310 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Marta Kowalska Marta Kowalska 23,310 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Marta Kowalska Marta Kowalska 23,310 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 64,
-    "textBox": {
-     "x": 609,
-     "y": 2369.3,
-     "w": 357.2,
-     "h": 268.6
-    },
-    "box": {
-     "x": 609,
-     "y": 2369.3,
-     "w": 357.2,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 30
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:dev patel dev patel 25,447 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Dev Patel Dev Patel 25,447 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Dev Patel Dev Patel 25,447 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 65,
-    "textBox": {
-     "x": 986.3,
-     "y": 2369.3,
-     "w": 429.8,
-     "h": 268.6
-    },
-    "box": {
-     "x": 986.3,
-     "y": 2369.3,
-     "w": 429.8,
-     "h": 268.6
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 31
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:amelia cruz amelia cruz 27,584 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Amelia Cruz Amelia Cruz 27,584 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Amelia Cruz Amelia Cruz 27,584 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 66,
-    "textBox": {
-     "x": 99,
-     "y": 2657.9,
-     "w": 274.9,
-     "h": 249.9
-    },
-    "box": {
-     "x": 99,
-     "y": 2657.9,
-     "w": 274.9,
-     "h": 249.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 32
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:studio wren studio wren 29,721 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Studio Wren Studio Wren 29,721 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Studio Wren Studio Wren 29,721 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 67,
-    "textBox": {
-     "x": 393.9,
-     "y": 2657.9,
-     "w": 224.9,
-     "h": 249.9
-    },
-    "box": {
-     "x": 393.9,
-     "y": 2657.9,
-     "w": 224.9,
-     "h": 249.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 33
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:jonas falk jonas falk 31,858 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Jonas Falk Jonas Falk 31,858 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Jonas Falk Jonas Falk 31,858 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 68,
-    "textBox": {
-     "x": 638.8,
-     "y": 2657.9,
-     "w": 444.8,
-     "h": 249.9
-    },
-    "box": {
-     "x": 638.8,
-     "y": 2657.9,
-     "w": 444.8,
-     "h": 249.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 34
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:priya nair priya nair 33,995 assets#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Priya Nair Priya Nair 33,995 assets",
-   "section": "Image results",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Priya Nair Priya Nair 33,995 assets",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 69,
-    "textBox": {
-     "x": 1103.6,
-     "y": 2657.9,
-     "w": 312.4,
-     "h": 249.9
-    },
-    "box": {
-     "x": 1103.6,
-     "y": 2657.9,
-     "w": 312.4,
-     "h": 249.9
-    },
-    "section": "Image results",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3613,
-     "nth": 35
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3800,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:menu#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Menu",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Menu",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 8,
-    "textBox": {
-     "x": 26,
-     "y": 2945,
-     "w": 22,
+     "x": 27,
+     "y": 357,
+     "w": 20,
      "h": 22
     },
-    "box": {
-     "x": 26,
-     "y": 2945,
-     "w": 22,
+    "textBox": {
+     "x": 27,
+     "y": 357,
+     "w": 20,
      "h": 22
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 60,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 498,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": null
   },
   {
-   "id": "typography:join pro#0",
-   "category": "typography",
-   "severity": "low",
-   "text": "Join Pro",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~17px)",
-     "live": "14px",
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "n": 14,
-    "textBox": {
-     "x": 1200.5,
-     "y": 29.5,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1166,
-     "y": 14,
-     "w": 124,
-     "h": 48
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3349,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3553,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 12,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1164.4,
-     "y": 16,
-     "w": 118.9,
-     "h": 48
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "shape:search#0",
-   "category": "shape",
-   "severity": "low",
-   "text": "Search",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "border",
-     "design": "1px ring #ffffff / 20%",
-     "live": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "n": 3,
-    "textBox": {
-     "x": 25,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12,
-     "y": 136,
-     "w": 50,
-     "h": 48
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 29,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 475,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 2,
-    "textBox": {
-     "x": 25.5,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12.5,
-     "y": 136,
-     "w": 50,
-     "h": 48
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "spacing:dog#0",
-   "category": "spacing",
-   "severity": "low",
-   "text": "Dog",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "gap right → “Clear search”",
-     "design": "9px",
-     "live": "12px",
-     "sev": "low",
-     "ref": 11
-    }
-   ],
-   "design": {
-    "n": 10,
-    "textBox": {
-     "x": 295,
-     "y": 18,
-     "w": 647.3,
-     "h": 40
-    },
-    "box": {
-     "x": 295,
-     "y": 18,
-     "w": 647.3,
-     "h": 40
-    },
-    "section": "Top bar",
-    "where": null
-   },
-   "live": {
-    "n": 9,
-    "textBox": {
-     "x": 288.2,
-     "y": 21,
-     "w": 628.5,
-     "h": 38
-    },
-    "box": {
-     "x": 288.2,
-     "y": 21,
-     "w": 628.5,
-     "h": 38
-    },
-    "section": "input#search_fullwidth",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:join pro#0",
-   "category": "behavior",
-   "severity": "low",
-   "text": "Join Pro",
-   "section": "Top bar",
-   "props": [
-    {
-     "prop": "hover backgroundImage",
-     "design": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%) → linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%)",
-     "live": "linear-gradient(-89deg, #fb00ff, #fd3198 32%, #fe4d5d 70%, #ff7900) → linear-gradient(-89deg, #e905ed, #e5289d 24%, #ee4556 67%, #f87600)",
-     "swatch": false,
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "n": 14,
-    "textBox": {
-     "x": 1200.5,
-     "y": 29.5,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1166,
-     "y": 14,
-     "w": 124,
-     "h": 48
-    },
-    "section": "Top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3349,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3553,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 12,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1164.4,
-     "y": 16,
-     "w": 118.9,
-     "h": 48
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "missing:royalty free vector graphics matching#0",
+   "id": "missing:text@88,132",
    "category": "missing",
    "severity": "low",
-   "text": "royalty free vector graphics matching",
-   "section": "main",
+   "text": "Text 24×12",
+   "section": "at 1390, 2111",
    "props": [
     {
      "prop": "text",
-     "design": "royalty free vector graphics matching",
+     "design": "24×12",
      "live": "not found",
      "sev": "low"
     }
    ],
    "design": {
-    "n": 17,
-    "textBox": {
-     "x": 294.8,
-     "y": 102,
-     "w": 248.3,
-     "h": 17
-    },
     "box": {
-     "x": 294.8,
-     "y": 102,
-     "w": 248.3,
-     "h": 17
+     "x": 1390,
+     "y": 2111,
+     "w": 24,
+     "h": 12
     },
-    "section": "main",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 3449,
-     "nth": 0
+    "textBox": {
+     "x": 1390,
+     "y": 2111,
+     "w": 24,
+     "h": 12
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 3650,
-     "col": 7
-    }
+    "kind": "text"
    },
    "live": null
   },
   {
-   "id": "extra:live:search#0",
-   "category": "extra",
+   "id": "missing:line@57,183",
+   "category": "missing",
    "severity": "low",
-   "text": "Search",
-   "section": "form",
+   "text": "Divider 286×2",
+   "section": "at 766, 2928",
    "props": [
     {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Search",
+     "prop": "divider",
+     "design": "286×2",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 8,
-    "textBox": {
-     "x": 252.2,
-     "y": 28,
-     "w": 24,
-     "h": 24
-    },
+   "design": {
     "box": {
-     "x": 252.2,
-     "y": 28,
-     "w": 24,
-     "h": 24
+     "x": 766,
+     "y": 2928,
+     "w": 286,
+     "h": 2
     },
-    "section": "form",
-    "where": null
-   }
+    "textBox": {
+     "x": 766,
+     "y": 2928,
+     "w": 286,
+     "h": 2
+    },
+    "kind": "line"
+   },
+   "live": null
   },
   {
-   "id": "extra:live:photos#0",
-   "category": "extra",
+   "id": "missing:text@25,185",
+   "category": "missing",
    "severity": "low",
-   "text": "Photos",
-   "section": "form",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Photos",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 7,
-    "textBox": {
-     "x": 150,
-     "y": 31,
-     "w": 53.2,
-     "h": 18
-    },
-    "box": {
-     "x": 105,
-     "y": 21,
-     "w": 135.2,
-     "h": 38
-    },
-    "section": "form",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:sign up#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Sign Up",
-   "section": "header",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Sign Up",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 13,
-    "textBox": {
-     "x": 1331.3,
-     "y": 31,
-     "w": 52.7,
-     "h": 17
-    },
-    "box": {
-     "x": 1299.3,
-     "y": 16,
-     "w": 116.7,
-     "h": 48
-    },
-    "section": "header",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog photos & images#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Dog Photos & Images",
-   "section": "h1#search-results__meta__search-term-headline",
+   "text": "Text 31×17",
+   "section": "at 383, 2952",
    "props": [
     {
      "prop": "text",
-     "design": "not in design",
-     "live": "Dog Photos & Images",
+     "design": "31×17",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 14,
-    "textBox": {
-     "x": 108,
-     "y": 97.5,
-     "w": 258.9,
-     "h": 30
-    },
+   "design": {
     "box": {
-     "x": 108,
-     "y": 97.5,
-     "w": 258.9,
-     "h": 30
+     "x": 383,
+     "y": 2952,
+     "w": 31,
+     "h": 17
     },
-    "section": "h1#search-results__meta__search-term-headline",
-    "where": null
-   }
+    "textBox": {
+     "x": 383,
+     "y": 2952,
+     "w": 31,
+     "h": 17
+    },
+    "kind": "text"
+   },
+   "live": null
   },
   {
-   "id": "extra:live:high resolution, royalty free stock photos and p#0",
-   "category": "extra",
+   "id": "missing:text@27,187",
+   "category": "missing",
    "severity": "low",
-   "text": "high resolution, royalty free stock photos and pictures matching",
-   "section": null,
+   "text": "Text 22×15",
+   "section": "at 428, 2985",
    "props": [
     {
      "prop": "text",
-     "design": "not in design",
-     "live": "high resolution, royalty free stock photos and pictures matching",
+     "design": "22×15",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 15,
-    "textBox": {
-     "x": 419.5,
-     "y": 108.5,
-     "w": 428.8,
-     "h": 17
-    },
+   "design": {
     "box": {
-     "x": 419.5,
-     "y": 108.5,
-     "w": 428.8,
-     "h": 17
-    },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:4,089#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "4,089",
-   "section": null,
-   "props": [
-    {
-     "prop": "text",
-     "design": "not in design",
-     "live": "4,089",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 16,
-    "textBox": {
-     "x": 379,
-     "y": 108.5,
-     "w": 40.5,
-     "h": 17
-    },
-    "box": {
-     "x": 379,
-     "y": 108.5,
-     "w": 40.5,
-     "h": 17
-    },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:ad#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Ad",
-   "section": null,
-   "props": [
-    {
-     "prop": "text",
-     "design": "not in design",
-     "live": "Ad",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 18,
-    "textBox": {
-     "x": 129,
-     "y": 151,
-     "w": 17.4,
+     "x": 428,
+     "y": 2985,
+     "w": 22,
      "h": 15
     },
+    "textBox": {
+     "x": 428,
+     "y": 2985,
+     "w": 22,
+     "h": 15
+    },
+    "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:text@43,187",
+   "category": "missing",
+   "severity": "low",
+   "text": "Text 23×9",
+   "section": "at 670, 2991",
+   "props": [
+    {
+     "prop": "text",
+     "design": "23×9",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
     "box": {
-     "x": 125,
-     "y": 151,
-     "w": 25.4,
+     "x": 670,
+     "y": 2991,
+     "w": 23,
+     "h": 9
+    },
+    "textBox": {
+     "x": 670,
+     "y": 2991,
+     "w": 23,
+     "h": 9
+    },
+    "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "extra:live:icon@8,3",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 20×16",
+   "section": "at 122, 32",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "20×16",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 122,
+     "y": 32,
+     "w": 20,
      "h": 16
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 122,
+     "y": 32,
+     "w": 20,
+     "h": 16
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:sponsored results#0",
+   "id": "extra:live:panel@13,28",
    "category": "extra",
    "severity": "low",
-   "text": "Sponsored Results",
-   "section": null,
+   "text": "Panel 108×40",
+   "section": "at 160, 427",
    "props": [
     {
-     "prop": "text",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Sponsored Results",
+     "live": "108×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 19,
-    "textBox": {
-     "x": 158.4,
-     "y": 151,
-     "w": 138.6,
-     "h": 15
-    },
-    "box": {
-     "x": 158.4,
-     "y": 151,
-     "w": 138.6,
-     "h": 15
-    },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:view more#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "View More",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "View More",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 36,
-    "textBox": {
-     "x": 1265.6,
-     "y": 334.5,
-     "w": 81.8,
-     "h": 17
-    },
-    "box": {
-     "x": 1244,
-     "y": 299,
-     "w": 145,
-     "h": 88
-    },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:vectors#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Vectors",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Vectors",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 39,
-    "textBox": {
-     "x": 200,
-     "y": 438.5,
-     "w": 51.9,
-     "h": 17
-    },
     "box": {
      "x": 160,
      "y": 427,
-     "w": 107.9,
+     "w": 108,
      "h": 40
     },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:videos#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Videos",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Videos",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 40,
     "textBox": {
-     "x": 319.9,
-     "y": 438.5,
-     "w": 46.3,
-     "h": 17
-    },
-    "box": {
-     "x": 279.9,
+     "x": 160,
      "y": 427,
-     "w": 102.3,
+     "w": 108,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:pngs#0",
+   "id": "extra:live:panel@21,28",
    "category": "extra",
    "severity": "low",
-   "text": "PNGs",
-   "section": null,
+   "text": "Panel 102×40",
+   "section": "at 280, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "PNGs",
+     "live": "102×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 41,
-    "textBox": {
-     "x": 434.3,
-     "y": 438.5,
-     "w": 37.6,
-     "h": 17
-    },
     "box": {
-     "x": 394.3,
+     "x": 280,
      "y": 427,
-     "w": 93.6,
+     "w": 102,
      "h": 40
     },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:hot dog#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "hot dog",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "hot dog",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 42,
     "textBox": {
-     "x": 539.8,
-     "y": 438.5,
-     "w": 51.8,
-     "h": 17
-    },
-    "box": {
-     "x": 499.8,
+     "x": 280,
      "y": 427,
-     "w": 107.8,
+     "w": 102,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:happy dog#0",
+   "id": "extra:live:panel@28,28",
    "category": "extra",
    "severity": "low",
-   "text": "happy dog",
-   "section": null,
+   "text": "Panel 94×40",
+   "section": "at 394, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "happy dog",
+     "live": "94×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 43,
-    "textBox": {
-     "x": 659.6,
-     "y": 438.5,
-     "w": 71,
-     "h": 17
-    },
     "box": {
-     "x": 619.6,
+     "x": 394,
      "y": 427,
-     "w": 127,
+     "w": 94,
      "h": 40
     },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:cute dog#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "cute dog",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "cute dog",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 44,
     "textBox": {
-     "x": 798.6,
-     "y": 438.5,
-     "w": 59.3,
-     "h": 17
-    },
-    "box": {
-     "x": 758.6,
+     "x": 394,
      "y": 427,
-     "w": 115.3,
+     "w": 94,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog food#0",
+   "id": "extra:live:panel@35,28",
    "category": "extra",
    "severity": "low",
-   "text": "dog food",
-   "section": null,
+   "text": "Panel 108×40",
+   "section": "at 500, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "dog food",
+     "live": "108×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 45,
-    "textBox": {
-     "x": 925.9,
-     "y": 438.5,
-     "w": 60.1,
-     "h": 17
-    },
     "box": {
-     "x": 885.9,
+     "x": 500,
      "y": 427,
-     "w": 116.1,
+     "w": 108,
      "h": 40
     },
-    "section": null,
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog grooming#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "dog grooming",
-   "section": null,
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "dog grooming",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 46,
     "textBox": {
-     "x": 1054,
-     "y": 438.5,
-     "w": 93.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1014,
+     "x": 500,
      "y": 427,
-     "w": 149.9,
+     "w": 108,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog training#0",
+   "id": "extra:live:panel@59,28",
    "category": "extra",
    "severity": "low",
-   "text": "dog training",
-   "section": null,
+   "text": "Panel 116×40",
+   "section": "at 886, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "dog training",
+     "live": "116×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 47,
-    "textBox": {
-     "x": 1216,
-     "y": 438.5,
-     "w": 81.3,
-     "h": 17
-    },
     "box": {
-     "x": 1176,
+     "x": 886,
      "y": 427,
-     "w": 137.3,
+     "w": 116,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 886,
+     "y": 427,
+     "w": 116,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:next#0",
+   "id": "extra:live:panel@85,28",
    "category": "extra",
    "severity": "low",
-   "text": "Next",
-   "section": null,
+   "text": "Panel 83×40",
+   "section": "at 1325, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Next",
+     "live": "83×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 49,
-    "textBox": {
-     "x": 1380,
-     "y": 439,
-     "w": 16,
-     "h": 16
-    },
     "box": {
-     "x": 1380,
-     "y": 439,
-     "w": 16,
-     "h": 16
+     "x": 1325,
+     "y": 427,
+     "w": 83,
+     "h": 40
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 1325,
+     "y": 427,
+     "w": 83,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:filters#0",
+   "id": "extra:live:panel@8,28",
    "category": "extra",
    "severity": "low",
-   "text": "Filters",
-   "section": null,
+   "text": "Panel 40×40",
+   "section": "at 108, 427",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Filters",
+     "live": "40×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 38,
-    "textBox": {
-     "x": 120.3,
-     "y": 439.3,
-     "w": 15.4,
-     "h": 15.4
-    },
     "box": {
      "x": 108,
      "y": 427,
      "w": 40,
      "h": 40
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 108,
+     "y": 427,
+     "w": 40,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:funny dog#0",
+   "id": "extra:live:icon@8,28",
    "category": "extra",
    "severity": "low",
-   "text": "funny dog",
-   "section": null,
+   "text": "Icon 13×14",
+   "section": "at 121, 440",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "funny dog",
+     "live": "13×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 48,
+    "box": {
+     "x": 121,
+     "y": 440,
+     "w": 13,
+     "h": 14
+    },
     "textBox": {
-     "x": 1343.3,
+     "x": 121,
+     "y": 440,
+     "w": 13,
+     "h": 14
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:icon@12,28",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 14×14",
+   "section": "at 178, 440",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "14×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 178,
      "y": 440,
      "w": 14,
      "h": 14
     },
-    "box": {
-     "x": 1325.3,
-     "y": 427,
-     "w": 123.8,
-     "h": 40
+    "textBox": {
+     "x": 178,
+     "y": 440,
+     "w": 14,
+     "h": 14
     },
-    "section": null,
-    "where": null
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:a cute brown dog lying and relaxing on the beach#0",
+   "id": "extra:live:icon@19,28",
    "category": "extra",
    "severity": "low",
-   "text": "A cute brown dog lying and relaxing on the beach full of sand close to the seaside waiting for the owner or looking for something by the sea. Vacation holida…",
-   "section": "ul#grid9531",
+   "text": "Icon 14×14",
+   "section": "at 298, 440",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "A cute brown dog lying and relaxing on the beach full of sand close to the seaside waiting for the owner or looking for something by the sea. Vacation holida…",
+     "live": "14×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 50,
-    "textBox": {
-     "x": 108,
-     "y": 485,
-     "w": 422,
-     "h": 282
-    },
     "box": {
-     "x": 108,
-     "y": 485,
-     "w": 422,
-     "h": 282
+     "x": 298,
+     "y": 440,
+     "w": 14,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 298,
+     "y": 440,
+     "w": 14,
+     "h": 14
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:english springer spaniel hunting dog breed.#0",
+   "id": "extra:live:icon@26,28",
    "category": "extra",
    "severity": "low",
-   "text": "English Springer Spaniel hunting dog breed.",
-   "section": "ul#grid9531",
+   "text": "Icon 14×14",
+   "section": "at 412, 440",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "English Springer Spaniel hunting dog breed.",
+     "live": "14×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 52,
-    "textBox": {
-     "x": 546,
-     "y": 485,
-     "w": 422,
-     "h": 282
-    },
     "box": {
-     "x": 546,
-     "y": 485,
-     "w": 422,
-     "h": 282
+     "x": 412,
+     "y": 440,
+     "w": 14,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 412,
+     "y": 440,
+     "w": 14,
+     "h": 14
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:close-up portrait of tricolor australian shepher#0",
+   "id": "extra:live:icon@33,28",
    "category": "extra",
    "severity": "low",
-   "text": "Close-up portrait of tricolor australian shepherd dog lying on the table of a natural eye park around him",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 519, 441",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "Close-up portrait of tricolor australian shepherd dog lying on the table of a natural eye park around him",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 54,
-    "textBox": {
-     "x": 984,
-     "y": 485,
-     "w": 422,
-     "h": 282
-    },
     "box": {
-     "x": 984,
-     "y": 485,
-     "w": 422,
-     "h": 282
+     "x": 519,
+     "y": 441,
+     "w": 12,
+     "h": 12
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 519,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:brown short hair chihuahua dog sitting on green #0",
+   "id": "extra:live:icon@40,28",
    "category": "extra",
    "severity": "low",
-   "text": "brown short hair Chihuahua dog sitting on green grass in the garden with yellow flowers blackground, looking at camera.",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 639, 441",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "brown short hair Chihuahua dog sitting on green grass in the garden with yellow flowers blackground, looking at camera.",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 56,
-    "textBox": {
-     "x": 108,
-     "y": 783,
-     "w": 451,
-     "h": 272
-    },
     "box": {
-     "x": 108,
-     "y": 783,
-     "w": 451,
-     "h": 272
+     "x": 639,
+     "y": 441,
+     "w": 12,
+     "h": 12
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 639,
+     "y": 441,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:emotional support animal concept. sleeping pomer#0",
+   "id": "extra:live:text@21,28",
    "category": "extra",
    "severity": "low",
-   "text": "Emotional support animal concept. Sleeping Pomeranian dog in floor. pet is rest. Close up, copy space, background",
-   "section": "ul#grid9531",
+   "text": "Text 46×12",
+   "section": "at 320, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Emotional support animal concept. Sleeping Pomeranian dog in floor. pet is rest. Close up, copy space, background",
+     "live": "46×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 58,
-    "textBox": {
-     "x": 575,
-     "y": 783,
-     "w": 408,
-     "h": 272
-    },
     "box": {
-     "x": 575,
-     "y": 783,
-     "w": 408,
-     "h": 272
+     "x": 320,
+     "y": 442,
+     "w": 46,
+     "h": 12
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 320,
+     "y": 442,
+     "w": 46,
+     "h": 12
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:siberian husky puppy lying on sofa in living roo#0",
+   "id": "extra:live:text@28,28",
    "category": "extra",
    "severity": "low",
-   "text": "Siberian husky puppy lying on sofa in living room. Dog on sofa.",
-   "section": "ul#grid9531",
+   "text": "Text 37×12",
+   "section": "at 435, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Siberian husky puppy lying on sofa in living room. Dog on sofa.",
+     "live": "37×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 60,
-    "textBox": {
-     "x": 999,
-     "y": 783,
-     "w": 407,
-     "h": 272
-    },
     "box": {
-     "x": 999,
-     "y": 783,
-     "w": 407,
-     "h": 272
+     "x": 435,
+     "y": 442,
+     "w": 37,
+     "h": 12
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 435,
+     "y": 442,
+     "w": 37,
+     "h": 12
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:happy young woman lying in the bed with her dogs#0",
+   "id": "extra:live:text@35,28",
    "category": "extra",
    "severity": "low",
-   "text": "Happy young woman lying in the bed with her dogs",
-   "section": "ul#grid9531",
+   "text": "Text 51×14",
+   "section": "at 540, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Happy young woman lying in the bed with her dogs",
+     "live": "51×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 62,
-    "textBox": {
-     "x": 108,
-     "y": 1071,
-     "w": 475,
-     "h": 317
-    },
     "box": {
-     "x": 108,
-     "y": 1071,
-     "w": 475,
-     "h": 317
+     "x": 540,
+     "y": 442,
+     "w": 51,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 540,
+     "y": 442,
+     "w": 51,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:dog looks poor.#0",
+   "id": "extra:live:text@43,28",
    "category": "extra",
    "severity": "low",
-   "text": "Dog looks poor.",
-   "section": "ul#grid9531",
+   "text": "Text 70×14",
+   "section": "at 660, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Dog looks poor.",
+     "live": "70×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 64,
-    "textBox": {
-     "x": 599,
-     "y": 1071,
-     "w": 317,
-     "h": 317
-    },
     "box": {
-     "x": 599,
-     "y": 1071,
-     "w": 317,
-     "h": 317
+     "x": 660,
+     "y": 442,
+     "w": 70,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 660,
+     "y": 442,
+     "w": 70,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:black young woman laughing while resting with he#0",
+   "id": "extra:live:text@52,28",
    "category": "extra",
    "severity": "low",
-   "text": "Black young woman laughing while resting with her dog on her sofa",
-   "section": "ul#grid9531",
+   "text": "Text 59×14",
+   "section": "at 799, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Black young woman laughing while resting with her dog on her sofa",
+     "live": "59×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 66,
-    "textBox": {
-     "x": 932,
-     "y": 1071,
-     "w": 474,
-     "h": 317
-    },
     "box": {
-     "x": 932,
-     "y": 1071,
-     "w": 474,
-     "h": 317
+     "x": 799,
+     "y": 442,
+     "w": 59,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 799,
+     "y": 442,
+     "w": 59,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:dog with white background#0",
+   "id": "extra:live:text@60,28",
    "category": "extra",
    "severity": "low",
-   "text": "dog with white background",
-   "section": "ul#grid9531",
+   "text": "Text 60×14",
+   "section": "at 926, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "dog with white background",
+     "live": "60×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 68,
-    "textBox": {
-     "x": 108,
-     "y": 1404,
-     "w": 278,
-     "h": 278
-    },
     "box": {
-     "x": 108,
-     "y": 1404,
-     "w": 278,
-     "h": 278
+     "x": 926,
+     "y": 442,
+     "w": 60,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 926,
+     "y": 442,
+     "w": 60,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:happy dog looks out from car window. road trip w#0",
+   "id": "extra:live:text@69,28",
    "category": "extra",
    "severity": "low",
-   "text": "Happy dog looks out from car window. Road trip with dog.",
-   "section": "ul#grid9531",
+   "text": "Text 94×14",
+   "section": "at 1054, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Happy dog looks out from car window. Road trip with dog.",
+     "live": "94×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 70,
-    "textBox": {
-     "x": 402,
-     "y": 1404,
-     "w": 417,
-     "h": 278
-    },
     "box": {
-     "x": 402,
-     "y": 1404,
-     "w": 417,
-     "h": 278
+     "x": 1054,
+     "y": 442,
+     "w": 94,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 1054,
+     "y": 442,
+     "w": 94,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:black and white cute alaskan dog#0",
+   "id": "extra:live:text@79,28",
    "category": "extra",
    "severity": "low",
-   "text": "Black and white cute Alaskan dog",
-   "section": "ul#grid9531",
+   "text": "Text 81×14",
+   "section": "at 1216, 442",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Black and white cute Alaskan dog",
+     "live": "81×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 72,
-    "textBox": {
-     "x": 835,
-     "y": 1404,
-     "w": 278,
-     "h": 278
-    },
     "box": {
-     "x": 835,
-     "y": 1404,
-     "w": 278,
-     "h": 278
+     "x": 1216,
+     "y": 442,
+     "w": 81,
+     "h": 14
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 1216,
+     "y": 442,
+     "w": 81,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:generative ai, portrait of a happy dog looking a#0",
+   "id": "extra:live:text@14,28",
    "category": "extra",
    "severity": "low",
-   "text": "Generative AI, Portrait of a happy dog looking at the camera with mouth open on pink background",
-   "section": "ul#grid9531",
+   "text": "Text 52×11",
+   "section": "at 200, 443",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Generative AI, Portrait of a happy dog looking at the camera with mouth open on pink background",
+     "live": "52×11",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 74,
-    "textBox": {
-     "x": 1129,
-     "y": 1404,
-     "w": 277,
-     "h": 278
-    },
     "box": {
-     "x": 1129,
-     "y": 1404,
-     "w": 277,
-     "h": 278
+     "x": 200,
+     "y": 443,
+     "w": 52,
+     "h": 11
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 200,
+     "y": 443,
+     "w": 52,
+     "h": 11
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:brown dog relax and sitting in the garden#0",
+   "id": "extra:live:panel@22,144",
    "category": "extra",
    "severity": "low",
-   "text": "Brown dog relax and sitting in the garden",
-   "section": "ul#grid9531",
+   "text": "Panel 125×40",
+   "section": "at 296, 2289",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Brown dog relax and sitting in the garden",
+     "live": "125×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 76,
-    "textBox": {
-     "x": 108,
-     "y": 1698,
-     "w": 397,
-     "h": 265
-    },
-    "box": {
-     "x": 108,
-     "y": 1698,
-     "w": 397,
-     "h": 265
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:husky dog on snow background with empty space fo#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Husky dog on snow background with empty space for text",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Husky dog on snow background with empty space for text",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 78,
-    "textBox": {
-     "x": 521,
-     "y": 1698,
-     "w": 473,
-     "h": 265
-    },
-    "box": {
-     "x": 521,
-     "y": 1698,
-     "w": 473,
-     "h": 265
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:shih tzu dog on the street. shih tzu is a breed #0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Shih Tzu dog on the street. Shih Tzu is a breed of dog in the Shih Tzu family.",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Shih Tzu dog on the street. Shih Tzu is a breed of dog in the Shih Tzu family.",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 80,
-    "textBox": {
-     "x": 1010,
-     "y": 1698,
-     "w": 396,
-     "h": 265
-    },
-    "box": {
-     "x": 1010,
-     "y": 1698,
-     "w": 396,
-     "h": 265
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog outdoors lying on the grass travel animal#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "dog outdoors lying on the grass travel animal",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "dog outdoors lying on the grass travel animal",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 82,
-    "textBox": {
-     "x": 108,
-     "y": 1979,
-     "w": 439,
-     "h": 293
-    },
-    "box": {
-     "x": 108,
-     "y": 1979,
-     "w": 439,
-     "h": 293
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:portrait of little dog on the seaside during sun#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "portrait of little dog on the seaside during sunset.",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "portrait of little dog on the seaside during sunset.",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 84,
-    "textBox": {
-     "x": 563,
-     "y": 1979,
-     "w": 440,
-     "h": 293
-    },
-    "box": {
-     "x": 563,
-     "y": 1979,
-     "w": 440,
-     "h": 293
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:cute image of a shih tzu dog wearing sunglasses #0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Cute image of a Shih Tzu dog wearing sunglasses at the beach",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Cute image of a Shih Tzu dog wearing sunglasses at the beach",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 86,
-    "textBox": {
-     "x": 1019,
-     "y": 1979,
-     "w": 387,
-     "h": 293
-    },
-    "box": {
-     "x": 1019,
-     "y": 1979,
-     "w": 387,
-     "h": 293
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:small puppy of wire-haired dachshund on the hand#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "small puppy of wire-haired dachshund on the hands of person on light background. Portrait of dog",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "small puppy of wire-haired dachshund on the hands of person on light background. Portrait of dog",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 88,
-    "textBox": {
-     "x": 108,
-     "y": 2288,
-     "w": 172,
-     "h": 249
-    },
-    "box": {
-     "x": 108,
-     "y": 2288,
-     "w": 172,
-     "h": 249
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:cute dog in birthday cap. illustration#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Cute dog in birthday cap. Illustration",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Cute dog in birthday cap. Illustration",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 100,
-    "textBox": {
-     "x": 644,
-     "y": 2288,
-     "w": 374,
-     "h": 249
-    },
-    "box": {
-     "x": 644,
-     "y": 2288,
-     "w": 374,
-     "h": 249
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:a yorkshire terrier dog sitting on a beige chair#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "A Yorkshire Terrier dog sitting on a beige chair",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "A Yorkshire Terrier dog sitting on a beige chair",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 102,
-    "textBox": {
-     "x": 1034,
-     "y": 2288,
-     "w": 372,
-     "h": 249
-    },
-    "box": {
-     "x": 1034,
-     "y": 2288,
-     "w": 372,
-     "h": 249
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog breed#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "dog breed",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "dog breed",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 90,
-    "textBox": {
-     "x": 336,
-     "y": 2300,
-     "w": 68.8,
-     "h": 17
-    },
     "box": {
      "x": 296,
-     "y": 2288.5,
-     "w": 124.8,
+     "y": 2289,
+     "w": 125,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog lover#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "dog lover",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "dog lover",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 91,
     "textBox": {
-     "x": 472.8,
-     "y": 2300,
-     "w": 62.7,
-     "h": 17
-    },
-    "box": {
-     "x": 432.8,
-     "y": 2288.5,
-     "w": 118.7,
+     "x": 296,
+     "y": 2289,
+     "w": 125,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog playing#0",
+   "id": "extra:live:panel@31,144",
    "category": "extra",
    "severity": "low",
-   "text": "dog playing",
-   "section": "ul#grid9531",
+   "text": "Panel 119×40",
+   "section": "at 433, 2289",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "dog playing",
+     "live": "119×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 92,
+    "box": {
+     "x": 433,
+     "y": 2289,
+     "w": 119,
+     "h": 40
+    },
+    "textBox": {
+     "x": 433,
+     "y": 2289,
+     "w": 119,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@20,144",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 315, 2303",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 315,
+     "y": 2303,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 315,
+     "y": 2303,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@23,144",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 68×14",
+   "section": "at 336, 2303",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "68×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 336,
+     "y": 2303,
+     "w": 68,
+     "h": 14
+    },
     "textBox": {
      "x": 336,
-     "y": 2352,
-     "w": 78.5,
-     "h": 17
+     "y": 2303,
+     "w": 68,
+     "h": 14
     },
-    "box": {
-     "x": 296,
-     "y": 2340.5,
-     "w": 134.5,
-     "h": 40
-    },
-    "section": "ul#grid9531",
-    "where": null
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:dog background#0",
+   "id": "extra:live:icon@29,144",
    "category": "extra",
    "severity": "low",
-   "text": "dog background",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 452, 2303",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "dog background",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 93,
-    "textBox": {
-     "x": 482.5,
-     "y": 2352,
-     "w": 110,
-     "h": 17
-    },
     "box": {
-     "x": 442.5,
-     "y": 2340.5,
+     "x": 452,
+     "y": 2303,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 452,
+     "y": 2303,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@32,144",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 63×14",
+   "section": "at 473, 2303",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "63×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 473,
+     "y": 2303,
+     "w": 63,
+     "h": 14
+    },
+    "textBox": {
+     "x": 473,
+     "y": 2303,
+     "w": 63,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@23,148",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 134×40",
+   "section": "at 296, 2341",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "134×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 296,
+     "y": 2341,
+     "w": 134,
+     "h": 40
+    },
+    "textBox": {
+     "x": 296,
+     "y": 2341,
+     "w": 134,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@33,148",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 166×40",
+   "section": "at 442, 2341",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "166×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 442,
+     "y": 2341,
      "w": 166,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:dog owner#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "dog owner",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "dog owner",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 94,
     "textBox": {
-     "x": 336,
-     "y": 2404,
-     "w": 71.2,
-     "h": 17
-    },
-    "box": {
-     "x": 296,
-     "y": 2392.5,
-     "w": 127.2,
+     "x": 442,
+     "y": 2341,
+     "w": 166,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:cool dog#0",
+   "id": "extra:live:icon@20,148",
    "category": "extra",
    "severity": "low",
-   "text": "cool dog",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 315, 2355",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "cool dog",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 95,
-    "textBox": {
-     "x": 475.2,
-     "y": 2404,
-     "w": 58,
-     "h": 17
-    },
     "box": {
-     "x": 435.2,
-     "y": 2392.5,
+     "x": 315,
+     "y": 2355,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 315,
+     "y": 2355,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@23,148",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 78×14",
+   "section": "at 336, 2355",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "78×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 336,
+     "y": 2355,
+     "w": 78,
+     "h": 14
+    },
+    "textBox": {
+     "x": 336,
+     "y": 2355,
+     "w": 78,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@29,148",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 461, 2355",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 461,
+     "y": 2355,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 461,
+     "y": 2355,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@34,148",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 109×14",
+   "section": "at 483, 2355",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "109×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 483,
+     "y": 2355,
+     "w": 109,
+     "h": 14
+    },
+    "textBox": {
+     "x": 483,
+     "y": 2355,
+     "w": 109,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@22,151",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 127×40",
+   "section": "at 296, 2393",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "127×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 296,
+     "y": 2393,
+     "w": 127,
+     "h": 40
+    },
+    "textBox": {
+     "x": 296,
+     "y": 2393,
+     "w": 127,
+     "h": 40
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:panel@31,151",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 114×40",
+   "section": "at 435, 2393",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "114×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 435,
+     "y": 2393,
      "w": 114,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 435,
+     "y": 2393,
+     "w": 114,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog care#0",
+   "id": "extra:live:icon@20,151",
    "category": "extra",
    "severity": "low",
-   "text": "dog care",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 315, 2407",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "dog care",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 96,
+    "box": {
+     "x": 315,
+     "y": 2407,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 315,
+     "y": 2407,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@23,151",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 71×14",
+   "section": "at 336, 2407",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "71×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 336,
+     "y": 2407,
+     "w": 71,
+     "h": 14
+    },
     "textBox": {
      "x": 336,
-     "y": 2456,
-     "w": 59,
-     "h": 17
+     "y": 2407,
+     "w": 71,
+     "h": 14
     },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@29,151",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 454, 2407",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 454,
+     "y": 2407,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 454,
+     "y": 2407,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@32,151",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 58×14",
+   "section": "at 475, 2407",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "58×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 475,
+     "y": 2407,
+     "w": 58,
+     "h": 14
+    },
+    "textBox": {
+     "x": 475,
+     "y": 2407,
+     "w": 58,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@22,154",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 115×40",
+   "section": "at 296, 2445",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "115×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
     "box": {
      "x": 296,
-     "y": 2444.5,
+     "y": 2445,
      "w": 115,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 296,
+     "y": 2445,
+     "w": 115,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog love#0",
+   "id": "extra:live:panel@30,154",
    "category": "extra",
    "severity": "low",
-   "text": "dog love",
-   "section": "ul#grid9531",
+   "text": "Panel 113×40",
+   "section": "at 423, 2445",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "dog love",
+     "live": "113×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 97,
-    "textBox": {
-     "x": 463,
-     "y": 2456,
-     "w": 57,
-     "h": 17
-    },
     "box": {
      "x": 423,
-     "y": 2444.5,
+     "y": 2445,
      "w": 113,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 423,
+     "y": 2445,
+     "w": 113,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:dog doodle#0",
+   "id": "extra:live:icon@20,154",
    "category": "extra",
    "severity": "low",
-   "text": "dog doodle",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 315, 2459",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "dog doodle",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 98,
+    "box": {
+     "x": 315,
+     "y": 2459,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 315,
+     "y": 2459,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@23,154",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 59×14",
+   "section": "at 336, 2459",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "59×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 336,
+     "y": 2459,
+     "w": 59,
+     "h": 14
+    },
     "textBox": {
      "x": 336,
-     "y": 2508,
-     "w": 75.8,
-     "h": 17
+     "y": 2459,
+     "w": 59,
+     "h": 14
     },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@28,154",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 442, 2459",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 442,
+     "y": 2459,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 442,
+     "y": 2459,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@31,154",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 57×14",
+   "section": "at 463, 2459",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "57×14",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 463,
+     "y": 2459,
+     "w": 57,
+     "h": 14
+    },
+    "textBox": {
+     "x": 463,
+     "y": 2459,
+     "w": 57,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:panel@23,157",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 132×40",
+   "section": "at 296, 2497",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "132×40",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
     "box": {
      "x": 296,
-     "y": 2496.5,
-     "w": 131.8,
+     "y": 2497,
+     "w": 132,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:cute puppy#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "cute puppy",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "cute puppy",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 99,
     "textBox": {
-     "x": 479.8,
-     "y": 2508,
-     "w": 75.7,
-     "h": 17
-    },
-    "box": {
-     "x": 439.8,
-     "y": 2496.5,
-     "w": 131.7,
+     "x": 296,
+     "y": 2497,
+     "w": 132,
      "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:cute beagle puppies. happy beagle dog relaxing l#0",
+   "id": "extra:live:panel@32,157",
    "category": "extra",
    "severity": "low",
-   "text": "Cute beagle puppies. Happy beagle dog relaxing looking sleepy and sitting on the white marble table at home outside. Animals mamal dog concept.",
-   "section": "ul#grid9531",
+   "text": "Panel 131×40",
+   "section": "at 440, 2497",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Cute beagle puppies. Happy beagle dog relaxing looking sleepy and sitting on the white marble table at home outside. Animals mamal dog concept.",
+     "live": "131×40",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 104,
-    "textBox": {
-     "x": 108,
-     "y": 2553,
-     "w": 519,
-     "h": 346
-    },
     "box": {
-     "x": 108,
-     "y": 2553,
-     "w": 519,
-     "h": 346
+     "x": 440,
+     "y": 2497,
+     "w": 131,
+     "h": 40
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 440,
+     "y": 2497,
+     "w": 131,
+     "h": 40
+    },
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:closeup the dog. its mans best friend.#0",
+   "id": "extra:live:shape@76,158",
    "category": "extra",
    "severity": "low",
-   "text": "Closeup the dog. It's man's best friend.",
-   "section": "ul#grid9531",
+   "text": "Shape 325×33",
+   "section": "at 1051, 2504",
    "props": [
     {
-     "prop": "control",
+     "prop": "shape",
      "design": "not in design",
-     "live": "Closeup the dog. It's man's best friend.",
+     "live": "325×33",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 106,
-    "textBox": {
-     "x": 643,
-     "y": 2553,
-     "w": 519,
-     "h": 346
-    },
     "box": {
-     "x": 643,
-     "y": 2553,
-     "w": 519,
-     "h": 346
+     "x": 1051,
+     "y": 2504,
+     "w": 325,
+     "h": 33
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 1051,
+     "y": 2504,
+     "w": 325,
+     "h": 33
+    },
+    "kind": "shape"
    }
   },
   {
-   "id": "extra:live:dog with weird smile#0",
+   "id": "extra:live:icon@20,157",
    "category": "extra",
    "severity": "low",
-   "text": "dog with weird smile",
-   "section": "ul#grid9531",
+   "text": "Icon 12×12",
+   "section": "at 315, 2511",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
      "design": "not in design",
-     "live": "dog with weird smile",
+     "live": "12×12",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 108,
-    "textBox": {
-     "x": 1178,
-     "y": 2553,
-     "w": 228,
-     "h": 346
-    },
     "box": {
-     "x": 1178,
-     "y": 2553,
-     "w": 228,
-     "h": 346
+     "x": 315,
+     "y": 2511,
+     "w": 12,
+     "h": 12
     },
-    "section": "ul#grid9531",
-    "where": null
+    "textBox": {
+     "x": 315,
+     "y": 2511,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:hunting dog breed basenji#0",
+   "id": "extra:live:text@23,157",
    "category": "extra",
    "severity": "low",
-   "text": "Hunting dog breed Basenji",
-   "section": "ul#grid9531",
+   "text": "Text 76×14",
+   "section": "at 336, 2511",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Hunting dog breed Basenji",
+     "live": "76×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 110,
+    "box": {
+     "x": 336,
+     "y": 2511,
+     "w": 76,
+     "h": 14
+    },
     "textBox": {
-     "x": 108,
+     "x": 336,
+     "y": 2511,
+     "w": 76,
+     "h": 14
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:icon@29,157",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 12×12",
+   "section": "at 459, 2511",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "12×12",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 459,
+     "y": 2511,
+     "w": 12,
+     "h": 12
+    },
+    "textBox": {
+     "x": 459,
+     "y": 2511,
+     "w": 12,
+     "h": 12
+    },
+    "kind": "icon"
+   }
+  },
+  {
+   "id": "extra:live:text@32,157",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 75×13",
+   "section": "at 480, 2512",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "75×13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 480,
+     "y": 2512,
+     "w": 75,
+     "h": 13
+    },
+    "textBox": {
+     "x": 480,
+     "y": 2512,
+     "w": 75,
+     "h": 13
+    },
+    "kind": "text"
+   }
+  },
+  {
+   "id": "extra:live:text@36,183",
+   "category": "extra",
+   "severity": "low",
+   "text": "Text 44×29",
+   "section": "at 554, 2915",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "44×29",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 554,
      "y": 2915,
-     "w": 422,
-     "h": 282
+     "w": 44,
+     "h": 29
     },
-    "box": {
-     "x": 108,
-     "y": 2915,
-     "w": 422,
-     "h": 282
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:lonely stray dog portrait with sweet look#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "lonely stray dog portrait with sweet look",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "lonely stray dog portrait with sweet look",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 112,
     "textBox": {
-     "x": 546,
+     "x": 554,
      "y": 2915,
-     "w": 422,
-     "h": 282
+     "w": 44,
+     "h": 29
     },
-    "box": {
-     "x": 546,
-     "y": 2915,
-     "w": 422,
-     "h": 282
-    },
-    "section": "ul#grid9531",
-    "where": null
+    "kind": "text"
    }
-  },
-  {
-   "id": "extra:live:cute dog in a sunshine day#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "cute dog in a sunshine day",
-   "section": "ul#grid9531",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "cute dog in a sunshine day",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 114,
-    "textBox": {
-     "x": 984,
-     "y": 2915,
-     "w": 422,
-     "h": 282
-    },
-    "box": {
-     "x": 984,
-     "y": 2915,
-     "w": 422,
-     "h": 282
-    },
-    "section": "ul#grid9531",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:log in#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Log in",
-   "section": "nav#global-navbar-guest",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Log in",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 6,
-    "textBox": {
-     "x": 25.5,
-     "y": 2948,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 2948,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   }
-  }
- ],
- "boxPairs": [
-  {
-   "design": 1,
-   "live": 2
-  },
-  {
-   "design": 0,
-   "live": 0
-  },
-  {
-   "design": 3,
-   "live": 4
-  },
-  {
-   "design": 2,
-   "live": 3
-  },
-  {
-   "design": 7,
-   "live": 6
-  },
-  {
-   "design": 8,
-   "live": 7
-  },
-  {
-   "design": 4,
-   "live": 5
-  },
-  {
-   "design": 31,
-   "live": 42
-  },
-  {
-   "design": 30,
-   "live": 41
   }
  ],
  "stats": {
-  "designItems": 70,
-  "liveItems": 115,
-  "matched": 11,
-  "designBoxes": 83,
-  "liveBoxes": 78,
-  "matchedBoxes": 9,
-  "missing": 58,
-  "extra": 60,
-  "findings": 139,
+  "designItems": 120,
+  "liveItems": 119,
+  "matched": 35,
+  "anchors": 5,
+  "missing": 25,
+  "extra": 55,
+  "findings": 125,
   "byCategory": {
-   "typography": 4,
-   "color": 3,
-   "size": 1,
-   "shape": 2,
-   "spacing": 2,
-   "alignment": 1,
-   "icon": 0,
-   "behavior": 8,
-   "missing": 58,
-   "extra": 60
+   "typography": 3,
+   "color": 9,
+   "size": 11,
+   "shape": 0,
+   "spacing": 17,
+   "alignment": 5,
+   "missing": 25,
+   "extra": 55
   },
   "bySeverity": {
-   "low": 65,
-   "medium": 69,
-   "high": 5
+   "low": 80,
+   "medium": 12,
+   "high": 33
   }
  }
 }

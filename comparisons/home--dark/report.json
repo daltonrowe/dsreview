@@ -3,9 +3,9 @@
  "baseId": "home",
  "theme": "dark",
  "label": "Home (logged out)",
- "generatedAt": "2026-11-18T12:04:04.674Z",
+ "generatedAt": "2026-11-18T12:36:05.249Z",
  "base": "https://ao-4276-redesign-rollup.xeezy.com",
- "hover": true,
+ "method": "screenshots",
  "design": {
   "page": "AI Magic.dc.html",
   "props": {
@@ -17,7 +17,8 @@
   "width": 1440,
   "height": 3000,
   "shot": "design.jpg",
-  "items": 33,
+  "items": 73,
+  "background": "#141414",
   "log": []
  },
  "live": {
@@ -28,1909 +29,1822 @@
   "width": 1440,
   "height": 3000,
   "shot": "live.jpg",
-  "items": 56,
+  "items": 72,
+  "background": "#141414",
   "log": []
  },
  "pairs": [
   {
-   "design": 15,
-   "live": 12,
-   "how": "text"
-  },
-  {
-   "design": 19,
+   "design": 17,
    "live": 16,
-   "how": "text"
+   "how": "look"
   },
   {
-   "design": 20,
-   "live": 17,
-   "how": "text"
+   "design": 10,
+   "live": 9,
+   "how": "look"
   },
   {
-   "design": 21,
-   "live": 18,
-   "how": "text"
+   "design": 27,
+   "live": 26,
+   "how": "look"
   },
   {
-   "design": 22,
-   "live": 19,
-   "how": "text"
-  },
-  {
-   "design": 23,
-   "live": 20,
-   "how": "text"
-  },
-  {
-   "design": 24,
-   "live": 21,
-   "how": "text"
-  },
-  {
-   "design": 25,
-   "live": 22,
-   "how": "text"
-  },
-  {
-   "design": 26,
-   "live": 23,
-   "how": "text"
-  },
-  {
-   "design": 28,
-   "live": 55,
-   "how": "text"
-  },
-  {
-   "design": 30,
-   "live": 57,
-   "how": "text"
-  },
-  {
-   "design": 29,
-   "live": 56,
-   "how": "text"
-  },
-  {
-   "design": 31,
-   "live": 58,
-   "how": "text"
-  },
-  {
-   "design": 32,
-   "live": 59,
-   "how": "text"
+   "design": 11,
+   "live": 11,
+   "how": "look"
   },
   {
    "design": 13,
-   "live": 11,
-   "how": "text"
+   "live": 13,
+   "how": "look"
   },
   {
-   "design": 0,
-   "live": 0,
-   "how": "text"
+   "design": 37,
+   "live": 36,
+   "how": "look"
   },
   {
-   "design": 1,
-   "live": 1,
-   "how": "text"
+   "design": 28,
+   "live": 27,
+   "how": "look"
   },
   {
-   "design": 2,
-   "live": 2,
-   "how": "text"
+   "design": 33,
+   "live": 32,
+   "how": "look"
+  },
+  {
+   "design": 29,
+   "live": 28,
+   "how": "look"
+  },
+  {
+   "design": 30,
+   "live": 29,
+   "how": "look"
+  },
+  {
+   "design": 57,
+   "live": 61,
+   "how": "look"
   },
   {
    "design": 3,
    "live": 3,
-   "how": "text"
+   "how": "look"
+  },
+  {
+   "design": 54,
+   "live": 58,
+   "how": "look"
+  },
+  {
+   "design": 61,
+   "live": 65,
+   "how": "look"
+  },
+  {
+   "design": 58,
+   "live": 62,
+   "how": "look"
   },
   {
    "design": 4,
    "live": 4,
-   "how": "text"
+   "how": "look"
   },
   {
-   "design": 9,
-   "live": 7,
-   "how": "text"
-  },
-  {
-   "design": 10,
-   "live": 8,
-   "how": "text"
-  },
-  {
-   "design": 27,
-   "live": 54,
-   "how": "text"
+   "design": 56,
+   "live": 60,
+   "how": "look"
   },
   {
    "design": 12,
-   "live": 10,
-   "how": "similar text"
+   "live": 12,
+   "how": "look"
+  },
+  {
+   "design": 59,
+   "live": 63,
+   "how": "look"
+  },
+  {
+   "design": 15,
+   "live": 14,
+   "how": "look"
+  },
+  {
+   "design": 60,
+   "live": 64,
+   "how": "look"
+  },
+  {
+   "design": 55,
+   "live": 59,
+   "how": "look"
   },
   {
    "design": 7,
+   "live": 7,
+   "how": "look"
+  },
+  {
+   "design": 31,
+   "live": 30,
+   "how": "look"
+  },
+  {
+   "design": 9,
+   "live": 10,
+   "how": "look"
+  },
+  {
+   "design": 14,
+   "live": 15,
+   "how": "look"
+  },
+  {
+   "design": 25,
+   "live": 24,
+   "how": "look"
+  },
+  {
+   "design": 26,
+   "live": 25,
+   "how": "look"
+  },
+  {
+   "design": 0,
+   "live": 1,
+   "how": "look"
+  },
+  {
+   "design": 35,
+   "live": 34,
+   "how": "look"
+  },
+  {
+   "design": 52,
+   "live": 56,
+   "how": "look"
+  },
+  {
+   "design": 38,
+   "live": 37,
+   "how": "look"
+  },
+  {
+   "design": 5,
    "live": 6,
-   "how": "similar text"
+   "how": "look"
+  },
+  {
+   "design": 36,
+   "live": 35,
+   "how": "look"
+  },
+  {
+   "design": 8,
+   "live": 8,
+   "how": "look"
+  },
+  {
+   "design": 53,
+   "live": 57,
+   "how": "look"
+  },
+  {
+   "design": 32,
+   "live": 31,
+   "how": "look"
+  },
+  {
+   "design": 34,
+   "live": 33,
+   "how": "look"
+  },
+  {
+   "design": 16,
+   "live": 17,
+   "how": "look"
+  },
+  {
+   "design": 19,
+   "live": 18,
+   "how": "look"
+  },
+  {
+   "design": 23,
+   "live": 23,
+   "how": "look"
+  },
+  {
+   "design": 63,
+   "live": 67,
+   "how": "look"
+  },
+  {
+   "design": 1,
+   "live": 2,
+   "how": "look"
+  },
+  {
+   "design": 18,
+   "live": 19,
+   "how": "look"
+  },
+  {
+   "design": 45,
+   "live": 42,
+   "how": "look"
+  },
+  {
+   "design": 51,
+   "live": 53,
+   "how": "look"
+  },
+  {
+   "design": 69,
+   "live": 68,
+   "how": "look"
+  },
+  {
+   "design": 42,
+   "live": 41,
+   "how": "place"
+  },
+  {
+   "design": 21,
+   "live": 22,
+   "how": "place"
+  },
+  {
+   "design": 6,
+   "live": 5,
+   "how": "place"
   }
  ],
  "findings": [
   {
-   "id": "typography:featured photographers#0",
+   "id": "typography:text@22,20",
    "category": "typography",
    "severity": "high",
-   "text": "Featured Photographers",
-   "section": "Pre-footer",
+   "text": "Text 78×16",
+   "section": "at 316, 316",
    "props": [
     {
-     "prop": "font-size",
-     "design": "50px",
-     "live": "46px",
+     "prop": "text height",
+     "design": "16px",
+     "live": "13px (smaller)",
      "sev": "high"
-    },
-    {
-     "prop": "line-height",
-     "design": "normal (~60px)",
-     "live": "57.5px",
-     "sev": "low"
     }
    ],
    "design": {
-    "n": 27,
-    "textBox": {
-     "x": 485.3,
-     "y": 2037,
-     "w": 544.4,
-     "h": 59
-    },
     "box": {
-     "x": 485.3,
-     "y": 2037,
-     "w": 544.4,
-     "h": 59
+     "x": 316,
+     "y": 316,
+     "w": 78,
+     "h": 16
     },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1557,
-     "nth": 0
+    "textBox": {
+     "x": 316,
+     "y": 316,
+     "w": 78,
+     "h": 16
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2134,
-     "col": 9
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 54,
-    "textBox": {
-     "x": 507.1,
-     "y": 2288,
-     "w": 501.8,
-     "h": 54
-    },
     "box": {
-     "x": 507.1,
-     "y": 2288,
-     "w": 501.8,
-     "h": 54
+     "x": 318,
+     "y": 337,
+     "w": 58,
+     "h": 13
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 318,
+     "y": 337,
+     "w": 58,
+     "h": 13
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "place"
   },
   {
-   "id": "typography:social proof#0",
+   "id": "typography:text@47,167",
    "category": "typography",
    "severity": "high",
-   "text": "Social Proof",
-   "section": "Pre-footer",
+   "text": "Text 215×31",
+   "section": "at 650, 2662",
    "props": [
     {
-     "prop": "font-size",
-     "design": "40px",
-     "live": "30px",
+     "prop": "text height",
+     "design": "31px",
+     "live": "23px (smaller)",
      "sev": "high"
-    },
-    {
-     "prop": "line-height",
-     "design": "normal (~48px)",
-     "live": "45px",
-     "sev": "low"
     }
    ],
    "design": {
-    "n": 32,
-    "textBox": {
-     "x": 649.6,
-     "y": 2652.5,
-     "w": 215.8,
-     "h": 47
-    },
     "box": {
-     "x": 649.6,
-     "y": 2652.5,
-     "w": 215.8,
-     "h": 47
+     "x": 650,
+     "y": 2662,
+     "w": 215,
+     "h": 31
     },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1563,
-     "nth": 0
+    "textBox": {
+     "x": 650,
+     "y": 2662,
+     "w": 215,
+     "h": 31
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2142,
-     "col": 7
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 59,
-    "textBox": {
-     "x": 676.4,
-     "y": 2929,
-     "w": 163.3,
-     "h": 35
-    },
     "box": {
-     "x": 676.4,
-     "y": 2929,
-     "w": 163.3,
-     "h": 35
+     "x": 677,
+     "y": 2936,
+     "w": 162,
+     "h": 23
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 677,
+     "y": 2936,
+     "w": 162,
+     "h": 23
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "color:home#0",
+   "id": "color:icon@30,20",
    "category": "color",
    "severity": "high",
-   "text": "Home",
-   "section": "Left nav",
+   "text": "Icon 18×18",
+   "section": "at 464, 314",
    "props": [
     {
-     "prop": "background",
-     "design": "#2e2e2e",
-     "live": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+     "prop": "icon color",
+     "design": "#7e7e7e",
+     "live": "#c9c9c9",
      "swatch": true,
      "sev": "high"
     }
    ],
    "design": {
-    "n": 0,
-    "textBox": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 12,
-     "y": 84,
-     "w": 50,
-     "h": 48
+     "x": 464,
+     "y": 314,
+     "w": 18,
+     "h": 18
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 24,
-     "nth": 0
+    "textBox": {
+     "x": 464,
+     "y": 314,
+     "w": 18,
+     "h": 18
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 471,
-     "col": 7
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 0,
-    "textBox": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 12.5,
-     "y": 84,
-     "w": 50,
-     "h": 48
+     "x": 447,
+     "y": 333,
+     "w": 20,
+     "h": 20
     },
-    "section": "nav#global-navbar-guest",
-    "where": null
+    "textBox": {
+     "x": 447,
+     "y": 333,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "alignment:layout:hero masthead:top",
-   "category": "alignment",
+   "id": "color:text@26,20",
+   "category": "color",
    "severity": "high",
-   "text": "Hero masthead",
-   "section": "Hero masthead",
+   "text": "Text 12×6",
+   "section": "at 408, 320",
    "props": [
     {
-     "prop": "top edge",
-     "design": "lines up with Home (Left nav) at y=85",
-     "live": "off by 15px ↓ (99 vs 84)",
+     "prop": "text color",
+     "design": "#efefef",
+     "live": "#848484",
+     "swatch": true,
      "sev": "high"
     }
    ],
-   "layout": true,
    "design": {
-    "n": null,
-    "textBox": {
-     "x": 99,
-     "y": 85,
-     "w": 1317,
-     "h": 335
-    },
     "box": {
-     "x": 99,
-     "y": 85,
-     "w": 1317,
-     "h": 335
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
     },
-    "section": "Hero masthead",
-    "where": null
+    "textBox": {
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
+    },
+    "kind": "text"
    },
    "live": {
-    "n": null,
-    "textBox": {
-     "x": 100,
-     "y": 99,
-     "w": 1316,
-     "h": 341
+    "box": {
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
     },
+    "textBox": {
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@75,43",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 426×320",
+   "section": "at 990, 529",
+   "props": [
+    {
+     "prop": "height",
+     "design": "320px",
+     "live": "301px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 990,
+     "y": 529,
+     "w": 426,
+     "h": 320
+    },
+    "textBox": {
+     "x": 990,
+     "y": 529,
+     "w": 426,
+     "h": 320
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 991,
+     "y": 549,
+     "w": 425,
+     "h": 301
+    },
+    "textBox": {
+     "x": 991,
+     "y": 549,
+     "w": 425,
+     "h": 301
+    },
+    "kind": "image"
+   },
+   "match": "place"
+  },
+  {
+   "id": "size:shape@20,115",
+   "category": "size",
+   "severity": "high",
+   "text": "Shape 426×150",
+   "section": "at 99, 1760",
+   "props": [
+    {
+     "prop": "height",
+     "design": "150px",
+     "live": "208px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 1760,
+     "w": 426,
+     "h": 150
+    },
+    "textBox": {
+     "x": 99,
+     "y": 1760,
+     "w": 426,
+     "h": 150
+    },
+    "kind": "shape"
+   },
+   "live": {
     "box": {
      "x": 100,
-     "y": 99,
-     "w": 1316,
-     "h": 341
+     "y": 1922,
+     "w": 425,
+     "h": 208
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 100,
+     "y": 1922,
+     "w": 425,
+     "h": 208
+    },
+    "kind": "shape"
    },
+   "match": "look"
+  },
+  {
+   "id": "size:panel@47,142",
+   "category": "size",
+   "severity": "high",
+   "text": "Panel 1317×535",
+   "section": "at 99, 2011",
+   "props": [
+    {
+     "prop": "height",
+     "design": "535px",
+     "live": "558px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 2011,
+     "w": 1317,
+     "h": 535
+    },
+    "textBox": {
+     "x": 99,
+     "y": 2011,
+     "w": 1317,
+     "h": 535
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 100,
+     "y": 2261,
+     "w": 1316,
+     "h": 558
+    },
+    "textBox": {
+     "x": 100,
+     "y": 2261,
+     "w": 1316,
+     "h": 558
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "spacing:image@77,3",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Picture 124×48",
+   "section": "at 1166, 18",
+   "props": [
+    {
+     "prop": "gap below → Panel 1317×335 (+5 more above it, same change)",
+     "design": "19px",
+     "live": "35px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1166,
+     "y": 18,
+     "w": 124,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1166,
+     "y": 18,
+     "w": 124,
+     "h": 48
+    },
+    "kind": "image"
+   },
+   "live": {
+    "box": {
+     "x": 1164,
+     "y": 16,
+     "w": 119,
+     "h": 48
+    },
+    "textBox": {
+     "x": 1164,
+     "y": 16,
+     "w": 119,
+     "h": 48
+    },
+    "kind": "image"
+   },
+   "match": "look",
    "guide": {
     "axis": "y",
     "design": [
+     66,
      85
     ],
     "live": [
-     99,
-     84
+     64,
+     99
     ]
    },
    "related": [
     {
-     "text": "Home",
+     "text": "Panel 1317×335",
      "design": {
-      "x": 12,
-      "y": 84,
-      "w": 50,
-      "h": 48
+      "x": 99,
+      "y": 85,
+      "w": 1317,
+      "h": 335
      },
      "live": {
-      "x": 12.5,
-      "y": 84,
-      "w": 50,
-      "h": 48
+      "x": 100,
+      "y": 99,
+      "w": 1316,
+      "h": 341
      }
     }
    ]
   },
   {
-   "id": "alignment:section:hero masthead",
-   "category": "alignment",
+   "id": "spacing:text@85,3",
+   "category": "spacing",
    "severity": "high",
-   "text": "Hero masthead (3 matched elements)",
-   "section": "Hero masthead",
+   "text": "Text 40×13",
+   "section": "at 1341, 38",
    "props": [
     {
-     "prop": "region y",
-     "design": "146px",
-     "live": "163px (↓ 17px)",
+     "prop": "gap below → Panel 1317×335",
+     "design": "34px",
+     "live": "51px",
      "sev": "high"
     }
    ],
-   "region": true,
    "design": {
-    "n": null,
-    "textBox": {
-     "x": 324.9,
-     "y": 146,
-     "w": 865.1999999999999,
-     "h": 108
-    },
     "box": {
-     "x": 324.9,
-     "y": 146,
-     "w": 865.1999999999999,
-     "h": 108
+     "x": 1341,
+     "y": 38,
+     "w": 40,
+     "h": 13
     },
-    "section": "Hero masthead",
-    "where": null
+    "textBox": {
+     "x": 1341,
+     "y": 38,
+     "w": 40,
+     "h": 13
+    },
+    "kind": "text"
    },
    "live": {
-    "n": null,
-    "textBox": {
-     "x": 325.4,
-     "y": 163,
-     "w": 865.1999999999999,
-     "h": 111
-    },
     "box": {
-     "x": 325.4,
-     "y": 163,
-     "w": 865.1999999999999,
-     "h": 111
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
     },
-    "section": "Hero masthead",
-    "where": null
-   }
+    "textBox": {
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
+   },
+   "match": "place",
+   "guide": {
+    "axis": "y",
+    "design": [
+     51,
+     85
+    ],
+    "live": [
+     48,
+     99
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 1317×335",
+     "design": {
+      "x": 99,
+      "y": 85,
+      "w": 1317,
+      "h": 335
+     },
+     "live": {
+      "x": 100,
+      "y": 99,
+      "w": 1316,
+      "h": 341
+     }
+    }
+   ]
   },
   {
-   "id": "alignment:section:fresh content",
-   "category": "alignment",
+   "id": "spacing:icon@30,20",
+   "category": "spacing",
    "severity": "high",
-   "text": "Fresh content (8 matched elements)",
-   "section": "Fresh content",
+   "text": "Icon 18×18",
+   "section": "at 464, 314",
    "props": [
     {
-     "prop": "region y",
-     "design": "460px",
-     "live": "480px (↓ 20px)",
+     "prop": "inset left in Panel 999×66",
+     "design": "206px",
+     "live": "189px",
      "sev": "high"
     }
    ],
-   "region": true,
    "design": {
-    "n": null,
-    "textBox": {
-     "x": 181.9,
-     "y": 460,
-     "w": 1146.2,
-     "h": 45
-    },
     "box": {
-     "x": 181.9,
-     "y": 460,
-     "w": 1146.2,
-     "h": 45
+     "x": 464,
+     "y": 314,
+     "w": 18,
+     "h": 18
     },
-    "section": "Fresh content",
-    "where": null
+    "textBox": {
+     "x": 464,
+     "y": 314,
+     "w": 18,
+     "h": 18
+    },
+    "kind": "icon"
    },
    "live": {
-    "n": null,
-    "textBox": {
-     "x": 182.4,
-     "y": 480,
-     "w": 1146.2,
-     "h": 45
-    },
     "box": {
-     "x": 182.4,
-     "y": 480,
-     "w": 1146.2,
-     "h": 45
+     "x": 447,
+     "y": 333,
+     "w": 20,
+     "h": 20
     },
-    "section": "Fresh content",
-    "where": null
-   }
+    "textBox": {
+     "x": 447,
+     "y": 333,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 999×66",
+     "design": {
+      "x": 258,
+      "y": 290,
+      "w": 999,
+      "h": 66
+     },
+     "live": {
+      "x": 258,
+      "y": 310,
+      "w": 1000,
+      "h": 66
+     }
+    }
+   ]
   },
   {
-   "id": "alignment:section:pre-footer",
-   "category": "alignment",
+   "id": "spacing:text@26,20",
+   "category": "spacing",
    "severity": "high",
-   "text": "Pre-footer (6 matched elements)",
-   "section": "Pre-footer",
+   "text": "Text 12×6",
+   "section": "at 408, 320",
    "props": [
     {
-     "prop": "region y",
-     "design": "2037px",
-     "live": "2288px (↓ 272.5px)",
+     "prop": "inset left in Panel 999×66",
+     "design": "150px",
+     "live": "131px",
      "sev": "high"
     }
    ],
-   "region": true,
    "design": {
-    "n": null,
-    "textBox": {
-     "x": 204.5,
-     "y": 2037,
-     "w": 1107.8000000000002,
-     "h": 662.5
-    },
     "box": {
-     "x": 204.5,
-     "y": 2037,
-     "w": 1107.8000000000002,
-     "h": 662.5
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
     },
-    "section": "Pre-footer",
-    "where": null
+    "textBox": {
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
+    },
+    "kind": "text"
    },
    "live": {
-    "n": null,
-    "textBox": {
-     "x": 205.3,
-     "y": 2288,
-     "w": 1107.1000000000001,
-     "h": 676
-    },
     "box": {
-     "x": 205.3,
-     "y": 2288,
-     "w": 1107.1000000000001,
-     "h": 676
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
     },
-    "section": "Pre-footer",
-    "where": null
-   }
+    "textBox": {
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 999×66",
+     "design": {
+      "x": 258,
+      "y": 290,
+      "w": 999,
+      "h": 66
+     },
+     "live": {
+      "x": 258,
+      "y": 310,
+      "w": 1000,
+      "h": 66
+     }
+    }
+   ]
   },
   {
-   "id": "typography:explore#0",
-   "category": "typography",
-   "severity": "medium",
-   "text": "Explore",
-   "section": "Home top bar",
+   "id": "spacing:shape@20,115",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Shape 426×150",
+   "section": "at 99, 1760",
    "props": [
     {
-     "prop": "line-height",
-     "design": "normal (~17px)",
-     "live": "21px",
+     "prop": "gap below → Panel 1317×535",
+     "design": "101px",
+     "live": "131px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 1760,
+     "w": 426,
+     "h": 150
+    },
+    "textBox": {
+     "x": 99,
+     "y": 1760,
+     "w": 426,
+     "h": 150
+    },
+    "kind": "shape"
+   },
+   "live": {
+    "box": {
+     "x": 100,
+     "y": 1922,
+     "w": 425,
+     "h": 208
+    },
+    "textBox": {
+     "x": 100,
+     "y": 1922,
+     "w": 425,
+     "h": 208
+    },
+    "kind": "shape"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     1910,
+     2011
+    ],
+    "live": [
+     2130,
+     2261
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 1317×535",
+     "design": {
+      "x": 99,
+      "y": 2011,
+      "w": 1317,
+      "h": 535
+     },
+     "live": {
+      "x": 100,
+      "y": 2261,
+      "w": 1316,
+      "h": 558
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:text@47,129",
+   "category": "spacing",
+   "severity": "high",
+   "text": "Text 541×45",
+   "section": "at 488, 2049",
+   "props": [
+    {
+     "prop": "gap below → Panel 298×400",
+     "design": "26px",
+     "live": "52px",
+     "sev": "high"
+    },
+    {
+     "prop": "inset left in Panel 1317×535",
+     "design": "389px",
+     "live": "409px",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
+    },
+    "textBox": {
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
+    },
+    "textBox": {
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
+    },
+    "kind": "text"
+   },
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     2094,
+     2120
+    ],
+    "live": [
+     2341,
+     2393
+    ]
+   },
+   "related": [
+    {
+     "text": "Panel 298×400",
+     "design": {
+      "x": 770,
+      "y": 2120,
+      "w": 298,
+      "h": 400
+     },
+     "live": {
+      "x": 770,
+      "y": 2393,
+      "w": 298,
+      "h": 400
+     }
+    }
+   ]
+  },
+  {
+   "id": "alignment:text@27,30:left",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Text 52×11",
+   "section": "at 407, 476",
+   "props": [
+    {
+     "prop": "left edge",
+     "design": "lines up with Text 12×6 at x=407",
+     "live": "off by 19px → (408 vs 389)",
+     "sev": "high"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 407,
+     "y": 476,
+     "w": 52,
+     "h": 11
+    },
+    "textBox": {
+     "x": 407,
+     "y": 476,
+     "w": 52,
+     "h": 11
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 408,
+     "y": 496,
+     "w": 52,
+     "h": 11
+    },
+    "textBox": {
+     "x": 408,
+     "y": 496,
+     "w": 52,
+     "h": 11
+    },
+    "kind": "text"
+   },
+   "guide": {
+    "axis": "x",
+    "design": [
+     407
+    ],
+    "live": [
+     408,
+     389
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 12×6",
+     "design": {
+      "x": 408,
+      "y": 320,
+      "w": 12,
+      "h": 6
+     },
+     "live": {
+      "x": 389,
+      "y": 340,
+      "w": 10,
+      "h": 6
+     }
+    }
+   ]
+  },
+  {
+   "id": "typography:text@85,3",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Text 40×13",
+   "section": "at 1341, 38",
+   "props": [
+    {
+     "prop": "text width",
+     "design": "40px",
+     "live": "52px (wider: spacing or copy)",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 9,
-    "textBox": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
+     "x": 1341,
+     "y": 38,
+     "w": 40,
+     "h": 13
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 914,
-     "nth": 0
+    "textBox": {
+     "x": 1341,
+     "y": 38,
+     "w": 40,
+     "h": 13
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1450,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 7,
-    "textBox": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 1332,
+     "y": 34,
+     "w": 52,
+     "h": 14
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "place"
   },
   {
-   "id": "typography:for#0",
+   "id": "typography:text@26,20",
    "category": "typography",
    "severity": "medium",
-   "text": "for",
-   "section": "Hero masthead",
+   "text": "Text 12×6",
+   "section": "at 408, 320",
    "props": [
     {
-     "prop": "line-height",
-     "design": "69px",
-     "live": "75px",
+     "prop": "weight",
+     "design": "ink 39%",
+     "live": "ink 47% (heavier)",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 13,
-    "textBox": {
-     "x": 817.2,
-     "y": 146,
-     "w": 69.3,
-     "h": 78
-    },
     "box": {
-     "x": 817.2,
-     "y": 146,
-     "w": 69.3,
-     "h": 78
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
     },
-    "section": "Hero masthead",
-    "where": null
+    "textBox": {
+     "x": 408,
+     "y": 320,
+     "w": 12,
+     "h": 6
+    },
+    "kind": "text"
    },
    "live": {
-    "n": 11,
-    "textBox": {
-     "x": 817.7,
-     "y": 163,
-     "w": 69.3,
-     "h": 78
-    },
     "box": {
-     "x": 817.7,
-     "y": 163,
-     "w": 69.3,
-     "h": 78
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
     },
-    "section": "h1#masthead-statement",
-    "where": null
+    "textBox": {
+     "x": 389,
+     "y": 340,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "typography:beautiful visuals#0",
+   "id": "typography:text@47,129",
    "category": "typography",
    "severity": "medium",
-   "text": "Beautiful Visuals",
-   "section": "Hero masthead",
+   "text": "Text 541×45",
+   "section": "at 488, 2049",
    "props": [
     {
-     "prop": "line-height",
-     "design": "69px",
-     "live": "75px",
+     "prop": "text height",
+     "design": "45px",
+     "live": "42px (smaller)",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 12,
-    "textBox": {
-     "x": 344.9,
-     "y": 148,
-     "w": 472.2,
-     "h": 71
-    },
     "box": {
-     "x": 344.9,
-     "y": 148,
-     "w": 472.2,
-     "h": 71
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
     },
-    "section": "Hero masthead",
-    "where": null
+    "textBox": {
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
+    },
+    "kind": "text"
    },
    "live": {
-    "n": 10,
-    "textBox": {
-     "x": 345.4,
-     "y": 165,
-     "w": 825.1,
-     "h": 71
-    },
     "box": {
-     "x": 345.4,
-     "y": 165,
-     "w": 825.1,
-     "h": 71
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
     },
-    "section": "h1#masthead-statement",
-    "where": null
+    "textBox": {
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
+    },
+    "kind": "text"
    },
-   "match": "similar text",
-   "liveText": "Beautiful Visuals Everyone."
+   "match": "look"
   },
   {
-   "id": "typography:photographer one#0",
-   "category": "typography",
-   "severity": "medium",
-   "text": "Photographer One",
-   "section": "Pre-footer",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~19px)",
-     "live": "24px",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 28,
-    "textBox": {
-     "x": 204.5,
-     "y": 2311,
-     "w": 139.3,
-     "h": 18
-    },
-    "box": {
-     "x": 204.5,
-     "y": 2311,
-     "w": 139.3,
-     "h": 18
-    },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1559,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2136,
-     "col": 11
-    }
-   },
-   "live": {
-    "n": 55,
-    "textBox": {
-     "x": 205.3,
-     "y": 2583.5,
-     "w": 139.3,
-     "h": 18
-    },
-    "box": {
-     "x": 205.3,
-     "y": 2583.5,
-     "w": 139.3,
-     "h": 18
-    },
-    "section": null,
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "typography:photographer three#0",
-   "category": "typography",
-   "severity": "medium",
-   "text": "Photographer Three",
-   "section": "Pre-footer",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~19px)",
-     "live": "24px",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 30,
-    "textBox": {
-     "x": 842.3,
-     "y": 2311,
-     "w": 152.6,
-     "h": 18
-    },
-    "box": {
-     "x": 842.3,
-     "y": 2311,
-     "w": 152.6,
-     "h": 18
-    },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1561,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2138,
-     "col": 11
-    }
-   },
-   "live": {
-    "n": 57,
-    "textBox": {
-     "x": 842.7,
-     "y": 2583.5,
-     "w": 152.6,
-     "h": 18
-    },
-    "box": {
-     "x": 842.7,
-     "y": 2583.5,
-     "w": 152.6,
-     "h": 18
-    },
-    "section": null,
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "typography:photographer two#0",
-   "category": "typography",
-   "severity": "medium",
-   "text": "Photographer Two",
-   "section": "Pre-footer",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~19px)",
-     "live": "24px",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 29,
-    "textBox": {
-     "x": 526.4,
-     "y": 2311,
-     "w": 139.9,
-     "h": 18
-    },
-    "box": {
-     "x": 526.4,
-     "y": 2311,
-     "w": 139.9,
-     "h": 18
-    },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1560,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2137,
-     "col": 11
-    }
-   },
-   "live": {
-    "n": 56,
-    "textBox": {
-     "x": 527,
-     "y": 2583.5,
-     "w": 139.9,
-     "h": 18
-    },
-    "box": {
-     "x": 527,
-     "y": 2583.5,
-     "w": 139.9,
-     "h": 18
-    },
-    "section": null,
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "typography:photographer four#0",
-   "category": "typography",
-   "severity": "medium",
-   "text": "Photographer Four",
-   "section": "Pre-footer",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~19px)",
-     "live": "24px",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 31,
-    "textBox": {
-     "x": 1169.4,
-     "y": 2311,
-     "w": 142.9,
-     "h": 18
-    },
-    "box": {
-     "x": 1169.4,
-     "y": 2311,
-     "w": 142.9,
-     "h": 18
-    },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1562,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2139,
-     "col": 11
-    }
-   },
-   "live": {
-    "n": 58,
-    "textBox": {
-     "x": 1169.5,
-     "y": 2583.5,
-     "w": 142.9,
-     "h": 18
-    },
-    "box": {
-     "x": 1169.5,
-     "y": 2583.5,
-     "w": 142.9,
-     "h": 18
-    },
-    "section": null,
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "color:explore#0",
+   "id": "color:icon@77,20",
    "category": "color",
    "severity": "medium",
-   "text": "Explore",
-   "section": "Home top bar",
+   "text": "Icon 20×20",
+   "section": "at 1216, 313",
    "props": [
     {
-     "prop": "text color",
-     "design": "#ffffff / 90%",
-     "live": "#f2f2f2",
+     "prop": "icon color",
+     "design": "#aaaaaa",
+     "live": "#d4d4d4",
      "swatch": true,
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 9,
-    "textBox": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
+     "x": 1216,
+     "y": 313,
+     "w": 20,
+     "h": 20
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 914,
-     "nth": 0
+    "textBox": {
+     "x": 1216,
+     "y": 313,
+     "w": 20,
+     "h": 20
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1450,
-     "col": 11
-    }
+    "kind": "icon"
    },
    "live": {
-    "n": 7,
-    "textBox": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
+     "x": 1211,
+     "y": 333,
+     "w": 20,
+     "h": 20
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 1211,
+     "y": 333,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "color:join pro#0",
-   "category": "color",
-   "severity": "medium",
-   "text": "Join Pro",
-   "section": "Home top bar",
-   "props": [
-    {
-     "prop": "gradient",
-     "design": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%)",
-     "live": "linear-gradient(-89deg, #fb00ff, #fd3198 32%, #fe4d5d 70%, #ff7900)",
-     "gradient": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 10,
-    "textBox": {
-     "x": 1200.5,
-     "y": 33.5,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1166,
-     "y": 18,
-     "w": 124,
-     "h": 48
-    },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 952,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1496,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 8,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1164.4,
-     "y": 16,
-     "w": 118.9,
-     "h": 48
-    },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "size:join pro#0",
+   "id": "size:image@77,3",
    "category": "size",
    "severity": "medium",
-   "text": "Join Pro",
-   "section": "Home top bar",
+   "text": "Picture 124×48",
+   "section": "at 1166, 18",
    "props": [
     {
      "prop": "width",
      "design": "124px",
-     "live": "118.9px",
+     "live": "119px",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 10,
-    "textBox": {
-     "x": 1200.5,
-     "y": 33.5,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
      "x": 1166,
      "y": 18,
      "w": 124,
      "h": 48
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 952,
-     "nth": 0
+    "textBox": {
+     "x": 1166,
+     "y": 18,
+     "w": 124,
+     "h": 48
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1496,
-     "col": 7
-    }
+    "kind": "image"
    },
    "live": {
-    "n": 8,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
-     "x": 1164.4,
+     "x": 1164,
      "y": 16,
-     "w": 118.9,
+     "w": 119,
      "h": 48
     },
-    "section": "header",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "icon:trending today#0",
-   "category": "icon",
-   "severity": "medium",
-   "text": "Trending Today",
-   "section": "Fresh content",
-   "props": [
-    {
-     "prop": "icon",
-     "design": "none",
-     "live": "1 × 18x18",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 19,
     "textBox": {
-     "x": 212.9,
-     "y": 472,
-     "w": 110.3,
-     "h": 18
-    },
-    "box": {
-     "x": 181.9,
-     "y": 460,
-     "w": 146.3,
-     "h": 45
-    },
-    "section": "Fresh content",
-    "where": null
-   },
-   "live": {
-    "n": 16,
-    "textBox": {
-     "x": 213.4,
-     "y": 492,
-     "w": 110.3,
-     "h": 18
-    },
-    "box": {
-     "x": 182.4,
-     "y": 480,
-     "w": 146.3,
-     "h": 45
-    },
-    "section": "button#home-content-grid-tab-trending",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:home#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Home",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover color",
-     "design": "#ffffff → #f2f2f2",
-     "live": "no change",
-     "swatch": true,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 0,
-    "textBox": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12,
-     "y": 84,
-     "w": 50,
+     "x": 1164,
+     "y": 16,
+     "w": 119,
      "h": 48
     },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 24,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 471,
-     "col": 7
-    }
+    "kind": "image"
    },
-   "live": {
-    "n": 0,
-    "textBox": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12.5,
-     "y": 84,
-     "w": 50,
-     "h": 48
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "behavior:search#0",
-   "category": "behavior",
+   "id": "size:panel@85,3",
+   "category": "size",
    "severity": "medium",
-   "text": "Search",
-   "section": "Left nav",
+   "text": "Panel 110×48",
+   "section": "at 1306, 18",
    "props": [
     {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
+     "prop": "width",
+     "design": "110px",
+     "live": "117px",
      "sev": "medium"
     }
    ],
    "design": {
-    "n": 1,
-    "textBox": {
-     "x": 25,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 29,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 475,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 1,
-    "textBox": {
-     "x": 25.5,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 148,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:explore#1",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "Explore",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 2,
-    "textBox": {
-     "x": 25,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 34,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 479,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 2,
-    "textBox": {
-     "x": 25.5,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 200,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:ai tools#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "AI Tools",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 3,
-    "textBox": {
-     "x": 25,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 39,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 483,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 3,
-    "textBox": {
-     "x": 25.5,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 252,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "behavior:my files#0",
-   "category": "behavior",
-   "severity": "medium",
-   "text": "My Files",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "hover background",
-     "design": "none → #2e2e2e",
-     "live": "none → oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": true,
-     "sev": "low"
-    },
-    {
-     "prop": "hover shadow",
-     "design": "none → #ffffff / 20% 0px 0px 0px 1px",
-     "live": "no change",
-     "swatch": false,
-     "sev": "medium"
-    },
-    {
-     "prop": "hover border",
-     "design": "no change",
-     "live": "none → 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "swatch": false,
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 4,
-    "textBox": {
-     "x": 25,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 47,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 487,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 4,
-    "textBox": {
-     "x": 25.5,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25.5,
-     "y": 304,
-     "w": 24,
-     "h": 24
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "missing:log in#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Log In",
-   "section": "Home top bar",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Log In",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 11,
-    "textBox": {
-     "x": 1340.5,
-     "y": 33.5,
-     "w": 40.9,
-     "h": 17
-    },
     "box": {
      "x": 1306,
      "y": 18,
      "w": 110,
      "h": 48
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 955,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1497,
-     "col": 372
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:everyone.#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Everyone.",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "text",
-     "design": "Everyone.",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 14,
     "textBox": {
-     "x": 886.5,
-     "y": 148,
-     "w": 283.6,
-     "h": 71
-    },
-    "box": {
-     "x": 886.5,
-     "y": 148,
-     "w": 283.6,
-     "h": 71
-    },
-    "section": "Hero masthead",
-    "where": null
-   },
-   "live": null
-  },
-  {
-   "id": "missing:search all images...#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Search all images...",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "field",
-     "design": "Search all images...",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 17,
-    "textBox": {
-     "x": 495.5,
-     "y": 303,
-     "w": 761,
-     "h": 40
-    },
-    "box": {
-     "x": 495.5,
-     "y": 303,
-     "w": 761,
-     "h": 40
-    },
-    "section": "Hero masthead",
-    "where": null
-   },
-   "live": null
-  },
-  {
-   "id": "missing:search by image#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Search by image",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Search by image",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 18,
-    "textBox": {
-     "x": 1214.5,
-     "y": 312,
-     "w": 22,
-     "h": 22
-    },
-    "box": {
-     "x": 1214.5,
-     "y": 312,
-     "w": 22,
-     "h": 22
-    },
-    "section": "Hero masthead",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1005,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1560,
-     "col": 11
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:all images#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "All Images",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "control",
-     "design": "All Images",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 16,
-    "textBox": {
-     "x": 315.5,
-     "y": 314,
-     "w": 78.6,
-     "h": 18
-    },
-    "box": {
-     "x": 262.5,
-     "y": 295,
-     "w": 184.6,
-     "h": 56
-    },
-    "section": "Hero masthead",
-    "where": null
-   },
-   "live": null
-  },
-  {
-   "id": "missing:alerts#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Alerts",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Alerts",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 5,
-    "textBox": {
-     "x": 25,
-     "y": 356,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 25,
-     "y": 356,
-     "w": 24,
-     "h": 24
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 53,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 491,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:join pro#1",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Join Pro",
-   "section": "Pre-footer",
-   "props": [
-    {
-     "prop": "text",
-     "design": "Join Pro",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 33,
-    "textBox": {
-     "x": 684.5,
-     "y": 2832,
-     "w": 145.9,
-     "h": 47
-    },
-    "box": {
-     "x": 684.5,
-     "y": 2832,
-     "w": 145.9,
-     "h": 47
-    },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1565,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2144,
-     "col": 9
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "missing:menu#0",
-   "category": "missing",
-   "severity": "medium",
-   "text": "Menu",
-   "section": "Left nav",
-   "props": [
-    {
-     "prop": "control",
-     "design": "Menu",
-     "live": "not found",
-     "sev": "medium"
-    }
-   ],
-   "design": {
-    "n": 6,
-    "textBox": {
-     "x": 26,
-     "y": 2945,
-     "w": 22,
-     "h": 22
-    },
-    "box": {
-     "x": 26,
-     "y": 2945,
-     "w": 22,
-     "h": 22
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 60,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 498,
-     "col": 7
-    }
-   },
-   "live": null
-  },
-  {
-   "id": "typography:join pro#0",
-   "category": "typography",
-   "severity": "low",
-   "text": "Join Pro",
-   "section": "Home top bar",
-   "props": [
-    {
-     "prop": "line-height",
-     "design": "normal (~17px)",
-     "live": "14px",
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "n": 10,
-    "textBox": {
-     "x": 1200.5,
-     "y": 33.5,
-     "w": 54.9,
-     "h": 17
-    },
-    "box": {
-     "x": 1166,
+     "x": 1306,
      "y": 18,
-     "w": 124,
+     "w": 110,
      "h": 48
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 952,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1496,
-     "col": 7
-    }
+    "kind": "panel"
    },
    "live": {
-    "n": 8,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
-     "x": 1164.4,
+     "x": 1299,
      "y": 16,
-     "w": 118.9,
+     "w": 117,
      "h": 48
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 1299,
+     "y": 16,
+     "w": 117,
+     "h": 48
+    },
+    "kind": "panel"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "color:featured photographers#0",
+   "id": "shape:panel@47,142",
+   "category": "shape",
+   "severity": "medium",
+   "text": "Panel 1317×535",
+   "section": "at 99, 2011",
+   "props": [
+    {
+     "prop": "border",
+     "design": "2px #363636",
+     "live": "none",
+     "swatch": true,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 2011,
+     "w": 1317,
+     "h": 535
+    },
+    "textBox": {
+     "x": 99,
+     "y": 2011,
+     "w": 1317,
+     "h": 535
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 100,
+     "y": 2261,
+     "w": 1316,
+     "h": 558
+    },
+    "textBox": {
+     "x": 100,
+     "y": 2261,
+     "w": 1316,
+     "h": 558
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "spacing:text@47,15",
+   "category": "spacing",
+   "severity": "medium",
+   "text": "Text 864×19",
+   "section": "at 325, 235",
+   "props": [
+    {
+     "prop": "inset top in Panel 1317×335",
+     "design": "150px",
+     "live": "156px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 325,
+     "y": 235,
+     "w": 864,
+     "h": 19
+    },
+    "textBox": {
+     "x": 325,
+     "y": 235,
+     "w": 864,
+     "h": 19
+    },
+    "kind": "text"
+   },
+   "live": {
+    "box": {
+     "x": 326,
+     "y": 255,
+     "w": 864,
+     "h": 19
+    },
+    "textBox": {
+     "x": 326,
+     "y": 255,
+     "w": 864,
+     "h": 19
+    },
+    "kind": "text"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 1317×335",
+     "design": {
+      "x": 99,
+      "y": 85,
+      "w": 1317,
+      "h": 335
+     },
+     "live": {
+      "x": 100,
+      "y": 99,
+      "w": 1316,
+      "h": 341
+     }
+    }
+   ]
+  },
+  {
+   "id": "spacing:icon@77,20",
+   "category": "spacing",
+   "severity": "medium",
+   "text": "Icon 20×20",
+   "section": "at 1216, 313",
+   "props": [
+    {
+     "prop": "inset left in Panel 999×66",
+     "design": "958px",
+     "live": "953px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 1216,
+     "y": 313,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 1216,
+     "y": 313,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "live": {
+    "box": {
+     "x": 1211,
+     "y": 333,
+     "w": 20,
+     "h": 20
+    },
+    "textBox": {
+     "x": 1211,
+     "y": 333,
+     "w": 20,
+     "h": 20
+    },
+    "kind": "icon"
+   },
+   "match": "look",
+   "related": [
+    {
+     "text": "Panel 999×66",
+     "design": {
+      "x": 258,
+      "y": 290,
+      "w": 999,
+      "h": 66
+     },
+     "live": {
+      "x": 258,
+      "y": 310,
+      "w": 1000,
+      "h": 66
+     }
+    }
+   ]
+  },
+  {
+   "id": "missing:panel@30,12",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Panel 53×41",
+   "section": "at 452, 166",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "53×41",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 452,
+     "y": 166,
+     "w": 53,
+     "h": 41
+    },
+    "textBox": {
+     "x": 452,
+     "y": 166,
+     "w": 53,
+     "h": 41
+    },
+    "kind": "panel"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:panel@60,12",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Panel 63×34",
+   "section": "at 933, 173",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "63×34",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 933,
+     "y": 173,
+     "w": 63,
+     "h": 34
+    },
+    "textBox": {
+     "x": 933,
+     "y": 173,
+     "w": 63,
+     "h": 34
+    },
+    "kind": "panel"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:panel@47,99",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Panel 425×283",
+   "section": "at 545, 1441",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "425×283",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 545,
+     "y": 1441,
+     "w": 425,
+     "h": 283
+    },
+    "textBox": {
+     "x": 545,
+     "y": 1441,
+     "w": 425,
+     "h": 283
+    },
+    "kind": "panel"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:panel@47,167",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Panel 1317×212",
+   "section": "at 99, 2570",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "1317×212",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 2570,
+     "w": 1317,
+     "h": 212
+    },
+    "textBox": {
+     "x": 99,
+     "y": 2570,
+     "w": 1317,
+     "h": 212
+    },
+    "kind": "panel"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:shape@47,181",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Shape 1317×194",
+   "section": "at 99, 2806",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "1317×194",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 99,
+     "y": 2806,
+     "w": 1317,
+     "h": 194
+    },
+    "textBox": {
+     "x": 99,
+     "y": 2806,
+     "w": 1317,
+     "h": 194
+    },
+    "kind": "shape"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:text@47,179",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Text 145×31",
+   "section": "at 685, 2841",
+   "props": [
+    {
+     "prop": "text",
+     "design": "145×31",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 685,
+     "y": 2841,
+     "w": 145,
+     "h": 31
+    },
+    "textBox": {
+     "x": 685,
+     "y": 2841,
+     "w": 145,
+     "h": 31
+    },
+    "kind": "text"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:shape@21,184",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Shape 406×94",
+   "section": "at 125, 2903",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "406×94",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 125,
+     "y": 2903,
+     "w": 406,
+     "h": 94
+    },
+    "textBox": {
+     "x": 125,
+     "y": 2903,
+     "w": 406,
+     "h": 94
+    },
+    "kind": "shape"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:shape@47,184",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Shape 405×94",
+   "section": "at 555, 2903",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "405×94",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 555,
+     "y": 2903,
+     "w": 405,
+     "h": 94
+    },
+    "textBox": {
+     "x": 555,
+     "y": 2903,
+     "w": 405,
+     "h": 94
+    },
+    "kind": "shape"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:shape@74,184",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Shape 406×94",
+   "section": "at 984, 2903",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "406×94",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 984,
+     "y": 2903,
+     "w": 406,
+     "h": 94
+    },
+    "textBox": {
+     "x": 984,
+     "y": 2903,
+     "w": 406,
+     "h": 94
+    },
+    "kind": "shape"
+   },
+   "live": null
+  },
+  {
+   "id": "color:text@47,129",
    "category": "color",
    "severity": "low",
-   "text": "Featured Photographers",
-   "section": "Pre-footer",
+   "text": "Text 541×45",
+   "section": "at 488, 2049",
    "props": [
     {
      "prop": "text color",
@@ -1941,1096 +1855,724 @@
     }
    ],
    "design": {
-    "n": 27,
-    "textBox": {
-     "x": 485.3,
-     "y": 2037,
-     "w": 544.4,
-     "h": 59
-    },
     "box": {
-     "x": 485.3,
-     "y": 2037,
-     "w": 544.4,
-     "h": 59
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
     },
-    "section": "Pre-footer",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 1557,
-     "nth": 0
+    "textBox": {
+     "x": 488,
+     "y": 2049,
+     "w": 541,
+     "h": 45
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 2134,
-     "col": 9
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 54,
-    "textBox": {
-     "x": 507.1,
-     "y": 2288,
-     "w": 501.8,
-     "h": 54
-    },
     "box": {
-     "x": 507.1,
-     "y": 2288,
-     "w": 501.8,
-     "h": 54
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
     },
-    "section": null,
-    "where": null
+    "textBox": {
+     "x": 509,
+     "y": 2299,
+     "w": 499,
+     "h": 42
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "look"
   },
   {
-   "id": "shape:home#0",
+   "id": "shape:panel@47,20",
    "category": "shape",
    "severity": "low",
-   "text": "Home",
-   "section": "Left nav",
+   "text": "Panel 999×66",
+   "section": "at 258, 290",
    "props": [
     {
      "prop": "border",
-     "design": "1px ring #ffffff / 20%",
-     "live": "1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
-     "sev": "low"
-    }
-   ],
-   "design": {
-    "n": 0,
-    "textBox": {
-     "x": 25,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12,
-     "y": 84,
-     "w": 50,
-     "h": 48
-    },
-    "section": "Left nav",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 24,
-     "nth": 0
-    },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 471,
-     "col": 7
-    }
-   },
-   "live": {
-    "n": 0,
-    "textBox": {
-     "x": 25.5,
-     "y": 96,
-     "w": 24,
-     "h": 24
-    },
-    "box": {
-     "x": 12.5,
-     "y": 84,
-     "w": 50,
-     "h": 48
-    },
-    "section": "nav#global-navbar-guest",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "spacing:for#0",
-   "category": "spacing",
-   "severity": "low",
-   "text": "for",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "gap below → “The world's best visual con…”",
-     "design": "7px",
-     "live": "10px",
-     "sev": "low",
-     "ref": 15
-    }
-   ],
-   "design": {
-    "n": 13,
-    "textBox": {
-     "x": 817.2,
-     "y": 146,
-     "w": 69.3,
-     "h": 78
-    },
-    "box": {
-     "x": 817.2,
-     "y": 146,
-     "w": 69.3,
-     "h": 78
-    },
-    "section": "Hero masthead",
-    "where": null
-   },
-   "live": {
-    "n": 11,
-    "textBox": {
-     "x": 817.7,
-     "y": 163,
-     "w": 69.3,
-     "h": 78
-    },
-    "box": {
-     "x": 817.7,
-     "y": 163,
-     "w": 69.3,
-     "h": 78
-    },
-    "section": "h1#masthead-statement",
-    "where": null
-   },
-   "match": "text"
-  },
-  {
-   "id": "spacing:beautiful visuals#0",
-   "category": "spacing",
-   "severity": "low",
-   "text": "Beautiful Visuals",
-   "section": "Hero masthead",
-   "props": [
-    {
-     "prop": "gap below → “The world's best visual con…”",
-     "design": "12px",
-     "live": "15px",
-     "sev": "low",
-     "ref": 15
-    }
-   ],
-   "design": {
-    "n": 12,
-    "textBox": {
-     "x": 344.9,
-     "y": 148,
-     "w": 472.2,
-     "h": 71
-    },
-    "box": {
-     "x": 344.9,
-     "y": 148,
-     "w": 472.2,
-     "h": 71
-    },
-    "section": "Hero masthead",
-    "where": null
-   },
-   "live": {
-    "n": 10,
-    "textBox": {
-     "x": 345.4,
-     "y": 165,
-     "w": 825.1,
-     "h": 71
-    },
-    "box": {
-     "x": 345.4,
-     "y": 165,
-     "w": 825.1,
-     "h": 71
-    },
-    "section": "h1#masthead-statement",
-    "where": null
-   },
-   "match": "similar text",
-   "liveText": "Beautiful Visuals Everyone."
-  },
-  {
-   "id": "behavior:explore#0",
-   "category": "behavior",
-   "severity": "low",
-   "text": "Explore",
-   "section": "Home top bar",
-   "props": [
-    {
-     "prop": "hover color",
-     "design": "#ffffff / 90% → #ffffff",
-     "live": "#f2f2f2 → none",
+     "design": "1px #4b4b4b",
+     "live": "1px #5e5e5e",
      "swatch": true,
      "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 258,
+     "y": 290,
+     "w": 999,
+     "h": 66
+    },
+    "textBox": {
+     "x": 258,
+     "y": 290,
+     "w": 999,
+     "h": 66
+    },
+    "kind": "panel"
+   },
+   "live": {
+    "box": {
+     "x": 258,
+     "y": 310,
+     "w": 1000,
+     "h": 66
+    },
+    "textBox": {
+     "x": 258,
+     "y": 310,
+     "w": 1000,
+     "h": 66
+    },
+    "kind": "panel"
+   },
+   "match": "look"
+  },
+  {
+   "id": "spacing:text@47,12",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Text 820×63",
+   "section": "at 348, 161",
+   "props": [
+    {
+     "prop": "gap below → Text 864×19",
+     "design": "11px",
+     "live": "14px",
+     "sev": "low"
     },
     {
-     "prop": "hover backgroundImage",
-     "design": "none → linear-gradient(90deg, #ff7900, #fd3198)",
-     "live": "none → linear-gradient(to right in oklab, #ff7900 0%, #fd3198 100%)",
-     "swatch": false,
+     "prop": "inset top in Panel 1317×335",
+     "design": "76px",
+     "live": "79px",
      "sev": "low"
     }
    ],
    "design": {
-    "n": 9,
-    "textBox": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.3,
-     "y": 33.5,
-     "w": 50.7,
-     "h": 17
+     "x": 348,
+     "y": 161,
+     "w": 820,
+     "h": 63
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 914,
-     "nth": 0
+    "textBox": {
+     "x": 348,
+     "y": 161,
+     "w": 820,
+     "h": 63
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1450,
-     "col": 11
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 7,
-    "textBox": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
-    },
     "box": {
-     "x": 1057.7,
-     "y": 31.5,
-     "w": 50.7,
-     "h": 17
+     "x": 348,
+     "y": 178,
+     "w": 820,
+     "h": 63
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 348,
+     "y": 178,
+     "w": 820,
+     "h": 63
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "match": "look",
+   "guide": {
+    "axis": "y",
+    "design": [
+     224,
+     235
+    ],
+    "live": [
+     241,
+     255
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 864×19",
+     "design": {
+      "x": 325,
+      "y": 235,
+      "w": 864,
+      "h": 19
+     },
+     "live": {
+      "x": 326,
+      "y": 255,
+      "w": 864,
+      "h": 19
+     }
+    }
+   ]
   },
   {
-   "id": "behavior:join pro#0",
-   "category": "behavior",
+   "id": "alignment:text@70,3:top",
+   "category": "alignment",
    "severity": "low",
-   "text": "Join Pro",
-   "section": "Home top bar",
+   "text": "Text 10×6",
+   "section": "at 1119, 39",
    "props": [
     {
-     "prop": "hover backgroundImage",
-     "design": "linear-gradient(135deg, #ff7900 20%, #fe4d5d 46%, #fd3198 76%, #fb00ff 100%) → linear-gradient(135deg, #f87600 20%, #ee4556 48%, #e5289d 80%, #e905ed 100%)",
-     "live": "linear-gradient(-89deg, #fb00ff, #fd3198 32%, #fe4d5d 70%, #ff7900) → linear-gradient(-89deg, #e905ed, #e5289d 24%, #ee4556 67%, #f87600)",
-     "swatch": false,
+     "prop": "top edge",
+     "design": "lines up with Text 40×13 at y=39",
+     "live": "off by 3px ↓ (37 vs 34)",
      "sev": "low"
     }
    ],
    "design": {
-    "n": 10,
-    "textBox": {
-     "x": 1200.5,
-     "y": 33.5,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
-     "x": 1166,
-     "y": 18,
-     "w": 124,
-     "h": 48
+     "x": 1119,
+     "y": 39,
+     "w": 10,
+     "h": 6
     },
-    "section": "Home top bar",
-    "where": {
-     "owner": "AI Magic",
-     "tpl": 952,
-     "nth": 0
+    "textBox": {
+     "x": 1119,
+     "y": 39,
+     "w": 10,
+     "h": 6
     },
-    "source": {
-     "file": "AI Magic.dc.html",
-     "line": 1496,
-     "col": 7
-    }
+    "kind": "text"
    },
    "live": {
-    "n": 8,
-    "textBox": {
-     "x": 1196.4,
-     "y": 31,
-     "w": 54.9,
-     "h": 17
-    },
     "box": {
-     "x": 1164.4,
-     "y": 16,
-     "w": 118.9,
-     "h": 48
+     "x": 1119,
+     "y": 37,
+     "w": 10,
+     "h": 6
     },
-    "section": "header",
-    "where": null
+    "textBox": {
+     "x": 1119,
+     "y": 37,
+     "w": 10,
+     "h": 6
+    },
+    "kind": "text"
    },
-   "match": "text"
+   "guide": {
+    "axis": "y",
+    "design": [
+     39
+    ],
+    "live": [
+     37,
+     34
+    ]
+   },
+   "related": [
+    {
+     "text": "Text 40×13",
+     "design": {
+      "x": 1341,
+      "y": 38,
+      "w": 40,
+      "h": 13
+     },
+     "live": {
+      "x": 1332,
+      "y": 34,
+      "w": 52,
+      "h": 14
+     }
+    }
+   ]
   },
   {
-   "id": "extra:live:sign up#0",
-   "category": "extra",
+   "id": "missing:line@5,6",
+   "category": "missing",
    "severity": "low",
-   "text": "Sign Up",
-   "section": "header",
+   "text": "Divider 1×146",
+   "section": "at 75, 19",
    "props": [
     {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Sign Up",
+     "prop": "divider",
+     "design": "1×146",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 9,
-    "textBox": {
-     "x": 1331.3,
-     "y": 31,
-     "w": 52.7,
-     "h": 17
-    },
+   "design": {
     "box": {
-     "x": 1299.3,
-     "y": 16,
-     "w": 116.7,
-     "h": 48
+     "x": 75,
+     "y": 19,
+     "w": 1,
+     "h": 146
     },
-    "section": "header",
-    "where": null
-   }
+    "textBox": {
+     "x": 75,
+     "y": 19,
+     "w": 1,
+     "h": 146
+    },
+    "kind": "line"
+   },
+   "live": null
   },
   {
-   "id": "extra:live:search vectors...#0",
-   "category": "extra",
+   "id": "missing:icon@19,20",
+   "category": "missing",
    "severity": "low",
-   "text": "Search vectors...",
-   "section": "input#search",
+   "text": "Icon 16×16",
+   "section": "at 289, 315",
    "props": [
     {
-     "prop": "field",
-     "design": "not in design",
-     "live": "Search vectors...",
+     "prop": "icon",
+     "design": "16×16",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 15,
-    "textBox": {
-     "x": 481.4,
+   "design": {
+    "box": {
+     "x": 289,
      "y": 315,
-     "w": 711.6,
-     "h": 56
+     "w": 16,
+     "h": 16
     },
-    "box": {
-     "x": 481.4,
+    "textBox": {
+     "x": 289,
      "y": 315,
-     "w": 711.6,
-     "h": 56
+     "w": 16,
+     "h": 16
     },
-    "section": "input#search",
-    "where": null
-   }
+    "kind": "icon"
+   },
+   "live": null
   },
   {
-   "id": "extra:live:search#1",
-   "category": "extra",
+   "id": "missing:text@35,20",
+   "category": "missing",
    "severity": "low",
-   "text": "Search",
-   "section": "form",
+   "text": "Text 139×16",
+   "section": "at 496, 316",
    "props": [
     {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Search",
+     "prop": "text",
+     "design": "139×16",
+     "live": "not found",
      "sev": "low"
     }
    ],
-   "design": null,
-   "live": {
-    "n": 14,
-    "textBox": {
-     "x": 445.4,
-     "y": 331,
-     "w": 24,
-     "h": 24
-    },
+   "design": {
     "box": {
-     "x": 445.4,
-     "y": 331,
-     "w": 24,
-     "h": 24
+     "x": 496,
+     "y": 316,
+     "w": 139,
+     "h": 16
     },
-    "section": "form",
-    "where": null
-   }
+    "textBox": {
+     "x": 496,
+     "y": 316,
+     "w": 139,
+     "h": 16
+    },
+    "kind": "text"
+   },
+   "live": null
   },
   {
-   "id": "extra:live:vectors#0",
-   "category": "extra",
+   "id": "missing:icon@2,23",
+   "category": "missing",
    "severity": "low",
-   "text": "Vectors",
-   "section": "form",
+   "text": "Icon 20×22",
+   "section": "at 27, 357",
    "props": [
     {
-     "prop": "control",
+     "prop": "icon",
+     "design": "20×22",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 27,
+     "y": 357,
+     "w": 20,
+     "h": 22
+    },
+    "textBox": {
+     "x": 27,
+     "y": 357,
+     "w": 20,
+     "h": 22
+    },
+    "kind": "icon"
+   },
+   "live": null
+  },
+  {
+   "id": "missing:line@16,31",
+   "category": "missing",
+   "severity": "low",
+   "text": "Divider 146×3",
+   "section": "at 182, 502",
+   "props": [
+    {
+     "prop": "divider",
+     "design": "146×3",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "box": {
+     "x": 182,
+     "y": 502,
+     "w": 146,
+     "h": 3
+    },
+    "textBox": {
+     "x": 182,
+     "y": 502,
+     "w": 146,
+     "h": 3
+    },
+    "kind": "line"
+   },
+   "live": null
+  },
+  {
+   "id": "extra:live:line@5,94",
+   "category": "extra",
+   "severity": "low",
+   "text": "Divider 1×2999",
+   "section": "at 75, 1",
+   "props": [
+    {
+     "prop": "divider",
      "design": "not in design",
-     "live": "Vectors",
+     "live": "1×2999",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 13,
+    "box": {
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
+    },
     "textBox": {
-     "x": 318,
+     "x": 75,
+     "y": 1,
+     "w": 1,
+     "h": 2999
+    },
+    "kind": "line"
+   }
+  },
+  {
+   "id": "extra:live:panel@70,13",
+   "category": "extra",
+   "severity": "low",
+   "text": "Panel 65×34",
+   "section": "at 1090, 190",
+   "props": [
+    {
+     "prop": "panel",
+     "design": "not in design",
+     "live": "65×34",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 1090,
+     "y": 190,
+     "w": 65,
+     "h": 34
+    },
+    "textBox": {
+     "x": 1090,
+     "y": 190,
+     "w": 65,
+     "h": 34
+    },
+    "kind": "panel"
+   }
+  },
+  {
+   "id": "extra:live:icon@19,21",
+   "category": "extra",
+   "severity": "low",
+   "text": "Icon 18×19",
+   "section": "at 289, 334",
+   "props": [
+    {
+     "prop": "icon",
+     "design": "not in design",
+     "live": "18×19",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 289,
      "y": 334,
-     "w": 58.4,
-     "h": 18
+     "w": 18,
+     "h": 19
     },
-    "box": {
-     "x": 263,
-     "y": 315,
-     "w": 164.4,
-     "h": 56
+    "textBox": {
+     "x": 289,
+     "y": 334,
+     "w": 18,
+     "h": 19
     },
-    "section": "form",
-    "where": null
+    "kind": "icon"
    }
   },
   {
-   "id": "extra:live:slices lime summer background#0",
+   "id": "extra:live:text@34,21",
    "category": "extra",
    "severity": "low",
-   "text": "Slices Lime Summer Background",
-   "section": "ul#false",
+   "text": "Text 121×14",
+   "section": "at 482, 336",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Slices Lime Summer Background",
+     "live": "121×14",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 24,
-    "textBox": {
-     "x": 100,
-     "y": 549,
-     "w": 425.3,
-     "h": 425.3
-    },
     "box": {
-     "x": 100,
-     "y": 549,
-     "w": 425.3,
-     "h": 425.3
+     "x": 482,
+     "y": 336,
+     "w": 121,
+     "h": 14
     },
-    "section": "ul#false",
-    "where": null
+    "textBox": {
+     "x": 482,
+     "y": 336,
+     "w": 121,
+     "h": 14
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:childs hand painting#0",
+   "id": "extra:live:line@47,33",
    "category": "extra",
    "severity": "low",
-   "text": "Child's hand painting",
-   "section": "ul#false",
+   "text": "Divider 1316×3",
+   "section": "at 100, 522",
    "props": [
     {
-     "prop": "control",
+     "prop": "divider",
      "design": "not in design",
-     "live": "Child's hand painting",
+     "live": "1316×3",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 26,
-    "textBox": {
-     "x": 545,
-     "y": 549,
-     "w": 425.3,
-     "h": 282.6
-    },
-    "box": {
-     "x": 545,
-     "y": 549,
-     "w": 425.3,
-     "h": 282.6
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:abstract flowing colorful fluid shapes#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Abstract Flowing Colorful Fluid Shapes",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Abstract Flowing Colorful Fluid Shapes",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 28,
-    "textBox": {
-     "x": 991,
-     "y": 549,
-     "w": 425.3,
-     "h": 300.6
-    },
-    "box": {
-     "x": 991,
-     "y": 549,
-     "w": 425.3,
-     "h": 300.6
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:vector grunge paper texture#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Vector Grunge Paper Texture",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Vector Grunge Paper Texture",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 30,
-    "textBox": {
-     "x": 545,
-     "y": 852,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 545,
-     "y": 852,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:abstract outline pattern#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Abstract Outline Pattern",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Abstract Outline Pattern",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 32,
-    "textBox": {
-     "x": 991,
-     "y": 870,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 991,
-     "y": 870,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:outline plants pattern#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Outline Plants Pattern",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Outline Plants Pattern",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 34,
-    "textBox": {
-     "x": 100,
-     "y": 994,
-     "w": 425.3,
-     "h": 274.4
-    },
     "box": {
      "x": 100,
-     "y": 994,
-     "w": 425.3,
-     "h": 274.4
+     "y": 522,
+     "w": 1316,
+     "h": 3
     },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:bamboo leaves pattern vector#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Bamboo Leaves Pattern Vector",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Bamboo Leaves Pattern Vector",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 36,
-    "textBox": {
-     "x": 545,
-     "y": 1169,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 545,
-     "y": 1169,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:abstract swirl pattern background#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Abstract swirl pattern background",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Abstract swirl pattern background",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 38,
-    "textBox": {
-     "x": 991,
-     "y": 1187,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 991,
-     "y": 1187,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:abstract linear pattern#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Abstract Linear Pattern",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Abstract Linear Pattern",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 40,
     "textBox": {
      "x": 100,
-     "y": 1288,
-     "w": 425.3,
-     "h": 297.4
+     "y": 522,
+     "w": 1316,
+     "h": 3
     },
-    "box": {
-     "x": 100,
-     "y": 1288,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
+    "kind": "line"
    }
   },
   {
-   "id": "extra:live:simple circle yellow background#0",
+   "id": "extra:live:panel@47,102",
    "category": "extra",
    "severity": "low",
-   "text": "Simple Circle Yellow Background",
-   "section": "ul#false",
+   "text": "Panel 425×297",
+   "section": "at 545, 1486",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Simple Circle Yellow Background",
+     "live": "425×297",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 42,
-    "textBox": {
-     "x": 545,
-     "y": 1486,
-     "w": 425.3,
-     "h": 297.4
-    },
     "box": {
      "x": 545,
      "y": 1486,
-     "w": 425.3,
-     "h": 297.4
+     "w": 425,
+     "h": 297
     },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:squiggle line seamless pattern free vector#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Squiggle Line Seamless Pattern Free Vector",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Squiggle Line Seamless Pattern Free Vector",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 44,
-    "textBox": {
-     "x": 991,
-     "y": 1504,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 991,
-     "y": 1504,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:outline pastel pattern#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Outline Pastel Pattern",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Outline Pastel Pattern",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 46,
-    "textBox": {
-     "x": 100,
-     "y": 1605,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "box": {
-     "x": 100,
-     "y": 1605,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
-   }
-  },
-  {
-   "id": "extra:live:purple grunge painted canvas texture#0",
-   "category": "extra",
-   "severity": "low",
-   "text": "Purple Grunge Painted Canvas Texture",
-   "section": "ul#false",
-   "props": [
-    {
-     "prop": "control",
-     "design": "not in design",
-     "live": "Purple Grunge Painted Canvas Texture",
-     "sev": "low"
-    }
-   ],
-   "design": null,
-   "live": {
-    "n": 48,
     "textBox": {
      "x": 545,
-     "y": 1803,
-     "w": 425.3,
-     "h": 297.4
+     "y": 1486,
+     "w": 425,
+     "h": 297
     },
-    "box": {
-     "x": 545,
-     "y": 1803,
-     "w": 425.3,
-     "h": 297.4
-    },
-    "section": "ul#false",
-    "where": null
+    "kind": "panel"
    }
   },
   {
-   "id": "extra:live:futuristic memphis background#0",
+   "id": "extra:live:shape@75,132",
    "category": "extra",
    "severity": "low",
-   "text": "Futuristic Memphis Background",
-   "section": "ul#false",
+   "text": "Shape 425×50",
+   "section": "at 991, 2080",
    "props": [
     {
-     "prop": "control",
+     "prop": "shape",
      "design": "not in design",
-     "live": "Futuristic Memphis Background",
+     "live": "425×50",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 50,
-    "textBox": {
-     "x": 991,
-     "y": 1821,
-     "w": 425.3,
-     "h": 238.9
-    },
     "box": {
      "x": 991,
-     "y": 1821,
-     "w": 425.3,
-     "h": 238.9
+     "y": 2080,
+     "w": 425,
+     "h": 50
     },
-    "section": "ul#false",
-    "where": null
+    "textBox": {
+     "x": 991,
+     "y": 2080,
+     "w": 425,
+     "h": 50
+    },
+    "kind": "shape"
    }
   },
   {
-   "id": "extra:live:summer camp patch illustration vector#0",
+   "id": "extra:live:text@48,133",
    "category": "extra",
    "severity": "low",
-   "text": "Summer Camp Patch Illustration Vector",
-   "section": "ul#false",
+   "text": "Text 410×7",
+   "section": "at 555, 2120",
    "props": [
     {
-     "prop": "control",
+     "prop": "text",
      "design": "not in design",
-     "live": "Summer Camp Patch Illustration Vector",
+     "live": "410×7",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 52,
-    "textBox": {
-     "x": 100,
-     "y": 1922,
-     "w": 425.3,
-     "h": 425.3
-    },
     "box": {
-     "x": 100,
-     "y": 1922,
-     "w": 425.3,
-     "h": 425.3
+     "x": 555,
+     "y": 2120,
+     "w": 410,
+     "h": 7
     },
-    "section": "ul#false",
-    "where": null
+    "textBox": {
+     "x": 555,
+     "y": 2120,
+     "w": 410,
+     "h": 7
+    },
+    "kind": "text"
    }
   },
   {
-   "id": "extra:live:log in#0",
+   "id": "extra:live:panel@58,145",
    "category": "extra",
    "severity": "low",
-   "text": "Log in",
-   "section": "nav#global-navbar-guest",
+   "text": "Panel 156×41",
+   "section": "at 852, 2299",
    "props": [
     {
-     "prop": "control",
+     "prop": "panel",
      "design": "not in design",
-     "live": "Log in",
+     "live": "156×41",
      "sev": "low"
     }
    ],
    "design": null,
    "live": {
-    "n": 5,
-    "textBox": {
-     "x": 25.5,
-     "y": 2948,
-     "w": 24,
-     "h": 24
-    },
     "box": {
-     "x": 25.5,
-     "y": 2948,
-     "w": 24,
-     "h": 24
+     "x": 852,
+     "y": 2299,
+     "w": 156,
+     "h": 41
     },
-    "section": "nav#global-navbar-guest",
-    "where": null
+    "textBox": {
+     "x": 852,
+     "y": 2299,
+     "w": 156,
+     "h": 41
+    },
+    "kind": "panel"
    }
-  }
- ],
- "boxPairs": [
-  {
-   "design": 11,
-   "live": 7
   },
   {
-   "design": 33,
-   "live": 24
-  },
-  {
-   "design": 34,
-   "live": 25
-  },
-  {
-   "design": 35,
-   "live": 26
-  },
-  {
-   "design": 36,
-   "live": 27
-  },
-  {
-   "design": 37,
-   "live": 28
-  },
-  {
-   "design": 5,
-   "live": 4
-  },
-  {
-   "design": 1,
-   "live": 1
-  },
-  {
-   "design": 32,
-   "live": 23
-  },
-  {
-   "design": 3,
-   "live": 2
-  },
-  {
-   "design": 0,
-   "live": 0
-  },
-  {
-   "design": 9,
-   "live": 5
-  },
-  {
-   "design": 27,
-   "live": 10
-  },
-  {
-   "design": 6,
-   "live": 6
-  },
-  {
-   "design": 4,
-   "live": 3
-  },
-  {
-   "design": 24,
-   "live": 14
-  },
-  {
-   "design": 28,
-   "live": 12
+   "id": "extra:live:shape@47,183",
+   "category": "extra",
+   "severity": "low",
+   "text": "Shape 1316×157",
+   "section": "at 100, 2843",
+   "props": [
+    {
+     "prop": "shape",
+     "design": "not in design",
+     "live": "1316×157",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "box": {
+     "x": 100,
+     "y": 2843,
+     "w": 1316,
+     "h": 157
+    },
+    "textBox": {
+     "x": 100,
+     "y": 2843,
+     "w": 1316,
+     "h": 157
+    },
+    "kind": "shape"
+   }
   }
  ],
  "stats": {
-  "designItems": 33,
-  "liveItems": 56,
-  "matched": 25,
-  "designBoxes": 38,
-  "liveBoxes": 29,
-  "matchedBoxes": 17,
-  "missing": 8,
-  "extra": 20,
-  "findings": 58,
+  "designItems": 73,
+  "liveItems": 72,
+  "matched": 50,
+  "anchors": 23,
+  "missing": 14,
+  "extra": 10,
+  "findings": 51,
   "byCategory": {
-   "typography": 10,
+   "typography": 5,
    "color": 4,
-   "size": 1,
-   "shape": 1,
-   "spacing": 2,
-   "alignment": 4,
-   "icon": 1,
-   "behavior": 7,
-   "missing": 8,
-   "extra": 20
+   "size": 5,
+   "shape": 2,
+   "spacing": 9,
+   "alignment": 2,
+   "missing": 14,
+   "extra": 10
   },
   "bySeverity": {
-   "low": 27,
-   "medium": 24,
-   "high": 7
+   "low": 19,
+   "medium": 18,
+   "high": 14
   }
  }
 }

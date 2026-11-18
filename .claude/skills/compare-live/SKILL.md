@@ -1,6 +1,6 @@
 ---
 name: compare-live
-description: Compare design-project pages with the live site (https://ao-4276-redesign-rollup.xeezy.com) for visual differences — alignment, size, color, typography, shape, spacing, icons and hover behavior — and read or act on the reviewer decisions. Use when asked to compare a design page with live, add or re-run a comparison, screenshot a live page, explain what differs, or compile what needs fixing on live vs in the design.
+description: Compare screenshots of design-project pages and the live site (https://ao-4276-redesign-rollup.xeezy.com) from a designer's point of view — pixels only, no DOM or CSS — for alignment, size, color, typography, shape, spacing and missing/extra elements, and read or act on the reviewer decisions. Use when asked to compare a design page with live, add or re-run a comparison, screenshot a live page, explain what differs, or compile what needs fixing on live vs in the design.
 ---
 
 # Comparing the design with the live site
@@ -15,31 +15,26 @@ Reports land in `comparisons/<id>/` and are reviewed in the viewer (`npm start` 
 - **Themes**: every pair runs light and dark. The dark comparison's id is `<id>--dark` (design `theme`
   prop = dark; live browser `prefers-color-scheme: dark`, which the live site follows). `run home` runs
   both; `--theme dark` one. Pair options: `"themes": ["light"]`, `"dark": { "design": {…}, "live": {…} }`.
-- **Item**: a visible piece of text, form field, or icon-only control/image with an accessible name.
-  Both pages are snapshotted the same way (`tools/lib/snapshot.js`): text box, typography, and the nearest
-  painted box around it (button, chip, input, card) with its size, background, border, radius, shadow, icon.
-- **Box**: every painted box on the page (masthead, rail buttons, bars, panels, cards; not photos), so
-  the page is compared as a whole. Boxes pair by the matched text they hold, or by size and expected
-  position when empty.
-- **Match**: items are paired by text (case/quote-insensitive, then fuzzy) near where they're expected
-  (offsets learned from unique "anchor" texts), so a repeated label never pairs across the page.
-- **Finding**: one difference for one matched element and one category (`typography`, `color`, `size`,
-  `shape`, `spacing`, `alignment`, `icon`, `behavior`, `missing`, `extra`), with severity high/medium/low and
-  property rows (`design → live`). Alignment also reports whole regions (design `data-screen-label`
-  sections) that moved, and **layout** findings (`layout: true`, id `alignment:layout:<box>:<edge>`): box
-  edges that lined up anywhere on the page in the design and no longer do (masthead top vs the first rail
-  button). Alignment findings carry `guide` (`axis`, design/live edge values) and `related` partner boxes. Behavior compares hover effects (each interactive item is hovered on both sides),
-  clickability and cursor.
-- **Decision** (reviewer, in the viewer): `keep` (a real difference) or `ignore` (noise, not meaningful), plus a free-text note.
-  The app only identifies differences; it doesn't decide who fixes what.
+- **Screenshots only** (this branch): the browser renders; the analysis reads pixels, never the DOM/CSS.
+- **Element** (`tools/lib/vision.mjs`): a group of edges in a screenshot, with a tight box and a kind —
+  `text`, `icon`, `panel` (outline around a flat fill: button, chip, input, card, masthead; has `fill`,
+  `radius`, `border`), `line` (divider), `image` (picture; its inside is ignored) or `shape` — plus the color
+  behind it, its ink color and ink ratio, and a grayscale thumbnail used to recognise it on the other side.
+- **Pairing** (`tools/lib/pixeldiff.mjs`): anchors (unique look-alikes) give the local offset; elements pair
+  with the best look-alike near where they're expected; big flat things also pair by size and place.
+- **Finding**: one difference for one paired element and one category (`typography`, `color`, `size`,
+  `shape`, `spacing`, `alignment`, `missing`, `extra`), with severity and property rows (`design → live`).
+  Titled by kind and size ("Panel 1317×330"); `section` is its position. Alignment findings carry `guide`
+  (axis + design/live edge values) and `related` partner boxes; they're page-wide (masthead top vs the
+  first rail button).
+- **Decision** (reviewer, in the viewer): `keep` (a real difference) or `ignore` (noise), plus a note.
   Stored in `comparisons/<id>/decisions.json` locally (deployed: `DATA_DIR/compare/<id>.json`; pull with
-  `npm run pull-decisions`). Finding ids are stable across re-runs (`<category>:<text>#<occurrence>`).
+  `npm run pull-decisions`). Finding ids: `<category>:<kind>@<x/16>,<y/16>` (design position).
 
 ## Workflow
 ```bash
 node tools/compare.mjs list                         # configured pairs + report status
-node tools/compare.mjs run                          # all pairs (~10–20 s each); or: run home sign-up
-node tools/compare.mjs run home --no-hover          # skip the hover probe (faster)
+node tools/compare.mjs run                          # all pairs, light + dark (~10 s each); or: run home sign-up
 node tools/compare.mjs show home --severity medium  # findings as text; --category color,size --limit N
 node tools/compare.mjs add show-page --label "Show page" --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
 node tools/compare.mjs live /free-photos/dog --full # screenshot a live page → screenshots/
@@ -54,16 +49,15 @@ panel; the live home shows **Sign Up** (design: **Log In**) and the **Vectors** 
 `/signups/join-pro` on live is still the old pricing page (the redesign isn't there yet).
 
 ## Reading results
-- `missing`/`extra` are mostly content differences (different copy, sample data); low severity unless the
-  item is interactive or large. Check them for genuinely absent controls (e.g. social sign-in buttons).
-- A `region` alignment finding (“<section> (N matched elements)”) means the whole block moved; individual
-  elements in it are only flagged when they break alignment *within* the region.
-- `liveText` on a finding means the match was by similar (not identical) text.
-- Raw snapshots for debugging the matcher: `comparisons/<id>/snapshot.json` (gitignored).
+- Check what the analysis saw: in the viewer, turn on **Elements** (`e`), or read
+  `comparisons/<id>/snapshot.json` (`design.blobs` / `live.blobs`, gitignored).
+- `missing`/`extra` are often content differences (different copy, sample data, photos vs placeholders).
+- No hover/behavior check: a screenshot is one state. Add a pair with `do` steps for a hover/open state.
+- If the live site is down (4xx/5xx), `run` stops with an error rather than comparing an error page.
 
 ## Acting on decisions
 Read `decisions.json` (or `GET /api/comparisons/<id>/export.md`) and join with `report.json` findings by id.
 `keep` = a confirmed difference between design and live; `ignore` = noise. When asked to compile the
-differences, list the kept ones (with their property rows, design → live); findings with a design element
-carry `design.source` = `{ file, line }` in `design-project/`. Use ignored findings to tune the matcher
-(`tools/lib/diff.mjs`) when the same kind of noise keeps coming back.
+differences, list the kept ones (with their property rows, design → live, and crops from the screenshots).
+Use ignored findings to tune the vision (`tools/lib/vision.mjs`) or pairing (`tools/lib/pixeldiff.mjs`)
+when the same kind of noise keeps coming back.

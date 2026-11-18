@@ -56,7 +56,7 @@ const CATS = ['typography', 'color', 'size', 'shape', 'spacing', 'alignment', 'i
 
 async function render() {
   const { base, comparisons } = await api('/api/comparisons');
-  $('#intro').innerHTML = `Each comparison renders a design-project page and the matching page on <a href="${esc(base)}/?skip=1" target="_blank">${esc(new URL(base).host)}</a> at the same width, matches their elements by text and position, and lists what differs: alignment, size, color, type, shape, spacing and hover behavior.`;
+  $('#intro').innerHTML = `Each comparison takes a screenshot of a design-project page and of the matching page on <a href="${esc(base)}/?skip=1" target="_blank">${esc(new URL(base).host)}</a> at the same width, and compares the two <b>images</b> the way a designer would: it finds the visual elements in each (text, icons, panels, dividers, pictures) from their pixels alone, pairs them by how they look and where they sit, and lists what differs: alignment across the page, size, color, type, corner radius, borders and spacing. No code or markup is read.`;
   $('#comps').innerHTML = comparisons.length ? comparisons.map(c => c.generated ? `
     <a class="card comp" href="compare.html?id=${encodeURIComponent(c.id)}">
       <div class="thumbs"><div class="d" style="background-image:url('/comparisons/${esc(c.id)}/design.jpg')"><span>Design</span></div><div class="l" style="background-image:url('/comparisons/${esc(c.id)}/live.jpg')"><span>Live</span></div></div>
