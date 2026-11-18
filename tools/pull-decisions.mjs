@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// Copy reviewer decisions (and group edits: names, Uncategorized) from the deployed review site into
-// the local surveys/<id>/decisions.json and surveys/<id>/group-edits.json.
+// Copy reviewer decisions from the deployed review site into the local comparisons/<id>/decisions.json.
 //   node tools/pull-decisions.mjs [--url https://…] [--force] [--dry]
 // Env: REVIEW_URL (default below), REVIEW_USER / REVIEW_PASS (default eezy / eezy).
 // Refuses to overwrite a local decisions file that differs from the remote one unless --force.
@@ -20,34 +19,21 @@ async function get(p) {
   return res.json();
 }
 
-const surveys = await get('/api/surveys');
+const { comparisons } = await get('/api/comparisons');
 let conflicts = 0;
-for (const s of surveys.filter(x => x.generated)) {
-  const full = await get(`/api/surveys/${s.id}`);
-  const remote = full.decisions || {};
-  // group names / Uncategorized: same rule as decisions
-  const ge = full.groupEdits;
-  const geFile = path.join(ROOT, 'surveys', s.id, 'group-edits.json');
-  if (ge && fs.existsSync(path.dirname(geFile)) && (Object.keys(ge.names || {}).length || (ge.uncategorized || []).length || fs.existsSync(geFile))) {
-    const localGe = fs.existsSync(geFile) ? JSON.parse(fs.readFileSync(geFile, 'utf8')) : null;
-    if (JSON.stringify(localGe) !== JSON.stringify(ge)) {
-      const localHas = localGe && (Object.keys(localGe.names || {}).length || (localGe.uncategorized || []).length);
-      if (localHas && !flag('--force')) { console.log(`${s.id}: local group edits differ from remote; use --force to overwrite`); conflicts++; }
-      else { if (!flag('--dry')) fs.writeFileSync(geFile, JSON.stringify(ge, null, 1) + '\n'); console.log(`${s.id}: ${flag('--dry') ? 'would write' : 'wrote'} group edits (${Object.keys(ge.names || {}).length} names, ${(ge.uncategorized || []).length} uncategorized)`); }
-    }
-  }
-  const file = path.join(ROOT, 'surveys', s.id, 'decisions.json');
-  if (!fs.existsSync(path.dirname(file))) { console.log(`${s.id}: not in this checkout, skipped`); continue; }
+for (const c of comparisons.filter(x => x.generated)) {
+  const remote = (await get(`/api/comparisons/${c.id}`)).decisions || {};
+  const file = path.join(ROOT, 'comparisons', c.id, 'decisions.json');
+  if (!fs.existsSync(path.dirname(file))) { console.log(`${c.id}: not in this checkout, skipped`); continue; }
   const local = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
-  const same = JSON.stringify(local) === JSON.stringify(remote);
   const n = Object.keys(remote).length;
-  if (same) { console.log(`${s.id}: ${n} decisions, already up to date`); continue; }
+  if (JSON.stringify(local) === JSON.stringify(remote)) { console.log(`${c.id}: ${n} decisions, already up to date`); continue; }
   if (Object.keys(local).length && !flag('--force')) {
-    console.log(`${s.id}: local has ${Object.keys(local).length} decisions that differ from remote (${n}); use --force to overwrite`);
+    console.log(`${c.id}: local has ${Object.keys(local).length} decisions that differ from remote (${n}); use --force to overwrite`);
     conflicts++;
     continue;
   }
   if (!flag('--dry')) fs.writeFileSync(file, JSON.stringify(remote, null, 1) + '\n');
-  console.log(`${s.id}: ${flag('--dry') ? 'would write' : 'wrote'} ${n} decisions`);
+  console.log(`${c.id}: ${flag('--dry') ? 'would write' : 'wrote'} ${n} decisions`);
 }
 if (conflicts) process.exitCode = 1;

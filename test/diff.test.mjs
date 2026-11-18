@@ -1,0 +1,86 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { compareSnapshots, matchItems, colorDistance, similarity } from '../tools/lib/diff.mjs';
+
+let n = 0;
+// a snapshot item: text at (x, y), with overrides for style / container
+function item(text, x, y, o = {}) {
+  const w = o.w ?? text.length * 8, h = o.h ?? 18;
+  return {
+    n: n++, kind: 'text', text, tag: 'span', interactive: false, cursor: 'auto', block: n, section: o.section ?? 'Main',
+    textBox: { x, y, w, h },
+    style: { color: '#111111', fontSize: 16, fontWeight: 400, fontFamily: 'Inter', fontStyle: 'normal', lineHeight: 24, letterSpacing: 0, textTransform: 'none', textDecoration: 'none', textAlign: 'start', ...o.style },
+    container: o.container ?? null,
+    ...o.extra,
+  };
+}
+const box = (x, y, w, h, o = {}) => ({ id: o.id ?? n, tag: 'button', box: { x, y, w, h }, background: '#ffffff', backgroundImage: null, border: null, radius: '8px', shadow: null, padding: '0 0 0 0', icon: null, ...o });
+const snap = items => ({ width: 1440, height: 900, items });
+
+test('colorDistance and similarity basics', () => {
+  assert.equal(colorDistance('#ffffff', '#ffffff'), 0);
+  assert.ok(colorDistance('#000000', '#ffffff') > 200);
+  assert.ok(colorDistance('#ff0000 / 50%', '#ff0000') > 100, 'alpha counts');
+  assert.ok(similarity('search all images', 'search all images...') > 0.8);
+  assert.equal(similarity('ab', 'cd'), 0);
+});
+
+test('matches by text, nearest to where it is expected, never across the page', () => {
+  const D = [item('Title', 100, 100), item('Log In', 1300, 20), item('Body', 100, 200)];
+  const L = [item('Title', 100, 110), item('Body', 100, 210), item('Log in', 30, 2900), item('Sign Up', 1300, 20)];
+  const { pairs, unmatchedD } = matchItems(D, L);
+  assert.deepEqual(pairs.map(p => p.d.text).sort(), ['Body', 'Title']);
+  assert.deepEqual(unmatchedD.map(d => d.text), ['Log In'], 'the far-away "Log in" is not a match');
+});
+
+test('typography, color, size and shape differences become findings', () => {
+  const D = [item('Buy now', 100, 100, { style: { fontSize: 16, fontWeight: 600 }, container: box(80, 90, 120, 40, { background: '#ff7900', radius: 'pill' }) }), item('Anchor', 100, 300)];
+  const L = [item('Buy now', 100, 100, { style: { fontSize: 14, fontWeight: 700 }, container: box(80, 90, 110, 48, { background: '#0057ff', radius: '8px' }) }), item('Anchor', 100, 300)];
+  const { findings } = compareSnapshots(snap(D), snap(L));
+  const by = Object.fromEntries(findings.map(f => [f.category, f]));
+  assert.deepEqual(by.typography.props.map(p => p.prop), ['font-size', 'font-weight']);
+  assert.equal(by.typography.severity, 'high');
+  assert.equal(by.color.props[0].prop, 'background');
+  assert.deepEqual(by.size.props.map(p => p.prop), ['width', 'height']);
+  assert.equal(by.shape.props[0].prop, 'radius');
+  assert.ok(findings.every(f => f.text === 'Buy now'), 'the identical element has no findings');
+});
+
+test('alignment: the one item that leaves its column is flagged, not the column', () => {
+  const col = ['One', 'Two', 'Three', 'Four'];
+  const D = col.map((t, i) => item(t, 100, 100 + i * 40));
+  const L = col.map((t, i) => item(t, t === 'Three' ? 112 : 100, 100 + i * 40));
+  const { findings } = compareSnapshots(snap(D), snap(L));
+  const al = findings.filter(f => f.category === 'alignment');
+  assert.deepEqual(al.map(f => f.text), ['Three']);
+  assert.match(al[0].props[0].live, /off by 12px/);
+});
+
+test('spacing: a changed gap to the next element is reported', () => {
+  const D = [item('Heading', 100, 100, { h: 30 }), item('Paragraph', 100, 146)];
+  const L = [item('Heading', 100, 100, { h: 30 }), item('Paragraph', 100, 162)];
+  const sp = compareSnapshots(snap(D), snap(L)).findings.filter(f => f.category === 'spacing');
+  assert.equal(sp.length, 1);
+  assert.equal(sp[0].text, 'Heading');
+  assert.deepEqual([sp[0].props[0].design, sp[0].props[0].live], ['16px', '32px']);
+});
+
+test('missing and extra items; hover behavior differences', () => {
+  const link = { interactive: true, cursor: 'pointer' };
+  const D = [item('Pricing', 100, 100, { extra: link }), item('Only in design', 100, 200)];
+  const L = [item('Pricing', 100, 100, { extra: link }), item('Only live', 600, 600)];
+  const hover = (from, to) => ({ before: { text: { color: from } }, after: { text: { color: to } } });
+  D.hover = undefined;
+  const { findings } = compareSnapshots({ ...snap(D), hover: { [D[0].n]: hover('#111111', '#ff7900') } }, { ...snap(L), hover: { [L[0].n]: hover('#111111', '#111111') } });
+  assert.ok(findings.some(f => f.category === 'missing' && f.text === 'Only in design'));
+  assert.ok(findings.some(f => f.category === 'extra' && f.text === 'Only live'));
+  const b = findings.find(f => f.category === 'behavior');
+  assert.equal(b.props[0].prop, 'hover color');
+  assert.equal(b.props[0].live, 'no change');
+});
+
+test('finding ids are stable across runs', () => {
+  const mk = () => { n = 0; return compareSnapshots(snap([item('A', 0, 0, { style: { fontSize: 12 } })]), snap([item('A', 0, 0, { style: { fontSize: 14 } })])).findings.map(f => f.id); };
+  assert.deepEqual(mk(), mk());
+  assert.deepEqual(mk(), ['typography:a#0']);
+});

@@ -21,9 +21,6 @@ export const liveHeaders = () => ({ 'x-client-id': me.client, 'x-client-name': e
 
 const listeners = new Set();
 export const onDecision = fn => listeners.add(fn);
-// group renames / uncategorize edits made elsewhere: fn(event, { mine })
-const groupListeners = new Set();
-export const onGroupEdits = fn => groupListeners.add(fn);
 
 let pill, toastEl, toastTimer, editor, started = false;
 
@@ -122,17 +119,10 @@ export function startLive() {
     const mine = d.by?.client === me.client;
     for (const fn of listeners) { try { fn(d, { mine }); } catch (err) { console.error(err); } }
   });
-  es.addEventListener('group-edits', e => {
-    const d = JSON.parse(e.data);
-    if (d.by?.tab === me.tab) return;
-    for (const fn of groupListeners) { try { fn(d, { mine: d.by?.client === me.client }); } catch (err) { console.error(err); } }
-  });
 }
 
-// Default toast text for a decision event; pages can pass refs (e.g. "S3.4") for precision.
-export function describeDecision(d, refs) {
-  const verb = { keep: 'kept', round: 'rounded', exclude: 'excluded', unclear: 'shrugged 🤷 at' }[d.decision] || (d.decision === null ? 'cleared' : 'updated');
-  const what = refs?.length === 1 ? refs[0] : `${d.ids.length} usage${d.ids.length === 1 ? '' : 's'}`;
-  const to = d.decision === 'round' && d.ids.length === 1 ? ` → ${d.decisions[d.ids[0]]?.round?.to}` : '';
-  return `${d.by?.name || 'Someone'} ${verb} ${what}${to} in ${d.title}`;
+// Default toast text for a decision event.
+export function describeDecision(d) {
+  const verb = { 'fix-live': 'marked “fix live” on', 'fix-design': 'marked “update design” on', ok: 'marked fine', unclear: 'shrugged 🤷 at' }[d.decision] || (d.decision === null ? 'cleared' : 'noted');
+  return `${d.by?.name || 'Someone'} ${verb} ${d.ids.length} finding${d.ids.length === 1 ? '' : 's'} in ${d.title}`;
 }

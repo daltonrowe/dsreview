@@ -1,0 +1,5755 @@
+{
+ "id": "pricing",
+ "label": "Join Pro (pricing)",
+ "generatedAt": "2026-11-18T11:39:33.432Z",
+ "base": "https://ao-4276-redesign-rollup.xeezy.com",
+ "hover": true,
+ "design": {
+  "page": "Pricing.dc.html",
+  "props": {},
+  "state": {},
+  "do": [],
+  "view": "view.html?page=Pricing.dc.html",
+  "width": 1440,
+  "height": 1352,
+  "shot": "design.jpg",
+  "items": 60,
+  "log": []
+ },
+ "live": {
+  "path": "/signups/join-pro",
+  "do": [],
+  "url": "https://ao-4276-redesign-rollup.xeezy.com/signups/join-pro?skip=1",
+  "finalUrl": "https://ao-4276-redesign-rollup.xeezy.com/signups/join-pro?skip=1",
+  "width": 1440,
+  "height": 2924,
+  "shot": "live.jpg",
+  "items": 114,
+  "log": []
+ },
+ "pairs": [
+  {
+   "design": 0,
+   "live": 0,
+   "how": "text"
+  }
+ ],
+ "findings": [
+  {
+   "id": "missing:your all-access pass#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Your All-Access Pass",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Your All-Access Pass",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 2,
+    "textBox": {
+     "x": 616.2,
+     "y": 107,
+     "w": 207.6,
+     "h": 18
+    },
+    "box": {
+     "x": 616.2,
+     "y": 107,
+     "w": 207.6,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 100,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 112,
+     "col": 5
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:to#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "to",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "to",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 4,
+    "textBox": {
+     "x": 558.9,
+     "y": 131,
+     "w": 43.6,
+     "h": 78
+    },
+    "box": {
+     "x": 558.9,
+     "y": 131,
+     "w": 43.6,
+     "h": 78
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 102,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 113,
+     "col": 207
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:join pro unlock everything#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Join Pro Unlock Everything",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Join Pro Unlock Everything",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 3,
+    "textBox": {
+     "x": 323.7,
+     "y": 133,
+     "w": 792.7,
+     "h": 71
+    },
+    "box": {
+     "x": 323.7,
+     "y": 133,
+     "w": 792.7,
+     "h": 71
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 101,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 113,
+     "col": 5
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:access 75+ million vectors, photos, and videos, #0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Access 75+ million vectors, photos, and videos, with industry leading AI tools to customize them your way.",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Access 75+ million vectors, photos, and videos, with industry leading AI tools to customize them your way.",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 5,
+    "textBox": {
+     "x": 295.8,
+     "y": 218,
+     "w": 848.3,
+     "h": 21
+    },
+    "box": {
+     "x": 295.8,
+     "y": 218,
+     "w": 848.3,
+     "h": 21
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 103,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 114,
+     "col": 5
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:yearly ( off)#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Yearly ( off)",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Yearly ( off)",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 6,
+    "textBox": {
+     "x": 602.5,
+     "y": 300.8,
+     "w": 125.2,
+     "h": 18
+    },
+    "box": {
+     "x": 580.5,
+     "y": 287.8,
+     "w": 169.2,
+     "h": 44
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 105,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 116,
+     "col": 7
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:40%#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "40%",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "40%",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 7,
+    "textBox": {
+     "x": 659.6,
+     "y": 300.8,
+     "w": 36.5,
+     "h": 18
+    },
+    "box": {
+     "x": 580.5,
+     "y": 287.8,
+     "w": 169.2,
+     "h": 44
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:monthly#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Monthly",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Monthly",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 8,
+    "textBox": {
+     "x": 775.8,
+     "y": 300.8,
+     "w": 61.7,
+     "h": 18
+    },
+    "box": {
+     "x": 576.5,
+     "y": 283.8,
+     "w": 286.9,
+     "h": 52
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 106,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 117,
+     "col": 7
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:off · annual plan#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "OFF · ANNUAL PLAN",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "OFF · ANNUAL PLAN",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 9,
+    "textBox": {
+     "x": 530.3,
+     "y": 427.3,
+     "w": 142,
+     "h": 17
+    },
+    "box": {
+     "x": 486,
+     "y": 421.8,
+     "w": 198.3,
+     "h": 28
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 111,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 122,
+     "col": 224
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:40%#1",
+   "category": "missing",
+   "severity": "medium",
+   "text": "40%",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "40%",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 10,
+    "textBox": {
+     "x": 498,
+     "y": 427.3,
+     "w": 32.3,
+     "h": 17
+    },
+    "box": {
+     "x": 486,
+     "y": 421.8,
+     "w": 198.3,
+     "h": 28
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:$25#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "$25",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "$25",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 11,
+    "textBox": {
+     "x": 486,
+     "y": 457.8,
+     "w": 116.8,
+     "h": 76
+    },
+    "box": {
+     "x": 486,
+     "y": 457.8,
+     "w": 116.8,
+     "h": 76
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:$15#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "$15",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "$15",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 12,
+    "textBox": {
+     "x": 616.8,
+     "y": 457.8,
+     "w": 109,
+     "h": 76
+    },
+    "box": {
+     "x": 616.8,
+     "y": 457.8,
+     "w": 109,
+     "h": 76
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:usd#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "USD",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "USD",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 13,
+    "textBox": {
+     "x": 739.8,
+     "y": 476,
+     "w": 33.5,
+     "h": 18
+    },
+    "box": {
+     "x": 739.8,
+     "y": 476,
+     "w": 33.5,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 117,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 127,
+     "col": 116
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:per month#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "per month",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "per month",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 14,
+    "textBox": {
+     "x": 739.8,
+     "y": 496.8,
+     "w": 78.1,
+     "h": 18
+    },
+    "box": {
+     "x": 739.8,
+     "y": 496.8,
+     "w": 78.1,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 118,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 127,
+     "col": 132
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:billed annually#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "billed annually",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "billed annually",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 15,
+    "textBox": {
+     "x": 524.6,
+     "y": 541.8,
+     "w": 116.8,
+     "h": 18
+    },
+    "box": {
+     "x": 524.6,
+     "y": 541.8,
+     "w": 116.8,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 121,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 129,
+     "col": 169
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:$180#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "$180",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "$180",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 16,
+    "textBox": {
+     "x": 486,
+     "y": 541.8,
+     "w": 38.6,
+     "h": 18
+    },
+    "box": {
+     "x": 486,
+     "y": 541.8,
+     "w": 38.6,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:subscribe to vecteezy pro#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Subscribe to Vecteezy Pro",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Subscribe to Vecteezy Pro",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 22,
+    "textBox": {
+     "x": 612.9,
+     "y": 733,
+     "w": 214.2,
+     "h": 20
+    },
+    "box": {
+     "x": 486,
+     "y": 715,
+     "w": 468,
+     "h": 56
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 137,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 137,
+     "col": 9
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:rated excellent on#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Rated Excellent on",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Rated Excellent on",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 24,
+    "textBox": {
+     "x": 607.5,
+     "y": 891,
+     "w": 132.4,
+     "h": 18
+    },
+    "box": {
+     "x": 607.5,
+     "y": 891,
+     "w": 132.4,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 140,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 142,
+     "col": 7
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:trustscore |#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "TrustScore |",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "TrustScore |",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 27,
+    "textBox": {
+     "x": 679.9,
+     "y": 922.5,
+     "w": 108,
+     "h": 17
+    },
+    "box": {
+     "x": 679.9,
+     "y": 922.5,
+     "w": 108,
+     "h": 17
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 144,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 143,
+     "col": 214
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:4.9#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "4.9",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "4.9",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 28,
+    "textBox": {
+     "x": 754,
+     "y": 922.5,
+     "w": 22.8,
+     "h": 17
+    },
+    "box": {
+     "x": 754,
+     "y": 922.5,
+     "w": 22.8,
+     "h": 17
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 145,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 143,
+     "col": 288
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:33,572 reviews#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "33,572 reviews",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "33,572 reviews",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 29,
+    "textBox": {
+     "x": 787.9,
+     "y": 922.5,
+     "w": 105.1,
+     "h": 17
+    },
+    "box": {
+     "x": 787.9,
+     "y": 922.5,
+     "w": 105.1,
+     "h": 17
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 146,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 143,
+     "col": 370
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:michelle reynolds#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Michelle Reynolds",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Michelle Reynolds",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 34,
+    "textBox": {
+     "x": 41,
+     "y": 1113,
+     "w": 116.8,
+     "h": 16
+    },
+    "box": {
+     "x": 41,
+     "y": 1113,
+     "w": 116.8,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:karina krogh#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Karina Krogh",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Karina Krogh",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 40,
+    "textBox": {
+     "x": 357,
+     "y": 1113,
+     "w": 83.7,
+     "h": 16
+    },
+    "box": {
+     "x": 357,
+     "y": 1113,
+     "w": 83.7,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:b crat\\/#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "B CRAT\\/",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "B CRAT\\/",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 46,
+    "textBox": {
+     "x": 673,
+     "y": 1113,
+     "w": 56.4,
+     "h": 16
+    },
+    "box": {
+     "x": 673,
+     "y": 1113,
+     "w": 56.4,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:courtney adriance#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Courtney Adriance",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Courtney Adriance",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 52,
+    "textBox": {
+     "x": 989,
+     "y": 1113,
+     "w": 120.9,
+     "h": 16
+    },
+    "box": {
+     "x": 989,
+     "y": 1113,
+     "w": 120.9,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:jt nous#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "JT Nous",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "JT Nous",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 56,
+    "textBox": {
+     "x": 1305,
+     "y": 1113,
+     "w": 52.8,
+     "h": 16
+    },
+    "box": {
+     "x": 1305,
+     "y": 1113,
+     "w": 52.8,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:buying for a team?#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Buying for a team?",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Buying for a team?",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 58,
+    "textBox": {
+     "x": 571,
+     "y": 1212.5,
+     "w": 136.4,
+     "h": 18
+    },
+    "box": {
+     "x": 440,
+     "y": 1190,
+     "w": 560,
+     "h": 82
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 162,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 165,
+     "col": 11
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:save up to 15% with vecteezy pro for teams#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Save up to 15% with Vecteezy Pro for Teams",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Save up to 15% with Vecteezy Pro for Teams",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 59,
+    "textBox": {
+     "x": 571,
+     "y": 1232.5,
+     "w": 286.8,
+     "h": 17
+    },
+    "box": {
+     "x": 440,
+     "y": 1190,
+     "w": 560,
+     "h": 82
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 163,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 166,
+     "col": 11
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:(regularly )#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "(regularly )",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "(regularly )",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 17,
+    "textBox": {
+     "x": 641.5,
+     "y": 541.8,
+     "w": 117.8,
+     "h": 18
+    },
+    "box": {
+     "x": 641.5,
+     "y": 541.8,
+     "w": 117.8,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 122,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 129,
+     "col": 207
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:$300#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "$300",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "$300",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 18,
+    "textBox": {
+     "x": 714.4,
+     "y": 541.8,
+     "w": 39,
+     "h": 18
+    },
+    "box": {
+     "x": 714.4,
+     "y": 541.8,
+     "w": 39,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:unlimited downloads of 75+ million creative asse#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Unlimited downloads of 75+ million creative assets",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Unlimited downloads of 75+ million creative assets",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 19,
+    "textBox": {
+     "x": 520,
+     "y": 589.8,
+     "w": 365.8,
+     "h": 18
+    },
+    "box": {
+     "x": 520,
+     "y": 589.8,
+     "w": 365.8,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 127,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 132,
+     "col": 9
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:powerful ai tools to generate, edit, and transfo#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Powerful AI tools to generate, edit, and transform",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Powerful AI tools to generate, edit, and transform",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 20,
+    "textBox": {
+     "x": 520,
+     "y": 628.2,
+     "w": 356,
+     "h": 18
+    },
+    "box": {
+     "x": 520,
+     "y": 628.2,
+     "w": 356,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 130,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 133,
+     "col": 9
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:commercial licensing included. no attribution re#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Commercial licensing included. No attribution required.",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Commercial licensing included. No attribution required.",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 21,
+    "textBox": {
+     "x": 520,
+     "y": 666.6,
+     "w": 398,
+     "h": 18
+    },
+    "box": {
+     "x": 520,
+     "y": 666.6,
+     "w": 398,
+     "h": 18
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 133,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 134,
+     "col": 9
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:cancel anytime. 30-day money back guarantee#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Cancel anytime. 30-day money back guarantee",
+   "section": "Pricing V4",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Cancel anytime. 30-day money back guarantee",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 23,
+    "textBox": {
+     "x": 567.5,
+     "y": 787,
+     "w": 304.9,
+     "h": 17
+    },
+    "box": {
+     "x": 567.5,
+     "y": 787,
+     "w": 304.9,
+     "h": 17
+    },
+    "section": "Pricing V4",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 138,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 138,
+     "col": 9
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "“ ”",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "“ ”",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 31,
+    "textBox": {
+     "x": 41,
+     "y": 1021,
+     "w": 131.4,
+     "h": 59
+    },
+    "box": {
+     "x": 41,
+     "y": 1021,
+     "w": 131.4,
+     "h": 59
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 153,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 151,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:i can always find the right images that i need. #0",
+   "category": "missing",
+   "severity": "low",
+   "text": "I can always find the right images that I need. This site has the largest amount of images available.",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "I can always find the right images that I need. This site has the largest amount of images available.",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 32,
+    "textBox": {
+     "x": 41,
+     "y": 1021,
+     "w": 257.5,
+     "h": 59
+    },
+    "box": {
+     "x": 41,
+     "y": 1021,
+     "w": 257.5,
+     "h": 59
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:#1",
+   "category": "missing",
+   "severity": "low",
+   "text": "“ ”",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "“ ”",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 37,
+    "textBox": {
+     "x": 357,
+     "y": 1021,
+     "w": 50.8,
+     "h": 59
+    },
+    "box": {
+     "x": 357,
+     "y": 1021,
+     "w": 50.8,
+     "h": 59
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 153,
+     "nth": 1
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 151,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:have now found a useful tool to my hobby. wonder#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Have now found a useful tool to my hobby. Wonderful pictures of any kind. Love it.",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Have now found a useful tool to my hobby. Wonderful pictures of any kind. Love it.",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 38,
+    "textBox": {
+     "x": 357,
+     "y": 1021,
+     "w": 248.8,
+     "h": 59
+    },
+    "box": {
+     "x": 357,
+     "y": 1021,
+     "w": 248.8,
+     "h": 59
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:#2",
+   "category": "missing",
+   "severity": "low",
+   "text": "“ ”",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "“ ”",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 43,
+    "textBox": {
+     "x": 673,
+     "y": 1021,
+     "w": 154.3,
+     "h": 80
+    },
+    "box": {
+     "x": 673,
+     "y": 1021,
+     "w": 154.3,
+     "h": 80
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 153,
+     "nth": 2
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 151,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:very high quality videos that fit the vision of #0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Very high quality videos that fit the vision of my project perfectly. Lyric videos and background displays are coming together nicely",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Very high quality videos that fit the vision of my project perfectly. Lyric videos and background displays are coming together nicely",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 44,
+    "textBox": {
+     "x": 673,
+     "y": 1021,
+     "w": 231.2,
+     "h": 80
+    },
+    "box": {
+     "x": 673,
+     "y": 1021,
+     "w": 231.2,
+     "h": 80
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:#3",
+   "category": "missing",
+   "severity": "low",
+   "text": "“ ”",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "“ ”",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 49,
+    "textBox": {
+     "x": 989,
+     "y": 1021,
+     "w": 93.6,
+     "h": 101
+    },
+    "box": {
+     "x": 989,
+     "y": 1021,
+     "w": 93.6,
+     "h": 101
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 153,
+     "nth": 3
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 151,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:this is awesome! i am using the site to download#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "This is awesome! I am using the site to download caution and warning signs for a DIY project for my son and it was extremely easy to download the ones that I…",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "This is awesome! I am using the site to download caution and warning signs for a DIY project for my son and it was extremely easy to download the ones that I…",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 50,
+    "textBox": {
+     "x": 989,
+     "y": 1021,
+     "w": 256.3,
+     "h": 101
+    },
+    "box": {
+     "x": 989,
+     "y": 1021,
+     "w": 256.3,
+     "h": 101
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:·#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "·",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "·",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 33,
+    "textBox": {
+     "x": 157.8,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "box": {
+     "x": 157.8,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 154,
+     "nth": 0
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 152,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:16 hours ago#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "16 hours ago",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "16 hours ago",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 35,
+    "textBox": {
+     "x": 168.8,
+     "y": 1113,
+     "w": 78,
+     "h": 16
+    },
+    "box": {
+     "x": 168.8,
+     "y": 1113,
+     "w": 78,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:·#1",
+   "category": "missing",
+   "severity": "low",
+   "text": "·",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "·",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 39,
+    "textBox": {
+     "x": 440.7,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "box": {
+     "x": 440.7,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 154,
+     "nth": 1
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 152,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:3 days ago#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "3 days ago",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "3 days ago",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 41,
+    "textBox": {
+     "x": 451.6,
+     "y": 1113,
+     "w": 66.1,
+     "h": 16
+    },
+    "box": {
+     "x": 451.6,
+     "y": 1113,
+     "w": 66.1,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:·#2",
+   "category": "missing",
+   "severity": "low",
+   "text": "·",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "·",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 45,
+    "textBox": {
+     "x": 729.4,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "box": {
+     "x": 729.4,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 154,
+     "nth": 2
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 152,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:4 days ago#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "4 days ago",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "4 days ago",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 47,
+    "textBox": {
+     "x": 740.4,
+     "y": 1113,
+     "w": 66.3,
+     "h": 16
+    },
+    "box": {
+     "x": 740.4,
+     "y": 1113,
+     "w": 66.3,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:·#3",
+   "category": "missing",
+   "severity": "low",
+   "text": "·",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "·",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 51,
+    "textBox": {
+     "x": 1109.9,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "box": {
+     "x": 1109.9,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 154,
+     "nth": 3
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 152,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:6 days ago#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "6 days ago",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "6 days ago",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 53,
+    "textBox": {
+     "x": 1120.9,
+     "y": 1113,
+     "w": 66.2,
+     "h": 16
+    },
+    "box": {
+     "x": 1120.9,
+     "y": 1113,
+     "w": 66.2,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "missing:·#4",
+   "category": "missing",
+   "severity": "low",
+   "text": "·",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "·",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 55,
+    "textBox": {
+     "x": 1357.8,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "box": {
+     "x": 1357.8,
+     "y": 1113,
+     "w": 11,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": {
+     "owner": "Pricing",
+     "tpl": 154,
+     "nth": 4
+    },
+    "source": {
+     "file": "Pricing.dc.html",
+     "line": 152,
+     "col": 15
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:oct 24#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Oct 24",
+   "section": "Trustpilot marquee",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Oct 24",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 57,
+    "textBox": {
+     "x": 1368.7,
+     "y": 1113,
+     "w": 41.4,
+     "h": 16
+    },
+    "box": {
+     "x": 1368.7,
+     "y": 1113,
+     "w": 41.4,
+     "h": 16
+    },
+    "section": "Trustpilot marquee",
+    "where": null
+   },
+   "live": null
+  },
+  {
+   "id": "extra:live:join pro#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Join Pro",
+   "section": "header",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Join Pro",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 1,
+    "textBox": {
+     "x": 1196.4,
+     "y": 31,
+     "w": 54.9,
+     "h": 17
+    },
+    "box": {
+     "x": 1164.4,
+     "y": 16,
+     "w": 118.9,
+     "h": 48
+    },
+    "section": "header",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:sign up#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Sign Up",
+   "section": "header",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Sign Up",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 2,
+    "textBox": {
+     "x": 1331.3,
+     "y": 31,
+     "w": 52.7,
+     "h": 17
+    },
+    "box": {
+     "x": 1299.3,
+     "y": 16,
+     "w": 116.7,
+     "h": 48
+    },
+    "section": "header",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:join pro get unlimited downloads#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Join Pro Get Unlimited Downloads",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Join Pro Get Unlimited Downloads",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 3,
+    "textBox": {
+     "x": 120,
+     "y": 146,
+     "w": 412.2,
+     "h": 88
+    },
+    "box": {
+     "x": 120,
+     "y": 146,
+     "w": 412.2,
+     "h": 88
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:cancel anytime.#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Cancel anytime.",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Cancel anytime.",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 4,
+    "textBox": {
+     "x": 120,
+     "y": 246,
+     "w": 128.1,
+     "h": 21
+    },
+    "box": {
+     "x": 120,
+     "y": 246,
+     "w": 128.1,
+     "h": 21
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:pro#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Pro",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Pro",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 6,
+    "textBox": {
+     "x": 628.5,
+     "y": 414,
+     "w": 27,
+     "h": 17
+    },
+    "box": {
+     "x": 628.5,
+     "y": 414,
+     "w": 27,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:free#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Free",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Free",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 5,
+    "textBox": {
+     "x": 543.7,
+     "y": 414.1,
+     "w": 30.5,
+     "h": 17
+    },
+    "box": {
+     "x": 543.7,
+     "y": 414.1,
+     "w": 30.5,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:yearly unlimited subscription#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Yearly Unlimited Subscription",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Yearly Unlimited Subscription",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 16,
+    "textBox": {
+     "x": 781,
+     "y": 417,
+     "w": 235.3,
+     "h": 21
+    },
+    "box": {
+     "x": 781,
+     "y": 417,
+     "w": 235.3,
+     "h": 21
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:subscribe now#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Subscribe Now",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Subscribe Now",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 23,
+    "textBox": {
+     "x": 1146.7,
+     "y": 439,
+     "w": 87.1,
+     "h": 46.2
+    },
+    "box": {
+     "x": 1101.5,
+     "y": 426.3,
+     "w": 177.5,
+     "h": 72
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:thousands of free resources#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Thousands of Free Resources",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Thousands of Free Resources",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 7,
+    "textBox": {
+     "x": 161,
+     "y": 441.4,
+     "w": 199.7,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 441.4,
+     "w": 199.7,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:8#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "8",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "8",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 18,
+    "textBox": {
+     "x": 791.5,
+     "y": 443.5,
+     "w": 25.7,
+     "h": 47
+    },
+    "box": {
+     "x": 791.5,
+     "y": 443.5,
+     "w": 25.7,
+     "h": 47
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:€#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "€",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "€",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 17,
+    "textBox": {
+     "x": 781,
+     "y": 451.2,
+     "w": 10.5,
+     "h": 18
+    },
+    "box": {
+     "x": 781,
+     "y": 451.2,
+     "w": 10.5,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:99#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "99",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "99",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 19,
+    "textBox": {
+     "x": 819.2,
+     "y": 451.2,
+     "w": 20.8,
+     "h": 18
+    },
+    "box": {
+     "x": 819.2,
+     "y": 451.2,
+     "w": 20.8,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:save 36%#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Save 36%",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Save 36%",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 20,
+    "textBox": {
+     "x": 862,
+     "y": 455,
+     "w": 57.9,
+     "h": 13
+    },
+    "box": {
+     "x": 850,
+     "y": 448,
+     "w": 81.9,
+     "h": 27
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:over 50 million pro resources#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Over 50 million Pro Resources",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Over 50 million Pro Resources",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 8,
+    "textBox": {
+     "x": 161,
+     "y": 471.6,
+     "w": 202.7,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 471.6,
+     "w": 202.7,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:per month, billed each year ( )#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Per month, billed each year ( )",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Per month, billed each year ( )",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 21,
+    "textBox": {
+     "x": 781,
+     "y": 493.5,
+     "w": 214.4,
+     "h": 15
+    },
+    "box": {
+     "x": 781,
+     "y": 493.5,
+     "w": 214.4,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:€107.88#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "€107.88",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "€107.88",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 22,
+    "textBox": {
+     "x": 943.8,
+     "y": 493.5,
+     "w": 47,
+     "h": 15
+    },
+    "box": {
+     "x": 943.8,
+     "y": 493.5,
+     "w": 47,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:unlimited downloads#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Unlimited Downloads",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Unlimited Downloads",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 9,
+    "textBox": {
+     "x": 161,
+     "y": 501.8,
+     "w": 143,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 501.8,
+     "w": 143,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:full commercial rights#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Full Commercial Rights",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Full Commercial Rights",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 10,
+    "textBox": {
+     "x": 161,
+     "y": 532,
+     "w": 155.1,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 532,
+     "w": 155.1,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:no attribution required#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "No Attribution Required",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "No Attribution Required",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 11,
+    "textBox": {
+     "x": 161,
+     "y": 562.3,
+     "w": 159.3,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 562.3,
+     "w": 159.3,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:legal indemnification#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Legal Indemnification",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Legal Indemnification",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 12,
+    "textBox": {
+     "x": 161,
+     "y": 592.7,
+     "w": 144.8,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 592.7,
+     "w": 144.8,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:bundle & collection downloads#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Bundle & Collection Downloads",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Bundle & Collection Downloads",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 13,
+    "textBox": {
+     "x": 161,
+     "y": 623,
+     "w": 210.5,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 623,
+     "w": 210.5,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:monthly unlimited subscription#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Monthly Unlimited Subscription",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Monthly Unlimited Subscription",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 24,
+    "textBox": {
+     "x": 781,
+     "y": 629.5,
+     "w": 251.4,
+     "h": 21
+    },
+    "box": {
+     "x": 781,
+     "y": 629.5,
+     "w": 251.4,
+     "h": 21
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:subscribe now#1",
+   "category": "extra",
+   "severity": "low",
+   "text": "Subscribe Now",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Subscribe Now",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 30,
+    "textBox": {
+     "x": 1146.7,
+     "y": 651.5,
+     "w": 87.1,
+     "h": 46.2
+    },
+    "box": {
+     "x": 1101.5,
+     "y": 638.8,
+     "w": 177.5,
+     "h": 72
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:background removal tool#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Background Removal Tool",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Background Removal Tool",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 161,
+     "y": 653.2,
+     "w": 173.7,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 653.2,
+     "w": 173.7,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:13#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "13",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "13",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 26,
+    "textBox": {
+     "x": 791.5,
+     "y": 656,
+     "w": 44.1,
+     "h": 47
+    },
+    "box": {
+     "x": 791.5,
+     "y": 656,
+     "w": 44.1,
+     "h": 47
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:€#1",
+   "category": "extra",
+   "severity": "low",
+   "text": "€",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "€",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 25,
+    "textBox": {
+     "x": 781,
+     "y": 663.7,
+     "w": 10.5,
+     "h": 18
+    },
+    "box": {
+     "x": 781,
+     "y": 663.7,
+     "w": 10.5,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:99#1",
+   "category": "extra",
+   "severity": "low",
+   "text": "99",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "99",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 27,
+    "textBox": {
+     "x": 837.7,
+     "y": 663.7,
+     "w": 20.8,
+     "h": 18
+    },
+    "box": {
+     "x": 837.7,
+     "y": 663.7,
+     "w": 20.8,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:faster downloads & no ads#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Faster Downloads & No Ads",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Faster Downloads & No Ads",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 15,
+    "textBox": {
+     "x": 161,
+     "y": 683.5,
+     "w": 186,
+     "h": 17
+    },
+    "box": {
+     "x": 161,
+     "y": 683.5,
+     "w": 186,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:per month, billed each month ( )#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Per month, billed each month ( )",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Per month, billed each month ( )",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 28,
+    "textBox": {
+     "x": 781,
+     "y": 706,
+     "w": 219.8,
+     "h": 15
+    },
+    "box": {
+     "x": 781,
+     "y": 706,
+     "w": 219.8,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:€13.99#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "€13.99",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "€13.99",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 29,
+    "textBox": {
+     "x": 955.2,
+     "y": 706,
+     "w": 40.9,
+     "h": 15
+    },
+    "box": {
+     "x": 955.2,
+     "y": 706,
+     "w": 40.9,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:dont want to subscribe?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Don't want to subscribe?",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Don't want to subscribe?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 31,
+    "textBox": {
+     "x": 510.5,
+     "y": 816,
+     "w": 192.9,
+     "h": 18
+    },
+    "box": {
+     "x": 510.5,
+     "y": 816,
+     "w": 192.9,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:see more purchasing options.#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "See more purchasing options.",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "See more purchasing options.",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 32,
+    "textBox": {
+     "x": 703.4,
+     "y": 816,
+     "w": 226,
+     "h": 18
+    },
+    "box": {
+     "x": 703.4,
+     "y": 816,
+     "w": 226,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:plans are single license only (individual user).#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Plans are single license only (individual user). and plans are also available.",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Plans are single license only (individual user). and plans are also available.",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 33,
+    "textBox": {
+     "x": 427.5,
+     "y": 881,
+     "w": 585,
+     "h": 17
+    },
+    "box": {
+     "x": 427.5,
+     "y": 881,
+     "w": 585,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:team#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Team",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Team",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 34,
+    "textBox": {
+     "x": 723.6,
+     "y": 881,
+     "w": 34.8,
+     "h": 17
+    },
+    "box": {
+     "x": 723.6,
+     "y": 881,
+     "w": 34.8,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:enterprise#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Enterprise",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Enterprise",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 35,
+    "textBox": {
+     "x": 790,
+     "y": 881,
+     "w": 66.1,
+     "h": 17
+    },
+    "box": {
+     "x": 790,
+     "y": 881,
+     "w": 66.1,
+     "h": 17
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:trusted by top brands#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Trusted by Top Brands",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Trusted by Top Brands",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 36,
+    "textBox": {
+     "x": 534.7,
+     "y": 1018,
+     "w": 370.6,
+     "h": 43
+    },
+    "box": {
+     "x": 534.7,
+     "y": 1018,
+     "w": 370.6,
+     "h": 43
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:frequently asked questions#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Frequently Asked Questions",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Frequently Asked Questions",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 37,
+    "textBox": {
+     "x": 491.2,
+     "y": 1359,
+     "w": 457.7,
+     "h": 43
+    },
+    "box": {
+     "x": 491.2,
+     "y": 1359,
+     "w": 457.7,
+     "h": 43
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:how do vecteezy subscriptions work?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "How do Vecteezy subscriptions work?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "How do Vecteezy subscriptions work?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 38,
+    "textBox": {
+     "x": 350,
+     "y": 1478.5,
+     "w": 288,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1459,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:why do i need a plan if vecteezy is free?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Why do I need a plan if Vecteezy is free?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Why do I need a plan if Vecteezy is free?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 39,
+    "textBox": {
+     "x": 350,
+     "y": 1535.7,
+     "w": 303.7,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1516.2,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:what do i get with a pro standard license?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "What do I get with a Pro Standard license?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "What do I get with a Pro Standard license?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 40,
+    "textBox": {
+     "x": 350,
+     "y": 1592.9,
+     "w": 319.3,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1573.4,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:can i use vecteezy content in work i create for #0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Can I use Vecteezy content in work I create for a client?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Can I use Vecteezy content in work I create for a client?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 41,
+    "textBox": {
+     "x": 350,
+     "y": 1650.1,
+     "w": 417.6,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1630.6,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:should i purchase a subscription or pay as i go?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Should I purchase a subscription or pay as I go?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Should I purchase a subscription or pay as I go?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 42,
+    "textBox": {
+     "x": 350,
+     "y": 1707.3,
+     "w": 359.9,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1687.8,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:what are bundles?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "What are bundles?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "What are bundles?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 43,
+    "textBox": {
+     "x": 350,
+     "y": 1764.4,
+     "w": 141.3,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1744.9,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:can i upgrade or downgrade to a different plan?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Can I upgrade or downgrade to a different plan?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Can I upgrade or downgrade to a different plan?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 44,
+    "textBox": {
+     "x": 350,
+     "y": 1821.6,
+     "w": 361.2,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1802.1,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:can i add seats to my account for team members?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Can I add seats to my account for team members?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Can I add seats to my account for team members?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 45,
+    "textBox": {
+     "x": 350,
+     "y": 1878.8,
+     "w": 378.7,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1859.3,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:how does auto renewal work?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "How does auto renewal work?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "How does auto renewal work?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 46,
+    "textBox": {
+     "x": 350,
+     "y": 1936,
+     "w": 225.7,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1916.5,
+     "w": 740,
+     "h": 57.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:can i cancel anytime?#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Can I cancel anytime?",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Can I cancel anytime?",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 47,
+    "textBox": {
+     "x": 350,
+     "y": 1993.2,
+     "w": 164.8,
+     "h": 18
+    },
+    "box": {
+     "x": 350,
+     "y": 1973.7,
+     "w": 740,
+     "h": 58.2
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:view all frequently asked questions >#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "View all frequently asked questions >",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "View all frequently asked questions >",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 48,
+    "textBox": {
+     "x": 585.5,
+     "y": 2090.9,
+     "w": 269,
+     "h": 18
+    },
+    "box": {
+     "x": 585.5,
+     "y": 2090.9,
+     "w": 269,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:the best value in the industry – today.#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "The best value in the industry – today.",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "The best value in the industry – today.",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 49,
+    "textBox": {
+     "x": 488,
+     "y": 2218.9,
+     "w": 464,
+     "h": 26
+    },
+    "box": {
+     "x": 488,
+     "y": 2218.9,
+     "w": 464,
+     "h": 26
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:try pro#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Try Pro",
+   "section": null,
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Try Pro",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 50,
+    "textBox": {
+     "x": 811.2,
+     "y": 2218.9,
+     "w": 72.8,
+     "h": 26
+    },
+    "box": {
+     "x": 811.2,
+     "y": 2218.9,
+     "w": 72.8,
+     "h": 26
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:products#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Products",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Products",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 51,
+    "textBox": {
+     "x": 60,
+     "y": 2329.9,
+     "w": 78.2,
+     "h": 21
+    },
+    "box": {
+     "x": 60,
+     "y": 2329.9,
+     "w": 78.2,
+     "h": 21
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:content#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Content",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Content",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 66,
+    "textBox": {
+     "x": 400,
+     "y": 2329.9,
+     "w": 69.3,
+     "h": 21
+    },
+    "box": {
+     "x": 400,
+     "y": 2329.9,
+     "w": 69.3,
+     "h": 21
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:learn more#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Learn More",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Learn More",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 79,
+    "textBox": {
+     "x": 740,
+     "y": 2329.9,
+     "w": 96.6,
+     "h": 21
+    },
+    "box": {
+     "x": 740,
+     "y": 2329.9,
+     "w": 96.6,
+     "h": 21
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:languages#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Languages",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Languages",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 90,
+    "textBox": {
+     "x": 1080,
+     "y": 2329.9,
+     "w": 94.5,
+     "h": 21
+    },
+    "box": {
+     "x": 1080,
+     "y": 2329.9,
+     "w": 94.5,
+     "h": 21
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:pro for individuals#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Pro for Individuals",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Pro for Individuals",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 52,
+    "textBox": {
+     "x": 60,
+     "y": 2363.4,
+     "w": 123,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2363.4,
+     "w": 123,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:stock photos#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Stock Photos",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Stock Photos",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 67,
+    "textBox": {
+     "x": 400,
+     "y": 2363.4,
+     "w": 91,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2363.4,
+     "w": 91,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:faqs#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "FAQs",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "FAQs",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 80,
+    "textBox": {
+     "x": 740,
+     "y": 2363.4,
+     "w": 36.2,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2363.4,
+     "w": 36.2,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:english#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "English",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "English",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 91,
+    "textBox": {
+     "x": 1080,
+     "y": 2363.4,
+     "w": 49.4,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2363.4,
+     "w": 49.4,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:pro for business#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Pro for Business",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Pro for Business",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 53,
+    "textBox": {
+     "x": 60,
+     "y": 2391.4,
+     "w": 111.3,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2391.4,
+     "w": 111.3,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:vector graphics#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Vector Graphics",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Vector Graphics",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 68,
+    "textBox": {
+     "x": 400,
+     "y": 2391.4,
+     "w": 110.2,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2391.4,
+     "w": 110.2,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:sell your content#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Sell your content",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Sell your content",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 81,
+    "textBox": {
+     "x": 740,
+     "y": 2391.4,
+     "w": 115.5,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2391.4,
+     "w": 115.5,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:español#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Español",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Español",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 92,
+    "textBox": {
+     "x": 1080,
+     "y": 2391.4,
+     "w": 54,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2391.4,
+     "w": 54,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:pro for enterprises#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Pro for Enterprises",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Pro for Enterprises",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 54,
+    "textBox": {
+     "x": 60,
+     "y": 2419.4,
+     "w": 127.9,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2419.4,
+     "w": 127.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:video footage#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Video Footage",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Video Footage",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 69,
+    "textBox": {
+     "x": 400,
+     "y": 2419.4,
+     "w": 99.4,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2419.4,
+     "w": 99.4,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:affiliate program#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Affiliate program",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Affiliate program",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 82,
+    "textBox": {
+     "x": 740,
+     "y": 2419.4,
+     "w": 114.1,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2419.4,
+     "w": 114.1,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:português#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Português",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Português",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 93,
+    "textBox": {
+     "x": 1080,
+     "y": 2419.4,
+     "w": 70.4,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2419.4,
+     "w": 70.4,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:new#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "NEW",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "NEW",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 55,
+    "textBox": {
+     "x": 200.9,
+     "y": 2425.4,
+     "w": 20.4,
+     "h": 10
+    },
+    "box": {
+     "x": 195.9,
+     "y": 2423.4,
+     "w": 30.4,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:motion graphics#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Motion Graphics",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Motion Graphics",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 70,
+    "textBox": {
+     "x": 400,
+     "y": 2447.4,
+     "w": 112.6,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2447.4,
+     "w": 112.6,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:trust center#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Trust Center",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Trust Center",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 83,
+    "textBox": {
+     "x": 740,
+     "y": 2447.4,
+     "w": 85.2,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2447.4,
+     "w": 85.2,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:deutsch#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Deutsch",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Deutsch",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 94,
+    "textBox": {
+     "x": 1080,
+     "y": 2447.4,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2447.4,
+     "w": 57,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:for teachers#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "For Teachers",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "For Teachers",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 56,
+    "textBox": {
+     "x": 60,
+     "y": 2448.4,
+     "w": 88.7,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2448.4,
+     "w": 88.7,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:new#1",
+   "category": "extra",
+   "severity": "low",
+   "text": "NEW",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "NEW",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 71,
+    "textBox": {
+     "x": 525.6,
+     "y": 2453.4,
+     "w": 20.4,
+     "h": 10
+    },
+    "box": {
+     "x": 520.6,
+     "y": 2451.4,
+     "w": 30.4,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:new#2",
+   "category": "extra",
+   "severity": "low",
+   "text": "NEW",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "NEW",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 84,
+    "textBox": {
+     "x": 838.2,
+     "y": 2453.4,
+     "w": 20.4,
+     "h": 10
+    },
+    "box": {
+     "x": 833.2,
+     "y": 2451.4,
+     "w": 30.4,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:français#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Français",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Français",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 95,
+    "textBox": {
+     "x": 1080,
+     "y": 2475.4,
+     "w": 57.7,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2475.4,
+     "w": 57.7,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:for schools#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "For Schools",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "For Schools",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 57,
+    "textBox": {
+     "x": 60,
+     "y": 2476.4,
+     "w": 81,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2476.4,
+     "w": 81,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:editable templates#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Editable Templates",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Editable Templates",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 72,
+    "textBox": {
+     "x": 400,
+     "y": 2476.4,
+     "w": 129.8,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2476.4,
+     "w": 129.8,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:about us#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "About Us",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "About Us",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 85,
+    "textBox": {
+     "x": 740,
+     "y": 2476.4,
+     "w": 63.6,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2476.4,
+     "w": 63.6,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:nederlands#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Nederlands",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Nederlands",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 96,
+    "textBox": {
+     "x": 1080,
+     "y": 2503.4,
+     "w": 78.8,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2503.4,
+     "w": 78.8,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:template editor#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Template Editor",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Template Editor",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 58,
+    "textBox": {
+     "x": 60,
+     "y": 2504.4,
+     "w": 107.3,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2504.4,
+     "w": 107.3,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:svgs#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "SVGs",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "SVGs",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 73,
+    "textBox": {
+     "x": 400,
+     "y": 2504.4,
+     "w": 37.3,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2504.4,
+     "w": 37.3,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:our blog#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Our Blog",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Our Blog",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 86,
+    "textBox": {
+     "x": 740,
+     "y": 2504.4,
+     "w": 60,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2504.4,
+     "w": 60,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:svenska#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Svenska",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Svenska",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 97,
+    "textBox": {
+     "x": 1080,
+     "y": 2531.4,
+     "w": 57.1,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2531.4,
+     "w": 57.1,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:ai studio#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "AI Studio",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "AI Studio",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 59,
+    "textBox": {
+     "x": 60,
+     "y": 2532.4,
+     "w": 61.8,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2532.4,
+     "w": 61.8,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:pngs#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "PNGs",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "PNGs",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 74,
+    "textBox": {
+     "x": 400,
+     "y": 2532.4,
+     "w": 38.8,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2532.4,
+     "w": 38.8,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:license agreement#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "License Agreement",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "License Agreement",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 87,
+    "textBox": {
+     "x": 740,
+     "y": 2532.4,
+     "w": 131.9,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2532.4,
+     "w": 131.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:new#3",
+   "category": "extra",
+   "severity": "low",
+   "text": "NEW",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "NEW",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 60,
+    "textBox": {
+     "x": 134.8,
+     "y": 2538.5,
+     "w": 20.4,
+     "h": 10
+    },
+    "box": {
+     "x": 129.8,
+     "y": 2536.5,
+     "w": 30.4,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:italiano#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Italiano",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Italiano",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 98,
+    "textBox": {
+     "x": 1080,
+     "y": 2559.4,
+     "w": 49.3,
+     "h": 18
+    },
+    "box": {
+     "x": 1080,
+     "y": 2559.4,
+     "w": 49.3,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:psds#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "PSDs",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "PSDs",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 75,
+    "textBox": {
+     "x": 400,
+     "y": 2560.4,
+     "w": 36.9,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2560.4,
+     "w": 36.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:dmca#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "DMCA",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "DMCA",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 88,
+    "textBox": {
+     "x": 740,
+     "y": 2560.4,
+     "w": 43.6,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2560.4,
+     "w": 43.6,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:ai reverse image search#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "AI Reverse Image Search",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "AI Reverse Image Search",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 61,
+    "textBox": {
+     "x": 60,
+     "y": 2561.5,
+     "w": 170,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2561.5,
+     "w": 170,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:editorial images#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Editorial Images",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Editorial Images",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 76,
+    "textBox": {
+     "x": 400,
+     "y": 2588.4,
+     "w": 108.9,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2588.4,
+     "w": 108.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:contact us#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Contact Us",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Contact Us",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 89,
+    "textBox": {
+     "x": 740,
+     "y": 2588.4,
+     "w": 76.9,
+     "h": 18
+    },
+    "box": {
+     "x": 740,
+     "y": 2588.4,
+     "w": 76.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:ai background removal#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "AI Background Removal",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "AI Background Removal",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 62,
+    "textBox": {
+     "x": 60,
+     "y": 2589.5,
+     "w": 161.8,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2589.5,
+     "w": 161.8,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:new#4",
+   "category": "extra",
+   "severity": "low",
+   "text": "NEW",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "NEW",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 77,
+    "textBox": {
+     "x": 521.9,
+     "y": 2594.5,
+     "w": 20.4,
+     "h": 10
+    },
+    "box": {
+     "x": 516.9,
+     "y": 2592.5,
+     "w": 30.4,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:qr code generator#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "QR Code Generator",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "QR Code Generator",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 63,
+    "textBox": {
+     "x": 60,
+     "y": 2617.5,
+     "w": 134.2,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2617.5,
+     "w": 134.2,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:creative bundles#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Creative Bundles",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Creative Bundles",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 78,
+    "textBox": {
+     "x": 400,
+     "y": 2617.5,
+     "w": 115.9,
+     "h": 18
+    },
+    "box": {
+     "x": 400,
+     "y": 2617.5,
+     "w": 115.9,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:developer api#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Developer API",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Developer API",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 64,
+    "textBox": {
+     "x": 60,
+     "y": 2645.5,
+     "w": 96.7,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2645.5,
+     "w": 96.7,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:data licensing#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Data Licensing",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Data Licensing",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 65,
+    "textBox": {
+     "x": 60,
+     "y": 2673.5,
+     "w": 101.2,
+     "h": 18
+    },
+    "box": {
+     "x": 60,
+     "y": 2673.5,
+     "w": 101.2,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:vecteezy#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Vecteezy",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Vecteezy",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 99,
+    "textBox": {
+     "x": 60,
+     "y": 2755.5,
+     "w": 133,
+     "h": 32
+    },
+    "box": {
+     "x": 60,
+     "y": 2755.5,
+     "w": 133,
+     "h": 32
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open facebook in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open facebook in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open facebook in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 100,
+    "textBox": {
+     "x": 225,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 225,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open instagram in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open instagram in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open instagram in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 101,
+    "textBox": {
+     "x": 265,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 265,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open linkedin in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open linkedin in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open linkedin in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 102,
+    "textBox": {
+     "x": 305,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 305,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open pinterest in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open pinterest in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open pinterest in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 103,
+    "textBox": {
+     "x": 345,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 345,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open tiktok in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open tiktok in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open tiktok in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 104,
+    "textBox": {
+     "x": 385,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 385,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open x in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open x in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open x in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 105,
+    "textBox": {
+     "x": 425,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 425,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:open youtube in a new window#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Open youtube in a new window",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Open youtube in a new window",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 106,
+    "textBox": {
+     "x": 465,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 465,
+     "y": 2761.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:terms of use#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Terms of Use",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Terms of Use",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 109,
+    "textBox": {
+     "x": 1038.3,
+     "y": 2762.5,
+     "w": 87.1,
+     "h": 17
+    },
+    "box": {
+     "x": 1038.3,
+     "y": 2762.5,
+     "w": 87.1,
+     "h": 17
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:privacy policy#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Privacy Policy",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Privacy Policy",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 110,
+    "textBox": {
+     "x": 1158.5,
+     "y": 2762.5,
+     "w": 91.8,
+     "h": 17
+    },
+    "box": {
+     "x": 1141.5,
+     "y": 2764.5,
+     "w": 108.8,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:fair use policy#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Fair Use Policy",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Fair Use Policy",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 111,
+    "textBox": {
+     "x": 1283.2,
+     "y": 2762.5,
+     "w": 96.8,
+     "h": 17
+    },
+    "box": {
+     "x": 1266.2,
+     "y": 2764.5,
+     "w": 113.8,
+     "h": 14
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:© 2026 eezy llc all rights reserved#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "© 2026 Eezy LLC All rights reserved",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "© 2026 Eezy LLC All rights reserved",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 107,
+    "textBox": {
+     "x": 760.5,
+     "y": 2763,
+     "w": 239.3,
+     "h": 17
+    },
+    "box": {
+     "x": 760.5,
+     "y": 2763,
+     "w": 239.3,
+     "h": 17
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:•#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "•",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "•",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 108,
+    "textBox": {
+     "x": 1015.9,
+     "y": 2763,
+     "w": 6.5,
+     "h": 17
+    },
+    "box": {
+     "x": 1015.9,
+     "y": 2763,
+     "w": 6.5,
+     "h": 17
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:light mode on#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Light mode on",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "control",
+     "design": "not in design",
+     "live": "Light mode on",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 112,
+    "textBox": {
+     "x": 1211.8,
+     "y": 2836,
+     "w": 96.2,
+     "h": 17
+    },
+    "box": {
+     "x": 1211.8,
+     "y": 2836,
+     "w": 96.2,
+     "h": 17
+    },
+    "section": "footer",
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:current split test:#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Current Split Test:",
+   "section": "footer",
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Current Split Test:",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 113,
+    "textBox": {
+     "x": 15,
+     "y": 2903.5,
+     "w": 130.6,
+     "h": 18
+    },
+    "box": {
+     "x": 15,
+     "y": 2903.5,
+     "w": 130.6,
+     "h": 18
+    },
+    "section": "footer",
+    "where": null
+   }
+  }
+ ],
+ "stats": {
+  "designItems": 60,
+  "liveItems": 114,
+  "matched": 1,
+  "missing": 51,
+  "extra": 113,
+  "findings": 164,
+  "byCategory": {
+   "typography": 0,
+   "color": 0,
+   "size": 0,
+   "shape": 0,
+   "spacing": 0,
+   "alignment": 0,
+   "icon": 0,
+   "behavior": 0,
+   "missing": 51,
+   "extra": 113
+  },
+  "bySeverity": {
+   "low": 137,
+   "medium": 27,
+   "high": 0
+  }
+ }
+}

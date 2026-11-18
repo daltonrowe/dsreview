@@ -2,7 +2,8 @@
   --bg: #f6f6f4; --panel: #ffffff; --panel-2: #f0f0ed; --line: #e3e3de; --line-2: #d2d2cc;
   --text: #1c1c1a; --muted: #6b6b66; --faint: #9a9a94;
   --accent: #ff6a00; --accent-ink: #fff;
-  --keep: #1f9d55; --keep-bg: #e5f6ec; --round: #2f6bff; --round-bg: #e6edff; --exclude: #6b7280; --exclude-bg: #eceef1; --unclear: #b45a00; --unclear-bg: #fff1e0; --remove: #d93636; --remove-bg: #fbe9e9;
+  --fix-live: #d93636; --fix-live-bg: #fbe9e9; --fix-design: #2f6bff; --fix-design-bg: #e6edff; --ok: #1f9d55; --ok-bg: #e5f6ec; --unclear: #b45a00; --unclear-bg: #fff1e0;
+  --design: #e0179f; --live: #0a8fd6; --high: #d93636; --medium: #e08a00; --low: #9a9a94;
   --hl: #ff2bd6; --focus: #2f6bff;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
@@ -14,7 +15,7 @@
   :root:not([data-theme="light"]) {
     --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
     --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-    --keep: #4cc584; --keep-bg: #183324; --round: #7aa2ff; --round-bg: #1b2440; --round: #7aa2ff; --round-bg: #1b2440; --exclude: #9ca3af; --exclude-bg: #26282c; --unclear: #ffb366; --unclear-bg: #3a2a14; --remove: #f06a6a; --remove-bg: #3a1d1d;
+    --fix-live: #f06a6a; --fix-live-bg: #3a1d1d; --fix-design: #7aa2ff; --fix-design-bg: #1b2440; --ok: #4cc584; --ok-bg: #183324; --unclear: #ffb366; --unclear-bg: #3a2a14; --design: #ff5cc8; --live: #3cb6ff;
     --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
     color-scheme: dark;
   }
@@ -22,7 +23,7 @@
 :root[data-theme="dark"] {
   --bg: #141413; --panel: #1d1d1b; --panel-2: #252523; --line: #2f2f2c; --line-2: #3d3d39;
   --text: #ecece8; --muted: #a0a09a; --faint: #74746f;
-  --keep: #4cc584; --keep-bg: #183324; --exclude: #9ca3af; --exclude-bg: #26282c; --unclear: #ffb366; --unclear-bg: #3a2a14; --remove: #f06a6a; --remove-bg: #3a1d1d;
+  --fix-live: #f06a6a; --fix-live-bg: #3a1d1d; --fix-design: #7aa2ff; --fix-design-bg: #1b2440; --ok: #4cc584; --ok-bg: #183324; --unclear: #ffb366; --unclear-bg: #3a2a14; --design: #ff5cc8; --live: #3cb6ff;
   --shadow: none; --checker: repeating-conic-gradient(#2a2a2a 0 25%, #1d1d1d 0 50%) 50% / 12px 12px;
   color-scheme: dark;
 }
@@ -54,31 +55,26 @@ input:focus, select:focus { outline: 2px solid var(--focus); outline-offset: -1p
 .seg button:last-child { border-right: 0; }
 .seg button:hover { color: var(--text); background: var(--panel-2); }
 .seg button[aria-pressed="true"] { color: var(--text); background: var(--panel-2); font-weight: 600; }
-.seg button.keep[aria-pressed="true"] { background: var(--keep-bg); color: var(--keep); }
-.seg button.round[aria-pressed="true"] { background: var(--round-bg); color: var(--round); }
 .seg button:disabled { opacity: .35; cursor: not-allowed; }
-.seg button.exclude[aria-pressed="true"] { background: var(--exclude-bg); color: var(--exclude); }
+.seg button.fix-live[aria-pressed="true"] { background: var(--fix-live-bg); color: var(--fix-live); }
+.seg button.fix-design[aria-pressed="true"] { background: var(--fix-design-bg); color: var(--fix-design); }
+.seg button.ok[aria-pressed="true"] { background: var(--ok-bg); color: var(--ok); }
 .seg button.unclear[aria-pressed="true"] { background: var(--unclear-bg); color: var(--unclear); }
-.seg button.remove[aria-pressed="true"] { background: var(--remove-bg); color: var(--remove); }
 
 .progress { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--panel-2); min-width: 120px; }
 .progress span { display: block; height: 100%; }
-.progress .keep { background: var(--keep); } .progress .round { background: var(--round); } .progress .exclude { background: var(--exclude); } .progress .unclear { background: var(--unclear); } .progress .remove { background: var(--remove); }
+.progress .fix-live, .dot.fix-live { background: var(--fix-live); } .progress .fix-design, .dot.fix-design { background: var(--fix-design); }
+.progress .ok, .dot.ok { background: var(--ok); } .progress .unclear, .dot.unclear { background: var(--unclear); }
 .legend { display: flex; gap: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
 .legend b { font-weight: 600; color: var(--text); }
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: 1px; }
-.dot.keep { background: var(--keep); } .dot.round { background: var(--round); } .dot.exclude { background: var(--exclude); } .dot.unclear { background: var(--unclear); } .dot.remove { background: var(--remove); } .dot.undecided { background: var(--line-2); }
+.dot.undecided { background: var(--line-2); }
+.dot.high { background: var(--high); } .dot.medium { background: var(--medium); } .dot.low { background: var(--low); }
 
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 
-/* token previews */
-.swatch { flex: none; width: 34px; height: 34px; border-radius: 7px; border: 1px solid var(--line-2); background: var(--checker); position: relative; overflow: hidden; }
+.swatch { display: inline-block; flex: none; width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--line-2); background: var(--checker); position: relative; overflow: hidden; vertical-align: -2px; margin-right: 4px; }
 .swatch > i { position: absolute; inset: 0; }
-.swatch.wide { width: 56px; }
-.radius-prev { width: 34px; height: 34px; border: 2px solid var(--text); border-right: 0; border-bottom: 0; background: none; flex: none; }
-.type-prev { flex: none; min-width: 34px; line-height: 1; color: var(--text); white-space: nowrap; }
-.shadow-prev { flex: none; width: 40px; height: 30px; border-radius: 6px; background: #fff; margin: 6px; }
-.space-prev { flex: none; height: 14px; background: color-mix(in srgb, var(--accent) 35%, transparent); border: 1px solid var(--accent); border-radius: 2px; max-width: 120px; min-width: 2px; }
 
 .empty { padding: 60px 20px; text-align: center; color: var(--muted); }
 .kbd { font-family: var(--mono); font-size: 11px; border: 1px solid var(--line-2); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; color: var(--muted); }

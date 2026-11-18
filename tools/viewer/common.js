@@ -17,61 +17,22 @@ export function cssColor(v) {
   if (!m) return v;
   return m[2] ? `${m[1]}${Math.round((+m[2] / 100) * 255).toString(16).padStart(2, '0')}` : m[1];
 }
-
-// Visual preview for a section value, by preset.
-export function preview(preset, value) {
-  const v = String(value);
-  switch (preset) {
-    case 'text-color': case 'background': case 'border-color': case 'overlay': {
-      const cols = v.split(/,\s*(?=#)/);
-      return `<span class="swatch${cols.length > 1 ? ' wide' : ''}">${cols.map((c, i) => `<i style="background:${esc(cssColor(c))};left:${(i / cols.length) * 100}%;width:${100 / cols.length}%;right:auto"></i>`).join('')}</span>`;
-    }
-    case 'border': {
-      const m = v.match(/([\d.]+px) (\w+) (#[0-9a-f]{6}(?:\s*\/\s*\d+%)?)/i);
-      if (!m) return '';
-      const sides = v.includes(':') ? v.split(':')[0].split(', ') : ['top', 'right', 'bottom', 'left'];
-      const b = `${Math.min(parseFloat(m[1]), 6)}px ${m[2]} ${cssColor(m[3])}`;
-      return `<span class="swatch" style="background:var(--panel)">${sides.map(s => `<i style="border-${s}:${esc(b)}"></i>`).join('')}</span>`;
-    }
-    case 'gradient': return `<span class="swatch wide"><i style="background-image:${esc(v)}"></i></span>`;
-    case 'radius': {
-      const r = v.split(' ').map(x => (x === 'pill' ? '999px' : x));
-      return `<span class="radius-prev" style="border-radius:${esc(r[0])} 0 0 0"></span>`;
-    }
-    case 'shadow': return `<span class="shadow-prev" style="box-shadow:${esc(v)}"></span>`;
-    case 'opacity': return `<span class="swatch"><i style="background:var(--text);opacity:${esc(v)}"></i></span>`;
-    case 'gap': case 'padding': case 'spacing': case 'border-width': {
-      const n = parseFloat(v) || 0;
-      return `<span class="space-prev" style="width:${Math.min(n, 120)}px"></span>`;
-    }
-    case 'font-size': return `<span class="type-prev" style="font-size:${esc(Math.min(parseFloat(v), 48))}px">Ag</span>`;
-    case 'size-weight': {
-      const [size, weight] = v.split(' / ');
-      return `<span class="type-prev" style="font-size:${Math.min(parseFloat(size), 40)}px;font-weight:${esc(weight)}">Ag</span>`;
-    }
-    case 'font-weight': return `<span class="type-prev" style="font-size:22px;font-weight:${esc(v)}">Ag</span>`;
-    case 'font-family': return `<span class="type-prev" style="font-size:22px;font-family:${esc(v)}">Ag</span>`;
-    case 'letter-spacing': return `<span class="type-prev" style="font-size:15px;letter-spacing:${esc(v)}">AaBb</span>`;
-    case 'typography': {
-      const [spec, fam = ''] = v.split(' · ');
-      const [size, weight] = spec.split(' / ');
-      const f = fam.replace(/ italic$/, '');
-      return `<span class="type-prev" style="font-size:${Math.min(parseFloat(size), 44)}px;font-weight:${esc(weight)};font-family:'${esc(f)}';${fam.endsWith(' italic') ? 'font-style:italic' : ''}">Ag</span>`;
-    }
-    default: return '';
-  }
+// Small swatch before a color value (first color found in the string), or a gradient strip.
+export function swatch(v) {
+  const s = String(v ?? '');
+  if (/gradient\(/.test(s)) return `<span class="swatch" style="width:28px"><i style="background-image:${esc(s.replace(/#[0-9a-f]{6} \/ \d+%/gi, m => cssColor(m)))}"></i></span>`;
+  const m = s.match(/#[0-9a-f]{6}(?:\s*\/\s*\d+%)?/i);
+  return m ? `<span class="swatch"><i style="background:${esc(cssColor(m[0]))}"></i></span>` : '';
 }
 
-// Link to the live page in a given state, optionally highlighting an element.
-// extra: { options: [{label, token, value, css}], pick } shows rounding options on the target
-export function viewUrl(capture, where, extra) {
-  const q = new URLSearchParams({ page: capture.page });
-  if (capture.props && Object.keys(capture.props).length) q.set('props', JSON.stringify(capture.props));
-  if (capture.state && Object.keys(capture.state).length) q.set('state', JSON.stringify(capture.state));
-  if (capture.do && capture.do.length) q.set('do', JSON.stringify(capture.do));
-  if (capture.width) q.set('w', capture.width);
+// Link to the design page viewer in a given state, optionally marking an element.
+export function viewUrl(design, where) {
+  const q = new URLSearchParams({ page: design.page });
+  if (design.props && Object.keys(design.props).length) q.set('props', JSON.stringify(design.props));
+  if (design.state && Object.keys(design.state).length) q.set('state', JSON.stringify(design.state));
+  if (design.do && design.do.length) q.set('do', JSON.stringify(design.do));
+  if (design.width) q.set('w', design.width);
   if (where) { q.set('owner', where.owner); q.set('tpl', where.tpl); q.set('nth', where.nth); }
-  if (extra?.options?.length) { q.set('options', JSON.stringify(extra.options)); q.set('pick', extra.pick ?? 0); if (extra.orig) q.set('orig', extra.orig); }
   return `view.html?${q}`;
 }
 
@@ -81,10 +42,14 @@ export function editorUrl(root, file, line, col) {
   return `vscode://file${root}/design-project/${file}${line ? `:${line}${col ? `:${col}` : ''}` : ''}`;
 }
 
+export const DECISIONS = ['fix-live', 'fix-design', 'ok', 'unclear'];
+export const LABELS = { 'fix-live': 'Fix live', 'fix-design': 'Update design', ok: 'Fine', unclear: '🤷' };
+export const TITLES = { 'fix-live': 'The live site should match the design', 'fix-design': 'The live site is right; update the design', ok: 'Difference is acceptable / not real', unclear: 'Not sure; needs a look' };
+
 export function progressBar(p) {
   const pct = k => (p.total ? ((p[k] || 0) / p.total) * 100 : 0);
-  return `<div class="progress" title="keep ${p.keep} · round ${p.round || 0} · exclude ${p.exclude} · unclear 🤷 ${p.unclear || 0} · undecided ${p.undecided}"><span class="keep" style="width:${pct('keep')}%"></span><span class="round" style="width:${pct('round')}%"></span><span class="exclude" style="width:${pct('exclude')}%"></span><span class="unclear" style="width:${pct('unclear')}%"></span></div>`;
+  return `<div class="progress" title="${DECISIONS.map(d => `${LABELS[d]} ${p[d] || 0}`).join(' · ')} · undecided ${p.undecided}">${DECISIONS.map(d => `<span class="${d}" style="width:${pct(d)}%"></span>`).join('')}</div>`;
 }
 export function legend(p) {
-  return `<div class="legend"><span><i class="dot keep"></i>Keep <b>${p.keep}</b></span><span><i class="dot round"></i>Round <b>${p.round || 0}</b></span><span><i class="dot exclude"></i>Exclude <b>${p.exclude}</b></span><span title="Not understood"><i class="dot unclear"></i>🤷 <b>${p.unclear || 0}</b></span><span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
+  return `<div class="legend">${DECISIONS.map(d => `<span title="${esc(TITLES[d])}"><i class="dot ${d}"></i>${LABELS[d]} <b>${p[d] || 0}</b></span>`).join('')}<span><i class="dot undecided"></i>Undecided <b>${p.undecided}</b></span></div>`;
 }

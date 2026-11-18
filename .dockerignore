@@ -11,8 +11,9 @@
 /.claude
 *.tmp
 
-# Decisions in production live in DATA_DIR on a volume, not in the image.
-/surveys/*/decisions.json
+# Decisions in production live in DATA_DIR on a volume, not in the image. Raw snapshots are debug data.
+/comparisons/*/decisions.json
+/comparisons/*/snapshot.json
 
 # Designer scratch files, not part of any page.
 /design-project/scraps

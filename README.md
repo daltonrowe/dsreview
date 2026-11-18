@@ -1,15 +1,17 @@
-# Design System Review
+# Design vs Live
 
-Tooling for turning the exported Claude design project (`design-project/`) into a manageable design system.
+Tooling for comparing the exported Claude design project (`design-project/`) with the live site
+(https://ao-4276-redesign-rollup.xeezy.com) and reviewing the visual differences: alignment, size, color,
+typography, shape, spacing, icons and hover behavior.
 
 ## Setup
 
 ```bash
 npm install
-npm run browsers   # headless Chromium for screenshots and surveys (once)
+npm run browsers   # headless Chromium for screenshots and comparisons (once)
 npm start          # review viewer at http://localhost:4321 (opens browser)
 npm run serve      # same, without opening a browser
-npm test           # server tests
+npm test           # server + diff tests
 ```
 
 The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER` / `REVIEW_PASS`).
@@ -19,43 +21,68 @@ The server requires HTTP basic auth: `eezy` / `eezy` (override with `REVIEW_USER
 | Path | What |
 |---|---|
 | `design-project/` | The exported design project (`*.dc.html` live pages, `Vecteezy *.html` standalone exports) |
-| `design-system/` | Target design-system tokens (Apollo; `tokens.json` is the source, `tokens.css` and `tokens.md` are generated views), pulled from the Design System artifact |
-| `tools/app.mjs`, `tools/server.mjs` | Express app (viewer, design pages, survey data, decisions API) and its launcher |
-| `tools/pull-decisions.mjs` | Copies decisions from the deployed site into local `surveys/*/decisions.json` |
-| `tools/viewer/` | Viewer UI: home, survey review, live page viewer |
-| `tools/survey.mjs` | Token survey generator |
-| `tools/group.mjs` | Groups each survey's usages into parts of the page (`surveys/<id>/groups.json`) |
-| `tools/dc.mjs` | Screenshot CLI |
-| `tools/lib/` | Shared code: `render.mjs` (Playwright), `bridge.js` (in-page helpers + token presets), `source.mjs` (element → source line) |
-| `surveys/` | `captures.json` (page states to scan) and one folder per survey |
-| `analysis/components/` | Suggested Components output (`tools/components.mjs`) |
-| `.claude/skills/` | `view-design`, `token-survey`: how Claude Code uses the tools |
+| `design-system/` | Target design-system tokens (`tokens.json` source; `tokens.css` / `tokens.md` generated views) |
+| `comparisons/pairs.json` | Which design page state is compared with which live URL |
+| `comparisons/<id>/` | One comparison's `report.json`, `design.jpg`, `live.jpg`, reviewer `decisions.json` (and a gitignored `snapshot.json`) |
+| `tools/compare.mjs` | Comparison CLI: run, show, add, screenshot live pages |
+| `tools/dc.mjs` | Design-project screenshot CLI |
+| `tools/app.mjs`, `tools/server.mjs` | Express app (viewer, reports, decisions API, live collaboration) and its launcher |
+| `tools/pull-decisions.mjs` | Copies decisions from the deployed site into local `comparisons/*/decisions.json` |
+| `tools/viewer/` | Viewer UI: home, comparison review, design page viewer |
+| `tools/lib/` | `render.mjs` (design pages in Playwright), `live.mjs` (live pages: consent wall, ?skip=1, full-height capture), `snapshot.js` (in-page element snapshot), `diff.mjs` (matching + findings), `bridge.js` (design runtime helpers), `source.mjs` (element → source line) |
+| `.claude/skills/` | `view-design`, `compare-live`: how Claude Code uses the tools |
+
+## How a comparison works
+
+1. Both pages render in headless Chromium at the same width (1440). The live site gets `?skip=1`, its
+   consent manager and ad/analytics scripts are blocked, and the Rails profiler badge is hidden. Animations,
+   transitions and scrollbars are turned off on both sides.
+2. The viewport grows to the page's full height (capped at `maxHeight`, default 3000px), including design
+   pages that scroll inside an inner container, so page and screen coordinates agree and nothing is hidden
+   behind a scroll.
+3. Each side is snapshotted (`tools/lib/snapshot.js`): every visible piece of text, form field and
+   icon-only control, with its text box, typography and the painted box around it (button, chip, input,
+   card). Hidden things (sr-only text, collapsed drawers, covered panels) are skipped.
+4. Every interactive item is hovered on both sides and its styles read before and after.
+5. Items are matched by text near where they're expected (`tools/lib/diff.mjs`), then compared:
+   **typography**, **color** (text, background, gradient), **size** of the box, **shape** (radius, border,
+   shadow, box present on one side only), **spacing** (gap to the next element below/right, text inset),
+   **alignment** (an element that stops lining up with the things it lined up with in the design; whole
+   regions that moved), **icon** count/size, **behavior** (hover effect, clickability, cursor), and
+   **missing** / **extra** items.
+
+```bash
+node tools/compare.mjs list
+node tools/compare.mjs run                 # all pairs; or: run home sign-up; --no-hover is faster
+node tools/compare.mjs show home --severity medium
+node tools/compare.mjs add show --design "ai magic" --state active=... --live /vector-art/581241-slices-lime-summer-background
+node tools/compare.mjs live /free-photos/dog --full
+```
+
+Re-running keeps decisions: finding ids are stable (`<category>:<text>#<occurrence>`).
 
 ## Viewer
 
-- **Home** (`/`): surveys with progress, and every page.
-- **Survey** (`/survey.html?id=radius`): sections (S1, S2…) per distinct value. In each section, usages are numbered #1… and each one shows a screenshot, the authored declaration (inline, CSS rule, or inherited, plus any `var(--token)`), its component, the page state, a **Usage** button (opens the live page in a popover; ⌘-click for a new tab), a source link (`file:line` opens VS Code), the **nearest design-system token** (or an exact match), and **Keep / Round / Exclude** buttons. **Round** records the token picked in the Nearest dropdown. **Preview** (and the **Usage** popover) shows the page with a **Round to** bar: Original plus each nearest token, applied live to the element. Pick with a click or `0`–`3`, toggle with `t`, then use **Round to <token>** to save it. Each usage is badged **On-token** (its value equals a design-system token value) or **Off-token**. You can filter All / Decided / Undecided / Excluded (All hides excluded), by page state or text, hide on-token usages, set a decision for a whole section, and export to `.md` or `.json`.
-  Keys: `j`/`k` move, `1` keep, `2` round, `3` exclude, `0` clear, `p` preview, `o` usage popover, `space` zoom, `/` search.
-- **Groups** (default view when `surveys/<id>/groups.json` exists): a meta-survey that puts usages of the same part of the page into one group with one **Keep / Round / Exclude** decision. Round sends each usage to its own nearest token, theme-aware. Each group shows a filmstrip of screenshots (click one to preview it), its values with their token matches, and **Show all usages** to list and preview every member. Switch to **Usages** for one card per usage. Build groups with `node tools/group.mjs --all` (re-run after regenerating a survey). Usages are grouped when they are the same element, identical copies (same source tag and text), share a distinctive style (same tag, classes and visual CSS ignoring position and size, and not just typography), come from the same stylesheet rule, or are similar-sized siblings in the same labelled region. `surveys/<id>/groups.overrides.json` can force `split` or `merge`. Decisions are still stored per usage. In the viewer, click a group's name (or ✎) to rename it; an empty name restores the generated one. In an expanded group, each usage has its own Keep / Round / Exclude / 🤷 buttons and **Uncategorize**, which moves it into a pinned **Uncategorized** bucket where usages are decided one by one (**Return** puts it back). Names and Uncategorized are stored like decisions (`surveys/<id>/group-edits.json` locally, `DATA_DIR/groups/` in production), sync live and come down with `pull-decisions`. Names are keyed by group, so a re-run of `group.mjs` that changes a group's members drops its name.
-- **Suggested Tokens** (bottom of each survey): re-values the *existing* tokens to best fit non-excluded usage (same names, same count, same order; optimal weighted 1-D k-medians). It shows each token's current → proposed value, what it absorbs, and the fit before → after (exact matches, average rounding). For colors and shadows, which aren't scales, it shows how usage spreads over the existing tokens and lists unused ones.
-- **Suggested Components** (home page, collapsed): look-alike elements (kind, size, shape, fill, border, text style) that recur across the redesign, with screenshot, uses/pages, visual variants and related design-system components. Generate with `node tools/components.mjs` → `analysis/components/`.
-- **Live collaboration**: each browser gets a random name (e.g. "Teal Fox") and streams updates from `/api/live` (server-sent events). A yellow **N online** pill appears at the bottom right when more than one person is on the site, and when someone else makes a decision the pill bounces, a toast says who did what, and open survey pages update in place.
-- **Zoom in previews**: hold **Z** and click to zoom in at that spot, **Cmd+Z+click** (Ctrl+Z+click elsewhere) to zoom out, or use the − / % / + control.
-- **Page viewer** (`/view.html?page=…`): the live page with prop controls, internal state, and width. When opened from a usage, it applies that usage's state and marks the element. **Mark** chooses Border (dashed outline), Highlight (tinted fill) or None; `m` cycles through them and the choice is remembered.
+- **Home** (`/`): each comparison with design/live thumbnails, finding counts by severity and category, and
+  decision progress. The design pages are listed below (collapsed) with links to the page viewer.
+- **Comparison** (`/compare.html?id=home`): findings on the left, the two screenshots on the right.
+  - Views: **Side by side** (one scroll for both), **Overlay** (slider sets live opacity), **Difference**
+    (identical pixels are black), **Swipe** (slider moves the split). Boxes outline every finding shown
+    (magenta design, blue live); click one to select its finding. **Fit** / **100%** zoom.
+  - Each finding shows design and live crops, the property rows (design → live, with swatches), links to
+    the design page with the element marked and to its source line, and the decision buttons:
+    **Fix live**, **Update design**, **Fine**, **🤷**, plus a note (✎).
+  - Filter by category (click; ⌘/shift-click for several), severity, decision status and text. **Set all
+    shown…** decides every finding in the current filter. **Export** downloads Markdown (`.json` too).
+  - Keys: `j`/`k` move, `1` fix live, `2` update design, `3` fine, `4` 🤷, `0` clear, `n` note, `m` cycle
+    view, `[`/`]` slider, `b` toggle all boxes, `/` search.
+- **Live collaboration**: each browser gets a random name (e.g. "Teal Fox") and streams updates from
+  `/api/live` (server-sent events). A yellow **N online** pill appears when more than one person is on the
+  site; decisions made elsewhere update open pages in place and show a toast.
+- **Page viewer** (`/view.html?page=…`): a design page with prop controls, internal state, and width. When
+  opened from a finding, it applies that state and marks the element.
 
-## Token surveys
-
-```bash
-node tools/survey.mjs presets                          # available token types
-node tools/survey.mjs new colors --preset text-color   # creates surveys/colors/spec.json
-node tools/survey.mjs run colors                       # scans all states in surveys/captures.json
-```
-
-Color surveys capture every state in light **and** dark mode (`--themes light,dark` on `new`, or `"themes": ["light","dark"]` in `spec.json`). Dark mode is switched via the page's `theme` prop, or the `dark` entries in `surveys/captures.json` (Explore Page, Search Dropdown). Log In v1 and the Action Cards style guide have no dark mode. Checkout is left out of the surveys because it has not been redesigned. The survey page then shows a **Both / Light / Dark** filter and a theme chip on each card.
-
-Decisions are saved to `surveys/<id>/decisions.json`. Re-running a survey keeps them, because item ids are stable. Screenshots (`surveys/*/shots/`) are gitignored and regenerated on each run.
-
-## Screenshots: `tools/dc.mjs`
+## Design screenshots: `tools/dc.mjs`
 
 ```bash
 node tools/dc.mjs list                                   # pages + props (variants)
@@ -66,14 +93,12 @@ node tools/dc.mjs matrix "log in" --vary leftPanel
 node tools/dc.mjs help
 ```
 
-**Props** are the designer-exposed variants. **State** is a page's internal view state. A **component** is any element with `data-screen-label`. **`--do`** runs interactions (click, hover, fill, and so on).
-
 ## Deploy (dcloudbox)
 
 Kamal 2 deploys to dcloudbox behind the shared kamal-proxy. GitHub Actions (`.github/workflows/cd.yml`) runs on every push to `master`: it runs the tests, builds the image, pushes it to ghcr.io and runs `bin/kamal deploy`. Config: `config/deploy.yml`, `.kamal/secrets`, `Dockerfile`.
 
-- The image contains everything the viewer serves: `design-project/`, `design-system/`, `surveys/` (with screenshots) and `analysis/`. Surveys are generated locally, so commit the regenerated `surveys/` and `analysis/` folders to publish them.
-- Decisions made on the deployed site live on the `dsreview_data` volume (`DATA_DIR=/app/data`), not in the image, so deploys keep them. `npm run pull-decisions` copies them into the local survey folders. It refuses to overwrite different local decisions unless you pass `--force`.
+- The image contains everything the viewer serves: `design-project/`, `design-system/` and `comparisons/` (reports and screenshots). Comparisons run locally (they need Playwright and the live site), so commit the regenerated `comparisons/` folder to publish it.
+- Decisions made on the deployed site live on the `dsreview_data` volume (`DATA_DIR=/app/data`, under `compare/`), not in the image, so deploys keep them. `npm run pull-decisions` copies them into the local `comparisons/<id>/decisions.json`. It refuses to overwrite different local decisions unless you pass `--force`.
 - `/up` is the unauthenticated health check. Everything else asks for basic auth: `eezy` / `eezy` (set in `config/deploy.yml`).
 
 **First deploy (once):**

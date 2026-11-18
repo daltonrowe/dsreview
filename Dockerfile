@@ -8,7 +8,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Throw-away stage so the final image carries only production node_modules (express).
-# --ignore-scripts: Playwright and its browser download are dev-only (surveys run locally).
+# --ignore-scripts: Playwright and its browser download are dev-only (comparisons run locally).
 FROM base AS deps
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev --ignore-scripts

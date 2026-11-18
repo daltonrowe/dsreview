@@ -3,16 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Design System Review</title>
+<title>Design vs Live</title>
 <link rel="stylesheet" href="app.css">
 <style>
-  main { max-width: 1100px; margin: 0 auto; padding: 24px 20px 80px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 24px 20px 80px; }
   h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 28px 0 10px; font-weight: 600; }
-  .surveys { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-  .survey { display: flex; flex-direction: column; gap: 10px; padding: 16px; text-decoration: none; }
-  .survey:hover { border-color: var(--line-2); }
-  .survey h3 { margin: 0; font-size: 16px; }
-  .survey .meta { font-size: 12px; color: var(--muted); }
+  .intro { color: var(--muted); font-size: 13px; margin: 0 0 6px; max-width: 760px; }
+  .intro a { color: var(--text); }
+  .comps { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+  .comp { display: flex; flex-direction: column; overflow: hidden; text-decoration: none; }
+  a.comp:hover { border-color: var(--line-2); }
+  .thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); height: 150px; border-bottom: 1px solid var(--line); }
+  .thumbs div { background: var(--panel-2) top center / 100% auto no-repeat; position: relative; }
+  .thumbs span { position: absolute; left: 6px; bottom: 6px; font-size: 10.5px; font-weight: 600; padding: 1px 6px; border-radius: 999px; color: #fff; }
+  .thumbs .d span { background: var(--design); } .thumbs .l span { background: var(--live); }
+  .comp .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .comp h3 { margin: 0; font-size: 16px; }
+  .comp .meta { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .cats { display: flex; flex-wrap: wrap; gap: 4px; }
+  .sev { display: flex; gap: 10px; font-size: 12px; color: var(--muted); }
+  .sev b { color: var(--text); }
   .pages { display: flex; flex-direction: column; }
   .page { display: grid; grid-template-columns: 260px 1fr auto; gap: 14px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--line); }
   .page:last-child { border-bottom: 0; }
@@ -20,93 +30,50 @@
   .page .props { display: flex; flex-wrap: wrap; gap: 4px; }
   .howto { padding: 14px 16px; font-size: 13px; color: var(--muted); }
   .howto code { color: var(--text); }
-  .comps { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-  .comp { display: flex; flex-direction: column; overflow: hidden; }
-  .comp .shot { height: 150px; display: flex; align-items: center; justify-content: center; background: var(--checker); border-bottom: 1px solid var(--line); }
-  .comp .shot img { max-width: 100%; max-height: 100%; }
-  .comp .body { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; }
-  .comp h3 { margin: 0; font-size: 14px; display: flex; gap: 8px; align-items: baseline; }
-  .comp h3 .n { color: var(--faint); font-weight: 500; font-size: 12px; }
-  .comp .desc { color: var(--muted); }
-  .comp .stats { display: flex; gap: 12px; color: var(--muted); font-size: 12px; }
-  .comp .stats b { color: var(--text); }
-  .comp .rel { font-size: 12px; color: var(--muted); }
-  .comp .rel code { color: var(--text); }
-  .comp details { font-size: 12px; color: var(--muted); }
-  .comp details summary { cursor: pointer; }
-  .comp details li { margin: 2px 0; }
-  .comp .foot a { font-size: 12px; color: var(--muted); }
-  .sec-intro { color: var(--muted); font-size: 12.5px; margin: -4px 0 12px; }
-  .catf { margin-bottom: 12px; }
   details.collapse > summary { list-style: none; cursor: pointer; }
   details.collapse > summary::-webkit-details-marker { display: none; }
   details.collapse > summary h2::before { content: '▸'; display: inline-block; width: 14px; transition: transform .15s; }
   details.collapse[open] > summary h2::before { transform: rotate(90deg); }
-  @media (max-width: 720px) { .page { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .page { grid-template-columns: 1fr; } .comps { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<div class="topbar"><h1>Design System Review</h1><span class="spacer"></span><a class="btn" href="/api/export.md" download title="Every survey's decisions in one Markdown file (JSON: /api/export.json)">Export all</a><a class="btn" href="view.html">Open page viewer</a></div>
+<div class="topbar"><h1>Design vs Live</h1><span class="spacer"></span><a class="btn" href="/api/export.md" download title="Every comparison's findings and decisions in one Markdown file (JSON: /api/export.json)">Export all</a><a class="btn" href="view.html">Design page viewer</a></div>
 <main>
-  <h2>Token surveys</h2>
-  <div id="surveys" class="surveys"></div>
-  <details class="collapse" id="compsBox">
-    <summary><h2>Suggested Components <span class="faint" id="compsCount"></span></h2></summary>
-    <p class="sec-intro">Elements that look alike and recur across the redesign: same kind, size, shape, fill, border and text style. Ranked by distinct uses × pages.</p>
-    <div class="seg catf" id="catf"></div>
-    <div id="comps" class="comps"></div>
-  </details>
+  <p class="intro" id="intro"></p>
+  <h2>Comparisons</h2>
+  <div id="comps" class="comps"></div>
   <details class="collapse" id="pagesBox">
-    <summary><h2>Pages <span class="faint" id="pagesCount"></span></h2></summary>
+    <summary><h2>Design pages <span class="faint" id="pagesCount"></span></h2></summary>
     <div id="pages" class="card pages"></div>
   </details>
 </main>
 <script type="module">
-import { api, esc, progressBar, legend, viewUrl, $ } from './common.js';
+import { api, esc, progressBar, legend, $ } from './common.js';
 import { startLive, onDecision, liveToast, describeDecision } from './live.js';
 
-async function renderSurveys() {
-const surveys = await api('/api/surveys');
-$('#surveys').innerHTML = surveys.length ? surveys.map(s => s.generated ? `
-  <a class="card survey" href="survey.html?id=${encodeURIComponent(s.id)}">
-    <h3>${esc(s.title)}</h3>
-    <div class="meta"><code>${esc(s.id)}</code> · ${s.stats.sections} sections · ${s.stats.usages} usages · ${new Date(s.generatedAt).toLocaleString()}</div>
-    ${progressBar(s.progress)}${legend(s.progress)}
-  </a>` : `
-  <div class="card survey"><h3>${esc(s.title)}</h3><div class="meta">Not generated yet: <code>node tools/survey.mjs run ${esc(s.id)}</code></div></div>`).join('')
-  : `<div class="card howto">No surveys yet. Create one:<br><code>node tools/survey.mjs new radius --preset radius</code><br><code>node tools/survey.mjs run radius</code><br>Presets: <code>node tools/survey.mjs presets</code></div>`;
-}
-await renderSurveys();
-startLive();
-onDecision((d, { mine }) => { renderSurveys(); if (!mine) liveToast(describeDecision(d)); });
+const CATS = ['typography', 'color', 'size', 'shape', 'spacing', 'alignment', 'icon', 'behavior', 'missing', 'extra'];
 
-// ---------- Suggested Components ----------
-let comps = null, cat = 'All';
-try { comps = await api('/api/components'); } catch { }
-function renderComps() {
-  if (!comps) { $('#comps').innerHTML = `<div class="card howto">Not generated yet: <code>node tools/components.mjs</code></div>`; return; }
-  $('#compsCount').textContent = `(${comps.components.length})`;
-  const cats = ['All', ...new Set(comps.components.map(c => c.category))];
-  $('#catf').innerHTML = cats.map(c => `<button data-c="${esc(c)}" aria-pressed="${c === cat}">${esc(c)}</button>`).join('');
-  const list = comps.components.filter(c => cat === 'All' || c.category === cat);
-  $('#comps').innerHTML = list.map((c, i) => {
-    const cap = comps.captures[c.example.capture];
-    return `<div class="card comp">
-      <div class="shot">${c.shot ? `<img loading="lazy" src="/analysis/components/${esc(c.shot)}" alt="">` : ''}</div>
+async function render() {
+  const { base, comparisons } = await api('/api/comparisons');
+  $('#intro').innerHTML = `Each comparison renders a design-project page and the matching page on <a href="${esc(base)}/?skip=1" target="_blank">${esc(new URL(base).host)}</a> at the same width, matches their elements by text and position, and lists what differs: alignment, size, color, type, shape, spacing and hover behavior.`;
+  $('#comps').innerHTML = comparisons.length ? comparisons.map(c => c.generated ? `
+    <a class="card comp" href="compare.html?id=${encodeURIComponent(c.id)}">
+      <div class="thumbs"><div class="d" style="background-image:url('/comparisons/${esc(c.id)}/design.jpg')"><span>Design</span></div><div class="l" style="background-image:url('/comparisons/${esc(c.id)}/live.jpg')"><span>Live</span></div></div>
       <div class="body">
-        <h3>${esc(c.category)} <span class="n">#${i + 1}</span></h3>
-        <div class="desc">${esc(c.description)}</div>
-        <div class="stats"><span><b>${c.usages}</b> uses</span><span><b>${c.instances}</b> instances</span><span><b>${c.pages.length}</b> page${c.pages.length === 1 ? '' : 's'}</span></div>
-        ${c.examples.length ? `<div class="desc" title="${esc(c.examples.join('\n'))}">“${esc(c.examples.slice(0, 3).join('”, “'))}”</div>` : ''}
-        ${c.related.length ? `<div class="rel">Design system: ${c.related.map(r => `<code>${esc(r)}</code>`).join(', ')}</div>` : `<div class="rel">Not in the design system</div>`}
-        ${c.variants.length > 1 ? `<details><summary>${c.variants.length} visual variants</summary><ul>${c.variants.map(v => `<li>${esc(v.description)} (${v.usages})</li>`).join('')}</ul></details>` : ''}
-        <div class="foot"><a href="${esc(viewUrl(cap, c.example))}" target="_blank">Usage</a> · <span class="faint" title="${esc(c.pages.join(', '))}">${esc(c.pages.slice(0, 3).join(', '))}${c.pages.length > 3 ? '…' : ''}</span></div>
+        <h3>${esc(c.label)}</h3>
+        <div class="meta" title="${esc(c.design.page)} ↔ ${esc(c.live.path)}">${esc(c.design.page.replace(/\.dc\.html$/, ''))} ↔ <code>${esc(c.live.path)}</code> · ${new Date(c.generatedAt).toLocaleString()}</div>
+        <div class="sev"><span><i class="dot high"></i><b>${c.stats.bySeverity.high}</b> high</span><span><i class="dot medium"></i><b>${c.stats.bySeverity.medium}</b> medium</span><span><i class="dot low"></i><b>${c.stats.bySeverity.low}</b> low</span><span class="faint">${c.stats.matched} matched elements</span></div>
+        <div class="cats">${CATS.filter(k => c.stats.byCategory[k]).map(k => `<span class="chip">${k} ${c.stats.byCategory[k]}</span>`).join('')}</div>
+        ${progressBar(c.progress)}${legend(c.progress)}
       </div>
-    </div>`;
-  }).join('');
+    </a>` : `
+    <div class="card comp"><div class="body"><h3>${esc(c.label)}</h3><div class="meta">${esc(c.design.page)} ↔ <code>${esc(c.live.path)}</code></div><div class="howto" style="padding:0">Not run yet: <code>node tools/compare.mjs run ${esc(c.id)}</code></div></div></div>`).join('')
+    : `<div class="card howto">No comparisons configured. Add one:<br><code>node tools/compare.mjs add home --design "ai magic" --live /</code><br><code>node tools/compare.mjs run home</code></div>`;
 }
-$('#catf').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; cat = b.dataset.c; renderComps(); });
-renderComps();
+await render();
+startLive();
+onDecision((d, { mine }) => { render(); if (!mine) liveToast(describeDecision(d)); });
 
 const pages = await api('/api/pages');
 $('#pagesCount').textContent = `(${pages.length})`;

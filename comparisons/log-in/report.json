@@ -1,0 +1,3727 @@
+{
+ "id": "log-in",
+ "label": "Log in",
+ "generatedAt": "2026-11-18T11:39:21.252Z",
+ "base": "https://ao-4276-redesign-rollup.xeezy.com",
+ "hover": true,
+ "design": {
+  "page": "Log In.dc.html",
+  "props": {
+   "mode": "Log In",
+   "leftPanel": "Original"
+  },
+  "state": {},
+  "do": [],
+  "view": "view.html?page=Log+In.dc.html&props=%7B%22mode%22%3A%22Log+In%22%2C%22leftPanel%22%3A%22Original%22%7D",
+  "width": 1440,
+  "height": 900,
+  "shot": "design.jpg",
+  "items": 32,
+  "log": []
+ },
+ "live": {
+  "path": "/users/sign_in",
+  "do": [],
+  "url": "https://ao-4276-redesign-rollup.xeezy.com/users/sign_in?skip=1",
+  "finalUrl": "https://ao-4276-redesign-rollup.xeezy.com/users/sign_in?skip=1",
+  "width": 1440,
+  "height": 900,
+  "shot": "live.jpg",
+  "items": 25,
+  "log": [
+   "pageerror: Cannot read properties of undefined (reading 'init')"
+  ]
+ },
+ "pairs": [
+  {
+   "design": 3,
+   "live": 3,
+   "how": "text"
+  },
+  {
+   "design": 8,
+   "live": 8,
+   "how": "text"
+  },
+  {
+   "design": 10,
+   "live": 10,
+   "how": "text"
+  },
+  {
+   "design": 29,
+   "live": 22,
+   "how": "text"
+  },
+  {
+   "design": 31,
+   "live": 24,
+   "how": "text"
+  },
+  {
+   "design": 7,
+   "live": 7,
+   "how": "text"
+  },
+  {
+   "design": 0,
+   "live": 0,
+   "how": "text"
+  },
+  {
+   "design": 22,
+   "live": 16,
+   "how": "text"
+  },
+  {
+   "design": 4,
+   "live": 4,
+   "how": "text"
+  },
+  {
+   "design": 5,
+   "live": 5,
+   "how": "text"
+  },
+  {
+   "design": 1,
+   "live": 1,
+   "how": "text"
+  },
+  {
+   "design": 2,
+   "live": 2,
+   "how": "text"
+  },
+  {
+   "design": 6,
+   "live": 6,
+   "how": "text"
+  },
+  {
+   "design": 9,
+   "live": 9,
+   "how": "text"
+  },
+  {
+   "design": 23,
+   "live": 17,
+   "how": "text"
+  },
+  {
+   "design": 21,
+   "live": 15,
+   "how": "text"
+  },
+  {
+   "design": 25,
+   "live": 19,
+   "how": "text"
+  },
+  {
+   "design": 24,
+   "live": 18,
+   "how": "text"
+  },
+  {
+   "design": 20,
+   "live": 14,
+   "how": "text"
+  },
+  {
+   "design": 19,
+   "live": 13,
+   "how": "text"
+  },
+  {
+   "design": 12,
+   "live": 12,
+   "how": "text"
+  },
+  {
+   "design": 11,
+   "live": 11,
+   "how": "text"
+  }
+ ],
+ "findings": [
+  {
+   "id": "typography:in#0",
+   "category": "typography",
+   "severity": "high",
+   "text": "in",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "40px",
+     "live": "36px",
+     "sev": "high"
+    },
+    {
+     "prop": "letter-spacing",
+     "design": "-0.4px",
+     "live": "0px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 25,
+    "textBox": {
+     "x": 274.5,
+     "y": 684,
+     "w": 33,
+     "h": 52
+    },
+    "box": {
+     "x": 274.5,
+     "y": 684,
+     "w": 33,
+     "h": 52
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 147,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 197,
+     "col": 157
+    }
+   },
+   "live": {
+    "n": 19,
+    "textBox": {
+     "x": 257.4,
+     "y": 685,
+     "w": 28,
+     "h": 41
+    },
+    "box": {
+     "x": 257.4,
+     "y": 685,
+     "w": 28,
+     "h": 41
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:better work half the time.#0",
+   "category": "typography",
+   "severity": "high",
+   "text": "Better work half the time.",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "40px",
+     "live": "36px",
+     "sev": "high"
+    },
+    {
+     "prop": "letter-spacing",
+     "design": "-0.4px",
+     "live": "0px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 24,
+    "textBox": {
+     "x": 56,
+     "y": 685,
+     "w": 494,
+     "h": 47
+    },
+    "box": {
+     "x": 56,
+     "y": 685,
+     "w": 494,
+     "h": 47
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 146,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 197,
+     "col": 7
+    }
+   },
+   "live": {
+    "n": 18,
+    "textBox": {
+     "x": 56,
+     "y": 682,
+     "w": 453.6,
+     "h": 43
+    },
+    "box": {
+     "x": 56,
+     "y": 682,
+     "w": 453.6,
+     "h": 43
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "alignment:continue with google#0",
+   "category": "alignment",
+   "severity": "high",
+   "text": "Continue with Google",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "left edge",
+     "design": "aligned with “Username / Email” +4",
+     "live": "off by 164px →",
+     "sev": "high",
+     "ref": 3,
+     "dd": 164
+    }
+   ],
+   "design": {
+    "n": 11,
+    "textBox": {
+     "x": 880,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 870,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 67,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 110,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 11,
+    "textBox": {
+     "x": 1044.1,
+     "y": 608.8,
+     "w": 19.8,
+     "h": 19.8
+    },
+    "box": {
+     "x": 1034,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:dont have an account?#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Don't have an account?",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~19px)",
+     "live": "24px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 28,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 306
+    }
+   },
+   "live": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:sign up#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Sign up",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~19px)",
+     "live": "24px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 2,
+    "textBox": {
+     "x": 1044.3,
+     "y": 259.5,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 1044.3,
+     "y": 259.5,
+     "w": 57,
+     "h": 18
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 29,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 406
+    }
+   },
+   "live": {
+    "n": 2,
+    "textBox": {
+     "x": 1044.3,
+     "y": 255.8,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 1044.3,
+     "y": 255.8,
+     "w": 57,
+     "h": 18
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:forgot your password?#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Forgot Your Password?",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~17px)",
+     "live": "21px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 8,
+    "textBox": {
+     "x": 1134.8,
+     "y": 449.5,
+     "w": 155.2,
+     "h": 17
+    },
+    "box": {
+     "x": 1134.8,
+     "y": 449.5,
+     "w": 155.2,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 59,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 99,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 8,
+    "textBox": {
+     "x": 1134.8,
+     "y": 456.8,
+     "w": 155.2,
+     "h": 17
+    },
+    "box": {
+     "x": 1134.8,
+     "y": 456.8,
+     "w": 155.2,
+     "h": 17
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:log in#1",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Log in",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "17px",
+     "live": "16px",
+     "sev": "medium"
+    },
+    {
+     "prop": "font-weight",
+     "design": 600,
+     "live": 700,
+     "sev": "medium"
+    },
+    {
+     "prop": "line-height",
+     "design": "normal (~20px)",
+     "live": "16px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.2,
+     "y": 493.5,
+     "w": 47.7,
+     "h": 20
+    },
+    "box": {
+     "x": 870,
+     "y": 480.5,
+     "w": 420,
+     "h": 46
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.9,
+     "y": 506.8,
+     "w": 46.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 489.8,
+     "w": 420,
+     "h": 52
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:or#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "or",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~17px)",
+     "live": "21px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 10,
+    "textBox": {
+     "x": 1073.3,
+     "y": 544.5,
+     "w": 13.3,
+     "h": 17
+    },
+    "box": {
+     "x": 1073.3,
+     "y": 544.5,
+     "w": 13.3,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 63,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 105,
+     "col": 11
+    }
+   },
+   "live": {
+    "n": 10,
+    "textBox": {
+     "x": 1073.3,
+     "y": 561.8,
+     "w": 13.3,
+     "h": 17
+    },
+    "box": {
+     "x": 1073.3,
+     "y": 561.8,
+     "w": 13.3,
+     "h": 17
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:privacy policy#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Privacy Policy",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "13px",
+     "live": "12px",
+     "sev": "medium"
+    },
+    {
+     "prop": "line-height",
+     "design": "19.5px",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 20,
+    "textBox": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 16
+    },
+    "box": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 122,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 170
+    }
+   },
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 15
+    },
+    "box": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:this site is protected by recaptcha and the goog#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "13px",
+     "live": "12px",
+     "sev": "medium"
+    },
+    {
+     "prop": "line-height",
+     "design": "19.5px",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 19,
+    "textBox": {
+     "x": 877.2,
+     "y": 640.5,
+     "w": 321.8,
+     "h": 35.5
+    },
+    "box": {
+     "x": 877.2,
+     "y": 640.5,
+     "w": 321.8,
+     "h": 35.5
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 121,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 11
+    }
+   },
+   "live": {
+    "n": 13,
+    "textBox": {
+     "x": 878.3,
+     "y": 657.8,
+     "w": 403.4,
+     "h": 33
+    },
+    "box": {
+     "x": 878.3,
+     "y": 657.8,
+     "w": 403.4,
+     "h": 33
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:create without limits#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Create without limits",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "font-weight",
+     "design": 700,
+     "live": 600,
+     "sev": "medium"
+    },
+    {
+     "prop": "line-height",
+     "design": "normal (~14px)",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 23,
+    "textBox": {
+     "x": 56,
+     "y": 652,
+     "w": 168.2,
+     "h": 15
+    },
+    "box": {
+     "x": 56,
+     "y": 652,
+     "w": 168.2,
+     "h": 15
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 145,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 196,
+     "col": 7
+    }
+   },
+   "live": {
+    "n": 17,
+    "textBox": {
+     "x": 56,
+     "y": 644,
+     "w": 165.7,
+     "h": 15
+    },
+    "box": {
+     "x": 56,
+     "y": 644,
+     "w": 165.7,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:terms of service#0",
+   "category": "typography",
+   "severity": "medium",
+   "text": "Terms of Service",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "font-size",
+     "design": "13px",
+     "live": "12px",
+     "sev": "medium"
+    },
+    {
+     "prop": "line-height",
+     "design": "19.5px",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 21,
+    "textBox": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 16
+    },
+    "box": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 123,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 331
+    }
+   },
+   "live": {
+    "n": 15,
+    "textBox": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 15
+    },
+    "box": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:log in#1",
+   "category": "color",
+   "severity": "medium",
+   "text": "Log in",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#9fa7ad",
+     "live": "#d4d4d4",
+     "swatch": true,
+     "sev": "medium"
+    },
+    {
+     "prop": "background",
+     "design": "#e6e9ea",
+     "live": "#e0e0e0",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.2,
+     "y": 493.5,
+     "w": 47.7,
+     "h": 20
+    },
+    "box": {
+     "x": 870,
+     "y": 480.5,
+     "w": 420,
+     "h": 46
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.9,
+     "y": 506.8,
+     "w": 46.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 489.8,
+     "w": 420,
+     "h": 52
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "size:log in#1",
+   "category": "size",
+   "severity": "medium",
+   "text": "Log in",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "height",
+     "design": "46px",
+     "live": "52px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.2,
+     "y": 493.5,
+     "w": 47.7,
+     "h": 20
+    },
+    "box": {
+     "x": 870,
+     "y": 480.5,
+     "w": 420,
+     "h": 46
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 9,
+    "textBox": {
+     "x": 1056.9,
+     "y": 506.8,
+     "w": 46.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 489.8,
+     "w": 420,
+     "h": 52
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "size:privacy policy#0",
+   "category": "size",
+   "severity": "medium",
+   "text": "Privacy Policy",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "width",
+     "design": "83.9px",
+     "live": "78.4px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 20,
+    "textBox": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 16
+    },
+    "box": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 122,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 170
+    }
+   },
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 15
+    },
+    "box": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "size:terms of service#0",
+   "category": "size",
+   "severity": "medium",
+   "text": "Terms of Service",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "width",
+     "design": "101.8px",
+     "live": "95.1px",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 21,
+    "textBox": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 16
+    },
+    "box": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 123,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 331
+    }
+   },
+   "live": {
+    "n": 15,
+    "textBox": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 15
+    },
+    "box": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:sign up#0",
+   "category": "behavior",
+   "severity": "medium",
+   "text": "Sign up",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "hover color",
+     "design": "#ff7900 → #ff861a",
+     "live": "no change",
+     "swatch": true,
+     "sev": "medium"
+    },
+    {
+     "prop": "hover textDecoration",
+     "design": "no change",
+     "live": "none → underline",
+     "swatch": false,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 2,
+    "textBox": {
+     "x": 1044.3,
+     "y": 259.5,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 1044.3,
+     "y": 259.5,
+     "w": 57,
+     "h": 18
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 29,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 406
+    }
+   },
+   "live": {
+    "n": 2,
+    "textBox": {
+     "x": 1044.3,
+     "y": 255.8,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 1044.3,
+     "y": 255.8,
+     "w": 57,
+     "h": 18
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:forgot your password?#0",
+   "category": "behavior",
+   "severity": "medium",
+   "text": "Forgot Your Password?",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "hover color",
+     "design": "#ff7900 → #ff861a",
+     "live": "no change",
+     "swatch": true,
+     "sev": "medium"
+    },
+    {
+     "prop": "hover textDecoration",
+     "design": "no change",
+     "live": "none → underline",
+     "swatch": false,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 8,
+    "textBox": {
+     "x": 1134.8,
+     "y": 449.5,
+     "w": 155.2,
+     "h": 17
+    },
+    "box": {
+     "x": 1134.8,
+     "y": 449.5,
+     "w": 155.2,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 59,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 99,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 8,
+    "textBox": {
+     "x": 1134.8,
+     "y": 456.8,
+     "w": 155.2,
+     "h": 17
+    },
+    "box": {
+     "x": 1134.8,
+     "y": 456.8,
+     "w": 155.2,
+     "h": 17
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:continue with facebook#0",
+   "category": "behavior",
+   "severity": "medium",
+   "text": "Continue with Facebook",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "hover border",
+     "design": "1px solid #cfd3d6 → 1px solid #9fa7ad",
+     "live": "no change",
+     "swatch": false,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 12,
+    "textBox": {
+     "x": 934,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 924,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 71,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 116,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 12,
+    "textBox": {
+     "x": 1096.1,
+     "y": 608.8,
+     "w": 19.8,
+     "h": 19.8
+    },
+    "box": {
+     "x": 1086,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:continue with google#0",
+   "category": "behavior",
+   "severity": "medium",
+   "text": "Continue with Google",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "hover border",
+     "design": "1px solid #cfd3d6 → 1px solid #9fa7ad",
+     "live": "no change",
+     "swatch": false,
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 11,
+    "textBox": {
+     "x": 880,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 870,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 67,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 110,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 11,
+    "textBox": {
+     "x": 1044.1,
+     "y": 608.8,
+     "w": 19.8,
+     "h": 19.8
+    },
+    "box": {
+     "x": 1034,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "missing:continue with apple#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with Apple",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with Apple",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 13,
+    "textBox": {
+     "x": 988,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 978,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 77,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 122,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:continue with linkedin#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with LinkedIn",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with LinkedIn",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 14,
+    "textBox": {
+     "x": 1042,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 1032,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 82,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 128,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:continue with line#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with LINE",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with LINE",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 16,
+    "textBox": {
+     "x": 1150,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 1140,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 96,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 140,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:continue with kakao#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with Kakao",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with Kakao",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 17,
+    "textBox": {
+     "x": 1204,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 1194,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 103,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 146,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:continue with sso#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with SSO",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with SSO",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 18,
+    "textBox": {
+     "x": 1258,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 1248,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 109,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 152,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:continue with microsoft#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "Continue with Microsoft",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "control",
+     "design": "Continue with Microsoft",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 15,
+    "textBox": {
+     "x": 1097,
+     "y": 590.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 1086,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 88,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 134,
+     "col": 13
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:74,540,405#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "74,540,405",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "text",
+     "design": "74,540,405",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 27,
+    "textBox": {
+     "x": 142.3,
+     "y": 754.8,
+     "w": 91.2,
+     "h": 18
+    },
+    "box": {
+     "x": 142.3,
+     "y": 754.8,
+     "w": 91.2,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 153,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 199,
+     "col": 265
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:89,304#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "89,304",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "text",
+     "design": "89,304",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 28,
+    "textBox": {
+     "x": 356.1,
+     "y": 754.8,
+     "w": 57,
+     "h": 18
+    },
+    "box": {
+     "x": 356.1,
+     "y": 754.8,
+     "w": 57,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 154,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 199,
+     "col": 335
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "missing:41,504#0",
+   "category": "missing",
+   "severity": "medium",
+   "text": "41,504",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "text",
+     "design": "41,504",
+     "live": "not found",
+     "sev": "medium"
+    }
+   ],
+   "design": {
+    "n": 30,
+    "textBox": {
+     "x": 280,
+     "y": 789.2,
+     "w": 54.3,
+     "h": 18
+    },
+    "box": {
+     "x": 280,
+     "y": 789.2,
+     "w": 54.3,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 159,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 200,
+     "col": 286
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "typography:log in#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "Log in",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "34.5px",
+     "live": "37.5px",
+     "sev": "low"
+    },
+    {
+     "prop": "letter-spacing",
+     "design": "-0.3px",
+     "live": "0px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 0,
+    "textBox": {
+     "x": 870,
+     "y": 210,
+     "w": 82.1,
+     "h": 35
+    },
+    "box": {
+     "x": 870,
+     "y": 210,
+     "w": 82.1,
+     "h": 35
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 27,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 168
+    }
+   },
+   "live": {
+    "n": 0,
+    "textBox": {
+     "x": 870,
+     "y": 208.3,
+     "w": 83.9,
+     "h": 35
+    },
+    "box": {
+     "x": 870,
+     "y": 208.3,
+     "w": 83.9,
+     "h": 35
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:username / email#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "Username / Email",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~14px)",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:*#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~14px)",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 4,
+    "textBox": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 40,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 75,
+     "col": 183
+    }
+   },
+   "live": {
+    "n": 4,
+    "textBox": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:password#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "Password",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~14px)",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 43,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:*#1",
+   "category": "typography",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "normal (~14px)",
+     "live": "18px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 6,
+    "textBox": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 44,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 197
+    }
+   },
+   "live": {
+    "n": 6,
+    "textBox": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:find fresh inspiration from creatives making a l#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "Find fresh inspiration from creatives making a living from their work",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "22.4px",
+     "live": "24px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 29,
+    "textBox": {
+     "x": 86,
+     "y": 789.2,
+     "w": 543.9,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 789.2,
+     "w": 543.9,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 158,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 200,
+     "col": 252
+    }
+   },
+   "live": {
+    "n": 22,
+    "textBox": {
+     "x": 86,
+     "y": 787,
+     "w": 541.3,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 787,
+     "w": 541.3,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "typography:generate, edit and upscale in seconds with built#0",
+   "category": "typography",
+   "severity": "low",
+   "text": "Generate, edit and upscale in seconds with built-in AI tools",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "line-height",
+     "design": "22.4px",
+     "live": "24px",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 31,
+    "textBox": {
+     "x": 86,
+     "y": 823.6,
+     "w": 424.9,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 823.6,
+     "w": 424.9,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 160,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 201,
+     "col": 9
+    }
+   },
+   "live": {
+    "n": 24,
+    "textBox": {
+     "x": 86,
+     "y": 823,
+     "w": 424.9,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 823,
+     "w": 424.9,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:log in#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Log in",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#0e2332",
+     "live": "#171717",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 0,
+    "textBox": {
+     "x": 870,
+     "y": 210,
+     "w": 82.1,
+     "h": 35
+    },
+    "box": {
+     "x": 870,
+     "y": 210,
+     "w": 82.1,
+     "h": 35
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 27,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 168
+    }
+   },
+   "live": {
+    "n": 0,
+    "textBox": {
+     "x": 870,
+     "y": 208.3,
+     "w": 83.9,
+     "h": 35
+    },
+    "box": {
+     "x": 870,
+     "y": 208.3,
+     "w": 83.9,
+     "h": 35
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:dont have an account?#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Don't have an account?",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#576570",
+     "live": "#5a5a5a",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 28,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 306
+    }
+   },
+   "live": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:username / email#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Username / Email",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:*#0",
+   "category": "color",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#f75b5b",
+     "live": "#f64949",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 4,
+    "textBox": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 40,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 75,
+     "col": 183
+    }
+   },
+   "live": {
+    "n": 4,
+    "textBox": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:password#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Password",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 43,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:*#1",
+   "category": "color",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#f75b5b",
+     "live": "#f64949",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 6,
+    "textBox": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 44,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 197
+    }
+   },
+   "live": {
+    "n": 6,
+    "textBox": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:or#0",
+   "category": "color",
+   "severity": "low",
+   "text": "or",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 10,
+    "textBox": {
+     "x": 1073.3,
+     "y": 544.5,
+     "w": 13.3,
+     "h": 17
+    },
+    "box": {
+     "x": 1073.3,
+     "y": 544.5,
+     "w": 13.3,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 63,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 105,
+     "col": 11
+    }
+   },
+   "live": {
+    "n": 10,
+    "textBox": {
+     "x": 1073.3,
+     "y": 561.8,
+     "w": 13.3,
+     "h": 17
+    },
+    "box": {
+     "x": 1073.3,
+     "y": 561.8,
+     "w": 13.3,
+     "h": 17
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:privacy policy#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Privacy Policy",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 20,
+    "textBox": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 16
+    },
+    "box": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 122,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 170
+    }
+   },
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 15
+    },
+    "box": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:this site is protected by recaptcha and the goog#0",
+   "category": "color",
+   "severity": "low",
+   "text": "This site is protected by reCAPTCHA and the Google and apply.",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 19,
+    "textBox": {
+     "x": 877.2,
+     "y": 640.5,
+     "w": 321.8,
+     "h": 35.5
+    },
+    "box": {
+     "x": 877.2,
+     "y": 640.5,
+     "w": 321.8,
+     "h": 35.5
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 121,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 11
+    }
+   },
+   "live": {
+    "n": 13,
+    "textBox": {
+     "x": 878.3,
+     "y": 657.8,
+     "w": 403.4,
+     "h": 33
+    },
+    "box": {
+     "x": 878.3,
+     "y": 657.8,
+     "w": 403.4,
+     "h": 33
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "color:terms of service#0",
+   "category": "color",
+   "severity": "low",
+   "text": "Terms of Service",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "text color",
+     "design": "#6e7b84",
+     "live": "#7f7f7f",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 21,
+    "textBox": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 16
+    },
+    "box": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 123,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 331
+    }
+   },
+   "live": {
+    "n": 15,
+    "textBox": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 15
+    },
+    "box": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "shape:privacy policy#0",
+   "category": "shape",
+   "severity": "low",
+   "text": "Privacy Policy",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "border",
+     "design": "bottom: 1px dotted #9fa7ad",
+     "live": "bottom: 1px dotted #aaaaaa",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 20,
+    "textBox": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 16
+    },
+    "box": {
+     "x": 1198.9,
+     "y": 640.5,
+     "w": 83.9,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 122,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 170
+    }
+   },
+   "live": {
+    "n": 14,
+    "textBox": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 15
+    },
+    "box": {
+     "x": 1178.9,
+     "y": 657.8,
+     "w": 78.4,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "shape:terms of service#0",
+   "category": "shape",
+   "severity": "low",
+   "text": "Terms of Service",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "border",
+     "design": "bottom: 1px dotted #9fa7ad",
+     "live": "bottom: 1px dotted #aaaaaa",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 21,
+    "textBox": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 16
+    },
+    "box": {
+     "x": 1022.5,
+     "y": 660,
+     "w": 101.8,
+     "h": 17
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 123,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 168,
+     "col": 331
+    }
+   },
+   "live": {
+    "n": 15,
+    "textBox": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 15
+    },
+    "box": {
+     "x": 1014,
+     "y": 675.8,
+     "w": 95.1,
+     "h": 16
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "spacing:dont have an account?#0",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Don't have an account?",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "gap below → “Username / Email”",
+     "design": "18px",
+     "live": "22px",
+     "sev": "low",
+     "ref": 3
+    }
+   ],
+   "design": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 259.5,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 28,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 65,
+     "col": 306
+    }
+   },
+   "live": {
+    "n": 1,
+    "textBox": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "box": {
+     "x": 870,
+     "y": 255.8,
+     "w": 174.3,
+     "h": 18
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "spacing:username / email#0",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Username / Email",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "gap right → “*”",
+     "design": "3px",
+     "live": "0px",
+     "sev": "low",
+     "ref": 4
+    }
+   ],
+   "design": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "spacing:password#0",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Password",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "gap right → “*”",
+     "design": "3px",
+     "live": "0px",
+     "sev": "low",
+     "ref": 6
+    }
+   ],
+   "design": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 43,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "spacing:create without limits#0",
+   "category": "spacing",
+   "severity": "low",
+   "text": "Create without limits",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "gap below → “Better work half the time.”",
+     "design": "18px",
+     "live": "23px",
+     "sev": "low",
+     "ref": 24
+    }
+   ],
+   "design": {
+    "n": 23,
+    "textBox": {
+     "x": 56,
+     "y": 652,
+     "w": 168.2,
+     "h": 15
+    },
+    "box": {
+     "x": 56,
+     "y": 652,
+     "w": 168.2,
+     "h": 15
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 145,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 196,
+     "col": 7
+    }
+   },
+   "live": {
+    "n": 17,
+    "textBox": {
+     "x": 56,
+     "y": 644,
+     "w": 165.7,
+     "h": 15
+    },
+    "box": {
+     "x": 56,
+     "y": 644,
+     "w": 165.7,
+     "h": 15
+    },
+    "section": null,
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "alignment:section:sign in form",
+   "category": "alignment",
+   "severity": "low",
+   "text": "Sign in form (16 matched elements)",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "region y",
+     "design": "210px",
+     "live": "208.3px (↓ 7.3px)",
+     "sev": "low"
+    }
+   ],
+   "region": true,
+   "design": {
+    "n": null,
+    "textBox": {
+     "x": 870,
+     "y": 210,
+     "w": 420,
+     "h": 467
+    },
+    "box": {
+     "x": 870,
+     "y": 210,
+     "w": 420,
+     "h": 467
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": null,
+    "textBox": {
+     "x": 870,
+     "y": 208.3,
+     "w": 420,
+     "h": 483.49999999999994
+    },
+    "box": {
+     "x": 870,
+     "y": 208.3,
+     "w": 420,
+     "h": 483.49999999999994
+    },
+    "section": "Sign in form",
+    "where": null
+   }
+  },
+  {
+   "id": "icon:continue with facebook#0",
+   "category": "icon",
+   "severity": "low",
+   "text": "Continue with Facebook",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "icon size",
+     "design": "22x22",
+     "live": "20x20",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 12,
+    "textBox": {
+     "x": 934,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 924,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 71,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 116,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 12,
+    "textBox": {
+     "x": 1096.1,
+     "y": 608.8,
+     "w": 19.8,
+     "h": 19.8
+    },
+    "box": {
+     "x": 1086,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "icon:continue with google#0",
+   "category": "icon",
+   "severity": "low",
+   "text": "Continue with Google",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "icon size",
+     "design": "22x22",
+     "live": "20x20",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 11,
+    "textBox": {
+     "x": 880,
+     "y": 589.5,
+     "w": 22,
+     "h": 22
+    },
+    "box": {
+     "x": 870,
+     "y": 579.5,
+     "w": 42,
+     "h": 42
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 67,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 110,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 11,
+    "textBox": {
+     "x": 1044.1,
+     "y": 608.8,
+     "w": 19.8,
+     "h": 19.8
+    },
+    "box": {
+     "x": 1034,
+     "y": 598.8,
+     "w": 40,
+     "h": 40
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:username / email#0",
+   "category": "behavior",
+   "severity": "low",
+   "text": "Username / Email",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "clickable",
+     "design": "no",
+     "live": "yes",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.5,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": null
+   },
+   "live": {
+    "n": 3,
+    "textBox": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 295.8,
+     "w": 125.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:*#0",
+   "category": "behavior",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "clickable",
+     "design": "no",
+     "live": "yes",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 4,
+    "textBox": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 998.5,
+     "y": 295.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 40,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 75,
+     "col": 183
+    }
+   },
+   "live": {
+    "n": 4,
+    "textBox": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 995.5,
+     "y": 295.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:password#0",
+   "category": "behavior",
+   "severity": "low",
+   "text": "Password",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "clickable",
+     "design": "no",
+     "live": "yes",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 374.5,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 43,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 13
+    }
+   },
+   "live": {
+    "n": 5,
+    "textBox": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "box": {
+     "x": 870,
+     "y": 377.8,
+     "w": 74.5,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:*#1",
+   "category": "behavior",
+   "severity": "low",
+   "text": "*",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "clickable",
+     "design": "no",
+     "live": "yes",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 6,
+    "textBox": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 947.5,
+     "y": 374.5,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 44,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 79,
+     "col": 197
+    }
+   },
+   "live": {
+    "n": 6,
+    "textBox": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "box": {
+     "x": 944.5,
+     "y": 377.8,
+     "w": 6.4,
+     "h": 15
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "behavior:show password#0",
+   "category": "behavior",
+   "severity": "low",
+   "text": "Show password",
+   "section": "Sign in form",
+   "props": [
+    {
+     "prop": "hover color",
+     "design": "#9fa7ad → #0e2332",
+     "live": "#aaaaaa → #171717",
+     "swatch": true,
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 7,
+    "textBox": {
+     "x": 1256,
+     "y": 407.5,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 1256,
+     "y": 407.5,
+     "w": 20,
+     "h": 20
+    },
+    "section": "Sign in form",
+    "where": {
+     "owner": "Log In",
+     "tpl": 47,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 82,
+     "col": 15
+    }
+   },
+   "live": {
+    "n": 7,
+    "textBox": {
+     "x": 1256,
+     "y": 412.8,
+     "w": 20,
+     "h": 20
+    },
+    "box": {
+     "x": 1256,
+     "y": 412.8,
+     "w": 20,
+     "h": 20
+    },
+    "section": "form",
+    "where": null
+   },
+   "match": "text"
+  },
+  {
+   "id": "missing:access creative assets ( added yesterday)#0",
+   "category": "missing",
+   "severity": "low",
+   "text": "Access creative assets ( added yesterday)",
+   "section": "Marketing panel",
+   "props": [
+    {
+     "prop": "text",
+     "design": "Access creative assets ( added yesterday)",
+     "live": "not found",
+     "sev": "low"
+    }
+   ],
+   "design": {
+    "n": 26,
+    "textBox": {
+     "x": 86,
+     "y": 754.8,
+     "w": 457.9,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 754.8,
+     "w": 457.9,
+     "h": 18
+    },
+    "section": "Marketing panel",
+    "where": {
+     "owner": "Log In",
+     "tpl": 152,
+     "nth": 0
+    },
+    "source": {
+     "file": "Log In.dc.html",
+     "line": 199,
+     "col": 252
+    }
+   },
+   "live": null
+  },
+  {
+   "id": "extra:live:access creative assets#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "Access creative assets",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "Access creative assets",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 20,
+    "textBox": {
+     "x": 86,
+     "y": 751,
+     "w": 258.5,
+     "h": 18
+    },
+    "box": {
+     "x": 86,
+     "y": 751,
+     "w": 258.5,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:60,869,326#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "60,869,326",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "60,869,326",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 21,
+    "textBox": {
+     "x": 142.3,
+     "y": 751,
+     "w": 89.6,
+     "h": 18
+    },
+    "box": {
+     "x": 142.3,
+     "y": 751,
+     "w": 89.6,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  },
+  {
+   "id": "extra:live:67,873#0",
+   "category": "extra",
+   "severity": "low",
+   "text": "67,873",
+   "section": null,
+   "props": [
+    {
+     "prop": "text",
+     "design": "not in design",
+     "live": "67,873",
+     "sev": "low"
+    }
+   ],
+   "design": null,
+   "live": {
+    "n": 23,
+    "textBox": {
+     "x": 280,
+     "y": 787,
+     "w": 51.8,
+     "h": 18
+    },
+    "box": {
+     "x": 280,
+     "y": 787,
+     "w": 51.8,
+     "h": 18
+    },
+    "section": null,
+    "where": null
+   }
+  }
+ ],
+ "stats": {
+  "designItems": 32,
+  "liveItems": 25,
+  "matched": 22,
+  "missing": 10,
+  "extra": 3,
+  "findings": 64,
+  "byCategory": {
+   "typography": 18,
+   "color": 11,
+   "size": 3,
+   "shape": 2,
+   "spacing": 4,
+   "alignment": 2,
+   "icon": 2,
+   "behavior": 9,
+   "missing": 10,
+   "extra": 3
+  },
+  "bySeverity": {
+   "low": 35,
+   "medium": 26,
+   "high": 3
+  }
+ }
+}

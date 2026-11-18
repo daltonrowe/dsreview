@@ -1,0 +1,89 @@
+{
+  "_doc": "Each comparison pairs a design-project page state with a live-site page. design: page/props/state/do (same as tools/dc.mjs). live: path (?skip=1 is added) and optional do steps. Optional per-pair width/height/maxHeight. Edit by hand or with `node tools/compare.mjs add`.",
+  "base": "https://ao-4276-redesign-rollup.xeezy.com",
+  "width": 1440,
+  "height": 900,
+  "maxHeight": 3000,
+  "pairs": [
+    {
+      "id": "home",
+      "label": "Home (logged out)",
+      "design": {
+        "page": "AI Magic.dc.html",
+        "props": {},
+        "state": {},
+        "do": []
+      },
+      "live": {
+        "path": "/",
+        "do": []
+      }
+    },
+    {
+      "id": "search",
+      "label": "Search results",
+      "design": {
+        "page": "AI Magic.dc.html",
+        "props": {},
+        "state": {
+          "active": "search",
+          "aiHome": false
+        },
+        "do": []
+      },
+      "live": {
+        "path": "/free-photos/dog",
+        "do": []
+      }
+    },
+    {
+      "id": "sign-up",
+      "label": "Create an account",
+      "design": {
+        "page": "Log In.dc.html",
+        "props": {
+          "leftPanel": "Original"
+        },
+        "state": {},
+        "do": []
+      },
+      "live": {
+        "path": "/users/sign_up",
+        "do": []
+      },
+      "maxHeight": 900
+    },
+    {
+      "id": "log-in",
+      "label": "Log in",
+      "design": {
+        "page": "Log In.dc.html",
+        "props": {
+          "mode": "Log In",
+          "leftPanel": "Original"
+        },
+        "state": {},
+        "do": []
+      },
+      "live": {
+        "path": "/users/sign_in",
+        "do": []
+      },
+      "maxHeight": 900
+    },
+    {
+      "id": "pricing",
+      "label": "Join Pro (pricing)",
+      "design": {
+        "page": "Pricing.dc.html",
+        "props": {},
+        "state": {},
+        "do": []
+      },
+      "live": {
+        "path": "/signups/join-pro",
+        "do": []
+      }
+    }
+  ]
+}

@@ -10,3 +10,6 @@
 
 # Runtime data (DATA_DIR) when running the production layout locally.
 /data
+
+# Raw page snapshots written by tools/compare.mjs run (debug data for the matcher).
+/comparisons/*/snapshot.json

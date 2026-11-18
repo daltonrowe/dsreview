@@ -1,4 +1,4 @@
-// The review web app: viewer, design project, survey data and the decisions API.
+// The review web app: viewer, design project, comparison reports and the decisions API.
 // Started by tools/server.mjs; exported separately so tests can run it on a random port.
 import express from 'express';
 import fs from 'node:fs';
@@ -7,20 +7,18 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
 
-const SURVEYS = path.join(ROOT, 'surveys');
-// 'unclear' (🤷 in the viewer) marks a usage the reviewer doesn't understand: it needs a look, not a verdict.
-const DECISIONS = ['keep', 'round', 'exclude', 'unclear'];
+const COMPARISONS = path.join(ROOT, 'comparisons');
+// What to do about a finding. 'unclear' (🤷) = needs a look, not a verdict.
+export const DECISIONS = ['fix-live', 'fix-design', 'ok', 'unclear'];
+export const DECISION_LABELS = { 'fix-live': 'Fix live', 'fix-design': 'Update design', ok: 'Fine as is', unclear: 'Unclear 🤷' };
 
 // options:
 //   user, pass  HTTP basic auth credentials (everything but /up requires them)
-//   dataDir     where decisions are stored. Unset (local): surveys/<id>/decisions.json, next to the survey.
-//               Set (production, a persistent volume): <dataDir>/decisions/<id>.json, so deploys keep them.
-export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {}) {
+//   dataDir     where decisions are stored. Unset (local): comparisons/<id>/decisions.json, next to the report.
+//               Set (production, a persistent volume): <dataDir>/compare/<id>.json, so deploys keep them.
+export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, comparisonsDir = COMPARISONS } = {}) {
   const app = express();
-  const decisionsPath = id => (dataDir ? path.join(dataDir, 'decisions', `${id}.json`) : path.join(SURVEYS, id, 'decisions.json'));
-  // Reviewer edits to a survey's groups (names, usages moved to Uncategorized), stored like decisions.
-  const groupEditsPath = id => (dataDir ? path.join(dataDir, 'groups', `${id}.json`) : path.join(SURVEYS, id, 'group-edits.json'));
-  const emptyEdits = () => ({ names: {}, uncategorized: [] });
+  const decisionsPath = id => (dataDir ? path.join(dataDir, 'compare', `${id}.json`) : path.join(comparisonsDir, id, 'decisions.json'));
 
   // Health check for kamal-proxy; must answer without credentials.
   app.get('/up', (req, res) => res.status(200).send('ok'));
@@ -34,7 +32,7 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
       const i = raw.indexOf(':');
       if (i >= 0 && safeEq(raw.slice(0, i), user) & safeEq(raw.slice(i + 1), pass)) return next();
     }
-    res.set('WWW-Authenticate', 'Basic realm="Design System Review", charset="UTF-8"').status(401).send('Authentication required');
+    res.set('WWW-Authenticate', 'Basic realm="Design Review", charset="UTF-8"').status(401).send('Authentication required');
   });
 
   app.use(express.json());
@@ -77,29 +75,24 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
   app.closeLive = () => { clearInterval(heartbeat); for (const res of live.keys()) res.end(); live.clear(); };
   // names travel URL-encoded in headers (headers are ASCII-only)
   const decodeHeader = v => { try { return v ? decodeURIComponent(v) : v; } catch { return v; } };
-  const surveyTitles = new Map();
-  const surveyTitle = async id => {
-    if (!surveyTitles.has(id)) surveyTitles.set(id, (await readJson(path.join(SURVEYS, id, 'spec.json'), {})).title || id);
-    return surveyTitles.get(id);
-  };
   const noCache = { etag: false, lastModified: false, setHeaders: res => res.set('cache-control', 'no-store') };
 
   app.use('/', express.static(path.join(ROOT, 'tools/viewer'), noCache));
   app.get('/lib/bridge.js', (req, res) => res.set('cache-control', 'no-store').sendFile(path.join(ROOT, 'tools/lib/bridge.js')));
   app.use('/design-project', express.static(PROJECT, noCache));
-  app.use('/surveys', express.static(SURVEYS, noCache));
+  app.use('/comparisons', express.static(comparisonsDir, noCache));
   app.use('/design-system', express.static(path.join(ROOT, 'design-system'), noCache));
-  app.use('/analysis', express.static(path.join(ROOT, 'analysis'), noCache));
   app.use('/screenshots', express.static(path.join(ROOT, 'screenshots'), noCache));
 
   // ---------- helpers ----------
-  const surveyDir = id => {
-    if (!/^[\w.-]+$/.test(id)) throw Object.assign(new Error('bad survey id'), { status: 400 });
-    return path.join(SURVEYS, id);
+  const compDir = id => {
+    if (!/^[\w-]+$/.test(id)) throw Object.assign(new Error('bad comparison id'), { status: 400 });
+    return path.join(comparisonsDir, id);
   };
   const readJson = async (p, fallback) => { try { return JSON.parse(await fsp.readFile(p, 'utf8')); } catch { return fallback; } };
+  const readReport = id => readJson(path.join(compDir(id), 'report.json'), null);
 
-  // serialize writes per survey so concurrent clicks never clobber each other
+  // serialize writes per comparison so concurrent clicks never clobber each other
   const queues = new Map();
   function withLock(id, fn) {
     const prev = queues.get(id) || Promise.resolve();
@@ -113,56 +106,50 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     await fsp.rename(tmp, p);
   }
 
-  function progress(survey, decisions) {
-    const out = { keep: 0, round: 0, exclude: 0, unclear: 0, undecided: 0, total: 0 };
-    for (const s of survey.sections) for (const it of s.items) {
+  function progress(report, decisions) {
+    const out = { ...Object.fromEntries(DECISIONS.map(d => [d, 0])), undecided: 0, total: 0 };
+    for (const f of report.findings) {
       out.total++;
-      const d = decisions[it.id]?.decision;
+      const d = decisions[f.id]?.decision;
       out[DECISIONS.includes(d) ? d : 'undecided']++;
     }
     return out;
   }
 
   // ---------- API ----------
-  app.get('/api/config', (req, res) => res.json({ root: ROOT, project: PROJECT }));
+  app.get('/api/config', (req, res) => res.json({ root: ROOT, project: PROJECT, decisions: DECISIONS, labels: DECISION_LABELS }));
 
   app.get('/api/pages', (req, res) => {
     res.json(allPages().map(file => ({ file, dc: file.endsWith('.dc.html'), props: file.endsWith('.dc.html') ? readPropsMeta(file) : null })));
   });
 
-  app.get('/api/components', async (req, res) => {
-    const data = await readJson(path.join(ROOT, 'analysis/components/components.json'), null);
-    if (!data) return res.status(404).json({ error: 'Not generated. Run: node tools/components.mjs' });
-    res.json(data);
-  });
-
-  app.get('/api/surveys', async (req, res) => {
-    const ids = fs.existsSync(SURVEYS) ? fs.readdirSync(SURVEYS).filter(d => fs.existsSync(path.join(SURVEYS, d, 'spec.json'))) : [];
+  // Every configured comparison (comparisons/pairs.json), with its report summary when it has one.
+  app.get('/api/comparisons', async (req, res) => {
+    const cfg = await readJson(path.join(comparisonsDir, 'pairs.json'), { pairs: [] });
     const out = [];
-    for (const id of ids.sort()) {
-      const spec = await readJson(path.join(SURVEYS, id, 'spec.json'), {});
-      const survey = await readJson(path.join(SURVEYS, id, 'survey.json'), null);
-      const decisions = await readJson(decisionsPath(id), {});
-      out.push({ id, title: spec.title, preset: spec.preset, description: spec.description || '', generated: !!survey, generatedAt: survey?.generatedAt || null, stats: survey?.stats || null, progress: survey ? progress(survey, decisions) : null });
+    for (const p of cfg.pairs) {
+      const r = await readReport(p.id);
+      const decisions = await readJson(decisionsPath(p.id), {});
+      out.push({
+        id: p.id, label: p.label || p.id, design: p.design, live: p.live,
+        generated: !!r, generatedAt: r?.generatedAt || null, stats: r?.stats || null,
+        liveUrl: r?.live.url || null, progress: r ? progress(r, decisions) : null,
+      });
     }
-    res.json(out);
+    res.json({ base: cfg.base, comparisons: out });
   });
 
-  app.get('/api/surveys/:id', async (req, res) => {
-    const dir = surveyDir(req.params.id);
-    const survey = await readJson(path.join(dir, 'survey.json'), null);
-    if (!survey) return res.status(404).json({ error: `survey "${req.params.id}" not generated. Run: node tools/survey.mjs run ${req.params.id}` });
+  app.get('/api/comparisons/:id', async (req, res) => {
+    const r = await readReport(req.params.id);
+    if (!r) return res.status(404).json({ error: `comparison "${req.params.id}" has no report. Run: node tools/compare.mjs run ${req.params.id}` });
     const decisions = await readJson(decisionsPath(req.params.id), {});
-    const groupEdits = { ...emptyEdits(), ...(await readJson(groupEditsPath(req.params.id), {})) };
-    res.json({ ...survey, decisions, groupEdits, progress: progress(survey, decisions) });
+    res.json({ ...r, decisions, progress: progress(r, decisions) });
   });
 
-  // body: { ids: [...], decision?: 'keep'|'round'|'exclude'|'unclear'|null, note?: string,
-  //         round?: { [itemId]: { to: token, value, css } } (required per id when decision is 'round') }
-  app.put('/api/surveys/:id/decisions', async (req, res) => {
-    const dir = surveyDir(req.params.id);
-    const { ids, decision, note, round } = req.body || {};
-    if (decision === 'round' && ids.some(i => !round?.[i]?.to)) return res.status(400).json({ error: 'round decision needs round[id].to for every id' });
+  // body: { ids: [...], decision?: one of DECISIONS or null (clear), note?: string }
+  app.put('/api/comparisons/:id/decisions', async (req, res) => {
+    compDir(req.params.id);
+    const { ids, decision, note } = req.body || {};
     if (!Array.isArray(ids) || !ids.length) return res.status(400).json({ error: 'ids required' });
     if (decision !== undefined && decision !== null && !DECISIONS.includes(decision)) return res.status(400).json({ error: `decision must be one of ${DECISIONS.join(', ')} or null` });
     const result = await withLock(req.params.id, async () => {
@@ -170,12 +157,10 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
       await fsp.mkdir(path.dirname(p), { recursive: true });
       const all = await readJson(p, {});
       const at = new Date().toISOString();
-      for (const id of ids) {
+      for (const id of ids.map(String)) {
         const cur = { ...(all[id] || {}) };
         if (decision !== undefined) { if (decision === null) delete cur.decision; else cur.decision = decision; }
-        if (decision === 'round') cur.round = { to: String(round[id].to), value: round[id].value ?? null, css: round[id].css ?? null };
-        else if (decision !== undefined) delete cur.round;
-        if (note !== undefined) { if (note) cur.note = String(note); else delete cur.note; }
+        if (note !== undefined) { if (note) cur.note = String(note).slice(0, 4000); else delete cur.note; }
         cur.at = at;
         if (!cur.decision && !cur.note) delete all[id]; else all[id] = cur;
       }
@@ -183,42 +168,36 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
       return Object.fromEntries(ids.map(id => [id, all[id] || null]));
     });
     res.json(result);
+    const r = await readReport(req.params.id);
     broadcast('decision', {
-      survey: req.params.id, title: await surveyTitle(req.params.id), ids, decision: decision === undefined ? undefined : decision,
+      comparison: req.params.id, title: r?.label || req.params.id, ids, decision: decision === undefined ? undefined : decision,
       decisions: result, by: { client: req.get('x-client-id') || null, tab: req.get('x-client-tab') || null, name: cleanName(decodeHeader(req.get('x-client-name'))) || 'Someone' },
     });
   });
 
-  // One survey's export: { json, md } or null when it isn't generated. `h` is the heading level
-  // of the survey title (1 alone, 2 inside the all-surveys export).
+  // One comparison's export: { json, md } or null when it has no report. `h` is the title's heading level.
   async function buildExport(id, h = 1) {
-    const survey = await readJson(path.join(surveyDir(id), 'survey.json'), null);
-    if (!survey) return null;
+    const r = await readReport(id);
+    if (!r) return null;
     const decisions = await readJson(decisionsPath(id), {});
-    const rows = survey.sections.map(s => ({
-      section: s.n, value: s.value, tokens: s.tokens,
-      items: s.items.map(it => ({
-        ref: `S${s.n}.${it.n}`, id: it.id, decision: decisions[it.id]?.decision || null, roundTo: decisions[it.id]?.round?.to || null, roundValue: decisions[it.id]?.round?.value || null, note: decisions[it.id]?.note || null,
-        declared: it.declared, component: it.component, page: survey.captures[it.where.capture]?.label,
-        source: it.source?.line ? `${it.source.file}:${it.source.line}` : it.source?.file, shot: it.shot && `surveys/${survey.id}/${it.shot}`,
-      })),
+    const p = progress(r, decisions);
+    const rows = r.findings.map(f => ({
+      id: f.id, category: f.category, severity: f.severity, text: f.text, section: f.section,
+      decision: decisions[f.id]?.decision || null, note: decisions[f.id]?.note || null,
+      props: f.props.map(x => ({ prop: x.prop, design: x.design, live: x.live })),
+      source: f.design?.where ? `${r.design.page} tpl ${f.design.where.tpl}` : null,
     }));
-    const p = progress(survey, decisions);
-    const json = { id: survey.id, title: survey.title, preset: survey.preset, generatedAt: survey.generatedAt, progress: p, sections: rows };
+    const json = { id: r.id, label: r.label, generatedAt: r.generatedAt, design: { page: r.design.page, props: r.design.props, state: r.design.state }, live: r.live.url, progress: p, findings: rows };
     const H = n => '#'.repeat(h + n);
-    let md = `${H(0)} ${survey.title}\n\nSurvey \`${survey.id}\` (preset \`${survey.preset}\`), generated ${survey.generatedAt}.\n\n`;
-    md += `Keep ${p.keep} · Round ${p.round} · Exclude ${p.exclude} · Unclear 🤷 ${p.unclear} · Undecided ${p.undecided} · Total ${p.total}\n\n`;
-    for (const s of rows) {
-      const counts = DECISIONS.map(d => `${d} ${s.items.filter(i => i.decision === d).length}`).join(', ');
-      md += `${H(1)} S${s.section} · \`${s.value}\`\n\n${s.tokens.length ? `Tokens: ${s.tokens.map(t => `\`${t}\``).join(', ')}. ` : ''}${s.items.length} usages (${counts}).\n\n`;
-      md += `| # | Decision | Declared | Component | Page | Source | Note |\n|---|---|---|---|---|---|---|\n`;
-      for (const it of s.items) md += `| ${it.ref} | ${it.decision === 'round' ? `round → \`${it.roundTo}\`${it.roundValue ? ` (${it.roundValue})` : ''}` : it.decision || '—'} | \`${(it.declared || '').replace(/\|/g, '\\|')}\` | ${it.component || ''} | ${it.page || ''} | ${it.source || ''} | ${(it.note || '').replace(/\|/g, '\\|').replace(/\n/g, ' ')} |\n`;
-      md += '\n';
-    }
+    const esc = s => String(s ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
+    let md = `${H(0)} ${r.label}\n\nDesign \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })} vs live ${r.live.url}, captured ${r.generatedAt}.\n\n`;
+    md += DECISIONS.map(d => `${DECISION_LABELS[d]} ${p[d]}`).join(' · ') + ` · Undecided ${p.undecided} · Total ${p.total}\n\n`;
+    md += `| Decision | Severity | Category | Element | Difference (design → live) | Note |\n|---|---|---|---|---|---|\n`;
+    for (const f of rows) md += `| ${f.decision ? DECISION_LABELS[f.decision] : '—'} | ${f.severity} | ${f.category} | ${esc(f.text)} | ${esc(f.props.map(x => `${x.prop}: ${x.design} → ${x.live}`).join('; '))} | ${esc(f.note)} |\n`;
     return { json, md };
   }
 
-  app.get('/api/surveys/:id/export.:fmt', async (req, res) => {
+  app.get('/api/comparisons/:id/export.:fmt', async (req, res) => {
     const out = await buildExport(req.params.id);
     if (!out) return res.status(404).end();
     if (req.params.fmt === 'json') return res.json(out.json);
@@ -226,42 +205,18 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null } = {})
     res.type('text/markdown').send(out.md);
   });
 
-  // body: { rename?: { group, name } (empty name restores the generated one),
-  //         uncategorize?: [itemId, ...], restore?: [itemId, ...] }
-  app.put('/api/surveys/:id/group-edits', async (req, res) => {
-    surveyDir(req.params.id);
-    const { rename, uncategorize, restore } = req.body || {};
-    const edits = await withLock(req.params.id + ':groups', async () => {
-      const p = groupEditsPath(req.params.id);
-      const e = { ...emptyEdits(), ...(await readJson(p, {})) };
-      if (rename?.group) {
-        const name = String(rename.name || '').replace(/[\u0000-\u001f]/g, '').trim().slice(0, 120);
-        if (name) e.names[String(rename.group)] = name; else delete e.names[String(rename.group)];
-      }
-      const set = new Set(e.uncategorized);
-      for (const i of uncategorize || []) set.add(String(i));
-      for (const i of restore || []) set.delete(String(i));
-      e.uncategorized = [...set];
-      await fsp.mkdir(path.dirname(p), { recursive: true });
-      await writeJsonAtomic(p, e);
-      return e;
-    });
-    res.json(edits);
-    broadcast('group-edits', { survey: req.params.id, edits, by: { client: req.get('x-client-id') || null, tab: req.get('x-client-tab') || null, name: cleanName(decodeHeader(req.get('x-client-name'))) || 'Someone' } });
-  });
-
-  // Every generated survey in one file, downloaded as an attachment.
+  // Every comparison in one file, downloaded as an attachment.
   app.get('/api/export.:fmt', async (req, res) => {
     const fmt = req.params.fmt;
     if (fmt !== 'md' && fmt !== 'json') return res.status(400).end();
-    const ids = fs.existsSync(SURVEYS) ? fs.readdirSync(SURVEYS).filter(d => fs.existsSync(path.join(SURVEYS, d, 'survey.json'))).sort() : [];
-    const all = (await Promise.all(ids.map(id => buildExport(id, 2)))).filter(Boolean);
+    const cfg = await readJson(path.join(comparisonsDir, 'pairs.json'), { pairs: [] });
+    const all = (await Promise.all(cfg.pairs.map(p => buildExport(p.id, 2)))).filter(Boolean);
     const stamp = new Date().toISOString();
-    res.set('content-disposition', `attachment; filename="dsreview-export-${stamp.slice(0, 10)}.${fmt}"`);
-    if (fmt === 'json') return res.json({ exportedAt: stamp, surveys: all.map(x => x.json) });
-    let md = `# Design System Review: all surveys\n\nExported ${stamp}.\n\n`;
-    md += `| Survey | Keep | Round | Exclude | Unclear 🤷 | Undecided | Total |\n|---|---|---|---|---|---|---|\n`;
-    for (const { json: j } of all) md += `| ${j.title} (\`${j.id}\`) | ${j.progress.keep} | ${j.progress.round} | ${j.progress.exclude} | ${j.progress.unclear} | ${j.progress.undecided} | ${j.progress.total} |\n`;
+    res.set('content-disposition', `attachment; filename="design-vs-live-${stamp.slice(0, 10)}.${fmt}"`);
+    if (fmt === 'json') return res.json({ exportedAt: stamp, comparisons: all.map(x => x.json) });
+    let md = `# Design vs live: all comparisons\n\nExported ${stamp}.\n\n`;
+    md += `| Comparison | ${DECISIONS.map(d => DECISION_LABELS[d]).join(' | ')} | Undecided | Total |\n|---|${DECISIONS.map(() => '---|').join('')}---|---|\n`;
+    for (const { json: j } of all) md += `| ${j.label} (\`${j.id}\`) | ${DECISIONS.map(d => j.progress[d]).join(' | ')} | ${j.progress.undecided} | ${j.progress.total} |\n`;
     md += '\n' + all.map(x => x.md).join('\n');
     res.type('text/markdown').send(md);
   });
