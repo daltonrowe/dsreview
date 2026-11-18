@@ -40,7 +40,7 @@ pixels only (no DOM, no CSS): alignment, size, color, type, shape, spacing, miss
       after grouping. Kept in reviews.json; only new or changed findings are explained again
       (--force redoes all). Needs ANTHROPIC_API_KEY (or .env).
 
-  node tools/compare.mjs context <id> [--group gid] [--ids a,b] [--todo]
+  node tools/compare.mjs context <id> [findingId ...] [--group gid] [--todo]
       For writing explanations by hand (e.g. Claude Code subagents): each finding's context (page,
       measurements, its group, other differences on the same element) and its four crops, written to
       screenshots/crops/<id>/ (design/live close-up and context). --todo: only findings without a
@@ -200,14 +200,14 @@ async function main() {
   }
 
   if (cmd === 'context') {
-    const [id] = args;
+    const [id, ...only] = args;
     const rp = path.join(DIR, id || '', 'report.json');
-    if (!id || !fs.existsSync(rp)) throw new Error('context <id>');
+    if (!id || !fs.existsSync(rp)) throw new Error('context <id> [findingId ...]');
     const dir = path.join(DIR, id), r = JSON.parse(fs.readFileSync(rp, 'utf8'));
     const groups = readGroups(dir), reviews = readReviews(dir);
     let list = r.findings;
     if (o.group) { const g = groups.find(x => x.id === o.group); if (!g) throw new Error(`no group ${o.group}. Groups: ${groups.map(x => x.id).join(', ')}`); list = list.filter(f => g.findings.includes(f.id)); }
-    if (o.ids) { const want = new Set(String(o.ids).split(',')); list = list.filter(f => want.has(f.id)); }
+    if (only.length) { const want = new Set(only); list = list.filter(f => want.has(f.id)); }
     if (o.todo) list = list.filter(f => reviews[f.id]?.fingerprint !== fingerprint(f));
     const out = path.join(ROOT, 'screenshots', 'crops', id);
     fs.mkdirSync(out, { recursive: true });

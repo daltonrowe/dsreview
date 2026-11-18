@@ -1,0 +1,242 @@
+{
+ "typography:text@68,30": {
+  "explanation": "The 'Create account' label on the disabled button is lower contrast on live: grey text on a lighter grey (#5a5a5a) fill, so it reads fainter than the design's label.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cc30d4669821",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:text@62,17": {
+  "explanation": "In 'Already have an account? Log in', the 'Log in' link is bold white on live instead of orange (#ff7900), so it no longer reads as a link, and the rest of the line is a lighter grey (#c9c9c9 to #e0e0e0).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f84c7f1c5358",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:icon@69,36": {
+  "explanation": "Not a real colour change: the design's Microsoft button was paired with live's Facebook button. The actual difference is that live has only Google and Facebook, not the other six.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bd4b974b2a3c",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "alignment:icon@56,36:left": {
+  "explanation": "The design's Google button starts at the form's left edge; live's is centred, 164px further right, because there are only two buttons. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8be5ddaf4e97",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "typography:text@19,44": {
+  "explanation": "The 'Better work in half the time.' headline on the marketing panel is set smaller on live, about 3px less in height (31px to 28px).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "38a9a54ca7fb",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:text@56,19": {
+  "explanation": "The EMAIL label is a lighter grey on live (#aaaaaa to #d4d4d4). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1bd308071e18",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:text@57,24": {
+  "explanation": "The PASSWORD label is a lighter grey on live (#aaaaaa to #d3d3d3). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f68761252fe2",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:icon@79,26": {
+  "explanation": "The password show/hide eye icon is lighter on live (#7d7d7d to #aaaaaa). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b1cf8da04b4f",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:panel@68,30": {
+  "explanation": "The disabled Create account button fill is much lighter on live (#5a5a5a) than in the design (#292929), and the button is 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "dc72e766e14b",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "color:text@68,33": {
+  "explanation": "The 'or' divider label is lighter on live (#a4a4a4 to #cdcdcd). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d5f4caa6036b",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "size:panel@68,30": {
+  "explanation": "The Create account button is 52px tall on live versus 46px in the design, 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9b71d54ab40b",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "shape:panel@68,30": {
+  "explanation": "Both the design and live draw the Create account button as a fully rounded pill; the 'square corners' reading is a measurement artifact, so there is no real shape difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3297e7c44a20",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:text@62,36": {
+  "explanation": "This is the Apple button in the design's social row, which has no counterpart on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5352993e6b83",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:text@68,39": {
+  "explanation": "The 'Send me recommendations' label under the social buttons is missing on live; there is no opt-in row at all.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "14cd3ab8f1a0",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:text@68,42": {
+  "explanation": "The reCAPTCHA notice is still on live with the same wording, but it wraps differently (ending 'Privacy Policy and / Terms of Service apply') and sits about 36px lower, below the added terms sentence. Not a missing element.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "00c02a4fa741",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:text@20,48": {
+  "explanation": "The first marketing bullet reads 'Access 74,540,405 creative assets (89,304 added yesterday)' in the design and 'Access 60,869,326 creative assets' on live. Only sample numbers and copy differ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71deecdebac9",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "shape:panel@68,21": {
+  "explanation": "The email input border is lighter on live (#555555 to #7f7f7f), so the outline is more prominent.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eeb398d19a33",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "shape:panel@68,26": {
+  "explanation": "The password input border is lighter on live (#555555 to #7f7f7f), so the outline is more prominent.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d4e4afbf79ad",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "spacing:text@62,17": {
+  "explanation": "The gap below the 'Already have an account? Log in' line is 25px on live versus 21px in the design, 4px more before the EMAIL label.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "88881f678852",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:line@68,28": {
+  "explanation": "This is the top edge of the design's Create account button picked up as a line; there is no real divider.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3e6a2ccfa581",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:line@68,31": {
+  "explanation": "This is the bottom edge of the design's Create account button picked up as a line; there is no real divider.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f9382044a7ca",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@59,36": {
+  "explanation": "The Facebook button position in the design's row has no match on live; live's Facebook button sits centred beside Google instead. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7460f60ac9a0",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@66,36": {
+  "explanation": "The LinkedIn button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "288393198a28",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@73,36": {
+  "explanation": "The LINE button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ee1265bfff4a",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@76,36": {
+  "explanation": "The KakaoTalk button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2a63f82a6abe",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@79,36": {
+  "explanation": "The passkey button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bb85e418908b",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@62,36": {
+  "explanation": "This is the Apple logo inside the Apple sign-in button, which doesn't exist on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "20b272532cdd",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "missing:icon@61,39": {
+  "explanation": "The orange checked checkbox for 'Send me recommendations' is missing on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c18064061cf4",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "extra:live:text@67,41": {
+  "explanation": "Live adds a sentence 'By signing up you accept our Privacy Policy, Terms & Licensing Agreement' above the reCAPTCHA notice, making the legal block 4 lines instead of 2.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "09c59ccf69df",
+  "at": "2026-11-18T13:29:53.149Z"
+ },
+ "extra:live:text@13,48": {
+  "explanation": "Live's first marketing bullet has different figures and no '(added yesterday)' clause. This is sample data versus live data.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f7d0ecefcf8e",
+  "at": "2026-11-18T13:29:53.149Z"
+ }
+}

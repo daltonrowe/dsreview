@@ -83,3 +83,22 @@ export function findingShots(report, f, dir) {
   }
   return out;
 }
+
+// The overview of a group of findings: for each side, the stretch of page holding all of them with
+// every member outlined. Returns [{ name, data }].
+export function groupShots(report, members, dir) {
+  const out = [];
+  for (const side of ['design', 'live']) {
+    const boxes = members.map(f => f[side]?.box).filter(Boolean);
+    if (!boxes.length) continue;
+    const file = `${dir}/${report[side].shot}`;
+    if (!fs.existsSync(file)) continue;
+    const img = loadShot(file);
+    const x = Math.min(...boxes.map(b => b.x)), y = Math.min(...boxes.map(b => b.y));
+    const w = Math.max(...boxes.map(b => b.x + b.w)) - x, h = Math.max(...boxes.map(b => b.y + b.h)) - y;
+    // wide enough to see where it sits; tall groups are cut to a readable 2400px from their top
+    const reg = { x: x - 60, y: y - 60, w: w + 120, h: h + 120 };
+    out.push({ name: `overview-${side}.png`, data: cut(img, reg, { boxes: boxes.map(b => ({ box: b, color: COLORS[side] })), maxH: 2400 }) });
+  }
+  return out;
+}

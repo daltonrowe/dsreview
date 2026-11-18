@@ -6,7 +6,7 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { ROOT, PROJECT, allPages, readPropsMeta } from './lib/render.mjs';
-import { findingShots } from './lib/crops.mjs';
+import { findingShots, groupShots } from './lib/crops.mjs';
 import { zip } from './lib/zip.mjs';
 
 // same fingerprint as tools/lib/review.mjs (kept here so the server doesn't load the SDK)
@@ -264,6 +264,44 @@ export function createApp({ user = 'eezy', pass = 'eezy', dataDir = null, compar
     md += `## Screenshots\n\nMagenta: the design element · blue: the live element · grey dashed: what it's measured against · green: alignment guide.\n\n`;
     md += shots.map(x => `![${x.name}](${x.name})`).join('\n\n') + '\n';
     const body = zip([{ name: `${slug}.md`, data: md }, ...shots]);
+    res.set({ 'content-type': 'application/zip', 'content-disposition': `attachment; filename="${slug}.zip"`, 'cache-control': 'no-store' });
+    res.send(body);
+  });
+
+  // One meta-finding (group) as a zip: a Markdown write-up (the group, its decision state, every member
+  // with its measurements and explanation) and named screenshots: an overview of each side with all
+  // members outlined, and each member's design/live close-ups, numbered as in the write-up.
+  app.get('/api/comparisons/:id/groups/:gid/download', async (req, res) => {
+    const r = await readReport(req.params.id);
+    if (!r) return res.status(404).json({ error: 'no such comparison' });
+    const groups = (await readJson(path.join(compDir(req.params.id), 'groups.json'), null))?.groups || [];
+    const g = groups.find(x => x.id === req.params.gid);
+    if (!g) return res.status(404).json({ error: 'no such group' });
+    const byId = new Map(r.findings.map(f => [f.id, f]));
+    const members = g.findings.map(i => byId.get(i)).filter(Boolean);
+    const decisions = await readJson(decisionsPath(req.params.id), {});
+    const dir = compDir(req.params.id);
+    const slug = `${r.id}-${g.id}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70);
+    const cell = v => String(v ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ');
+    const files = groupShots(r, members, dir).map(x => ({ name: `${slug}-${x.name}`, data: x.data }));
+    const ds = [...new Set(members.map(f => decisions[f.id]?.decision || ''))];
+    let md = `# ${g.title}\n\n**${r.label}**${r.theme ? ` (${r.theme})` : ''} · severity **${g.severity || 'medium'}** · ${members.length} finding${members.length === 1 ? '' : 's'}${g.hint ? ` · _${g.hint}_` : ''}\n\n`;
+    md += `- Design: \`${r.design.page}\` ${JSON.stringify({ props: r.design.props || {}, state: r.design.state || {} })}\n- Live: ${r.live.url}\n- Captured: ${r.generatedAt}\n- Group id: \`${g.id}\`\n`;
+    md += `- Decision: ${ds.length === 1 ? (ds[0] ? `**${DECISION_LABELS[ds[0]]}**` : 'undecided') : 'mixed'}\n\n`;
+    if (g.summary) md += `${g.summary}\n\n`;
+    md += `## Overview\n\nMagenta: design elements · blue: live elements.\n\n${files.map(x => `![${x.name}](${x.name})`).join('\n\n')}\n\n## Findings\n\n`;
+    members.forEach((f, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      const shots = findingShots(r, f, dir).filter(x => !x.name.includes('context')).map(x => ({ name: `${slug}-${n}-${x.name}`, data: x.data }));
+      files.push(...shots);
+      const d = decisions[f.id];
+      md += `### ${n}. ${f.category}: ${f.text}\n\n`;
+      if (f.review?.explanation) md += `${f.review.explanation}${f.review.verdict ? ` _(${f.review.verdict})_` : ''}\n\n`;
+      md += `| Property | Design | Live |\n|---|---|---|\n${f.props.map(p => `| ${cell(p.prop)} | ${cell(p.design)} | ${cell(p.live)} |`).join('\n')}\n\n`;
+      if (d?.decision || d?.note) md += `${d.decision ? `Decision: **${DECISION_LABELS[d.decision]}**` : ''}${d.note ? ` · Note: ${d.note}` : ''}\n\n`;
+      md += shots.map(x => `![${x.name}](${x.name})`).join(' ') + '\n\n';
+    });
+    const body = zip([{ name: `${slug}.md`, data: md }, ...files]);
     res.set({ 'content-type': 'application/zip', 'content-disposition': `attachment; filename="${slug}.zip"`, 'cache-control': 'no-store' });
     res.send(body);
   });

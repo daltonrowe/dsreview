@@ -1,1 +1,1714 @@
-{}
+{
+ "spacing:image@77,3": {
+  "explanation": "The Join Pro pill in the top bar is 5px narrower on live (124px to 119px). Its distance to the hero panel below also grows from 19px to 35px because the hero starts about 16px lower on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "668b63a282d7",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "spacing:text@85,3": {
+  "explanation": "The top-right button label ('Log In' in the design, 'Sign Up' on live) has 51px of space below it before the hero panel instead of 34px. The extra 17px is the hero sitting lower on live, plus the label sitting 1px higher.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c33f317174c3",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "spacing:text@47,15": {
+  "explanation": "The hero subtitle ('The world's best visual content marketplace...') sits 6px lower inside the hero panel on live (150px to 156px from the panel top). That is slightly more than the headline moves, so headline-to-subtitle spacing opens up a little.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "babe40a0c3ae",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "spacing:text@47,12": {
+  "explanation": "The hero headline 'Beautiful Visuals for Everyone.' sits 3px lower inside the hero panel on live (76px to 79px from the top) and has 3px more space before the subtitle (11px to 14px).",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a2d6d0688a34",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "size:grid@47,76": {
+  "explanation": "The photo grid under the category tabs starts 20px lower on live and runs 220px longer (ends at y=2130 vs 1910). Its three columns also end ragged, up to 70px apart, where the design's end level. Live shows real photos of varying heights where the design has coloured gradient placeholders, which explains the uneven ends.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bcaaa09ac721",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "spacing:grid@47,76": {
+  "explanation": "Below the photo grid, the gap to the Featured Photographers section grows from 101px to 131px on live. This follows from the longer grid and its taller bottom fade.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e363bd290c16",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "missing:icon@2,23": {
+  "explanation": "The design's left rail has a bell (Alerts) icon below the downloads icon; live's rail stops at the downloads icon with no bell.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "754b71451329",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "size:panel@47,172": {
+  "explanation": "The whole page is 349px longer on live (5504px to 5853px). It adds up from the longer photo grid, the taller sections and chip rows, and the extra debug line under the footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ad130dab0a23",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "extra:live:text@10,365": {
+  "explanation": "Live shows a grey 'Current Split Test:' line at the very bottom of the page, under the footer, that the design does not have. It looks like leftover debug output, not part of the design.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c3d0b3bdeb39",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "typography:text@85,3": {
+  "explanation": "The top-right button label reads 'Sign Up' on live where the design says 'Log In', so the label is 12px wider (40px to 52px). This is a copy change, not a type-size change.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f0cd692ba660",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "size:image@77,3": {
+  "explanation": "The Join Pro pill is 5px narrower on live (124px to 119px), with the same gradient and height. The gap below it to the hero also grows by about 16px.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3d9c16cf98fe",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "size:panel@85,3": {
+  "explanation": "The top-right button is 7px wider on live (110px to 117px) because its label is 'Sign Up' rather than 'Log In'. Dark pill with a thin outline in both.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "741e09801617",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "alignment:text@70,3:top": {
+  "explanation": "This is the small chevron next to 'Explore' in the top bar. It sits 3px away from the label's top line on live, which is a tiny baseline shift in the nav row, not a styling change.",
+  "verdict": "unsure",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "041f93db5c58",
+  "at": "2026-11-18T13:31:51.709Z"
+ },
+ "typography:text@22,20": {
+  "explanation": "The scope button label in the hero search field reads 'All Images' in the design and 'Vectors' on live, and the text is 3px shorter (16px to 13px line height). Part of this is the different default scope, but the label does look lighter on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f22bb5b61250",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "color:icon@30,20": {
+  "explanation": "The magnifier icon in the search field is much brighter on live (#7e7e7e to #c9c9c9) and sits 17px further left (206px to 189px from the field's edge). It reads as a stronger, more prominent icon than the design's muted grey.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "034526845445",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "spacing:icon@30,20": {
+  "explanation": "The magnifier icon in the search field sits 17px closer to the field's left edge on live (206px to 189px), because the scope button on its left is narrower. It is also much brighter (#7e7e7e to #c9c9c9).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "56dbce5b9d93",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "color:text@26,20": {
+  "explanation": "This is the dropdown chevron beside the scope label. On live it is a darker grey (#efefef to #848484), so it recedes next to the bold label, and it sits 19px further left because the 'Vectors' label is shorter than 'All Images'.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5072ec1c658c",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "spacing:text@26,20": {
+  "explanation": "The scope dropdown chevron sits 19px further left on live (150px to 131px from the field edge) since 'Vectors' is a shorter label than 'All Images'. It is also darker (#efefef to #848484).",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4906d2ee2bb3",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "typography:text@26,20": {
+  "explanation": "The scope chevron looks heavier in the design (39% ink) than on live (47% measured), but it is a 12×6 glyph and the live one is a thinner, darker grey chevron. Treat it as part of the chevron colour change, not a weight problem.",
+  "verdict": "unsure",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "01a98bd6a76e",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "color:icon@77,20": {
+  "explanation": "The visual-search (camera frame) icon at the right end of the search field is brighter on live (#aaaaaa to #d4d4d4) and 5px further left.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1fdb3fbc65ab",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "spacing:icon@77,20": {
+  "explanation": "The visual-search icon at the right end of the search field sits 5px further left on live (958px to 953px from the field edge). It is also brighter (#aaaaaa to #d4d4d4).",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7061491dfaae",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "shape:panel@47,20": {
+  "explanation": "The hero search field's 1px outline is lighter on live (#4b4b4b to #5e5e5e), so the field edge reads a little crisper. Size and pill shape are the same.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6f8478f5483e",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "missing:icon@19,20": {
+  "explanation": "The design's four-square 'All Images' icon in the scope button has no match on live because live's scope is 'Vectors' with a different pen-tool icon. This is a content difference in the default scope.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "25c8ea4b0002",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "missing:text@35,20": {
+  "explanation": "The design's placeholder 'Search all images...' has no match because live's placeholder reads 'Search vectors...'. The text and the scope differ, not the styling.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d44936615fb",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:icon@19,21": {
+  "explanation": "Live's scope button shows a 'Vectors' pen-tool icon (18×19) where the design has the 'All Images' grid icon. This is a default-scope content difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "520d98d3bca4",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:text@34,21": {
+  "explanation": "Live's placeholder 'Search vectors...' (121px wide) corresponds to the design's 'Search all images...'. It is the same field with different default copy, and it starts 14px further left.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f96f2d5565f4",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "alignment:text@27,30:left": {
+  "explanation": "This is the 'Vectors' category tab label. It is compared against the scope chevron in the search field above, which has no relationship to it, so the 19px 'off by' is a coincidental alignment guide, not a real misalignment.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "97940d8dce28",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "missing:line@16,31": {
+  "explanation": "The white underline under the active 'Trending Today' tab is found in the design but not as a separate line on live, where it merges with the full-width row rule beside it. The underline is still visible on live.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a128ed635c06",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:line@47,33": {
+  "explanation": "The full-width rule under the category tabs on live (1316px wide) is joined with the active tab's underline, so they are detected as one line. The design's rule and underline are detected separately, so the pairing differs but both show the tab row and underline.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "91a6dd514606",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "size:shape@20,115": {
+  "explanation": "A tile at the bottom of the photo grid is 58px taller on live (150px to 208px), because live shows a real mint illustration (mountain badge) where the design has a purple gradient placeholder. Sample content only, aside from the grid being longer.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "26109e1f05fb",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "missing:panel@47,99": {
+  "explanation": "A 425×283 gradient placeholder tile in the middle column of the grid has no counterpart on live; live shows a real yellow pattern photo (425×297, with a 'Free' badge) in that column slot instead, at a slightly different height. Sample content difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6de202b83423",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:panel@47,102": {
+  "explanation": "Live's middle-column tile is a real yellow pattern photo with a 'Free' badge, 425×297, where the design has a 425×283 gradient placeholder. This is sample content, not a styling change.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "89baa8b64260",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:shape@75,132": {
+  "explanation": "At the bottom of the live photo grid a tile's lower part (425×50) appears as a light-to-dark fade, part of the grid's bottom fade overlay. Live's fade is taller than the design's and it covers a real photo, so it is picked up as an extra shape.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "55f6f7e1c0bd",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "extra:live:text@48,133": {
+  "explanation": "This thin 410×7 strip is the bottom edge of the fade on the last tile row of the live photo grid. It is not text, and the design's fade ends in a different place.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c141e69c4ed7",
+  "at": "2026-11-18T13:32:24.408Z"
+ },
+ "typography:text@47,213": {
+  "explanation": "The 'Creator Community' section heading is 4px smaller on live (46px to 42px line height) and off-white (#eeeeee) instead of pure white. The space between it and the card row below grows from 26px to 53px.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "84f239d1fae2",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "typography:text@47,245": {
+  "explanation": "The 'Explore More Features' heading is 4px smaller on live (45px to 41px line height) and off-white instead of pure white. The gap down to the first chip row grows from 34px to 60px.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3e8c34248946",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "typography:text@47,269": {
+  "explanation": "The 'Frequently Asked Questions' heading is 4px smaller on live (46px to 42px) and #eeeeee instead of white, so it looks slightly lighter and narrower than in the design.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "54b202ebe95d",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "typography:text@47,129": {
+  "explanation": "The 'Featured Photographers' heading is 3px smaller on live (45px to 42px line height) and #eeeeee instead of white. It sits 20px further right, with 26px more space before the photographer cards (26px to 52px).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7e322aa60bcb",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "spacing:text@47,129": {
+  "explanation": "Under the 'Featured Photographers' heading, the gap to the photographer cards doubles from 26px to 52px on live. The heading itself is also 3px smaller and off-white.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8f38de92b828",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "spacing:text@47,213": {
+  "explanation": "Under the 'Creator Community' heading, the gap to the card row grows from 26px to 53px on live, pushing the whole section down. The heading is also 4px smaller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7af8d820a104",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "spacing:text@47,245": {
+  "explanation": "Under the 'Explore More Features' heading, the gap to the first chip row grows from 34px to 60px on live. The heading itself is 4px smaller and #eeeeee.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9acf534979d8",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "size:panel@47,142": {
+  "explanation": "The Featured Photographers section is 23px taller on live (535px to 558px) because of the extra space under its heading. Its heavier outline and darker fill in the design are also much less visible on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "732c712df08f",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "size:panel@47,223": {
+  "explanation": "The Creator Community section is 23px taller on live (435px to 458px) because of the larger gap under its heading. The distance to the heading below ('Explore More Features') shrinks from 105px to 84px.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a3fb2ebbfb10",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "spacing:panel@47,223": {
+  "explanation": "The Creator Community section ends 21px closer to the 'Explore More Features' heading on live (105px to 84px gap) even though the section itself grows 23px taller. The section boundary and heading do not move together.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cfbcfdd4bab6",
+  "at": "2026-11-18T13:32:56.611Z"
+ },
+ "shape:panel@47,142": {
+  "explanation": "The Featured Photographers section has a clearly visible dashed outline and a darker fill than the page in the design. On live the outline is much fainter and the fill matches the page, so the section edge nearly disappears.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b4b99fc6c41d",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "shape:panel@47,167": {
+  "explanation": "The Social Proof placeholder band has a clear dashed outline and a darker fill in the design. On live the outline is much fainter and the fill is the page colour. It is a placeholder, so this may not matter.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "060e9b933409",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "shape:panel@47,223": {
+  "explanation": "The Creator Community section's dashed border and darker fill are strong in the design; on live the border is much fainter and the fill blends with the page.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "efa31d76b338",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "typography:text@47,167": {
+  "explanation": "The 'Social Proof' placeholder label is smaller on live (31px to 23px line height, about 25% smaller), so the label reads as a quiet caption instead of a large title.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "adb81cbee46c",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "typography:text@47,179": {
+  "explanation": "The 'Join Pro' placeholder label is smaller on live (31px to 23px line height). Placeholder text, so it is mostly a stand-in for future content.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3f01ca8727e8",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "typography:text@21,194": {
+  "explanation": "The 'For Individuals' placeholder label is smaller on live (31px to 23px line height) and is a bit narrower than in the design.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9c044b6a5a3b",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "typography:text@74,194": {
+  "explanation": "The 'For Education' placeholder label is smaller on live (31px to 23px line height).",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bf59c9b3cb01",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "typography:text@47,194": {
+  "explanation": "The 'For Teams' placeholder label is smaller on live (30px to 23px line height).",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "386263057a6f",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "spacing:text@47,167": {
+  "explanation": "The 'Social Proof' label sits 26px further right on live in its band (551px to 577px from the left edge), because the text is much narrower. It stays centred in the band.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "17032c82ca95",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "spacing:text@47,179": {
+  "explanation": "The 'Join Pro' placeholder label is smaller on live, so it sits 17px further right and has 54px of space below it instead of 31px before the cards. The label is still centred.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d971c024e688",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "spacing:text@21,194": {
+  "explanation": "The 'For Individuals' label sits about 31px further from its card's left edge on live (74px to 105px), because the text is smaller. It is still centred in the card, but 4px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1f51bbfc2dd8",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "spacing:text@74,194": {
+  "explanation": "The 'For Education' label sits 29px further from its card's left edge on live (81px to 110px) and 4px lower, because the text is smaller. It stays centred in its card.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5f3be287ed61",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "spacing:text@47,194": {
+  "explanation": "The 'For Teams' label sits 22px further from its card's left edge on live (112px to 134px) and 3px lower because the text is smaller. It stays centred.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e2bfbfe3ab9e",
+  "at": "2026-11-18T13:32:56.612Z"
+ },
+ "shape:panel@21,250": {
+  "explanation": "The 'AI Reverse Image Search' chip is a solid grey pill in the design; on live it has no fill and only a thin 1px #363636 outline, so it looks hollow.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7d044c4cf426",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@21,250": {
+  "explanation": "The fill of the 'AI Reverse Image Search' chip changes from raised grey (#2e2e2e) to the page background (#171717) on live, so the chip no longer stands off the section background. It is also 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3b7b27f5d52b",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@51,250": {
+  "explanation": "The 'QR Code Generator' chip loses its solid grey pill look on live and becomes an outlined pill with a 1px #363636 border.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c0cb54d0acd4",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@51,250": {
+  "explanation": "The 'QR Code Generator' chip's fill goes from #2e2e2e in the design to the page background (#171717) on live, so it looks sunken rather than raised.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f42b7b29d7d1",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@37,250": {
+  "explanation": "The 'AI Background Remover' chip is a filled grey pill in the design and an outline-only pill (1px #363636 border) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "30926185e121",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@37,250": {
+  "explanation": "The 'AI Background Remover' chip loses its lighter grey fill (#2e2e2e to #171717) on live, matching the section background.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71e4eed715ac",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@74,250": {
+  "explanation": "The 'Popular Vector Searches' chip, the last in the first row, is filled grey in the design but outline-only (1px #363636 border) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "31597948c197",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@74,250": {
+  "explanation": "The 'Popular Vector Searches' chip's fill goes from #2e2e2e to #171717 on live, leaving only its outline to define it.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3409079c8ff7",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@62,250": {
+  "explanation": "The short 'AI Studio' chip is a filled grey pill in the design and an unfilled outlined pill (1px #363636) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3bb127e6be32",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@62,250": {
+  "explanation": "The 'AI Studio' chip's fill changes from #2e2e2e to the background colour #171717 on live, so it reads as an outline instead of a button.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ff9572f45d04",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@42,254": {
+  "explanation": "The 'Popular Video Searches' chip switches from a solid grey fill with no border to a transparent pill with a 1px #363636 outline on live. It also sits in a different place because live wraps the chips differently.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "19469d027fa5",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@42,254": {
+  "explanation": "The 'Popular Video Searches' chip is #2e2e2e in the design and #171717 on live, the same colour as the section behind it.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "862ed70a5940",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@55,254": {
+  "explanation": "The 'Developer API' chip changes from a filled grey pill to a transparent pill with a 1px #363636 border on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "436d309b2e72",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@55,254": {
+  "explanation": "The 'Developer API' chip's fill goes from #2e2e2e to #171717 on live, and the chip is 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4ffc17323221",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@68,254": {
+  "explanation": "The 'Vecteezy for Education' chip is a filled pill in the design and an outline-only pill (1px #363636) on live. On live it also moves to the middle of the second row, which alters its right edge.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5c82156726b8",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@68,254": {
+  "explanation": "The 'Vecteezy for Education' chip loses its #2e2e2e fill on live (now #171717). On live it is also 6px taller and sits further left on the row.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "883f7ce81e7a",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@27,254": {
+  "explanation": "The 'Popular Photo Searches' chip, first in the second row, is a filled grey pill in the design and an outline-only pill (1px #363636) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "90fd204e2425",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@27,254": {
+  "explanation": "The 'Popular Photo Searches' chip's fill goes from #2e2e2e to #171717 on live. The chip also starts at a different x because the rows wrap 5/5/3 instead of 5/4/4.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f53f8beb1b3b",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@68,257": {
+  "explanation": "The 'Read our Blog' chip, last on the third row in the design, is a filled grey pill there and an outlined transparent pill (1px #363636) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5c1d107bca45",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@68,257": {
+  "explanation": "The 'Read our Blog' chip's fill changes from #2e2e2e to #171717 on live, so it no longer contrasts with the page.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "76032985051b",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@57,257": {
+  "explanation": "The 'Compare licenses' chip is filled grey in the design and outline-only (1px #363636 border) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cb262fa23a92",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@57,257": {
+  "explanation": "The 'Compare licenses' chip is #2e2e2e in the design but #171717 on live, the same as its surroundings.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "afd6a6f8102a",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "shape:panel@44,257": {
+  "explanation": "The 'Start a free account' chip goes from a solid grey pill to a transparent outlined pill (1px #363636) on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6b0d40e7b055",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "color:panel@44,257": {
+  "explanation": "The 'Start a free account' chip's fill goes from #2e2e2e to the page's #171717 on live, so only its thin border remains.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b86a37a5d07e",
+  "at": "2026-11-18T13:33:26.104Z"
+ },
+ "size:panel@21,250": {
+  "explanation": "The 'AI Reverse Image Search' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller. The first chip in the row, so its top edge also defines where the whole chip block starts.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eaf6f1fdca20",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@51,250": {
+  "explanation": "The 'QR Code Generator' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "90cd0a94d1d9",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@37,250": {
+  "explanation": "The 'AI Background Remover' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "47db00772f89",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@74,250": {
+  "explanation": "The 'Popular Vector Searches' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller. Last chip in the first row, in the same position on both sides.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0d699f5f300b",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@62,250": {
+  "explanation": "The 'AI Studio' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller. The shortest chip, so the 6px height gain is most visible against its width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5d13d2ab9d12",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@42,254": {
+  "explanation": "The 'Popular Video Searches' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller. On live it starts a row of five chips instead of the design's four.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e5013e4e54e4",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@55,254": {
+  "explanation": "The 'Developer API' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2d1d1b7819f3",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@68,254": {
+  "explanation": "The 'Vecteezy for Education' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7489bf591aec",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@27,254": {
+  "explanation": "The 'Popular Photo Searches' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9f82240bf539",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@68,257": {
+  "explanation": "The 'Read our Blog' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3455e9d0f849",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@57,257": {
+  "explanation": "The 'Compare licenses' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e430e69e1943",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@44,257": {
+  "explanation": "The 'Start a free account' chip is 6px taller on live (52px to 58px) with the same text size and pill shape, so each chip row is slightly taller. On live it starts the last row.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6738e6ca5ed4",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "alignment:panel@47,194:left": {
+  "explanation": "This is the middle 'For Teams' placeholder card at the top of the Join Pro section. It is compared against the left edge of the 'Popular Video Searches' chip far below that happens to share x=555 in the design. The pairing is a coincidental alignment guide, so the 127px 'off by' on live is not a real misalignment.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "802c1b9d69c3",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "alignment:panel@27,254:left": {
+  "explanation": "The 'Popular Photo Searches' chip starts the second chip row. In the design its left edge lines up with the FAQ rows (x=308), while on live the chips wrap 5/5/3 so it starts 126px further left, outside the FAQ column. The 192px 'off by' mixes this with the FAQ rows being narrower, so only the chip wrapping is a real difference.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "28753b94c7b3",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "alignment:panel@27,254:right": {
+  "explanation": "The right edge of the 'Popular Photo Searches' chip no longer lines up with the text it was aligned to in the design, because the chip rows wrap differently on live. The 184px 'off by' follows from the wrapping and the narrower FAQ column.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "250d5434897d",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "alignment:panel@68,254:right": {
+  "explanation": "The right edge of the 'Vecteezy for Education' chip lined up with the right edge of the FAQ rows in the design. On live the chip moves left and the FAQ rows are narrower, so that alignment is lost (60px off). It follows from the chip wrapping and the FAQ width, not from the chip itself.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5e4450af9fb8",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "alignment:text@27,254:left": {
+  "explanation": "The label of the 'Popular Photo Searches' chip lined up with the first FAQ question text in the design. On live the chip row wraps differently and the FAQ rows are narrower, so the label is 187px left of that column. A coincidental guide from the design.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3784794e9d95",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "missing:panel@47,251": {
+  "explanation": "The Explore More Features section container in the design (1317×400 with a visible dashed outline) is not paired on live, where the container's outline is much fainter. Live's section is the same and just shifted down.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b3853092c90f",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "missing:panel@29,257": {
+  "explanation": "The 'Vecteezy for Enterprises' chip is the first on the third row in the design. On live it is the last chip of the second row, so the third row starts with 'Start a free account'. This is the 5/5/3 vs 5/4/4 wrapping difference.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "32b7ca45bf3e",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "missing:text@29,257": {
+  "explanation": "The 'Vecteezy for Enterprises' label is at the start of the third chip row in the design but ends the second row on live, because the chips wrap 5/5/3 instead of 5/4/4.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "30c852ae8b48",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "extra:live:panel@47,270": {
+  "explanation": "Live's Explore More Features container (1316×400) has no pair in the design's detection, which lists it as a different element. It is the same section, 26px lower and with a fainter outline.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f9a640b50bc4",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "extra:live:panel@76,273": {
+  "explanation": "On live the 'Vecteezy for Enterprises' chip is the fifth chip on the second row, on the right side. The design has it first on the third row. The chip is 6px taller (58px) and outlined.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8e3778d01669",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "extra:live:text@76,273": {
+  "explanation": "The 'Vecteezy for Enterprises' label sits at the end of the second chip row on live. The design has it at the start of the third row, so the chip rows wrap 5/5/3 instead of 5/4/4.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "14a3d2e786c8",
+  "at": "2026-11-18T13:33:57.122Z"
+ },
+ "size:panel@47,274": {
+  "explanation": "The first FAQ row ('What is Vecteezy used for?') is 132px narrower on live (900px to 768px) and gets a 1px light-grey border. It is still a white rounded card with the chevron at the right.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "dd5af4eb7364",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "size:panel@47,279": {
+  "explanation": "The second FAQ row ('Is Vecteezy really free?') is 132px narrower on live (900px to 768px) and has a thin light-grey border the design does not have.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "80d21041032f",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "size:panel@47,283": {
+  "explanation": "The third FAQ row ('What does royalty free mean?') is 132px narrower on live (900px to 768px), with a 1px light border. The row is the same height.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "20ac003ceed7",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "size:panel@47,288": {
+  "explanation": "The fourth FAQ row ('Can I use content from Vecteezy for commercial use?') is 132px narrower on live (900px to 768px), with a new 1px light border.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "14af44ec401c",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "size:panel@47,292": {
+  "explanation": "The last FAQ row ('How can I become a Vecteezy contributor?') is 132px narrower on live (900px to 768px) and gains a 1px light border.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b6c586a12858",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "spacing:panel@47,283": {
+  "explanation": "The 'What does royalty free mean?' FAQ row is 132px narrower on live, and the row spacing stays at about 16px. The measured 'gap below' of 90px comes from the narrower live row being matched to a different row, not from a real spacing change.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bcd788517cd7",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "spacing:panel@47,288": {
+  "explanation": "The 'Can I use content...' FAQ row is matched to a live row beside it, which gives a meaningless gap of -132px. The real change is that live's rows are 132px narrower and have a light border.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "09ade1ec1001",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "spacing:text@34,288": {
+  "explanation": "This is the question text of the fourth FAQ row, 'Can I use content from Vecteezy for commercial use?'. The -38px 'gap below' is a pairing artifact from the narrower live rows. The text colour does change from navy #0e2332 to near-black #171717.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4954904e7d05",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "spacing:panel@47,292": {
+  "explanation": "The last FAQ row ('How can I become a Vecteezy contributor?') shows a gap of 209px to the text below instead of 132px. The real difference is the narrower row and the added space under the FAQ block on live, so treat the number as secondary.",
+  "verdict": "unsure",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2165d7def730",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "alignment:text@28,274:right": {
+  "explanation": "The first FAQ question ('What is Vecteezy used for?') is compared with the footer link text beneath it; its right edge sits 184px from the footer link edge on live. The FAQ text is aligned to the card's left padding, and live's card is narrower, so this guide is not meaningful. The text colour does shift from navy #0e2332 to near-black #171717.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2ba51243d820",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "shape:panel@47,274": {
+  "explanation": "The first FAQ row ('What is Vecteezy used for?') has no border in the design and a 1px light-grey (#e0e0e0) border on live. The row is also narrower.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2eff2f7255f6",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "shape:panel@47,279": {
+  "explanation": "The 'Is Vecteezy really free?' FAQ card has no border in the design and a thin light-grey border on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6c50acf108ed",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "shape:panel@47,283": {
+  "explanation": "The 'What does royalty free mean?' FAQ card gets a 1px #e0e0e0 border on live where the design has none.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cbab2710a5af",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "shape:panel@47,288": {
+  "explanation": "The 'Can I use content from Vecteezy for commercial use?' FAQ card gets a 1px light border on live; the design has none. Its width also shrinks by 132px.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3909039d205d",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "shape:panel@47,292": {
+  "explanation": "The last FAQ card ('How can I become a Vecteezy contributor?') gains a 1px #e0e0e0 border on live; the design has none.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "802cd535f3b3",
+  "at": "2026-11-18T13:34:21.776Z"
+ },
+ "color:text@47,129": {
+  "explanation": "The 'Featured Photographers' heading is off-white (#eeeeee) on live instead of pure white, and 3px shorter. Next to the white design it reads slightly dimmer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "650a37935dca",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@47,213": {
+  "explanation": "The 'Creator Community' heading is #eeeeee on live instead of pure white (#ffffff), and 4px smaller.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bc72628b4b0c",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@47,245": {
+  "explanation": "The 'Explore More Features' heading is #eeeeee on live instead of white, and 4px smaller. The change is subtle on the dark background.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ef201aaf41cc",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@47,269": {
+  "explanation": "The 'Frequently Asked Questions' heading is off-white (#eeeeee) on live instead of white, and 4px smaller.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2bc4d57970bd",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@28,274": {
+  "explanation": "The question 'What is Vecteezy used for?' is neutral near-black (#171717) on live; the design uses a blue-tinted navy (#0e2332). It is barely noticeable on the white card.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4d0476a79980",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@73,274": {
+  "explanation": "The chevron at the right of the 'What is Vecteezy used for?' row goes from a blue-tinted #2e404d to neutral #353535 on live. The icon shape and position are the same.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a8315ac6320",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@27,279": {
+  "explanation": "The question 'Is Vecteezy really free?' is #171717 on live instead of the design's navy-tinted #0e2332, a barely visible shift.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "41566ebaa87f",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@73,279": {
+  "explanation": "The chevron on the 'Is Vecteezy really free?' row changes from #2e404d to a neutral #353535 on live. Same shape and position.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a18394f3bacf",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@28,283": {
+  "explanation": "The question 'What does royalty free mean?' is neutral #171717 on live, where the design has a navy-tinted #0e2332.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d93d87c001af",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@73,283": {
+  "explanation": "The chevron on the 'What does royalty free mean?' row changes from #2e404d to neutral #353535 on live, with no change in shape or position.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7418fd6db993",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@34,288": {
+  "explanation": "The question 'Can I use content from Vecteezy for commercial use?' is #171717 on live instead of the design's navy-tinted #0e2332. The -38px gap measurement is a row-pairing artifact and can be ignored.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3dfff49b577f",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@73,288": {
+  "explanation": "The chevron on the 'Can I use content...' row goes from #2e404d to #353535 on live. It is the same shape in the same place.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1d6ed7e21019",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@31,292": {
+  "explanation": "The question 'How can I become a Vecteezy contributor?' is neutral #171717 on live; the design has the navy-tinted #0e2332.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "35bbc9696b48",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@73,292": {
+  "explanation": "The chevron on the 'How can I become a Vecteezy contributor?' row goes from #334552 to neutral #353535 on live. The shape and position are the same.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f4be5100d62a",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@11,312": {
+  "explanation": "The footer link 'Pro for Individuals' is neutral grey #909090 on live instead of the design's blue-tinted grey #9aa0a6, so it is a little darker and less blue.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0356d0385003",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@31,312": {
+  "explanation": "The footer link 'Stock Photos' is #909090 on live instead of #9aa0a6, slightly darker and without the blue tint.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "636493fae2fd",
+  "at": "2026-11-18T13:34:51.023Z"
+ },
+ "color:text@71,312": {
+  "explanation": "The footer link 'English' at the top of the Languages column is neutral #909090 on live, against the design's blue-tinted #9aa0a6. A slightly darker, greyer link.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "64f721a363bc",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@50,312": {
+  "explanation": "The 'FAQs' link at the top of the Learn More footer column is #909090 on live where the design has #9aa0a6, so it loses the faint blue tint.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cd965ada7614",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@11,313": {
+  "explanation": "The footer link 'Pro for Business' changes from the design's bluish grey #9aa0a6 to neutral #909090 on live.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bce73dd5afa9",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@31,313": {
+  "explanation": "The 'Vector Graphics' footer link is neutral grey #909090 on live instead of #9aa0a6, a barely visible darkening.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1bd2e1c8f72b",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@71,313": {
+  "explanation": "The 'Español' language link in the footer is #909090 on live instead of #9aa0a6, slightly darker.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1335ee7f29a4",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@52,313": {
+  "explanation": "The 'Sell your content' footer link goes from #9aa0a6 to neutral #909090 on live.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "861611831f21",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@11,315": {
+  "explanation": "The 'Pro for Enterprises' footer link (next to its NEW badge) is #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "654f61673ea9",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@31,315": {
+  "explanation": "The 'Video Footage' footer link is #909090 on live where the design uses #9aa0a6, slightly darker and less blue. Its right edge lines up differently with the FAQ column above, but that is only a guide coincidence.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aad995ee585a",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@72,315": {
+  "explanation": "The 'Português' footer link is neutral grey #909090 on live instead of the blue-tinted #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "46c5f75ec999",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@52,315": {
+  "explanation": "The 'Affiliate program' footer link is #909090 on live where the design has #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c1ff25253428",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@71,317": {
+  "explanation": "The 'Deutsch' language link in the footer is #909090 on live instead of #9aa0a6, a slight shift to neutral grey.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "169c4233bc3c",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@31,317": {
+  "explanation": "The 'Motion Graphics' footer link (next to its NEW badge) is #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d3c068a5b328",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@10,317": {
+  "explanation": "The 'For Teachers' footer link is #909090 on live instead of #9aa0a6, slightly less blue.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5bfa40a03f6f",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@71,318": {
+  "explanation": "The 'Français' language link in the footer shifts from #9aa0a6 to neutral #909090 on live.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "663227ed10d7",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@10,318": {
+  "explanation": "The 'For Schools' footer link is neutral #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "de639515514c",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@32,318": {
+  "explanation": "The 'Editable Templates' footer link is #909090 on live instead of #9aa0a6, a small neutral shift.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "522c2ac2209c",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@51,318": {
+  "explanation": "The 'About Us' footer link is #909090 on live where the design has #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "50b0bc21dc89",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@72,320": {
+  "explanation": "The 'Nederlands' language link in the footer is neutral #909090 on live instead of blue-tinted #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f9c42ddb52cf",
+  "at": "2026-11-18T13:35:44.676Z"
+ },
+ "color:text@11,320": {
+  "explanation": "The 'Template Editor' footer link is #909090 on live instead of #9aa0a6, a barely visible shift.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4b5951f80fc2",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@29,320": {
+  "explanation": "The 'SVGs' footer link is neutral grey #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ff1da091beee",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@50,320": {
+  "explanation": "The 'Our Blog' footer link changes from #9aa0a6 to #909090 on live.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c871212b27a8",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@71,322": {
+  "explanation": "The 'Svenska' language link in the footer is #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6bb7e05b8143",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@9,322": {
+  "explanation": "The 'AI Studio' footer link (before its NEW badge) is #909090 on live instead of #9aa0a6, slightly darker and neutral.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d562ede7c88e",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@53,322": {
+  "explanation": "The 'License Agreement' footer link is neutral #909090 on live, against the design's blue-tinted #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e3a79f74955e",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@29,322": {
+  "explanation": "The 'PNGs' footer link is #909090 on live where the design has #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1ab3cfbc4a59",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@71,323": {
+  "explanation": "The 'Italiano' language link is a little darker on live (#8b8b8b) than the other footer links, versus #9aa0a6 in the design. It is the last language link on live, since 'More Languages' is gone.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "38bfebf9aca8",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@29,323": {
+  "explanation": "The 'PSDs' footer link is #909090 on live instead of #9aa0a6, a slight neutral shift.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f47a6a1e48cf",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@50,323": {
+  "explanation": "The 'DMCA' footer link is neutral grey #909090 on live instead of #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1793d10eccd4",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@12,324": {
+  "explanation": "The 'AI Reverse Image Search' footer link is #909090 on live instead of the design's #9aa0a6, slightly darker.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5fd26e821404",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@31,325": {
+  "explanation": "The 'Editorial Images' footer link (before its NEW badge) is #909090 on live instead of #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "abd2bef0a27a",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@51,325": {
+  "explanation": "The 'Contact Us' footer link, the last in Learn More, is #909090 on live where the design uses #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5f54f0aeb63b",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@12,325": {
+  "explanation": "The 'AI Background Removal' footer link is neutral grey #909090 on live instead of #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "44c2db1c9bda",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@11,327": {
+  "explanation": "The 'QR Code Generator' footer link is #909090 on live instead of the design's #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "936be2f70303",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@32,327": {
+  "explanation": "The 'Creative Bundles' footer link, the last in Content, shifts from #9aa0a6 to #909090 on live. Its right edge is 22px off the icon it was compared to, which is only a guide coincidence.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d4b557958d1a",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@10,329": {
+  "explanation": "The 'Developer API' footer link is #909090 on live instead of #9aa0a6, slightly darker and neutral.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ad2daeb57c64",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@10,330": {
+  "explanation": "The 'Data Licensing' footer link is #909090 on live instead of #9aa0a6. The gap from this last link to the Vecteezy logo row below it also shrinks from 83px to 64px on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4d4ff6486933",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@56,337": {
+  "explanation": "The copyright line '© 2026 Eezy LLC All rights reserved' in the footer bottom row is #909090 on live instead of #9aa0a6. The gap to the next legal link also grows by 7px (32px to 39px).",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "121964bd08fe",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@77,337": {
+  "explanation": "The 'Privacy Policy' link in the footer bottom row is #909090 on live instead of #9aa0a6, and its gap to the next item grows by 6px (28px to 34px).",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "908ea74a60a9",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@69,337": {
+  "explanation": "The 'Terms of Use' link in the footer bottom row is neutral #909090 on live instead of #9aa0a6.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "46b87fe71122",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "color:text@84,337": {
+  "explanation": "The 'Fair Use Policy' link in the footer bottom row is #909090 on live instead of #9aa0a6, and 4px narrower (100px to 96px).",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ce298e2e8ab6",
+  "at": "2026-11-18T13:35:44.677Z"
+ },
+ "spacing:text@10,330": {
+  "explanation": "The last footer link in the Products column ('Data Licensing') has 64px below it before the Vecteezy logo row on live instead of 83px. The footer's link block ends about 19px closer to the bottom row, so the footer is tighter. The link is also a touch darker (#909090 vs #9aa0a6).",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8f3d9f7f89f0",
+  "at": "2026-11-18T13:36:05.673Z"
+ },
+ "alignment:text@31,315:right": {
+  "explanation": "The 'Video Footage' link's right edge was lined up with the FAQ question text far above it in the design (an accidental guide). On live the FAQ column is narrower so that guide breaks; there is nothing wrong with the link itself, which only changes colour (#9aa0a6 to #909090).",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "647ada63fd24",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "alignment:text@32,327:right": {
+  "explanation": "The 'Creative Bundles' link's right edge was compared to a social icon in the bottom row; it is 22px off on live, but the two are unrelated and the guide is a coincidence. The only real change is the link's colour (#9aa0a6 to #909090).",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "431abdfadda8",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "typography:text@12,337": {
+  "explanation": "The 'Vecteezy' wordmark next to the footer logo is 2px shorter on live (34px to 32px) and a little narrower, with the logo mark smaller too. The logo lockup is slightly smaller than in the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5887c8eaeeb9",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@56,337": {
+  "explanation": "In the footer bottom row, the gap after the '© 2026 Eezy LLC All rights reserved' text grows from 32px to 39px on live, so the legal items sit slightly further apart. The copy is also a touch darker.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e30826f92043",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@77,337": {
+  "explanation": "The gap after the 'Privacy Policy' link in the footer bottom row grows from 28px to 34px on live, so the legal links are spaced a bit wider. The text is also 4px narrower on the last item.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8eaed6ee4b81",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "typography:text@84,337": {
+  "explanation": "The 'Fair Use Policy' link in the footer bottom row is 4px narrower on live (100px to 96px), so its text is set slightly smaller or tighter than in the design.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "94e7c9b854ab",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@10,310": {
+  "explanation": "The 'Products' footer heading has 19px under it before the first link on live instead of 16px, so the first link starts 3px lower. The heading is the same size.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f47b82781f0d",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@30,310": {
+  "explanation": "The 'Content' footer heading has 19px under it on live instead of 16px, so 'Stock Photos' starts 3px lower.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d182240f7f31",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@72,310": {
+  "explanation": "The 'Languages' footer heading has 16px under it on live instead of 13px, so 'English' starts 3px lower.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "feb7f45d4e59",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "spacing:text@52,310": {
+  "explanation": "The 'Learn More' footer heading has 20px under it on live instead of 16px, so 'FAQs' starts a few px lower.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0425af20608b",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "missing:text@73,325": {
+  "explanation": "The design's Languages column ends with a 'More Languages' link below 'Italiano'. Live has no such link, so the column ends at 'Italiano'.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8589903cfc43",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "missing:line@47,335": {
+  "explanation": "The thin rule that separates the footer link area from the logo and legal row is not paired on live; live has a similar rule a few pixels away, so this is mostly a matching issue. It is also tied to the tighter footer bottom row.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "dbd7e2e23736",
+  "at": "2026-11-18T13:36:05.674Z"
+ },
+ "typography:text@86,342": {
+  "explanation": "The dark-mode switch in the footer is taller on live (28px to 32px) with a bigger white moon knob and a darker track, so it looks chunkier than the design's switch.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5b136235c81a",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "color:text@80,342": {
+  "explanation": "The 'Dark mode on' label next to the footer switch is brighter on live (#c5c5c6 to #e0e0e0), so it reads bolder against the dark footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "facaa7b60b6f",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "spacing:text@80,342": {
+  "explanation": "The 'Dark mode on' label sits closer to the footer switch on live (gap 21px to 12px), so label and switch read as one tight unit. The label is also brighter.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e0ed27ec8384",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:panel@86,342": {
+  "explanation": "The footer dark-mode switch pill (60×32) is not matched on live because live's switch is a different size (larger knob, darker track). The switch is present on both sides.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "75f1887d3c71",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "typography:text@80,342": {
+  "explanation": "The 'Dark mode on' label is 6px wider on live (87px to 93px), so it is set slightly larger or looser than in the design.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d3548fc49ce",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@17,315": {
+  "explanation": "The grey filled 'NEW' badge after 'Pro for Enterprises' in the design is drawn on live as a thin outlined badge, so the filled shape is not found. The badge exists on both sides.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f7e3d164fcd6",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:text@51,317": {
+  "explanation": "The 'Trust Center' footer link text is not found as a separate item on live because it is measured together with its NEW badge there. The link is present on both sides.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2193ae93f225",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@36,317": {
+  "explanation": "The grey filled 'NEW' badge after 'Motion Graphics' is an outlined badge on live, so the filled shape does not pair. Badge is present on both.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2583def1d1bf",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@55,317": {
+  "explanation": "The grey filled 'NEW' badge after 'Trust Center' in the design becomes a thin outlined badge on live. Both have the badge.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "449e73e1f213",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@13,322": {
+  "explanation": "The grey filled 'NEW' badge after 'AI Studio' is an outlined badge with lighter text on live, so the filled shape does not pair.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "86f70d19f03e",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@36,325": {
+  "explanation": "The filled 'NEW' badge after 'Editorial Images' is an outlined badge on live, so the filled shape is not found. The badge is present on both.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "58199732a053",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:shape@15,330": {
+  "explanation": "The design shows a 'NEW' badge after 'Data Licensing'; live has no badge on that link at all.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0db6e420d544",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:text@17,335": {
+  "explanation": "On live the 'NEW' label after 'Pro for Enterprises' is a separate small text item inside an outlined badge. It corresponds to the design's filled badge, which looks different.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bd13699f6609",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:text@53,337": {
+  "explanation": "On live the 'Trust Center' link and its NEW badge are detected as one text item (124px wide). The design detects the link and badge separately, so this is not an extra element.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ece2392ec2ac",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:text@36,337": {
+  "explanation": "The live 'NEW' text inside the outlined badge after 'Motion Graphics'. It corresponds to the design's filled badge, so it is not extra.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a4c0af8378c6",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:text@13,342": {
+  "explanation": "The live 'NEW' text inside the badge after 'AI Studio'. The design has the same badge as a filled grey shape.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1a1bd45ecf86",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:text@36,346": {
+  "explanation": "The live 'NEW' text inside the outlined badge after 'Editorial Images', corresponding to the design's filled badge.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e507fc1b1fc4",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:panel@30,12": {
+  "explanation": "This is the 'uti' letters in the headline 'Beautiful Visuals for Everyone.' picked up as a box in the design only. The headline is on both sides, so nothing is missing.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8393f36475b5",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:panel@60,12": {
+  "explanation": "This box surrounds the letters 'Ever' of the hero headline in the design only. The headline is present on live, so this is a detection fragment.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4617c97465a1",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:panel@37,269": {
+  "explanation": "This box covers the letters 'quently' of the 'Frequently Asked Questions' heading in the design. The heading exists on live; this is a detection fragment, not a missing element.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5fbf070b02b1",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "missing:line@5,6": {
+  "explanation": "The left rail's right-hand border line is picked up as a divider in the design only. Live also has the line (it runs the full page height), so nothing is missing.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a3158cf9d2fd",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:line@5,183": {
+  "explanation": "Live's left rail border runs the full page height and is detected as a divider (1×5853); the design's matching border is picked up differently. The line exists on both sides.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "24222c2d3b8d",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:panel@70,13": {
+  "explanation": "This box covers the 'one.' at the end of the hero headline on live. It is a letter fragment, not a separate element.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "707a8ac3f99f",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:panel@58,145": {
+  "explanation": "This box covers the letters 'graphers' in the 'Featured Photographers' heading on live. It is a heading fragment; the heading exists in both versions.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f39701da052b",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:line@35,212": {
+  "explanation": "A 2px-wide vertical line on live that is the edge of a Creator Community card. The cards exist in the design too, so it is not a new divider.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5c096f91d75a",
+  "at": "2026-11-18T13:36:50.370Z"
+ },
+ "extra:live:panel@37,288": {
+  "explanation": "This box covers 'quently' of the 'Frequently Asked Questions' heading on live. It is a heading fragment, not an extra element.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0739bbfc53ad",
+  "at": "2026-11-18T13:36:50.370Z"
+ }
+}

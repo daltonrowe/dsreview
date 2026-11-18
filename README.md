@@ -78,7 +78,14 @@ browser renders each page; after that, nothing reads the DOM or CSS: every findi
    finding, what's off in a designer's words, with a verdict (real / noise / unsure). Its context: the
    page and theme, the measurements and what they're measured against, the finding's group (title and
    summary), the other differences on the same element, and close-up and full-width context crops of
-   both sides. `node tools/compare.mjs review <id>` (needs `ANTHROPIC_API_KEY`, e.g. in `.env`). Kept in
+   both sides. Two ways to write them, same context and same storage:
+   - **Claude Code subagents** (no API key): Sonnet subagents in a Claude Code session use
+     `node tools/compare.mjs context <id> --todo` (each finding's context and its four crops, written to
+     `screenshots/crops/<id>/`; `--group <gid>` for one group) and save with
+     `node tools/compare.mjs explain-save <id> <file.json>` (`{ "<findingId>": { explanation, verdict,
+     confidence } }`). Ask Claude Code to "explain the findings with Sonnet subagents".
+   - **The API**: `node tools/compare.mjs review <id>` (needs `ANTHROPIC_API_KEY`, e.g. in `.env`).
+   Kept in
    `comparisons/<id>/reviews.json`; findings whose measurements didn't change keep their explanation
    across runs (`--force` redoes them). Server-side fallbacks are on: if Sonnet declines a request on a
    safety classifier, the API answers it with a fallback model instead.

@@ -36,9 +36,14 @@ Reports land in `comparisons/<id>/` and are reviewed in the viewer (`npm start` 
 - **Whole page**: captures are the full page height (footer included) via a very tall viewport, up to 16000px.
 - **Explanations** (`reviews.json`): Claude Sonnet 5.5 explains each finding for a designer, with a
   verdict real/noise/unsure, from its context (page, measurements, its group's title and summary, other
-  differences on the same element, close-up and context crops). Run `review` AFTER grouping (the group
-  gives it context). Needs `ANTHROPIC_API_KEY` (or `.env`). Explanations are model-written: don't
-  replace them with templated text.
+  differences on the same element, close-up and context crops), AFTER grouping (the group gives it
+  context). Explanations are model-written: don't replace them with templated text. Two ways:
+  - No API key (default here): spawn Sonnet subagents (Agent tool, model "sonnet"), e.g. one per
+    comparison (split big ones). Each runs `node tools/compare.mjs context <id> --todo [--group gid]`,
+    Reads the crops it lists, writes `{ "<findingId>": { "explanation", "verdict", "confidence" } }`
+    and saves with `node tools/compare.mjs explain-save <id> <file>`, until it reports 0 left. Give
+    them the explanation brief from SYSTEM in tools/lib/review.mjs.
+  - With `ANTHROPIC_API_KEY`: `node tools/compare.mjs review <id>`.
 - **Meta-findings** (`groups.json`): YOUR job when asked to group or regroup. See "Grouping" below.
 
 ## Workflow

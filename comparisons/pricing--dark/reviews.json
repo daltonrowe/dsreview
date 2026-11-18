@@ -1,0 +1,1674 @@
+{
+ "typography:text@49,56": {
+  "explanation": "The small Trustpilot wordmark beside 'Rated Excellent on' in the design (83×19) was paired with the larger Trustpilot logo in live's brand strip (30px tall); these are different placements, so the size gap is not a styling bug.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ab4d0a831acc",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "color:icon@3,3": {
+  "explanation": "The round 'V' logo mark in the top-left is orange (#ff7900) in the design but a white circle (#ffffff) with a dark V on live in dark theme, so the dark-theme logo treatment differs and needs a decision.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "67ece621ddaa",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "color:text@45,42": {
+  "explanation": "The plan card's third checklist line 'Commercial licensing included. No attribution required.' was paired with live's 'See more purchasing options.' note ('Don't want to subscribe?'), so the colour readout (white vs orange link) compares two unrelated texts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c8b2b03a9e00",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "color:text@49,56": {
+  "explanation": "The design's inline Trustpilot wordmark (dimmed green star, light-grey word) was paired with live's brand-strip logo (bright green star, white word); the colour readout compares two different placements, though the design's star does look duller than Trustpilot's usual green.",
+  "verdict": "noise",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0b871b5a9cdd",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@39,35": {
+  "explanation": "The '$180 billed annually (regularly $300)' line was paired with the old table's 'Background Removal Tool' label, so the gap-below difference compares two unrelated elements.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "937892d086d3",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@44,40": {
+  "explanation": "The second checklist line 'Powerful AI tools to generate, edit, and transform' was paired with unrelated old Monthly-card text, so the gap-below difference (23px vs 380px) is not a real spacing difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "87d9ed0c7443",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@31,40": {
+  "explanation": "The checkmark beside the second checklist line was paired with a green check from the old comparison table, so the gap to its text compares unrelated elements.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1e33eb836bc3",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@45,42": {
+  "explanation": "The third checklist line was paired with the old 'Don't want to subscribe?' note, so the gap-below difference compares different layouts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ecd760729d1b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@31,42": {
+  "explanation": "The checkmark beside the third checklist line was paired with a mark in the old table, so the gap-right difference is not meaningful.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b5b197133c43",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@45,47": {
+  "explanation": "The 'Subscribe to Vecteezy Pro' button label was paired with the old Monthly card's 'Monthly Unlimited Subscription' title, so the gap-below difference compares unrelated texts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "69e185fdd22a",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@45,50": {
+  "explanation": "The 'Cancel anytime. 30-day money back guarantee' line under the Subscribe button was paired with the old Monthly card's caption, so the gap-below difference is not a real spacing difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "82312d90f988",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "alignment:text@39,35:left": {
+  "explanation": "The '$180 billed annually' line was paired with the old table's 'Background Removal Tool' label, so the left-edge offset compares two different layouts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "db2bffc99e43",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "alignment:text@44,40:top": {
+  "explanation": "The second checklist line was paired with a check mark in the old table, so the top-edge offset is not a real alignment problem.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7fe8eb908256",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "alignment:text@45,42:left": {
+  "explanation": "The third checklist line was paired with live's 'Don't want to subscribe?' note, so the left-edge offset reflects two different layouts, not a misalignment.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d8057ababc1",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "alignment:text@45,42:top": {
+  "explanation": "The third checklist line was paired with live's 'Don't want to subscribe?' note, so the top-edge offset compares unrelated positions.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "52977f3c62aa",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "typography:text@39,35": {
+  "explanation": "The '$180 billed annually (regularly $300)' line was paired with the old table label 'Background Removal Tool', so the size difference is not a real typography change.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a849336fc7ef",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "typography:text@44,40": {
+  "explanation": "The checklist line 'Powerful AI tools to generate, edit, and transform' was paired with the old Yearly card title 'Yearly Unlimited Subscription' (taller text), two unrelated texts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7538f89699d6",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "typography:text@45,47": {
+  "explanation": "The 'Subscribe to Vecteezy Pro' button label was paired with the old 'Monthly Unlimited Subscription' title, so the size difference compares unrelated texts.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4eb23e4b11fb",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "typography:text@45,50": {
+  "explanation": "The guarantee line 'Cancel anytime. 30-day money back guarantee' was paired with the old italic 'Per month, billed each month (€13.99)' caption, so the width and style difference is just different copy.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bc3049f5f8ee",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "spacing:text@31,37": {
+  "explanation": "The checkmark beside the first checklist line was paired with a check mark in the old comparison table, so the spacing to the next check compares unrelated lists.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bdd9a012720b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "missing:text@45,7": {
+  "explanation": "The orange 'YOUR ALL-ACCESS PASS' eyebrow (206×13) on the dark background is in the redesign but not on live, which still shows the old 'Join Pro / Get Unlimited Downloads' hero.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1fb896f12dbe",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@27,11": {
+  "explanation": "The white headline words 'Join Pro' (221×46) are in the redesign but not on live, whose hero title is much smaller and left-aligned.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "dc43e282afcb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@54,11": {
+  "explanation": "The white headline words 'Unlock Everything' (497×56) are in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "909dc0ee46e8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@57,11": {
+  "explanation": "A 172×54 box around the headline's last word 'Everything' exists only in the design; it is part of the headline treatment that live lacks.",
+  "verdict": "unsure",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "747f67a3595c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@45,14": {
+  "explanation": "The centred subtitle 'Access 75+ million vectors, photos, and videos, with industry leading AI tools...' (847×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "495f5b62eef6",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@45,38": {
+  "explanation": "The dark plan card (560×474, rounded with a thin border) holding price, checklist and button is in the redesign but not on live, which shows a Free vs Pro table and two plan cards.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5ffa87008088",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@37,27": {
+  "explanation": "The cream '40% OFF · ANNUAL PLAN' badge pill (198×28) at the top of the plan card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bb133e88d2c6",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@34,31": {
+  "explanation": "The struck-through grey '$25' original price (117×56) in the plan card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aa6725d9b81c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@42,31": {
+  "explanation": "The large white '$15' price (105×56) in the plan card is in the redesign but not on live, whose prices are €8.99 and €13.99 in smaller type.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3f02b0d1502b",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@44,37": {
+  "explanation": "The first checklist line 'Unlimited downloads of 75+ million creative assets' (365×14) in the plan card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d79cad318076",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@45,46": {
+  "explanation": "The full-width 'Subscribe to Vecteezy Pro' gradient pill button (468×56) is in the redesign but not on live, which has two smaller 'Subscribe Now' buttons.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "83e2c816da68",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@38,58": {
+  "explanation": "The green five-star Trustpilot bar (119×22) under 'Rated Excellent on' is in the redesign but not on live's join page.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2ff7f93257d4",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@49,58": {
+  "explanation": "The 'TrustScore 4.9 | 33,572 reviews' line (213×17) is in the redesign; live only shows a similar score lower down in its brand strip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8338ada71eaf",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@30,66": {
+  "explanation": "The second review card (Karina Krogh, 300×180 dark rounded card) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "64c0f9e90122",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@50,66": {
+  "explanation": "The third review card (B CRAT\\/, 300×180) is in the redesign but not on live, which has no review carousel.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "14690e4be238",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@70,66": {
+  "explanation": "The fourth review card (Courtney Adriance, 300×180) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e38cad448cc1",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@84,63": {
+  "explanation": "The five-star row of the faded fifth review card at the right edge (91×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "97178661133a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@11,65": {
+  "explanation": "The quote text of the faded first review card ('I can always find the right images that I need...', 256×35) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9898f094f06b",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@30,66": {
+  "explanation": "The quote text of Karina Krogh's review ('Have now found a useful tool to my hobby...', 247×54) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4d98a5a3fded",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@49,66": {
+  "explanation": "The quote text of the B CRAT\\/ review ('Very high quality videos that fit the vision of my project...', 231×56) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d14037872ff3",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@70,66": {
+  "explanation": "The quote text of Courtney Adriance's review ('This is awesome! I am using the site to download caution and warning signs...', 256×77) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2e7d6a682da8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@85,65": {
+  "explanation": "The first two quote lines of the faded fifth review card ('I immediately ne... crowd cheering', 96×33) are in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8f91def7e23e",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@9,70": {
+  "explanation": "The author line 'Michelle Reynolds · 16 hours ago' (205×13) on the faded first review card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "80eb8913b36a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@68,70": {
+  "explanation": "The author line 'Courtney Adriance · 6 days ago' (198×13) on the fourth review card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8233ee5d6fb5",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@45,77": {
+  "explanation": "The 'Buying for a team?' banner (560×82, dark rounded bar) at the bottom of the page is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "840529257770",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@32,77": {
+  "explanation": "The three overlapping avatar photos (83×36) at the left of the team banner are in the redesign but not on live; this is the same element as the avatar panel finding.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "de15c32b57f1",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:panel@32,77": {
+  "explanation": "The avatar cluster box (88×36) at the left of the team banner is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e559c158870a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@45,77": {
+  "explanation": "The banner text 'Buying for a team? / Save up to 15% with Vecteezy Pro for Teams' (287×34, white on dark) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "51d44f933a7e",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "typography:text@45,42": {
+  "explanation": "The third checklist line was paired with the old 'Don't want to subscribe? See more purchasing options.' note, so the width difference is different copy, not a typography change.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4f9a9ee9158d",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "missing:icon@36,11": {
+  "explanation": "The italic serif 'to' in the headline between 'Join Pro' and 'Unlock Everything' (42×34, grey) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "23af3faceedf",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@42,19": {
+  "explanation": "The active toggle label 'Yearly (40% off)' (124×16, white) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ccb14f63ccb5",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@50,19": {
+  "explanation": "The inactive toggle label 'Monthly' (61×16, grey) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "27bd8cb248b4",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@47,30": {
+  "explanation": "The 'USD' label (32×14) beside the big price is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ce781c0cd62a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@49,32": {
+  "explanation": "The 'per month' label (78×16) beside the big price is in the redesign; live has a smaller italic 'Per month, billed each year' caption instead.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3e0787b95f07",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@42,56": {
+  "explanation": "The bold white 'Rated Excellent on' text (132×13) before the Trustpilot logo is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d52b74e8030d",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@6,63": {
+  "explanation": "The dimmed five-star row of the faded first review card (91×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c0ec75587db0",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@25,63": {
+  "explanation": "The green five-star row of Karina Krogh's review (97×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0863731da55c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@45,63": {
+  "explanation": "The green five-star row of the B CRAT\\/ review (97×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "be368135f061",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:shape@65,63": {
+  "explanation": "The green five-star row of Courtney Adriance's review (97×18) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7ad3551dac5e",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@7,67": {
+  "explanation": "The third quote line 'of images available.' of the faded first review card (130×14) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "602cf31d9338",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@85,67": {
+  "explanation": "The third quote line of the faded fifth review card ('email for a frien...', 97×11) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1ecd8fa1e7d3",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@47,68": {
+  "explanation": "The last quote line 'coming together nicely\"' of the B CRAT\\/ review (154×14) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "278a10d2f72d",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@85,68": {
+  "explanation": "The fourth quote line of the faded fifth review card ('for a few minutes...', 96×11) is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "34586432ae19",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@27,70": {
+  "explanation": "The author line 'Karina Krogh · 3 days ago' (159×13) on the second review card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d5cb416c1acb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@46,70": {
+  "explanation": "The author line 'B CRAT\\/ · 4 days ago' (132×13) on the third review card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0aeb1d01a9be",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:text@84,70": {
+  "explanation": "The author line 'JT Nous · Oct 24' (93×11) on the faded fifth review card is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "318600168daa",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "missing:icon@60,77": {
+  "explanation": "The small right-pointing arrow (14×14) at the right end of the team banner is in the redesign but not on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c2f5f12181cd",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@85,3": {
+  "explanation": "The outlined dark 'Sign Up' pill button (117×48) at the top right of live's header is not in the design, which has only the round logo mark in the corner and no top bar.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c0b480c887cf",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@8,3": {
+  "explanation": "The white 'Vecteezy' wordmark (116×24) beside the logo in live's top bar is not in the design, which shows only the round logo mark.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9144423744eb",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@85,3": {
+  "explanation": "The 'Sign Up' label (52×14) inside the header button on live is not in the design, which has no header buttons.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9169e94a057a",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@12,11": {
+  "explanation": "The old hero title 'Join Pro' (131×28, white on the dark hero band) is on live only; the redesign has a centred 'Join Pro to Unlock Everything' headline.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8831d66a25cb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@20,13": {
+  "explanation": "The old hero second line 'Get Unlimited Downloads' (411×28) is on live only and goes away with the redesigned headline.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b5ac4d239a49",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@12,16": {
+  "explanation": "The grey 'Cancel anytime.' caption (126×18) under the old hero title is on live only; the redesign has 'Cancel anytime...' as a small line under the Subscribe button.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7ef7ea3203d4",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@26,36": {
+  "explanation": "The old Free vs Pro comparison table card (580×386, dark with a thin border) is on live only; the redesign has no comparison table.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f4112f0f1c90",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:shape@64,24": {
+  "explanation": "The orange-to-purple gradient strip (580×8) along the top of the old Yearly card is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1cf20907f17c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@64,29": {
+  "explanation": "The old Yearly subscription card (580×174, '€8.99' and Subscribe Now) is on live only; the redesign has one plan card with a Yearly/Monthly toggle.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "479877064bcb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@35,26": {
+  "explanation": "The 'Free' column heading (30×11) of the old comparison table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bf8606b9fcb4",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@39,27": {
+  "explanation": "The pink star beside the 'Pro' column heading (13×12) in the old comparison table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3e90293a67b6",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@40,26": {
+  "explanation": "The 'Pro' column heading (22×11) of the old comparison table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fbe21b7f15d0",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@16,28": {
+  "explanation": "The 'Thousands of Free Resources' label (200×12), first row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5d4ffcdeee08",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,28": {
+  "explanation": "The green check in the Free column of the 'Thousands of Free Resources' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bc242d2141c7",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,28": {
+  "explanation": "The green check in the Pro column of the 'Thousands of Free Resources' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7fcc83f58f9b",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:shape@56,29": {
+  "explanation": "The green 'SAVE 36%' pill (82×27) beside the price on the old Yearly card is on live only; the redesign has the '40% OFF · ANNUAL PLAN' badge instead.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "121ab0a01349",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@51,29": {
+  "explanation": "The '€8.99' price (59×31) on the old Yearly card is on live only; the redesign shows $25 struck through and a large $15.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c1a2b1e09d0b",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@16,30": {
+  "explanation": "The 'Over 50 million Pro Resources' label (203×12), second row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5591029331ab",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,30": {
+  "explanation": "The grey X in the Free column of the 'Over 50 million Pro Resources' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4480271c93ab",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,30": {
+  "explanation": "The green check in the Pro column of the 'Over 50 million Pro Resources' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c0ad0fbe8e7d",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@55,31": {
+  "explanation": "The italic 'Per month, billed each year (€107.88)' caption (213×13) on the old Yearly card is on live only; the redesign has '$180 billed annually (regularly $300)'.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "efb56a9f4a07",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@15,32": {
+  "explanation": "The 'Unlimited Downloads' label with its help icon (160×15), third row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "042438a72c3f",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,32": {
+  "explanation": "The grey X in the Free column of the 'Unlimited Downloads' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "75be79055754",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,32": {
+  "explanation": "The green check in the Pro column of the 'Unlimited Downloads' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e9d46b514245",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@16,34": {
+  "explanation": "The 'Full Commercial Rights' label with its help icon (172×15), fourth row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5333c3a7db57",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,34": {
+  "explanation": "The grey X in the Free column of the 'Full Commercial Rights' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0945521e47f9",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,34": {
+  "explanation": "The green check in the Pro column of the 'Full Commercial Rights' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "48146d1277b8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@16,36": {
+  "explanation": "The 'No Attribution Required' label with its help icon (176×16), fifth row of the old table, is on live only; the redesign's checklist covers it as 'No attribution required.'",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "56ef7202784f",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,36": {
+  "explanation": "The grey X in the Free column of the 'No Attribution Required' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aaa2ccf54f7a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,36": {
+  "explanation": "The green check in the Pro column of the 'No Attribution Required' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "225a3e7b861a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@64,42": {
+  "explanation": "The old Monthly subscription card (580×172, '€13.99' with an orange Subscribe Now button) is on live only; the redesign switches to monthly with the toggle.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0e156a2146da",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@15,38": {
+  "explanation": "The 'Legal Indemnification' label (143×14), sixth row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "43c174110288",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,38": {
+  "explanation": "The grey X in the Free column of the 'Legal Indemnification' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "43057f27186a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@17,40": {
+  "explanation": "The 'Bundle & Collection Downloads' label (209×12), seventh row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5c09c8f290f6",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,40": {
+  "explanation": "The grey X in the Free column of the 'Bundle & Collection Downloads' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c3dea01062ee",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@74,42": {
+  "explanation": "The orange 'Subscribe Now' button (177×72) on the old Monthly card is on live only; the redesign has one full-width gradient 'Subscribe to Vecteezy Pro' button.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e1a31962a6dc",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@74,41": {
+  "explanation": "The word 'Subscribe' (86×15) on the old Monthly card's button is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71c392af2740",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,41": {
+  "explanation": "The grey X in the Free column of the 'Background Removal Tool' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c14bab2cd996",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@51,43": {
+  "explanation": "The '€13.99' price (77×31) on the old Monthly card is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4f42758abd84",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@74,43": {
+  "explanation": "The word 'Now' (38×13) on the old Monthly card's button is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7d7aec57e5d8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@16,43": {
+  "explanation": "The 'Faster Downloads & No Ads' label (185×12), last row of the old table, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "159de0ceaaa7",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@35,43": {
+  "explanation": "The grey X in the Free column of the 'Faster Downloads & No Ads' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bb2e367f9fc9",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:icon@40,43": {
+  "explanation": "The green check in the Pro column of the 'Faster Downloads & No Ads' row (12×12) in the old table is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "86de31030d33",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@45,56": {
+  "explanation": "The small grey note 'Plans are single license only (individual user). Team and Enterprise plans are also available.' (584×14) under the old plan cards is on live only.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "63ee7a3a7b9b",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@45,65": {
+  "explanation": "The white 'Trusted by Top Brands' heading (370×33) of live's brand strip is on live only; the design ends after the reviews and team banner, so dropping or redesigning this section is a decision.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "de5e32214f2f",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:shape@44,73": {
+  "explanation": "The Trustpilot five-star block (218×40) in the centre of live's dark brand strip has no counterpart in the design, whose only Trustpilot rating is the small inline one above the reviews.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2b5ff627bd4d",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@40,73": {
+  "explanation": "The first two stars (85×40) of the Trustpilot star block in the brand strip are part of a section the design drops.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "abf7b7b4d6bb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@46,73": {
+  "explanation": "The middle stars (85×40) of the Trustpilot star block in the brand strip are part of a section the design drops.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f400d4f8b501",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:panel@50,73": {
+  "explanation": "The last star (40×40) of the Trustpilot star block in the brand strip is part of a section the design drops.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "96a99265085a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@72,73": {
+  "explanation": "The white Walt Disney logo (110×33) in the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4a8e81592fd2",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@28,73": {
+  "explanation": "The Microsoft logo (131×28) in the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b246b6fd9cb2",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@84,73": {
+  "explanation": "The Google logo (89×27) at the right end of the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "05ac32e973ba",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@6,73": {
+  "explanation": "The Amazon logo (85×25) at the left end of the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cba51bfa6aaf",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@60,73": {
+  "explanation": "The facebook logo (115×24) in the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "25a94b7f26b8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:shape@16,73": {
+  "explanation": "The BBC logo (72×22) in the dark brand strip is on live only; the design has no brand strip.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b9adccf74648",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@44,75": {
+  "explanation": "The 'TrustScore 4.9 | 41,842 reviews' line (200×15) under the Trustpilot stars in the brand strip is on live only; the design has its own '33,572 reviews' line in a different place.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c18cfd3d4ce8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@45,87": {
+  "explanation": "The white 'Frequently Asked Questions' heading (455×34) is on live only; the design has no FAQ, so keeping or dropping it is a decision.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9b61a24a3a03",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,91": {
+  "explanation": "The divider (740×1) above the first FAQ question, 'How do Vecteezy subscriptions work?', is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6e6aa8283eda",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@31,93": {
+  "explanation": "The first FAQ question 'How do Vecteezy subscriptions work?' (287×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7e677046e4af",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,95": {
+  "explanation": "The divider (740×1) between 'How do Vecteezy subscriptions work?' and 'Why do I need a plan if Vecteezy is free?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2cde3571894f",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@31,97": {
+  "explanation": "The FAQ question 'Why do I need a plan if Vecteezy is free?' (304×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d251b805220c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,98": {
+  "explanation": "The divider (740×1) below 'Why do I need a plan if Vecteezy is free?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "25cbbb86d61c",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@32,100": {
+  "explanation": "The FAQ question 'What do I get with a Pro Standard license?' (319×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d77aa4ac98bb",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,102": {
+  "explanation": "The divider (740×1) below 'What do I get with a Pro Standard license?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6c5b8d3835d5",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@35,104": {
+  "explanation": "The FAQ question 'Can I use Vecteezy content in work I create for a client?' (418×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a7da45c2815",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,106": {
+  "explanation": "The divider (740×1) below 'Can I use Vecteezy content in work I create for a client?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "152cd3e0fc23",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@33,107": {
+  "explanation": "The FAQ question 'Should I purchase a subscription or pay as I go?' (360×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ed699ec59349",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,109": {
+  "explanation": "The divider (740×1) below 'Should I purchase a subscription or pay as I go?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "39b21ca66098",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@26,111": {
+  "explanation": "The FAQ question 'What are bundles?' (141×14) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8a06c926c706",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,113": {
+  "explanation": "The divider (740×1) below 'What are bundles?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e40f150c7c6d",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@33,115": {
+  "explanation": "The FAQ question 'Can I upgrade or downgrade to a different plan?' (361×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2381122369c8",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,116": {
+  "explanation": "The divider (740×1) below 'Can I upgrade or downgrade to a different plan?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "acee646d311a",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@34,118": {
+  "explanation": "The FAQ question 'Can I add seats to my account for team members?' (379×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1f59ed48f819",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,120": {
+  "explanation": "The divider (740×1) below 'Can I add seats to my account for team members?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6e00056f4dce",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@29,122": {
+  "explanation": "The FAQ question 'How does auto renewal work?' (225×14) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1e08b8da7c06",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,123": {
+  "explanation": "The divider (740×1) below 'How does auto renewal work?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "259b7cfdbf25",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@27,125": {
+  "explanation": "The last FAQ question 'Can I cancel anytime?' (165×16) is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "17018f1c61b6",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:line@45,127": {
+  "explanation": "The divider (740×1) closing the FAQ list below 'Can I cancel anytime?' is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c984ef820bad",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@45,131": {
+  "explanation": "The orange 'View all frequently asked questions >' link (268×16) under the FAQ is on live only; the design has no FAQ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d85ebe8b78be",
+  "at": "2026-11-18T13:35:39.683Z"
+ },
+ "extra:live:text@45,140": {
+  "explanation": "The footer headline 'The best value in the industry – Try Pro today.' (463×21, white with 'Try Pro' in orange-pink) is on live only; the design has no closing call-to-action, so whether to keep one is a decision.",
+  "verdict": "unsure",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5f751c1e9fb0",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@6,146": {
+  "explanation": "The 'Products' footer column heading (77×15) is on live only; the design has no footer.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2a803dd0b934",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@27,146": {
+  "explanation": "The 'Content' footer column heading (70×15) is on live only; the design has no footer.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "09b535a254fa",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@49,146": {
+  "explanation": "The 'Learn More' footer column heading (96×14) is on live only; the design has no footer.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c55216760475",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@71,146": {
+  "explanation": "The 'Languages' footer column heading (94×17) is on live only; the design has no footer.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ea5e8e5c75f2",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@8,148": {
+  "explanation": "The 'Pro for Individuals' link (122×12), first link in the footer's Products column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fe1f0fa0828a",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@28,148": {
+  "explanation": "The 'Stock Photos' link (90×13), first link in the footer's Content column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d43eb45898b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,148": {
+  "explanation": "The 'English' link (48×15), first entry in the footer's Languages column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8e3c2856d5bc",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@47,148": {
+  "explanation": "The 'FAQs' link (35×13), first link in the footer's Learn More column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f3196fc53de1",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@7,150": {
+  "explanation": "The 'Pro for Business' link (110×12) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ebb2c9dbd5c2",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@28,150": {
+  "explanation": "The 'Vector Graphics' link (110×15) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8440795dfbd5",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@50,150": {
+  "explanation": "The 'Sell your content' link (114×15) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "df7bf363dc85",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,150": {
+  "explanation": "The 'Español' link (52×15) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9dc09438c48d",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@8,152": {
+  "explanation": "The 'Pro for Enterprises' link (127×15) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5e2804bf2f8f",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@28,152": {
+  "explanation": "The 'Video Footage' link (99×15) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d3aa37c9edf",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@50,152": {
+  "explanation": "The 'Affiliate program' link (114×15) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "805038f78664",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@70,152": {
+  "explanation": "The 'Português' link (69×15) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0319014e855a",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@13,152": {
+  "explanation": "The small 'NEW' badge (30×14) next to 'Pro for Enterprises' in the footer is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2b03eac64e28",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@29,154": {
+  "explanation": "The 'Motion Graphics' link (111×15) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "48e36ea19b64",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@50,154": {
+  "explanation": "The 'Trust Center' link (124×15, with a NEW badge) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6d0316572899",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,154": {
+  "explanation": "The 'Deutsch' link (55×12) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0b2a55e26be9",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@7,154": {
+  "explanation": "The 'For Teachers' link (87×12) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d16fbae95363",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@34,154": {
+  "explanation": "The small 'NEW' badge (30×14) next to 'Motion Graphics' in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "22c6e926a8fa",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,155": {
+  "explanation": "The 'Français' link (56×16) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b745ec104e6b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@6,155": {
+  "explanation": "The 'For Schools' link (80×13) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "870449042072",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@29,155": {
+  "explanation": "The 'Editable Templates' link (129×15) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0f8e61ea1a61",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@48,155": {
+  "explanation": "The 'About Us' link (63×13) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2bfbd9c433b2",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@70,157": {
+  "explanation": "The 'Nederlands' link (78×12) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "202671554a33",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@7,157": {
+  "explanation": "The 'Template Editor' link (108×15) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "62cb7d1c272e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@26,157": {
+  "explanation": "The 'SVGs' link (36×13) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "27cf63a09606",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@48,157": {
+  "explanation": "The 'Our Blog' link (59×15) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bb2b23200a28",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,159": {
+  "explanation": "The 'Svenska' link (56×13) in the footer's Languages column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f12ce6a23d5e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@6,159": {
+  "explanation": "The 'AI Studio' link (62×13) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3584b28922a5",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@50,159": {
+  "explanation": "The 'License Agreement' link (131×15) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "15b996c6721b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@9,159": {
+  "explanation": "The small 'NEW' badge (30×14) next to 'AI Studio' in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9582ff707b57",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@26,159": {
+  "explanation": "The 'PNGs' link (38×12) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7557f4d20505",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@69,161": {
+  "explanation": "The 'Italiano' link (48×12), last entry in the footer's Languages column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "96073d5767a6",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@26,161": {
+  "explanation": "The 'PSDs' link (36×13) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fb2da801b5d6",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@48,161": {
+  "explanation": "The 'DMCA' link (43×13) in the footer's Learn More column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6960cd1d00af",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@9,161": {
+  "explanation": "The 'AI Reverse Image Search' link (169×15) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a2121d75da16",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@28,162": {
+  "explanation": "The 'Editorial Images' link (108×15, with a NEW badge) in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "61ff79999032",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@49,162": {
+  "explanation": "The 'Contact Us' link (76×13), last link in the footer's Learn More column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b745e4c285b4",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@9,162": {
+  "explanation": "The 'AI Background Removal' link (161×15) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "defb051ff93f",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@33,162": {
+  "explanation": "The small 'NEW' badge (30×14) next to 'Editorial Images' in the footer's Content column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0b204a9dc4d7",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@8,164": {
+  "explanation": "The 'QR Code Generator' link (134×14) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5b2c9bdec765",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@29,164": {
+  "explanation": "The 'Creative Bundles' link (115×13), last link in the footer's Content column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "812af41d880e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@7,166": {
+  "explanation": "The 'Developer API' link (95×15) in the footer's Products column is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b29108987c7a",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@7,168": {
+  "explanation": "The 'Data Licensing' link (100×15), last link in the footer's Products column, is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bee377101b3d",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@8,173": {
+  "explanation": "The white round-V logo with 'Vecteezy' wordmark (132×32) in the footer's bottom row is on live only; the design shows only a small orange logo mark in the page corner.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3456649471e0",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@15,173": {
+  "explanation": "The Facebook icon (20×20) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e099ed3152c6",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@17,173": {
+  "explanation": "The Instagram icon (20×20) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7d8ff66aa2dd",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@20,173": {
+  "explanation": "The LinkedIn icon (20×20) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4fe58aa7766e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@22,173": {
+  "explanation": "The Pinterest icon (20×20) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "713084f7b4cb",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@25,173": {
+  "explanation": "The TikTok icon (16×18) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bccb582b76fe",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@27,173": {
+  "explanation": "The X (Twitter) icon (20×20) in the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4a6f45c7604e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:icon@30,173": {
+  "explanation": "The YouTube icon (20×16) at the end of the footer's social row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c95386e8ab4f",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@68,173": {
+  "explanation": "The 'Terms of Use' legal link (87×12) in the footer's bottom row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "760028da0fde",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@75,173": {
+  "explanation": "The 'Privacy Policy' legal link (91×14) in the footer's bottom row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "64ebda1808c7",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@83,173": {
+  "explanation": "The 'Fair Use Policy' legal link (96×14) at the end of the footer's bottom row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "737c874dc9c8",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@55,173": {
+  "explanation": "The '© 2026 Eezy LLC All rights reserved' line (238×14) in the footer's bottom row is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2ecbf9060b7b",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@84,178": {
+  "explanation": "The sun/moon light-dark theme toggle (60×32, moon selected) at the bottom right of live's footer is on live only; the design page has no theme switch in the page.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6ec2bd36f12e",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@79,178": {
+  "explanation": "The 'Dark mode on' label (93×12) beside the theme toggle in live's footer is on live only.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "803d1ab3b14d",
+  "at": "2026-11-18T13:35:39.684Z"
+ },
+ "extra:live:text@5,182": {
+  "explanation": "The 'Current Split Test:' text (129×16) at the very bottom-left of live's page is a debug-style label with no counterpart in the design.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "238baf8282be",
+  "at": "2026-11-18T13:35:39.684Z"
+ }
+}

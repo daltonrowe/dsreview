@@ -1,0 +1,234 @@
+{
+ "color:icon@69,38": {
+  "explanation": "Not a real colour change: the design's Microsoft button was paired with live's Facebook button. The actual difference is that live has only Google and Facebook, not the other six.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6d498e7a3522",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "alignment:icon@56,38:left": {
+  "explanation": "The design's Google button starts at the form's left edge; live's is centred, 164px further right, because there are only two buttons. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8c622651066e",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "typography:text@19,44": {
+  "explanation": "The 'Better work in half the time.' headline on the marketing panel is set smaller on live, about 3px less in height (31px to 28px), so the line ends noticeably earlier.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8b844e2af5b2",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:text@68,21": {
+  "explanation": "The USERNAME / EMAIL label and input are detected as one block in the design but separately on live; the real difference is that live's label sits about 3px further above the input and has no space before the red asterisk.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "23b7f2b4d119",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:text@62,38": {
+  "explanation": "This is the Apple button in the design's social row, which has no counterpart on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d219c3a8258b",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:text@20,48": {
+  "explanation": "The first marketing bullet reads 'Access 74,540,405 creative assets (89,304 added yesterday)' in the design and 'Access 60,869,326 creative assets' on live. Only the sample numbers and the '(added yesterday)' copy differ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71deecdebac9",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@59,38": {
+  "explanation": "The Facebook button position in the design's row has no match on live; live's Facebook button sits centred beside Google instead. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2c7a24e70945",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@66,38": {
+  "explanation": "The LinkedIn button from the design's social row is missing on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7adc697444d8",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@73,38": {
+  "explanation": "The LINE button from the design's social row is missing on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c058a248312c",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@76,38": {
+  "explanation": "The KakaoTalk button from the design's social row is missing on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "727f57481ba4",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@79,38": {
+  "explanation": "The passkey button from the design's social row is missing on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d8b77a417f5e",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:icon@62,38": {
+  "explanation": "This is the Apple logo inside the Apple sign-in button, which doesn't exist on live. Live has only Google and Facebook, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) across the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ba03752d5a42",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "extra:live:text@13,48": {
+  "explanation": "Live's first marketing bullet has different figures and no '(added yesterday)' clause. This is sample data versus live data.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f7d0ecefcf8e",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:text@57,24": {
+  "explanation": "The PASSWORD label is a lighter grey on live (#aaaaaa to #d3d3d3). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3e0d7ff7f912",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "typography:text@68,32": {
+  "explanation": "The 'Log in' label on the disabled button is lower contrast on live: grey text on a lighter grey (#5a5a5a) fill, so it reads fainter than the design's label.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "34828dafe1d8",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:text@62,17": {
+  "explanation": "In 'Don't have an account? Sign up', the 'Sign up' link is bold white on live instead of orange (#ff7900), so it no longer reads as a link; the rest of the line is also a lighter grey (#c9c9c9 to #e0e0e0).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "13a9f879d3f5",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:text@76,29": {
+  "explanation": "The 'Forgot Your Password?' link is bold white (#fefefe) on live instead of orange (#ff7900), so it no longer reads as a link.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c00d18acd5ed",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "typography:text@57,14": {
+  "explanation": "The 'Log in' title looks slightly heavier on live than in the design; very small difference.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8e54a68b5706",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:icon@79,26": {
+  "explanation": "The password show/hide eye icon is lighter on live (#7d7d7d to #aaaaaa). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "43ca2c1f4a91",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:panel@68,32": {
+  "explanation": "The disabled Log in button fill is much lighter on live (#5a5a5a) than in the design (#292929), and the button is 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9da0cc8a946b",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:text@68,35": {
+  "explanation": "The 'or' divider label is lighter on live (#a4a4a4 to #cdcdcd). Live's dark-mode greys are a step or two lighter than the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a0be193e9ec6",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "color:text@68,41": {
+  "explanation": "The reCAPTCHA notice text at the bottom is a lighter grey on live (#aaaaaa to #d3d3d3), and it wraps slightly differently ('Privacy Policy and / Terms of Service apply').",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8fc9b8538a65",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "size:panel@68,32": {
+  "explanation": "The Log in button is 52px tall on live versus 46px in the design, 6px taller.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c7decd782cb6",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "shape:panel@68,32": {
+  "explanation": "Both the design and live draw the Log in button as a fully rounded pill; the 'square corners' reading is a measurement artifact, so there is no real shape difference.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3c647efb6d0f",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "shape:panel@68,21": {
+  "explanation": "The email input border is lighter on live (#555555 to #7f7f7f), so the field outline is more prominent.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d4f7261d2073",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "shape:panel@68,26": {
+  "explanation": "The password input border is lighter on live (#555555 to #7f7f7f), so the field outline is more prominent.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eea4dbf009fa",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:line@68,30": {
+  "explanation": "This is the top edge of the design's low-contrast Log in button picked up as a line; there is no real divider.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d32f5673e727",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "missing:line@68,33": {
+  "explanation": "This is the bottom edge of the design's low-contrast Log in button picked up as a line; there is no real divider.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b8f2744e37ac",
+  "at": "2026-11-18T13:29:53.721Z"
+ },
+ "extra:live:text@59,19": {
+  "explanation": "This is the USERNAME / EMAIL label detected on its own on live; it sits about 3px higher above its input than in the design, with no space before the asterisk.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c959e516cf7f",
+  "at": "2026-11-18T13:29:53.721Z"
+ }
+}

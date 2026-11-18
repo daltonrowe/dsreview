@@ -1,0 +1,2490 @@
+{
+ "typography:text@19,3": {
+  "explanation": "The search query reads \"dog\" in lowercase on live and \"Dog\" in the design, and the text is 3px taller (13px to 16px). It also sits about 11px further left and 3px higher in the bar.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1a4f568aa01d",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@17,2": {
+  "explanation": "The search field's magnifier icon is near-white (#f2f2f2) on live where the design has a muted grey (#7e7e7e). It reads much brighter than the placeholder-style design.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3cc9202d6f2e",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@60,2": {
+  "explanation": "The clear (×) button in the search field is brighter on live (#b8b8b8 against #747474) and slightly heavier.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "37c0e24a301c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@76,10": {
+  "explanation": "The magnifier icon in the \"running\" pill is mid-grey (#aaaaaa) on live where the design is near-white (#ececec). Live pills read lower-contrast.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "86ab7a0a83f5",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@64,10": {
+  "explanation": "The magnifier icon in the \"corgi\" pill (paired with a live pill's icon) is dimmer on live, #aaaaaa against #ececec.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "761fc39317be",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@46,10": {
+  "explanation": "The magnifier icon in the \"puppy\" pill is dimmer on live (#aaaaaa against #ececec), and the live pill shows a different word.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8d7fc5e09102",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@52,10": {
+  "explanation": "The magnifier icon in the \"golden retriever\" pill is dimmer on live (#aaaaaa against #ececec).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "023e7d4e0fbd",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:icon@17,2": {
+  "explanation": "The search field's magnifier icon is 20px on live against 17px in the design, with a thicker stroke.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4f399b2a4717",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:panel@56,10": {
+  "explanation": "The \"golden retriever\" pill is 165px wide in the design. It is paired with live's \"dog grooming\" pill, which is 150px; the words differ so the widths do too.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "885c4b48f98a",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:panel@47,10": {
+  "explanation": "The design's \"puppy\" pill (99px) is paired with live's \"cute dog\" pill (115px). Only the words differ.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "73f266e1de70",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:panel@78,10": {
+  "explanation": "The design's \"running\" pill (108px) is paired with live's \"dog training\" pill (137px). Only the words differ.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5b6b68836e06",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:panel@37,10": {
+  "explanation": "The design's Orientation filter chip (156px) is paired with live's \"happy dog\" pill (127px). Live has no Orientation chip, so this is a mispairing rather than a resize.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f75e7c9e2c8c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:grid@47,150": {
+  "explanation": "The design's results grid has 56 tiles in 17 rows, 4 per row, ending about y=4,586. Live's grid starts 285px lower, is 19px narrower and runs on to y=11,571 with 3 photos per row.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5fe846e12906",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:image@75,37": {
+  "explanation": "Paired tiles are different photos (puppies in a field against a spotted dog on a bench). Live's tile is 282px tall against 269px, and it ends 10px short of the design's right edge. It also gets a white \"Free\" badge.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "642bbea42fcd",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:image@49,37": {
+  "explanation": "The design has a 357px-wide photo here (corgi on a stone wall) where live has a 382px-wide dark dog portrait. This is a different photo; live has 3 larger tiles per row against 4.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bfe180fa860c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:image@20,106": {
+  "explanation": "The design's photo (a pug on yellow) is 429×241; the paired live tile is a 278×278 portrait of a corgi on white. These are different photos in a different grid layout, so there is no like-for-like.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4130926984dd",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:image@19,191": {
+  "explanation": "The design's golden retriever photo (401×267) is paired with live's basenji photo (422×282). Different photos, with live's rows being 3 wider tiles.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8be0cf53feb3",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:image@77,2": {
+  "explanation": "The Join Pro button itself is unchanged, but the distance down to the filter row grows from 78px to 363px. Live puts a two-row Sponsored results panel under the title.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "716b5e796e25",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:panel@35,2": {
+  "explanation": "The gap between the search bar and the filter row grows from 78px to 363px on live because of the Sponsored results panel (AD badge, 16 thumbnails, View More).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4c96393e2a81",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:panel@85,2": {
+  "explanation": "The top-right Log In/Sign Up button is unchanged in position, but the space below it down to the next row is 378px instead of 92px, because live inserts the Sponsored panel.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6197b2785641",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@62,2": {
+  "explanation": "The visual-search (camera frame) icon at the right end of the search field sits about 21px further left on live because the bar is longer, so the gap to the Explore link is 67px instead of 52px.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "712a0f7b7dc2",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@17,2": {
+  "explanation": "The search field's magnifier icon sits 16px further left on live, since the type-picker pill is narrower and the icon is larger.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "27fe744511d3",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@60,2": {
+  "explanation": "The clear (×) icon sits 25px further left on live, matching the longer search bar and the changed icon spacing.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "32c4da2e2dcd",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:text@68,3": {
+  "explanation": "The Explore link's distance to the results grid grows from 153px to 436px on live because live adds the Sponsored results panel and moves the filter row and photos down.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "24b2e87422a9",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:text@11,3": {
+  "explanation": "The type-picker label on live reads \"Photos\", 52px wide, against \"All Images\", 70px wide, and sits 4px further right.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7e9f83ce31d0",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:text@19,3": {
+  "explanation": "The query text sits 11px further left and 3px higher in the search field on live, as the larger magnifier and the lowercase \"dog\" change the line.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ce672fa64dcb",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:text@14,2": {
+  "explanation": "The picker's chevron sits 15px further left on live because \"Photos\" is a shorter label than \"All Images\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "75236a2820b9",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:panel@56,10": {
+  "explanation": "The gap after the \"golden retriever\" pill is irregular because live's pill row after \"dog grooming\" has different words and widths.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c8bf71c1ce33",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:panel@47,10": {
+  "explanation": "The gap after the \"puppy\" pill is 140px on live instead of 12px, from pairing it with a different pill (\"cute dog\") and a different neighbour.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ac261658cdc6",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:panel@37,10": {
+  "explanation": "The gap after the design's Orientation chip shrinks from 27px to 12px only because live puts a \"happy dog\" pill here instead.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0bbff1d55a97",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@76,10": {
+  "explanation": "The magnifier icon in the \"running\" pill has a larger gap to the next icon on live (137px against 107px), because live's pills (\"dog training\") are wider.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aefbafe296fb",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@84,10": {
+  "explanation": "The magnifier icon in the last visible pill sits 29px before the carousel arrow on live and 48px in the design; the pill text is longer on live. It is also darker.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b707a46572ad",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:icon@46,10": {
+  "explanation": "The magnifier icon in the \"puppy\" pill is followed by a 224px gap on live, against 80px in the design, because the live pill row has other pills here.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "76905b57144b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:panel@35,2:right": {
+  "explanation": "The search bar's right edge ends at x=1045 on live against 1018 in the design, so the bar is about 27px longer; the Explore link and buttons are laid out differently.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "44ece7e38d75",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:grid@47,150:top": {
+  "explanation": "The results grid starts at y=485 on live against y=200 in the design, pushed down by the Sponsored panel and the filter row.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5a885d342c79",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:image@49,37:right": {
+  "explanation": "The pair's right edge is 20px off because live's second tile is wider and has different neighbours; the grid uses 3 columns against 4.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3840a8346d3a",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:image@75,37:right": {
+  "explanation": "The right-hand photo tile ends at x=1406 on live and 1416 in the design. Live's grid is about 10px narrower on the right.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e5e0d4db45b8",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "typography:text@11,3": {
+  "explanation": "The picker label reads \"Photos\" on live instead of \"All Images\", so the text is 52px wide instead of 70px. Copy and icon differ (camera against grid icon).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "28b2f9b07ba7",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "typography:text@85,3": {
+  "explanation": "The top-right outline button reads \"Sign Up\" on live and \"Log In\" in the design, so the label is 52px wide against 40px.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b193697f141e",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@62,2": {
+  "explanation": "The visual-search icon at the right end of the search field is lighter on live (#d4d4d4 against #aaaaaa).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5beadf4ca3ab",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@87,10": {
+  "explanation": "The carousel arrow at the end of the pill row is much darker on live (#868686 against #bdbdbd), so the next arrow looks faded.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c2f52159745b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "color:icon@84,10": {
+  "explanation": "The magnifier icon in the last visible pill, next to the carousel arrow, is darker on live (#838383 against #acacac).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "835c5ef2ca2d",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:image@77,2": {
+  "explanation": "The Join Pro gradient button is 119px wide on live instead of 124px. The gradient and label look the same.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a1e48a6f1069",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "size:panel@85,2": {
+  "explanation": "The outline button at the far right is 117px wide on live against 110px in the design, because \"Sign Up\" is a longer label than \"Log In\".",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c2445f75b33e",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:text@14,2:top": {
+  "explanation": "The picker's chevron sits 4px lower on live relative to its label.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "46c4ef9c7623",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:line@5,158": {
+  "explanation": "The design's rail divider, 1×5,066px, has no pair because live's page is 13,009px tall. Live's own divider is reported as an extra.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bea9e53c507b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@10,7": {
+  "explanation": "The page title \"Dog Photos\" is a larger \"Dog Photos & Images\" on live, starting about 9px further right and 5px lower, so the design's title has no pair.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f141a5fd6fa7",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@26,7": {
+  "explanation": "The subtitle changes from \"173,834 royalty free vector graphics matching \"Dog\"\" to \"4,089 high resolution, royalty free stock photos and pictures matching “Dog”\" on live. Copy and curly quotes differ.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f629d6720e54",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@85,10": {
+  "explanation": "At the end of the pill row the design has a carousel arrow partly overlaid on a cut-off pill. On live the same area holds a similar arrow, but the paired element is a dashed placeholder, so the finding is a mispairing.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "91e7e974262c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:line@47,301": {
+  "explanation": "The design's thin divider line above the page numbers and feedback card at y≈4,814; live has the equivalent at about y=11,900, 7,000px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "79f7fbf2987f",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:panel@47,308": {
+  "explanation": "The design's \"How was your search experience?\" feedback card (1317×229). Live has the same card at y≈11,887, 7,000px lower, as a 1300×233 panel.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9e31972f81d2",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@47,305": {
+  "explanation": "The design's card heading \"How was your search experience?\". Live has the same heading about 7,000px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5f4a5ce734e5",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:line@47,315": {
+  "explanation": "The design's thin divider line below the feedback card at y≈5,040; live's page continues far past that point.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "704c5859886a",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "spacing:image@49,37": {
+  "explanation": "The gap between photos is 16px on live against 20px in the design.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a8d581791f9",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "alignment:text@70,2:top": {
+  "explanation": "The Explore chevron in the top bar sits about 3px lower on live than in the design.",
+  "verdict": "real",
+  "confidence": "low",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f88cbf80900c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@8,2": {
+  "explanation": "The 4-square grid icon in front of \"All Images\" in the design has no match on live, where the picker shows a camera icon.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9baae9fd792d",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@8,10": {
+  "explanation": "The design's filter button (sliders icon with a small orange \"1\" badge) has no pair on live. Live's filter button is smaller and has no badge, and it sits 287px lower below the Sponsored strip.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "afd81ec26277",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@21,10": {
+  "explanation": "The shield icon on the design's License (3) chip is not in live's filter row, which has no License filter.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "698805b5608b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@11,10": {
+  "explanation": "The grid icon on the design's All Images filter chip is not in live's row, which has no All Images chip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8a465628b7ae",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@34,10": {
+  "explanation": "The layout icon on the design's Orientation chip is not in live's row, which has no Orientation filter.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a35090244e7e",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@70,10": {
+  "explanation": "The magnifier icon in the design's \"cute\" pill is not paired on live, where the pill row has different words.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "babf3dd38fa2",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@14,10": {
+  "explanation": "The \"All Images\" filter label is not on live; its row starts with Vectors, Videos and PNGs.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d999b735276e",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@25,10": {
+  "explanation": "The \"License (3)\" label in the design's active orange/grey filter chip has no counterpart on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9c0da2c61c43",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@37,10": {
+  "explanation": "The \"Orientation\" filter label is missing on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0ac9c467311a",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@57,10": {
+  "explanation": "The \"golden retriever\" pill label is not on live; live's related pills read hot dog, happy dog, cute dog and so on.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a811ba84dad8",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@66,10": {
+  "explanation": "The \"corgi\" pill label in the design has no counterpart on live's pill set.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1481bd3ae6e9",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@79,10": {
+  "explanation": "The \"running\" pill label in the design has no counterpart on live's pill set.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "220481d5ca34",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@72,10": {
+  "explanation": "The \"cute\" pill label in the design has no counterpart on live's pill set.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5640dfaffd0b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@48,10": {
+  "explanation": "The \"puppy\" pill label in the design has no counterpart on live's pill set.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8bfd2268a818",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@88,13": {
+  "explanation": "A fragment at the right edge of the design's first photo row (a patch of a dog photo); nothing matches it on live, where the photos are different and laid out in 3 columns.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "096d415dc7f4",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@2,23": {
+  "explanation": "The design's left rail has a notifications bell icon below Downloads. Live's rail ends at Downloads and has no bell.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "754b71451329",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@88,132": {
+  "explanation": "A fragment of a photo at the right edge of the design's third photo row; live has different photos here.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "790efd95723a",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@47,291": {
+  "explanation": "The \"Next page\" label on the orange button at the bottom of the design's grid; live has the same label at y≈11,700.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2df2b1c4decd",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@46,297": {
+  "explanation": "Page number \"4\" in the design's pagination row. Live's row (1, 2, 3, 4 ... 41) sits about 7,000px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "54452a21a29c",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:text@56,297": {
+  "explanation": "The last page number \"100\" in the design's pagination. Live's last page is \"41\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ddf0bea040d9",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:line@6,308": {
+  "explanation": "The left edge of the design's feedback card, a 3×202 vertical line. Live's card has the same edge much lower on the page.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8288383bc855",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:shape@88,308": {
+  "explanation": "The right edge of the design's feedback card, a 5×205 vertical line. Live's card has the same edge much lower on the page.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "48992f5af09b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@45,310": {
+  "explanation": "The thumbs-up icon in the design's feedback card; live has one about 7,000px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7969aebe0858",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@50,310": {
+  "explanation": "The thumbs-down icon in the design's feedback card; live has one about 7,000px lower.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d426827dd59b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "missing:icon@2,314": {
+  "explanation": "The sign-in (arrow into door) icon at the bottom of the left rail is at y=5013 in the design and y=12960 on live, because the page is longer. It's the same icon, not missing.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "02487a8c05c7",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "extra:live:line@5,407": {
+  "explanation": "Live's rail divider runs the full 13,009px page height; the design's is 5,066px.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e583f184bd6b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "extra:live:panel@47,407": {
+  "explanation": "Live's whole content panel, 13,009px tall; this is only the page length because live shows many more results.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2ecbc0ce6d6b",
+  "at": "2026-11-18T13:33:57.614Z"
+ },
+ "extra:live:icon@8,3": {
+  "explanation": "Live shows a camera icon in the type picker, 20×16, in the place where the design has a small 4-square grid icon.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "029b54810370",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@13,28": {
+  "explanation": "Live's \"Vectors\" asset-type pill, with a headset-style icon and a 1px border, takes the place of the design's All Images chip. It has no match in the design.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "846e3e218083",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@21,28": {
+  "explanation": "Live's \"Videos\" pill with a film icon sits next to Vectors. The design has no such asset-type chip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d0901a0466eb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@28,28": {
+  "explanation": "Live's \"PNGs\" pill with a checkerboard icon. The design has no such chip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "441d0c0097d2",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@35,28": {
+  "explanation": "Live's \"hot dog\" related-search pill is the first related pill after the asset-type links. The design's pills start with \"puppy\".",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "076fc67042f0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@59,28": {
+  "explanation": "Live's \"dog food\" related-search pill. The design has different related-search words in this part of the row.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "984a0ba1558f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@85,28": {
+  "explanation": "The last pill in live's row is cut off at the carousel arrow button on the right. The design has an equivalent arrow, though it holds different pills.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "890d9c963514",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@8,28": {
+  "explanation": "Live's filter button, a round sliders icon with no badge, left of the Vectors pill. The design's filter button has a \"1\" badge and sits in a different row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "21117d295ff5",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@8,28": {
+  "explanation": "The sliders icon in live's filter button, which is 13×14px. It sits about 287px lower than the design's filter icon.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d5bf739404c8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@12,28": {
+  "explanation": "The Vectors pill's icon on live. The design has no such pill.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "efa9e63b2650",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@19,28": {
+  "explanation": "The Videos pill's film icon on live. The design has no such pill.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c1f25ffe12e1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@26,28": {
+  "explanation": "The PNGs pill's checkerboard icon on live. The design has no such pill.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eb8a9a5e22ee",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@33,28": {
+  "explanation": "The magnifier icon inside live's \"hot dog\" pill. The design's pill icons are at different positions with different words.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1fda4d2231d6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,28": {
+  "explanation": "The magnifier icon inside live's \"happy dog\" pill. The design shows different pills here.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "43bff5cbc966",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@21,28": {
+  "explanation": "The \"Videos\" label on live, where the design has an All Images or License chip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6e4f034943c8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@28,28": {
+  "explanation": "The \"PNGs\" label on live, where the design has an Orientation or License chip.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f4ec014dc8b7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@35,28": {
+  "explanation": "The \"hot dog\" label on live. The design's pills read puppy, golden retriever and corgi.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "06a95bc06a15",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@43,28": {
+  "explanation": "The \"happy dog\" pill label on live; the design shows different words.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e49395fa4f26",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@52,28": {
+  "explanation": "The \"cute dog\" pill label on live; the design's pill labels differ.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3d7ff6dcaa01",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@60,28": {
+  "explanation": "The \"dog food\" pill label on live; the design's pill labels differ.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "12ae0111d6ad",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@69,28": {
+  "explanation": "The \"dog grooming\" pill label on live (it's the one outlined blue in the page); the design's equivalent pill reads \"golden retriever\" at a different place.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9462e2234ea0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@79,28": {
+  "explanation": "The \"dog training\" pill label on live; the design's pill labels differ.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d76adcfb126c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@14,28": {
+  "explanation": "The \"Vectors\" label on live, the first of the asset-type pills.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3466ea74eaa2",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@22,144": {
+  "explanation": "The \"dog breed\" related-search pill in the first related-searches block live inserts in the grid (y≈2,289). The design has no such block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b3c755965b0e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@31,144": {
+  "explanation": "The \"dog lover\" related-search pill, next to \"dog breed\" in the first related-searches block live adds in the grid.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e3b9e434471d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@20,144": {
+  "explanation": "The magnifier icon in the \"dog breed\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "23f60e54cf18",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@23,144": {
+  "explanation": "The \"dog breed\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c7bdf697dff4",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@29,144": {
+  "explanation": "The magnifier icon in the \"dog lover\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7f6414c72250",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@32,144": {
+  "explanation": "The \"dog lover\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f10bc42d894d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@23,148": {
+  "explanation": "The \"dog playing\" related-search pill, the second row of the first related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "af4f96da60f0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@33,148": {
+  "explanation": "The \"dog background\" related-search pill, next to \"dog playing\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "deeb8b09a7ab",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@20,148": {
+  "explanation": "The magnifier icon in the \"dog playing\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4e320488ba7c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@23,148": {
+  "explanation": "The \"dog playing\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e3831e0bd3d3",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@29,148": {
+  "explanation": "The magnifier icon in the \"dog background\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7cfb791c4da9",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@34,148": {
+  "explanation": "The \"dog background\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3027496a19c3",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@22,151": {
+  "explanation": "The \"dog owner\" related-search pill, third row of the first related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7952298eccf8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@31,151": {
+  "explanation": "The \"cool dog\" related-search pill, next to \"dog owner\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a247571407f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@20,151": {
+  "explanation": "The magnifier icon in the \"dog owner\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "46b18349569f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@23,151": {
+  "explanation": "The \"dog owner\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "53a9270dd49e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@29,151": {
+  "explanation": "The magnifier icon in the \"cool dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "803bdd0f7e6c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@32,151": {
+  "explanation": "The \"cool dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "479b3e247822",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@22,154": {
+  "explanation": "The \"dog care\" related-search pill, fourth row of the first related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1e0206afad09",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@30,154": {
+  "explanation": "The \"dog love\" related-search pill, next to \"dog care\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fe956a998e14",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@20,154": {
+  "explanation": "The magnifier icon in the \"dog care\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6bc8a2b69d2c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@23,154": {
+  "explanation": "The \"dog care\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ed7cc244e218",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@28,154": {
+  "explanation": "The magnifier icon in the \"dog love\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "73c5c9111008",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,154": {
+  "explanation": "The \"dog love\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c7e7c85a61cb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@23,157": {
+  "explanation": "The \"dog doodle\" related-search pill, fifth row of the first related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "34b347fe7e35",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@32,157": {
+  "explanation": "The \"cute puppy\" related-search pill, next to \"dog doodle\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4bab069413c6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@76,158": {
+  "explanation": "A 325×33 stretch of a photo (a cream blanket or sleeve) next to the first related-searches block that the tool read as a shape. It's photo content, not a UI element.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0e284dcea1f8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@20,157": {
+  "explanation": "The magnifier icon in the \"dog doodle\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71e36427abab",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@23,157": {
+  "explanation": "The \"dog doodle\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ba76b9626cb6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@29,157": {
+  "explanation": "The magnifier icon in the \"cute puppy\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5024c8bdaa47",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@32,157": {
+  "explanation": "The \"cute puppy\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2e938d5bfb39",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@19,252": {
+  "explanation": "The tool found a 52×117 shape on the dark dog portrait's drooping ear in a live result photo. It's photo content.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8fc5e17cc65a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@31,254": {
+  "explanation": "A 57×64 patch of the same dark spaniel portrait's ear on live, read as an icon. It's photo content.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f708c6fabc74",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@21,257": {
+  "explanation": "A patch of fur on the dark spaniel portrait's neck on live read as text. It is photo content.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "78456f265eec",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@47,346": {
+  "explanation": "A 421×282 shape that matches the French bulldog on white tile on live, one of the extra live results. The design has other photos here.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1704fc1bf397",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@36,338": {
+  "explanation": "A \"Free\" badge, a small white pill at the top left of a live result tile. The design's tiles have no badge.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b533a75fc693",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@48,365": {
+  "explanation": "A 424×283 panel that is the live tile of a white shepherd dog walking on a beach. It's an extra result photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "16b3bb792b1f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@48,364": {
+  "explanation": "Part of the white dog's face and muzzle in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a8f691ff086c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@39,365": {
+  "explanation": "A small patch of white dog fur in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b90333e8ffd1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@41,367": {
+  "explanation": "A patch of white dog leg fur in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "18aae69d0d64",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,372": {
+  "explanation": "A patch of sand in a live photo of a dog on a beach, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a330e7490fec",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@72,385": {
+  "explanation": "Live adds an orange-to-magenta Vecteezy Pro upsell tile (518×345) in the results grid. The design has no promo tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "504eafcd664d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@65,378": {
+  "explanation": "The round white Vecteezy \"V\" logo on live's Pro upsell tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "73fe3a0302b9",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@74,378": {
+  "explanation": "The \"Vecteezy Pro\" wordmark on live's upsell tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "112e6aa7e897",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,383": {
+  "explanation": "The first line, \"Unlimited access and\", of the live Pro tile's heading.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "61d170419c5c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,385": {
+  "explanation": "The second line, \"downloads\", of the live Pro tile's heading.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d264420b88ae",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@72,391": {
+  "explanation": "The white \"Get Started\" button on live's Pro tile (204×82 with its padding).",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "88cd3e8f7d8f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,391": {
+  "explanation": "The \"Get Started\" label in the white button on live's Pro tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2bea98ade6af",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@9,417": {
+  "explanation": "The white \"Free\" badge on a live result tile. The design's tiles have no badges.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6fa87b27572b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@31,465": {
+  "explanation": "A 770×342 shape for a wide border collie tile on a pale background on live; the design's rows have other photos.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "238cc6cc2370",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@26,486": {
+  "explanation": "The 606×305 live tile of a golden retriever on a teal background; a live result with no design pair.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "59bcccf4acdc",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@60,486": {
+  "explanation": "The 457×305 live tile of a sitting dog on white with a \"Free\" badge; an extra live result.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7f9ea129ba83",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@48,477": {
+  "explanation": "A \"Free\" badge at the top left of another live result tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "06c47751fcaa",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@29,479": {
+  "explanation": "This is a fragment of a golden retriever photo that the tool read as text near a tile corner. It is not a badge; it's photo content.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1012597eaace",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@34,481": {
+  "explanation": "An eye patch from the golden retriever on teal in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a00b1668f32",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@30,481": {
+  "explanation": "The other eye of the same golden retriever photo on live, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b5c6f52977f6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@37,484": {
+  "explanation": "An ear of the golden retriever on teal in a live photo, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "57029538039d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@27,484": {
+  "explanation": "A patch of fur on the golden retriever on teal in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1200e247d005",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@42,517": {
+  "explanation": "The \"pet dog\" related-search pill in the second related-searches block live inserts in the grid (y≈8,249). The design has no such block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "414f593dc3bb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@49,517": {
+  "explanation": "The \"cute dog\" related-search pill, next to \"pet dog\" in the second related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b7c15b0c2431",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,517": {
+  "explanation": "The magnifier icon in the \"pet dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9d303f087ed8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@47,517": {
+  "explanation": "The magnifier icon in the \"cute dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ba56abfc1fcd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@42,517": {
+  "explanation": "The \"pet dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f4b3f47cb166",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@50,517": {
+  "explanation": "The \"cute dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1409d820ee5f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@42,520": {
+  "explanation": "The \"puppy dog\" related-search pill, second row of the second related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "edaddcba9d2b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@50,520": {
+  "explanation": "The \"dogs\" related-search pill, next to \"puppy dog\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "663b9f7b02fd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@56,520": {
+  "explanation": "The \"hund\" related-search pill, next to \"dogs\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "72b316f60de7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,520": {
+  "explanation": "The magnifier icon in the \"puppy dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6ffbb4768f17",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@49,520": {
+  "explanation": "The magnifier icon in the \"dogs\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4bf96f8abebd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@55,520": {
+  "explanation": "The magnifier icon in the \"hund\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bd8d4ab8eb96",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@43,520": {
+  "explanation": "The \"puppy dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "674df8406105",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@50,520": {
+  "explanation": "The \"dogs\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fe88abc160e9",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@57,520": {
+  "explanation": "The \"hund\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8af94fde5861",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@42,523": {
+  "explanation": "The \"funny dog\" related-search pill, third row of the second related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "db415ea9a1a4",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@50,523": {
+  "explanation": "The \"puppy\" related-search pill, next to \"funny dog\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5feb92168407",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,523": {
+  "explanation": "The magnifier icon in the \"funny dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "204275d493c1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@48,523": {
+  "explanation": "The magnifier icon in the \"puppy\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "51300be10ad7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@43,523": {
+  "explanation": "The \"funny dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0a8b84791790",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@51,524": {
+  "explanation": "The \"puppy\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1633ffbab463",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@42,527": {
+  "explanation": "The \"small dog\" related-search pill, fourth row of the second related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "63e19d515f82",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@50,527": {
+  "explanation": "The \"baby dog\" related-search pill, next to \"small dog\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "93cce8a0d73d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,527": {
+  "explanation": "The magnifier icon in the \"small dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4fafffd58707",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@48,527": {
+  "explanation": "The magnifier icon in the \"baby dog\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2ddd433cd193",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@43,527": {
+  "explanation": "The \"small dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "77cf60538529",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@51,527": {
+  "explanation": "The \"baby dog\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0675210fc20b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@43,530": {
+  "explanation": "The \"dog character\" related-search pill, last row of the second related-searches block.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "004c4f453c5f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@52,530": {
+  "explanation": "The \"canine\" related-search pill, next to \"dog character\".",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d95859c8e1df",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@40,530": {
+  "explanation": "The magnifier icon in the \"dog character\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eb0129261055",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@50,530": {
+  "explanation": "The magnifier icon in the \"canine\" pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "37c165c4cb17",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@44,530": {
+  "explanation": "The \"dog character\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b3d2857a8d74",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@52,530": {
+  "explanation": "The \"canine\" label inside its pill.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "409008b97b5f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@9,570": {
+  "explanation": "A \"Free\" badge on another live result tile, read as an icon.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "483adeeb9417",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:line@7,585": {
+  "explanation": "A vertical edge in a live photo of a brown plank texture.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "888f562c7fb9",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@47,597": {
+  "explanation": "The live tile of a white labrador-like dog on white; an extra live result.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "98c56daa456e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@36,589": {
+  "explanation": "A \"Free\" badge at the top left of a live result tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b6daee0d7328",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@43,600": {
+  "explanation": "A vertical stretch of white dog chin and edge in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "503ac0166c81",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@47,604": {
+  "explanation": "A small patch of dog fur in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2aca867c50d6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@31,638": {
+  "explanation": "The wide live tile of a corgi on yellow (775×339); an extra live result with no design pair.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7f0ce9e1ce35",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@72,638": {
+  "explanation": "The 507×339 live tile of a chihuahua standing up on white; an extra live result.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "971b4820d91c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@58,629": {
+  "explanation": "A \"Free\" badge at the top left of a live result tile.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8ea52eb321e2",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@31,630": {
+  "explanation": "A patch of a corgi's ear on yellow in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ed67d709ddcf",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@30,632": {
+  "explanation": "A corgi's ear in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cdc86f8506ff",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@19,633": {
+  "explanation": "A shape in a corgi's ear in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "304ad68fd569",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@75,632": {
+  "explanation": "A patch of a chihuahua's fur on a white background, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1e0f216d1e9d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@21,633": {
+  "explanation": "A corgi's ear in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "43ce44bc3620",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,634": {
+  "explanation": "The inner ear of a corgi in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "da9ba56117ac",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@74,638": {
+  "explanation": "The edge of a chihuahua's leg on a white background in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8e44db51b3ac",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@31,635": {
+  "explanation": "A patch of corgi fur on yellow in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1a478a40ab04",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@20,635": {
+  "explanation": "An ear of a corgi in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "74ff40d4547d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@22,638": {
+  "explanation": "A patch of a corgi's cheek in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "21664a1df000",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@69,642": {
+  "explanation": "The legs of a standing chihuahua on a white background, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e8fce55b08fb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@31,642": {
+  "explanation": "A patch of corgi fur in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e068b6785a3f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@72,642": {
+  "explanation": "A strip of a chihuahua's leg on white in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e3efad33751a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@30,643": {
+  "explanation": "A patch of a corgi's cheek and face in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ddc2bc37d689",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@73,645": {
+  "explanation": "A chihuahua's paw on white in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "91775c0efe0d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@17,646": {
+  "explanation": "A corgi's paw on a yellow floor in a live photo, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9b305105b049",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@22,646": {
+  "explanation": "A patch of corgi fur in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "09f601cddbe8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@33,647": {
+  "explanation": "A corgi's paws in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4682fb130ab0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@26,648": {
+  "explanation": "The corgi's paws on a yellow floor in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d353e80ed7f7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@21,648": {
+  "explanation": "A patch of corgi fur near the paws in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c35e443a3852",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@72,677": {
+  "explanation": "The 517×347 live tile of a dachshund on grey with a \"Sponsored\" badge; an extra live result.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a605159f30c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@21,715": {
+  "explanation": "The 463×269 live tile of a golden retriever lying on white with a \"Sponsored\" badge; an extra live result.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8cfbc95d7fa6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,708": {
+  "explanation": "A \"Sponsored\" badge at the top left of a live result tile in the last rows. The design has no such label.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8491ba6ed3dd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@22,712": {
+  "explanation": "The golden retriever's face in a live photo, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c41d5bc620f7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@18,713": {
+  "explanation": "The other half of the golden retriever's face in a live photo, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "336bf3e17bef",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@21,717": {
+  "explanation": "The golden retriever's chest fur in a live photo, read as a shape.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cdca9cfd34b1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:shape@17,717": {
+  "explanation": "A narrow strip of the golden retriever's fur edge in a live photo.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2432b4ce666c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@17,720": {
+  "explanation": "The golden retriever's front paws in a live photo, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ee2b6c04188e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@21,719": {
+  "explanation": "A patch of golden retriever fur in a live photo, read as an icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d3e26dcc5ca8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@24,721": {
+  "explanation": "The golden retriever's front and rear paws on white, read as text.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "69643a615e40",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@47,732": {
+  "explanation": "Live's orange \"Next page\" button, 208×56 at y≈11,683. The design has the same button at y≈4,650.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a1da30d6facd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@47,732": {
+  "explanation": "Live's \"Next page\" label, 86×17, in the orange button. The design has the same label about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4c107cf4783b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@36,738": {
+  "explanation": "Live's page \"1\" circle (44×44), the selected page in the pagination row. The design has a similar row about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4e2dcc172a95",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@42,738": {
+  "explanation": "Live's page number \"3\". The design has numbers around 4 and 5 at a much higher position.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a38a3c6942e1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@46,738": {
+  "explanation": "Live's page number \"4\". It matches the design's \"4\" in size.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "42ca03bf9ddb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@56,738": {
+  "explanation": "Live's last page number \"41\". The design shows \"100\" for its last page.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eeb16eccc002",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@47,750": {
+  "explanation": "Live's feedback card (1300×233). The design has the same card, 1317×229, about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4cb603939205",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@47,748": {
+  "explanation": "Live's \"How was your search experience?\" heading. The design has the same heading about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "10eec1f97ed1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@45,752": {
+  "explanation": "Live's thumbs-up circle button (56×56) in the feedback card. The design has the same control about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "908411e037b3",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:panel@50,752": {
+  "explanation": "Live's thumbs-down circle button (56×56) in the feedback card. The design has the same control about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fe729f4e5b7e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@45,752": {
+  "explanation": "Live's thumbs-up icon in the feedback card. The design has the same icon about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d3f0920e7eff",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@50,752": {
+  "explanation": "Live's thumbs-down icon in the feedback card. The design has the same icon about 7,000px higher.",
+  "verdict": "noise",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "274b07d3d052",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@47,770": {
+  "explanation": "The \"The best value in the industry – Try Pro today.\" banner line in live's footer, with \"Try Pro\" in the orange-pink gradient. The design has no footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f3344bec8b13",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,777": {
+  "explanation": "The \"Products\" column heading in live's footer. The design has no footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "030712854223",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@30,777": {
+  "explanation": "The \"Content\" column heading in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b09cd3c030e3",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@52,777": {
+  "explanation": "The \"Learn More\" column heading in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1c285e0422e7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,777": {
+  "explanation": "The \"Languages\" column heading in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4dec47a3173b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@11,779": {
+  "explanation": "The \"Pro for Individuals\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "4f5e3276a32e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,779": {
+  "explanation": "The \"Stock Photos\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3ed5f797bd53",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,779": {
+  "explanation": "The \"English\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6a1a87ef203c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@50,779": {
+  "explanation": "The \"FAQs\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eac6de555a60",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@11,780": {
+  "explanation": "The \"Pro for Business\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2c1a056ba67e",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,780": {
+  "explanation": "The \"Vector Graphics\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1fee554cb0aa",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@52,780": {
+  "explanation": "The \"Sell your content\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d54e05ace860",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,780": {
+  "explanation": "The \"Español\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "55e05bf503e8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@11,782": {
+  "explanation": "The \"Pro for Enterprises\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "65afab1b43a8",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,782": {
+  "explanation": "The \"Video Footage\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "fde9f0151f0b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@52,782": {
+  "explanation": "The \"Affiliate program\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e03816dd03b5",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,782": {
+  "explanation": "The \"Português\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "33254bf07329",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@17,782": {
+  "explanation": "The small \"NEW\" badge next to \"Pro for Enterprises\" in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "429b95546d90",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,784": {
+  "explanation": "The \"Motion Graphics\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3c2efe1c6dc4",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@53,784": {
+  "explanation": "The \"Trust Center\" link (with a NEW badge) under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "782d7d65e4e6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,784": {
+  "explanation": "The \"Deutsch\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "877eabab7bb1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,784": {
+  "explanation": "The \"For Teachers\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5b34120dad28",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@36,784": {
+  "explanation": "The small \"NEW\" badge next to \"Motion Graphics\" in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3ac010c4eaf0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,786": {
+  "explanation": "The \"Français\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "e036ba0e64bc",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,786": {
+  "explanation": "The \"For Schools\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "73bbb9d65b55",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@32,786": {
+  "explanation": "The \"Editable Templates\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "22982ecf4d69",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@51,786": {
+  "explanation": "The \"About Us\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ef027122874b",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@72,787": {
+  "explanation": "The \"Nederlands\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "417b1702a0d1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@11,788": {
+  "explanation": "The \"Template Editor\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c2cc893ba204",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@29,787": {
+  "explanation": "The \"SVGs\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c5ac872467e6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@51,788": {
+  "explanation": "The \"Our Blog\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6fd434698d34",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,789": {
+  "explanation": "The \"Svenska\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2f89bd2cd6f0",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@9,789": {
+  "explanation": "The \"AI Studio\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "83122a71ad85",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@53,789": {
+  "explanation": "The \"License Agreement\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "49c66cb256c7",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@13,789": {
+  "explanation": "The \"NEW\" badge next to \"AI Studio\" in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "39b8ce9cf2fc",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@29,789": {
+  "explanation": "The \"PNGs\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2979b85564fb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@71,791": {
+  "explanation": "The \"Italiano\" link under Languages in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "de50f974cdea",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@29,791": {
+  "explanation": "The \"PSDs\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5d936ff648d1",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@50,791": {
+  "explanation": "The \"DMCA\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "11e17441099c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@13,791": {
+  "explanation": "The \"AI Reverse Image Search\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "319b9ab5b2b4",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@31,793": {
+  "explanation": "The \"Editorial Images\" link (with NEW badge) under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a8a2fdd50a9a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@51,793": {
+  "explanation": "The \"Contact Us\" link under Learn More in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1d6e5142a83a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@12,793": {
+  "explanation": "The \"AI Background Removal\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7f70fc4ad309",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@36,793": {
+  "explanation": "The \"NEW\" badge next to \"Editorial Images\" in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aba1cc35aac6",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@12,795": {
+  "explanation": "The \"QR Code Generator\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8f9b9c1459b4",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@32,795": {
+  "explanation": "The \"Creative Bundles\" link under Content in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2347d27c4666",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,796": {
+  "explanation": "The \"Developer API\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "167de52fb95a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,798": {
+  "explanation": "The \"Data Licensing\" link under Products in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eefcccdac682",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@11,804": {
+  "explanation": "The Vecteezy logo and wordmark at the left of live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "56efd8ff4a9f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@18,804": {
+  "explanation": "The Facebook icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "65cf3582ebcd",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@21,804": {
+  "explanation": "The Instagram icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "54457c4f2b1d",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@23,804": {
+  "explanation": "The LinkedIn icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "0dbd4d5d3b9c",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@26,804": {
+  "explanation": "The Pinterest icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "3c33c466c5cb",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@28,804": {
+  "explanation": "The TikTok icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "cde9ff624420",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@31,804": {
+  "explanation": "The X (Twitter) icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "8dabd2046475",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@33,804": {
+  "explanation": "The YouTube icon in live's footer's social row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "aee7c1b028ca",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@69,804": {
+  "explanation": "The \"Terms of Use\" link in live's footer's legal row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "303a98acbf2a",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@77,804": {
+  "explanation": "The \"Privacy Policy\" link in live's footer's legal row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1dc24942a495",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@85,804": {
+  "explanation": "The \"Fair Use Policy\" link in live's footer's legal row.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7e9b6447b01f",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@56,804": {
+  "explanation": "The \"© 2026 Eezy LLC All rights reserved\" line in live's footer.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "6ea2224b0af9",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@86,808": {
+  "explanation": "The sun/moon theme switch in live's footer, set to dark.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ed39982dbfba",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@80,808": {
+  "explanation": "The \"Dark mode on\" label next to live's theme switch.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "b82d975f8d31",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:icon@2,811": {
+  "explanation": "The sign-in icon at the bottom of the left rail sits at y=12960 on live, because the page is longer. It matches the design's icon.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "f4f146701e06",
+  "at": "2026-11-18T13:33:57.615Z"
+ },
+ "extra:live:text@10,812": {
+  "explanation": "The stray \"Current Split Test:\" debug line at the very bottom of live's page. The design has no such text, and it looks like a leftover that shouldn't be shown.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c2a95e6450b4",
+  "at": "2026-11-18T13:33:57.615Z"
+ }
+}

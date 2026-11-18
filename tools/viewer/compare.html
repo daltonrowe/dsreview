@@ -343,13 +343,14 @@ function cardHtml(f) {
     <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-d="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
       <button class="btn small" data-act="find" title="Point at it on the screenshots (f)">➜ Find</button>
       <button class="btn small" data-act="note" title="Add a note (n)">✎</button>
-      <a class="btn small" href="/api/comparisons/${encodeURIComponent(st.id)}/findings/${encodeURIComponent(f.id)}/download" download title="Download a zip: write-up (.md) and named screenshots" aria-label="Download"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.25 1.5h1.5v7.19l2.47-2.47 1.06 1.06L8 11.56 3.72 7.28l1.06-1.06 2.47 2.47zM2 13h12v1.5H2z"/></svg></a><span class="spacer"></span>
+      <a class="btn small" href="/api/comparisons/${encodeURIComponent(st.id)}/findings/${encodeURIComponent(f.id)}/download" download title="Download a zip: write-up (.md) and named screenshots" aria-label="Download">${DOWNLOAD_ICON}</a><span class="spacer"></span>
       ${f.design?.where ? `<a href="${esc(viewUrl({ ...st.report.design, width: st.report.design.width }, f.design.where))}" target="_blank" title="Open the design page with this element marked">design ↗</a>` : ''}
       ${f.design?.source ? `<a href="${esc(editorUrl(root, f.design.source.file, f.design.source.line, f.design.source.col))}" title="Open the source in VS Code">${esc(f.design.source.file.replace(/\.dc\.html$/, ''))}:${f.design.source.line}</a>` : ''}</div>
     ${st.noteOpen === f.id ? `<textarea class="note" placeholder="Note (saved when you leave the box)">${esc(note || '')}</textarea>` : note ? `<div class="notetext">${esc(note)}</div>` : ''}
   </div>`;
 }
 // What's off, in words, written by the review model (compare.mjs review). Two lines; click to read all.
+const DOWNLOAD_ICON = '<svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.25 1.5h1.5v7.19l2.47-2.47 1.06 1.06L8 11.56 3.72 7.28l1.06-1.06 2.47 2.47zM2 13h12v1.5H2z"/></svg>';
 function explainHtml(f, cls) {
   const text = f.review?.explanation;
   if (!text) return '';
@@ -373,7 +374,8 @@ function groupHtml(g) {
     </div>
     <div class="fa"><div class="seg">${DECISIONS.map((x, i) => `<button class="${x}" data-gd="${x}" aria-pressed="${d === x}" title="${esc(TITLES[x])} — all ${g.members.length} (${i + 1})">${LABELS[x]}</button>`).join('')}</div>
       ${d === 'mixed' ? '<span class="mixed">mixed decisions</span>' : ''}
-      <button class="btn small" data-act="gfind" title="Point at it on the screenshots (f)">➜ Find</button></div>
+      <button class="btn small" data-act="gfind" title="Point at it on the screenshots (f)">➜ Find</button>
+      <a class="btn small" href="/api/comparisons/${encodeURIComponent(st.id)}/groups/${encodeURIComponent(g.id)}/download" download title="Download a zip: the group's write-up (.md), overview and every finding's screenshots" aria-label="Download group">${DOWNLOAD_ICON}</a></div>
     <div class="members">${shown.map(f => { const fd = decisionOf(f); return `<div class="m${st.sel === f.id ? ' sel' : ''}" data-id="${esc(f.id)}" title="${esc(f.props.map(p => `${p.prop}: ${p.design} → ${p.live}`).join('\n'))}"><i class="dot ${f.severity}"></i><span class="c">${f.category}</span><span class="t">${esc(f.text)} · ${esc(f.props[0] ? `${f.props[0].prop}: ${f.props[0].design} → ${f.props[0].live}` : '')}</span><span class="d">${fd ? LABELS[fd] : ''}</span>${explainHtml(f, 'x')}</div>`; }).join('')}
       ${g.members.length > 4 ? `<button class="toggle" data-act="gopen">${open ? 'Show fewer' : `Show all ${g.members.length}`}</button>` : ''}</div>
   </div>`;

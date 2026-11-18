@@ -1,0 +1,202 @@
+{
+ "color:text@68,33": {
+  "explanation": "The 'or' divider label is a pale grey (#b9b9b9) on live; the design uses a darker blue-grey (#6e7b84), so it reads fainter on live.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5a4c9dd4831f",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "color:icon@69,36": {
+  "explanation": "Not a real colour change: the design's Microsoft button was paired with live's Facebook button. The actual difference is that live only has Google and Facebook, not the other six.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bd4b974b2a3c",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "alignment:icon@56,36:left": {
+  "explanation": "The design's first social button (Google) starts at the form's left edge; live's Google button is centred, 164px further right, because there are only two buttons. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "1ee65f7bc505",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "typography:text@19,44": {
+  "explanation": "The 'Better work in half the time.' headline on the marketing panel is set smaller on live, about 3px less in height (31px to 28px), so the line is visibly narrower.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "38a9a54ca7fb",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "size:panel@68,30": {
+  "explanation": "The Create account button is 52px tall on live versus 46px in the design, 6px taller, which pushes everything below it down.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "9b71d54ab40b",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:text@62,36": {
+  "explanation": "This is the Apple button in the design's social row, which has no counterpart on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "5352993e6b83",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:text@68,39": {
+  "explanation": "The 'Send me recommendations' label under the social buttons is missing on live; there is no opt-in row at all.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "14cd3ab8f1a0",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:text@68,42": {
+  "explanation": "The reCAPTCHA notice is still on live with the same wording, but it wraps differently (ending 'Privacy Policy and / Terms of Service apply') and sits about 36px lower, below the added terms sentence. Not a missing element.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "00c02a4fa741",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:text@20,48": {
+  "explanation": "The first marketing bullet reads 'Access 74,540,405 creative assets (89,304 added yesterday)' in the design; live reads 'Access 60,869,326 creative assets'. Only sample numbers and the '(added yesterday)' copy differ.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "71deecdebac9",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "color:text@62,14": {
+  "explanation": "The 'Create an account' heading is neutral near-black (#171717) on live; the design uses a blue-tinted dark navy (#0e2332).",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "65fd72e0a61e",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "spacing:text@62,17": {
+  "explanation": "The gap below the 'Already have an account? Log in' line is 25px on live versus 21px in the design, and the whole heading block sits a few px higher.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "88881f678852",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "spacing:text@57,24": {
+  "explanation": "The gap between the PASSWORD label and its input is 11px on live versus 8px in the design.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2f7a7a689b96",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:text@68,30": {
+  "explanation": "The 'Create account' label inside the disabled button is nearly invisible on live: it is very pale on a light grey fill, whereas the design has a readable mid-grey label.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "51d7a7361649",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@59,36": {
+  "explanation": "The Facebook button position in the design's row has no match on live; live's Facebook button sits centred next to Google instead. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "7460f60ac9a0",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@66,36": {
+  "explanation": "The LinkedIn button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "288393198a28",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@73,36": {
+  "explanation": "The LINE button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "ee1265bfff4a",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@76,36": {
+  "explanation": "The KakaoTalk button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "2a63f82a6abe",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@79,36": {
+  "explanation": "The passkey button from the design's social row is missing on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "bb85e418908b",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@62,36": {
+  "explanation": "This is the Apple logo inside the Apple sign-in button, which doesn't exist on live. Live has only Google and Facebook buttons, centred; the design has a row of 8 (Google, Facebook, Apple, LinkedIn, Microsoft, LINE, KakaoTalk, passkey) spanning the full form width.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "20b272532cdd",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "missing:icon@61,39": {
+  "explanation": "The orange checked checkbox for 'Send me recommendations' is missing on live.",
+  "verdict": "real",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "c18064061cf4",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "extra:live:line@68,29": {
+  "explanation": "This is just the top edge of live's taller Create account button being detected as a line; there is no separate divider.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "eef1f72dd2e9",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "extra:live:line@60,34": {
+  "explanation": "This is the left rule of the 'or' divider. It is detected only on live because it is darker there than in the design, and it sits about 10px lower because the button above is taller.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "a8b3ce3bbaa7",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "extra:live:line@75,34": {
+  "explanation": "This is the right rule of the 'or' divider; it is darker on live than in the design and sits about 10px lower.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "d1f895ea894f",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "extra:live:text@67,41": {
+  "explanation": "Live adds a sentence 'By signing up you accept our Privacy Policy, Terms & Licensing Agreement' above the reCAPTCHA notice, making the legal block 4 lines instead of 2. The design doesn't include this line.",
+  "verdict": "real",
+  "confidence": "medium",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "09c59ccf69df",
+  "at": "2026-11-18T13:29:52.881Z"
+ },
+ "extra:live:text@13,48": {
+  "explanation": "Live's first marketing bullet has different figures and no '(added yesterday)' clause. This is sample data versus live data.",
+  "verdict": "noise",
+  "confidence": "high",
+  "model": "claude-sonnet (Claude Code subagent)",
+  "fingerprint": "567db211b8b3",
+  "at": "2026-11-18T13:29:52.881Z"
+ }
+}
